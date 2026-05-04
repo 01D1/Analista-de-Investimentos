@@ -1,0 +1,179 @@
+2026-04-28 11:57:39,111 [INFO] pipeline: ======================================================================
+2026-04-28 11:57:39,111 [INFO] pipeline: PIPELINE DE VALUATION [SANEAMENTO] — SBSP3 — Sabesp
+2026-04-28 11:57:39,111 [INFO] pipeline: Início: 2026-04-28 11:57:39
+2026-04-28 11:57:39,111 [INFO] pipeline:   Setor: saneamento | Motor: WACC
+2026-04-28 11:57:39,112 [INFO] pipeline: ======================================================================
+2026-04-28 11:57:39,112 [INFO] pipeline: 
+[1/6] Coletando dados de mercado...
+2026-04-28 11:57:39,856 [INFO] pipeline:   Buscando cotação via yfinance...
+2026-04-28 11:57:39,856 [INFO] pipeline.mercado: Buscando cotação atual: SBSP3.SA
+2026-04-28 11:57:41,092 [INFO] pipeline:   Cotação ON: R$ 165.21  |  Cotação PN: R$ 0.00
+2026-04-28 11:57:41,219 [INFO] pipeline.mercado: Calculando beta: SBSP3 (252 dias úteis)
+2026-04-28 11:57:41,220 [INFO] pipeline.mercado: Baixando preços: SBSP3.SA (2019-01-01 → 2026-04-28)
+2026-04-28 11:57:42,378 [INFO] pipeline.mercado:   1820 dias de preços carregados
+2026-04-28 11:57:42,484 [INFO] pipeline.mercado:   Beta estatístico: 1.0918 | R²: 0.445 | n=251
+2026-04-28 11:57:42,487 [INFO] pipeline:   Beta estatístico: 1.092 | Beta utilizado: 0.850
+2026-04-28 11:57:42,488 [INFO] pipeline: 
+[2/6] Coletando dados macroeconômicos (BCB)...
+2026-04-28 11:57:42,842 [WARNING] pipeline.macro: Não foi possível obter Focus Selic: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'Selic'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana
+2026-04-28 11:57:43,121 [WARNING] pipeline.macro: Não foi possível obter Focus IPCA: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'IPCA'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana
+2026-04-28 11:57:43,122 [INFO] pipeline.macro: 
+=== Coletando dados macroeconômicos ===
+2026-04-28 11:57:43,124 [INFO] pipeline.macro: Baixando série BCB 432...
+2026-04-28 11:57:43,494 [ERROR] pipeline.macro: Erro ao baixar série BCB 432: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=28%2F04%2F2026
+2026-04-28 11:57:43,495 [WARNING] pipeline.macro: Série Selic meta sem DatetimeIndex — usando fallback histórico
+2026-04-28 11:57:43,496 [INFO] pipeline.macro: Baixando série BCB 12...
+2026-04-28 11:57:43,595 [ERROR] pipeline.macro: Erro ao baixar série BCB 12: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.12/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=28%2F04%2F2026
+2026-04-28 11:57:43,596 [WARNING] pipeline.macro: Série DI sem DatetimeIndex — usando fallback histórico
+2026-04-28 11:57:43,602 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (46.1%) para 2020 — usando fallback
+2026-04-28 11:57:43,603 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (159.3%) para 2021 — usando fallback
+2026-04-28 11:57:43,603 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (191.2%) para 2022 — usando fallback
+2026-04-28 11:57:43,604 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (71.5%) para 2023 — usando fallback
+2026-04-28 11:57:43,605 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (67.0%) para 2024 — usando fallback
+2026-04-28 11:57:43,605 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (80.0%) para 2025 — usando fallback
+2026-04-28 11:57:43,605 [INFO] pipeline.macro: Baixando série BCB 258...
+2026-04-28 11:57:43,707 [ERROR] pipeline.macro: Erro ao baixar série BCB 258: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.258/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=28%2F04%2F2026
+2026-04-28 11:57:43,707 [WARNING] pipeline.macro: Série TJLP sem DatetimeIndex — usando fallback histórico
+2026-04-28 11:57:43,719 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (46.1%) para 2020 — usando fallback
+2026-04-28 11:57:43,719 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (159.3%) para 2021 — usando fallback
+2026-04-28 11:57:43,720 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (191.2%) para 2022 — usando fallback
+2026-04-28 11:57:43,721 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (71.5%) para 2023 — usando fallback
+2026-04-28 11:57:43,722 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (67.0%) para 2024 — usando fallback
+2026-04-28 11:57:43,723 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (80.0%) para 2025 — usando fallback
+2026-04-28 11:57:43,723 [INFO] pipeline.macro: 
+RESUMO MACRO HISTÓRICO:
+2026-04-28 11:57:43,723 [INFO] pipeline.macro:   selic_meta     : 2021: 9.25% | 2022: 13.75% | 2023: 11.75% | 2024: 11.75% | 2025: 10.00%
+2026-04-28 11:57:43,724 [INFO] pipeline.macro:   selic_efet     : 2021: 4.48% | 2022: 12.33% | 2023: 13.15% | 2024: 10.73% | 2025: 10.50%
+2026-04-28 11:57:43,724 [INFO] pipeline.macro:   ipca           : 2021: 10.06% | 2022: 5.62% | 2023: 4.62% | 2024: 4.83% | 2025: 4.50%
+2026-04-28 11:57:43,724 [INFO] pipeline.macro:   tjlp           : 2021: 5.25% | 2022: 6.25% | 2023: 7.00% | 2024: 7.00% | 2025: 6.50%
+2026-04-28 11:57:43,724 [INFO] pipeline.macro:   cds            : 2021: 0.73% | 2022: 1.26% | 2023: 0.84% | 2024: 0.81% | 2025: 0.76%
+2026-04-28 11:57:43,724 [INFO] pipeline.macro:   inflacao_impl  : 2021: 10.06% | 2022: 5.62% | 2023: 4.62% | 2024: 4.83% | 2025: 4.50%
+2026-04-28 11:57:43,725 [INFO] pipeline: 
+[3/6] Baixando demonstrações financeiras (CVM)...
+2026-04-28 11:57:43,728 [INFO] pipeline.cvm: 
+==================================================
+2026-04-28 11:57:43,729 [INFO] pipeline.cvm: Baixando DFP 2020...
+2026-04-28 11:57:43,988 [WARNING] pipeline.cvm:   Empresa 14443 não encontrada em dre 2020
+2026-04-28 11:57:44,398 [WARNING] pipeline.cvm:   Empresa 14443 não encontrada em bpa 2020
+2026-04-28 11:57:45,212 [WARNING] pipeline.cvm:   Empresa 14443 não encontrada em bpp 2020
+2026-04-28 11:57:45,558 [WARNING] pipeline.cvm:   Empresa 14443 não encontrada em dfc_mi 2020
+2026-04-28 11:57:45,589 [WARNING] pipeline.cvm:   Empresa 14443 não encontrada em dfc_md 2020
+2026-04-28 11:57:45,590 [INFO] pipeline.cvm: 
+==================================================
+2026-04-28 11:57:45,590 [INFO] pipeline.cvm: Baixando DFP 2021...
+2026-04-28 11:57:45,833 [WARNING] pipeline.cvm:   Empresa 14443 não encontrada em dre 2021
+2026-04-28 11:57:46,270 [WARNING] pipeline.cvm:   Empresa 14443 não encontrada em bpa 2021
+2026-04-28 11:57:46,981 [WARNING] pipeline.cvm:   Empresa 14443 não encontrada em bpp 2021
+2026-04-28 11:57:47,357 [WARNING] pipeline.cvm:   Empresa 14443 não encontrada em dfc_mi 2021
+2026-04-28 11:57:47,396 [WARNING] pipeline.cvm:   Empresa 14443 não encontrada em dfc_md 2021
+2026-04-28 11:57:47,397 [INFO] pipeline.cvm: 
+==================================================
+2026-04-28 11:57:47,398 [INFO] pipeline.cvm: Baixando DFP 2022...
+2026-04-28 11:57:47,646 [WARNING] pipeline.cvm:   Empresa 14443 não encontrada em dre 2022
+2026-04-28 11:57:48,102 [WARNING] pipeline.cvm:   Empresa 14443 não encontrada em bpa 2022
+2026-04-28 11:57:49,061 [WARNING] pipeline.cvm:   Empresa 14443 não encontrada em bpp 2022
+2026-04-28 11:57:49,485 [WARNING] pipeline.cvm:   Empresa 14443 não encontrada em dfc_mi 2022
+2026-04-28 11:57:49,538 [WARNING] pipeline.cvm:   Empresa 14443 não encontrada em dfc_md 2022
+2026-04-28 11:57:49,540 [INFO] pipeline.cvm: 
+==================================================
+2026-04-28 11:57:49,540 [INFO] pipeline.cvm: Baixando DFP 2023...
+2026-04-28 11:57:49,797 [INFO] pipeline.cvm:   DFP dre 2023: 82 linhas
+2026-04-28 11:57:50,265 [INFO] pipeline.cvm:   DFP bpa 2023: 136 linhas
+2026-04-28 11:57:51,040 [INFO] pipeline.cvm:   DFP bpp 2023: 244 linhas
+2026-04-28 11:57:51,481 [INFO] pipeline.cvm:   DFP dfc_mi 2023: 108 linhas
+2026-04-28 11:57:51,520 [WARNING] pipeline.cvm:   Empresa 14443 não encontrada em dfc_md 2023
+2026-04-28 11:57:51,521 [INFO] pipeline.cvm: 
+==================================================
+2026-04-28 11:57:51,521 [INFO] pipeline.cvm: Baixando DFP 2024...
+2026-04-28 11:57:51,777 [INFO] pipeline.cvm:   DFP dre 2024: 84 linhas
+2026-04-28 11:57:52,228 [INFO] pipeline.cvm:   DFP bpa 2024: 142 linhas
+2026-04-28 11:57:53,024 [INFO] pipeline.cvm:   DFP bpp 2024: 248 linhas
+2026-04-28 11:57:53,451 [INFO] pipeline.cvm:   DFP dfc_mi 2024: 116 linhas
+2026-04-28 11:57:53,484 [WARNING] pipeline.cvm:   Empresa 14443 não encontrada em dfc_md 2024
+2026-04-28 11:57:53,484 [INFO] pipeline.cvm: 
+==================================================
+2026-04-28 11:57:53,485 [INFO] pipeline.cvm: Baixando DFP 2025...
+2026-04-28 11:57:53,681 [INFO] pipeline.cvm:   DFP dre 2025: 64 linhas
+2026-04-28 11:57:54,081 [INFO] pipeline.cvm:   DFP bpa 2025: 130 linhas
+2026-04-28 11:57:54,768 [INFO] pipeline.cvm:   DFP bpp 2025: 246 linhas
+2026-04-28 11:57:55,150 [INFO] pipeline.cvm:   DFP dfc_mi 2025: 120 linhas
+2026-04-28 11:57:55,182 [WARNING] pipeline.cvm:   Empresa 14443 não encontrada em dfc_md 2025
+2026-04-28 11:57:55,183 [INFO] pipeline:   DFP 2020 indisponível — tentando anualizar via ITR...
+2026-04-28 11:57:55,183 [INFO] pipeline.cvm: 
+==================================================
+2026-04-28 11:57:55,183 [INFO] pipeline.cvm: Tentando anualizar 2020 via ITR (LTM)...
+2026-04-28 11:58:00,003 [WARNING] pipeline.cvm:   ITR 2020 não disponível — não é possível anualizar
+2026-04-28 11:58:00,003 [WARNING] pipeline:   DFP 2020 e ITR indisponíveis — removido do histórico
+2026-04-28 11:58:00,004 [INFO] pipeline:   DFP 2021 indisponível — tentando anualizar via ITR...
+2026-04-28 11:58:00,004 [INFO] pipeline.cvm: 
+==================================================
+2026-04-28 11:58:00,004 [INFO] pipeline.cvm: Tentando anualizar 2021 via ITR (LTM)...
+2026-04-28 11:58:05,570 [WARNING] pipeline.cvm:   ITR 2021 não disponível — não é possível anualizar
+2026-04-28 11:58:05,571 [WARNING] pipeline:   DFP 2021 e ITR indisponíveis — removido do histórico
+2026-04-28 11:58:05,571 [INFO] pipeline:   DFP 2022 indisponível — tentando anualizar via ITR...
+2026-04-28 11:58:05,571 [INFO] pipeline.cvm: 
+==================================================
+2026-04-28 11:58:05,571 [INFO] pipeline.cvm: Tentando anualizar 2022 via ITR (LTM)...
+2026-04-28 11:58:11,346 [WARNING] pipeline.cvm:   ITR 2022 não disponível — não é possível anualizar
+2026-04-28 11:58:11,346 [WARNING] pipeline:   DFP 2022 e ITR indisponíveis — removido do histórico
+2026-04-28 11:58:11,346 [INFO] pipeline:   Anos ajustados → Histórico: 2023-2025 | Projeção: 2026-2035
+2026-04-28 11:58:11,347 [INFO] pipeline: 
+[4/6] Normalizando dados...
+2026-04-28 11:58:12,071 [INFO] pipeline:   DFC normalizada: 11 linhas
+2026-04-28 11:58:12,074 [INFO] pipeline:   DRE normalizada:
+2026-04-28 11:58:12,074 [INFO] pipeline:     receita_liquida: 2023: 25,572 | 2024: 36,145 | 2025: 38,092
+2026-04-28 11:58:12,074 [INFO] pipeline:     ebit: 2023: 6,346 | 2024: 15,510 | 2025: 12,600
+2026-04-28 11:58:12,074 [INFO] pipeline:     lucro_liquido: 2023: 3,524 | 2024: 9,580 | 2025: 8,462
+2026-04-28 11:58:12,074 [INFO] pipeline: 
+[5/6] Calculando projeções...
+2026-04-28 11:58:12,078 [INFO] pipeline.projecoes: 
+=== Projeções (não-financeira / FCFF) ===
+2026-04-28 11:58:12,080 [INFO] pipeline.projecoes:   Margem EBITDA: 45.7% → 50.0% (conv 6a)
+2026-04-28 11:58:12,080 [INFO] pipeline.projecoes:   D&A/Receita: 14.1%
+2026-04-28 11:58:12,081 [INFO] pipeline.projecoes:   CAPEX/Receita: 0.3% → 35.0%
+2026-04-28 11:58:12,082 [INFO] pipeline.projecoes:   NCG/Receita: 9.7% → 5.0%
+2026-04-28 11:58:12,086 [INFO] pipeline.projecoes:   Alíquota efetiva: 27.7%
+2026-04-28 11:58:12,087 [INFO] pipeline.projecoes: Projeções concluídas (FCFF). Resumo:
+2026-04-28 11:58:12,087 [INFO] pipeline.projecoes:    Ano      Receita     EBITDA    Mg%      NOPAT       FCFF
+2026-04-28 11:58:12,087 [INFO] pipeline.projecoes:   2026       40,949     19,012  46.4%      9,567     11,081
+2026-04-28 11:58:12,087 [INFO] pipeline.projecoes:   2027       43,815     20,656  47.1%     10,463     10,589
+2026-04-28 11:58:12,087 [INFO] pipeline.projecoes:   2028       46,663     22,332  47.9%     11,384      8,329
+2026-04-28 11:58:12,088 [INFO] pipeline.projecoes:   2029       49,463     24,025  48.6%     12,323      5,699
+2026-04-28 11:58:12,088 [INFO] pipeline.projecoes:   2030       52,184     25,719  49.3%     13,270      2,707
+2026-04-28 11:58:12,088 [INFO] pipeline.valuation:   Estrutura de capital: E=81% | D=19%
+2026-04-28 11:58:12,088 [INFO] pipeline: 
+[6/6] Calculando valuation (FCFF / WACC)...
+2026-04-28 11:58:12,089 [INFO] pipeline.valuation: 
+==================================================
+2026-04-28 11:58:12,089 [INFO] pipeline.valuation: VALUATION FCFF/WACC — SBSP3
+2026-04-28 11:58:12,089 [INFO] pipeline.valuation:   VP FCFF (10a):     R$       37,103 MM
+2026-04-28 11:58:12,089 [INFO] pipeline.valuation:   Valor Perp. (VP):  R$       39,043 MM
+2026-04-28 11:58:12,089 [INFO] pipeline.valuation:   ENTERPRISE VALUE:  R$       76,146 MM
+2026-04-28 11:58:12,089 [INFO] pipeline.valuation:   (-) Dívida Líq.:   R$       27,771 MM
+2026-04-28 11:58:12,089 [INFO] pipeline.valuation:   VALOR DO EQUITY:   R$       48,375 MM
+2026-04-28 11:58:12,089 [INFO] pipeline.valuation:   Preço Justo ON:    R$    67.17
+2026-04-28 11:58:12,090 [INFO] pipeline.valuation:   Preço Justo PN:    R$    67.17
+2026-04-28 11:58:12,090 [INFO] pipeline.valuation:   Cotação ON:        R$   165.21
+2026-04-28 11:58:12,090 [INFO] pipeline.valuation:   Upside ON:              -59.3%
+2026-04-28 11:58:12,090 [INFO] pipeline.valuation:   TIR (ON):                 7.6%
+2026-04-28 11:58:12,090 [INFO] pipeline.valuation:   WACC último ano:          8.5%
+2026-04-28 11:58:12,092 [INFO] pipeline:   Template encontrado (empresa): Valuation Sabesp  (DCF) - VAROS 3T23.xlsx
+2026-04-28 11:58:12,481 [INFO] pipeline.excel_geral: 
+============================================================
+2026-04-28 11:58:12,482 [INFO] pipeline.excel_geral: Escrevendo com template VAROS: Valuation Sabesp  (DCF) - VAROS 3T23.xlsx
+2026-04-28 11:58:19,853 [INFO] pipeline.excel_geral: 
+Arquivo salvo: C:\Users\55819\OneDrive - EPEJUD\DIEGO\OBSIDIAN\Analista de Investimentos\12_PYTHON\pipeline banco completo\outputs\Valuation_SBSP3_Sabesp_20260428.xlsx
+2026-04-28 11:58:19,854 [INFO] pipeline: 
+======================================================================
+2026-04-28 11:58:19,854 [INFO] pipeline: RESUMO DO VALUATION (FCFF/WACC)
+2026-04-28 11:58:19,854 [INFO] pipeline: ======================================================================
+2026-04-28 11:58:19,854 [INFO] pipeline:   Empresa:           Sabesp (SBSP3)
+2026-04-28 11:58:19,854 [INFO] pipeline:   Enterprise Value:  R$       76,146 MM
+2026-04-28 11:58:19,854 [INFO] pipeline:   Cotação ON:        R$ 165.21
+2026-04-28 11:58:19,855 [INFO] pipeline:   Preço Justo ON:    R$ 67.17
+2026-04-28 11:58:19,855 [INFO] pipeline:   Upside ON:            -59.3%
+2026-04-28 11:58:19,855 [INFO] pipeline:   TIR:                  7.6%
+2026-04-28 11:58:19,855 [INFO] pipeline:   Preço Teto ON:     R$ 67.17
+2026-04-28 11:58:19,855 [INFO] pipeline: 
+  Arquivo gerado:    C:\Users\55819\OneDrive - EPEJUD\DIEGO\OBSIDIAN\Analista de Investimentos\12_PYTHON\pipeline banco completo\outputs\Valuation_SBSP3_Sabesp_20260428.xlsx
+2026-04-28 11:58:19,855 [INFO] pipeline: ======================================================================

@@ -1,0 +1,45 @@
+{
+  "ticker": "CXSE3",
+  "sector_type": "holding",
+  "base_year": 2025,
+  "method": "Gordon Growth Model (P/B Implícito)",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 0.0,
+      "current_price": 18.920000076293945,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.31670898249833734,
+        "coe": 0.13,
+        "g": 0.055,
+        "pb_implied": 3.489453099977831
+      }
+    },
+    "optimistic": {
+      "fair_value": 0.0,
+      "current_price": 18.920000076293945,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.31670898249833734,
+        "coe": 0.125,
+        "g": 0.06,
+        "pb_implied": 3.949368961512882
+      }
+    },
+    "pessimistic": {
+      "fair_value": 0.0,
+      "current_price": 18.920000076293945,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.31670898249833734,
+        "coe": 0.135,
+        "g": 0.05,
+        "pb_implied": 3.1377527352745567
+      }
+    }
+  }
+}

@@ -1,0 +1,2350 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 8486000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -5611000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 2875000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": 12694000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -1120000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -548000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 2883000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": 11479000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 15569000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -1013000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 1330000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -2343000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 14556000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": -402000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -129000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": -273000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 14154000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 14154000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 13674000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 480000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 1.40941,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.99.01.02",
+      "account_name": "PN",
+      "normalized_name": NaN,
+      "value": 1.40941,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 1.40941,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "3.99.02.02",
+      "account_name": "PN",
+      "normalized_name": NaN,
+      "value": 1.40941,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 96637000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 11692000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 4472000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 2005000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 2005000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.02.01.03",
+      "account_name": "Ativos Financeiros Mensurados ao Valor Justo por meio do Resultado",
+      "normalized_name": NaN,
+      "value": 2005000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 3056000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 1425000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 1631000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.03.02.01",
+      "account_name": "Dividendos e Juros sobre o Capital Próprio",
+      "normalized_name": NaN,
+      "value": 1631000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 1605000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 387000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 387000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.06.01.01",
+      "account_name": "Imposto de renda e Contribuição social a compensar",
+      "normalized_name": NaN,
+      "value": 308000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.06.01.02",
+      "account_name": "Outros tributos a compensar",
+      "normalized_name": NaN,
+      "value": 79000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 167000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 84945000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 4644000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 50000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 50000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.03.01",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 1917000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 1089000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 1089000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 1588000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Depósitos Judiciais em Garantia de Contingências",
+      "normalized_name": NaN,
+      "value": 148000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Outros Ativos",
+      "normalized_name": NaN,
+      "value": 147000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Ativos de Direito de Uso",
+      "normalized_name": NaN,
+      "value": 565000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Benefícios a empregados",
+      "normalized_name": NaN,
+      "value": 123000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Outros tributos a compensar",
+      "normalized_name": NaN,
+      "value": 596000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.01.10.08",
+      "account_name": "Imposto de renda e Contribuição social a compensar",
+      "normalized_name": NaN,
+      "value": 9000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 75364000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 75364000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 10209000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 65148000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 7000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 4055000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 4055000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 882000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 882000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 96637000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 7359000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 259000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 259000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 1243000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 1136000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 107000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 367000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 367000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 21000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Outras",
+      "normalized_name": NaN,
+      "value": 346000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 922000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 742000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 734000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 8000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 180000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 2805000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 2805000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 2111000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Outros Passivos",
+      "normalized_name": NaN,
+      "value": 654000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Passivos de Arrendamentos",
+      "normalized_name": NaN,
+      "value": 40000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 1763000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 1763000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 1763000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 12743000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 11125000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 3639000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 2855000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 784000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 7486000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 996000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 996000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Outros Passivos",
+      "normalized_name": NaN,
+      "value": 334000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Passivos de Arrendamentos",
+      "normalized_name": NaN,
+      "value": 567000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Benefícios a empregados",
+      "normalized_name": NaN,
+      "value": 36000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Outros tributos a recolher",
+      "normalized_name": NaN,
+      "value": 57000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.02.02.08",
+      "account_name": "Outros tributos diferidos",
+      "normalized_name": NaN,
+      "value": 2000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 207000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 207000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 415000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 415000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 76535000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 63500000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 563000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 4000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 688000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.02.07",
+      "account_name": "Opções por Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 2000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.02.08",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 6000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.02.09",
+      "account_name": "Outras Reservas de Capital",
+      "normalized_name": NaN,
+      "value": -137000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 13598000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 3909000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 8812000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 877000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": -4864000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 3738000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": -134000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 2083000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro antes dos tributos sobre o lucro",
+      "normalized_name": "net_income_cfo",
+      "value": 14556000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Resultado de participações societárias",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": -11479000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 18000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Juros e variações cambiais e monetárias (líquidas)",
+      "normalized_name": NaN,
+      "value": 1248000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Depreciação, Amortização e exaustão",
+      "normalized_name": NaN,
+      "value": 855000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Variação do valor justo dos Ativos biológicos",
+      "normalized_name": NaN,
+      "value": -598000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Perda esperada para créditos de liquidação duvidosa (PECLD)",
+      "normalized_name": NaN,
+      "value": 27000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Resultado na venda de Investimentos, Imobilizado e Intangível",
+      "normalized_name": NaN,
+      "value": -2551000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Dividendos e JCP - Títulos e valores mobiliários",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Exclusão ICMS base PIS e COFINS",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Reversão de provisão ICMS base PIS COFINS",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.01.20",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 7000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -1023000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "(Aumento) Redução de Clientes",
+      "normalized_name": NaN,
+      "value": -12000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "(Aumento) Redução em Estoques",
+      "normalized_name": NaN,
+      "value": -267000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "(Aumento) Redução em Tributos a compensar",
+      "normalized_name": NaN,
+      "value": 652000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "(Aumento) Redução em Outros ativos",
+      "normalized_name": NaN,
+      "value": -222000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Aumento (Redução) em Tributos a recolher",
+      "normalized_name": NaN,
+      "value": -567000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Aumento (Redução) em Fornecedores",
+      "normalized_name": NaN,
+      "value": -442000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Aumento (Redução) em Obrigações com pessoal",
+      "normalized_name": NaN,
+      "value": -14000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Aumento (Redução) em Outros passivos",
+      "normalized_name": NaN,
+      "value": -151000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -1194000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.03.01",
+      "account_name": "Pagamento de Imposto de renda e Contribuição social",
+      "normalized_name": NaN,
+      "value": -54000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.01.03.02",
+      "account_name": "Juros pagos sobre Empréstimos, financiamentos e Debêntures",
+      "normalized_name": NaN,
+      "value": -1140000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": 2132000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Aquisição de Investimentos",
+      "normalized_name": NaN,
+      "value": -2992000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Alienação de Investimentos",
+      "normalized_name": "capex",
+      "value": 4670000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "(Aumento) Redução de capital social em investidas",
+      "normalized_name": NaN,
+      "value": -1110000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Recebimento de juros sobre Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Aquisição de Imobilizado, Intangível e Ativos biológicos",
+      "normalized_name": NaN,
+      "value": -1215000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Alienação de Imobilizado, Intangível e Ativos biológicos",
+      "normalized_name": NaN,
+      "value": 11000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Juros sobre o capital próprio e Dividendos recebidos",
+      "normalized_name": NaN,
+      "value": 2771000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Caixa e Equivalentes de caixa de controladas incorporadas/adquiridas",
+      "normalized_name": NaN,
+      "value": 7000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.02.09",
+      "account_name": "(Aquisição) Resgate de Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.02.10",
+      "account_name": "Investimentos em Fundo de Corporate Venture Capital",
+      "normalized_name": NaN,
+      "value": -10000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -1370000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Integralização de Capital social",
+      "normalized_name": "debt_issuance",
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "(Aquisição) Alienação de Ações em tesouraria",
+      "normalized_name": "debt_repayment",
+      "value": -311000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Juros sobre o capital próprio e Dividendos pagos",
+      "normalized_name": NaN,
+      "value": -3851000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Ingresso de Empréstimos, Financiamentos e Debêntures",
+      "normalized_name": "dividends_paid",
+      "value": 5993000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Amortização de Empréstimos, Financiamentos e Debêntures",
+      "normalized_name": NaN,
+      "value": -3076000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Amortização de passivos de arrendamento",
+      "normalized_name": NaN,
+      "value": -87000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Amortização de derivativos",
+      "normalized_name": NaN,
+      "value": -38000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": -32000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": 596000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 3876000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 4472000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "ITAÚSA S.A.",
+      "cvm_code": "007617"
+    }
+  ]
+}

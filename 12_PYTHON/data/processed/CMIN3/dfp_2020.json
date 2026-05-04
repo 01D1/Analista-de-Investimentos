@@ -1,0 +1,2269 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 13789531.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -5480608.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 8308923.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -2006535.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -1219967.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -159296.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 32886.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -708692.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": 48534.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 6302388.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -512391.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 28220.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -540611.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.06.02.01",
+      "account_name": "Despesas financeiras",
+      "normalized_name": NaN,
+      "value": -404181.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.06.02.02",
+      "account_name": "Variações monetárias cambiais liquidas",
+      "normalized_name": NaN,
+      "value": -136430.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 5789997.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": -1759287.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -1755312.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": -3975.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 4030710.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 4030710.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 4030710.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 22.26888,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 22.26888,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 19622406.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 6597075.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 2972521.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 1425.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 1425.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 2825734.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 512440.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 284955.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 284955.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Adiantamentos a fornecedores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Impostos a recuperar",
+      "normalized_name": NaN,
+      "value": 66120.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.01.08.03.03",
+      "account_name": "Outros ativos",
+      "normalized_name": NaN,
+      "value": 218835.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 13025331.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 711231.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 347304.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 363927.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Adiantamentos a fornecedores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Impostos a recuperar",
+      "normalized_name": NaN,
+      "value": 77429.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Outros ativos",
+      "normalized_name": NaN,
+      "value": 286498.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 1225372.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 6852757.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 4913217.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 82717.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 1856823.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 4235971.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 19622406.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 4598123.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 65950.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 1393323.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 1710484.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 45014.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 1375474.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 1375474.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 344200.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Passivos de arredamentos",
+      "normalized_name": NaN,
+      "value": 7741.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Adiantamento de clientes",
+      "normalized_name": NaN,
+      "value": 884472.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Dividendos propostos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 139061.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 7878.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 7878.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 4422586.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 1280000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 2651384.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 2651384.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Passivos de arredamentos",
+      "normalized_name": NaN,
+      "value": 74360.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Adiantamento de clientes",
+      "normalized_name": NaN,
+      "value": 1722281.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Tributos a recolher",
+      "normalized_name": NaN,
+      "value": 161366.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Passivos ambientais e desativação",
+      "normalized_name": NaN,
+      "value": 444522.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 82081.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.02.02.08",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 166774.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 436463.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 54739.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 54739.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 10601697.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 6103872.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 141723.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 4029644.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 621635.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 236613.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 288405.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.04.10",
+      "account_name": "Reserva de Investimentos",
+      "normalized_name": NaN,
+      "value": 2882991.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 322635.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 3823.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 5829008.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 7309157.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro líquido do exercício",
+      "normalized_name": "net_income_cfo",
+      "value": 4030710.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Resultado de equivalência patrimonial",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": -48534.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Variações cambiais e monetárias",
+      "normalized_name": NaN,
+      "value": 51962.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Despesa de juros sobre empréstimos e financiamentos",
+      "normalized_name": NaN,
+      "value": 55849.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Juros capitalizados",
+      "normalized_name": NaN,
+      "value": -62899.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Juros de passivos de arrendamentos",
+      "normalized_name": NaN,
+      "value": 6947.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Amortização custo de transação",
+      "normalized_name": NaN,
+      "value": 3290.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Depreciação e amortização",
+      "normalized_name": NaN,
+      "value": 1232473.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Perda estimada para a baixa de ativos imobilizados",
+      "normalized_name": NaN,
+      "value": 1762.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Imposto de renda e contribuição social correntes e diferidos",
+      "normalized_name": NaN,
+      "value": 1759287.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Outros provisionamentos",
+      "normalized_name": NaN,
+      "value": -21275.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Perdas hedge accounting fluxo de caixa",
+      "normalized_name": NaN,
+      "value": 299585.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -1480149.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Contas a receber",
+      "normalized_name": NaN,
+      "value": -1334202.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": -44007.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Impostos a recuperar",
+      "normalized_name": NaN,
+      "value": -34214.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Adiantamentos a fornecedores",
+      "normalized_name": NaN,
+      "value": 87134.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Outros ativos",
+      "normalized_name": NaN,
+      "value": -174642.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 742523.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Obrigações sociais e trabalhistas",
+      "normalized_name": NaN,
+      "value": -942.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Tributos a recolher",
+      "normalized_name": NaN,
+      "value": 109077.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Adiantamento de clientes",
+      "normalized_name": NaN,
+      "value": -10011.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Dividendos recebidos",
+      "normalized_name": NaN,
+      "value": 45166.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "Imposto de renda e contribuição social pagos",
+      "normalized_name": NaN,
+      "value": -504689.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.02.12",
+      "account_name": "Juros pagos sobre empréstimos e financiamentos",
+      "normalized_name": NaN,
+      "value": -56990.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.02.13",
+      "account_name": "Outras obrigações",
+      "normalized_name": NaN,
+      "value": -4767.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.02.14",
+      "account_name": "Hedge accounting de fluxo de caixa",
+      "normalized_name": NaN,
+      "value": -299585.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -641924.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Aquisição de ativos imobilizados e intangível",
+      "normalized_name": NaN,
+      "value": -641924.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Caixa proveniente da aquisição/incorporação da CGPAR",
+      "normalized_name": "capex",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Aquisição de investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Aumento de Capital - CSN Holding",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -2642640.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Pagamento do principal sobre empréstimos",
+      "normalized_name": "debt_issuance",
+      "value": -374668.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Amortização de Passivos de arrendamentos",
+      "normalized_name": "debt_repayment",
+      "value": -18375.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Custo de transação financeira",
+      "normalized_name": NaN,
+      "value": -265.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Dividendos pagos",
+      "normalized_name": "dividends_paid",
+      "value": -2380000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Captação",
+      "normalized_name": NaN,
+      "value": 130668.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Juros s/ Capital Proprio",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": 2544444.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 428077.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 2972521.0,
+      "reference_date": "2020-12-31",
+      "company_name": "CSN MINERAÇÃO S.A.",
+      "cvm_code": "025585"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "ticker": "SUZB3",
+  "sector_type": "industrial",
+  "base_year": 2025,
+  "method": "DCF FCFF",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 56753.72603855508,
+      "current_price": 47.93000030517578,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.111,
+        "g_terminal": 0.055,
+        "rev_growth_avg": 0.09,
+        "ebitda_margin_avg": 0.255,
+        "beta": 1.0,
+        "tax_rate": 0.27
+      }
+    },
+    "optimistic": {
+      "fair_value": 118827.71550979812,
+      "current_price": 47.93000030517578,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1101,
+        "g_terminal": 0.06,
+        "rev_growth_avg": 0.14,
+        "ebitda_margin_avg": 0.2677,
+        "beta": 1.0,
+        "tax_rate": 0.27
+      }
+    },
+    "pessimistic": {
+      "fair_value": 6321.25782633926,
+      "current_price": 47.93000030517578,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1119,
+        "g_terminal": 0.05,
+        "rev_growth_avg": 0.04,
+        "ebitda_margin_avg": 0.2371,
+        "beta": 1.0,
+        "tax_rate": 0.27
+      }
+    }
+  }
+}

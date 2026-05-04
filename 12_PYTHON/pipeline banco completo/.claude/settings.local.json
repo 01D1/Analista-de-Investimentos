@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python main.py --batch-setor consumo_varejo)",
+      "Bash(pip install *)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\55819\\\\OneDrive - EPEJUD\\\\DIEGO\\\\OBSIDIAN\\\\Analista de Investimentos\\\\12_PYTHON\\\\pipeline banco completo\\\\outputs\" | Where-Object { $_.LastWriteTime -gt \\(Get-Date\\).AddMinutes\\(-10\\) } | Sort-Object LastWriteTime | Format-Table Name, LastWriteTime, Length)",
+      "Bash(python -c ' *)",
+      "Bash(python main.py --batch-setor consumo_varejo --sem-cache)",
+      "Bash(Get-Content \"C:\\\\Users\\\\55819\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-55819-OneDrive---EPEJUD-DIEGO-OBSIDIAN-Analista-de-Investimentos-12-PYTHON-pipeline-banco-completo\\\\52d08209-dfbb-47b6-8d32-39befd14de39\\\\tasks\\\\bu8g4v9uw.output\")",
+      "Bash(Select-Object -Last 30)",
+      "Bash(python main.py --batch VIVA3 NATU3 AUAU3 --sem-cache)",
+      "Bash(python main.py --ticker VIVA3 --sem-cache)",
+      "Bash(python main.py --batch RADL3 SBSP3 NATU3 --sem-cache)",
+      "Bash(python main.py --ticker RADL3 --sem-cache)",
+      "Bash(python main.py --ticker CEAB3 --sem-cache)"
+    ]
+  }
+}

@@ -1,0 +1,2638 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 19250000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -14433000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 4817000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -4140000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -3104000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -574000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -1230000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.04.05.01",
+      "account_name": "Depreciação / Amortização",
+      "normalized_name": NaN,
+      "value": -1017000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.04.05.02",
+      "account_name": "Ganho/Perda na Alienação de Imobilizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.04.05.03",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -213000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": 768000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 677000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -1009000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": -332000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": 418000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -193000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": 611000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 86000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": -2220000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": -2220000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": -2134000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": -2271000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 137000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": -8.41175,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.99.01.02",
+      "account_name": "PN",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": -8.41791,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "3.99.02.02",
+      "account_name": "PN",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 22050000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 7523000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 2971000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 777000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 777000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 573000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 458000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 115000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 1952000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 1078000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 172000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 172000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Dividendos a receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.08.03.03",
+      "account_name": "Créditos com Partes Relacionadas - CP",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.08.03.04",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 172000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.01.08.03.05",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 14527000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 5113000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 810000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 810000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 1078000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 52000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 3173000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 2536000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Depósitos Judiciais",
+      "normalized_name": NaN,
+      "value": 517000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 1000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Outros ativos não circulantes",
+      "normalized_name": NaN,
+      "value": 119000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 864000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 864000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 6577000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 3476000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 3101000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 1973000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 1973000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.04.01.02",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 1652000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.04.01.03",
+      "account_name": "Direito de Uso Intangível",
+      "normalized_name": NaN,
+      "value": 321000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 22050000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 6225000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 381000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 3253000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 3253000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.02.01.01",
+      "account_name": " Fornecedores",
+      "normalized_name": NaN,
+      "value": 2729000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.02.01.02",
+      "account_name": " Fornecedores convênio",
+      "normalized_name": NaN,
+      "value": 524000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 410000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 972000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 1209000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 85000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 1124000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Outros passivos circulantes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Aluguéis a pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Outros passivos circulantes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Repasse a Terceiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.02.08",
+      "account_name": "Financiamento por Compra de Ativos",
+      "normalized_name": NaN,
+      "value": 112000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.02.09",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 168000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.02.11",
+      "account_name": "Aquisição de Sociedades",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.02.12",
+      "account_name": "Outros passivos circulantes",
+      "normalized_name": NaN,
+      "value": 370000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.02.13",
+      "account_name": "Outros passivos circulantes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.02.14",
+      "account_name": "Multisservicos a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.02.15",
+      "account_name": "IPTU a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.02.16",
+      "account_name": "Demais Contas a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.05.02.17",
+      "account_name": "Passivo de Arrendamento",
+      "normalized_name": NaN,
+      "value": 474000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 11103000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 4302000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 4575000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 4575000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Impostos e contribuições a recolher e impostos parcelados",
+      "normalized_name": NaN,
+      "value": 69000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Aquisição de Sociedades",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Financiamento por Compra de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 270000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Outros passivos não circulantes",
+      "normalized_name": NaN,
+      "value": 410000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.02.02.08",
+      "account_name": "Provisão para perdas de Investimentos em associadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.02.02.09",
+      "account_name": "Passivo de Arrendamento",
+      "normalized_name": NaN,
+      "value": 3826000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 2151000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 2151000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.04.02.04",
+      "account_name": "Outras",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 75000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 4722000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 1807000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 26000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 26000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.02.07",
+      "account_name": "Outras Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 5329000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 190000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 155000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 2584000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.04.10",
+      "account_name": "Reserva para Expansão",
+      "normalized_name": NaN,
+      "value": 625000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.04.12",
+      "account_name": "Transações com Acionistas",
+      "normalized_name": NaN,
+      "value": 1775000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.04.14",
+      "account_name": "Liquidação de Instrumento Patrimonial",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": -2443000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": -2000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 5000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 563000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 1532000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro (prejuízo) líquido do período",
+      "normalized_name": "net_income_cfo",
+      "value": -2134000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Imposto de renda diferido (Nota 20.3)",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": -282000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Perda (ganho) na alienação do imobilizado",
+      "normalized_name": NaN,
+      "value": -14000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Depreciação / amortização",
+      "normalized_name": NaN,
+      "value": 1136000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Juros e variações monetárias",
+      "normalized_name": NaN,
+      "value": 1670000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Ajuste a valor presente",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Resultado de equivalência patrimonial (Nota 13.4)",
+      "normalized_name": NaN,
+      "value": -699000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Provisão para demandas judiciais",
+      "normalized_name": NaN,
+      "value": -87000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Provisão para baixas e perdas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Pagamento baseado em ações",
+      "normalized_name": NaN,
+      "value": 16000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Perda estimada em créditos de liquidação duvidosa (Nota 8.2 e 9.1)",
+      "normalized_name": NaN,
+      "value": 20000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Ganho (perda) líquidos por diluição de part.societária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Provisão para obsolescência e quebra (Nota 10.2)",
+      "normalized_name": NaN,
+      "value": 43000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.01.14",
+      "account_name": "Outras despesas operacionais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.01.15",
+      "account_name": "Receita a apropriar",
+      "normalized_name": NaN,
+      "value": -77000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.01.16",
+      "account_name": "Perda (ganho) na baixa de passivo de arrendamento (nota 22.2)",
+      "normalized_name": NaN,
+      "value": -142000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.01.18",
+      "account_name": "Perda (ganho) na venda de subsidiárias",
+      "normalized_name": NaN,
+      "value": 2082000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.01.19",
+      "account_name": "Reavaliação do investimento - Bellamar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -969000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Contas a receber",
+      "normalized_name": NaN,
+      "value": -20000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 147000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Tributos a recuperar",
+      "normalized_name": NaN,
+      "value": 173000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Outros ativos",
+      "normalized_name": NaN,
+      "value": 149000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Partes relacionadas",
+      "normalized_name": NaN,
+      "value": -136000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Depósitos judiciais",
+      "normalized_name": NaN,
+      "value": 225000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": -1512000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Salários e encargos sociais",
+      "normalized_name": NaN,
+      "value": 93000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Impostos e contr. sociais a recolher",
+      "normalized_name": NaN,
+      "value": 265000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Demandas judiciais",
+      "normalized_name": NaN,
+      "value": -222000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "Receita Diferida",
+      "normalized_name": NaN,
+      "value": 14000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.02.12",
+      "account_name": "Demais contas a pagar",
+      "normalized_name": NaN,
+      "value": 39000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.02.13",
+      "account_name": "Imposto de renda e contribuição social, pagos",
+      "normalized_name": NaN,
+      "value": -204000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.02.14",
+      "account_name": "Aplicação financeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.02.15",
+      "account_name": "Dividendos recebidos e JSCP",
+      "normalized_name": NaN,
+      "value": 20000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -1597000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Aumento de capital em controladas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Aquisição de bens do ativo imobilizado (Nota 14.4)",
+      "normalized_name": "capex",
+      "value": -1014000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Aumento do ativo intangível (Nota 15.3)",
+      "normalized_name": NaN,
+      "value": -157000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Venda de bens do imobilizado",
+      "normalized_name": NaN,
+      "value": 876000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Caixa liquido de aquisição e reorganização societária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Caixa líquido de incorporação de subsidiárias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Caixa na desconsolidação do Éxito",
+      "normalized_name": NaN,
+      "value": -1257000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.02.09",
+      "account_name": "Aquisição de propridade para investimento",
+      "normalized_name": NaN,
+      "value": -31000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.02.10",
+      "account_name": "Caixa Liquido de Incorporações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.02.11",
+      "account_name": "Aplicação financeira",
+      "normalized_name": NaN,
+      "value": -14000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -1705000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Aumento de capital",
+      "normalized_name": "debt_issuance",
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Captações e refinanciamento (Nota 17.2)",
+      "normalized_name": "debt_repayment",
+      "value": 1718000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Pagamentos de empréstimos e financiamentos (Nota 17.2)",
+      "normalized_name": NaN,
+      "value": -1416000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Pagamento de Juros de Empréstimos e Financiamentos",
+      "normalized_name": "dividends_paid",
+      "value": -729000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Pagamento de dividendos",
+      "normalized_name": NaN,
+      "value": -112000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Recursos Obtidos de acionistas não controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Aquisição de sociedades",
+      "normalized_name": NaN,
+      "value": -3000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Transação com não controladores",
+      "normalized_name": NaN,
+      "value": 3000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.03.09",
+      "account_name": "Pagamentos de passivo de arrendamento e juros (Nota 22.2)",
+      "normalized_name": NaN,
+      "value": -1166000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.03.10",
+      "account_name": "Pagamento de Juros de Passivo de Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 89000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": -2650000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 5621000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 2971000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA BRASILEIRA DE DISTRIBUICAO",
+      "cvm_code": "014826"
+    }
+  ]
+}

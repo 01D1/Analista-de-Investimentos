@@ -1,0 +1,51 @@
+{
+  "ticker": "BRFS3",
+  "sector_type": "industrial",
+  "base_year": 2025,
+  "method": "DCF FCFF",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 23783.116625097842,
+      "current_price": null,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.111,
+        "g_terminal": 0.055,
+        "rev_growth_avg": 0.09,
+        "ebitda_margin_avg": 0.1226,
+        "beta": 1.0,
+        "tax_rate": 0.27
+      }
+    },
+    "optimistic": {
+      "fair_value": 46323.61214721971,
+      "current_price": null,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1101,
+        "g_terminal": 0.06,
+        "rev_growth_avg": 0.14,
+        "ebitda_margin_avg": 0.1287,
+        "beta": 1.0,
+        "tax_rate": 0.27
+      }
+    },
+    "pessimistic": {
+      "fair_value": 720.4165723371524,
+      "current_price": null,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1119,
+        "g_terminal": 0.05,
+        "rev_growth_avg": 0.04,
+        "ebitda_margin_avg": 0.114,
+        "beta": 1.0,
+        "tax_rate": 0.27
+      }
+    }
+  }
+}

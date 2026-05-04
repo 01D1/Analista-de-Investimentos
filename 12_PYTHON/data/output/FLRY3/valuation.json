@@ -1,0 +1,51 @@
+{
+  "ticker": "FLRY3",
+  "sector_type": "healthcare",
+  "base_year": 2025,
+  "method": "DCF FCFF",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 10608.933121382215,
+      "current_price": 16.649999618530273,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1053,
+        "g_terminal": 0.065,
+        "rev_growth_avg": 0.12,
+        "ebitda_margin_avg": 0.1767,
+        "beta": 0.9,
+        "tax_rate": 0.27
+      }
+    },
+    "optimistic": {
+      "fair_value": 18927.880922650333,
+      "current_price": 16.649999618530273,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1042,
+        "g_terminal": 0.07,
+        "rev_growth_avg": 0.16,
+        "ebitda_margin_avg": 0.1856,
+        "beta": 0.9,
+        "tax_rate": 0.27
+      }
+    },
+    "pessimistic": {
+      "fair_value": 3254.066098489618,
+      "current_price": 16.649999618530273,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1064,
+        "g_terminal": 0.06,
+        "rev_growth_avg": 0.08,
+        "ebitda_margin_avg": 0.1644,
+        "beta": 0.9,
+        "tax_rate": 0.27
+      }
+    }
+  }
+}

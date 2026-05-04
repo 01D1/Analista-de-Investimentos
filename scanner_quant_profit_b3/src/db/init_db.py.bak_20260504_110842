@@ -1,0 +1,86 @@
+import sqlite3
+from src.utils import load_config, project_path
+
+
+def main():
+    cfg = load_config()
+    db_path = project_path(cfg["database_path"])
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+
+    con = sqlite3.connect(db_path)
+    cur = con.cursor()
+
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS profit_snapshots (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        captured_at TEXT NOT NULL,
+        asset TEXT NOT NULL,
+        trade_date TEXT,
+        trade_time TEXT,
+        last REAL,
+        open REAL,
+        high REAL,
+        low REAL,
+        prev_close REAL,
+        variation_pct REAL,
+        variation_pts REAL,
+        trades INTEGER,
+        quantity REAL,
+        volume REAL
+    )
+    """)
+
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS cotahist_daily (
+        trade_date TEXT NOT NULL,
+        ticker TEXT NOT NULL,
+        market_type TEXT,
+        bdi_code TEXT,
+        company_name TEXT,
+        specification TEXT,
+        term_days TEXT,
+        open REAL,
+        high REAL,
+        low REAL,
+        average REAL,
+        close REAL,
+        best_bid REAL,
+        best_ask REAL,
+        trades INTEGER,
+        quantity REAL,
+        volume REAL,
+        strike REAL,
+        option_type TEXT,
+        expiration_date TEXT,
+        source_year INTEGER,
+        PRIMARY KEY (trade_date, ticker, market_type)
+    )
+    """)
+
+
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS realtime_signals (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        captured_at TEXT NOT NULL,
+        asset TEXT NOT NULL,
+        last REAL,
+        variation_pct REAL,
+        volume REAL,
+        trades INTEGER,
+        score INTEGER,
+        signal TEXT,
+        motivos TEXT
+    )
+    """)
+
+    cur.execute("CREATE INDEX IF NOT EXISTS idx_profit_asset_time ON profit_snapshots(asset, captured_at)")
+    cur.execute("CREATE INDEX IF NOT EXISTS idx_cotahist_ticker_date ON cotahist_daily(ticker, trade_date)")
+    cur.execute("CREATE INDEX IF NOT EXISTS idx_cotahist_option_exp ON cotahist_daily(option_type, expiration_date)")
+
+    con.commit()
+    con.close()
+    print(f"Banco criado/atualizado em: {db_path}")
+
+
+if __name__ == "__main__":
+    main()

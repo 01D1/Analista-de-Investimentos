@@ -1,0 +1,25 @@
+{
+  "ticker": "MRFG3",
+  "sector_type": "industrial",
+  "assessed_at": "2026-04-19",
+  "overall_severity": "critical",
+  "risk_count": 2,
+  "risks": [
+    {
+      "code": "HIGH_LEVERAGE",
+      "severity": "critical",
+      "category": "leverage",
+      "description": "DL/EBITDA elevada: 5.5x",
+      "detail": "Threshold (industrial): médio=2.5x  alto=3.5x",
+      "triggered_at": "2026-04-19"
+    },
+    {
+      "code": "FALLING_NET_INCOME",
+      "severity": "medium",
+      "category": "growth",
+      "description": "Lucro em queda por 2 anos consecutivos",
+      "detail": "2024: -284.2%  2025: -87.2%",
+      "triggered_at": "2026-04-19"
+    }
+  ]
+}

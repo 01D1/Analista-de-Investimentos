@@ -1,0 +1,45 @@
+{
+  "ticker": "BPAC11",
+  "sector_type": "bank",
+  "base_year": 2025,
+  "method": "Gordon Growth Model (P/B Implícito)",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 170186.21618775823,
+      "current_price": 63.599998474121094,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.24060785805144688,
+        "coe": 0.135,
+        "g": 0.055,
+        "pb_implied": 2.3200982256430858
+      }
+    },
+    "optimistic": {
+      "fair_value": 189259.03121458084,
+      "current_price": 63.599998474121094,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.24060785805144688,
+        "coe": 0.13,
+        "g": 0.06,
+        "pb_implied": 2.580112257877812
+      }
+    },
+    "pessimistic": {
+      "fair_value": 155351.80450022954,
+      "current_price": 63.599998474121094,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.24060785805144688,
+        "coe": 0.14,
+        "g": 0.05,
+        "pb_implied": 2.1178650894605204
+      }
+    }
+  }
+}

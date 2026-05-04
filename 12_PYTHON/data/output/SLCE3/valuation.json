@@ -1,0 +1,51 @@
+{
+  "ticker": "SLCE3",
+  "sector_type": "agro",
+  "base_year": 2025,
+  "method": "DCF FCFF",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 12185.628945584122,
+      "current_price": 17.739999771118164,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1173,
+        "g_terminal": 0.05,
+        "rev_growth_avg": 0.07,
+        "ebitda_margin_avg": 0.2229,
+        "beta": 1.1,
+        "tax_rate": 0.15
+      }
+    },
+    "optimistic": {
+      "fair_value": 22209.80735991984,
+      "current_price": 17.739999771118164,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1152,
+        "g_terminal": 0.057,
+        "rev_growth_avg": 0.13,
+        "ebitda_margin_avg": 0.234,
+        "beta": 1.1,
+        "tax_rate": 0.15
+      }
+    },
+    "pessimistic": {
+      "fair_value": 4542.301712098974,
+      "current_price": 17.739999771118164,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1194,
+        "g_terminal": 0.043,
+        "rev_growth_avg": 0.01,
+        "ebitda_margin_avg": 0.2073,
+        "beta": 1.1,
+        "tax_rate": 0.15
+      }
+    }
+  }
+}

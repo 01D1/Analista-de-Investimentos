@@ -1,0 +1,45 @@
+{
+  "ticker": "B3SA3",
+  "sector_type": "holding",
+  "base_year": 2025,
+  "method": "Gordon Growth Model (P/B Implícito)",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 0.0,
+      "current_price": 19.43000030517578,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.26290469961989743,
+        "coe": 0.13,
+        "g": 0.055,
+        "pb_implied": 2.772062661598632
+      }
+    },
+    "optimistic": {
+      "fair_value": 0.0,
+      "current_price": 19.43000030517578,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.26290469961989743,
+        "coe": 0.125,
+        "g": 0.06,
+        "pb_implied": 3.1216107633830372
+      }
+    },
+    "pessimistic": {
+      "fair_value": 0.0,
+      "current_price": 19.43000030517578,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.26290469961989743,
+        "coe": 0.135,
+        "g": 0.05,
+        "pb_implied": 2.5047611719987932
+      }
+    }
+  }
+}

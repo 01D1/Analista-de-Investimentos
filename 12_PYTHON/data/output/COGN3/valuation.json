@@ -1,0 +1,51 @@
+{
+  "ticker": "COGN3",
+  "sector_type": "education",
+  "base_year": 2025,
+  "method": "DCF FCFF",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 7341.480994342571,
+      "current_price": 3.2699999809265137,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1148,
+        "g_terminal": 0.05,
+        "rev_growth_avg": 0.072,
+        "ebitda_margin_avg": 0.2235,
+        "beta": 1.1,
+        "tax_rate": 0.27
+      }
+    },
+    "optimistic": {
+      "fair_value": 12645.20284455046,
+      "current_price": 3.2699999809265137,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1135,
+        "g_terminal": 0.055,
+        "rev_growth_avg": 0.112,
+        "ebitda_margin_avg": 0.2347,
+        "beta": 1.1,
+        "tax_rate": 0.27
+      }
+    },
+    "pessimistic": {
+      "fair_value": 2716.988751294136,
+      "current_price": 3.2699999809265137,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1161,
+        "g_terminal": 0.045,
+        "rev_growth_avg": 0.032,
+        "ebitda_margin_avg": 0.2079,
+        "beta": 1.1,
+        "tax_rate": 0.27
+      }
+    }
+  }
+}

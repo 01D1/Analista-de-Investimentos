@@ -1,0 +1,2728 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 132218010.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -118840540.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 13377470.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -12316283.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -10431076.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -1966505.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 144802.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": -63504.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 1061187.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -5602415.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 11521121.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.06.01.01",
+      "account_name": "Receitas financeiras",
+      "normalized_name": NaN,
+      "value": 11521121.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.06.01.02",
+      "account_name": "Variação cambial ativa",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -17123536.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.06.02.01",
+      "account_name": "Despesas financeiras",
+      "normalized_name": NaN,
+      "value": -17123536.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.06.02.02",
+      "account_name": "Variação cambial passiva",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": -4541228.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": 1089599.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -223020.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": 1312619.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": -3451629.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": -169617.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": -169617.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.10.01.01",
+      "account_name": "Participação do acionista controlador - operação descontinuada",
+      "normalized_name": NaN,
+      "value": -169390.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.10.01.02",
+      "account_name": "Participação dos acionistas não-controladores - operação descontinuada",
+      "normalized_name": NaN,
+      "value": -227.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": -3621246.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": -1517776.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": -2103470.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": -2.3663,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": -2.3663,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 130954636.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 52100800.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 6460212.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.01.01",
+      "account_name": "Caixa e Bancos",
+      "normalized_name": NaN,
+      "value": 6460212.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 15431958.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 15418144.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 13814.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.02.03.01",
+      "account_name": "Caixa restrito",
+      "normalized_name": NaN,
+      "value": 13814.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 7214497.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 7214497.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.03.01.01",
+      "account_name": "Valores a receber de clientes",
+      "normalized_name": NaN,
+      "value": 7213646.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.03.01.02",
+      "account_name": "Dividendos a Receber",
+      "normalized_name": NaN,
+      "value": 851.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 10113118.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.04.01",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 10113118.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 2756684.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 2920641.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 2920641.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.06.01.01",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 2920641.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 7203690.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 5099203.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.08.02.01",
+      "account_name": "Ativos Mantidos para venda",
+      "normalized_name": NaN,
+      "value": 5099203.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 2104487.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Despesas do exercicio seguinte",
+      "normalized_name": NaN,
+      "value": 302499.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Outros valores a receber",
+      "normalized_name": NaN,
+      "value": 664869.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.08.03.03",
+      "account_name": "Adiantamento a fornecedores",
+      "normalized_name": NaN,
+      "value": 913428.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.08.03.04",
+      "account_name": "Títulos a receber",
+      "normalized_name": NaN,
+      "value": 96770.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.01.08.03.06",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 126921.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 78853836.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 13395849.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 319995.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 5897.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.04.03",
+      "account_name": "Valores a receber - clientes nacionais",
+      "normalized_name": NaN,
+      "value": 5897.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.04.04",
+      "account_name": "Valores a receber - clientes internacionais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 2586765.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 2586765.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 10483192.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Depositos Judiciais",
+      "normalized_name": NaN,
+      "value": 463528.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 9089563.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Outros valores a receber",
+      "normalized_name": NaN,
+      "value": 229725.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Titulos a receber",
+      "normalized_name": NaN,
+      "value": 2130.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Caixa restrito",
+      "normalized_name": NaN,
+      "value": 72395.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.01.10.08",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 625851.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 769803.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 654638.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 115165.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 46136210.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 42505020.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.03.01.01",
+      "account_name": "Imobilizado em operação",
+      "normalized_name": NaN,
+      "value": 40646704.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.03.01.02",
+      "account_name": "Ativo Biológico",
+      "normalized_name": NaN,
+      "value": 1858316.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 3631190.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 18551974.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 18551974.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 130954636.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 42170873.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 1669658.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 16706980.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 16706980.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.02.01.01",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 16706980.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.02.01.02",
+      "account_name": "Fornecedores Risco Sacado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 763562.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 763562.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Impostos, taxas e contribuições",
+      "normalized_name": NaN,
+      "value": 763562.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 8589712.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 7509414.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.04.02.01",
+      "account_name": "Juros sobre debentures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 1080298.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 13720774.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 13720774.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 810.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Títulos a pagar",
+      "normalized_name": NaN,
+      "value": 196697.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Antecipações de clientes",
+      "normalized_name": NaN,
+      "value": 4614640.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 121443.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Antecipação por venda de ativo",
+      "normalized_name": NaN,
+      "value": 1500000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.05.02.19",
+      "account_name": "Passivos relacionados a ativos mantidos para venda",
+      "normalized_name": NaN,
+      "value": 6557838.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.05.02.20",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 729346.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 720187.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 63893928.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 47234441.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 44076178.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 3158263.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 1644343.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 1644343.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 422.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Impostos, taxas e contribuições",
+      "normalized_name": NaN,
+      "value": 346661.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 685376.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Títulos a pagar",
+      "normalized_name": NaN,
+      "value": 63239.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 94247.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.02.02.08",
+      "account_name": "Antecipações de clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.02.02.09",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 454398.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 9553512.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 9553512.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 5461632.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 24889835.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 10367391.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.01.01",
+      "account_name": "Capital Social",
+      "normalized_name": NaN,
+      "value": 10367391.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.01.02",
+      "account_name": "Gastos com emissão pública de ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.01.03",
+      "account_name": "Gastos com emissão privada de ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": -515881.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.02.09",
+      "account_name": "Aquisição de ações em controladas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.02.10",
+      "account_name": "Emissão de ações ordinárias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 3641641.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 484848.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 2927390.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 229403.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.04.10",
+      "account_name": "Ações em Tesouraria canceladas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.04.11",
+      "account_name": "Retenção de lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": -5861827.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.08.01",
+      "account_name": "Valores no PL relacionados a ativos mantidos para venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 17258511.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 12556380.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 9136874.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro (Prejuízo) no Exercício das operações continuadas",
+      "normalized_name": "net_income_cfo",
+      "value": -1348386.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Depreciação e Amortização",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 6740232.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Ganho ou perda na operação descontinuada",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Participação dos acionistas não controladores",
+      "normalized_name": NaN,
+      "value": -2103243.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Provisão para contingências",
+      "normalized_name": NaN,
+      "value": 70573.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Tributos diferidos e obrigações tributárias",
+      "normalized_name": NaN,
+      "value": -1312619.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Resultado de equivalência patrimonial",
+      "normalized_name": NaN,
+      "value": 63504.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Variação cambial sobre financiamentos",
+      "normalized_name": NaN,
+      "value": -849303.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Variação Cambial Demais Contas de Ativo e Passivo",
+      "normalized_name": NaN,
+      "value": 2024967.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Despesas de Juros sobre Dívidas Financeiras",
+      "normalized_name": NaN,
+      "value": 5157074.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Despesas de Juros sobre Arrendamento Financeiro",
+      "normalized_name": NaN,
+      "value": 305960.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Acordo de leniência",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Perdas por redução ao valor recuperável de tributos",
+      "normalized_name": NaN,
+      "value": 119259.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01.14",
+      "account_name": "Reavaliação de propriedades para investimento",
+      "normalized_name": NaN,
+      "value": -3836.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01.15",
+      "account_name": "AVP e Ganho no ajuste de valor justo do ativo biológico",
+      "normalized_name": NaN,
+      "value": 794846.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01.16",
+      "account_name": "Compra vantajosa",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01.17",
+      "account_name": "Outros efeitos não caixa",
+      "normalized_name": NaN,
+      "value": -647499.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01.18",
+      "account_name": "Custo na emissão de operações financeiras",
+      "normalized_name": NaN,
+      "value": 153188.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01.19",
+      "account_name": "Perdas esperadas por não realização de estoque",
+      "normalized_name": NaN,
+      "value": -84464.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.01.20",
+      "account_name": "Perdas esperadas para crédito de liquidação duvidosa",
+      "normalized_name": NaN,
+      "value": 56621.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": 3419506.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Contas a receber de clientes",
+      "normalized_name": NaN,
+      "value": 1987815.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 1349168.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Depósitos judiciais e contingências",
+      "normalized_name": NaN,
+      "value": -94406.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Pessoal, Encargos e Beneficios Sociais",
+      "normalized_name": NaN,
+      "value": -445257.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Fornecedores e fornecedores risco sacado",
+      "normalized_name": NaN,
+      "value": -1329027.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Tributos correntes e diferidos",
+      "normalized_name": NaN,
+      "value": 1085589.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Títulos a receber e a pagar",
+      "normalized_name": NaN,
+      "value": -742173.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": -274132.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Ativo biológico corrente",
+      "normalized_name": NaN,
+      "value": 312687.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Antecipação por venda de ativo",
+      "normalized_name": NaN,
+      "value": 1500000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.02.20",
+      "account_name": "Outras contas ativas e passivas",
+      "normalized_name": NaN,
+      "value": 69242.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -6120367.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Investimentos",
+      "normalized_name": NaN,
+      "value": -3030001.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Aplicações em ativo imobilizado",
+      "normalized_name": "capex",
+      "value": -2045868.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Aplicações no Ativo Intangível",
+      "normalized_name": NaN,
+      "value": -168900.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Aplicações financeiras e valores mobiliários",
+      "normalized_name": NaN,
+      "value": 581569.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Aplicações em ativo biológico não corrente",
+      "normalized_name": NaN,
+      "value": -1457167.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Aquisição de controlada, líquido do caixa",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.02.20",
+      "account_name": "Efeito líquido da incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -6229903.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Dividendos / JSCP pagos no exercício",
+      "normalized_name": "debt_issuance",
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Debentures",
+      "normalized_name": "debt_repayment",
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Empréstimos obtidos",
+      "normalized_name": NaN,
+      "value": 49407327.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Empréstimos liquidados",
+      "normalized_name": "dividends_paid",
+      "value": -56671865.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Arrendamento mercantil",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Pagamento de derivativos de juros - hedge de valor justo",
+      "normalized_name": NaN,
+      "value": -699345.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Arrendamentos Liquidados",
+      "normalized_name": NaN,
+      "value": -1066713.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Instrumento Mandatório Conversível em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.03.09",
+      "account_name": "Ações em tesouraria",
+      "normalized_name": NaN,
+      "value": -213153.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.03.10",
+      "account_name": "Gastos com emissão de ações",
+      "normalized_name": NaN,
+      "value": -86759.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.03.11",
+      "account_name": "Juros liquidados Debêntures / Bonds",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.03.12",
+      "account_name": "Dividendos (pagos) recebidos no exercício",
+      "normalized_name": NaN,
+      "value": -340763.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.03.13",
+      "account_name": "Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 5760088.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.03.15",
+      "account_name": "Aquisição de participação de não controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.03.16",
+      "account_name": "Operações descontinuadas líquido de caixa",
+      "normalized_name": NaN,
+      "value": -2318720.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": -149686.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": 56424.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 6403788.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 6460212.0,
+      "reference_date": "2023-12-31",
+      "company_name": "MARFRIG GLOBAL FOODS S.A.",
+      "cvm_code": "020788"
+    }
+  ]
+}

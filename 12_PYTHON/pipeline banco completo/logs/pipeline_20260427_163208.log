@@ -1,0 +1,183 @@
+2026-04-27 16:32:08,247 [INFO] pipeline: ======================================================================
+2026-04-27 16:32:08,247 [INFO] pipeline: PIPELINE DE VALUATION [PETROLEO] — PETR4 — Petrobras
+2026-04-27 16:32:08,248 [INFO] pipeline: Início: 2026-04-27 16:32:08
+2026-04-27 16:32:08,248 [INFO] pipeline:   Setor: petroleo | Motor: WACC
+2026-04-27 16:32:08,248 [INFO] pipeline: ======================================================================
+2026-04-27 16:32:08,248 [INFO] pipeline: 
+[1/6] Coletando dados de mercado...
+2026-04-27 16:32:08,480 [INFO] pipeline:   Buscando cotação via yfinance...
+2026-04-27 16:32:08,480 [INFO] pipeline.mercado: Buscando cotação atual: PETR4.SA
+2026-04-27 16:32:10,395 [INFO] pipeline:   Cotação ON: R$ 47.57  |  Cotação PN: R$ 0.00
+2026-04-27 16:32:10,559 [INFO] pipeline.mercado: Calculando beta: PETR4 (252 dias úteis)
+2026-04-27 16:32:10,561 [INFO] pipeline.mercado: Baixando preços: PETR4.SA (2019-01-01 → 2026-04-27)
+2026-04-27 16:32:11,653 [INFO] pipeline.mercado:   1819 dias de preços carregados
+2026-04-27 16:32:11,654 [INFO] pipeline.mercado: Baixando preços: ^BVSP (2019-01-01 → 2026-04-27)
+2026-04-27 16:32:12,467 [INFO] pipeline.mercado:   1819 dias de preços carregados
+2026-04-27 16:32:12,482 [INFO] pipeline.mercado:   Beta estatístico: 0.4784 | R²: 0.099 | n=251
+2026-04-27 16:32:12,483 [INFO] pipeline:   Beta estatístico: 0.478 | Beta utilizado: 0.850
+2026-04-27 16:32:12,483 [INFO] pipeline: 
+[2/6] Coletando dados macroeconômicos (BCB)...
+2026-04-27 16:32:12,907 [WARNING] pipeline.macro: Não foi possível obter Focus Selic: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'Selic'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana
+2026-04-27 16:32:13,282 [WARNING] pipeline.macro: Não foi possível obter Focus IPCA: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'IPCA'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana
+2026-04-27 16:32:13,284 [INFO] pipeline.macro: 
+=== Coletando dados macroeconômicos ===
+2026-04-27 16:32:13,285 [INFO] pipeline.macro: Baixando série BCB 432...
+2026-04-27 16:32:13,747 [ERROR] pipeline.macro: Erro ao baixar série BCB 432: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=27%2F04%2F2026
+2026-04-27 16:32:13,748 [WARNING] pipeline.macro: Série Selic meta sem DatetimeIndex — usando fallback histórico
+2026-04-27 16:32:13,749 [INFO] pipeline.macro: Baixando série BCB 12...
+2026-04-27 16:32:13,855 [ERROR] pipeline.macro: Erro ao baixar série BCB 12: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.12/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=27%2F04%2F2026
+2026-04-27 16:32:13,856 [WARNING] pipeline.macro: Série DI sem DatetimeIndex — usando fallback histórico
+2026-04-27 16:32:13,857 [INFO] pipeline.macro: Baixando série BCB 13522...
+2026-04-27 16:32:14,498 [ERROR] pipeline.macro: Erro ao baixar série BCB 13522: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2026-04-27 16:32:14,498 [WARNING] pipeline.macro: Série IPCA sem DatetimeIndex — usando fallback histórico
+2026-04-27 16:32:14,499 [INFO] pipeline.macro: Baixando série BCB 258...
+2026-04-27 16:32:14,686 [ERROR] pipeline.macro: Erro ao baixar série BCB 258: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.258/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=27%2F04%2F2026
+2026-04-27 16:32:14,687 [WARNING] pipeline.macro: Série TJLP sem DatetimeIndex — usando fallback histórico
+2026-04-27 16:32:14,689 [INFO] pipeline.macro: Baixando série BCB 29039...
+2026-04-27 16:32:15,322 [ERROR] pipeline.macro: Erro ao baixar série BCB 29039: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2026-04-27 16:32:15,323 [WARNING] pipeline.macro: CDS sem DatetimeIndex — usando fallback histórico
+2026-04-27 16:32:15,324 [INFO] pipeline.macro: Baixando série BCB 13522...
+2026-04-27 16:32:15,443 [ERROR] pipeline.macro: Erro ao baixar série BCB 13522: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2026-04-27 16:32:15,444 [WARNING] pipeline.macro: Série IPCA sem DatetimeIndex — usando fallback histórico
+2026-04-27 16:32:15,444 [INFO] pipeline.macro: 
+RESUMO MACRO HISTÓRICO:
+2026-04-27 16:32:15,445 [INFO] pipeline.macro:   selic_meta     : 2020: 2.00% | 2021: 9.25% | 2022: 13.75% | 2023: 11.75% | 2024: 11.75%
+2026-04-27 16:32:15,446 [INFO] pipeline.macro:   selic_efet     : 2020: 2.28% | 2021: 4.48% | 2022: 12.33% | 2023: 13.15% | 2024: 10.73%
+2026-04-27 16:32:15,446 [INFO] pipeline.macro:   ipca           : 2020: 4.52% | 2021: 10.06% | 2022: 5.62% | 2023: 4.62% | 2024: 4.83%
+2026-04-27 16:32:15,447 [INFO] pipeline.macro:   tjlp           : 2020: 5.25% | 2021: 5.25% | 2022: 6.25% | 2023: 7.00% | 2024: 7.00%
+2026-04-27 16:32:15,447 [INFO] pipeline.macro:   cds            : 2020: 0.65% | 2021: 0.90% | 2022: 1.20% | 2023: 0.85% | 2024: 0.70%
+2026-04-27 16:32:15,448 [INFO] pipeline.macro:   inflacao_impl  : 2020: 4.52% | 2021: 10.06% | 2022: 5.62% | 2023: 4.62% | 2024: 4.83%
+2026-04-27 16:32:15,448 [INFO] pipeline: 
+[3/6] Baixando demonstrações financeiras (CVM)...
+2026-04-27 16:32:15,457 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 16:32:15,458 [INFO] pipeline.cvm: Baixando DFP 2019...
+2026-04-27 16:32:15,553 [INFO] pipeline.cvm:   DFP dre 2019: 86 linhas
+2026-04-27 16:32:15,710 [INFO] pipeline.cvm:   DFP bpa 2019: 130 linhas
+2026-04-27 16:32:16,086 [INFO] pipeline.cvm:   DFP bpp 2019: 216 linhas
+2026-04-27 16:32:16,373 [INFO] pipeline.cvm:   DFP dfc_mi 2019: 118 linhas
+2026-04-27 16:32:16,386 [WARNING] pipeline.cvm:   Empresa 9512 não encontrada em dfc_md 2019
+2026-04-27 16:32:16,387 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 16:32:16,387 [INFO] pipeline.cvm: Baixando DFP 2020...
+2026-04-27 16:32:16,467 [INFO] pipeline.cvm:   DFP dre 2020: 86 linhas
+2026-04-27 16:32:16,703 [INFO] pipeline.cvm:   DFP bpa 2020: 130 linhas
+2026-04-27 16:32:17,425 [INFO] pipeline.cvm:   DFP bpp 2020: 218 linhas
+2026-04-27 16:32:17,711 [INFO] pipeline.cvm:   DFP dfc_mi 2020: 124 linhas
+2026-04-27 16:32:17,727 [WARNING] pipeline.cvm:   Empresa 9512 não encontrada em dfc_md 2020
+2026-04-27 16:32:17,728 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 16:32:17,728 [INFO] pipeline.cvm: Baixando DFP 2021...
+2026-04-27 16:32:17,817 [INFO] pipeline.cvm:   DFP dre 2021: 86 linhas
+2026-04-27 16:32:18,040 [INFO] pipeline.cvm:   DFP bpa 2021: 130 linhas
+2026-04-27 16:32:18,842 [INFO] pipeline.cvm:   DFP bpp 2021: 218 linhas
+2026-04-27 16:32:19,029 [INFO] pipeline.cvm:   DFP dfc_mi 2021: 126 linhas
+2026-04-27 16:32:19,043 [WARNING] pipeline.cvm:   Empresa 9512 não encontrada em dfc_md 2021
+2026-04-27 16:32:19,043 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 16:32:19,043 [INFO] pipeline.cvm: Baixando DFP 2022...
+2026-04-27 16:32:19,127 [INFO] pipeline.cvm:   DFP dre 2022: 86 linhas
+2026-04-27 16:32:19,281 [INFO] pipeline.cvm:   DFP bpa 2022: 130 linhas
+2026-04-27 16:32:19,667 [INFO] pipeline.cvm:   DFP bpp 2022: 218 linhas
+2026-04-27 16:32:19,818 [INFO] pipeline.cvm:   DFP dfc_mi 2022: 128 linhas
+2026-04-27 16:32:19,833 [WARNING] pipeline.cvm:   Empresa 9512 não encontrada em dfc_md 2022
+2026-04-27 16:32:19,834 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 16:32:19,834 [INFO] pipeline.cvm: Baixando DFP 2023...
+2026-04-27 16:32:19,922 [INFO] pipeline.cvm:   DFP dre 2023: 86 linhas
+2026-04-27 16:32:20,095 [INFO] pipeline.cvm:   DFP bpa 2023: 130 linhas
+2026-04-27 16:32:20,448 [INFO] pipeline.cvm:   DFP bpp 2023: 220 linhas
+2026-04-27 16:32:20,649 [INFO] pipeline.cvm:   DFP dfc_mi 2023: 130 linhas
+2026-04-27 16:32:20,664 [WARNING] pipeline.cvm:   Empresa 9512 não encontrada em dfc_md 2023
+2026-04-27 16:32:20,665 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 16:32:20,665 [INFO] pipeline.cvm: Baixando DFP 2024...
+2026-04-27 16:32:20,749 [INFO] pipeline.cvm:   DFP dre 2024: 86 linhas
+2026-04-27 16:32:20,905 [INFO] pipeline.cvm:   DFP bpa 2024: 130 linhas
+2026-04-27 16:32:21,220 [INFO] pipeline.cvm:   DFP bpp 2024: 220 linhas
+2026-04-27 16:32:21,426 [INFO] pipeline.cvm:   DFP dfc_mi 2024: 130 linhas
+2026-04-27 16:32:21,439 [WARNING] pipeline.cvm:   Empresa 9512 não encontrada em dfc_md 2024
+2026-04-27 16:32:21,440 [INFO] pipeline: 
+[4/6] Normalizando dados...
+2026-04-27 16:32:21,844 [INFO] pipeline:   DFC normalizada: 11 linhas
+2026-04-27 16:32:21,845 [INFO] pipeline:   DRE normalizada:
+2026-04-27 16:32:21,846 [INFO] pipeline:     receita_liquida: 2019: 302,245 | 2020: 272,069 | 2021: 452,668 | 2022: 641,256 | 2023: 511,994 | 2024: 490,829
+2026-04-27 16:32:21,846 [INFO] pipeline:     ebit: 2019: 81,701 | 2020: 49,621 | 2021: 210,831 | 2022: 294,255 | 2023: 189,342 | 2024: 137,201
+2026-04-27 16:32:21,846 [INFO] pipeline:     lucro_liquido: 2019: 40,137 | 2020: 7,108 | 2021: 106,668 | 2022: 188,328 | 2023: 124,606 | 2024: 36,606
+2026-04-27 16:32:21,846 [INFO] pipeline: 
+[5/6] Calculando projeções...
+2026-04-27 16:32:21,849 [INFO] pipeline.projecoes: 
+=== Projeções (não-financeira / FCFF) ===
+2026-04-27 16:32:21,850 [INFO] pipeline.projecoes:   Margem EBITDA: 39.6% → 48.0% (conv 6a)
+2026-04-27 16:32:21,850 [INFO] pipeline.projecoes:   D&A/Receita: 13.0%
+2026-04-27 16:32:21,851 [INFO] pipeline.projecoes:   CAPEX/Receita: 4.9% → 20.0%
+2026-04-27 16:32:21,851 [INFO] pipeline.projecoes:   NCG/Receita: 7.6% → 5.0%
+2026-04-27 16:32:21,853 [INFO] pipeline.projecoes:   Alíquota efetiva: 31.3%
+2026-04-27 16:32:21,854 [INFO] pipeline.projecoes: Projeções concluídas (FCFF). Resumo:
+2026-04-27 16:32:21,854 [INFO] pipeline.projecoes:    Ano      Receita     EBITDA    Mg%      NOPAT       FCFF
+2026-04-27 16:32:21,854 [INFO] pipeline.projecoes:   2025      515,370    211,128  41.0%     99,214    114,593
+2026-04-27 16:32:21,854 [INFO] pipeline.projecoes:   2026      546,293    231,481  42.4%    110,449    122,246
+2026-04-27 16:32:21,854 [INFO] pipeline.projecoes:   2027      579,070    253,516  43.8%    122,674    117,832
+2026-04-27 16:32:21,854 [INFO] pipeline.projecoes:   2028      608,024    274,745  45.2%    134,687    111,718
+2026-04-27 16:32:21,854 [INFO] pipeline.projecoes:   2029      638,425    297,463  46.6%    147,594    104,320
+2026-04-27 16:32:21,855 [INFO] pipeline.valuation:   Estrutura de capital: E=44% | D=56%
+2026-04-27 16:32:21,855 [INFO] pipeline: 
+[6/6] Calculando valuation (FCFF / WACC)...
+2026-04-27 16:32:21,855 [INFO] pipeline.valuation: 
+==================================================
+2026-04-27 16:32:21,856 [INFO] pipeline.valuation: VALUATION FCFF/WACC — BBDC4
+2026-04-27 16:32:21,856 [INFO] pipeline.valuation:   VP FCFF (10a):     R$      709,123 MM
+2026-04-27 16:32:21,856 [INFO] pipeline.valuation:   Valor Perp. (VP):  R$    1,065,001 MM
+2026-04-27 16:32:21,856 [INFO] pipeline.valuation:   ENTERPRISE VALUE:  R$    1,774,124 MM
+2026-04-27 16:32:21,857 [INFO] pipeline.valuation:   (-) Dívida Líq.:   R$      326,816 MM
+2026-04-27 16:32:21,857 [INFO] pipeline.valuation:   VALOR DO EQUITY:   R$    1,447,308 MM
+2026-04-27 16:32:21,857 [INFO] pipeline.valuation:   Preço Justo ON:    R$   265.73
+2026-04-27 16:32:21,857 [INFO] pipeline.valuation:   Preço Justo PN:    R$   265.73
+2026-04-27 16:32:21,857 [INFO] pipeline.valuation:   Cotação ON:        R$    47.57
+2026-04-27 16:32:21,858 [INFO] pipeline.valuation:   Upside ON:              458.6%
+2026-04-27 16:32:21,858 [INFO] pipeline.valuation:   TIR (ON):                45.3%
+2026-04-27 16:32:21,858 [INFO] pipeline.valuation:   WACC último ano:          9.0%
+2026-04-27 16:32:21,860 [INFO] pipeline:   Sem template VAROS para PETR4 — Excel será criado do zero
+2026-04-27 16:32:21,951 [INFO] pipeline.excel_geral: 
+============================================================
+2026-04-27 16:32:21,951 [INFO] pipeline.excel_geral: Criando Excel completo (12 abas) para: Petrobras (PETR4)
+2026-04-27 16:32:21,952 [INFO] pipeline.excel_geral:   → 1/12  Dashboard
+2026-04-27 16:32:21,956 [INFO] pipeline.excel_geral:   → 2/12  WACC
+2026-04-27 16:32:21,969 [INFO] pipeline.excel_geral:   → 3/12  TIR ON
+2026-04-27 16:32:21,973 [INFO] pipeline.excel_geral:   → 4/12  TIR PN
+2026-04-27 16:32:21,976 [INFO] pipeline.excel_geral:   → 5/12  Valor do Equity
+2026-04-27 16:32:21,979 [INFO] pipeline.excel_geral:   → 6/12  Preço Teto
+2026-04-27 16:32:21,981 [INFO] pipeline.excel_geral:   → 7/12  DRE + DCF
+2026-04-27 16:32:22,018 [INFO] pipeline.excel_geral:   → 8/12  DRE Contas Abertas
+2026-04-27 16:32:22,037 [INFO] pipeline.excel_geral:   → 9/12  Balanço Patrimonial
+2026-04-27 16:32:22,052 [INFO] pipeline.excel_geral:   → 10/12 Painel de Índices
+2026-04-27 16:32:22,079 [INFO] pipeline.excel_geral:   → 11/12 Projeções Premissas
+2026-04-27 16:32:22,088 [INFO] pipeline.excel_geral:   → 12/12 Projeções Capex e CG
+2026-04-27 16:32:22,155 [INFO] pipeline.excel_geral: 
+Arquivo salvo: /sessions/admiring-gallant-darwin/mnt/OBSIDIAN/Analista de Investimentos/12_PYTHON/pipeline banco completo/outputs/Valuation_PETR4_Petrobras_20260427.xlsx
+2026-04-27 16:32:22,155 [INFO] pipeline: 
+======================================================================
+2026-04-27 16:32:22,155 [INFO] pipeline: RESUMO DO VALUATION (FCFF/WACC)
+2026-04-27 16:32:22,156 [INFO] pipeline: ======================================================================
+2026-04-27 16:32:22,156 [INFO] pipeline:   Empresa:           Petrobras (PETR4)
+2026-04-27 16:32:22,156 [INFO] pipeline:   Enterprise Value:  R$    1,774,124 MM
+2026-04-27 16:32:22,156 [INFO] pipeline:   Cotação ON:        R$ 47.57
+2026-04-27 16:32:22,156 [INFO] pipeline:   Preço Justo ON:    R$ 265.73
+2026-04-27 16:32:22,156 [INFO] pipeline:   Upside ON:            458.6%
+2026-04-27 16:32:22,156 [INFO] pipeline:   TIR:                  45.3%
+2026-04-27 16:32:22,157 [INFO] pipeline:   Preço Teto ON:     R$ 265.73
+2026-04-27 16:32:22,157 [INFO] pipeline: 
+  Arquivo gerado:    /sessions/admiring-gallant-darwin/mnt/OBSIDIAN/Analista de Investimentos/12_PYTHON/pipeline banco completo/outputs/Valuation_PETR4_Petrobras_20260427.xlsx
+2026-04-27 16:32:22,157 [INFO] pipeline: ======================================================================

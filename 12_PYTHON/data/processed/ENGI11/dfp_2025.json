@@ -1,0 +1,2989 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 35441353.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -26443712.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 8997641.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -2244694.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -1877859.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 73765.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -536078.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": 95478.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 6752947.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -3418039.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 2326073.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -5744112.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 3334908.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": -194836.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -1192653.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": 997817.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 3140072.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.10.01.01",
+      "account_name": "Resultado de operações continuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 3140072.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 2214439.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 925633.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 0.95,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.99.01.02",
+      "account_name": "PN",
+      "normalized_name": NaN,
+      "value": 0.95,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 83471647.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 20931903.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 1386005.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 9087240.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 9087240.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 9087240.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 4775498.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 4771318.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.03.01.01",
+      "account_name": "Clientes, consumidores, concessionárias e outros",
+      "normalized_name": NaN,
+      "value": 4771318.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 4180.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.03.02.01",
+      "account_name": "Títulos de créditos a receber",
+      "normalized_name": NaN,
+      "value": 4180.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 155560.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 1856382.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 1856382.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 3671218.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 23911.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.08.01.01",
+      "account_name": "Títulos de crédito a receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.08.01.02",
+      "account_name": "Baixa renda e outros créditos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.08.01.03",
+      "account_name": "Dividendos a receber",
+      "normalized_name": NaN,
+      "value": 23911.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.08.01.04",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.08.01.05",
+      "account_name": "Ativos financeiros setoriais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.08.01.06",
+      "account_name": "Concessão do serviço público- ativo de contrato",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.08.01.07",
+      "account_name": "Ativos disponíveis para venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.08.01.08",
+      "account_name": "Outros créditos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 3647307.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Instrumentos financeiros e gerenciamento de riscos",
+      "normalized_name": NaN,
+      "value": 117256.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Ativos financeiros setoriais",
+      "normalized_name": NaN,
+      "value": 823745.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.08.03.03",
+      "account_name": "Concessão do serviço público- ativo de contrato",
+      "normalized_name": NaN,
+      "value": 835515.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.08.03.04",
+      "account_name": "Ativos disponíveis para venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.01.08.03.05",
+      "account_name": "Outros créditos",
+      "normalized_name": NaN,
+      "value": 1870791.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 62539744.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 36313976.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 474846.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 474846.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 423422.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes, Consumidores e Concessinárias",
+      "normalized_name": NaN,
+      "value": 423422.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Títulos de créditos a receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Tributos a recuperar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.09.05",
+      "account_name": "Créditos tributários",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.09.06",
+      "account_name": "Depósitos e cauções vinculados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.09.07",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.09.08",
+      "account_name": "Contas a receber da concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.09.09",
+      "account_name": "Ativos financeiros setoriais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.09.10",
+      "account_name": "Créditos com partes relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.09.11",
+      "account_name": "Despesas pagas antecipadamente",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.09.12",
+      "account_name": "Outros créditos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 35415708.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Títulos de créditos a receber",
+      "normalized_name": NaN,
+      "value": 6504.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Tributos a recuperar",
+      "normalized_name": NaN,
+      "value": 2282406.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Créditos tributários",
+      "normalized_name": NaN,
+      "value": 2835091.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Depósitos judiciais",
+      "normalized_name": NaN,
+      "value": 1887119.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Instrumentos financeiros e gerenciamento de riscos",
+      "normalized_name": NaN,
+      "value": 791114.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.10.08",
+      "account_name": "Ativo financeiro indenizável da concessão",
+      "normalized_name": NaN,
+      "value": 17715205.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.10.09",
+      "account_name": "Ativos financeiros setoriais",
+      "normalized_name": NaN,
+      "value": 892356.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.10.10",
+      "account_name": "Concessão do serviço público- ativo de contrato",
+      "normalized_name": NaN,
+      "value": 8533182.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.01.10.11",
+      "account_name": "Outros créditos",
+      "normalized_name": NaN,
+      "value": 472731.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 716875.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 716875.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 716875.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 3407304.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 3407304.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 22101589.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 22101589.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.04.01.03",
+      "account_name": "Ativo Contratual - Infra-estrutura em construção",
+      "normalized_name": NaN,
+      "value": 2824749.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.04.01.04",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 19276840.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 83471647.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 13448826.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 2892486.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 2892486.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 6193651.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 3743886.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 825930.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 2917956.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 2449765.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 4362689.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 4362689.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 26048.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Parcelamento de impostos",
+      "normalized_name": NaN,
+      "value": 378.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Obrigações estimadas",
+      "normalized_name": NaN,
+      "value": 189013.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Encargos do consumidor a recolher",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Contribuição de iluminação pública",
+      "normalized_name": NaN,
+      "value": 148851.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02.08",
+      "account_name": "Benefícios pós-emprego",
+      "normalized_name": NaN,
+      "value": 19635.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02.09",
+      "account_name": "Encargos de dívidas",
+      "normalized_name": NaN,
+      "value": 333662.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02.10",
+      "account_name": "Encargos setoriais",
+      "normalized_name": NaN,
+      "value": 394691.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02.11",
+      "account_name": "Impostos e Contribuições Sociais",
+      "normalized_name": NaN,
+      "value": 778849.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02.12",
+      "account_name": "Passivos financeiros setoriais",
+      "normalized_name": NaN,
+      "value": 753235.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02.13",
+      "account_name": "Taxas regulamentares",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02.14",
+      "account_name": "Passivos disponível para venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02.15",
+      "account_name": "Efeitos da Redução do ICMS na base de cálculo do Pis e Cofins",
+      "normalized_name": NaN,
+      "value": 275505.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02.16",
+      "account_name": "Incorporação de redes",
+      "normalized_name": NaN,
+      "value": 248222.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02.17",
+      "account_name": "Bandeiras tarifárias CCRBT",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02.18",
+      "account_name": "Instrumentos financeiros e gerenciamento de riscos",
+      "normalized_name": NaN,
+      "value": 571379.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02.19",
+      "account_name": "Arrendamentos operacionais",
+      "normalized_name": NaN,
+      "value": 27244.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.05.02.20",
+      "account_name": "Outros passivos",
+      "normalized_name": NaN,
+      "value": 595977.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 48838277.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 38369066.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 12291082.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 9416417.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 2874665.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 26077984.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 3701587.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 3701587.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 165764.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 660128.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Impostos e contribuições sociais",
+      "normalized_name": NaN,
+      "value": 956449.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Parcelamento de impostos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Beneficio pós-emprego",
+      "normalized_name": NaN,
+      "value": 157326.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.02.08",
+      "account_name": "Provisões para riscos trabalhistas, cíveis, fiscais e regulatórias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.02.09",
+      "account_name": "Taxas regulamentares",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.02.10",
+      "account_name": "Imposto de renda e contribuição social diferido",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.02.11",
+      "account_name": "Passivos financeiros setoriais",
+      "normalized_name": NaN,
+      "value": 546999.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.02.13",
+      "account_name": "Encargos setoriais",
+      "normalized_name": NaN,
+      "value": 127401.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.02.14",
+      "account_name": "Incorporação de redes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.02.15",
+      "account_name": "Arrendamentos operacionais",
+      "normalized_name": NaN,
+      "value": 120869.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.02.16",
+      "account_name": "Efeitos da Redução do ICMS na base de cálculo do Pis e Cofins",
+      "normalized_name": NaN,
+      "value": 404105.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.02.02.17",
+      "account_name": "Outros Passivos",
+      "normalized_name": NaN,
+      "value": 562546.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 5141593.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 5141593.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 1626031.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 1626031.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 21184544.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 10876550.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 2473271.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.02.07",
+      "account_name": "Custo com emissão de ações",
+      "normalized_name": NaN,
+      "value": -109447.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.02.08",
+      "account_name": "Outros reservas",
+      "normalized_name": NaN,
+      "value": 2582718.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 5891267.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 945657.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 4945610.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": -42669.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 1986125.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 6065954.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 8555800.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro líquido do exercício das operações continuadas",
+      "normalized_name": "net_income_cfo",
+      "value": 3140072.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Lucro líquido do exercício das operações descontinuadas",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Imposto de renda e contribuição social corrente e diferido",
+      "normalized_name": NaN,
+      "value": 194836.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Ajuste a valor justo do ativo financeiro indenizável da concessão",
+      "normalized_name": NaN,
+      "value": -630301.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Despesas com juros, variações monetárias e cambiais - líquidas",
+      "normalized_name": NaN,
+      "value": 2100061.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Depreciação e Amortização",
+      "normalized_name": NaN,
+      "value": 2121832.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Provisão para perdas esperadas de créditos de liquidação duvidosa",
+      "normalized_name": NaN,
+      "value": 440400.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Provisões para riscos trabalhistas, cíveis, fiscais e regulatórias",
+      "normalized_name": NaN,
+      "value": 138188.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Marcação a mercado de derivativos",
+      "normalized_name": NaN,
+      "value": -723095.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 1789520.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Marcação a mercado da dívida",
+      "normalized_name": NaN,
+      "value": 620642.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Perda na desativação de bens do imobilizado e do intangível",
+      "normalized_name": NaN,
+      "value": 277576.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Reversão de provisão para perdas de créditos e atualização monetária - operações descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01.14",
+      "account_name": "Programa de remuneração variável - ILP",
+      "normalized_name": NaN,
+      "value": 13161.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01.15",
+      "account_name": "Ganho auferido na combinação de negócios",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01.16",
+      "account_name": "Provisão para ajustes a valor de realização de créditos a receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01.17",
+      "account_name": "Margem de Construção, operação e remuneração do ativo de contrato da Transmissão",
+      "normalized_name": NaN,
+      "value": -98419.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01.18",
+      "account_name": "Marcação a Mercado dos contratos de compra / venda de energia comercializada",
+      "normalized_name": NaN,
+      "value": 62151.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01.19",
+      "account_name": "Remuneração do ativo de contrato",
+      "normalized_name": NaN,
+      "value": -795346.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.01.20",
+      "account_name": "Equivalência patrimonial",
+      "normalized_name": NaN,
+      "value": -95478.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -2489846.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "(Aumento) diminuição de consumidores e concessionárias",
+      "normalized_name": NaN,
+      "value": -7836.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "(Aumento) diminuição de títulos de créditos a receber",
+      "normalized_name": NaN,
+      "value": -49592.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "(Aumento) diminuição de estoques",
+      "normalized_name": NaN,
+      "value": -17411.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Diminuição (aumento) de tributos a recuperar",
+      "normalized_name": NaN,
+      "value": 75652.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "(Aumento) de cauções e depósitos vinculados",
+      "normalized_name": NaN,
+      "value": -138209.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Recursos da conta de comercialização de Itaipu",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "(Aumento) de outros créditos",
+      "normalized_name": NaN,
+      "value": -318424.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Aumento de fornecedores",
+      "normalized_name": NaN,
+      "value": 315270.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Aumento (diminuição) de impostos e contribuições sociais",
+      "normalized_name": NaN,
+      "value": 726210.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Imposto de renda e contribuição pagos",
+      "normalized_name": NaN,
+      "value": -928356.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.02.12",
+      "account_name": "Aumento de obrigações estimadas",
+      "normalized_name": NaN,
+      "value": 14186.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.02.13",
+      "account_name": "Variação dos ativos e passivos setoriais",
+      "normalized_name": NaN,
+      "value": -1882880.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.02.14",
+      "account_name": "Processos fiscais, cíveis, trabalhistas e regulatórios pagos",
+      "normalized_name": NaN,
+      "value": -169384.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.02.15",
+      "account_name": "Recebimentos Despachos ANEEL - CONTA COVID",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.02.16",
+      "account_name": "(Diminuição) aumento de outras contas a pagar",
+      "normalized_name": NaN,
+      "value": -109072.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -6198303.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Aumento de capital e compra de ações de subsidiárias e outros investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Aplicações financeiras e recursos vinculados",
+      "normalized_name": "capex",
+      "value": -312831.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Resgate de aplicações financeiras",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Aplicações no imobilizado, intangível e ativo contratual - Infra-estrutura em construção",
+      "normalized_name": NaN,
+      "value": -5644560.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Aplicações em linhas de transmissão de energia",
+      "normalized_name": NaN,
+      "value": -276188.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Partes relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Alienação de bens do imobilizado e intangível",
+      "normalized_name": NaN,
+      "value": 64101.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Pagamentos pela combinação de negócios - Lurean",
+      "normalized_name": NaN,
+      "value": -29326.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.02.09",
+      "account_name": "Recebimento de dividendos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.02.10",
+      "account_name": "Caixa e equivalente de caixa adquirido na combinação de negócios",
+      "normalized_name": NaN,
+      "value": 501.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.02.11",
+      "account_name": "Caixa e equivalente de caixa adquirido na combinação de negócios - VISION",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.02.12",
+      "account_name": "Alienação dos ativos de geração",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.02.13",
+      "account_name": "Pagamentos pela combinação de negócios",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": 619215.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Novos empréstimos, financiamentos e debêntures",
+      "normalized_name": "debt_issuance",
+      "value": 17041732.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Pagamento de empréstimos e debêntures - principal",
+      "normalized_name": "debt_repayment",
+      "value": -8382460.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Pagamento de empréstimos e debêntures - juros",
+      "normalized_name": NaN,
+      "value": -3516843.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "(Pagamento) recebimento por liquidação de instrumentos financeiros derivativos",
+      "normalized_name": "dividends_paid",
+      "value": -234115.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Pagamentos de dividendos",
+      "normalized_name": NaN,
+      "value": -2723741.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Aumento de capital com subscrição de ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Pagamento de parcelamento de impostos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Pagamento de parcelamento de encargos setoriais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.03.09",
+      "account_name": "Pagamento de incorporação de redes",
+      "normalized_name": NaN,
+      "value": -212496.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.03.10",
+      "account_name": "Pagamento de parcelamento de fornecedores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.03.11",
+      "account_name": "Custos relacionados a Ações em tesouraria adquiridas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.03.12",
+      "account_name": "Aquisição (Alienação) de participação adicional de não controladores",
+      "normalized_name": NaN,
+      "value": -1313650.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.03.13",
+      "account_name": "Pagamento por arrendamento financeiro mercantil",
+      "normalized_name": NaN,
+      "value": -38697.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.03.14",
+      "account_name": "Liquidação Opção de venda de ações rede energia participações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.03.15",
+      "account_name": "Novos parcelamentos de imposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.03.16",
+      "account_name": "Parcelamento de impostos",
+      "normalized_name": NaN,
+      "value": -515.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": 486866.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 899139.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 1386005.0,
+      "reference_date": "2025-12-31",
+      "company_name": "ENERGISA S.A.",
+      "cvm_code": "015253"
+    }
+  ]
+}

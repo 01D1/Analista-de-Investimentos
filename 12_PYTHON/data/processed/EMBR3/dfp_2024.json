@@ -1,0 +1,2782 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 35424174.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -29041940.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 6382234.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -2610113.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -1671416.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -1074842.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": -121576.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.04.03.01",
+      "account_name": "Reversão (perda) de crédito esperada",
+      "normalized_name": NaN,
+      "value": -121576.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 1455864.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -1174508.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.04.05.01",
+      "account_name": "Pesquisa",
+      "normalized_name": NaN,
+      "value": -298148.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.04.05.02",
+      "account_name": "Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -876360.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": -23635.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 3772121.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -663190.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 1122030.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.06.01.01",
+      "account_name": "Variações Monetárias Ativas",
+      "normalized_name": NaN,
+      "value": -526858.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.06.01.02",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": NaN,
+      "value": 1648888.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -1785220.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.06.02.01",
+      "account_name": "Variações Monetárias Passivas",
+      "normalized_name": NaN,
+      "value": 494933.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.06.02.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": NaN,
+      "value": -2280153.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 3108931.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": -1185100.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -506974.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": -678126.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 1923831.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 1923831.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 1918850.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 4981.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 2.612,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 2.612,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 73219718.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 40326906.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 9678721.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 3961465.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 844940.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 844940.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 209121.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 2907404.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 2061890.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 2061890.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.03.01.01",
+      "account_name": "Contas a receber",
+      "normalized_name": NaN,
+      "value": 1986223.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.03.01.02",
+      "account_name": "Financiamento a clientes",
+      "normalized_name": NaN,
+      "value": 75667.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.03.01.03",
+      "account_name": "Contas a receber vinculadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 18181138.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 1421883.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 1421883.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 363721.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 4658088.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.08.02.01",
+      "account_name": "Ativos mantidos para venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 4658088.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Outros ativos",
+      "normalized_name": NaN,
+      "value": 720543.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 81775.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.08.03.03",
+      "account_name": "Depósitos em garantia",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.01.08.03.04",
+      "account_name": "Ativos de contrato",
+      "normalized_name": NaN,
+      "value": 3855770.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 32892812.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 4454043.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 848930.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 848930.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 430227.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 877541.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 137253.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 12480.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.04.03",
+      "account_name": "Financiamento a clientes",
+      "normalized_name": NaN,
+      "value": 124773.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.04.04",
+      "account_name": "Contas a receber vinculadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 1077573.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 1077573.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 110495.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 972024.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Tributos a recuperar",
+      "normalized_name": NaN,
+      "value": 376177.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Outros ativos",
+      "normalized_name": NaN,
+      "value": 587356.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Depósitos em garantia",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Ativos de contrato",
+      "normalized_name": NaN,
+      "value": 8491.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 270608.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 270608.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 270608.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 12669526.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 12021105.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 648421.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 15498635.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 15498635.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 73219718.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 27347016.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 6251565.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 846049.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.02.01.01",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 719764.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.02.01.02",
+      "account_name": "Fornecedores - Acordos de financiamento",
+      "normalized_name": NaN,
+      "value": 126285.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 5405516.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.02.02.01",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 5263775.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.02.02.02",
+      "account_name": "Fornecedores - Acordos de financiamento",
+      "normalized_name": NaN,
+      "value": 141741.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 1055536.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 1046413.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 771953.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 274460.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 9123.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 704419.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 704419.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 1118.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 703301.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 18776760.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 18776760.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Contas a Pagar",
+      "normalized_name": NaN,
+      "value": 2227804.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Contribuição de Parceiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Dívidas com e sem direito de regresso",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Adiantamento de Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.05.02.08",
+      "account_name": "Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.05.02.09",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 445094.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.05.02.10",
+      "account_name": "Receitas Diferidas",
+      "normalized_name": NaN,
+      "value": 111766.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.05.02.11",
+      "account_name": "Garantia financeira e de valor residual",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.05.02.12",
+      "account_name": "Passivos de contrato",
+      "normalized_name": NaN,
+      "value": 15873343.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.05.02.13",
+      "account_name": "Passivo de arrendamento",
+      "normalized_name": NaN,
+      "value": 118753.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 558736.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 59713.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 13792.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 38585.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 7336.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 499023.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 154601.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.06.02.04",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 344422.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.01.07.02.01",
+      "account_name": "Passivos mantidos para venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 25161794.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 14720995.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 14720995.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 145531.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 14575464.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 6312040.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 6312040.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Contas a Pagar",
+      "normalized_name": NaN,
+      "value": 998237.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Contribuição de Parceiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Dívidas com e sem Direito de Regresso",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Adiantamento de Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Impostos e Encargos Sociais a Recolher",
+      "normalized_name": NaN,
+      "value": 57054.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.02.02.08",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 197722.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.02.02.09",
+      "account_name": "Garantia financeira e de valor residual",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.02.02.10",
+      "account_name": "Provisões para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.02.02.11",
+      "account_name": "Passivos de contrato",
+      "normalized_name": NaN,
+      "value": 4465669.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.02.02.12",
+      "account_name": "Passivo de arrendamento",
+      "normalized_name": NaN,
+      "value": 573429.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.02.02.13",
+      "account_name": "Imposto de renda e contribuição social",
+      "normalized_name": NaN,
+      "value": 19929.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 2788093.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 2788093.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 1261217.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 407228.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 50609.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 150537.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 205259.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 823.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 853989.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 333403.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.04.02.04",
+      "account_name": "Provisão materiais de terceiros",
+      "normalized_name": NaN,
+      "value": 274612.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.04.02.05",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 245974.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 79449.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 79449.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.06.02.01",
+      "account_name": "Receitas diferidas",
+      "normalized_name": NaN,
+      "value": 79449.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 20710908.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 5159617.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 750979.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -87103.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.02.07",
+      "account_name": "Remuneração baseada em ações",
+      "normalized_name": NaN,
+      "value": 139962.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.02.08",
+      "account_name": "Resultado nas operações com acionistas não controladores",
+      "normalized_name": NaN,
+      "value": 698120.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 274354.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 16289.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.04.10",
+      "account_name": "Subvenção para Investimentos",
+      "normalized_name": NaN,
+      "value": 103776.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.04.11",
+      "account_name": "Reservas para Investimentos e Capital de Giro",
+      "normalized_name": NaN,
+      "value": 154289.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.04.12",
+      "account_name": "Remuneração Baseada em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.04.13",
+      "account_name": "Resultado nas operações com acionistas não controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 12860256.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.06.02",
+      "account_name": "Perda com benefícios pós-emprego",
+      "normalized_name": NaN,
+      "value": -82452.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.06.03",
+      "account_name": "Ajustes acumulados de conversão",
+      "normalized_name": NaN,
+      "value": 13021410.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.06.04",
+      "account_name": "Instrumentos Financeiros",
+      "normalized_name": NaN,
+      "value": -78702.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 1665702.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 5532441.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 5819306.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro do exercício",
+      "normalized_name": "net_income_cfo",
+      "value": 1923831.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Despesas com depreciação e amortização",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 1331819.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Realização subsídios governamentais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Realização contribuição de parceiros",
+      "normalized_name": NaN,
+      "value": -168010.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Transação EVEX",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Perda (ganho) na participação acionária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Perda (reversão) por redução ao valor recuperável dos estoques",
+      "normalized_name": NaN,
+      "value": 36457.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Ajuste valor justo - ativos financeiros",
+      "normalized_name": NaN,
+      "value": 101230.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Perda (reversão) de crédito esperada",
+      "normalized_name": NaN,
+      "value": 121576.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Perda (ganho) na alienação de ativo permanente",
+      "normalized_name": NaN,
+      "value": 35263.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Imposto de renda e contribuição social",
+      "normalized_name": NaN,
+      "value": 1185100.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Juros sobre empréstimos",
+      "normalized_name": NaN,
+      "value": 938171.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Juros sobre títulos e valores mobiliários",
+      "normalized_name": NaN,
+      "value": -98541.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.01.14",
+      "account_name": "Equivalência patrimonial",
+      "normalized_name": NaN,
+      "value": 23635.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.01.15",
+      "account_name": "Variação monetária e cambial",
+      "normalized_name": NaN,
+      "value": 47455.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.01.16",
+      "account_name": "Provisões diversas",
+      "normalized_name": NaN,
+      "value": 314349.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.01.17",
+      "account_name": "Participação dos não-controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.01.18",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 26971.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -286865.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Investimentos financeiros",
+      "normalized_name": NaN,
+      "value": -649344.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": -142693.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Contas a receber",
+      "normalized_name": NaN,
+      "value": -913134.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Financiamento a clientes",
+      "normalized_name": NaN,
+      "value": 134368.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Ativos de contrato",
+      "normalized_name": NaN,
+      "value": -535042.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": -1357756.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Outros ativos",
+      "normalized_name": NaN,
+      "value": -245720.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Fornecedores e Fornecedores - Acordos de financiamento",
+      "normalized_name": NaN,
+      "value": 985592.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Contas a pagar",
+      "normalized_name": NaN,
+      "value": 92662.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Passivos de contrato",
+      "normalized_name": NaN,
+      "value": 4139550.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "Impostos a recolher",
+      "normalized_name": NaN,
+      "value": -314941.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.02.12",
+      "account_name": "Garantias financeiras",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.02.13",
+      "account_name": "Receitas diferidas",
+      "normalized_name": NaN,
+      "value": 20463.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.02.14",
+      "account_name": "IR e CS pagos",
+      "normalized_name": NaN,
+      "value": -569343.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.02.15",
+      "account_name": "Juros pagos",
+      "normalized_name": NaN,
+      "value": -931527.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -3214108.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Aquisições de imobilizado",
+      "normalized_name": NaN,
+      "value": -1068625.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Baixa de imobilizado",
+      "normalized_name": "capex",
+      "value": 68873.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Adições ao intangível",
+      "normalized_name": NaN,
+      "value": -1445222.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Adições investimentos em subsidiárias e coligadas, líquido do caixa adquirido",
+      "normalized_name": NaN,
+      "value": -95405.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Baixa investimentos em subsidiárias e coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Aquisição de investimentos financeiros",
+      "normalized_name": NaN,
+      "value": -1450874.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Alienação de investimentos financeiros",
+      "normalized_name": NaN,
+      "value": 476791.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Alienação de investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.02.09",
+      "account_name": "Recebimento (concessão) de empréstimos",
+      "normalized_name": NaN,
+      "value": 297483.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.02.10",
+      "account_name": "Dividendos recebidos",
+      "normalized_name": NaN,
+      "value": 2871.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -1911350.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Empréstimos obtidos",
+      "normalized_name": "debt_issuance",
+      "value": 4216459.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Financiamentos pagos",
+      "normalized_name": "debt_repayment",
+      "value": -6375637.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Aumento de capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Dividendos e juros sobre capital próprio",
+      "normalized_name": "dividends_paid",
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Recebimento na oferta de ações de controlada",
+      "normalized_name": NaN,
+      "value": 363608.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Custos na oferta de ações de controlada",
+      "normalized_name": NaN,
+      "value": -13061.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Pagamentos de arrendamentos",
+      "normalized_name": NaN,
+      "value": -102719.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 1398210.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": 1805193.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 7873528.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 9678721.0,
+      "reference_date": "2024-12-31",
+      "company_name": "EMBRAER S.A.",
+      "cvm_code": "020087"
+    }
+  ]
+}

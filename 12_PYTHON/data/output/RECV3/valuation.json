@@ -1,0 +1,45 @@
+{
+  "ticker": "RECV3",
+  "sector_type": "oil_gas",
+  "base_year": 2025,
+  "method": "EV/EBITDA Múltiplo",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 1886.9133999999995,
+      "current_price": 13.020000457763672,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 865.8947999999999,
+        "ev_ebitda_multiple": 5.5,
+        "net_debt_mi": 2875.508,
+        "ev_mi": 4762.421399999999
+      }
+    },
+    "optimistic": {
+      "fair_value": 3185.7555999999995,
+      "current_price": 13.020000457763672,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 865.8947999999999,
+        "ev_ebitda_multiple": 7.0,
+        "net_debt_mi": 2875.508,
+        "ev_mi": 6061.263599999999
+      }
+    },
+    "pessimistic": {
+      "fair_value": 588.0711999999997,
+      "current_price": 13.020000457763672,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 865.8947999999999,
+        "ev_ebitda_multiple": 4.0,
+        "net_debt_mi": 2875.508,
+        "ev_mi": 3463.5791999999997
+      }
+    }
+  }
+}

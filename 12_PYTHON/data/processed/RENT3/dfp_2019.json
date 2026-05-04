@@ -1,0 +1,2422 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 10195637.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -7685944.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 2509693.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -1020066.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -747381.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -244380.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -28305.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 1489627.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -409793.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 220173.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -629966.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 1079834.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": -245896.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -180727.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": -65169.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 833938.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 833938.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 833938.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 1.11214,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 1.10548,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 19392960.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 4494079.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 2220102.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 610838.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 610838.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 1274723.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 39850.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 11757.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 336809.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 141735.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 195074.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Dividendos a receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Instrumentos derivativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.01.08.03.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 195074.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 14898881.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 189366.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 1809.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 32407.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 32407.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 155150.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Depósitos Judiciais",
+      "normalized_name": NaN,
+      "value": 114586.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Instrumentos derivativos",
+      "normalized_name": NaN,
+      "value": 18198.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Aplicações em contas vinculadas",
+      "normalized_name": NaN,
+      "value": 22283.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Tributos a recuperar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 83.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 14569571.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 13858873.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 689898.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.03.02.01",
+      "account_name": "Imobilizado arrendado",
+      "normalized_name": NaN,
+      "value": 64901.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.03.02.02",
+      "account_name": "Direito de uso",
+      "normalized_name": NaN,
+      "value": 624997.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 20800.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 139944.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 139944.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.04.01.02",
+      "account_name": "Ágio na aquisição de investimentos",
+      "normalized_name": NaN,
+      "value": 89986.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.04.01.03",
+      "account_name": "Software em operação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.04.01.04",
+      "account_name": "Software arrendado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.04.01.05",
+      "account_name": "Software",
+      "normalized_name": NaN,
+      "value": 49958.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 19392960.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 3522249.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 161770.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 2565387.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 2565370.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 17.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 68688.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 62729.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 54647.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Outros impostos federais",
+      "normalized_name": NaN,
+      "value": 8082.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 5959.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 144342.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 79515.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 78829.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 686.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 56552.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 8275.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 582062.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 582062.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 63394.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Outros passivos circulantes",
+      "normalized_name": NaN,
+      "value": 369670.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Instrumentos derivativos",
+      "normalized_name": NaN,
+      "value": 26811.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Receitas a apropriar",
+      "normalized_name": NaN,
+      "value": 6221.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Passivo de arrendamento por direito de uso",
+      "normalized_name": NaN,
+      "value": 115966.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 10423179.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 9235117.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 2125204.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 967106.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 1158098.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 7109913.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 620174.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 620174.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Outros passivos não circulantes",
+      "normalized_name": NaN,
+      "value": 8570.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Instrumentos derivativos",
+      "normalized_name": NaN,
+      "value": 62288.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Obrigações vinculadas",
+      "normalized_name": NaN,
+      "value": 22549.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Passivo de arrendamento por direito de uso",
+      "normalized_name": NaN,
+      "value": 526767.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 352699.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 352699.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 207237.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 207237.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 7952.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 7952.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 5447532.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 3956889.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.01.01",
+      "account_name": "Capital Social",
+      "normalized_name": NaN,
+      "value": 4000000.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.01.02",
+      "account_name": "Gastos com emissões de ações, líquido dos efeitos fiscais",
+      "normalized_name": NaN,
+      "value": -43111.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 163206.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -22288.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.02.07",
+      "account_name": "Ágio na Emissão de Ações e Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 185494.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 1327437.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 220565.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 1106872.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.04.11",
+      "account_name": "Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": -2896179.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 8191826.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro líquido do exercício",
+      "normalized_name": "net_income_cfo",
+      "value": 833938.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Depreciações e amortizações",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 723129.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Valor residual do imobilizado baixado",
+      "normalized_name": NaN,
+      "value": 5863600.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Imposto de renda e contribuição social diferidos",
+      "normalized_name": NaN,
+      "value": 65169.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Provisão para contingências",
+      "normalized_name": NaN,
+      "value": 58066.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 32188.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Juros sobre empréstimos, financiamentos, debêntures e derivativos",
+      "normalized_name": NaN,
+      "value": 552917.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Rendimento de aplicações financeiras",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Outras provisões",
+      "normalized_name": NaN,
+      "value": 13378.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Juros de arrendamento",
+      "normalized_name": NaN,
+      "value": 49441.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -9982849.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Aplicações financeiras de curto prazo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Contas a receber",
+      "normalized_name": NaN,
+      "value": -275930.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Aquisição de carros, líq. da variação do saldo a pagar a montadoras de carros",
+      "normalized_name": NaN,
+      "value": -9941463.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Depósitos judiciais",
+      "normalized_name": NaN,
+      "value": -17941.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Tributos a recuperar",
+      "normalized_name": NaN,
+      "value": -1632.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Despesas antecipadas",
+      "normalized_name": NaN,
+      "value": -4864.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Outros ativos circulantes e não circulantes",
+      "normalized_name": NaN,
+      "value": -44733.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Fornecedores (exceto montadoras)",
+      "normalized_name": NaN,
+      "value": 20975.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Obrigações sociais e trabalhistas",
+      "normalized_name": NaN,
+      "value": 26802.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Imposto de Renda e Contribuição Social",
+      "normalized_name": NaN,
+      "value": 180727.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "Juros sobre empréstimos, financiamentos, títulos de dívidas e swap",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.02.12",
+      "account_name": "Prêmios de seguro",
+      "normalized_name": NaN,
+      "value": 23156.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.02.13",
+      "account_name": "Outros passivos circulantes e não circulantes",
+      "normalized_name": NaN,
+      "value": 52054.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -1105156.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.03.01",
+      "account_name": "Imposto de renda e contribuição social pagos",
+      "normalized_name": NaN,
+      "value": -146150.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.03.02",
+      "account_name": "Juros sobre empréstimos, financiamentos e títulos de dívidas pagos",
+      "normalized_name": NaN,
+      "value": -562172.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.03.03",
+      "account_name": "Juros de arrendamento pagos",
+      "normalized_name": NaN,
+      "value": -53480.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.01.03.04",
+      "account_name": "Aplicações financeiras de curto prazo",
+      "normalized_name": NaN,
+      "value": -343354.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -193690.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Aquisições de outros imobilizados",
+      "normalized_name": NaN,
+      "value": -53388.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Aquisições de ativos intangíveis",
+      "normalized_name": "capex",
+      "value": -16566.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Aquisição de investimento, líquida do caixa adquirido",
+      "normalized_name": NaN,
+      "value": -123736.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Ágio na aquisição de investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Resgate/ (Aplicações) em títulos e valores mobiliários",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": 3134669.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Empréstimos e financiamentos - captações",
+      "normalized_name": "debt_issuance",
+      "value": 1351482.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Empréstimos e financiamentos - amortizações",
+      "normalized_name": "debt_repayment",
+      "value": -930240.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Debêntures - captações",
+      "normalized_name": NaN,
+      "value": 2283705.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Debêntures - amortizações",
+      "normalized_name": "dividends_paid",
+      "value": -975000.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Dividendos",
+      "normalized_name": NaN,
+      "value": -7223.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Juros sobre o capital próprio",
+      "normalized_name": NaN,
+      "value": -268609.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Ações em tesouraria",
+      "normalized_name": NaN,
+      "value": 2607.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Exercício das opções de ações com ações em tesouraria, líquido",
+      "normalized_name": NaN,
+      "value": 25139.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.03.09",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.03.10",
+      "account_name": "Passivo de arrendamento - constituições",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.03.11",
+      "account_name": "Passivo de arrendamento - amortizações",
+      "normalized_name": NaN,
+      "value": -103472.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.03.12",
+      "account_name": "Integralização de capital  - com subscrição de ações",
+      "normalized_name": NaN,
+      "value": 1821600.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.03.13",
+      "account_name": "Gastos com emissão de ações",
+      "normalized_name": NaN,
+      "value": -65320.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": 44800.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 2175302.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 2220102.0,
+      "reference_date": "2019-12-31",
+      "company_name": "LOCALIZA RENT A CAR S.A.",
+      "cvm_code": "019739"
+    }
+  ]
+}

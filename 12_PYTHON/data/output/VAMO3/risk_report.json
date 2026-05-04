@@ -1,0 +1,25 @@
+{
+  "ticker": "VAMO3",
+  "sector_type": "industrial",
+  "assessed_at": "2026-04-19",
+  "overall_severity": "high",
+  "risk_count": 2,
+  "risks": [
+    {
+      "code": "MARGIN_COMPRESSION",
+      "severity": "high",
+      "category": "profitability",
+      "description": "Margem EBITDA caindo 3 anos: -3.1% → -33.4%",
+      "detail": "",
+      "triggered_at": "2026-04-19"
+    },
+    {
+      "code": "NEGATIVE_FCF",
+      "severity": "medium",
+      "category": "cashflow",
+      "description": "FCF negativo: R$ -4,522 mil",
+      "detail": "",
+      "triggered_at": "2026-04-19"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "ticker": "MRVE3",
+  "sector_type": "real_estate",
+  "base_year": 2025,
+  "method": "EV/EBITDA Múltiplo",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 0.0,
+      "current_price": 7.690000057220459,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 241.43519999999998,
+        "ev_ebitda_multiple": 8.0,
+        "net_debt_mi": 8346.143,
+        "ev_mi": 1931.4815999999998
+      }
+    },
+    "optimistic": {
+      "fair_value": 0.0,
+      "current_price": 7.690000057220459,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 241.43519999999998,
+        "ev_ebitda_multiple": 12.0,
+        "net_debt_mi": 8346.143,
+        "ev_mi": 2897.2224
+      }
+    },
+    "pessimistic": {
+      "fair_value": 0.0,
+      "current_price": 7.690000057220459,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 241.43519999999998,
+        "ev_ebitda_multiple": 6.0,
+        "net_debt_mi": 8346.143,
+        "ev_mi": 1448.6112
+      }
+    }
+  }
+}

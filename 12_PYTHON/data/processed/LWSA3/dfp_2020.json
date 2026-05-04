@@ -1,0 +1,2278 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 488210.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -282885.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 205325.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -161139.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -82155.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -79893.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 909.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 44186.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -14477.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 39704.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -54181.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 29709.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": -9969.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -14812.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": 4843.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 19740.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 19740.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 19740.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 0.04,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.99.01.02",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 0.04,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 1452364.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 807495.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 404628.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 20968.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 20968.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.02.01.03",
+      "account_name": "Aplicação financeira restrita",
+      "normalized_name": NaN,
+      "value": 1601.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.02.01.04",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 19367.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 358578.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 358578.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 9412.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 9412.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 13909.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 13909.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 644869.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 90717.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 3740.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.02.02",
+      "account_name": "Depósitos judiciais",
+      "normalized_name": NaN,
+      "value": 538.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.02.03",
+      "account_name": "Aplicação financeira restrita",
+      "normalized_name": NaN,
+      "value": 3202.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 20713.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 20713.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 66264.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Ativo de direito de uso",
+      "normalized_name": NaN,
+      "value": 65104.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Outros ativos",
+      "normalized_name": NaN,
+      "value": 1160.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 76263.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 76263.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 477889.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 477889.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.04.01.02",
+      "account_name": "Intangível",
+      "normalized_name": NaN,
+      "value": 477889.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 1452364.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 450632.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 323921.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 323921.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.01.01.01",
+      "account_name": "Outros tributos a recolher",
+      "normalized_name": NaN,
+      "value": 8668.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.01.01.02",
+      "account_name": "Serviços a prestar",
+      "normalized_name": NaN,
+      "value": 43588.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.01.01.03",
+      "account_name": "Recebimentos a repassar",
+      "normalized_name": NaN,
+      "value": 271665.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 20540.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 20540.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 62687.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 56876.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 56876.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 5811.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.04.03.01",
+      "account_name": "Passivo de arrendamento",
+      "normalized_name": NaN,
+      "value": 5811.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 4072.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 4072.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 19.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Outros passivos",
+      "normalized_name": NaN,
+      "value": 4053.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 39412.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 35970.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 35970.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 3442.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.06.02.04",
+      "account_name": "Obrigação com aquisição de investimento",
+      "normalized_name": NaN,
+      "value": 3442.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 327759.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 91416.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 27682.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 27682.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 63734.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.01.03.01",
+      "account_name": "Passivo de arrendamento",
+      "normalized_name": NaN,
+      "value": 63734.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 211610.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 211610.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Obrigação com aquisição de investimentos",
+      "normalized_name": NaN,
+      "value": 211610.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 24733.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 1116.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.04.01.05",
+      "account_name": "Provisão para demandas judiciais",
+      "normalized_name": NaN,
+      "value": 1116.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.04.01.06",
+      "account_name": "Provisão para perda com investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 23617.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.04.02.04",
+      "account_name": "Outros passivos",
+      "normalized_name": NaN,
+      "value": 23617.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 673973.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 643651.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 10148.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 11996.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -7.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.02.07",
+      "account_name": "Ágio em transação de Capital",
+      "normalized_name": NaN,
+      "value": -22344.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.02.08",
+      "account_name": "Gastos com Emissão de Ações",
+      "normalized_name": NaN,
+      "value": -27357.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.02.09",
+      "account_name": "Reserva do Plano de Opção de Compra de ação",
+      "normalized_name": NaN,
+      "value": 47860.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 20174.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 2377.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 17797.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 68230.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 115481.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro (prejuízo) antes do imposto de renda e contribuição social",
+      "normalized_name": "net_income_cfo",
+      "value": 29709.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Depreciação e amortização",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 56594.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Juros, derivativos e variação cambiais e monetárias",
+      "normalized_name": NaN,
+      "value": 16781.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Marcação a mercado - Derivativos",
+      "normalized_name": NaN,
+      "value": -1385.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Plano de opção de compra de ações",
+      "normalized_name": NaN,
+      "value": 15590.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Provisões e outros ajustes",
+      "normalized_name": NaN,
+      "value": -1808.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -47251.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Contas a receber de clientes",
+      "normalized_name": NaN,
+      "value": -198108.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Impostos a recuperar",
+      "normalized_name": NaN,
+      "value": -986.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Outros ativos",
+      "normalized_name": NaN,
+      "value": -688.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Depósitos judiciais",
+      "normalized_name": NaN,
+      "value": 227.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 1962.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Pessoal, encargos e benefícios sociais",
+      "normalized_name": NaN,
+      "value": 6223.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Outros tributos a recolher",
+      "normalized_name": NaN,
+      "value": 969.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Serviços a prestar",
+      "normalized_name": NaN,
+      "value": -15098.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Recebimentos a repassar",
+      "normalized_name": NaN,
+      "value": 189492.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Outros passivos",
+      "normalized_name": NaN,
+      "value": -13534.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "Juros pagos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.02.12",
+      "account_name": "Derivativos pagos e recebidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.02.13",
+      "account_name": "Imposto de renda e contribuição social pagos",
+      "normalized_name": NaN,
+      "value": -17710.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -166724.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Aquisição de bens para o imobilizado",
+      "normalized_name": NaN,
+      "value": -31395.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Contas a pagar por aquisição de participação societária",
+      "normalized_name": "capex",
+      "value": -15035.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Venda de participação societária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Aquisição de controladoras, líquidas do caixa adquirido",
+      "normalized_name": NaN,
+      "value": -101275.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Aquisição e desenvolvimento de ativo intangível",
+      "normalized_name": NaN,
+      "value": -19019.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": 477847.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Integralização de capital",
+      "normalized_name": "debt_issuance",
+      "value": 554095.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Captação de empréstimos e financiamentos",
+      "normalized_name": "debt_repayment",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Aplicação financeira restrita",
+      "normalized_name": NaN,
+      "value": 5426.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Empréstimos e financiamentos pagos",
+      "normalized_name": "dividends_paid",
+      "value": -45967.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Dividendos e juros sobre capital próprio pagos",
+      "normalized_name": NaN,
+      "value": -16000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Juros pagos",
+      "normalized_name": NaN,
+      "value": -20388.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Derivativos pagos e recebidos",
+      "normalized_name": NaN,
+      "value": 12040.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Fianças bancárias pagas",
+      "normalized_name": NaN,
+      "value": -193.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.03.09",
+      "account_name": "Arrendamentos mercantis",
+      "normalized_name": NaN,
+      "value": -11166.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": 379353.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 25275.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 404628.0,
+      "reference_date": "2020-12-31",
+      "company_name": "LWSA S/A",
+      "cvm_code": "024910"
+    }
+  ]
+}

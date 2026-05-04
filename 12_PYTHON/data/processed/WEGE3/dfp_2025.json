@@ -1,0 +1,2503 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 40804110.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -27122477.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 13681633.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -5682892.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -3353431.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.04.01.01",
+      "account_name": "(Provisão) reversão ao valor recuperável de clientes",
+      "normalized_name": NaN,
+      "value": -74335.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.04.01.02",
+      "account_name": "Outras Despesas de Vendas",
+      "normalized_name": NaN,
+      "value": -3279096.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -1513882.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.04.02.01",
+      "account_name": "Honorários dos Administradores",
+      "normalized_name": NaN,
+      "value": -21427.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.04.02.02",
+      "account_name": "Outras",
+      "normalized_name": NaN,
+      "value": -1492455.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 222777.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -1026740.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": -11616.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 7998741.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": 148936.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 2322314.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -2173378.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 8147677.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": -1371719.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -1270231.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": -101488.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 6775958.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 6775958.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 6376219.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 399739.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 1.51971,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 1.5194,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 42645030.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 26910845.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 6296498.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.01.01",
+      "account_name": "Caixa e Bancos",
+      "normalized_name": NaN,
+      "value": 2040959.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": NaN,
+      "value": 4255539.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 983367.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 7837018.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 7837018.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 9911053.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 983962.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 983962.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.06.01.01",
+      "account_name": "Imposto de Renda/Contribuição Social a Recuperar",
+      "normalized_name": NaN,
+      "value": 221894.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.06.01.02",
+      "account_name": "Outros Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 762068.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 898947.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 898947.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 25146.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 873801.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 15734185.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 1370368.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 14263.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 981841.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 981841.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 374264.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Depósitos Judiciais",
+      "normalized_name": NaN,
+      "value": 58623.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Imposto de Renda/Contribuição Social a Recuperar",
+      "normalized_name": NaN,
+      "value": 1552.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Outros Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 167197.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 146892.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 67026.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 67026.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 65506.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 1520.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 11511802.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 10625487.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 886315.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 2784989.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 767825.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.04.01.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 767825.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 2017164.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 42645030.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 17386401.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 820283.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 820283.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 2789346.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 671111.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 671111.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 321188.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 349923.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 3549314.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 3549314.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 1475622.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 2073692.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 9556347.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 9556347.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 1759319.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Adiantamento de Clientes",
+      "normalized_name": NaN,
+      "value": 4693390.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Participação nos Lucros",
+      "normalized_name": NaN,
+      "value": 621573.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 75075.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Arrendamentos",
+      "normalized_name": NaN,
+      "value": 221934.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.05.02.08",
+      "account_name": "Provisão para garantias de produtos",
+      "normalized_name": NaN,
+      "value": 578055.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.05.02.09",
+      "account_name": "Faturamento para entrega futura",
+      "normalized_name": NaN,
+      "value": 200215.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.05.02.10",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 1406786.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 6705265.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 1041508.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 1041508.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 394588.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 646920.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 4630598.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 4630598.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Obrigações Tributárias",
+      "normalized_name": NaN,
+      "value": 33314.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 1367.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Arrendamentos",
+      "normalized_name": NaN,
+      "value": 625219.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 506466.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Dividendos a pagar",
+      "normalized_name": NaN,
+      "value": 3464232.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 220971.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 220971.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 812188.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 18553364.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 12504517.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": -172570.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 20215.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -43579.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.02.07",
+      "account_name": "Ágio na Transação de Capital",
+      "normalized_name": NaN,
+      "value": -149206.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 3631.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 2575748.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 318811.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 2256937.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.04.10",
+      "account_name": "Ajuste de Adoção Inicial IFRS",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 267222.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.06.01",
+      "account_name": "Custo Atribuído",
+      "normalized_name": NaN,
+      "value": 267222.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 2238637.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.08.01",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 3727.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.08.02",
+      "account_name": "Variação Participação Societária",
+      "normalized_name": NaN,
+      "value": -4288.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.08.03",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 2239198.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 1136179.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 6451033.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 10412769.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro Antes dos Impostos",
+      "normalized_name": "net_income_cfo",
+      "value": 8147677.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Depreciação, Amortização e Exaustão",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 1001296.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Equivalência Patrimonial",
+      "normalized_name": NaN,
+      "value": 11616.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Participação nos Resultados dos Colaboradores",
+      "normalized_name": NaN,
+      "value": 786135.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Provisão para Risco de Crédito",
+      "normalized_name": NaN,
+      "value": 74336.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Provisão de Passivos Tributários, Cíveis e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 29565.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Provisão para Perdas nos Estoques",
+      "normalized_name": NaN,
+      "value": 41168.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Provisão com Garantia de Produtos",
+      "normalized_name": NaN,
+      "value": 28667.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Perda na alienação de imobilizado e intangível",
+      "normalized_name": NaN,
+      "value": 150310.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Juros Provisionados de Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 179358.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Despesas com Plano de Opções de Compra de Ações",
+      "normalized_name": NaN,
+      "value": 14641.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Rendimento s/ aplicações financeiras",
+      "normalized_name": NaN,
+      "value": -263533.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Crédito Tributário - Exclusão do ICMS na base de cálculo do PIS/COFINS",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.01.14",
+      "account_name": "Provisão/Liquidação Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 211533.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -3961736.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "(Aumento)/redução nos clientes",
+      "normalized_name": NaN,
+      "value": -767226.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "(Aumento)/redução nos estoques",
+      "normalized_name": NaN,
+      "value": -355541.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "(Aumento)/redução nos impostos a recuperar",
+      "normalized_name": NaN,
+      "value": 31533.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Aumento/(redução) nos fornecedores",
+      "normalized_name": NaN,
+      "value": -909901.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Aumento/(redução) nas obrigações sociais/tributárias",
+      "normalized_name": NaN,
+      "value": -375592.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Aumento/(redução) nos adiantamentos de clientes",
+      "normalized_name": NaN,
+      "value": 801256.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Aumento/(redução) nas outras contas a receber/pagar",
+      "normalized_name": NaN,
+      "value": -103709.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Imposto de renda e contribuição social pagos",
+      "normalized_name": NaN,
+      "value": -1423537.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Pagamento de participação no resultado - colaboradores",
+      "normalized_name": NaN,
+      "value": -681934.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Juros pagos sobre empréstimos e financiamentos",
+      "normalized_name": NaN,
+      "value": -177085.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "Recebimento de dividendos / juros sobre capital próprio",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -2910810.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Imobilizado",
+      "normalized_name": "capex",
+      "value": -2563450.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Intangível",
+      "normalized_name": NaN,
+      "value": -127871.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Recebimento na venda de Ativo Imobilizado e Intangível",
+      "normalized_name": NaN,
+      "value": 49783.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Ajuste Acumulado de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Aquisição de Participação de não Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Aplicação Financeira de Longo Prazo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Ágio em transação de capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.02.09",
+      "account_name": "Aquisição de empresa - combinação de negócio (líquido do caixa)",
+      "normalized_name": NaN,
+      "value": -200575.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.02.10",
+      "account_name": "Caixa adquirido de combinação de negócios",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.02.11",
+      "account_name": "Aplicações financeiras mantidas até o vencimento",
+      "normalized_name": NaN,
+      "value": -75379.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.02.12",
+      "account_name": "Resgate de aplicações financeiras",
+      "normalized_name": NaN,
+      "value": 6682.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.02.13",
+      "account_name": "Rendimento s/ aplicações financeiras",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.02.14",
+      "account_name": "Resultado de venda de intangível",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.02.15",
+      "account_name": "Aquisição de participação societária - coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -4362857.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Captação de empréstimos e financiamentos obtidos",
+      "normalized_name": "debt_issuance",
+      "value": 6248313.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Pagamento de empréstimos e financiamentos",
+      "normalized_name": "debt_repayment",
+      "value": -5230662.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Juros pagos sobre empréstimos e financimamentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Pgto de Dividendos/Juros s/ Capital Próprio",
+      "normalized_name": "dividends_paid",
+      "value": -5384769.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Aquisição de ações em tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Liquidação de ações em tesouraria",
+      "normalized_name": NaN,
+      "value": 4261.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": -228467.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": -1051101.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 7347599.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 6296498.0,
+      "reference_date": "2025-12-31",
+      "company_name": "WEG S.A.",
+      "cvm_code": "005410"
+    }
+  ]
+}

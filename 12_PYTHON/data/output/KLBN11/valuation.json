@@ -1,0 +1,51 @@
+{
+  "ticker": "KLBN11",
+  "sector_type": "industrial",
+  "base_year": 2025,
+  "method": "DCF FCFF",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 31287.54789753608,
+      "current_price": 18.780000686645508,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.111,
+        "g_terminal": 0.055,
+        "rev_growth_avg": 0.09,
+        "ebitda_margin_avg": 0.2598,
+        "beta": 1.0,
+        "tax_rate": 0.27
+      }
+    },
+    "optimistic": {
+      "fair_value": 57589.79936884587,
+      "current_price": 18.780000686645508,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1101,
+        "g_terminal": 0.06,
+        "rev_growth_avg": 0.14,
+        "ebitda_margin_avg": 0.2727,
+        "beta": 1.0,
+        "tax_rate": 0.27
+      }
+    },
+    "pessimistic": {
+      "fair_value": 9972.602325037926,
+      "current_price": 18.780000686645508,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1119,
+        "g_terminal": 0.05,
+        "rev_growth_avg": 0.04,
+        "ebitda_margin_avg": 0.2416,
+        "beta": 1.0,
+        "tax_rate": 0.27
+      }
+    }
+  }
+}

@@ -1,0 +1,2575 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 39644010.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -35440726.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 4203284.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -1019350.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -476339.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.04.01.01",
+      "account_name": "Despesas com vendas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.04.01.02",
+      "account_name": "Provisão para risco de crédito",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -954117.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.04.03.01",
+      "account_name": "Reversão (Perdas) pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 636847.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.04.04.01",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.04.04.02",
+      "account_name": "Reversão de Passivos Contingentes, líquido",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -208691.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.04.05.01",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -187647.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.04.05.02",
+      "account_name": "Ganhos e perdas em ativos mantidos para venda e vendas de participações em controladas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.04.05.03",
+      "account_name": "Perdas pela não recuperabilidade de ativos financeiros",
+      "normalized_name": NaN,
+      "value": -21044.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": -17050.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 3183934.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -1509214.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 223213.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.06.01.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": NaN,
+      "value": 223213.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.06.01.02",
+      "account_name": "Variação cambial, líquida",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.06.01.03",
+      "account_name": "Reversão de Atualização de Passivos Contingentes, líquido",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.06.01.04",
+      "account_name": "Ganhos com instrumentos financeiros, líquido",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -1732427.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.06.02.01",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": NaN,
+      "value": -1469754.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.06.02.02",
+      "account_name": "Variação cambial, líquida",
+      "normalized_name": NaN,
+      "value": -247555.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.06.02.03",
+      "account_name": "Perdas com derivativos, líquido",
+      "normalized_name": NaN,
+      "value": -15118.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.06.02.04",
+      "account_name": "Despesas na recompra de Bonds",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 1674720.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": -457833.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -240400.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": -217433.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 1216887.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 1216887.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 1203736.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 13151.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 0.71,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.99.01.02",
+      "account_name": "PN",
+      "normalized_name": NaN,
+      "value": 0.71,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 0.7,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "3.99.02.02",
+      "account_name": "PN",
+      "normalized_name": NaN,
+      "value": 0.7,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 54002970.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 18235713.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 2641652.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 3652949.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 2672370.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 7659737.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 987390.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 987390.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.06.01.01",
+      "account_name": "Créditos tributários",
+      "normalized_name": NaN,
+      "value": 504302.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.06.01.02",
+      "account_name": "Imposto de renda/contribuição social a recuperar",
+      "normalized_name": NaN,
+      "value": 483088.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 621615.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 621615.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Ganhos não realizados com instrumentos financeiros",
+      "normalized_name": NaN,
+      "value": 2846.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Ativo mantido para venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.01.08.03.03",
+      "account_name": "Outros ativos circulantes",
+      "normalized_name": NaN,
+      "value": 618769.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 35767257.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 7133478.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 4071219.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 4071219.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 95445.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 2966814.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Créditos tributários",
+      "normalized_name": NaN,
+      "value": 465549.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Ganhos não realizados com instrumentos financeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Depósitos judiciais",
+      "normalized_name": NaN,
+      "value": 1991715.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Gastos antecipados com plano de pensão",
+      "normalized_name": NaN,
+      "value": 45381.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Adiantamento para futuro investimento em participação societária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.01.10.08",
+      "account_name": "Outros ativos não-circulantes",
+      "normalized_name": NaN,
+      "value": 464169.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 1812399.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 16678807.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 15901493.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.03.01.01",
+      "account_name": "Imobilizado",
+      "normalized_name": NaN,
+      "value": 15901493.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 777314.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.03.02.01",
+      "account_name": "Arrendamento mercantil - direito de uso de ativos",
+      "normalized_name": NaN,
+      "value": 777314.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 10142573.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 673262.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 9469311.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 54002970.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 7424537.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 479693.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 479693.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.01.02.01",
+      "account_name": "Salários a Pagar",
+      "normalized_name": NaN,
+      "value": 479693.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 3762768.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 638080.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 638080.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 205092.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Impostos e Contribuições Sociais a Recolher",
+      "normalized_name": NaN,
+      "value": 432988.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 1562226.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 1544211.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 18015.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 920362.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 920362.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Outros passivos circulantes",
+      "normalized_name": NaN,
+      "value": 666858.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Perdas não realizadas com instrumentos financeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Arrendamento mercantil a pagar",
+      "normalized_name": NaN,
+      "value": 202536.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Dividendos a pagar",
+      "normalized_name": NaN,
+      "value": 50968.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 61408.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 495.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 495.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 60913.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 60913.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 19405306.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 14487641.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 11594612.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 2893029.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 2069609.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 2069609.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Perdas não realizadas com instrumentos financeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Arrendamento mercantil a pagar",
+      "normalized_name": NaN,
+      "value": 601733.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Outras contas a pagar",
+      "normalized_name": NaN,
+      "value": 449375.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Obrigações com FIDC",
+      "normalized_name": NaN,
+      "value": 1018501.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 517413.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 517413.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 2330643.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 2279248.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 396821.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 357130.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 1469949.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 55348.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 51395.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 51395.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 27173127.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 19249181.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": -230945.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -242542.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.02.07",
+      "account_name": "Reserva de Capital",
+      "normalized_name": NaN,
+      "value": 11597.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 5644706.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.04.10",
+      "account_name": "Plano de opções de ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.04.11",
+      "account_name": "Outras Reservas de Lucro",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 2292759.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 217426.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 1642792.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 4782445.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro líquido do período",
+      "normalized_name": "net_income_cfo",
+      "value": 1216887.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Depreciação e amortização",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 2074295.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Perdas pela não recuperabilidade de ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Reversão de passivos contingentes, líquido",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Equivalência patrimonial",
+      "normalized_name": NaN,
+      "value": 17050.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Variação cambial, líquida",
+      "normalized_name": NaN,
+      "value": 247555.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Perdas (Ganhos) com instrumentos financeiros, líquido",
+      "normalized_name": NaN,
+      "value": 15118.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Benefícios pós-emprego",
+      "normalized_name": NaN,
+      "value": 165487.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Plano de incentivos de longo prazo",
+      "normalized_name": NaN,
+      "value": 43895.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Imposto de renda e contribuição social",
+      "normalized_name": NaN,
+      "value": 457833.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Ganho na alienação de imobilizado",
+      "normalized_name": NaN,
+      "value": 2129.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Perdas pela não recuperabilidade de ativos financeiros",
+      "normalized_name": NaN,
+      "value": 21044.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Provisão (Reversão) de passivos tributários, cíveis e trabalhistas",
+      "normalized_name": NaN,
+      "value": 38417.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.01.14",
+      "account_name": "Receita de juros de aplicações financeiras",
+      "normalized_name": NaN,
+      "value": -72784.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.01.15",
+      "account_name": "Despesa de juros sobre dívidas financeiras",
+      "normalized_name": NaN,
+      "value": 938120.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.01.16",
+      "account_name": "Provisão de ajuste ao valor líquido realizável de estoque, líquido",
+      "normalized_name": NaN,
+      "value": 24665.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.01.17",
+      "account_name": "Ganhos e perdas em ativos mantidos para venda e vendas de participações em controladas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.01.18",
+      "account_name": "Recuperação de créditos tributários",
+      "normalized_name": NaN,
+      "value": -402499.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.01.19",
+      "account_name": "Juros sobre mútuos com empresas ligadas",
+      "normalized_name": NaN,
+      "value": -4767.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -1939947.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Redução de contas a receber",
+      "normalized_name": NaN,
+      "value": 656831.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Redução (Aumento) de estoques",
+      "normalized_name": NaN,
+      "value": 1556713.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "(Redução) Aumento de contas a pagar",
+      "normalized_name": NaN,
+      "value": -642699.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Redução (Aumento) de outros ativos",
+      "normalized_name": NaN,
+      "value": 146825.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Redução de outros passivos",
+      "normalized_name": NaN,
+      "value": -462906.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Recebimento de dividendos/juros sobre o capital próprio",
+      "normalized_name": NaN,
+      "value": 44037.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Aplicações financeiras de títulos para negociação",
+      "normalized_name": NaN,
+      "value": -3676744.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Resgate de aplicações financeiras de títulos para negociação",
+      "normalized_name": NaN,
+      "value": 521616.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Parcela de ajuste a valor presente sobre arrendamento mercantil",
+      "normalized_name": NaN,
+      "value": -83620.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -1199706.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.03.01",
+      "account_name": "Pagamento de juros de empréstimos e financiamentos",
+      "normalized_name": NaN,
+      "value": -945027.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.01.03.02",
+      "account_name": "Pagamento de imposto de renda e contribuição social",
+      "normalized_name": NaN,
+      "value": -254679.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -1899451.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Adições de imobilizado",
+      "normalized_name": NaN,
+      "value": -1746600.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Recebimento pela venda de imobilizado, investimento e íntangíveis",
+      "normalized_name": "capex",
+      "value": 21805.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Adições de outros ativos intangíveis",
+      "normalized_name": NaN,
+      "value": -100313.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Redução de capital de empresa com controle compartilhado",
+      "normalized_name": NaN,
+      "value": 20344.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Adiant. p/ futuro invest. em particip. societária em entidade contabilizada pelo método de equival",
+      "normalized_name": NaN,
+      "value": -94687.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -9596.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Pagamento de arrendamento mecantil",
+      "normalized_name": "debt_issuance",
+      "value": -161824.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Dividendos e juros sobre o capital próprio pagos",
+      "normalized_name": "debt_repayment",
+      "value": -484173.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Compra de ações em tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "(Redução) Aumento de capital de não controladores em controlada",
+      "normalized_name": "dividends_paid",
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Empréstimos e financiamentos obtidos",
+      "normalized_name": NaN,
+      "value": 5585573.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Pagamentos de empréstimos e financiamentos",
+      "normalized_name": NaN,
+      "value": -4885083.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Financiamentos com empresas ligadas, líquido",
+      "normalized_name": NaN,
+      "value": -64089.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Pagamento na aquisição de controle adicional de empresa",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.03.09",
+      "account_name": "Caixa recebido no exercício de opções de ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.03.10",
+      "account_name": "Pagamento de opções de ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 17763.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": -248492.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 2890144.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 2641652.0,
+      "reference_date": "2019-12-31",
+      "company_name": "GERDAU S.A.",
+      "cvm_code": "003980"
+    }
+  ]
+}

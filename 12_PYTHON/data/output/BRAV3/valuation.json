@@ -1,0 +1,45 @@
+{
+  "ticker": "BRAV3",
+  "sector_type": "oil_gas",
+  "base_year": 2025,
+  "method": "EV/EBITDA Múltiplo",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 0.0,
+      "current_price": 19.549999237060547,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 2659.4196,
+        "ev_ebitda_multiple": 5.5,
+        "net_debt_mi": 15558.666,
+        "ev_mi": 14626.8078
+      }
+    },
+    "optimistic": {
+      "fair_value": 3057.271199999999,
+      "current_price": 19.549999237060547,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 2659.4196,
+        "ev_ebitda_multiple": 7.0,
+        "net_debt_mi": 15558.666,
+        "ev_mi": 18615.9372
+      }
+    },
+    "pessimistic": {
+      "fair_value": 0.0,
+      "current_price": 19.549999237060547,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 2659.4196,
+        "ev_ebitda_multiple": 4.0,
+        "net_debt_mi": 15558.666,
+        "ev_mi": 10637.6784
+      }
+    }
+  }
+}

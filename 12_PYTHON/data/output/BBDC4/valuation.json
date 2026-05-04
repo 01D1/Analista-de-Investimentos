@@ -1,0 +1,45 @@
+{
+  "ticker": "BBDC4",
+  "sector_type": "bank",
+  "base_year": 2025,
+  "method": "Gordon Growth Model (P/B Implícito)",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 181785.03934492014,
+      "current_price": 21.260000228881836,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.13651103145142393,
+        "coe": 0.135,
+        "g": 0.055,
+        "pb_implied": 1.018887893142799
+      }
+    },
+    "optimistic": {
+      "fair_value": 195010.39117990877,
+      "current_price": 21.260000228881836,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.13651103145142393,
+        "coe": 0.13,
+        "g": 0.06,
+        "pb_implied": 1.0930147350203419
+      }
+    },
+    "pessimistic": {
+      "fair_value": 171498.65458437343,
+      "current_price": 21.260000228881836,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.13651103145142393,
+        "coe": 0.14,
+        "g": 0.05,
+        "pb_implied": 0.9612336827935991
+      }
+    }
+  }
+}

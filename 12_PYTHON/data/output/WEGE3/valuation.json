@@ -1,0 +1,51 @@
+{
+  "ticker": "WEGE3",
+  "sector_type": "industrial",
+  "base_year": 2024,
+  "method": "DCF FCFF",
+  "calculated_at": "2026-04-18",
+  "scenarios": {
+    "base": {
+      "fair_value": 99807.5153335076,
+      "current_price": 48.650001525878906,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.111,
+        "g_terminal": 0.055,
+        "rev_growth_avg": 0.09,
+        "ebitda_margin_avg": 0.2429,
+        "beta": 1.0,
+        "tax_rate": 0.27
+      }
+    },
+    "optimistic": {
+      "fair_value": 143775.6931993793,
+      "current_price": 48.650001525878906,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1101,
+        "g_terminal": 0.06,
+        "rev_growth_avg": 0.14,
+        "ebitda_margin_avg": 0.2551,
+        "beta": 1.0,
+        "tax_rate": 0.27
+      }
+    },
+    "pessimistic": {
+      "fair_value": 63832.91643800092,
+      "current_price": 48.650001525878906,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1119,
+        "g_terminal": 0.05,
+        "rev_growth_avg": 0.04,
+        "ebitda_margin_avg": 0.2259,
+        "beta": 1.0,
+        "tax_rate": 0.27
+      }
+    }
+  }
+}

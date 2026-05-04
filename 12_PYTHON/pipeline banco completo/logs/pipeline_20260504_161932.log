@@ -1,0 +1,184 @@
+2026-05-04 16:19:32,573 [INFO] pipeline: ======================================================================
+2026-05-04 16:19:32,574 [INFO] pipeline: PIPELINE DE VALUATION [BANCÁRIO] — BBAS3 — Banco do Brasil
+2026-05-04 16:19:32,574 [INFO] pipeline: Início: 2026-05-04 16:19:32
+2026-05-04 16:19:32,574 [INFO] pipeline:   Setor: bancos | Motor: KE
+2026-05-04 16:19:32,575 [INFO] pipeline: ======================================================================
+2026-05-04 16:19:32,575 [INFO] pipeline:   Banco cadastrado: Banco do Brasil | tipo: ON_ONLY
+2026-05-04 16:19:32,576 [INFO] pipeline: 
+[1/6] Coletando dados de mercado...
+2026-05-04 16:19:33,479 [INFO] pipeline:   Buscando cotação via yfinance...
+2026-05-04 16:19:33,479 [INFO] pipeline.mercado: Buscando cotação atual: BBAS3.SA
+2026-05-04 16:19:34,611 [INFO] pipeline:   Cotação ON: R$ 21.91  |  Cotação PN: R$ 0.00
+2026-05-04 16:19:34,611 [INFO] pipeline:   Ações (fonte: bancos.py): ON=5,730,000 mil | PN=0 mil
+2026-05-04 16:19:34,612 [INFO] pipeline.mercado: Calculando beta: BBAS3 (252 dias úteis)
+2026-05-04 16:19:34,842 [INFO] pipeline.mercado:   Beta estatístico: 1.2111 | R²: 0.395 | n=251
+2026-05-04 16:19:34,849 [INFO] pipeline:   Beta estatístico: 1.211 | Beta utilizado: 0.850
+2026-05-04 16:19:34,850 [INFO] pipeline: 
+[2/6] Coletando dados macroeconômicos (BCB)...
+2026-05-04 16:19:35,192 [WARNING] pipeline.macro: Não foi possível obter Focus Selic: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'Selic'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana
+2026-05-04 16:19:35,455 [WARNING] pipeline.macro: Não foi possível obter Focus IPCA: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'IPCA'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana
+2026-05-04 16:19:35,459 [INFO] pipeline.macro: 
+=== Coletando dados macroeconômicos ===
+2026-05-04 16:19:35,460 [INFO] pipeline.macro: Baixando série BCB 432...
+2026-05-04 16:19:36,028 [ERROR] pipeline.macro: Erro ao baixar série BCB 432: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=04%2F05%2F2026
+2026-05-04 16:19:36,029 [WARNING] pipeline.macro: Série Selic meta sem DatetimeIndex — usando fallback histórico
+2026-05-04 16:19:36,029 [INFO] pipeline.macro: Baixando série BCB 12...
+2026-05-04 16:19:36,144 [ERROR] pipeline.macro: Erro ao baixar série BCB 12: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.12/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=04%2F05%2F2026
+2026-05-04 16:19:36,144 [WARNING] pipeline.macro: Série DI sem DatetimeIndex — usando fallback histórico
+2026-05-04 16:19:36,150 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (46.1%) para 2020 — usando fallback
+2026-05-04 16:19:36,151 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (159.3%) para 2021 — usando fallback
+2026-05-04 16:19:36,152 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (191.2%) para 2022 — usando fallback
+2026-05-04 16:19:36,153 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (71.5%) para 2023 — usando fallback
+2026-05-04 16:19:36,153 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (67.0%) para 2024 — usando fallback
+2026-05-04 16:19:36,154 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (80.0%) para 2025 — usando fallback
+2026-05-04 16:19:36,154 [INFO] pipeline.macro: Baixando série BCB 258...
+2026-05-04 16:19:36,254 [ERROR] pipeline.macro: Erro ao baixar série BCB 258: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.258/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=04%2F05%2F2026
+2026-05-04 16:19:36,255 [WARNING] pipeline.macro: Série TJLP sem DatetimeIndex — usando fallback histórico
+2026-05-04 16:19:36,271 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (46.1%) para 2020 — usando fallback
+2026-05-04 16:19:36,272 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (159.3%) para 2021 — usando fallback
+2026-05-04 16:19:36,273 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (191.2%) para 2022 — usando fallback
+2026-05-04 16:19:36,273 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (71.5%) para 2023 — usando fallback
+2026-05-04 16:19:36,274 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (67.0%) para 2024 — usando fallback
+2026-05-04 16:19:36,276 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (80.0%) para 2025 — usando fallback
+2026-05-04 16:19:36,277 [INFO] pipeline.macro: 
+RESUMO MACRO HISTÓRICO:
+2026-05-04 16:19:36,277 [INFO] pipeline.macro:   selic_meta     : 2021: 9.25% | 2022: 13.75% | 2023: 11.75% | 2024: 11.75% | 2025: 10.00%
+2026-05-04 16:19:36,277 [INFO] pipeline.macro:   selic_efet     : 2021: 4.48% | 2022: 12.33% | 2023: 13.15% | 2024: 10.73% | 2025: 10.50%
+2026-05-04 16:19:36,277 [INFO] pipeline.macro:   ipca           : 2021: 10.06% | 2022: 5.62% | 2023: 4.62% | 2024: 4.83% | 2025: 4.50%
+2026-05-04 16:19:36,277 [INFO] pipeline.macro:   tjlp           : 2021: 5.25% | 2022: 6.25% | 2023: 7.00% | 2024: 7.00% | 2025: 6.50%
+2026-05-04 16:19:36,278 [INFO] pipeline.macro:   cds            : 2021: 0.73% | 2022: 1.26% | 2023: 0.84% | 2024: 0.81% | 2025: 0.76%
+2026-05-04 16:19:36,278 [INFO] pipeline.macro:   inflacao_impl  : 2021: 10.06% | 2022: 5.62% | 2023: 4.62% | 2024: 4.83% | 2025: 4.50%
+2026-05-04 16:19:36,278 [INFO] pipeline: 
+[3/6] Baixando demonstrações financeiras (CVM)...
+2026-05-04 16:19:36,280 [INFO] pipeline.cvm: 
+==================================================
+2026-05-04 16:19:36,281 [INFO] pipeline.cvm: Baixando DFP 2020 (preferencia: con, fallback: ind)...
+2026-05-04 16:19:36,575 [INFO] pipeline.cvm:   DFP dre 2020: 74 linhas
+2026-05-04 16:19:37,100 [INFO] pipeline.cvm:   DFP bpa 2020: 82 linhas
+2026-05-04 16:19:37,956 [INFO] pipeline.cvm:   DFP bpp 2020: 84 linhas
+2026-05-04 16:19:38,427 [INFO] pipeline.cvm:   DFP dfc_mi 2020: 106 linhas
+2026-05-04 16:19:38,482 [WARNING] pipeline.cvm:   Empresa 1023 não encontrada em dfc_md 2020
+2026-05-04 16:19:38,482 [INFO] pipeline.cvm:   DFP 2020: usando consolidado (con)
+2026-05-04 16:19:38,483 [INFO] pipeline.cvm: 
+==================================================
+2026-05-04 16:19:38,483 [INFO] pipeline.cvm: Baixando DFP 2021 (preferencia: con, fallback: ind)...
+2026-05-04 16:19:38,808 [INFO] pipeline.cvm:   DFP dre 2021: 74 linhas
+2026-05-04 16:19:39,409 [INFO] pipeline.cvm:   DFP bpa 2021: 82 linhas
+2026-05-04 16:19:40,282 [INFO] pipeline.cvm:   DFP bpp 2021: 84 linhas
+2026-05-04 16:19:40,796 [INFO] pipeline.cvm:   DFP dfc_mi 2021: 106 linhas
+2026-05-04 16:19:40,855 [WARNING] pipeline.cvm:   Empresa 1023 não encontrada em dfc_md 2021
+2026-05-04 16:19:40,857 [INFO] pipeline.cvm:   DFP 2021: usando consolidado (con)
+2026-05-04 16:19:40,857 [INFO] pipeline.cvm: 
+==================================================
+2026-05-04 16:19:40,858 [INFO] pipeline.cvm: Baixando DFP 2022 (preferencia: con, fallback: ind)...
+2026-05-04 16:19:41,247 [INFO] pipeline.cvm:   DFP dre 2022: 74 linhas
+2026-05-04 16:19:41,816 [INFO] pipeline.cvm:   DFP bpa 2022: 82 linhas
+2026-05-04 16:19:42,919 [INFO] pipeline.cvm:   DFP bpp 2022: 84 linhas
+2026-05-04 16:19:43,431 [INFO] pipeline.cvm:   DFP dfc_mi 2022: 108 linhas
+2026-05-04 16:19:43,478 [WARNING] pipeline.cvm:   Empresa 1023 não encontrada em dfc_md 2022
+2026-05-04 16:19:43,478 [INFO] pipeline.cvm:   DFP 2022: usando consolidado (con)
+2026-05-04 16:19:43,478 [INFO] pipeline.cvm: 
+==================================================
+2026-05-04 16:19:43,478 [INFO] pipeline.cvm: Baixando DFP 2023 (preferencia: con, fallback: ind)...
+2026-05-04 16:19:43,771 [INFO] pipeline.cvm:   DFP dre 2023: 74 linhas
+2026-05-04 16:19:44,431 [INFO] pipeline.cvm:   DFP bpa 2023: 82 linhas
+2026-05-04 16:19:45,407 [INFO] pipeline.cvm:   DFP bpp 2023: 84 linhas
+2026-05-04 16:19:45,950 [INFO] pipeline.cvm:   DFP dfc_mi 2023: 108 linhas
+2026-05-04 16:19:45,989 [WARNING] pipeline.cvm:   Empresa 1023 não encontrada em dfc_md 2023
+2026-05-04 16:19:45,989 [INFO] pipeline.cvm:   DFP 2023: usando consolidado (con)
+2026-05-04 16:19:45,989 [INFO] pipeline.cvm: 
+==================================================
+2026-05-04 16:19:45,989 [INFO] pipeline.cvm: Baixando DFP 2024 (preferencia: con, fallback: ind)...
+2026-05-04 16:19:46,262 [INFO] pipeline.cvm:   DFP dre 2024: 74 linhas
+2026-05-04 16:19:46,940 [INFO] pipeline.cvm:   DFP bpa 2024: 82 linhas
+2026-05-04 16:19:48,271 [INFO] pipeline.cvm:   DFP bpp 2024: 82 linhas
+2026-05-04 16:19:49,359 [INFO] pipeline.cvm:   DFP dfc_mi 2024: 108 linhas
+2026-05-04 16:19:49,420 [WARNING] pipeline.cvm:   Empresa 1023 não encontrada em dfc_md 2024
+2026-05-04 16:19:49,420 [INFO] pipeline.cvm:   DFP 2024: usando consolidado (con)
+2026-05-04 16:19:49,421 [INFO] pipeline.cvm: 
+==================================================
+2026-05-04 16:19:49,421 [INFO] pipeline.cvm: Baixando DFP 2025 (preferencia: con, fallback: ind)...
+2026-05-04 16:19:49,801 [INFO] pipeline.cvm:   DFP dre 2025: 70 linhas
+2026-05-04 16:19:50,420 [INFO] pipeline.cvm:   DFP bpa 2025: 82 linhas
+2026-05-04 16:19:51,449 [INFO] pipeline.cvm:   DFP bpp 2025: 84 linhas
+2026-05-04 16:19:51,900 [INFO] pipeline.cvm:   DFP dfc_mi 2025: 108 linhas
+2026-05-04 16:19:51,939 [WARNING] pipeline.cvm:   Empresa 1023 não encontrada em dfc_md 2025
+2026-05-04 16:19:51,939 [INFO] pipeline.cvm:   DFP 2025: usando consolidado (con)
+2026-05-04 16:19:51,939 [INFO] pipeline: 
+[4/6] Normalizando dados...
+2026-05-04 16:19:52,981 [INFO] pipeline:   DRE normalizada:
+2026-05-04 16:19:52,982 [INFO] pipeline:     margem_financeira_bruta: 2020: 55,428 | 2021: 59,674 | 2022: 74,347 | 2023: 88,749 | 2024: 104,514 | 2025: 101,011
+2026-05-04 16:19:52,982 [INFO] pipeline:     lucro_liquido: 2020: 11,852 | 2021: 18,344 | 2022: 27,630 | 2023: 29,861 | 2024: 26,359 | 2025: 13,698
+2026-05-04 16:19:52,988 [INFO] pipeline:   Qualidade dos dados: score=100/100 | warnings=0 | critical=0
+2026-05-04 16:19:52,988 [INFO] pipeline: 
+[5/6] Calculando projeções...
+2026-05-04 16:19:52,994 [INFO] pipeline:   Premissas banco: NIM=6.0% | Payout=40% | g=5.5%
+2026-05-04 16:19:52,995 [INFO] pipeline.projecoes: 
+=== Rodando projeções ===
+2026-05-04 16:19:53,000 [INFO] pipeline.projecoes:   NIM ~ Selic: slope=0.1288, intercept=0.0301
+2026-05-04 16:19:53,006 [INFO] pipeline.projecoes:   Margem op./MFB histórica (median 5a): 40.20%
+2026-05-04 16:19:53,009 [INFO] pipeline.projecoes: Projeções concluídas. Resumo:
+2026-05-04 16:19:53,009 [INFO] pipeline.projecoes:    Ano     Carteira        MFB      Lucro       FCFE
+2026-05-04 16:19:53,009 [INFO] pipeline.projecoes:   2026    1,235,046    115,469     38,164     15,265
+2026-05-04 16:19:53,009 [INFO] pipeline.projecoes:   2027    1,333,850    124,575     41,173     16,469
+2026-05-04 16:19:53,009 [INFO] pipeline.projecoes:   2028    1,440,558    137,135     45,324     18,130
+2026-05-04 16:19:53,010 [INFO] pipeline.projecoes:   2029    1,541,397    149,511     49,415     19,766
+2026-05-04 16:19:53,010 [INFO] pipeline.projecoes:   2030    1,649,294    163,371     53,996     21,598
+2026-05-04 16:19:53,010 [INFO] pipeline: 
+[6/6] Calculando valuation (FCFE / Ke)...
+2026-05-04 16:19:53,012 [INFO] pipeline.valuation: 
+==================================================
+2026-05-04 16:19:53,012 [INFO] pipeline.valuation: VALUATION COMPLETO — BBAS3
+2026-05-04 16:19:53,012 [INFO] pipeline.valuation:   VP FCFE (10a):     R$      120,663 MM
+2026-05-04 16:19:53,012 [INFO] pipeline.valuation:   Valor Perp. (VP):  R$      247,647 MM
+2026-05-04 16:19:53,012 [INFO] pipeline.valuation:   VALOR DO EQUITY:   R$      368,310 MM
+2026-05-04 16:19:53,013 [INFO] pipeline.valuation:   Preço Justo ON:    R$    64.28
+2026-05-04 16:19:53,013 [INFO] pipeline.valuation:   Preço Justo PN:    R$    64.28
+2026-05-04 16:19:53,013 [INFO] pipeline.valuation:   Cotação ON:        R$    21.91
+2026-05-04 16:19:53,013 [INFO] pipeline.valuation:   Upside ON:              193.4%
+2026-05-04 16:19:53,013 [INFO] pipeline.valuation:   TIR (ON):                19.2%
+2026-05-04 16:19:53,014 [INFO] pipeline.valuation:   Preço Teto ON:     R$    64.28
+2026-05-04 16:19:53,017 [INFO] pipeline.intelligence: [intelligence] BBAS3 → BUY | score=90 | risco=BAIXO | confiança=ALTA
+2026-05-04 16:19:53,017 [INFO] pipeline:   Atualizando valuation existente: Valuation_BBAS3.xlsx
+2026-05-04 16:19:53,490 [INFO] pipeline.excel: 
+============================================================
+2026-05-04 16:19:53,490 [INFO] pipeline.excel: Escrevendo template: Valuation_BBAS3.xlsx
+2026-05-04 16:19:53,576 [INFO] pipeline.excel:   -> Metodologia
+2026-05-04 16:19:53,602 [INFO] pipeline.excel:   → Dashboard
+2026-05-04 16:19:53,605 [INFO] pipeline.excel:   → Ke
+2026-05-04 16:19:53,626 [INFO] pipeline.excel:   → Balanço Patrimonial
+2026-05-04 16:19:53,686 [INFO] pipeline.excel:   → DRE Recorrente
+2026-05-04 16:19:53,727 [INFO] pipeline.excel:   → DRE + DCF
+2026-05-04 16:19:53,753 [INFO] pipeline.excel:   → Projeções NIM
+2026-05-04 16:19:53,779 [INFO] pipeline.excel:   → Painel de Índices
+2026-05-04 16:19:53,995 [INFO] pipeline.excel: 
+Arquivo salvo: C:\Users\55819\OneDrive - EPEJUD\DIEGO\OBSIDIAN\Analista de Investimentos\12_PYTHON\pipeline banco completo\outputs\valuations\BBAS3\Valuation_BBAS3.xlsx
+2026-05-04 16:19:54,001 [INFO] pipeline:   Run summary:       C:\Users\55819\OneDrive - EPEJUD\DIEGO\OBSIDIAN\Analista de Investimentos\12_PYTHON\pipeline banco completo\outputs\run_summaries\run_summary_BBAS3_20260504_161953.json
+2026-05-04 16:19:54,017 [INFO] pipeline.database: [database] BBAS3 salvo — id=8 | score=90 | rec=BUY
+2026-05-04 16:19:54,033 [INFO] pipeline.report_writer: [report_writer] BBAS3 — relatório gerado: Tese_BBAS3_Banco_do_Brasil_20260504_161954.md
+2026-05-04 16:19:54,036 [INFO] pipeline.parser_ri: [parser_ri] Iniciando extração para BBAS3 (CVM=1023)
+2026-05-04 16:19:54,464 [INFO] pipeline.parser_ri: [parser_ri] Processando: https://dados.cvm.gov.br/dados/CIA_ABERTA/IPE/DOC/1023/IPE_DFP_1023_2026.zip
+2026-05-04 16:19:54,655 [INFO] pipeline.parser_ri: [parser_ri] Processando: https://dados.cvm.gov.br/dados/CIA_ABERTA/IPE/DOC/1023/IPE_DFP_1023_2026.zip
+2026-05-04 16:19:54,842 [INFO] pipeline.parser_ri: [parser_ri] Processando: https://dados.cvm.gov.br/dados/CIA_ABERTA/IPE/DOC/1023/IPE_DFP_1023_2026.zip
+2026-05-04 16:19:55,081 [INFO] pipeline.parser_ri: [parser_ri] BBAS3 — 0 doc(s) processado(s), 0 métrica(s) extraída(s): []
+2026-05-04 16:19:55,087 [INFO] pipeline: 
+======================================================================
+2026-05-04 16:19:55,089 [INFO] pipeline: RESUMO DO VALUATION (FCFE/Ke)
+2026-05-04 16:19:55,090 [INFO] pipeline: ======================================================================
+2026-05-04 16:19:55,090 [INFO] pipeline:   Empresa:           Banco do Brasil (BBAS3)
+2026-05-04 16:19:55,091 [INFO] pipeline:   Cotação ON:        R$ 21.91
+2026-05-04 16:19:55,091 [INFO] pipeline:   Preço Justo ON:    R$ 64.28
+2026-05-04 16:19:55,099 [INFO] pipeline:   Upside ON:            193.4%
+2026-05-04 16:19:55,099 [INFO] pipeline:   TIR:                  19.2%
+2026-05-04 16:19:55,105 [INFO] pipeline:   Preço Teto ON:     R$ 64.28
+2026-05-04 16:19:55,105 [INFO] pipeline: 
+  ── Intelligence ──────────────────────────────────────
+2026-05-04 16:19:55,107 [INFO] pipeline:   Recomendação:      BUY
+2026-05-04 16:19:55,121 [INFO] pipeline:   Score:             90/100
+2026-05-04 16:19:55,124 [INFO] pipeline:   Risco:             BAIXO
+2026-05-04 16:19:55,135 [INFO] pipeline:   Confiança:         ALTA (dados completos, sem avisos, histórico disponível)
+2026-05-04 16:19:55,142 [INFO] pipeline:   Tese:              Banco do Brasil (BBAS3) apresenta desconto relevante frente ao valor justo estimado. Cotação de R$ 21.91 vs. preço justo de R$ 64.28 (+193.4% de upside), TIR de 19.2%. Fundamentos: ROE de 7.4%, inadimplência de 0.0%. Score: 90/100 | Risco: BAIXO | Confiança: ALTA.
+2026-05-04 16:19:55,145 [INFO] pipeline: 
+  Arquivo gerado:    C:\Users\55819\OneDrive - EPEJUD\DIEGO\OBSIDIAN\Analista de Investimentos\12_PYTHON\pipeline banco completo\outputs\valuations\BBAS3\Valuation_BBAS3.xlsx
+2026-05-04 16:19:55,145 [INFO] pipeline:   Tese Markdown:     C:\Users\55819\OneDrive - EPEJUD\DIEGO\OBSIDIAN\Analista de Investimentos\12_PYTHON\pipeline banco completo\outputs\reports\Tese_BBAS3_Banco_do_Brasil_20260504_161954.md
+2026-05-04 16:19:55,146 [INFO] pipeline: ======================================================================

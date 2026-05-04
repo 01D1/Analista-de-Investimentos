@@ -1,0 +1,32 @@
+# Ajuste este caminho para onde a sua planilha do Profit ficará no Windows.
+# Sugestão: C:/scanner_quant/data/realtime/RTD PROFIT.xlsx
+profit_excel_path: "C:/Users/55819/Downloads/scanner_quant_profit_b3_atualizado/scanner_quant_profit_b3/data/realtime/RTD PROFIT.xlsx"
+profit_sheet_name: "Planilha1"
+
+database_path: "data/database/scanner_quant.db"
+snapshot_interval_seconds: 5
+
+ativos_base:
+  - BBAS3
+  - BBDC4
+  - BPAC11
+  - ITUB4
+  - PETR4
+  - SANB11
+  - SUZB3
+  - VALE3
+  - WEGE3
+
+filtros:
+  variacao_minima_pct: 0.3
+  negocios_minimos: 1000
+  volume_minimo: 50000000
+  rompimento_tolerancia: 0.995
+
+b3:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  years:
+    - 2024
+    - 2025
+    - 2026

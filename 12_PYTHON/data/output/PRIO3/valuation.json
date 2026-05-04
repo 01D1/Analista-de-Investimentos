@@ -1,0 +1,45 @@
+{
+  "ticker": "PRIO3",
+  "sector_type": "oil_gas",
+  "base_year": 2025,
+  "method": "EV/EBITDA Múltiplo",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 0.0,
+      "current_price": 61.65999984741211,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 2171.1864,
+        "ev_ebitda_multiple": 5.5,
+        "net_debt_mi": 25039.995,
+        "ev_mi": 11941.5252
+      }
+    },
+    "optimistic": {
+      "fair_value": 0.0,
+      "current_price": 61.65999984741211,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 2171.1864,
+        "ev_ebitda_multiple": 7.0,
+        "net_debt_mi": 25039.995,
+        "ev_mi": 15198.304799999998
+      }
+    },
+    "pessimistic": {
+      "fair_value": 0.0,
+      "current_price": 61.65999984741211,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 2171.1864,
+        "ev_ebitda_multiple": 4.0,
+        "net_debt_mi": 25039.995,
+        "ev_mi": 8684.7456
+      }
+    }
+  }
+}

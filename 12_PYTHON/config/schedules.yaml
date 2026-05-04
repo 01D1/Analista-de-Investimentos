@@ -1,0 +1,38 @@
+schedules:
+  # ── Diários ───────────────────────────────────────────────
+  - job: news_fetcher
+    cron: "0 6 * * 1-5"       # seg–sex 06:00
+    description: Coletar notícias overnight
+
+  - job: morning_call
+    cron: "30 6 * * 1-5"      # seg–sex 06:30
+    description: Gerar morning call
+
+  - job: b3_prices
+    cron: "0 7 * * 1-5"       # seg–sex 07:00
+    description: Atualizar preços do dia anterior
+
+  - job: cvm_check
+    cron: "0 19 * * 1-5"      # seg–sex 19:00
+    description: Verificar novos documentos na CVM
+
+  - job: pipeline
+    cron: "30 19 * * 1-5"     # seg–sex 19:30
+    description: Processar dados novos se houver
+
+  - job: analyze
+    cron: "0 20 * * 1-5"      # seg–sex 20:00
+    description: Recalcular métricas se dados novos
+
+  - job: content
+    cron: "30 20 * * 1-5"     # seg–sex 20:30
+    description: Gerar posts/teses se análise nova
+
+  - job: health_check
+    cron: "0 * * * *"         # a cada hora
+    description: Verificar saúde do sistema
+
+  # ── Semanais ──────────────────────────────────────────────
+  - job: weekly_review
+    cron: "0 10 * * 0"        # domingo 10:00
+    description: Gerar resumo semanal

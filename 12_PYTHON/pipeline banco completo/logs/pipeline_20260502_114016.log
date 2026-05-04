@@ -1,0 +1,131 @@
+2026-05-02 11:40:16,361 [INFO] pipeline: ======================================================================
+2026-05-02 11:40:16,362 [INFO] pipeline: PIPELINE DE VALUATION [BANCÁRIO] — BBDC4 — Bradesco
+2026-05-02 11:40:16,362 [INFO] pipeline: Início: 2026-05-02 11:40:16
+2026-05-02 11:40:16,363 [INFO] pipeline:   Setor: bancos | Motor: KE
+2026-05-02 11:40:16,363 [INFO] pipeline: ======================================================================
+2026-05-02 11:40:16,363 [INFO] pipeline:   Banco cadastrado: Bradesco | tipo: ON_PN
+2026-05-02 11:40:16,364 [INFO] pipeline: 
+[1/6] Coletando dados de mercado...
+2026-05-02 11:40:16,638 [INFO] pipeline:   Buscando cotação via yfinance...
+2026-05-02 11:40:16,639 [INFO] pipeline.mercado: Buscando cotação atual: BBDC4.SA
+2026-05-02 11:40:16,640 [INFO] yfinance: Failed to create CookieCache, reason: Cannot read and write in CookieCache folder: '/Users/diegocarvalho/Library/Caches/py-yfinance'. CookieCache will not be used. Tip: You can direct cache to use a different location with 'set_tz_cache_location(mylocation)'
+2026-05-02 11:40:16,709 [ERROR] pipeline.mercado: Erro ao buscar cotação BBDC4.SA: Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-05-02 11:40:16,709 [INFO] pipeline.mercado: Buscando cotação atual: BBDC3.SA
+2026-05-02 11:40:16,711 [ERROR] pipeline.mercado: Erro ao buscar cotação BBDC3.SA: Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-05-02 11:40:16,712 [INFO] pipeline:   Cotação ON: R$ 0.00  |  Cotação PN: R$ 0.00
+2026-05-02 11:40:16,712 [INFO] pipeline:   Ações (fonte: bancos.py): ON=5,294,000 mil | PN=5,270,000 mil
+2026-05-02 11:40:16,712 [INFO] pipeline.mercado: Calculando beta: BBDC4 (252 dias úteis)
+2026-05-02 11:40:16,713 [INFO] pipeline.mercado: Baixando preços: BBDC4.SA (2019-01-01 → 2026-05-02)
+2026-05-02 11:40:16,713 [INFO] yfinance: Failed to create TzCache, reason: Cannot read and write in TzCache folder: '/Users/diegocarvalho/Library/Caches/py-yfinance'. TzCache will not be used. Tip: You can direct cache to use a different location with 'set_tz_cache_location(mylocation)'
+2026-05-02 11:40:16,715 [ERROR] yfinance: Failed to get ticker 'BBDC4.SA' reason: Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-05-02 11:40:16,726 [ERROR] yfinance: 
+1 Failed download:
+2026-05-02 11:40:16,726 [ERROR] yfinance: ['BBDC4.SA']: ProxyError('Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.')
+2026-05-02 11:40:16,735 [WARNING] pipeline.mercado: Sem dados de preços para BBDC4.SA
+2026-05-02 11:40:16,735 [INFO] pipeline.mercado: Baixando preços: ^BVSP (2019-01-01 → 2026-05-02)
+2026-05-02 11:40:16,737 [ERROR] yfinance: Failed to get ticker '^BVSP' reason: Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-05-02 11:40:16,748 [ERROR] yfinance: 
+1 Failed download:
+2026-05-02 11:40:16,749 [ERROR] yfinance: ['^BVSP']: ProxyError('Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.')
+2026-05-02 11:40:16,750 [WARNING] pipeline.mercado: Sem dados de preços para ^BVSP
+2026-05-02 11:40:16,750 [WARNING] pipeline.mercado: Dados insuficientes para calcular beta
+2026-05-02 11:40:16,751 [INFO] pipeline:   Beta estatístico: 0.850 | Beta utilizado: 0.850
+2026-05-02 11:40:16,751 [INFO] pipeline: 
+[2/6] Coletando dados macroeconômicos (BCB)...
+2026-05-02 11:40:16,809 [WARNING] pipeline.macro: Não foi possível obter Focus Selic: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Max retries exceeded with url: /olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'Selic'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-05-02 11:40:16,812 [WARNING] pipeline.macro: Não foi possível obter Focus IPCA: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Max retries exceeded with url: /olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'IPCA'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-05-02 11:40:16,813 [INFO] pipeline.macro: 
+=== Coletando dados macroeconômicos ===
+2026-05-02 11:40:16,814 [INFO] pipeline.macro: Baixando série BCB 432...
+2026-05-02 11:40:16,816 [ERROR] pipeline.macro: Erro ao baixar série BCB 432: HTTPSConnectionPool(host='api.bcb.gov.br', port=443): Max retries exceeded with url: /dados/serie/bcdata.sgs.432/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=02%2F05%2F2026 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-05-02 11:40:16,816 [WARNING] pipeline.macro: Série Selic meta sem DatetimeIndex — usando fallback histórico
+2026-05-02 11:40:16,817 [INFO] pipeline.macro: Baixando série BCB 12...
+2026-05-02 11:40:16,819 [ERROR] pipeline.macro: Erro ao baixar série BCB 12: HTTPSConnectionPool(host='api.bcb.gov.br', port=443): Max retries exceeded with url: /dados/serie/bcdata.sgs.12/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=02%2F05%2F2026 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-05-02 11:40:16,819 [WARNING] pipeline.macro: Série DI sem DatetimeIndex — usando fallback histórico
+2026-05-02 11:40:16,820 [INFO] pipeline.macro: Baixando série BCB 13522...
+2026-05-02 11:40:16,822 [ERROR] pipeline.macro: Erro ao baixar série BCB 13522: HTTPSConnectionPool(host='api.bcb.gov.br', port=443): Max retries exceeded with url: /dados/serie/bcdata.sgs.13522/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=02%2F05%2F2026 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-05-02 11:40:16,822 [WARNING] pipeline.macro: Série IPCA sem DatetimeIndex — usando fallback histórico
+2026-05-02 11:40:16,823 [INFO] pipeline.macro: Baixando série BCB 258...
+2026-05-02 11:40:16,825 [ERROR] pipeline.macro: Erro ao baixar série BCB 258: HTTPSConnectionPool(host='api.bcb.gov.br', port=443): Max retries exceeded with url: /dados/serie/bcdata.sgs.258/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=02%2F05%2F2026 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-05-02 11:40:16,825 [WARNING] pipeline.macro: Série TJLP sem DatetimeIndex — usando fallback histórico
+2026-05-02 11:40:16,826 [INFO] pipeline.macro: Baixando série BCB 29039...
+2026-05-02 11:40:16,828 [ERROR] pipeline.macro: Erro ao baixar série BCB 29039: HTTPSConnectionPool(host='api.bcb.gov.br', port=443): Max retries exceeded with url: /dados/serie/bcdata.sgs.29039/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=02%2F05%2F2026 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-05-02 11:40:16,829 [WARNING] pipeline.macro: CDS sem DatetimeIndex — usando fallback histórico
+2026-05-02 11:40:16,830 [INFO] pipeline.macro: Baixando série BCB 13522...
+2026-05-02 11:40:16,832 [ERROR] pipeline.macro: Erro ao baixar série BCB 13522: HTTPSConnectionPool(host='api.bcb.gov.br', port=443): Max retries exceeded with url: /dados/serie/bcdata.sgs.13522/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=02%2F05%2F2026 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-05-02 11:40:16,832 [WARNING] pipeline.macro: Série IPCA sem DatetimeIndex — usando fallback histórico
+2026-05-02 11:40:16,832 [INFO] pipeline.macro: 
+RESUMO MACRO HISTÓRICO:
+2026-05-02 11:40:16,833 [INFO] pipeline.macro:   selic_meta     : 2021: 9.25% | 2022: 13.75% | 2023: 11.75% | 2024: 11.75% | 2025: 10.00%
+2026-05-02 11:40:16,833 [INFO] pipeline.macro:   selic_efet     : 2021: 4.48% | 2022: 12.33% | 2023: 13.15% | 2024: 10.73% | 2025: 10.50%
+2026-05-02 11:40:16,833 [INFO] pipeline.macro:   ipca           : 2021: 10.06% | 2022: 5.62% | 2023: 4.62% | 2024: 4.83% | 2025: 4.50%
+2026-05-02 11:40:16,833 [INFO] pipeline.macro:   tjlp           : 2021: 5.25% | 2022: 6.25% | 2023: 7.00% | 2024: 7.00% | 2025: 6.50%
+2026-05-02 11:40:16,834 [INFO] pipeline.macro:   cds            : 2021: 0.90% | 2022: 1.20% | 2023: 0.85% | 2024: 0.70% | 2025: 0.50%
+2026-05-02 11:40:16,834 [INFO] pipeline.macro:   inflacao_impl  : 2021: 10.06% | 2022: 5.62% | 2023: 4.62% | 2024: 4.83% | 2025: 4.50%
+2026-05-02 11:40:16,834 [INFO] pipeline: 
+[3/6] Download CVM pulado (--sem-cvm)
+2026-05-02 11:40:16,836 [INFO] pipeline:   Qualidade dos dados: score=90/100 | warnings=2 | critical=0
+2026-05-02 11:40:16,836 [WARNING] pipeline:   [quality] DRE histórica vazia (modo sem histórico habilitado).
+2026-05-02 11:40:16,837 [WARNING] pipeline:   [quality] Balanço histórico vazio (modo sem histórico habilitado).
+2026-05-02 11:40:16,837 [INFO] pipeline: 
+[5/6] Calculando projeções...
+2026-05-02 11:40:16,843 [INFO] pipeline:   Premissas banco: NIM=5.0% | Payout=45% | g=5.5%
+2026-05-02 11:40:16,844 [INFO] pipeline.projecoes: 
+=== Rodando projeções ===
+2026-05-02 11:40:16,846 [INFO] pipeline.projecoes:   Margem op./MFB histórica (median 5a): 22.00%
+2026-05-02 11:40:16,846 [INFO] pipeline.projecoes: Projeções concluídas. Resumo:
+2026-05-02 11:40:16,847 [INFO] pipeline.projecoes:    Ano     Carteira        MFB      Lucro       FCFE
+2026-05-02 11:40:16,847 [INFO] pipeline.projecoes:   2026            0          0          0          0
+2026-05-02 11:40:16,847 [INFO] pipeline.projecoes:   2027            0          0          0          0
+2026-05-02 11:40:16,847 [INFO] pipeline.projecoes:   2028            0          0          0          0
+2026-05-02 11:40:16,848 [INFO] pipeline.projecoes:   2029            0          0          0          0
+2026-05-02 11:40:16,848 [INFO] pipeline.projecoes:   2030            0          0          0          0
+2026-05-02 11:40:16,848 [INFO] pipeline: 
+[6/6] Calculando valuation (FCFE / Ke)...
+2026-05-02 11:40:16,849 [INFO] pipeline.valuation: 
+==================================================
+2026-05-02 11:40:16,849 [INFO] pipeline.valuation: VALUATION COMPLETO — BBDC4
+2026-05-02 11:40:16,849 [INFO] pipeline.valuation:   VP FCFE (10a):     R$            0 MM
+2026-05-02 11:40:16,849 [INFO] pipeline.valuation:   Valor Perp. (VP):  R$            0 MM
+2026-05-02 11:40:16,850 [INFO] pipeline.valuation:   VALOR DO EQUITY:   R$            0 MM
+2026-05-02 11:40:16,850 [INFO] pipeline.valuation:   Preço Justo ON:    R$     0.00
+2026-05-02 11:40:16,850 [INFO] pipeline.valuation:   Preço Justo PN:    R$     0.00
+2026-05-02 11:40:16,851 [INFO] pipeline.valuation:   Cotação ON:        R$     0.00
+2026-05-02 11:40:16,851 [INFO] pipeline.valuation:   Upside ON:                0.0%
+2026-05-02 11:40:16,851 [INFO] pipeline.valuation:   TIR (ON):                 0.0%
+2026-05-02 11:40:16,852 [INFO] pipeline.valuation:   Preço Teto ON:     R$     0.00
+2026-05-02 11:40:16,852 [WARNING] pipeline: 
+[!] AVISOS DE VALIDACAO:
+2026-05-02 11:40:16,852 [WARNING] pipeline:   - DRE histórica vazia — planilha terá apenas projeções
+2026-05-02 11:40:16,852 [WARNING] pipeline:   - FCFE projetado é zero em todos os anos — verificar dados históricos
+2026-05-02 11:40:16,853 [WARNING] pipeline:   - Valor do Equity negativo ou zero: R$ 0 MM
+2026-05-02 11:40:16,853 [WARNING] pipeline:   - Preço Justo ON inválido (≤ 0)
+2026-05-02 11:40:16,854 [WARNING] pipeline:   Template genérico não encontrado — usando output anterior como base: Valuation_BBDC4_Bradesco_test_summary.xlsx
+2026-05-02 11:40:16,919 [INFO] pipeline.excel: 
+============================================================
+2026-05-02 11:40:16,920 [INFO] pipeline.excel: Escrevendo template: Valuation_BBDC4_Bradesco_test_summary2.xlsx
+2026-05-02 11:40:16,947 [INFO] pipeline.excel:   → Dashboard
+2026-05-02 11:40:16,949 [INFO] pipeline.excel:   → Ke
+2026-05-02 11:40:16,952 [INFO] pipeline.excel:   → Balanço Patrimonial
+2026-05-02 11:40:16,955 [INFO] pipeline.excel:   → DRE Recorrente
+2026-05-02 11:40:16,964 [INFO] pipeline.excel:   → DRE + DCF
+2026-05-02 11:40:16,967 [INFO] pipeline.excel:   → Projeções NIM
+2026-05-02 11:40:16,975 [INFO] pipeline.excel:   → Painel de Índices
+2026-05-02 11:40:17,006 [INFO] pipeline.excel: 
+Arquivo salvo: Analista de Investimentos/12_PYTHON/pipeline banco completo/outputs/Valuation_BBDC4_Bradesco_test_summary2.xlsx
+2026-05-02 11:40:17,007 [INFO] pipeline:   Run summary:       /Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/pipeline banco completo/outputs/run_summaries/run_summary_BBDC4_20260502_114017.json
+2026-05-02 11:40:17,008 [INFO] pipeline: 
+======================================================================
+2026-05-02 11:40:17,008 [INFO] pipeline: RESUMO DO VALUATION (FCFE/Ke)
+2026-05-02 11:40:17,008 [INFO] pipeline: ======================================================================
+2026-05-02 11:40:17,009 [INFO] pipeline:   Empresa:           Bradesco (BBDC4)
+2026-05-02 11:40:17,009 [INFO] pipeline:   Cotação ON:        R$ 0.00
+2026-05-02 11:40:17,010 [INFO] pipeline:   Preço Justo ON:    R$ 0.00
+2026-05-02 11:40:17,010 [INFO] pipeline:   Upside ON:            0.0%
+2026-05-02 11:40:17,011 [INFO] pipeline:   TIR:                  0.0%
+2026-05-02 11:40:17,011 [INFO] pipeline:   Preço Teto ON:     R$ 0.00
+2026-05-02 11:40:17,011 [INFO] pipeline: 
+  [!] 4 aviso(s) de validacao — verifique os logs
+2026-05-02 11:40:17,011 [INFO] pipeline: 
+  Arquivo gerado:    Analista de Investimentos/12_PYTHON/pipeline banco completo/outputs/Valuation_BBDC4_Bradesco_test_summary2.xlsx
+2026-05-02 11:40:17,012 [INFO] pipeline: ======================================================================

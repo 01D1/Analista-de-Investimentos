@@ -1,0 +1,3097 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 53615440.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -44781739.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 8833701.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -7997560.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -7454163.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -757836.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": -32809.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 250512.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": -3264.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 836141.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -2820847.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 1202520.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.06.01.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": NaN,
+      "value": 1202520.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.06.01.02",
+      "account_name": "Variações Monetárias e Cambiais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -4023367.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.06.02.01",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": NaN,
+      "value": -4136312.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.06.02.02",
+      "account_name": "Variações Monetárias e Cambiais",
+      "normalized_name": NaN,
+      "value": 112945.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": -1984706.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": 115854.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -128318.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": 244172.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": -1868852.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": -1868852.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": -2028559.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 159707.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": -1.49129,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": -1.49129,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 57272090.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 25954262.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 9264664.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 447878.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 447878.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.02.01.03",
+      "account_name": "Títulos - valor justo por meio de outros resultados abrangentes (\"VJORA\")",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.02.01.04",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo por meio do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.02.02.04",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo por meio de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.02.03.04",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 4830802.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 4766071.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 64731.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 6628890.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 2702164.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 1517548.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 1517548.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.06.01.01",
+      "account_name": "Tributos a Recuperar Sobre o Lucro",
+      "normalized_name": NaN,
+      "value": 268090.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.06.01.02",
+      "account_name": "Provisão para Realização Imposto de Renda e Contribuição Social",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.06.01.03",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 1269378.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.06.01.04",
+      "account_name": "Redução a Valor Recuperável de Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": -19920.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 166230.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 396086.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.08.01.01",
+      "account_name": "Bens destinados a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 7204.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.08.02.01",
+      "account_name": "Ativos Mantidos para a Venda",
+      "normalized_name": NaN,
+      "value": 7204.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.08.02.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 388882.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Dividendos e Juros sobre Capital Próprio a Receber",
+      "normalized_name": NaN,
+      "value": 851.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 109222.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.08.03.04",
+      "account_name": "Contas a Receber de Alienação de Participação Societária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.08.03.05",
+      "account_name": "Depósitos Judiciais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.08.03.06",
+      "account_name": "Caixa Restrito",
+      "normalized_name": NaN,
+      "value": 13814.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.08.03.07",
+      "account_name": "Adiantamentos",
+      "normalized_name": NaN,
+      "value": 123319.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.01.08.03.10",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 141676.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 31317828.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 10470581.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 16490.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 12103.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.02.04",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo por meio de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 291402.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.03.04",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 7427.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 5897.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 1530.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 1858316.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 2113108.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Tributos Diferidos sobre o Lucro",
+      "normalized_name": NaN,
+      "value": 2113108.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 6171735.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Depósitos Judiciais",
+      "normalized_name": NaN,
+      "value": 415718.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Imposto de Renda e Contribuição Social a Recuperar",
+      "normalized_name": NaN,
+      "value": 169013.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Provisão para Realização Imposto de Renda e Contribuição Social",
+      "normalized_name": NaN,
+      "value": -443.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 4951670.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Provisão para Realização Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": -119500.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.10.08",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 529830.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.10.09",
+      "account_name": "Caixa Restrito",
+      "normalized_name": NaN,
+      "value": 72395.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.01.10.10",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 153052.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 97895.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 97895.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 97134.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 761.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.02.02.01",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 14608914.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 11015393.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 3110007.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 483514.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 6140438.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 6140438.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.04.01.02",
+      "account_name": "Software",
+      "normalized_name": NaN,
+      "value": 250598.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.04.01.03",
+      "account_name": "Marcas",
+      "normalized_name": NaN,
+      "value": 1873253.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.04.01.04",
+      "account_name": "Ágio",
+      "normalized_name": NaN,
+      "value": 3390938.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.04.01.05",
+      "account_name": "Software Arrendado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.04.01.07",
+      "account_name": "Intangível em Andamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.04.01.08",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 625649.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 57272090.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 19390348.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 355784.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 157096.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 198688.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 13536332.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 11273459.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.02.01.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 10430852.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.02.01.02",
+      "account_name": "Fornecedores Risco Sacado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.02.01.03",
+      "account_name": "Fornecedores Arrendamento Mercantil",
+      "normalized_name": NaN,
+      "value": 842607.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 2262873.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.02.02.01",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 2161154.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.02.02.02",
+      "account_name": "Fornecedores Risco Sacado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.02.02.03",
+      "account_name": "Fornecedores Arrendamento Mercantil",
+      "normalized_name": NaN,
+      "value": 101719.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 585129.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 332377.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 239964.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Outros Federais",
+      "normalized_name": NaN,
+      "value": 92413.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 247430.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 5322.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 2451838.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 2311957.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 139881.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 1225723.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 1225723.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 140.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 76940.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Participações dos Administradores e Funcionários",
+      "normalized_name": NaN,
+      "value": 199741.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Adiantamentos de Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Fornecedores Risco Sacado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.05.02.08",
+      "account_name": "Adiantamentos de Clientes",
+      "normalized_name": NaN,
+      "value": 290279.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.05.02.09",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 658623.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 1235542.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 720187.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 138533.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 291052.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 290602.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.06.01.05",
+      "account_name": "Provisões para Férias e 13º Salário",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 515355.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.06.02.04",
+      "account_name": "Provisão para Férias e 13º Salário",
+      "normalized_name": NaN,
+      "value": 428932.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.06.02.05",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 86423.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.07.01.01",
+      "account_name": "Passivos Diretamente Relacionados a Ativos Mantidos para Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 22238086.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 17643710.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 11149157.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 6494553.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 3596870.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 3596870.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Impostos a Recolher",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Derivativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 422.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Fornecedores Arrendamento Mercantil",
+      "normalized_name": NaN,
+      "value": 2777521.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.02.02.08",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 759108.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.02.02.09",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 59819.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 60125.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 60125.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 937381.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 482983.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 183462.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 144877.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 61812.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.04.01.05",
+      "account_name": "Passivos Contingentes",
+      "normalized_name": NaN,
+      "value": 92832.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 454398.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.04.02.04",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 454398.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.04.02.05",
+      "account_name": "Provisões para Benefícios a Empregados Compra de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 15643656.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 13349156.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.01.01",
+      "account_name": "Capital Social",
+      "normalized_name": NaN,
+      "value": 13653418.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.01.02",
+      "account_name": "Gastos com Oferta Pública de Ações",
+      "normalized_name": NaN,
+      "value": -304262.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 2597113.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 203374.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -96145.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.02.07",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 2763364.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.02.08",
+      "account_name": "Aquisição de Participação de Não Controladores",
+      "normalized_name": NaN,
+      "value": -273260.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.02.09",
+      "account_name": "Aquisição de Participação de Não Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.02.10",
+      "account_name": "Transação de Capital com Controladas",
+      "normalized_name": NaN,
+      "value": -220.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.04.10",
+      "account_name": "Reserva para retenção de lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": -1022841.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.08.01",
+      "account_name": "Ganhos (Perdas) com Hedge de Fluxo de Caixa",
+      "normalized_name": NaN,
+      "value": 65569.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.08.02",
+      "account_name": "Instrumentos Financeiros - Valor Justo por Meio de Outros Resultados Abrangentes (\"VJORA\")",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.08.03",
+      "account_name": "Ajustes Acumulados de Conversão de Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": -1048895.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.08.04",
+      "account_name": "Ganhos (Perdas) Atuariais",
+      "normalized_name": NaN,
+      "value": -39515.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.08.05",
+      "account_name": "Ajustes títulos e valores mobiliários",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.08.06",
+      "account_name": "Correção Monetária por Hiperinflação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.08.07",
+      "account_name": "Outros Resultados Abrangentes Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 720228.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 3939397.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 3983958.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro Líquido",
+      "normalized_name": "net_income_cfo",
+      "value": -1868852.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Participação de Acionistas Não Controladores",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Depreciação e Amortização",
+      "normalized_name": NaN,
+      "value": 1834232.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Depreciação e Exaustão do Ativo Biológico",
+      "normalized_name": NaN,
+      "value": 1390550.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Resultado na Alienação e Baixas de Ativos",
+      "normalized_name": NaN,
+      "value": -63229.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Recuperações e Ganhos em Ações Tributárias",
+      "normalized_name": NaN,
+      "value": -173404.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Ganho na Combinação de Negócios",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Tributos Diferidos Sobre o Lucro",
+      "normalized_name": NaN,
+      "value": -244172.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Provisão para Riscos Tributários, Cíveis e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 271063.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Resultado Financeiro Líquido",
+      "normalized_name": NaN,
+      "value": 2820850.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": NaN,
+      "value": 3264.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Redução ao Valor Realizável Líquido dos Estoques",
+      "normalized_name": NaN,
+      "value": -96094.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Programa Especial Regularização Tributária (PERT)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.01.14",
+      "account_name": "Gratificação aos Funcionários",
+      "normalized_name": NaN,
+      "value": 108803.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.01.15",
+      "account_name": "Participação dos Funcionários",
+      "normalized_name": NaN,
+      "value": 173064.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.01.16",
+      "account_name": "Correção Monetária por Hiperinflação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.01.17",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -172117.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -44561.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Contas a Receber de Clientes",
+      "normalized_name": NaN,
+      "value": -606550.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 1961810.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": -3295127.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Fornecedores Arrendamento Mercantil",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Fornecedores Risco Sacado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Pagamentos de Provisão de Riscos Tributários Cíveis e Trabalhistas",
+      "normalized_name": NaN,
+      "value": -397872.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Outros Ativos e Passivos Operacionais",
+      "normalized_name": NaN,
+      "value": 1672180.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Aplicações em Títulos Mensurados ao VJR",
+      "normalized_name": NaN,
+      "value": -523277.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Resgate de Títulos Mensurados ao VJR",
+      "normalized_name": NaN,
+      "value": 542045.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Aplicações em Títulos Disponível para Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "Aplicações em Títulos Mensurados ao VJR",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02.12",
+      "account_name": "Resgate de Títulos Mensurados ao VJR",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02.13",
+      "account_name": "Pagamento de Juros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02.14",
+      "account_name": "Pagamento de Tributos sobre o Lucro",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02.15",
+      "account_name": "Dividendos e Juros sobre Capital Próprio Recebidos",
+      "normalized_name": NaN,
+      "value": -851.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02.16",
+      "account_name": "Ativos Biológicos Circulantes",
+      "normalized_name": NaN,
+      "value": 385027.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02.17",
+      "account_name": "Juros Recebidos",
+      "normalized_name": NaN,
+      "value": 455827.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02.18",
+      "account_name": "Resgate de Caixa Restrito",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02.19",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": -237773.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.02.20",
+      "account_name": "Correção Monetária por Hiperinflação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.03.01",
+      "account_name": "Caixa Líquido Aplicado nas Atividades Operacionais das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.01.03.02",
+      "account_name": "Saldo Final do Caixa Equivalente de Caixa das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -2113844.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Aplicações em Títulos Mensurados ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": -135863.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Resgate de Títulos Mensurados ao Custo Amortizado",
+      "normalized_name": "capex",
+      "value": 75152.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Aplicações em Títulos Mensurados ao VJORA",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Resgate de Títulos Mensurados ao VJORA",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Resgate de Caixa Restrito",
+      "normalized_name": NaN,
+      "value": 12851.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Aplicações no Ativo Imobilizado",
+      "normalized_name": NaN,
+      "value": -791817.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Recebimento pela Venda de Imobilizado e Investimento",
+      "normalized_name": NaN,
+      "value": 167704.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Aumento de Capital em Subsidiária",
+      "normalized_name": NaN,
+      "value": 183672.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.02.09",
+      "account_name": "Aplicações no Ativo Intangível",
+      "normalized_name": NaN,
+      "value": -167601.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.02.10",
+      "account_name": "Aplicações no Ativo Biológico Não-Circulante",
+      "normalized_name": NaN,
+      "value": -1457174.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.02.11",
+      "account_name": "Alienação (Aquisição) de Participação em Empreendimentos Controlados em Conjunto e Coligadas",
+      "normalized_name": NaN,
+      "value": -768.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.02.12",
+      "account_name": "Combinação Negócio Aquisição de Empresas, Líquida de Caixa",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.02.13",
+      "account_name": "Venda de Participação em Controlada com Perda de Controle",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.02.14",
+      "account_name": "Ágio na Aquisição de Empresas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.02.15",
+      "account_name": "Arrendamento Mercantil",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.02.16",
+      "account_name": "Caixa Líquido (Aplicado) Gerado nas Atividades de Investimento das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.02.17",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -861837.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Captações de financiamentos",
+      "normalized_name": "debt_issuance",
+      "value": 3836483.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Pagamento de financiamentos",
+      "normalized_name": "debt_repayment",
+      "value": -6889936.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Pagamento de Juros",
+      "normalized_name": NaN,
+      "value": -1679825.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Pagamento de Derivativos de Juros - Hedge de Valor Justo",
+      "normalized_name": "dividends_paid",
+      "value": -699345.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Aumento de capital com emissão de ações",
+      "normalized_name": NaN,
+      "value": 5313241.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Aquisição de Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Ações em tesouraria alienadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Ganho (perda) na alienação de ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.03.09",
+      "account_name": "Aquisição de Participação Minoritária em Controlada",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.03.10",
+      "account_name": "Caixa líquido Gerado (aplicado) nas Atividades Financiamento das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.03.11",
+      "account_name": "Pagamento de Arrendamento Mercantil",
+      "normalized_name": NaN,
+      "value": -742455.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 170019.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": 1133735.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 8130929.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 9264664.0,
+      "reference_date": "2023-12-31",
+      "company_name": "BRF S.A.",
+      "cvm_code": "016292"
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+2026-04-15 08:52:52,182 [INFO] pipeline: ======================================================================
+2026-04-15 08:52:52,183 [INFO] pipeline: PIPELINE DE VALUATION BANCÁRIO — BBDC4 — Bradesco
+2026-04-15 08:52:52,183 [INFO] pipeline: Início: 2026-04-15 08:52:52
+2026-04-15 08:52:52,183 [INFO] pipeline: ======================================================================
+2026-04-15 08:52:52,183 [INFO] pipeline: 
+[1/6] Coletando dados de mercado...
+2026-04-15 08:52:53,006 [INFO] pipeline:   Buscando cotação via yfinance...
+2026-04-15 08:52:53,006 [INFO] pipeline.mercado: Buscando cotação atual: BBDC4.SA
+2026-04-15 08:52:54,130 [INFO] pipeline:   Cotação atual: R$ 20.78
+2026-04-15 08:52:54,263 [INFO] pipeline.mercado: Calculando beta: BBDC4 (252 dias úteis)
+2026-04-15 08:52:54,263 [INFO] pipeline.mercado: Baixando preços: BBDC4.SA (2019-01-01 → 2026-04-15)
+2026-04-15 08:52:55,256 [INFO] pipeline.mercado:   1812 dias de preços carregados
+2026-04-15 08:52:55,256 [INFO] pipeline.mercado: Baixando preços: ^BVSP (2019-01-01 → 2026-04-15)
+2026-04-15 08:52:55,757 [INFO] pipeline.mercado:   1812 dias de preços carregados
+2026-04-15 08:52:55,783 [INFO] pipeline.mercado:   Beta estatístico: 1.3159 | R²: 0.541 | n=251
+2026-04-15 08:52:55,785 [INFO] pipeline:   Beta estatístico: 1.316 | Beta utilizado: 0.850
+2026-04-15 08:52:55,785 [INFO] pipeline: 
+[2/6] Coletando dados macroeconômicos (BCB)...
+2026-04-15 08:52:56,104 [WARNING] pipeline.macro: Não foi possível obter Focus Selic: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'Selic'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana
+2026-04-15 08:52:56,377 [WARNING] pipeline.macro: Não foi possível obter Focus IPCA: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'IPCA'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana
+2026-04-15 08:52:56,380 [INFO] pipeline.macro: 
+=== Coletando dados macroeconômicos ===
+2026-04-15 08:52:56,380 [INFO] pipeline.macro: Baixando série BCB 432...
+2026-04-15 08:52:56,723 [ERROR] pipeline.macro: Erro ao baixar série BCB 432: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=15%2F04%2F2026
+2026-04-15 08:52:56,723 [WARNING] pipeline.macro: Série Selic meta sem DatetimeIndex — usando fallback histórico
+2026-04-15 08:52:56,724 [INFO] pipeline.macro: Baixando série BCB 12...
+2026-04-15 08:52:56,827 [ERROR] pipeline.macro: Erro ao baixar série BCB 12: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.12/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=15%2F04%2F2026
+2026-04-15 08:52:56,827 [WARNING] pipeline.macro: Série DI sem DatetimeIndex — usando fallback histórico
+2026-04-15 08:52:56,828 [INFO] pipeline.macro: Baixando série BCB 13522...
+2026-04-15 08:52:57,477 [INFO] pipeline.macro:   Série 13522: 195 observações (2010-01-01 → 2026-03-01)
+2026-04-15 08:52:57,478 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (55.3%) para 2019 — usando fallback
+2026-04-15 08:52:57,478 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (46.1%) para 2020 — usando fallback
+2026-04-15 08:52:57,478 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (159.3%) para 2021 — usando fallback
+2026-04-15 08:52:57,479 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (191.2%) para 2022 — usando fallback
+2026-04-15 08:52:57,479 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (71.5%) para 2023 — usando fallback
+2026-04-15 08:52:57,479 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (67.0%) para 2024 — usando fallback
+2026-04-15 08:52:57,480 [INFO] pipeline.macro: Baixando série BCB 258...
+2026-04-15 08:52:57,581 [ERROR] pipeline.macro: Erro ao baixar série BCB 258: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.258/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=15%2F04%2F2026
+2026-04-15 08:52:57,582 [WARNING] pipeline.macro: Série TJLP sem DatetimeIndex — usando fallback histórico
+2026-04-15 08:52:57,582 [INFO] pipeline.macro: Baixando série BCB 29039...
+2026-04-15 08:52:58,872 [INFO] pipeline.macro:   Série 29039: 195 observações (2010-01-01 → 2026-03-01)
+2026-04-15 08:52:58,900 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (55.3%) para 2019 — usando fallback
+2026-04-15 08:52:58,900 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (46.1%) para 2020 — usando fallback
+2026-04-15 08:52:58,900 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (159.3%) para 2021 — usando fallback
+2026-04-15 08:52:58,902 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (191.2%) para 2022 — usando fallback
+2026-04-15 08:52:58,902 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (71.5%) para 2023 — usando fallback
+2026-04-15 08:52:58,902 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (67.0%) para 2024 — usando fallback
+2026-04-15 08:52:58,903 [INFO] pipeline.macro: 
+RESUMO MACRO HISTÓRICO:
+2026-04-15 08:52:58,903 [INFO] pipeline.macro:   selic_meta     : 2020: 2.00% | 2021: 9.25% | 2022: 13.75% | 2023: 11.75% | 2024: 11.75%
+2026-04-15 08:52:58,903 [INFO] pipeline.macro:   selic_efet     : 2020: 2.28% | 2021: 4.48% | 2022: 12.33% | 2023: 13.15% | 2024: 10.73%
+2026-04-15 08:52:58,903 [INFO] pipeline.macro:   ipca           : 2020: 4.52% | 2021: 10.06% | 2022: 5.62% | 2023: 4.62% | 2024: 4.83%
+2026-04-15 08:52:58,903 [INFO] pipeline.macro:   tjlp           : 2020: 5.25% | 2021: 5.25% | 2022: 6.25% | 2023: 7.00% | 2024: 7.00%
+2026-04-15 08:52:58,903 [INFO] pipeline.macro:   cds            : 2020: 0.44% | 2021: 0.73% | 2022: 1.26% | 2023: 0.84% | 2024: 0.81%
+2026-04-15 08:52:58,903 [INFO] pipeline.macro:   inflacao_impl  : 2020: 4.52% | 2021: 10.06% | 2022: 5.62% | 2023: 4.62% | 2024: 4.83%
+2026-04-15 08:52:58,903 [INFO] pipeline: 
+[3/6] Baixando demonstrações financeiras (CVM)...
+2026-04-15 08:52:58,903 [INFO] pipeline.cvm: 
+==================================================
+2026-04-15 08:52:58,904 [INFO] pipeline.cvm: Baixando DFP 2019...
+2026-04-15 08:52:58,904 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2019.zip
+2026-04-15 08:53:01,460 [INFO] pipeline.cvm:   DFP dre 2019: 88 linhas
+2026-04-15 08:53:01,460 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2019.zip
+2026-04-15 08:53:05,312 [INFO] pipeline.cvm:   DFP bpa 2019: 68 linhas
+2026-04-15 08:53:05,312 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2019.zip
+2026-04-15 08:53:10,783 [INFO] pipeline.cvm:   DFP bpp 2019: 100 linhas
+2026-04-15 08:53:10,784 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2019.zip
+2026-04-15 08:53:14,990 [INFO] pipeline.cvm:   DFP dfc_mi 2019: 146 linhas
+2026-04-15 08:53:14,991 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2019.zip
+2026-04-15 08:53:16,860 [WARNING] pipeline.cvm:   Empresa 906 não encontrada em dfc_md 2019
+2026-04-15 08:53:16,860 [INFO] pipeline.cvm: 
+==================================================
+2026-04-15 08:53:16,861 [INFO] pipeline.cvm: Baixando DFP 2020...
+2026-04-15 08:53:16,861 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2020.zip
+2026-04-15 08:53:20,435 [INFO] pipeline.cvm:   DFP dre 2020: 82 linhas
+2026-04-15 08:53:20,436 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2020.zip
+2026-04-15 08:53:25,588 [INFO] pipeline.cvm:   DFP bpa 2020: 82 linhas
+2026-04-15 08:53:25,589 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2020.zip
+2026-04-15 08:53:33,040 [INFO] pipeline.cvm:   DFP bpp 2020: 96 linhas
+2026-04-15 08:53:33,041 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2020.zip
+2026-04-15 08:53:39,058 [INFO] pipeline.cvm:   DFP dfc_mi 2020: 94 linhas
+2026-04-15 08:53:39,059 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2020.zip
+2026-04-15 08:53:41,819 [WARNING] pipeline.cvm:   Empresa 906 não encontrada em dfc_md 2020
+2026-04-15 08:53:41,819 [INFO] pipeline.cvm: 
+==================================================
+2026-04-15 08:53:41,819 [INFO] pipeline.cvm: Baixando DFP 2021...
+2026-04-15 08:53:41,819 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2021.zip
+2026-04-15 08:53:46,694 [INFO] pipeline.cvm:   DFP dre 2021: 82 linhas
+2026-04-15 08:53:46,695 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2021.zip
+2026-04-15 08:53:51,171 [INFO] pipeline.cvm:   DFP bpa 2021: 82 linhas
+2026-04-15 08:53:51,172 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2021.zip
+2026-04-15 08:53:56,977 [INFO] pipeline.cvm:   DFP bpp 2021: 86 linhas
+2026-04-15 08:53:56,977 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2021.zip
+2026-04-15 08:54:00,361 [WARNING] pipeline.cvm:   Empresa 906 não encontrada em dfc_mi 2021
+2026-04-15 08:54:00,361 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2021.zip
+2026-04-15 08:54:02,406 [INFO] pipeline.cvm:   DFP dfc_md 2021: 64 linhas
+2026-04-15 08:54:02,407 [INFO] pipeline.cvm: 
+==================================================
+2026-04-15 08:54:02,407 [INFO] pipeline.cvm: Baixando DFP 2022...
+2026-04-15 08:54:02,407 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2022.zip
+2026-04-15 08:54:05,555 [INFO] pipeline.cvm:   DFP dre 2022: 82 linhas
+2026-04-15 08:54:05,555 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2022.zip
+2026-04-15 08:54:09,466 [INFO] pipeline.cvm:   DFP bpa 2022: 82 linhas
+2026-04-15 08:54:09,466 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2022.zip
+2026-04-15 08:54:15,012 [INFO] pipeline.cvm:   DFP bpp 2022: 86 linhas
+2026-04-15 08:54:15,012 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2022.zip
+2026-04-15 08:54:18,816 [INFO] pipeline.cvm:   DFP dfc_mi 2022: 96 linhas
+2026-04-15 08:54:18,816 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2022.zip
+2026-04-15 08:54:20,897 [WARNING] pipeline.cvm:   Empresa 906 não encontrada em dfc_md 2022
+2026-04-15 08:54:20,897 [INFO] pipeline.cvm: 
+==================================================
+2026-04-15 08:54:20,897 [INFO] pipeline.cvm: Baixando DFP 2023...
+2026-04-15 08:54:20,898 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2023.zip
+2026-04-15 08:54:24,151 [INFO] pipeline.cvm:   DFP dre 2023: 82 linhas
+2026-04-15 08:54:24,151 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2023.zip
+2026-04-15 08:54:28,410 [INFO] pipeline.cvm:   DFP bpa 2023: 82 linhas
+2026-04-15 08:54:28,410 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2023.zip
+2026-04-15 08:54:33,911 [INFO] pipeline.cvm:   DFP bpp 2023: 86 linhas
+2026-04-15 08:54:33,912 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2023.zip
+2026-04-15 08:54:37,662 [INFO] pipeline.cvm:   DFP dfc_mi 2023: 96 linhas
+2026-04-15 08:54:37,662 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2023.zip
+2026-04-15 08:54:39,655 [WARNING] pipeline.cvm:   Empresa 906 não encontrada em dfc_md 2023
+2026-04-15 08:54:39,656 [INFO] pipeline.cvm: 
+==================================================
+2026-04-15 08:54:39,656 [INFO] pipeline.cvm: Baixando DFP 2024...
+2026-04-15 08:54:39,656 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2024.zip
+2026-04-15 08:54:42,712 [INFO] pipeline.cvm:   DFP dre 2024: 82 linhas
+2026-04-15 08:54:42,712 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2024.zip
+2026-04-15 08:54:47,294 [INFO] pipeline.cvm:   DFP bpa 2024: 82 linhas
+2026-04-15 08:54:47,295 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2024.zip
+2026-04-15 08:54:52,742 [INFO] pipeline.cvm:   DFP bpp 2024: 86 linhas
+2026-04-15 08:54:52,742 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2024.zip
+2026-04-15 08:54:56,721 [INFO] pipeline.cvm:   DFP dfc_mi 2024: 96 linhas
+2026-04-15 08:54:56,721 [INFO] pipeline.cvm: Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2024.zip
+2026-04-15 08:54:59,018 [WARNING] pipeline.cvm:   Empresa 906 não encontrada em dfc_md 2024
+2026-04-15 08:54:59,019 [INFO] pipeline: 
+[4/6] Normalizando dados...
+2026-04-15 08:54:59,959 [INFO] pipeline:   DRE normalizada:
+2026-04-15 08:54:59,960 [INFO] pipeline:     margem_financeira_bruta: 2019: 65,688 | 2020: 49,853 | 2021: 70,322 | 2022: 74,602 | 2023: 68,082 | 2024: 68,941
+2026-04-15 08:54:59,960 [INFO] pipeline:     lucro_liquido: 2019: 21,023 | 2020: 15,837 | 2021: 23,172 | 2022: 20,984 | 2023: 14,251 | 2024: 17,253
+2026-04-15 08:54:59,960 [INFO] pipeline: 
+[5/6] Calculando projeções...
+2026-04-15 08:54:59,967 [INFO] pipeline.projecoes: 
+=== Rodando projeções ===
+2026-04-15 08:54:59,970 [INFO] pipeline.projecoes:   NIM ~ Selic: slope=-0.2100, intercept=0.0654
+2026-04-15 08:54:59,980 [INFO] pipeline.projecoes: Projeções concluídas. Resumo:
+2026-04-15 08:54:59,980 [INFO] pipeline.projecoes:    Ano     Carteira        MFB      Lucro       FCFE
+2026-04-15 08:54:59,980 [INFO] pipeline.projecoes:   2025      771,124     83,269     21,422      9,640
+2026-04-15 08:54:59,981 [INFO] pipeline.projecoes:   2026      832,814     97,976     21,601      9,721
+2026-04-15 08:54:59,981 [INFO] pipeline.projecoes:   2027      891,111    109,458     18,190      8,185
+2026-04-15 08:54:59,981 [INFO] pipeline.projecoes:   2028      953,489    122,040     14,159      6,371
+2026-04-15 08:54:59,981 [INFO] pipeline.projecoes:   2029    1,020,233    135,233      9,019      4,059
+2026-04-15 08:54:59,982 [INFO] pipeline: 
+[6/6] Calculando valuation...
+2026-04-15 08:54:59,984 [INFO] pipeline.valuation:   TIR calculada: 99.0000%
+2026-04-15 08:54:59,984 [INFO] pipeline.valuation:   TIR calculada: 99.0000%
+2026-04-15 08:54:59,984 [INFO] pipeline.valuation: 
+==================================================
+2026-04-15 08:54:59,984 [INFO] pipeline.valuation: VALUATION COMPLETO — BBDC4
+2026-04-15 08:54:59,984 [INFO] pipeline.valuation:   VP FCFE (10a):     R$       46,869 MM
+2026-04-15 08:54:59,984 [INFO] pipeline.valuation:   Valor Perp. (VP):  R$      154,576 MM
+2026-04-15 08:54:59,984 [INFO] pipeline.valuation:   VALOR DO EQUITY:   R$      201,446 MM
+2026-04-15 08:54:59,984 [INFO] pipeline.valuation:   Preço Justo ON:    R$    38.17
+2026-04-15 08:54:59,984 [INFO] pipeline.valuation:   Preço Justo PN:    R$    41.99
+2026-04-15 08:54:59,984 [INFO] pipeline.valuation:   Cotação ON:        R$    20.78
+2026-04-15 08:54:59,984 [INFO] pipeline.valuation:   Upside ON:               83.7%
+2026-04-15 08:54:59,984 [INFO] pipeline.valuation:   TIR (ON):                99.0%
+2026-04-15 08:54:59,984 [INFO] pipeline.valuation:   Preço Teto ON:     R$    38.17
+2026-04-15 08:55:00,380 [INFO] pipeline.excel: 
+============================================================
+2026-04-15 08:55:00,381 [INFO] pipeline.excel: Escrevendo template: Valuation_BBDC4_Bradesco_20260415.xlsx
+2026-04-15 08:55:00,488 [INFO] pipeline.excel:   → Dashboard
+2026-04-15 08:55:00,488 [INFO] pipeline.excel:   → Ke
+2026-04-15 08:55:00,497 [INFO] pipeline.excel:   → Balanço Patrimonial
+2026-04-15 08:55:00,516 [INFO] pipeline.excel:   → DRE Recorrente
+2026-04-15 08:55:00,558 [INFO] pipeline.excel:   → DRE + DCF
+2026-04-15 08:55:00,568 [INFO] pipeline.excel:   → Projeções NIM
+2026-04-15 08:55:00,592 [INFO] pipeline.excel:   → Painel de Índices
+2026-04-15 08:55:00,713 [INFO] pipeline.excel: 
+Arquivo salvo: C:\Users\55819\Downloads\pipeline_banco_completo\pipeline_banco\outputs\Valuation_BBDC4_Bradesco_20260415.xlsx
+2026-04-15 08:55:00,713 [INFO] pipeline: 
+======================================================================
+2026-04-15 08:55:00,713 [INFO] pipeline: RESUMO DO VALUATION
+2026-04-15 08:55:00,713 [INFO] pipeline: ======================================================================
+2026-04-15 08:55:00,713 [INFO] pipeline:   Empresa:           Bradesco (BBDC4)
+2026-04-15 08:55:00,713 [INFO] pipeline:   Cotação ON:        R$ 20.78
+2026-04-15 08:55:00,714 [INFO] pipeline:   Preço Justo ON:    R$ 38.17
+2026-04-15 08:55:00,714 [INFO] pipeline:   Upside ON:            83.7%
+2026-04-15 08:55:00,714 [INFO] pipeline:   TIR:                  99.0%
+2026-04-15 08:55:00,714 [INFO] pipeline:   Preço Teto ON:     R$ 38.17
+2026-04-15 08:55:00,714 [INFO] pipeline: 
+  Arquivo gerado:    C:\Users\55819\Downloads\pipeline_banco_completo\pipeline_banco\outputs\Valuation_BBDC4_Bradesco_20260415.xlsx
+2026-04-15 08:55:00,714 [INFO] pipeline: ======================================================================

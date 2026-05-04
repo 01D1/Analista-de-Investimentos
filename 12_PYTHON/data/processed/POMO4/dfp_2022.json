@@ -1,0 +1,2224 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 5415618.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -4586109.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.02.01",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": NaN,
+      "value": -4586109.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.02.02",
+      "account_name": "Custo de Ociosidade",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 829509.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -563730.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -231283.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -243185.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -47730.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": -41532.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 265779.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": 147505.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 657712.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -510207.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 413284.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": 23518.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -40449.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": 63967.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 436802.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 436802.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 449114.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": -12312.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 0.47758,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.99.01.02",
+      "account_name": "PN",
+      "normalized_name": NaN,
+      "value": 0.47758,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 0.4743,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "3.99.02.02",
+      "account_name": "PN",
+      "normalized_name": NaN,
+      "value": 0.4743,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 7395350.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 4145740.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 1171473.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 598.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 598.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 598.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 1242563.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 1242563.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 1338351.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 271671.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 271671.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.06.01.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 222780.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.06.01.02",
+      "account_name": "Imposto de Renda/Contribuição Social a Recuperar",
+      "normalized_name": NaN,
+      "value": 48891.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 121084.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 121084.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 3249610.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 1386775.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 69864.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 1032034.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 513542.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 65712.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.04.03",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 377818.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.04.04",
+      "account_name": "Imposto de Renda/Contribuição Social a Recuperar",
+      "normalized_name": NaN,
+      "value": 74962.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 284877.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 284877.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 506780.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 459429.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 369402.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 86564.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 3463.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 47351.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 1030013.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 960163.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 69850.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 326042.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 45684.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.04.01.02",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 45684.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 280358.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 7395350.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 2288932.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 203956.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 203956.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 653253.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 562415.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 90838.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 140557.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 129229.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 129229.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 11001.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 327.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 749712.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 749712.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 301827.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 447885.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 541454.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 541454.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 84179.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Adiantamento de clientes",
+      "normalized_name": NaN,
+      "value": 158058.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Representantes comissionados",
+      "normalized_name": NaN,
+      "value": 44894.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Participação dos administradores",
+      "normalized_name": NaN,
+      "value": 4604.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Obrigações com arrendamento",
+      "normalized_name": NaN,
+      "value": 15110.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.05.02.08",
+      "account_name": "Outras contas a pagar circulante",
+      "normalized_name": NaN,
+      "value": 233634.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.05.02.09",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 975.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 1901645.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 1618315.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 1618315.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 801400.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 816915.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 98066.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 98066.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Outras contas a pagar não circulantes",
+      "normalized_name": NaN,
+      "value": 15114.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Obrigação por conta de participação societária",
+      "normalized_name": NaN,
+      "value": 24075.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Obrigações com arrendamento",
+      "normalized_name": NaN,
+      "value": 58877.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 185264.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 132115.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 28879.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 99598.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 3638.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 53149.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.04.02.04",
+      "account_name": "Provisão para perda em investimento",
+      "normalized_name": NaN,
+      "value": 53149.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 3204773.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 1334052.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 1840.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": -10179.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.02.07",
+      "account_name": "Reservas de transações de capital",
+      "normalized_name": NaN,
+      "value": 12019.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 1394154.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 114410.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 1305447.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -25703.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 454111.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": -21792.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 42408.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 45367.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 585783.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Resultado do exercício",
+      "normalized_name": "net_income_cfo",
+      "value": 436802.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Depreciações e amortizações",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 119808.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Custo na venda de investimento, imobilizado e intangível",
+      "normalized_name": NaN,
+      "value": 3614.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Equivalência patrimonial",
+      "normalized_name": NaN,
+      "value": 41532.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Provisão para créditos de liquidação duvidosa",
+      "normalized_name": NaN,
+      "value": -13510.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Imposto de renda e contribuição social diferidos",
+      "normalized_name": NaN,
+      "value": -63967.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Juros e variação apropriados",
+      "normalized_name": NaN,
+      "value": 68533.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Participação dos não controladores",
+      "normalized_name": NaN,
+      "value": -12312.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Variação em ativos mensurados ao valor justo",
+      "normalized_name": NaN,
+      "value": 5283.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Baixa de imobilizado por sinistro",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -540416.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "(Aumento) redução em contas a receber de clientes",
+      "normalized_name": NaN,
+      "value": -671834.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "(Aumento) redução nos estoques",
+      "normalized_name": NaN,
+      "value": -420305.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "(Aumento) redução em outras contas a receber",
+      "normalized_name": NaN,
+      "value": -44129.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Aumento (redução) em fornecedores",
+      "normalized_name": NaN,
+      "value": 251709.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Aumento (redução) em passivos atuariais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Aumento (redução) em outras contas a pagar e provisões",
+      "normalized_name": NaN,
+      "value": 353416.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Impostos sobre o lucro pagos",
+      "normalized_name": NaN,
+      "value": -9273.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -94038.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Dividendos controladas em conjunto e coligadas",
+      "normalized_name": "capex",
+      "value": 2306.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Adições de imobilizado",
+      "normalized_name": NaN,
+      "value": -90326.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Adições de intangível",
+      "normalized_name": NaN,
+      "value": -7113.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Recebimento na venda de invest., imob. e intangível",
+      "normalized_name": NaN,
+      "value": 1095.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Aquisição de participação em controlada",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -82963.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Empréstimos de partes relacionadas",
+      "normalized_name": "debt_issuance",
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Empréstimos tomados de terceiros",
+      "normalized_name": "debt_repayment",
+      "value": 921325.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Pagamento de empréstimos - principal",
+      "normalized_name": NaN,
+      "value": -812152.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Pagamento de empréstimos - juros",
+      "normalized_name": "dividends_paid",
+      "value": -104378.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Pagamento dos juros s/capital próprio e dividendos",
+      "normalized_name": NaN,
+      "value": -88785.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Ações em tesouraria",
+      "normalized_name": NaN,
+      "value": 1027.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Emissão de ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": -19868.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": -151502.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 1322975.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 1171473.0,
+      "reference_date": "2022-12-31",
+      "company_name": "MARCOPOLO S.A.",
+      "cvm_code": "008451"
+    }
+  ]
+}

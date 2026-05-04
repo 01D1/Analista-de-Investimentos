@@ -1,0 +1,2566 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 32470510.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -26790835.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 5679675.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -3013254.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -629494.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -588807.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 248440.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -2264318.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": 220925.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 2666421.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": 612493.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 3278914.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": -1186025.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -653386.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": -532639.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 2092889.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 2092889.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 1615538.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 477351.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 1.26,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.99.01.02",
+      "account_name": "PN",
+      "normalized_name": NaN,
+      "value": 1.38,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 1.26,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "3.99.02.02",
+      "account_name": "PN",
+      "normalized_name": NaN,
+      "value": 1.38,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 40000451.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 20358661.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 2916047.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 2156314.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 3547946.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 9965172.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 1773182.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.08.01.01",
+      "account_name": "Impostos a Recuperar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.08.01.02",
+      "account_name": "Imposto de Renda e Contribuição Social Antecipados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.08.01.03",
+      "account_name": "Dividendos a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.08.01.04",
+      "account_name": "Adiantamentos a Fornecedores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.08.01.05",
+      "account_name": "Instrumentos financeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.08.01.06",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 1773182.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Impostos a Recuperar",
+      "normalized_name": NaN,
+      "value": 748983.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Imposto de Renda e Contribuição Social Antecipados",
+      "normalized_name": NaN,
+      "value": 163436.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.08.03.03",
+      "account_name": "Dividendos a Receber",
+      "normalized_name": NaN,
+      "value": 22729.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.08.03.04",
+      "account_name": "Adiantamentos a Fornecedores",
+      "normalized_name": NaN,
+      "value": 623381.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.08.03.05",
+      "account_name": "Instrumentos financeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.08.03.06",
+      "account_name": "Valores a Receber Eletrobras",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.01.08.03.07",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 214653.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 19641790.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 5492446.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 206194.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 48982.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 157212.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 255337.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 2410456.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 2410456.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 2620459.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Depósitos Judiciais",
+      "normalized_name": NaN,
+      "value": 513777.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Instrumentos Financeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Impostos a Recuperar",
+      "normalized_name": NaN,
+      "value": 1398912.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Imposto de Renda e Contribuição Social a Recuperar",
+      "normalized_name": NaN,
+      "value": 314416.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Valores a receber Eletrobrás",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.10.08",
+      "account_name": "Indenização de Seguro a Receber",
+      "normalized_name": NaN,
+      "value": 352661.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.01.10.09",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 40693.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 1352833.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 1211337.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 684972.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 526365.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 141496.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 10820571.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 7686335.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 3134236.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 1975940.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 40000451.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 5392626.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 267712.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 2838631.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 191212.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 191212.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 47901.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Tributos a recolher",
+      "normalized_name": NaN,
+      "value": 143311.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.03.01.03",
+      "account_name": "Salários e Encargos Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 130975.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 113155.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 17820.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 1964096.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 1964096.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 470599.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Tributos Parcelados",
+      "normalized_name": NaN,
+      "value": 4722.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Instrumentos Financeiros",
+      "normalized_name": NaN,
+      "value": 100678.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Adiantamentos de Clientes",
+      "normalized_name": NaN,
+      "value": 108813.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Contas a Pagar por Aquisição de Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.05.02.08",
+      "account_name": "Contas a Pagar",
+      "normalized_name": NaN,
+      "value": 309866.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.05.02.09",
+      "account_name": "Títulos a pagar - Forfaiting",
+      "normalized_name": NaN,
+      "value": 935375.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.05.02.10",
+      "account_name": "Passivos de Arrendamento",
+      "normalized_name": NaN,
+      "value": 34043.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 8720075.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 6066582.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 3874747.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 2191835.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 525371.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 72933.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 452438.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Tributos Parcelados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Instrumentos Financeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Contas a Pagar por Aquisição de Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Passivos de Arrendamento",
+      "normalized_name": NaN,
+      "value": 85137.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 367301.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 2128122.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 1845062.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 952905.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.04.01.05",
+      "account_name": "Passivos Contingentes",
+      "normalized_name": NaN,
+      "value": 892157.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 283060.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 283060.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 25887750.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 13200295.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 312665.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 9561524.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 626590.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.04.10",
+      "account_name": "Para Investimentos e Capital de Giro",
+      "normalized_name": NaN,
+      "value": 8934934.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 80541.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 2732725.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 997118.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 5366181.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro Líquido (Prejuízo) do Exercício",
+      "normalized_name": "net_income_cfo",
+      "value": 2092889.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Encargos e Variações Monetárias/Cambiais Líquidas",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": -216839.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Despesas de Juros",
+      "normalized_name": NaN,
+      "value": 363995.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Depreciação, Amortização e Exaustão",
+      "normalized_name": NaN,
+      "value": 902681.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Resultado na Venda de Imobilizado",
+      "normalized_name": NaN,
+      "value": -74212.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Resultado na Alienação de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Participações nos Resultados de controladas, controladas em conjunto e coligadas",
+      "normalized_name": NaN,
+      "value": -220925.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 532639.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Imposto de Renda e Contribuição Social Correntes",
+      "normalized_name": NaN,
+      "value": 653386.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Constituição (Reversão) e Provisões",
+      "normalized_name": NaN,
+      "value": -160217.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Perdas (Ganhos) Atuariais",
+      "normalized_name": NaN,
+      "value": 111263.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Perda (Reversão) por valor recuperável de ativos (Impairment)",
+      "normalized_name": NaN,
+      "value": 1396784.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": -15263.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -2598852.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Títulos e Valores Mobiliários",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Contas a Receber de Clientes",
+      "normalized_name": NaN,
+      "value": 473085.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": -2496568.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Impostos a Recuperar",
+      "normalized_name": NaN,
+      "value": -545857.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Valores a Receber de Empresas Ligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Depósitos Judiciais",
+      "normalized_name": NaN,
+      "value": -22243.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Valores a Receber Eletrobras",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Adiantamentos a Fornecedores",
+      "normalized_name": NaN,
+      "value": -620917.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -90394.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Fornecedores, Empreiteiros e Fretes",
+      "normalized_name": NaN,
+      "value": 97592.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "Adiantamentos de Clientes",
+      "normalized_name": NaN,
+      "value": -45454.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.02.12",
+      "account_name": "Valores a Pagar a Empresas Ligadas",
+      "normalized_name": NaN,
+      "value": -18515.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.02.13",
+      "account_name": "Tributos a Recolher",
+      "normalized_name": NaN,
+      "value": 552767.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.02.14",
+      "account_name": "Títulos a pagar - Forfaiting",
+      "normalized_name": NaN,
+      "value": 219824.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.02.15",
+      "account_name": "Passivo Atuarial Recebido (Pago)",
+      "normalized_name": NaN,
+      "value": -76368.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.02.16",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -25804.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -1770211.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Pagos",
+      "normalized_name": NaN,
+      "value": -1185780.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.01.03.02",
+      "account_name": "Juros Pagos",
+      "normalized_name": NaN,
+      "value": -584431.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -3340897.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Valor Recebido Pela Alienação (Aquisição) de Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Valor Pago Pela Aquisição de Controladas e Coligadas",
+      "normalized_name": "capex",
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Compras de Imobilizado",
+      "normalized_name": NaN,
+      "value": -2026636.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Valor Recebido Pela Venda de Imobilizado",
+      "normalized_name": NaN,
+      "value": 87573.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Compras de Ativos Intangíveis",
+      "normalized_name": NaN,
+      "value": -65240.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Dividendos Recebidos",
+      "normalized_name": NaN,
+      "value": 137255.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Títulos e valores mobiliários",
+      "normalized_name": NaN,
+      "value": -1473782.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Aumento de Capital em Subsidiária",
+      "normalized_name": NaN,
+      "value": -67.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -1088028.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Ingressos de Empréstimos de Financiamentos e Debêntures",
+      "normalized_name": "debt_issuance",
+      "value": 2200000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Pagamentos de Empréstimos e Financiamentos e Debêntures",
+      "normalized_name": "debt_repayment",
+      "value": -2007026.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Recebimento Decorrente de Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Pagamentos de Passivos de Arrendamento",
+      "normalized_name": "dividends_paid",
+      "value": -56261.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Liquidação de operações de Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 8482.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Dividendos e Juros Sobre Capital Próprio Pagos",
+      "normalized_name": NaN,
+      "value": -1233223.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Ganho de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Cessões de crédito contratadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.03.09",
+      "account_name": "Cessões de crédito liquidadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.03.10",
+      "account_name": "Recebimento Por Aumento de Capital Social",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.03.11",
+      "account_name": "Redução de capital em controlada  - participação dos   acionistas não controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 6837.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": -3424970.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 6341017.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 2916047.0,
+      "reference_date": "2022-12-31",
+      "company_name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+      "cvm_code": "014320"
+    }
+  ]
+}

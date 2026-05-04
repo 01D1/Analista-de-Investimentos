@@ -1,0 +1,25 @@
+{
+  "ticker": "BRAV3",
+  "sector_type": "oil_gas",
+  "assessed_at": "2026-04-19",
+  "overall_severity": "medium",
+  "risk_count": 2,
+  "risks": [
+    {
+      "code": "HIGH_LEVERAGE",
+      "severity": "medium",
+      "category": "leverage",
+      "description": "DL/EBITDA elevada: 3.3x",
+      "detail": "Threshold (oil_gas): médio=2.5x  alto=3.5x",
+      "triggered_at": "2026-04-19"
+    },
+    {
+      "code": "FALLING_NET_INCOME",
+      "severity": "medium",
+      "category": "growth",
+      "description": "Lucro em queda por 2 anos consecutivos",
+      "detail": "2024: -324.5%  2025: -255.1%",
+      "triggered_at": "2026-04-19"
+    }
+  ]
+}

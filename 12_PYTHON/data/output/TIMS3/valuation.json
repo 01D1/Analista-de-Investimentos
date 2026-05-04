@@ -1,0 +1,45 @@
+{
+  "ticker": "TIMS3",
+  "sector_type": "telecom",
+  "base_year": 2025,
+  "method": "EV/EBITDA Múltiplo",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 0.0,
+      "current_price": 26.799999237060547,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 0.0,
+        "ev_ebitda_multiple": 5.0,
+        "net_debt_mi": 0.0,
+        "ev_mi": 0.0
+      }
+    },
+    "optimistic": {
+      "fair_value": 0.0,
+      "current_price": 26.799999237060547,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 0.0,
+        "ev_ebitda_multiple": 6.5,
+        "net_debt_mi": 0.0,
+        "ev_mi": 0.0
+      }
+    },
+    "pessimistic": {
+      "fair_value": 0.0,
+      "current_price": 26.799999237060547,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 0.0,
+        "ev_ebitda_multiple": 4.0,
+        "net_debt_mi": 0.0,
+        "ev_mi": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "CRFB3",
+  "sector_type": "retail",
+  "assessed_at": "2026-04-19",
+  "overall_severity": "medium",
+  "risk_count": 2,
+  "risks": [
+    {
+      "code": "LOW_GROSS_MARGIN",
+      "severity": "medium",
+      "category": "profitability",
+      "description": "Margem bruta baixa: 18.3% (mín. esperado: 25.0%)",
+      "detail": "",
+      "triggered_at": "2026-04-19"
+    },
+    {
+      "code": "FALLING_NET_INCOME",
+      "severity": "medium",
+      "category": "growth",
+      "description": "Lucro em queda por 2 anos consecutivos",
+      "detail": "2023: -145.7%  2024: -320.5%",
+      "triggered_at": "2026-04-19"
+    }
+  ]
+}

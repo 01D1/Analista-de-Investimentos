@@ -1,0 +1,45 @@
+{
+  "ticker": "SANB11",
+  "sector_type": "bank",
+  "base_year": 2025,
+  "method": "Gordon Growth Model (P/B Implícito)",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 77224.4460389658,
+      "current_price": 31.59000015258789,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.10435512870107015,
+        "coe": 0.135,
+        "g": 0.055,
+        "pb_implied": 0.6169391087633768
+      }
+    },
+    "optimistic": {
+      "fair_value": 79315.54333024666,
+      "current_price": 31.59000015258789,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.10435512870107015,
+        "coe": 0.13,
+        "g": 0.06,
+        "pb_implied": 0.6336446957295736
+      }
+    },
+    "pessimistic": {
+      "fair_value": 75598.03703463628,
+      "current_price": 31.59000015258789,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.10435512870107015,
+        "coe": 0.14,
+        "g": 0.05,
+        "pb_implied": 0.603945874456335
+      }
+    }
+  }
+}

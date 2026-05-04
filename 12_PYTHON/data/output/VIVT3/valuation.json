@@ -1,0 +1,45 @@
+{
+  "ticker": "VIVT3",
+  "sector_type": "telecom",
+  "base_year": 2025,
+  "method": "EV/EBITDA Múltiplo",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 45841.326,
+      "current_price": 40.689998626708984,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 11831.1336,
+        "ev_ebitda_multiple": 5.0,
+        "net_debt_mi": 13314.342,
+        "ev_mi": 59155.668
+      }
+    },
+    "optimistic": {
+      "fair_value": 63588.02639999999,
+      "current_price": 40.689998626708984,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 11831.1336,
+        "ev_ebitda_multiple": 6.5,
+        "net_debt_mi": 13314.342,
+        "ev_mi": 76902.36839999999
+      }
+    },
+    "pessimistic": {
+      "fair_value": 34010.1924,
+      "current_price": 40.689998626708984,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 11831.1336,
+        "ev_ebitda_multiple": 4.0,
+        "net_debt_mi": 13314.342,
+        "ev_mi": 47324.5344
+      }
+    }
+  }
+}

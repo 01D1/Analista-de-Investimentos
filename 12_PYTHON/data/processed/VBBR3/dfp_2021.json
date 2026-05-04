@@ -1,0 +1,2593 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 130121000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -123270000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 6851000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -4245000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -2663000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -634000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -1060000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.04.05.01",
+      "account_name": "Tributárias",
+      "normalized_name": NaN,
+      "value": -345000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.04.05.02",
+      "account_name": "Custo com Pesquisa e Desenvolvimento Tecnológico",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.04.05.03",
+      "account_name": "Outras Despesas/Receitas Operacionais Líquidas",
+      "normalized_name": NaN,
+      "value": -715000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": 112000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 2606000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": 568000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 1643000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.06.01.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": NaN,
+      "value": 1643000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -1075000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.06.02.01",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": NaN,
+      "value": -530000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.06.02.02",
+      "account_name": "Variações Monetárias e Cambiais Líquidas",
+      "normalized_name": NaN,
+      "value": -545000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 3174000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": -677000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -867000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": 190000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 2497000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 2497000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 2497000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 2.1625,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 2.1611,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 33884000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 17760000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 3625000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 5587000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 5587000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 5674000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 1844000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 1844000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.06.01.01",
+      "account_name": "Imposto de renda e contribuição social",
+      "normalized_name": NaN,
+      "value": 143000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.06.01.02",
+      "account_name": "Impostos e contribuições a recuperar",
+      "normalized_name": NaN,
+      "value": 1701000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 131000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 899000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 899000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Adiantamentos a Fornecedores",
+      "normalized_name": NaN,
+      "value": 47000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Bonificações antecipadas concedidas a clientes",
+      "normalized_name": NaN,
+      "value": 541000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.08.03.03",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 97000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.08.03.04",
+      "account_name": "Ativos mantidos para venda",
+      "normalized_name": NaN,
+      "value": 11000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.01.08.03.05",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 203000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 16124000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 8300000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 526000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 526000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 2369000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 1596000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.07.02",
+      "account_name": "Impostos e contribuições a recuperar",
+      "normalized_name": NaN,
+      "value": 773000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 104000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 5301000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Adiantamento a Fornecedores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Depósitos judiciais",
+      "normalized_name": NaN,
+      "value": 1124000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Bonificações antecipadas concedidas a clientes",
+      "normalized_name": NaN,
+      "value": 1573000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 579000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Outros Realizáveis a Longo Prazo",
+      "normalized_name": NaN,
+      "value": 7000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.01.10.08",
+      "account_name": "Títulos e valores mobiliários",
+      "normalized_name": NaN,
+      "value": 2018000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 609000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 609000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 609000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 6762000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 4881000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 879000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 1002000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 453000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 453000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 33884000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 7339000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 222000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 222000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.01.02.01",
+      "account_name": "Salários, férias, encargos, prêmios e participações",
+      "normalized_name": NaN,
+      "value": 222000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.01.02.02",
+      "account_name": "Plano de incentivo ao desligamento voluntário",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.01.02.03",
+      "account_name": "Programas de desligamento e reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 3310000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 1583000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 1727000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 391000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 391000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 391000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 1457000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 1339000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 118000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 1851000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 1851000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 132000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Impostos e contribuições a recolher",
+      "normalized_name": NaN,
+      "value": 230000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Imposto de renda e contribuição social",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Adiantamentos de clientes",
+      "normalized_name": NaN,
+      "value": 613000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 31000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.05.02.08",
+      "account_name": "Financiamento de fornecimento de produtos",
+      "normalized_name": NaN,
+      "value": 529000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.05.02.09",
+      "account_name": "Outras contas e despesas a pagar",
+      "normalized_name": NaN,
+      "value": 316000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 108000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 108000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.06.02.04",
+      "account_name": "Plano de pensão e saúde",
+      "normalized_name": NaN,
+      "value": 108000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 14237000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 12376000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 11670000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 706000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 1861000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 988000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 873000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.04.02.04",
+      "account_name": "Plano de pensão e saúde",
+      "normalized_name": NaN,
+      "value": 751000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.04.02.05",
+      "account_name": "Provisão para Desmantelamento de áreas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.04.02.06",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 41000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.04.02.07",
+      "account_name": "Outras contas e despesas a pagar",
+      "normalized_name": NaN,
+      "value": 81000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 12308000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 6353000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": -901000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 17000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -918000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 7580000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 1272000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 270000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 6037000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 1000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": -724000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 2276000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 5576000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro (Prejuízo) do Exercício",
+      "normalized_name": "net_income_cfo",
+      "value": 2497000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Despesa com planos de pensão e saúde",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": -22000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Resultado de Participações em Investimentos Relevantes",
+      "normalized_name": NaN,
+      "value": -112000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Depreciação e Amortização",
+      "normalized_name": NaN,
+      "value": 559000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Perda na Recuperação de Ativos - Impairment",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Apropriação/baixa das bonificações antecipadas concedidas a clientes",
+      "normalized_name": NaN,
+      "value": 815000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Resultado com alienação, baixas de ativos",
+      "normalized_name": NaN,
+      "value": -98000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Juros, variações cambiais e monetárias, líquidas",
+      "normalized_name": NaN,
+      "value": -385000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Imposto de Renda e Contribuição Social",
+      "normalized_name": NaN,
+      "value": 677000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Créditos de ICMS - Fim da definitividade",
+      "normalized_name": NaN,
+      "value": -291000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Perdas de crédito esperadas, líquidas de reversão",
+      "normalized_name": NaN,
+      "value": 312000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Provisão de prêmios e incentivos de curto prazo",
+      "normalized_name": NaN,
+      "value": 85000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Apropriação de seguros, aluguéis e outros",
+      "normalized_name": NaN,
+      "value": 111000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01.14",
+      "account_name": "Provisão para processos judiciais e administrativos, líquida de reversão",
+      "normalized_name": NaN,
+      "value": 926000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01.15",
+      "account_name": "Provisão para incentivo ao desligamento voluntário",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01.16",
+      "account_name": "Ganho valor justo instrumentos financeiros, líquido",
+      "normalized_name": NaN,
+      "value": 270000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01.17",
+      "account_name": "Provisão abono por repactuação salarial",
+      "normalized_name": NaN,
+      "value": -8000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01.18",
+      "account_name": "Recuperação de PIS e Cofins - exclusão de ICMS da base de cálculo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01.19",
+      "account_name": "Provisão para Créditos de Descarbonização (CBIOS)",
+      "normalized_name": NaN,
+      "value": 240000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.01.20",
+      "account_name": "Ganho com indenização contrato de concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -3364000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Contas a receber",
+      "normalized_name": NaN,
+      "value": -988000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": -2117000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Depósitos judiciais",
+      "normalized_name": NaN,
+      "value": -14000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Despesas antecipadas",
+      "normalized_name": NaN,
+      "value": -148000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Bonificações antecipadas concedidas a clientes",
+      "normalized_name": NaN,
+      "value": -584000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Aquisição de Créditos de Descarbonização (CBIOS)",
+      "normalized_name": NaN,
+      "value": -240000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 1446000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Imposto de renda e contribuição social pagos",
+      "normalized_name": NaN,
+      "value": -1000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Impostos, taxas e contribuições",
+      "normalized_name": NaN,
+      "value": 22000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Planos de pensão e saúde",
+      "normalized_name": NaN,
+      "value": -209000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "Plano de incentivo ao desligamento voluntário",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.02.12",
+      "account_name": "Programas de desligamento e reestruturação",
+      "normalized_name": NaN,
+      "value": -1000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.02.13",
+      "account_name": "Pagamentos de processos judiciais e administrativos",
+      "normalized_name": NaN,
+      "value": -105000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.02.14",
+      "account_name": "Adiantamentos de clientes",
+      "normalized_name": NaN,
+      "value": -53000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.02.15",
+      "account_name": "Pagamento de prêmios e incentivos de curto prazo",
+      "normalized_name": NaN,
+      "value": -53000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.02.16",
+      "account_name": "Outros ativos e passivos, líquidos",
+      "normalized_name": NaN,
+      "value": -319000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 64000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.01.03.01",
+      "account_name": "Outros Ajustes",
+      "normalized_name": NaN,
+      "value": 64000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -2415000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Aquisições de imobilizados e intangíveis",
+      "normalized_name": NaN,
+      "value": -584000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Aportes em participações societárias",
+      "normalized_name": "capex",
+      "value": -52000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Recebimentos pela venda de ativos",
+      "normalized_name": NaN,
+      "value": 185000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Investimentos em títulos e valores mobiliários",
+      "normalized_name": NaN,
+      "value": -1998000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Dividendos recebidos",
+      "normalized_name": NaN,
+      "value": 15000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Recebimentos de empréstimos concedidos",
+      "normalized_name": NaN,
+      "value": 29000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Efeito caixa decorrente da perda de controle de participação",
+      "normalized_name": NaN,
+      "value": -10000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": 406000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Operações de mútuo",
+      "normalized_name": "debt_issuance",
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Captações",
+      "normalized_name": "debt_repayment",
+      "value": 6761000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Amortizações de principal de financiamentos",
+      "normalized_name": NaN,
+      "value": -2036000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Amortizações de juros de financiamentos",
+      "normalized_name": "dividends_paid",
+      "value": -277000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Dividendos e Juros sobre capital próprio pagos",
+      "normalized_name": NaN,
+      "value": -2761000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Dividendos pagos a acionistas não controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Recebimentos pela venda de participação acionária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Cessões de direitos creditórios - FIDC",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.03.09",
+      "account_name": "Integralização de capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.03.10",
+      "account_name": "Pagamento do principal dos arrendamentos",
+      "normalized_name": NaN,
+      "value": -218000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.03.11",
+      "account_name": "Pagamento dos juros dos arrendamentos",
+      "normalized_name": NaN,
+      "value": -74000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.03.12",
+      "account_name": "Recompra de ações",
+      "normalized_name": NaN,
+      "value": -916000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.03.13",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -73000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": 267000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 3358000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 3625000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "VIBRA ENERGIA S/A",
+      "cvm_code": "024295"
+    }
+  ]
+}

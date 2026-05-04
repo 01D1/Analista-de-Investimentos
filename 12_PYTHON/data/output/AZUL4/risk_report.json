@@ -1,0 +1,25 @@
+{
+  "ticker": "AZUL4",
+  "sector_type": "industrial",
+  "assessed_at": "2026-04-19",
+  "overall_severity": "high",
+  "risk_count": 2,
+  "risks": [
+    {
+      "code": "HIGH_LEVERAGE",
+      "severity": "high",
+      "category": "leverage",
+      "description": "DL/EBITDA elevada: 4.8x",
+      "detail": "Threshold (industrial): médio=2.5x  alto=3.5x",
+      "triggered_at": "2026-04-19"
+    },
+    {
+      "code": "NEGATIVE_FCF",
+      "severity": "medium",
+      "category": "cashflow",
+      "description": "FCF negativo: R$ -1,238,446 mil",
+      "detail": "",
+      "triggered_at": "2026-04-19"
+    }
+  ]
+}

@@ -1,0 +1,3178 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 3137369.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -1899594.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 1237775.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -271136.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -373121.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.04.02.01",
+      "account_name": "Depreciação e amortização",
+      "normalized_name": NaN,
+      "value": -75935.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.04.02.02",
+      "account_name": "Despesas ambientais",
+      "normalized_name": NaN,
+      "value": -1029.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.04.02.03",
+      "account_name": "Despesas com aluguéis",
+      "normalized_name": NaN,
+      "value": -3040.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.04.02.04",
+      "account_name": "Despesas com exploração e poço seco",
+      "normalized_name": NaN,
+      "value": -92671.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.04.02.05",
+      "account_name": "Despesas com pessoal",
+      "normalized_name": NaN,
+      "value": -136269.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.04.02.06",
+      "account_name": "Impostos e contribuições",
+      "normalized_name": NaN,
+      "value": -65.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.04.02.07",
+      "account_name": "Material de consumo",
+      "normalized_name": NaN,
+      "value": -3170.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.04.02.08",
+      "account_name": "Seguros administrativos",
+      "normalized_name": NaN,
+      "value": -1461.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.04.02.09",
+      "account_name": "Serviços compartilhados - cost sharing",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.04.02.10",
+      "account_name": "Serviços de terceiros",
+      "normalized_name": NaN,
+      "value": -34704.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.04.02.20",
+      "account_name": "Outras",
+      "normalized_name": NaN,
+      "value": -24777.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 171885.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.04.04.20",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 171885.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -67561.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.04.05.20",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -67561.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": -2339.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 966639.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -410180.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 178590.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06.01.01",
+      "account_name": "Aplicação financeira",
+      "normalized_name": NaN,
+      "value": 96026.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06.01.02",
+      "account_name": "Mtm contratos de energia",
+      "normalized_name": NaN,
+      "value": 11414.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06.01.03",
+      "account_name": "Juros sobre debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06.01.04",
+      "account_name": "Multas e juros recebidos ou auferidos",
+      "normalized_name": NaN,
+      "value": 4738.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06.01.05",
+      "account_name": "Rendimentos de mútuos",
+      "normalized_name": NaN,
+      "value": 1384.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06.01.06",
+      "account_name": "Variação cambial e monetária",
+      "normalized_name": NaN,
+      "value": 41742.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06.01.20",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 23286.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -588770.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06.02.01",
+      "account_name": "Encargos da dívida",
+      "normalized_name": NaN,
+      "value": -217549.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06.02.02",
+      "account_name": "Multa e juros pagos ou incorridos",
+      "normalized_name": NaN,
+      "value": -3094.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06.02.03",
+      "account_name": "Amortização custo de transação de empréstimos",
+      "normalized_name": NaN,
+      "value": -40878.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06.02.04",
+      "account_name": "Comissão sobre fianças bancárias",
+      "normalized_name": NaN,
+      "value": -2419.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06.02.05",
+      "account_name": "Juros de provisão de abandono",
+      "normalized_name": NaN,
+      "value": -6906.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06.02.06",
+      "account_name": "Juros de passivos de arrendamento",
+      "normalized_name": NaN,
+      "value": -11207.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06.02.07",
+      "account_name": "Juros sobre mútuos",
+      "normalized_name": NaN,
+      "value": -509.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06.02.08",
+      "account_name": "Juros de debêntures",
+      "normalized_name": NaN,
+      "value": -214205.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06.02.09",
+      "account_name": "Perdas com derivativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06.02.10",
+      "account_name": "Variação cambial e monetária",
+      "normalized_name": NaN,
+      "value": -63077.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.06.02.20",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -28926.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 556459.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": 42621.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -39483.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": 82104.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 599080.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 599080.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 600798.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": -1718.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "On",
+      "normalized_name": NaN,
+      "value": 1.90521,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "On",
+      "normalized_name": NaN,
+      "value": 1.89101,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 13863144.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 2825850.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 1517583.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.01.01",
+      "account_name": "Caixa e bancos",
+      "normalized_name": NaN,
+      "value": 34892.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.01.02",
+      "account_name": "Fundo de investimento FICFI RF CP ENEVA",
+      "normalized_name": NaN,
+      "value": 174386.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.01.03",
+      "account_name": "Fundo de Investimento FIC Master Plus 50 RF DI LP",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.01.04",
+      "account_name": "CDB/Compromissadas",
+      "normalized_name": NaN,
+      "value": 1308305.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.01.05",
+      "account_name": "Outras aplicações em renda fixa",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 270652.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 270652.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.02.01.03",
+      "account_name": "Títulos e valores mobiliários",
+      "normalized_name": NaN,
+      "value": 270652.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 695181.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 695181.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 102211.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 117935.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 117935.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.06.01.01",
+      "account_name": "Imposto de renda e contribuição social a recuperar",
+      "normalized_name": NaN,
+      "value": 92544.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.06.01.02",
+      "account_name": "Outros impostos a recuperar",
+      "normalized_name": NaN,
+      "value": 25391.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 9133.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 113155.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 113155.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Adiantamentos diversos",
+      "normalized_name": NaN,
+      "value": 32147.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Adiantamentos a fornecedores",
+      "normalized_name": NaN,
+      "value": 67055.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.08.03.04",
+      "account_name": "Depósitos vinculados",
+      "normalized_name": NaN,
+      "value": 2473.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.08.03.05",
+      "account_name": "Operações comerciais com partes relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.08.03.06",
+      "account_name": "Ativos mantidos para venda",
+      "normalized_name": NaN,
+      "value": 2730.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.08.03.07",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 6698.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.08.03.08",
+      "account_name": "Dividendos a receber",
+      "normalized_name": NaN,
+      "value": 392.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.01.08.03.20",
+      "account_name": "Outros créditos",
+      "normalized_name": NaN,
+      "value": 1660.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 11037294.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 844554.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.03.02",
+      "account_name": "Outras contas a receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras contas a receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 660077.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de renda e contribuição social diferidos",
+      "normalized_name": NaN,
+      "value": 660077.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 39.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 16708.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.09.06",
+      "account_name": "Operações comerciais com partes relacionadas",
+      "normalized_name": NaN,
+      "value": 4845.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.09.11",
+      "account_name": "Mútuos com partes relacionadas",
+      "normalized_name": NaN,
+      "value": 11863.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.09.20",
+      "account_name": "Outros créditos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 167730.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Imposto de renda e contribuição social a recuperar",
+      "normalized_name": NaN,
+      "value": 61447.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Outros impostos a recuperar",
+      "normalized_name": NaN,
+      "value": 102076.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Depósitos vinculados",
+      "normalized_name": NaN,
+      "value": 3355.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.01.10.20",
+      "account_name": "Outros créditos",
+      "normalized_name": NaN,
+      "value": 852.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 5330.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 5330.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.02.02.01",
+      "account_name": "Goodwill / mais valia",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.02.02.03",
+      "account_name": "Participações em controladas em conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.02.02.04",
+      "account_name": "Outras participações societárias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 8805604.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 6875842.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 94386.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 1835376.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 1381806.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 1381806.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.04.01.02",
+      "account_name": "Intangível em operação",
+      "normalized_name": NaN,
+      "value": 1344871.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.04.01.03",
+      "account_name": "Intangível em andamento",
+      "normalized_name": NaN,
+      "value": 36935.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 13863144.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 1352928.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 27854.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 27854.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 598155.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 598155.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 153104.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 153104.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 94147.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Outros impostos a recolher",
+      "normalized_name": NaN,
+      "value": 58957.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 283498.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 178185.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 178185.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 105313.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.04.02.01",
+      "account_name": "Principal",
+      "normalized_name": NaN,
+      "value": 85247.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.04.02.02",
+      "account_name": "Juros",
+      "normalized_name": NaN,
+      "value": 20066.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 290317.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 290317.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Passivos relacionados a ativos não circulantes mantidos para venda",
+      "normalized_name": NaN,
+      "value": 7403.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Retenções contratuais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Adiantamentos diversos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Participações nos lucros",
+      "normalized_name": NaN,
+      "value": 73417.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.05.02.08",
+      "account_name": "Passivo de arrendamento",
+      "normalized_name": NaN,
+      "value": 31531.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.05.02.09",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 7107.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.05.02.10",
+      "account_name": "Contas a pagar setor elétrico",
+      "normalized_name": NaN,
+      "value": 11922.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.05.02.11",
+      "account_name": "Provisão de custos por indisponibilidade",
+      "normalized_name": NaN,
+      "value": 73865.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.05.02.12",
+      "account_name": "Pesquisa e desenvolvimento - setor elétrico",
+      "normalized_name": NaN,
+      "value": 79705.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.05.02.20",
+      "account_name": "Outras obrigações",
+      "normalized_name": NaN,
+      "value": 5367.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.06.02.04",
+      "account_name": "Royalties a pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.06.02.05",
+      "account_name": "Creditos a pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.06.02.06",
+      "account_name": "Adiantamentos de clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.06.02.07",
+      "account_name": "Passivo disponivel para vendas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 5610135.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 5273044.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 1221229.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 1221229.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 4051815.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.01.02.01",
+      "account_name": "Principal",
+      "normalized_name": NaN,
+      "value": 4101150.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.01.02.02",
+      "account_name": "Juros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.01.02.03",
+      "account_name": "Derivativos embutidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.01.02.04",
+      "account_name": "Custo de captação",
+      "normalized_name": NaN,
+      "value": -49335.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 102313.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 375.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 375.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 101938.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Perdas em operações com derivativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Debêntures conversíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Operações comerciais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 31704.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Provisão de custo por indisponibilidade",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.02.02.08",
+      "account_name": "Perdas em investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.02.02.09",
+      "account_name": "Passivo a descoberto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.02.02.10",
+      "account_name": "Passivos de arrendamentos",
+      "normalized_name": NaN,
+      "value": 70234.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 50985.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 50985.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 183793.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 92845.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 40.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 43562.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 49080.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.04.01.05",
+      "account_name": "Provisões ambientais",
+      "normalized_name": NaN,
+      "value": 163.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 90948.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.04.02.04",
+      "account_name": "Provisão para desmantelamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.04.02.05",
+      "account_name": "Passivo a descoberto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.04.02.07",
+      "account_name": "Provisao de abandono",
+      "normalized_name": NaN,
+      "value": 81022.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.04.02.08",
+      "account_name": "Retenções contratuais",
+      "normalized_name": NaN,
+      "value": 4330.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.04.02.20",
+      "account_name": "Outras obrigaçoes",
+      "normalized_name": NaN,
+      "value": 5596.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 6900081.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 8834907.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 15640.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.02.07",
+      "account_name": "Reserva de investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.02.08",
+      "account_name": "Reservas de capital",
+      "normalized_name": NaN,
+      "value": 15640.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 110725.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 110725.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": -2068379.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 9541.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": -2353.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 1366246.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 1413803.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Resultado antes dos tributos sobre o lucro",
+      "normalized_name": "net_income_cfo",
+      "value": 556459.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Depreciação e amortização",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 490053.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Aquisição de controlada",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Resultado de participação patrimonial",
+      "normalized_name": NaN,
+      "value": 2339.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Baixa de poços secos e áreas subcomerciais",
+      "normalized_name": NaN,
+      "value": 36986.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Provisão para contingências",
+      "normalized_name": NaN,
+      "value": 29667.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Provisão para desmantelamento e baixa de ativos",
+      "normalized_name": NaN,
+      "value": 19905.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Reversão de impairment",
+      "normalized_name": NaN,
+      "value": -127114.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Amortização de custo de captação",
+      "normalized_name": NaN,
+      "value": 40878.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Crédito e juros de PIS/COFINS",
+      "normalized_name": NaN,
+      "value": -42234.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Resultado financeiro líquido",
+      "normalized_name": NaN,
+      "value": 404191.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Recuperação de créditos tributários",
+      "normalized_name": NaN,
+      "value": 2673.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -15633.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Adiantamentos diversos",
+      "normalized_name": NaN,
+      "value": -73963.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Despesas antecipadas",
+      "normalized_name": NaN,
+      "value": 25361.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Impostos a recuperar",
+      "normalized_name": NaN,
+      "value": 55289.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Impostos, taxas e contribuições",
+      "normalized_name": NaN,
+      "value": 28264.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 91669.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Impostos, taxas e contribuições",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Dividendos e jscp recebidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Mútuo com partes relacionadas",
+      "normalized_name": NaN,
+      "value": 2820.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Estoque",
+      "normalized_name": NaN,
+      "value": 83246.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Provisões e encargos trabalhistas",
+      "normalized_name": NaN,
+      "value": 16827.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "Operações comerciais",
+      "normalized_name": NaN,
+      "value": -26065.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.02.12",
+      "account_name": "Depósitos vinculados",
+      "normalized_name": NaN,
+      "value": 25788.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.02.13",
+      "account_name": "Dividendos a receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.02.14",
+      "account_name": "Depósitos vinculados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.02.15",
+      "account_name": "Contas a receber",
+      "normalized_name": NaN,
+      "value": -326854.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.02.16",
+      "account_name": "Ativos e passivos mantidos para venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.02.17",
+      "account_name": "Recebimentos antecipados - CCC",
+      "normalized_name": NaN,
+      "value": 44091.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.02.20",
+      "account_name": "Outros ativos e passivos",
+      "normalized_name": NaN,
+      "value": 37894.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -31924.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.03.01",
+      "account_name": "Imposto de renda e contribuição social pagos",
+      "normalized_name": NaN,
+      "value": -31924.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.01.03.02",
+      "account_name": "Dividendos recebidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -848221.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Aquisição de imobilizado e intangível",
+      "normalized_name": NaN,
+      "value": -829917.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Aporte de capital / redução de capital",
+      "normalized_name": "capex",
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Aporte de capital em investida",
+      "normalized_name": NaN,
+      "value": -1000.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Aquisição de controlada, liquida do caixa adquirido",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Títulos e valores mobiliários",
+      "normalized_name": NaN,
+      "value": -17304.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Mútuo com partes relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Adiantamento para futuro aumento de capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Retenções contratuais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.02.09",
+      "account_name": "Ativos destinados a negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.02.10",
+      "account_name": "Mútuo com partes relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.02.11",
+      "account_name": "Depósitos vinculados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.02.12",
+      "account_name": "Efeito de baixa impairment",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.02.13",
+      "account_name": "Variação de investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.02.14",
+      "account_name": "Prêmio ao programa de stock options",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.02.15",
+      "account_name": "Baixa de imobilizado e intangível",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.02.16",
+      "account_name": "Caixa proveniente da venda de ativo imobilizado e intangível",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -152708.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Aporte de capital de minoritários",
+      "normalized_name": "debt_issuance",
+      "value": 13524.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Amortizações do principal - financiamentos",
+      "normalized_name": "debt_repayment",
+      "value": -3083148.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Custos de captações",
+      "normalized_name": NaN,
+      "value": -55224.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Captações de financiamentos",
+      "normalized_name": "dividends_paid",
+      "value": 3414004.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Pagamento de fee - pré pagamento pii",
+      "normalized_name": NaN,
+      "value": -11093.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Instrumentos financeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Depósitos vinculados",
+      "normalized_name": NaN,
+      "value": -19541.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Pagamento do passivo de arrendamento mercantil financeiro",
+      "normalized_name": NaN,
+      "value": -39623.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.03.09",
+      "account_name": "Juros pagos",
+      "normalized_name": NaN,
+      "value": -371607.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.03.10",
+      "account_name": "Juros pagos debêntures - partes relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": 365317.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 1152266.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 1517583.0,
+      "reference_date": "2019-12-31",
+      "company_name": "ENEVA S.A",
+      "cvm_code": "021237"
+    }
+  ]
+}

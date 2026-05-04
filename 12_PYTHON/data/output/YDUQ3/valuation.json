@@ -1,0 +1,51 @@
+{
+  "ticker": "YDUQ3",
+  "sector_type": "education",
+  "base_year": 2025,
+  "method": "DCF FCFF",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 4000.638859043913,
+      "current_price": 11.710000038146973,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1148,
+        "g_terminal": 0.05,
+        "rev_growth_avg": 0.072,
+        "ebitda_margin_avg": 0.1928,
+        "beta": 1.1,
+        "tax_rate": 0.27
+      }
+    },
+    "optimistic": {
+      "fair_value": 7400.2777384610135,
+      "current_price": 11.710000038146973,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1135,
+        "g_terminal": 0.055,
+        "rev_growth_avg": 0.112,
+        "ebitda_margin_avg": 0.2025,
+        "beta": 1.1,
+        "tax_rate": 0.27
+      }
+    },
+    "pessimistic": {
+      "fair_value": 960.1262642811062,
+      "current_price": 11.710000038146973,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1161,
+        "g_terminal": 0.045,
+        "rev_growth_avg": 0.032,
+        "ebitda_margin_avg": 0.1793,
+        "beta": 1.1,
+        "tax_rate": 0.27
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "VBBR3",
+  "sector_type": "oil_gas",
+  "assessed_at": "2026-04-19",
+  "overall_severity": "high",
+  "risk_count": 2,
+  "risks": [
+    {
+      "code": "HIGH_LEVERAGE",
+      "severity": "high",
+      "category": "leverage",
+      "description": "DL/EBITDA elevada: 4.0x",
+      "detail": "Threshold (oil_gas): médio=2.5x  alto=3.5x",
+      "triggered_at": "2026-04-19"
+    },
+    {
+      "code": "LOW_EBITDA_MARGIN",
+      "severity": "high",
+      "category": "profitability",
+      "description": "Margem EBITDA abaixo do esperado p/ setor: 2.6% (mín. 20.0%)",
+      "detail": "",
+      "triggered_at": "2026-04-19"
+    }
+  ]
+}

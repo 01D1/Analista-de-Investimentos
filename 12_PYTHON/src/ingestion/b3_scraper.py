@@ -1,0 +1,186 @@
+"""
+b3_scraper.py
+-------------
+Coleta preços históricos da B3 via yfinance e persiste em Parquet.
+
+Lógica incremental:
+  - Se o arquivo Parquet já existe, baixa apenas a partir do último dia salvo.
+  - Se não existe, baixa desde start_date (default: 2019-01-01).
+
+Formato do arquivo: data/raw/prices/{TICKER}.parquet
+Schema:
+  date (index), open, high, low, close, volume, adj_close
+
+Uso:
+    from src.ingestion.b3_scraper import B3Scraper, fetch_prices
+
+    df = fetch_prices("BBAS3")
+    df = fetch_prices("BBAS3", start_date="2020-01-01", force=True)
+"""
+
+from __future__ import annotations
+
+from datetime import date, timedelta
+from pathlib import Path
+
+import pandas as pd
+
+from src.utils.logger import get_logger
+from src.utils.retry import retry
+
+log = get_logger(__name__)
+
+DEFAULT_START = "2019-01-01"
+# yfinance espera sufixo .SA para ações da B3
+_SA_SUFFIX = ".SA"
+
+
+class B3Scraper:
+    """
+    Busca e mantém série histórica de preços para tickers da B3.
+
+    Args:
+        output_dir: Diretório para salvar os Parquets (default: data/raw/prices/)
+    """
+
+    def __init__(self, output_dir: str | Path | None = None):
+        if output_dir is None:
+            from config.settings import settings
+
+            output_dir = settings.data_raw / "prices"
+        self.output_dir = Path(output_dir)
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+
+    # ── API pública ───────────────────────────────────────────────────────────
+
+    def fetch(
+        self,
+        ticker: str,
+        start_date: str | None = None,
+        force: bool = False,
+    ) -> pd.DataFrame:
+        """
+        Baixa preços históricos de um ticker de forma incremental.
+
+        Se o Parquet local já existe e não está vazio, baixa apenas os dias
+        faltantes a partir do último dado salvo.
+
+        Args:
+            ticker: Código de negociação sem sufixo (ex: "BBAS3")
+            start_date: Data inicial no formato YYYY-MM-DD (usado só no primeiro download)
+            force: True para re-baixar todo o histórico
+
+        Returns:
+            DataFrame completo (histórico acumulado) com índice DatetimeIndex
+        """
+        parquet_path = self.output_dir / f"{ticker.upper()}.parquet"
+        existing = self._load_existing(parquet_path)
+
+        if force or existing.empty:
+            since = start_date or DEFAULT_START
+            log.info(f"[{ticker}] Download completo desde {since}")
+        else:
+            last_date = existing.index.max().date()
+            since = str(last_date + timedelta(days=1))
+            today = date.today()
+            if last_date >= today:
+                log.info(f"[{ticker}] Preços já atualizados até {last_date}")
+                return existing
+            log.info(f"[{ticker}] Download incremental de {since} até hoje")
+
+        new_data = self._download(ticker, since)
+
+        if new_data.empty:
+            log.warning(f"[{ticker}] Nenhum dado novo retornado pelo yfinance")
+            return existing
+
+        if not existing.empty and not force:
+            combined = pd.concat([existing, new_data])
+            combined = combined[~combined.index.duplicated(keep="last")]
+            combined.sort_index(inplace=True)
+        else:
+            combined = new_data
+
+        combined.to_parquet(parquet_path)
+        log.success(f"[{ticker}] {len(combined)} dias salvos em {parquet_path.name}")
+        return combined
+
+    def fetch_many(
+        self,
+        tickers: list[str],
+        start_date: str | None = None,
+        force: bool = False,
+    ) -> dict[str, pd.DataFrame]:
+        """Baixa preços de múltiplos tickers. Continua em caso de erro individual."""
+        results = {}
+        for ticker in tickers:
+            try:
+                results[ticker] = self.fetch(ticker, start_date=start_date, force=force)
+            except Exception as exc:
+                log.error(f"[{ticker}] Falha ao buscar preços: {exc}")
+                results[ticker] = pd.DataFrame()
+        return results
+
+    def load(self, ticker: str) -> pd.DataFrame:
+        """Carrega Parquet local sem fazer requisição HTTP."""
+        path = self.output_dir / f"{ticker.upper()}.parquet"
+        return self._load_existing(path)
+
+    # ── Internos ─────────────────────────────────────────────────────────────
+
+    @retry(attempts=3, delay=3.0, backoff=2.0)
+    def _download(self, ticker: str, since: str) -> pd.DataFrame:
+        try:
+            import yfinance as yf
+        except ImportError:
+            raise RuntimeError("yfinance não instalado — execute: pip install yfinance")
+
+        symbol = ticker.upper() + _SA_SUFFIX
+        raw = yf.download(
+            symbol,
+            start=since,
+            end=str(date.today() + timedelta(days=1)),
+            auto_adjust=True,
+            progress=False,
+        )
+
+        if raw.empty:
+            return pd.DataFrame()
+
+        # Normalizar colunas (yfinance pode retornar MultiIndex)
+        if isinstance(raw.columns, pd.MultiIndex):
+            raw.columns = raw.columns.get_level_values(0)
+
+        raw.columns = [c.lower().replace(" ", "_") for c in raw.columns]
+        raw.index.name = "date"
+        raw.index = pd.to_datetime(raw.index)
+
+        expected = {"open", "high", "low", "close", "volume"}
+        raw = raw[[c for c in raw.columns if c in expected]]
+
+        return raw.dropna(how="all")
+
+    @staticmethod
+    def _load_existing(path: Path) -> pd.DataFrame:
+        if not path.exists():
+            return pd.DataFrame()
+        try:
+            df = pd.read_parquet(path)
+            df.index = pd.to_datetime(df.index)
+            return df
+        except Exception as exc:
+            log.warning(f"Não foi possível ler {path.name}: {exc}")
+            return pd.DataFrame()
+
+
+# ── Função de alto nível ──────────────────────────────────────────────────────
+
+
+def fetch_prices(
+    ticker: str,
+    start_date: str | None = None,
+    force: bool = False,
+    output_dir: str | Path | None = None,
+) -> pd.DataFrame:
+    """Atalho para B3Scraper().fetch() com configuração padrão."""
+    return B3Scraper(output_dir=output_dir).fetch(ticker, start_date=start_date, force=force)

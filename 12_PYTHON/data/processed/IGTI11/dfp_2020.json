@@ -1,0 +1,2431 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 675576.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -275261.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 400315.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -41281.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -83901.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 71151.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -31845.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": 3314.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 359034.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -87447.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 66089.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -153536.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 271587.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": -69263.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -40309.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": -28954.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 202324.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 202324.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 202242.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 82.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 1.14845,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 1.14831,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 6860690.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 1814998.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 27526.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 1543676.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 1543676.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 1543676.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 205370.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 132183.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 73187.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 9621.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 17902.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 17902.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 6408.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 4495.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 4495.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Dividendos a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Empréstimos a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.08.03.03",
+      "account_name": "Stock Option",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.01.08.03.04",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 4495.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 5045692.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 409077.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 69625.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 33370.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.03.02",
+      "account_name": "Títulos Mantidos até o Vencimento",
+      "normalized_name": NaN,
+      "value": 33370.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 164820.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 17953.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 146867.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 53294.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 53294.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 87968.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Operação Swap",
+      "normalized_name": NaN,
+      "value": 75026.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Empréstimos a Receber",
+      "normalized_name": NaN,
+      "value": 143.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Depósitos Judiciais",
+      "normalized_name": NaN,
+      "value": 12631.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Outros Ativos não circulantes",
+      "normalized_name": NaN,
+      "value": 168.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 4494097.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 162696.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 146569.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 16127.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 4331401.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.02.02.01",
+      "account_name": "Outras Participações Societárias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 31109.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 31109.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 111409.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 111409.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.04.01.02",
+      "account_name": "Ágio na Aquisição de Investimentos",
+      "normalized_name": NaN,
+      "value": 88169.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.04.01.03",
+      "account_name": "Softwares",
+      "normalized_name": NaN,
+      "value": 23240.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 6860690.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 779748.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 12606.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 12606.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 23120.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 23120.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 22116.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 15967.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 6781.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Outras Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 9186.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 1030.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 5119.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 661969.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 578055.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 578055.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 83914.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.04.02.01",
+      "account_name": "Encargos Sobre Debêntures",
+      "normalized_name": NaN,
+      "value": -3487.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.04.02.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 87401.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 59937.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 2372.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 2372.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 57565.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 48032.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Outras Contas a Pagar",
+      "normalized_name": NaN,
+      "value": 9533.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 2931614.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 2792561.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 1605327.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 1605327.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 1187234.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 10093.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 2822.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 2822.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 7271.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Impostos e Contribuições a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Outras Contas a Pagar Não Circulante",
+      "normalized_name": NaN,
+      "value": 7271.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 103555.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 103555.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 91661.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.03.01.02",
+      "account_name": "Pis e Cofins Sobre as Receitas Diferidas",
+      "normalized_name": NaN,
+      "value": 11894.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 25405.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 25405.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 618.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 23237.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.04.01.05",
+      "account_name": "Outras Provisões p/ Riscos",
+      "normalized_name": NaN,
+      "value": 1550.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.06.02.01",
+      "account_name": "Receitas Diferidas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 3149328.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 1231313.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 446652.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 452082.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -15280.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.02.07",
+      "account_name": "Outras Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 9850.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 1460607.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 140606.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 1320001.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 10756.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 138333.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 308104.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro Líquido do Período",
+      "normalized_name": "net_income_cfo",
+      "value": 202324.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Depreciação e Amortização",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 149000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Ganho ou Perda na alienação de Ativo Permanente",
+      "normalized_name": NaN,
+      "value": -8864.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": NaN,
+      "value": -3314.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Variações Monetárias, Líquidas",
+      "normalized_name": NaN,
+      "value": 63130.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Provisões para Riscos Fiscais, Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 448.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 28954.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Provisão para Pagamento Baseado em Ações",
+      "normalized_name": NaN,
+      "value": 8092.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Provisão para Programa de Bonificação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Provisão para Crédito de Liquidação Duvidosa",
+      "normalized_name": NaN,
+      "value": 26326.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Perda (Ganho) de Participação",
+      "normalized_name": NaN,
+      "value": -6947.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Receitas Diferidas Amortizadas",
+      "normalized_name": NaN,
+      "value": -1188.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Amortização dos Custos de Captação",
+      "normalized_name": NaN,
+      "value": 6727.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.01.14",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.01.15",
+      "account_name": "Provisão para desvalorização de Estoque",
+      "normalized_name": NaN,
+      "value": 930.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.01.16",
+      "account_name": "Linearização dos descontos COVID-19",
+      "normalized_name": NaN,
+      "value": -157514.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -45763.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Aluguéis a Receber",
+      "normalized_name": NaN,
+      "value": -47101.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Impostos a Recuperar e Créditos Tributários",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Empréstimos a Receber",
+      "normalized_name": NaN,
+      "value": 270.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": -11573.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Dividendos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Outros Ativos",
+      "normalized_name": NaN,
+      "value": -21289.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 33.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Estoque",
+      "normalized_name": NaN,
+      "value": -4309.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 8845.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Impostos e Contribuições a Pagar",
+      "normalized_name": NaN,
+      "value": 49546.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "Provisões para Salários e Encargos",
+      "normalized_name": NaN,
+      "value": -14117.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.02.12",
+      "account_name": "Débitos Com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 2435.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.02.13",
+      "account_name": "Contas a Pagar",
+      "normalized_name": NaN,
+      "value": -9299.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.02.14",
+      "account_name": "Receitas Diferidas",
+      "normalized_name": NaN,
+      "value": 796.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -124008.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.03.01",
+      "account_name": "Pagamentos de imposto de renda e contribuição social",
+      "normalized_name": NaN,
+      "value": -26395.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.03.02",
+      "account_name": "Pagamentos de juros",
+      "normalized_name": NaN,
+      "value": -97613.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.01.03.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -1124345.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Aquisições de Ativo Não Circulante",
+      "normalized_name": NaN,
+      "value": -494127.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Venda de Ativo Permanente",
+      "normalized_name": "capex",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Dividendos Recebidos de Controladas",
+      "normalized_name": NaN,
+      "value": 1314.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Aumento de Capital em Controladas",
+      "normalized_name": NaN,
+      "value": -520.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Redução de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Antecipação de Dividendos de Controladas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Adiantamento para futuro aumento de capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Aplicações Financeiras Mantidas para Negociação",
+      "normalized_name": NaN,
+      "value": -629355.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.02.09",
+      "account_name": "Caixa líquido adquirido de investida",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.02.10",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -1657.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": 966614.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Amortização de Empréstimos, Financiamentos e Debêntures",
+      "normalized_name": "debt_issuance",
+      "value": -108369.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Dividendos Pagos",
+      "normalized_name": "debt_repayment",
+      "value": -73656.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Captação de Empréstimos",
+      "normalized_name": NaN,
+      "value": 1160100.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Recursos Oriundos da Emissão de Ações",
+      "normalized_name": "dividends_paid",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Recursos Oriundos da Emissão de Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -11461.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": -19398.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 46924.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 27526.0,
+      "reference_date": "2020-12-31",
+      "company_name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+      "cvm_code": "020494"
+    }
+  ]
+}

@@ -1,0 +1,543 @@
+2026-04-27 22:41:08,072 [INFO] pipeline: ======================================================================
+2026-04-27 22:41:08,072 [INFO] pipeline: MODO BATCH — 3 empresa(s): EGIE3, TRPL4, CLSC4
+2026-04-27 22:41:08,072 [INFO] pipeline: ======================================================================
+2026-04-27 22:41:08,089 [INFO] pipeline: 
+──────────────────────────────────────────────────────────────────────
+2026-04-27 22:41:08,089 [INFO] pipeline: Processando: EGIE3 (ENGIE Brasil)
+2026-04-27 22:41:08,089 [INFO] pipeline: ──────────────────────────────────────────────────────────────────────
+2026-04-27 22:41:08,089 [INFO] pipeline: ======================================================================
+2026-04-27 22:41:08,089 [INFO] pipeline: PIPELINE DE VALUATION [ENERGIA] — EGIE3 — ENGIE Brasil
+2026-04-27 22:41:08,089 [INFO] pipeline: Início: 2026-04-27 22:41:08
+2026-04-27 22:41:08,089 [INFO] pipeline:   Setor: energia | Motor: WACC
+2026-04-27 22:41:08,089 [INFO] pipeline: ======================================================================
+2026-04-27 22:41:08,089 [INFO] pipeline: 
+[1/6] Coletando dados de mercado...
+2026-04-27 22:41:08,313 [INFO] pipeline:   Buscando cotação via yfinance...
+2026-04-27 22:41:08,313 [INFO] pipeline.mercado: Buscando cotação atual: EGIE3.SA
+2026-04-27 22:41:09,541 [INFO] pipeline:   Cotação ON: R$ 36.20  |  Cotação PN: R$ 0.00
+2026-04-27 22:41:10,069 [INFO] pipeline.mercado: Calculando beta: EGIE3 (252 dias úteis)
+2026-04-27 22:41:10,183 [INFO] pipeline.mercado:   Beta estatístico: 0.9054 | R²: 0.325 | n=251
+2026-04-27 22:41:10,184 [INFO] pipeline:   Beta estatístico: 0.905 | Beta utilizado: 0.850
+2026-04-27 22:41:10,184 [INFO] pipeline: 
+[2/6] Coletando dados macroeconômicos (BCB)...
+2026-04-27 22:41:10,550 [WARNING] pipeline.macro: Não foi possível obter Focus Selic: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'Selic'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana
+2026-04-27 22:41:10,948 [WARNING] pipeline.macro: Não foi possível obter Focus IPCA: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'IPCA'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana
+2026-04-27 22:41:10,949 [INFO] pipeline.macro: 
+=== Coletando dados macroeconômicos ===
+2026-04-27 22:41:10,949 [INFO] pipeline.macro: Baixando série BCB 432...
+2026-04-27 22:41:11,374 [ERROR] pipeline.macro: Erro ao baixar série BCB 432: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=27%2F04%2F2026
+2026-04-27 22:41:11,374 [WARNING] pipeline.macro: Série Selic meta sem DatetimeIndex — usando fallback histórico
+2026-04-27 22:41:11,374 [INFO] pipeline.macro: Baixando série BCB 12...
+2026-04-27 22:41:11,478 [ERROR] pipeline.macro: Erro ao baixar série BCB 12: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.12/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=27%2F04%2F2026
+2026-04-27 22:41:11,479 [WARNING] pipeline.macro: Série DI sem DatetimeIndex — usando fallback histórico
+2026-04-27 22:41:11,482 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (55.3%) para 2019 — usando fallback
+2026-04-27 22:41:11,482 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (46.1%) para 2020 — usando fallback
+2026-04-27 22:41:11,482 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (159.3%) para 2021 — usando fallback
+2026-04-27 22:41:11,483 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (191.2%) para 2022 — usando fallback
+2026-04-27 22:41:11,483 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (71.5%) para 2023 — usando fallback
+2026-04-27 22:41:11,483 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (67.0%) para 2024 — usando fallback
+2026-04-27 22:41:11,483 [INFO] pipeline.macro: Baixando série BCB 258...
+2026-04-27 22:41:11,600 [ERROR] pipeline.macro: Erro ao baixar série BCB 258: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.258/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=27%2F04%2F2026
+2026-04-27 22:41:11,600 [WARNING] pipeline.macro: Série TJLP sem DatetimeIndex — usando fallback histórico
+2026-04-27 22:41:11,604 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (55.3%) para 2019 — usando fallback
+2026-04-27 22:41:11,605 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (46.1%) para 2020 — usando fallback
+2026-04-27 22:41:11,605 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (159.3%) para 2021 — usando fallback
+2026-04-27 22:41:11,605 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (191.2%) para 2022 — usando fallback
+2026-04-27 22:41:11,605 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (71.5%) para 2023 — usando fallback
+2026-04-27 22:41:11,605 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (67.0%) para 2024 — usando fallback
+2026-04-27 22:41:11,605 [INFO] pipeline.macro: 
+RESUMO MACRO HISTÓRICO:
+2026-04-27 22:41:11,605 [INFO] pipeline.macro:   selic_meta     : 2020: 2.00% | 2021: 9.25% | 2022: 13.75% | 2023: 11.75% | 2024: 11.75%
+2026-04-27 22:41:11,605 [INFO] pipeline.macro:   selic_efet     : 2020: 2.28% | 2021: 4.48% | 2022: 12.33% | 2023: 13.15% | 2024: 10.73%
+2026-04-27 22:41:11,605 [INFO] pipeline.macro:   ipca           : 2020: 4.52% | 2021: 10.06% | 2022: 5.62% | 2023: 4.62% | 2024: 4.83%
+2026-04-27 22:41:11,605 [INFO] pipeline.macro:   tjlp           : 2020: 5.25% | 2021: 5.25% | 2022: 6.25% | 2023: 7.00% | 2024: 7.00%
+2026-04-27 22:41:11,605 [INFO] pipeline.macro:   cds            : 2020: 0.44% | 2021: 0.73% | 2022: 1.26% | 2023: 0.84% | 2024: 0.81%
+2026-04-27 22:41:11,605 [INFO] pipeline.macro:   inflacao_impl  : 2020: 4.52% | 2021: 10.06% | 2022: 5.62% | 2023: 4.62% | 2024: 4.83%
+2026-04-27 22:41:11,605 [INFO] pipeline: 
+[3/6] Baixando demonstrações financeiras (CVM)...
+2026-04-27 22:41:11,606 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:11,606 [INFO] pipeline.cvm: Baixando DFP 2019...
+2026-04-27 22:41:11,682 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dre 2019
+2026-04-27 22:41:11,811 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em bpa 2019
+2026-04-27 22:41:12,041 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em bpp 2019
+2026-04-27 22:41:12,156 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dfc_mi 2019
+2026-04-27 22:41:12,166 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dfc_md 2019
+2026-04-27 22:41:12,167 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:12,167 [INFO] pipeline.cvm: Baixando DFP 2020...
+2026-04-27 22:41:12,245 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dre 2020
+2026-04-27 22:41:12,393 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em bpa 2020
+2026-04-27 22:41:12,660 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em bpp 2020
+2026-04-27 22:41:12,796 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dfc_mi 2020
+2026-04-27 22:41:12,806 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dfc_md 2020
+2026-04-27 22:41:12,807 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:12,807 [INFO] pipeline.cvm: Baixando DFP 2021...
+2026-04-27 22:41:12,899 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dre 2021
+2026-04-27 22:41:13,058 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em bpa 2021
+2026-04-27 22:41:13,356 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em bpp 2021
+2026-04-27 22:41:13,503 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dfc_mi 2021
+2026-04-27 22:41:13,516 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dfc_md 2021
+2026-04-27 22:41:13,516 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:13,516 [INFO] pipeline.cvm: Baixando DFP 2022...
+2026-04-27 22:41:13,607 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dre 2022
+2026-04-27 22:41:13,776 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em bpa 2022
+2026-04-27 22:41:14,090 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em bpp 2022
+2026-04-27 22:41:14,253 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dfc_mi 2022
+2026-04-27 22:41:14,268 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dfc_md 2022
+2026-04-27 22:41:14,268 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:14,268 [INFO] pipeline.cvm: Baixando DFP 2023...
+2026-04-27 22:41:14,362 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dre 2023
+2026-04-27 22:41:14,539 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em bpa 2023
+2026-04-27 22:41:14,855 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em bpp 2023
+2026-04-27 22:41:15,024 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dfc_mi 2023
+2026-04-27 22:41:15,038 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dfc_md 2023
+2026-04-27 22:41:15,039 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:15,039 [INFO] pipeline.cvm: Baixando DFP 2024...
+2026-04-27 22:41:15,127 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dre 2024
+2026-04-27 22:41:15,297 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em bpa 2024
+2026-04-27 22:41:15,597 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em bpp 2024
+2026-04-27 22:41:15,763 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dfc_mi 2024
+2026-04-27 22:41:15,777 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dfc_md 2024
+2026-04-27 22:41:15,778 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:15,778 [INFO] pipeline.cvm: Baixando DFP 2025...
+2026-04-27 22:41:15,855 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dre 2025
+2026-04-27 22:41:16,007 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em bpa 2025
+2026-04-27 22:41:16,279 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em bpp 2025
+2026-04-27 22:41:16,431 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dfc_mi 2025
+2026-04-27 22:41:16,444 [WARNING] pipeline.cvm:   Empresa 3983 não encontrada em dfc_md 2025
+2026-04-27 22:41:16,444 [INFO] pipeline:   DFP 2019 indisponível — tentando anualizar via ITR...
+2026-04-27 22:41:16,444 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:16,444 [INFO] pipeline.cvm: Tentando anualizar 2019 via ITR (LTM)...
+2026-04-27 22:41:18,080 [WARNING] pipeline.cvm:   ITR 2019 não disponível — não é possível anualizar
+2026-04-27 22:41:18,080 [WARNING] pipeline:   DFP 2019 e ITR indisponíveis — removido do histórico
+2026-04-27 22:41:18,080 [INFO] pipeline:   DFP 2020 indisponível — tentando anualizar via ITR...
+2026-04-27 22:41:18,080 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:18,080 [INFO] pipeline.cvm: Tentando anualizar 2020 via ITR (LTM)...
+2026-04-27 22:41:19,889 [WARNING] pipeline.cvm:   ITR 2020 não disponível — não é possível anualizar
+2026-04-27 22:41:19,889 [WARNING] pipeline:   DFP 2020 e ITR indisponíveis — removido do histórico
+2026-04-27 22:41:19,889 [INFO] pipeline:   DFP 2021 indisponível — tentando anualizar via ITR...
+2026-04-27 22:41:19,889 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:19,889 [INFO] pipeline.cvm: Tentando anualizar 2021 via ITR (LTM)...
+2026-04-27 22:41:22,015 [WARNING] pipeline.cvm:   ITR 2021 não disponível — não é possível anualizar
+2026-04-27 22:41:22,015 [WARNING] pipeline:   DFP 2021 e ITR indisponíveis — removido do histórico
+2026-04-27 22:41:22,015 [INFO] pipeline:   DFP 2022 indisponível — tentando anualizar via ITR...
+2026-04-27 22:41:22,015 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:22,015 [INFO] pipeline.cvm: Tentando anualizar 2022 via ITR (LTM)...
+2026-04-27 22:41:24,247 [WARNING] pipeline.cvm:   ITR 2022 não disponível — não é possível anualizar
+2026-04-27 22:41:24,247 [WARNING] pipeline:   DFP 2022 e ITR indisponíveis — removido do histórico
+2026-04-27 22:41:24,247 [INFO] pipeline:   DFP 2023 indisponível — tentando anualizar via ITR...
+2026-04-27 22:41:24,247 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:24,247 [INFO] pipeline.cvm: Tentando anualizar 2023 via ITR (LTM)...
+2026-04-27 22:41:26,557 [WARNING] pipeline.cvm:   ITR 2023 não disponível — não é possível anualizar
+2026-04-27 22:41:26,558 [WARNING] pipeline:   DFP 2023 e ITR indisponíveis — removido do histórico
+2026-04-27 22:41:26,558 [INFO] pipeline:   DFP 2024 indisponível — tentando anualizar via ITR...
+2026-04-27 22:41:26,558 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:26,558 [INFO] pipeline.cvm: Tentando anualizar 2024 via ITR (LTM)...
+2026-04-27 22:41:28,810 [WARNING] pipeline.cvm:   ITR 2024 não disponível — não é possível anualizar
+2026-04-27 22:41:28,811 [WARNING] pipeline:   DFP 2024 e ITR indisponíveis — removido do histórico
+2026-04-27 22:41:28,811 [INFO] pipeline:   DFP 2025 indisponível — tentando anualizar via ITR...
+2026-04-27 22:41:28,811 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:28,811 [INFO] pipeline.cvm: Tentando anualizar 2025 via ITR (LTM)...
+2026-04-27 22:41:31,029 [WARNING] pipeline.cvm:   ITR 2025 não disponível — não é possível anualizar
+2026-04-27 22:41:31,029 [WARNING] pipeline:   DFP 2025 e ITR indisponíveis — removido do histórico
+2026-04-27 22:41:31,029 [WARNING] pipeline:   Nenhum ano com dados históricos — continuando sem histórico CVM
+2026-04-27 22:41:31,029 [INFO] pipeline: 
+[4/6] Normalizando dados...
+2026-04-27 22:41:31,034 [ERROR] pipeline: ✗ EGIE3: erro inesperado — cannot set a frame with no defined columns
+Traceback (most recent call last):
+  File "/Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/pipeline banco completo/main.py", line 797, in run_batch
+    resultado = run_single(args, ticker=ticker, nome=nome,
+                           codigo_cvm_override=codigo)
+  File "/Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/pipeline banco completo/main.py", line 497, in run_single
+    dfc_hist = norm.normalizar_dfc(dados_brutos, mapa_dfc)
+  File "/Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/pipeline banco completo/modules/normalizador.py", line 403, in normalizar_dfc
+    dfc.loc["capex_total"] = dfc.loc[capex_comps].sum()
+    ~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/pandas/core/indexing.py", line 911, in __setitem__
+    iloc._setitem_with_indexer(indexer, value, self.name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/pandas/core/indexing.py", line 1932, in _setitem_with_indexer
+    self._setitem_with_indexer_missing(indexer, value)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/pandas/core/indexing.py", line 2290, in _setitem_with_indexer_missing
+    raise ValueError("cannot set a frame with no defined columns")
+ValueError: cannot set a frame with no defined columns
+2026-04-27 22:41:31,037 [INFO] pipeline: 
+──────────────────────────────────────────────────────────────────────
+2026-04-27 22:41:31,037 [INFO] pipeline: Processando: TRPL4 (ISA CTEEP)
+2026-04-27 22:41:31,037 [INFO] pipeline: ──────────────────────────────────────────────────────────────────────
+2026-04-27 22:41:31,037 [INFO] pipeline: ======================================================================
+2026-04-27 22:41:31,037 [INFO] pipeline: PIPELINE DE VALUATION [ENERGIA] — TRPL4 — ISA CTEEP
+2026-04-27 22:41:31,037 [INFO] pipeline: Início: 2026-04-27 22:41:31
+2026-04-27 22:41:31,037 [INFO] pipeline:   Setor: energia | Motor: WACC
+2026-04-27 22:41:31,037 [INFO] pipeline: ======================================================================
+2026-04-27 22:41:31,037 [INFO] pipeline: 
+[1/6] Coletando dados de mercado...
+2026-04-27 22:41:31,037 [INFO] pipeline:   Buscando cotação via yfinance...
+2026-04-27 22:41:31,037 [INFO] pipeline.mercado: Buscando cotação atual: TRPL4.SA
+2026-04-27 22:41:31,729 [INFO] pipeline:   Cotação ON: R$ 0.00  |  Cotação PN: R$ 0.00
+2026-04-27 22:41:31,950 [INFO] pipeline.mercado: Calculando beta: TRPL4 (252 dias úteis)
+2026-04-27 22:41:31,950 [INFO] pipeline.mercado: Baixando preços: TRPL4.SA (2019-01-01 → 2026-04-27)
+2026-04-27 22:41:33,590 [ERROR] yfinance: $TRPL4.SA: possibly delisted; no timezone found
+2026-04-27 22:41:33,593 [ERROR] yfinance: 
+1 Failed download:
+2026-04-27 22:41:33,593 [ERROR] yfinance: ['TRPL4.SA']: possibly delisted; no timezone found
+2026-04-27 22:41:33,599 [WARNING] pipeline.mercado: Sem dados de preços para TRPL4.SA
+2026-04-27 22:41:33,602 [WARNING] pipeline.mercado: Dados insuficientes para calcular beta
+2026-04-27 22:41:33,602 [INFO] pipeline:   Beta estatístico: 0.850 | Beta utilizado: 0.850
+2026-04-27 22:41:33,602 [INFO] pipeline: 
+[2/6] Coletando dados macroeconômicos (BCB)...
+2026-04-27 22:41:33,918 [WARNING] pipeline.macro: Não foi possível obter Focus Selic: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'Selic'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana
+2026-04-27 22:41:34,200 [WARNING] pipeline.macro: Não foi possível obter Focus IPCA: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'IPCA'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana
+2026-04-27 22:41:34,201 [INFO] pipeline.macro: 
+=== Coletando dados macroeconômicos ===
+2026-04-27 22:41:34,201 [INFO] pipeline.macro: Baixando série BCB 432...
+2026-04-27 22:41:34,545 [ERROR] pipeline.macro: Erro ao baixar série BCB 432: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=27%2F04%2F2026
+2026-04-27 22:41:34,545 [WARNING] pipeline.macro: Série Selic meta sem DatetimeIndex — usando fallback histórico
+2026-04-27 22:41:34,545 [INFO] pipeline.macro: Baixando série BCB 12...
+2026-04-27 22:41:34,647 [ERROR] pipeline.macro: Erro ao baixar série BCB 12: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.12/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=27%2F04%2F2026
+2026-04-27 22:41:34,647 [WARNING] pipeline.macro: Série DI sem DatetimeIndex — usando fallback histórico
+2026-04-27 22:41:34,649 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (55.3%) para 2019 — usando fallback
+2026-04-27 22:41:34,649 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (46.1%) para 2020 — usando fallback
+2026-04-27 22:41:34,649 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (159.3%) para 2021 — usando fallback
+2026-04-27 22:41:34,649 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (191.2%) para 2022 — usando fallback
+2026-04-27 22:41:34,649 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (71.5%) para 2023 — usando fallback
+2026-04-27 22:41:34,649 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (67.0%) para 2024 — usando fallback
+2026-04-27 22:41:34,650 [INFO] pipeline.macro: Baixando série BCB 258...
+2026-04-27 22:41:34,750 [ERROR] pipeline.macro: Erro ao baixar série BCB 258: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.258/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=27%2F04%2F2026
+2026-04-27 22:41:34,750 [WARNING] pipeline.macro: Série TJLP sem DatetimeIndex — usando fallback histórico
+2026-04-27 22:41:34,753 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (55.3%) para 2019 — usando fallback
+2026-04-27 22:41:34,753 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (46.1%) para 2020 — usando fallback
+2026-04-27 22:41:34,753 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (159.3%) para 2021 — usando fallback
+2026-04-27 22:41:34,753 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (191.2%) para 2022 — usando fallback
+2026-04-27 22:41:34,753 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (71.5%) para 2023 — usando fallback
+2026-04-27 22:41:34,753 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (67.0%) para 2024 — usando fallback
+2026-04-27 22:41:34,753 [INFO] pipeline.macro: 
+RESUMO MACRO HISTÓRICO:
+2026-04-27 22:41:34,753 [INFO] pipeline.macro:   selic_meta     : 2020: 2.00% | 2021: 9.25% | 2022: 13.75% | 2023: 11.75% | 2024: 11.75%
+2026-04-27 22:41:34,753 [INFO] pipeline.macro:   selic_efet     : 2020: 2.28% | 2021: 4.48% | 2022: 12.33% | 2023: 13.15% | 2024: 10.73%
+2026-04-27 22:41:34,753 [INFO] pipeline.macro:   ipca           : 2020: 4.52% | 2021: 10.06% | 2022: 5.62% | 2023: 4.62% | 2024: 4.83%
+2026-04-27 22:41:34,753 [INFO] pipeline.macro:   tjlp           : 2020: 5.25% | 2021: 5.25% | 2022: 6.25% | 2023: 7.00% | 2024: 7.00%
+2026-04-27 22:41:34,753 [INFO] pipeline.macro:   cds            : 2020: 0.44% | 2021: 0.73% | 2022: 1.26% | 2023: 0.84% | 2024: 0.81%
+2026-04-27 22:41:34,753 [INFO] pipeline.macro:   inflacao_impl  : 2020: 4.52% | 2021: 10.06% | 2022: 5.62% | 2023: 4.62% | 2024: 4.83%
+2026-04-27 22:41:34,753 [INFO] pipeline: 
+[3/6] Baixando demonstrações financeiras (CVM)...
+2026-04-27 22:41:34,753 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:34,753 [INFO] pipeline.cvm: Baixando DFP 2019...
+2026-04-27 22:41:34,830 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dre 2019
+2026-04-27 22:41:34,954 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em bpa 2019
+2026-04-27 22:41:35,174 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em bpp 2019
+2026-04-27 22:41:35,293 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dfc_mi 2019
+2026-04-27 22:41:35,303 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dfc_md 2019
+2026-04-27 22:41:35,303 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:35,303 [INFO] pipeline.cvm: Baixando DFP 2020...
+2026-04-27 22:41:35,385 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dre 2020
+2026-04-27 22:41:35,546 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em bpa 2020
+2026-04-27 22:41:35,824 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em bpp 2020
+2026-04-27 22:41:35,966 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dfc_mi 2020
+2026-04-27 22:41:35,976 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dfc_md 2020
+2026-04-27 22:41:35,976 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:35,976 [INFO] pipeline.cvm: Baixando DFP 2021...
+2026-04-27 22:41:36,058 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dre 2021
+2026-04-27 22:41:36,210 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em bpa 2021
+2026-04-27 22:41:36,495 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em bpp 2021
+2026-04-27 22:41:36,635 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dfc_mi 2021
+2026-04-27 22:41:36,647 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dfc_md 2021
+2026-04-27 22:41:36,647 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:36,647 [INFO] pipeline.cvm: Baixando DFP 2022...
+2026-04-27 22:41:36,732 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dre 2022
+2026-04-27 22:41:36,888 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em bpa 2022
+2026-04-27 22:41:37,166 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em bpp 2022
+2026-04-27 22:41:37,317 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dfc_mi 2022
+2026-04-27 22:41:37,330 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dfc_md 2022
+2026-04-27 22:41:37,330 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:37,331 [INFO] pipeline.cvm: Baixando DFP 2023...
+2026-04-27 22:41:37,416 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dre 2023
+2026-04-27 22:41:37,589 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em bpa 2023
+2026-04-27 22:41:37,884 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em bpp 2023
+2026-04-27 22:41:38,049 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dfc_mi 2023
+2026-04-27 22:41:38,061 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dfc_md 2023
+2026-04-27 22:41:38,062 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:38,062 [INFO] pipeline.cvm: Baixando DFP 2024...
+2026-04-27 22:41:38,145 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dre 2024
+2026-04-27 22:41:38,325 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em bpa 2024
+2026-04-27 22:41:38,604 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em bpp 2024
+2026-04-27 22:41:38,763 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dfc_mi 2024
+2026-04-27 22:41:38,775 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dfc_md 2024
+2026-04-27 22:41:38,776 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:38,776 [INFO] pipeline.cvm: Baixando DFP 2025...
+2026-04-27 22:41:38,847 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dre 2025
+2026-04-27 22:41:38,999 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em bpa 2025
+2026-04-27 22:41:39,241 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em bpp 2025
+2026-04-27 22:41:39,379 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dfc_mi 2025
+2026-04-27 22:41:39,390 [WARNING] pipeline.cvm:   Empresa 18627 não encontrada em dfc_md 2025
+2026-04-27 22:41:39,390 [INFO] pipeline:   DFP 2019 indisponível — tentando anualizar via ITR...
+2026-04-27 22:41:39,390 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:39,390 [INFO] pipeline.cvm: Tentando anualizar 2019 via ITR (LTM)...
+2026-04-27 22:41:40,902 [WARNING] pipeline.cvm:   ITR 2019 não disponível — não é possível anualizar
+2026-04-27 22:41:40,903 [WARNING] pipeline:   DFP 2019 e ITR indisponíveis — removido do histórico
+2026-04-27 22:41:40,903 [INFO] pipeline:   DFP 2020 indisponível — tentando anualizar via ITR...
+2026-04-27 22:41:40,903 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:40,903 [INFO] pipeline.cvm: Tentando anualizar 2020 via ITR (LTM)...
+2026-04-27 22:41:42,635 [WARNING] pipeline.cvm:   ITR 2020 não disponível — não é possível anualizar
+2026-04-27 22:41:42,635 [WARNING] pipeline:   DFP 2020 e ITR indisponíveis — removido do histórico
+2026-04-27 22:41:42,635 [INFO] pipeline:   DFP 2021 indisponível — tentando anualizar via ITR...
+2026-04-27 22:41:42,635 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:42,636 [INFO] pipeline.cvm: Tentando anualizar 2021 via ITR (LTM)...
+2026-04-27 22:41:44,687 [WARNING] pipeline.cvm:   ITR 2021 não disponível — não é possível anualizar
+2026-04-27 22:41:44,687 [WARNING] pipeline:   DFP 2021 e ITR indisponíveis — removido do histórico
+2026-04-27 22:41:44,687 [INFO] pipeline:   DFP 2022 indisponível — tentando anualizar via ITR...
+2026-04-27 22:41:44,687 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:44,687 [INFO] pipeline.cvm: Tentando anualizar 2022 via ITR (LTM)...
+2026-04-27 22:41:46,854 [WARNING] pipeline.cvm:   ITR 2022 não disponível — não é possível anualizar
+2026-04-27 22:41:46,855 [WARNING] pipeline:   DFP 2022 e ITR indisponíveis — removido do histórico
+2026-04-27 22:41:46,855 [INFO] pipeline:   DFP 2023 indisponível — tentando anualizar via ITR...
+2026-04-27 22:41:46,855 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:46,855 [INFO] pipeline.cvm: Tentando anualizar 2023 via ITR (LTM)...
+2026-04-27 22:41:49,048 [WARNING] pipeline.cvm:   ITR 2023 não disponível — não é possível anualizar
+2026-04-27 22:41:49,048 [WARNING] pipeline:   DFP 2023 e ITR indisponíveis — removido do histórico
+2026-04-27 22:41:49,048 [INFO] pipeline:   DFP 2024 indisponível — tentando anualizar via ITR...
+2026-04-27 22:41:49,048 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:49,048 [INFO] pipeline.cvm: Tentando anualizar 2024 via ITR (LTM)...
+2026-04-27 22:41:51,315 [WARNING] pipeline.cvm:   ITR 2024 não disponível — não é possível anualizar
+2026-04-27 22:41:51,316 [WARNING] pipeline:   DFP 2024 e ITR indisponíveis — removido do histórico
+2026-04-27 22:41:51,316 [INFO] pipeline:   DFP 2025 indisponível — tentando anualizar via ITR...
+2026-04-27 22:41:51,316 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:51,316 [INFO] pipeline.cvm: Tentando anualizar 2025 via ITR (LTM)...
+2026-04-27 22:41:53,455 [WARNING] pipeline.cvm:   ITR 2025 não disponível — não é possível anualizar
+2026-04-27 22:41:53,455 [WARNING] pipeline:   DFP 2025 e ITR indisponíveis — removido do histórico
+2026-04-27 22:41:53,455 [WARNING] pipeline:   Nenhum ano com dados históricos — continuando sem histórico CVM
+2026-04-27 22:41:53,455 [INFO] pipeline: 
+[4/6] Normalizando dados...
+2026-04-27 22:41:53,456 [ERROR] pipeline: ✗ TRPL4: erro inesperado — cannot set a frame with no defined columns
+Traceback (most recent call last):
+  File "/Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/pipeline banco completo/main.py", line 797, in run_batch
+    resultado = run_single(args, ticker=ticker, nome=nome,
+                           codigo_cvm_override=codigo)
+  File "/Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/pipeline banco completo/main.py", line 497, in run_single
+    dfc_hist = norm.normalizar_dfc(dados_brutos, mapa_dfc)
+  File "/Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/pipeline banco completo/modules/normalizador.py", line 403, in normalizar_dfc
+    dfc.loc["capex_total"] = dfc.loc[capex_comps].sum()
+    ~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/pandas/core/indexing.py", line 911, in __setitem__
+    iloc._setitem_with_indexer(indexer, value, self.name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/pandas/core/indexing.py", line 1932, in _setitem_with_indexer
+    self._setitem_with_indexer_missing(indexer, value)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/pandas/core/indexing.py", line 2290, in _setitem_with_indexer_missing
+    raise ValueError("cannot set a frame with no defined columns")
+ValueError: cannot set a frame with no defined columns
+2026-04-27 22:41:53,457 [INFO] pipeline: 
+──────────────────────────────────────────────────────────────────────
+2026-04-27 22:41:53,457 [INFO] pipeline: Processando: CLSC4 (Celesc)
+2026-04-27 22:41:53,457 [INFO] pipeline: ──────────────────────────────────────────────────────────────────────
+2026-04-27 22:41:53,457 [INFO] pipeline: ======================================================================
+2026-04-27 22:41:53,457 [INFO] pipeline: PIPELINE DE VALUATION [ENERGIA] — CLSC4 — Celesc
+2026-04-27 22:41:53,457 [INFO] pipeline: Início: 2026-04-27 22:41:53
+2026-04-27 22:41:53,457 [INFO] pipeline:   Setor: energia | Motor: WACC
+2026-04-27 22:41:53,457 [INFO] pipeline: ======================================================================
+2026-04-27 22:41:53,457 [INFO] pipeline: 
+[1/6] Coletando dados de mercado...
+2026-04-27 22:41:53,457 [INFO] pipeline:   Buscando cotação via yfinance...
+2026-04-27 22:41:53,457 [INFO] pipeline.mercado: Buscando cotação atual: CLSC4.SA
+2026-04-27 22:41:54,482 [INFO] pipeline:   Cotação ON: R$ 153.99  |  Cotação PN: R$ 0.00
+2026-04-27 22:41:54,614 [INFO] pipeline.mercado: Calculando beta: CLSC4 (252 dias úteis)
+2026-04-27 22:41:54,625 [INFO] pipeline.mercado:   Beta estatístico: 0.3376 | R²: 0.079 | n=251
+2026-04-27 22:41:54,626 [INFO] pipeline:   Beta estatístico: 0.338 | Beta utilizado: 0.850
+2026-04-27 22:41:54,626 [INFO] pipeline: 
+[2/6] Coletando dados macroeconômicos (BCB)...
+2026-04-27 22:41:54,989 [WARNING] pipeline.macro: Não foi possível obter Focus Selic: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'Selic'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana
+2026-04-27 22:41:55,268 [WARNING] pipeline.macro: Não foi possível obter Focus IPCA: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'IPCA'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana
+2026-04-27 22:41:55,268 [INFO] pipeline.macro: 
+=== Coletando dados macroeconômicos ===
+2026-04-27 22:41:55,268 [INFO] pipeline.macro: Baixando série BCB 432...
+2026-04-27 22:41:55,638 [ERROR] pipeline.macro: Erro ao baixar série BCB 432: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=27%2F04%2F2026
+2026-04-27 22:41:55,638 [WARNING] pipeline.macro: Série Selic meta sem DatetimeIndex — usando fallback histórico
+2026-04-27 22:41:55,638 [INFO] pipeline.macro: Baixando série BCB 12...
+2026-04-27 22:41:55,744 [ERROR] pipeline.macro: Erro ao baixar série BCB 12: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.12/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=27%2F04%2F2026
+2026-04-27 22:41:55,744 [WARNING] pipeline.macro: Série DI sem DatetimeIndex — usando fallback histórico
+2026-04-27 22:41:55,747 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (55.3%) para 2019 — usando fallback
+2026-04-27 22:41:55,747 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (46.1%) para 2020 — usando fallback
+2026-04-27 22:41:55,747 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (159.3%) para 2021 — usando fallback
+2026-04-27 22:41:55,747 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (191.2%) para 2022 — usando fallback
+2026-04-27 22:41:55,747 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (71.5%) para 2023 — usando fallback
+2026-04-27 22:41:55,748 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (67.0%) para 2024 — usando fallback
+2026-04-27 22:41:55,748 [INFO] pipeline.macro: Baixando série BCB 258...
+2026-04-27 22:41:55,846 [ERROR] pipeline.macro: Erro ao baixar série BCB 258: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.258/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=27%2F04%2F2026
+2026-04-27 22:41:55,846 [WARNING] pipeline.macro: Série TJLP sem DatetimeIndex — usando fallback histórico
+2026-04-27 22:41:55,851 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (55.3%) para 2019 — usando fallback
+2026-04-27 22:41:55,851 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (46.1%) para 2020 — usando fallback
+2026-04-27 22:41:55,852 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (159.3%) para 2021 — usando fallback
+2026-04-27 22:41:55,852 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (191.2%) para 2022 — usando fallback
+2026-04-27 22:41:55,852 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (71.5%) para 2023 — usando fallback
+2026-04-27 22:41:55,852 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (67.0%) para 2024 — usando fallback
+2026-04-27 22:41:55,852 [INFO] pipeline.macro: 
+RESUMO MACRO HISTÓRICO:
+2026-04-27 22:41:55,852 [INFO] pipeline.macro:   selic_meta     : 2020: 2.00% | 2021: 9.25% | 2022: 13.75% | 2023: 11.75% | 2024: 11.75%
+2026-04-27 22:41:55,852 [INFO] pipeline.macro:   selic_efet     : 2020: 2.28% | 2021: 4.48% | 2022: 12.33% | 2023: 13.15% | 2024: 10.73%
+2026-04-27 22:41:55,852 [INFO] pipeline.macro:   ipca           : 2020: 4.52% | 2021: 10.06% | 2022: 5.62% | 2023: 4.62% | 2024: 4.83%
+2026-04-27 22:41:55,852 [INFO] pipeline.macro:   tjlp           : 2020: 5.25% | 2021: 5.25% | 2022: 6.25% | 2023: 7.00% | 2024: 7.00%
+2026-04-27 22:41:55,852 [INFO] pipeline.macro:   cds            : 2020: 0.44% | 2021: 0.73% | 2022: 1.26% | 2023: 0.84% | 2024: 0.81%
+2026-04-27 22:41:55,852 [INFO] pipeline.macro:   inflacao_impl  : 2020: 4.52% | 2021: 10.06% | 2022: 5.62% | 2023: 4.62% | 2024: 4.83%
+2026-04-27 22:41:55,852 [INFO] pipeline: 
+[3/6] Baixando demonstrações financeiras (CVM)...
+2026-04-27 22:41:55,852 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:55,852 [INFO] pipeline.cvm: Baixando DFP 2019...
+2026-04-27 22:41:55,928 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dre 2019
+2026-04-27 22:41:56,057 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em bpa 2019
+2026-04-27 22:41:56,270 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em bpp 2019
+2026-04-27 22:41:56,381 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dfc_mi 2019
+2026-04-27 22:41:56,390 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dfc_md 2019
+2026-04-27 22:41:56,390 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:56,390 [INFO] pipeline.cvm: Baixando DFP 2020...
+2026-04-27 22:41:56,467 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dre 2020
+2026-04-27 22:41:56,619 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em bpa 2020
+2026-04-27 22:41:56,883 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em bpp 2020
+2026-04-27 22:41:57,016 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dfc_mi 2020
+2026-04-27 22:41:57,026 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dfc_md 2020
+2026-04-27 22:41:57,026 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:57,026 [INFO] pipeline.cvm: Baixando DFP 2021...
+2026-04-27 22:41:57,106 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dre 2021
+2026-04-27 22:41:57,258 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em bpa 2021
+2026-04-27 22:41:57,521 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em bpp 2021
+2026-04-27 22:41:57,666 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dfc_mi 2021
+2026-04-27 22:41:57,677 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dfc_md 2021
+2026-04-27 22:41:57,678 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:57,678 [INFO] pipeline.cvm: Baixando DFP 2022...
+2026-04-27 22:41:57,762 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dre 2022
+2026-04-27 22:41:57,918 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em bpa 2022
+2026-04-27 22:41:58,191 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em bpp 2022
+2026-04-27 22:41:58,339 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dfc_mi 2022
+2026-04-27 22:41:58,352 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dfc_md 2022
+2026-04-27 22:41:58,352 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:58,352 [INFO] pipeline.cvm: Baixando DFP 2023...
+2026-04-27 22:41:58,437 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dre 2023
+2026-04-27 22:41:58,597 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em bpa 2023
+2026-04-27 22:41:58,877 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em bpp 2023
+2026-04-27 22:41:59,032 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dfc_mi 2023
+2026-04-27 22:41:59,044 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dfc_md 2023
+2026-04-27 22:41:59,044 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:59,044 [INFO] pipeline.cvm: Baixando DFP 2024...
+2026-04-27 22:41:59,129 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dre 2024
+2026-04-27 22:41:59,298 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em bpa 2024
+2026-04-27 22:41:59,579 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em bpp 2024
+2026-04-27 22:41:59,754 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dfc_mi 2024
+2026-04-27 22:41:59,766 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dfc_md 2024
+2026-04-27 22:41:59,766 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:41:59,766 [INFO] pipeline.cvm: Baixando DFP 2025...
+2026-04-27 22:41:59,839 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dre 2025
+2026-04-27 22:41:59,977 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em bpa 2025
+2026-04-27 22:42:00,220 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em bpp 2025
+2026-04-27 22:42:00,359 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dfc_mi 2025
+2026-04-27 22:42:00,370 [WARNING] pipeline.cvm:   Empresa 1406 não encontrada em dfc_md 2025
+2026-04-27 22:42:00,370 [INFO] pipeline:   DFP 2019 indisponível — tentando anualizar via ITR...
+2026-04-27 22:42:00,370 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:42:00,370 [INFO] pipeline.cvm: Tentando anualizar 2019 via ITR (LTM)...
+2026-04-27 22:42:01,913 [WARNING] pipeline.cvm:   ITR 2019 não disponível — não é possível anualizar
+2026-04-27 22:42:01,913 [WARNING] pipeline:   DFP 2019 e ITR indisponíveis — removido do histórico
+2026-04-27 22:42:01,913 [INFO] pipeline:   DFP 2020 indisponível — tentando anualizar via ITR...
+2026-04-27 22:42:01,913 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:42:01,913 [INFO] pipeline.cvm: Tentando anualizar 2020 via ITR (LTM)...
+2026-04-27 22:42:03,676 [WARNING] pipeline.cvm:   ITR 2020 não disponível — não é possível anualizar
+2026-04-27 22:42:03,676 [WARNING] pipeline:   DFP 2020 e ITR indisponíveis — removido do histórico
+2026-04-27 22:42:03,676 [INFO] pipeline:   DFP 2021 indisponível — tentando anualizar via ITR...
+2026-04-27 22:42:03,676 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:42:03,676 [INFO] pipeline.cvm: Tentando anualizar 2021 via ITR (LTM)...
+2026-04-27 22:42:05,755 [WARNING] pipeline.cvm:   ITR 2021 não disponível — não é possível anualizar
+2026-04-27 22:42:05,758 [WARNING] pipeline:   DFP 2021 e ITR indisponíveis — removido do histórico
+2026-04-27 22:42:05,758 [INFO] pipeline:   DFP 2022 indisponível — tentando anualizar via ITR...
+2026-04-27 22:42:05,758 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:42:05,758 [INFO] pipeline.cvm: Tentando anualizar 2022 via ITR (LTM)...
+2026-04-27 22:42:08,019 [WARNING] pipeline.cvm:   ITR 2022 não disponível — não é possível anualizar
+2026-04-27 22:42:08,019 [WARNING] pipeline:   DFP 2022 e ITR indisponíveis — removido do histórico
+2026-04-27 22:42:08,019 [INFO] pipeline:   DFP 2023 indisponível — tentando anualizar via ITR...
+2026-04-27 22:42:08,019 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:42:08,019 [INFO] pipeline.cvm: Tentando anualizar 2023 via ITR (LTM)...
+2026-04-27 22:42:10,346 [WARNING] pipeline.cvm:   ITR 2023 não disponível — não é possível anualizar
+2026-04-27 22:42:10,346 [WARNING] pipeline:   DFP 2023 e ITR indisponíveis — removido do histórico
+2026-04-27 22:42:10,346 [INFO] pipeline:   DFP 2024 indisponível — tentando anualizar via ITR...
+2026-04-27 22:42:10,346 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:42:10,346 [INFO] pipeline.cvm: Tentando anualizar 2024 via ITR (LTM)...
+2026-04-27 22:42:12,651 [WARNING] pipeline.cvm:   ITR 2024 não disponível — não é possível anualizar
+2026-04-27 22:42:12,651 [WARNING] pipeline:   DFP 2024 e ITR indisponíveis — removido do histórico
+2026-04-27 22:42:12,651 [INFO] pipeline:   DFP 2025 indisponível — tentando anualizar via ITR...
+2026-04-27 22:42:12,651 [INFO] pipeline.cvm: 
+==================================================
+2026-04-27 22:42:12,651 [INFO] pipeline.cvm: Tentando anualizar 2025 via ITR (LTM)...
+2026-04-27 22:42:14,817 [WARNING] pipeline.cvm:   ITR 2025 não disponível — não é possível anualizar
+2026-04-27 22:42:14,818 [WARNING] pipeline:   DFP 2025 e ITR indisponíveis — removido do histórico
+2026-04-27 22:42:14,818 [WARNING] pipeline:   Nenhum ano com dados históricos — continuando sem histórico CVM
+2026-04-27 22:42:14,818 [INFO] pipeline: 
+[4/6] Normalizando dados...
+2026-04-27 22:42:14,818 [ERROR] pipeline: ✗ CLSC4: erro inesperado — cannot set a frame with no defined columns
+Traceback (most recent call last):
+  File "/Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/pipeline banco completo/main.py", line 797, in run_batch
+    resultado = run_single(args, ticker=ticker, nome=nome,
+                           codigo_cvm_override=codigo)
+  File "/Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/pipeline banco completo/main.py", line 497, in run_single
+    dfc_hist = norm.normalizar_dfc(dados_brutos, mapa_dfc)
+  File "/Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/pipeline banco completo/modules/normalizador.py", line 403, in normalizar_dfc
+    dfc.loc["capex_total"] = dfc.loc[capex_comps].sum()
+    ~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/pandas/core/indexing.py", line 911, in __setitem__
+    iloc._setitem_with_indexer(indexer, value, self.name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/pandas/core/indexing.py", line 1932, in _setitem_with_indexer
+    self._setitem_with_indexer_missing(indexer, value)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/pandas/core/indexing.py", line 2290, in _setitem_with_indexer_missing
+    raise ValueError("cannot set a frame with no defined columns")
+ValueError: cannot set a frame with no defined columns
+2026-04-27 22:42:14,820 [INFO] pipeline: 
+======================================================================
+2026-04-27 22:42:14,820 [INFO] pipeline: RESUMO DO BATCH
+2026-04-27 22:42:14,820 [INFO] pipeline: ======================================================================
+2026-04-27 22:42:14,820 [INFO] pipeline:   Total:     3
+2026-04-27 22:42:14,820 [INFO] pipeline:   Sucesso:   0
+2026-04-27 22:42:14,820 [INFO] pipeline:   Erros:     3
+2026-04-27 22:42:14,820 [INFO] pipeline:   Tickers com erro: EGIE3, TRPL4, CLSC4
+2026-04-27 22:42:14,820 [INFO] pipeline: 
+2026-04-27 22:42:14,820 [INFO] pipeline:   Ticker       Cotação ON  Preço Justo ON   Upside      TIR
+2026-04-27 22:42:14,820 [INFO] pipeline:   ────────── ──────────── ─────────────── ──────── ────────
+2026-04-27 22:42:14,820 [INFO] pipeline: ======================================================================

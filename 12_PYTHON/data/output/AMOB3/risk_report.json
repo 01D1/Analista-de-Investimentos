@@ -1,0 +1,25 @@
+{
+  "ticker": "AMOB3",
+  "sector_type": "retail",
+  "assessed_at": "2026-04-19",
+  "overall_severity": "high",
+  "risk_count": 2,
+  "risks": [
+    {
+      "code": "MARGIN_COMPRESSION",
+      "severity": "high",
+      "category": "profitability",
+      "description": "Margem EBITDA caindo 2 anos: 1.9% → 0.0%",
+      "detail": "",
+      "triggered_at": "2026-04-19"
+    },
+    {
+      "code": "LOW_GROSS_MARGIN",
+      "severity": "medium",
+      "category": "profitability",
+      "description": "Margem bruta baixa: 14.5% (mín. esperado: 25.0%)",
+      "detail": "",
+      "triggered_at": "2026-04-19"
+    }
+  ]
+}

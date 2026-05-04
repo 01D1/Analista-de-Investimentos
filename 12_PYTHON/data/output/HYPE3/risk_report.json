@@ -1,0 +1,33 @@
+{
+  "ticker": "HYPE3",
+  "sector_type": "healthcare",
+  "assessed_at": "2026-04-19",
+  "overall_severity": "high",
+  "risk_count": 3,
+  "risks": [
+    {
+      "code": "HIGH_LEVERAGE",
+      "severity": "medium",
+      "category": "leverage",
+      "description": "DL/EBITDA elevada: 3.7x",
+      "detail": "Threshold (healthcare): médio=3.0x  alto=4.5x",
+      "triggered_at": "2026-04-19"
+    },
+    {
+      "code": "MARGIN_COMPRESSION",
+      "severity": "high",
+      "category": "profitability",
+      "description": "Margem EBITDA caindo 2 anos: 28.2% → 27.0%",
+      "detail": "",
+      "triggered_at": "2026-04-19"
+    },
+    {
+      "code": "FALLING_NET_INCOME",
+      "severity": "medium",
+      "category": "growth",
+      "description": "Lucro em queda por 2 anos consecutivos",
+      "detail": "2024: -18.6%  2025: -10.9%",
+      "triggered_at": "2026-04-19"
+    }
+  ]
+}

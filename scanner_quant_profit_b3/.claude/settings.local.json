@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\55819\\\\OneDrive - EPEJUD\\\\DIEGO\\\\OBSIDIAN\\\\Analista de Investimentos\\\\scanner_quant_profit_b3\" -Recurse -Force)",
+      "Bash(Select-Object -Property FullName, PSIsContainer)",
+      "Bash(Sort-Object FullName)",
+      "Bash(Format-Table -AutoSize)",
+      "Bash(cd \"/mnt/c/Users/55819/OneDrive - EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/scanner_quant_profit_b3\")",
+      "Bash(python3 -)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\55819\\\\OneDrive - EPEJUD\\\\DIEGO\\\\OBSIDIAN\\\\Analista de Investimentos\" -Directory -Force)",
+      "Bash(Select-Object Name)",
+      "Bash(awk '{print $NF}')",
+      "PowerShell(New-Item *)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\55819\\\\OneDrive - EPEJUD\\\\DIEGO\\\\OBSIDIAN\\\\Analista de Investimentos\\\\scanner_quant_profit_b3\\\\data\" -Recurse -File | Sort-Object Length -Descending | Select-Object -First 15 | Format-Table Name, @{N='MB';E={[math]::Round\\($_.Length/1MB,1\\)}}, DirectoryName -AutoSize)"
+    ]
+  }
+}

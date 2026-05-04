@@ -1,0 +1,45 @@
+{
+  "ticker": "MULT3",
+  "sector_type": "real_estate",
+  "base_year": 2025,
+  "method": "EV/EBITDA Múltiplo",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 12660.815,
+      "current_price": 34.790000915527344,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 2238.714,
+        "ev_ebitda_multiple": 8.0,
+        "net_debt_mi": 5248.897,
+        "ev_mi": 17909.712
+      }
+    },
+    "optimistic": {
+      "fair_value": 21615.671,
+      "current_price": 34.790000915527344,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 2238.714,
+        "ev_ebitda_multiple": 12.0,
+        "net_debt_mi": 5248.897,
+        "ev_mi": 26864.568
+      }
+    },
+    "pessimistic": {
+      "fair_value": 8183.387,
+      "current_price": 34.790000915527344,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 2238.714,
+        "ev_ebitda_multiple": 6.0,
+        "net_debt_mi": 5248.897,
+        "ev_mi": 13432.284
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "ticker": "ALOS3",
+  "sector_type": "real_estate",
+  "base_year": 2025,
+  "method": "EV/EBITDA Múltiplo",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 14838.426,
+      "current_price": 33.79999923706055,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 1847.232,
+        "ev_ebitda_multiple": 8.0,
+        "net_debt_mi": -60.57,
+        "ev_mi": 14777.856
+      }
+    },
+    "optimistic": {
+      "fair_value": 22227.354,
+      "current_price": 33.79999923706055,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 1847.232,
+        "ev_ebitda_multiple": 12.0,
+        "net_debt_mi": -60.57,
+        "ev_mi": 22166.784
+      }
+    },
+    "pessimistic": {
+      "fair_value": 11143.962,
+      "current_price": 33.79999923706055,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 1847.232,
+        "ev_ebitda_multiple": 6.0,
+        "net_debt_mi": -60.57,
+        "ev_mi": 11083.392
+      }
+    }
+  }
+}

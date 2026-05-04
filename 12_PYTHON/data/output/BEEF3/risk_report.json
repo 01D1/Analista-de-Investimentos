@@ -1,0 +1,33 @@
+{
+  "ticker": "BEEF3",
+  "sector_type": "industrial",
+  "assessed_at": "2026-04-19",
+  "overall_severity": "high",
+  "risk_count": 3,
+  "risks": [
+    {
+      "code": "HIGH_LEVERAGE",
+      "severity": "high",
+      "category": "leverage",
+      "description": "DL/EBITDA elevada: 3.6x",
+      "detail": "Threshold (industrial): médio=2.5x  alto=3.5x",
+      "triggered_at": "2026-04-19"
+    },
+    {
+      "code": "MARGIN_COMPRESSION",
+      "severity": "high",
+      "category": "profitability",
+      "description": "Margem EBITDA caindo 3 anos: 9.5% → 8.8%",
+      "detail": "",
+      "triggered_at": "2026-04-19"
+    },
+    {
+      "code": "FALLING_NET_INCOME",
+      "severity": "medium",
+      "category": "growth",
+      "description": "Lucro em queda por 2 anos consecutivos",
+      "detail": "2024: -470.2%  2025: -152.0%",
+      "triggered_at": "2026-04-19"
+    }
+  ]
+}

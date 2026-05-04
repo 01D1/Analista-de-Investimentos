@@ -1,0 +1,17 @@
+{
+  "ticker": "ISAE4",
+  "sector_type": "utilities",
+  "assessed_at": "2026-04-19",
+  "overall_severity": "medium",
+  "risk_count": 1,
+  "risks": [
+    {
+      "code": "HIGH_LEVERAGE",
+      "severity": "medium",
+      "category": "leverage",
+      "description": "DL/EBITDA elevada: 3.5x",
+      "detail": "Threshold (utilities): médio=3.0x  alto=4.5x",
+      "triggered_at": "2026-04-19"
+    }
+  ]
+}

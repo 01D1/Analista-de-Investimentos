@@ -1,0 +1,45 @@
+{
+  "ticker": "PETR4",
+  "sector_type": "oil_gas",
+  "base_year": 2025,
+  "method": "EV/EBITDA Múltiplo",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 612727.8,
+      "current_price": 46.220001220703125,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 174753.6,
+        "ev_ebitda_multiple": 5.5,
+        "net_debt_mi": 348417.0,
+        "ev_mi": 961144.8
+      }
+    },
+    "optimistic": {
+      "fair_value": 874858.2,
+      "current_price": 46.220001220703125,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 174753.6,
+        "ev_ebitda_multiple": 7.0,
+        "net_debt_mi": 348417.0,
+        "ev_mi": 1223275.2
+      }
+    },
+    "pessimistic": {
+      "fair_value": 350597.4,
+      "current_price": 46.220001220703125,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 174753.6,
+        "ev_ebitda_multiple": 4.0,
+        "net_debt_mi": 348417.0,
+        "ev_mi": 699014.4
+      }
+    }
+  }
+}

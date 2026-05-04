@@ -1,0 +1,69 @@
+# --- Dados brutos B3 (arquivos grandes) ---
+scanner_quant_profit_b3/data/raw/*.TXT
+scanner_quant_profit_b3/data/raw/*.ZIP
+scanner_quant_profit_b3/data/raw/*.zip
+scanner_quant_profit_b3/data/raw/*.txt
+
+# --- Banco de dados SQLite ---
+scanner_quant_profit_b3/data/database/*.db
+scanner_quant_profit_b3/data/database/*.db-shm
+scanner_quant_profit_b3/data/database/*.db-wal
+
+# --- Relatórios gerados automaticamente ---
+scanner_quant_profit_b3/data/reports/
+scanner_quant_profit_b3/data/journal/
+
+# --- Outputs gerados por pipelines (podem estar abertos) ---
+12_PYTHON/pipeline banco completo/outputs/
+12_PYTHON/news_hunter/outputs/
+
+# --- Cache e dados brutos CVM (arquivos >100MB, bloqueados pelo GitHub) ---
+12_PYTHON/pipeline banco completo/cache/
+12_PYTHON/data/raw/cvm/
+12_PYTHON/data/raw/
+
+# --- Arquivos Excel em pastas de dados (frequentemente abertos) ---
+scanner_quant_profit_b3/data/**/*.xlsx
+scanner_quant_profit_b3/data/**/*.xls
+
+# --- Pasta .claude (configurações locais do Claude Code) ---
+.claude/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# --- Ambientes virtuais ---
+venv/
+.venv/
+env/
+.env/
+
+# --- Variáveis de ambiente / segredos ---
+.env
+*.env
+secrets.yaml
+secrets.yml
+
+# --- Obsidian ---
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.trash/
+
+# --- Sistema operacional ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editor ---
+.vscode/
+.idea/
+*.swp
+*.swo

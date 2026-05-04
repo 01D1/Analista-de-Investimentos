@@ -1,0 +1,2521 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 55845048.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -31352158.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 24492890.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -15819378.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -12953799.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -3205014.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 665722.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -321936.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": -4351.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 8673512.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -1909703.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 1544273.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -3453976.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 6763809.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": -1206477.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -752097.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": -454380.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 5557332.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 5557332.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 5547948.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 9384.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 124940673.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 22814327.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 6691098.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.01.01",
+      "account_name": "Caixa e Contas Bancárias",
+      "normalized_name": NaN,
+      "value": 148236.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.01.02",
+      "account_name": "Aplicações Financeiras com Liquidez Imediata",
+      "normalized_name": NaN,
+      "value": 6542862.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 9471592.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 1097238.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 3158787.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 3158787.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.06.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Recuperar",
+      "normalized_name": NaN,
+      "value": 852694.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.06.01.02",
+      "account_name": "Impostos, Taxas e Contribuições a Recuperar",
+      "normalized_name": NaN,
+      "value": 2306093.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 1868954.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 526658.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 526658.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 72641.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 15524.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.08.03.03",
+      "account_name": "Depósitos e Bloqueios Judiciais",
+      "normalized_name": NaN,
+      "value": 150993.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.08.03.04",
+      "account_name": "Dividendos e Juros Sobre o Capital Próprio",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.08.03.05",
+      "account_name": "Superávit de Planos de Benefícios Pós-Emprego",
+      "normalized_name": NaN,
+      "value": 73314.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.08.03.06",
+      "account_name": "Outros Ativos",
+      "normalized_name": NaN,
+      "value": 214186.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.01.08.03.07",
+      "account_name": "Bens Destinados a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 102126346.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 6485934.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 42619.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 370149.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 158215.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 158215.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 2085201.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 42759.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 3786991.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Impostos, Taxas e Contribuições a Recuperar",
+      "normalized_name": NaN,
+      "value": 606345.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Depósitos e Bloqueios Judiciais",
+      "normalized_name": NaN,
+      "value": 2852730.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 1840.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Superávit de Planos de Benefícios Pós-Emprego",
+      "normalized_name": NaN,
+      "value": 83732.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Outros Ativos",
+      "normalized_name": NaN,
+      "value": 242344.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.01.10.08",
+      "account_name": "Imposto de Renda e Contribuição Social a Recuperar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 566384.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 566384.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 566358.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 26.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 46812381.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 31929152.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 13247618.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 1635611.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 48261647.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 124940673.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 24257939.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 1238452.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 614595.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 623857.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 9230624.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 1595834.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 580865.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 9898.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Outras Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 570967.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 949338.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 65631.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 6447958.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 232118.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 1695214.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 4520626.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 3974074.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 133290.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 3840784.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 2237090.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 866.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Receitas Diferidas",
+      "normalized_name": NaN,
+      "value": 1019134.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Planos de Previdência e Outros Benefícios Pós-Emprego",
+      "normalized_name": NaN,
+      "value": 31027.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Outros Passivos",
+      "normalized_name": NaN,
+      "value": 552667.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 1770997.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 1630989.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 160947.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 701300.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 573679.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.06.01.05",
+      "account_name": "Provisões Regulatórias",
+      "normalized_name": NaN,
+      "value": 195063.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 140008.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.06.02.04",
+      "account_name": "Provisão para Desmantelamento",
+      "normalized_name": NaN,
+      "value": 3265.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.06.02.05",
+      "account_name": "Passivo Contingente",
+      "normalized_name": NaN,
+      "value": 5075.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.06.02.06",
+      "account_name": "Provisão para Multas de Cancelamento de Contratos de Arrendamento",
+      "normalized_name": NaN,
+      "value": 41005.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.06.02.07",
+      "account_name": "Valores a Restituir a Clientes (Lei Complementar nº 194/2022)",
+      "normalized_name": NaN,
+      "value": 90663.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 30883239.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 14298572.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 1572592.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 2000000.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 10725980.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 7073290.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 638.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 7072652.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 10403.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Impostos, Taxas e Contribuições a Recolher",
+      "normalized_name": NaN,
+      "value": 5128584.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Pessoal, Encargos e Benefícios Sociais",
+      "normalized_name": NaN,
+      "value": 75461.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Planos de Previdência e Outros Benefícios Pós-Emprego",
+      "normalized_name": NaN,
+      "value": 697532.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Imposto de Renda e Contribuição Social a Recolher",
+      "normalized_name": NaN,
+      "value": 215355.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.02.02.08",
+      "account_name": "Outros Passivos",
+      "normalized_name": NaN,
+      "value": 945317.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 4015677.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 4015677.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 5368788.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 3889775.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 1862040.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 234241.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 837462.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.04.01.05",
+      "account_name": "Provisões Regulatórias",
+      "normalized_name": NaN,
+      "value": 956032.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 1479013.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.04.02.04",
+      "account_name": "Provisão para Desmantelamento",
+      "normalized_name": NaN,
+      "value": 408949.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.04.02.05",
+      "account_name": "Passivo Contingente",
+      "normalized_name": NaN,
+      "value": 1070064.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 126912.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 126912.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 69799495.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 62071416.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 63095.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -194.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.02.07",
+      "account_name": "Reserva Especial de Ágio",
+      "normalized_name": NaN,
+      "value": 63074.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.02.08",
+      "account_name": "Outras Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 215.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 7523216.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 4118419.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 426933.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -199999.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.04.10",
+      "account_name": "Reserva para Remuneração aos Acionistas e Investimentos",
+      "normalized_name": NaN,
+      "value": 3177863.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 71855.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 69913.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 19876568.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 24628918.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro Antes dos Tributos",
+      "normalized_name": "net_income_cfo",
+      "value": 6763809.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Depreciações e Amortizações",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 14202285.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Variações Cambiais de Empréstimos, Financiamentos e Instrumentos Derivativos",
+      "normalized_name": NaN,
+      "value": -66345.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Variações Monetárias de Ativos e Passivos",
+      "normalized_name": NaN,
+      "value": -61273.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Ganhos em Operações com Alienação de Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": NaN,
+      "value": 4351.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Ganhos na Baixa / Alienação de Ativos",
+      "normalized_name": NaN,
+      "value": -405088.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Perdas Estimadas para a Redução ao Valor Recuperável das Contas a Receber",
+      "normalized_name": NaN,
+      "value": 1523263.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Mudanças em Provisões Passivas",
+      "normalized_name": NaN,
+      "value": 93049.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Provisões para Perdas Estimadas para a Redução ao Valor Realizável dos Estoques",
+      "normalized_name": NaN,
+      "value": 41896.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Planos de Previdência e Outros Benefícios Pós-Emprego",
+      "normalized_name": NaN,
+      "value": 84351.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Provisões para Demandas Judiciais",
+      "normalized_name": NaN,
+      "value": 321936.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Despesas de Juros (Empréstimos, Financiamentos, Arrendamentos e Operações com Derivativos)",
+      "normalized_name": NaN,
+      "value": 2141361.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.01.14",
+      "account_name": "Acordo de Solução de Controvérsia - Aquisição de UPI Móvel da Oi",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.01.15",
+      "account_name": "Reversão das Provisões de Multas por Cancelamento de Contratos de Arrendamento e Desmantelamento",
+      "normalized_name": NaN,
+      "value": -15881.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.01.16",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 1204.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -4752350.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": -1661763.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": -311237.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": -444717.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": -1052392.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Outros Ativos",
+      "normalized_name": NaN,
+      "value": 160656.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Pessoal, Encargos e Benefícios Sociais",
+      "normalized_name": NaN,
+      "value": 24494.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 1097113.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Impostos, Taxas e Contribuições",
+      "normalized_name": NaN,
+      "value": 888489.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Provisões para Demandas Judiciais, Valores a Restituir a Clientes e Provisão para Multas por Cancela",
+      "normalized_name": NaN,
+      "value": -861325.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Outros Passivos",
+      "normalized_name": NaN,
+      "value": 348417.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "Juros Pagos de Empréstimos, Financiamentos, Debêntures e Arrendamentos",
+      "normalized_name": NaN,
+      "value": -2078021.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.02.12",
+      "account_name": "Imposto de Renda e Contribuição Social Pagos",
+      "normalized_name": NaN,
+      "value": -862064.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -8914793.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Aquisições de Imobilizado e Intangível",
+      "normalized_name": NaN,
+      "value": -9324123.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Caixa Recebido na Venda de Ativo Imobilizado",
+      "normalized_name": "capex",
+      "value": 376591.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Resgate Líquido de Depósitos Judiciais",
+      "normalized_name": NaN,
+      "value": 45454.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Pagamentos por Aquisição de Investimentos e Aporte de Capital em Investidas, Líquidos de Caixa e Equ",
+      "normalized_name": NaN,
+      "value": -168534.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Caixa Recebido pela Alienação de Investimentos",
+      "normalized_name": NaN,
+      "value": 161057.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Recebimento de Dividendos e Juros Sobre o Capital Próprio",
+      "normalized_name": NaN,
+      "value": 51.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Caixa e Equivalentes de Caixa por Aquisições (Alienações) de Sociedades",
+      "normalized_name": NaN,
+      "value": 13.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Caixa Recebido na Venda de Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.02.09",
+      "account_name": "Pagamentos Líquidos de Resgates de Aplicações Financeiras",
+      "normalized_name": NaN,
+      "value": -5302.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.02.10",
+      "account_name": "Caixa e Equivalentes de Caixa por Aquisicão, Incorporação e Alienação de Sociedade",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -8628953.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Pagamentos de Principal de Empréstimos e Financiamentos, Debêntures, Arrendamentos e Outros Credores",
+      "normalized_name": "debt_issuance",
+      "value": -3495039.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Recebimentos dos Instrumentos Financeiros Derivativos",
+      "normalized_name": "debt_repayment",
+      "value": 105240.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Pagamentos dos Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": -50910.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Pagamentos de Dividendos e Juros Sobre o Capital Próprio",
+      "normalized_name": "dividends_paid",
+      "value": -2532399.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Pagamentos por Recompras de Ações Ordinárias da Companhia",
+      "normalized_name": NaN,
+      "value": -1299583.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Pagamentos a Acionistas por Redução de Capital social",
+      "normalized_name": NaN,
+      "value": -1461279.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Recebimentos de Recursos para Aumento de Capital em Controladas por Outros Acionistas",
+      "normalized_name": NaN,
+      "value": 21933.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Ingressos de Empréstimos e Debêntures",
+      "normalized_name": NaN,
+      "value": 83084.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": 2332822.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 4358276.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 6691098.0,
+      "reference_date": "2024-12-31",
+      "company_name": "TELEFÔNICA BRASIL S.A",
+      "cvm_code": "017671"
+    }
+  ]
+}

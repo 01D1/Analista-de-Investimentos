@@ -1,0 +1,17 @@
+{
+  "ticker": "CYRE3",
+  "sector_type": "real_estate",
+  "assessed_at": "2026-04-19",
+  "overall_severity": "high",
+  "risk_count": 1,
+  "risks": [
+    {
+      "code": "HIGH_LEVERAGE",
+      "severity": "high",
+      "category": "leverage",
+      "description": "DL/EBITDA elevada: 3.4x",
+      "detail": "Threshold (real_estate): médio=2.0x  alto=3.0x",
+      "triggered_at": "2026-04-19"
+    }
+  ]
+}

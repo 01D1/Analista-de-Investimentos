@@ -1,0 +1,2530 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 71191000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -57273000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 13918000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -9414000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -9400000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.04.02.01",
+      "account_name": "Despesas com Vendas, Gerais e Administrativa",
+      "normalized_name": NaN,
+      "value": -8360000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.04.02.02",
+      "account_name": "Depreciação e Amortização",
+      "normalized_name": NaN,
+      "value": -1040000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": -6000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": -8000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 4504000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -579000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 948000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -1527000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 3925000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": -1081000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -1021000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": -60000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 2844000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 2844000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 2671000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 173000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 1.35,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 1.3,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 51824000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 25413000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 5672000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 10747000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 10747000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.03.01.01",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 1330000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.03.01.02",
+      "account_name": "Crédito ao Consumidor Concedido Pela Empresa de Soluções Financeiras",
+      "normalized_name": NaN,
+      "value": 9417000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 7709000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 827000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 827000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.06.01.01",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 721000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.06.01.02",
+      "account_name": "Imposto de Renda e Contribução Social a Recuperar",
+      "normalized_name": NaN,
+      "value": 106000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 458000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 458000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 116000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 114000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.01.08.03.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 228000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 26411000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 8115000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 358000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 358000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 461000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 4000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.04.03",
+      "account_name": "Crédito ao Consumidor Concedido Pela Empresa de Soluções Financeiras",
+      "normalized_name": NaN,
+      "value": 457000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 4583000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 482000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.07.02",
+      "account_name": "Impostos a Recuperar",
+      "normalized_name": NaN,
+      "value": 4101000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 2713000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Depósitos e bloqueios judiciais",
+      "normalized_name": NaN,
+      "value": 2401000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Outras contas a receber",
+      "normalized_name": NaN,
+      "value": 87000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Impostos a recuperar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 40000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 185000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 508000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 111000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 111000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 397000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 15465000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 12857000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 1993000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 615000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 2323000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 2323000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.04.01.02",
+      "account_name": "Intangível",
+      "normalized_name": NaN,
+      "value": 2323000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 51824000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 24720000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 891000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 891000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 14423000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 14423000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.02.01.01",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 14423000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 632000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 632000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 101000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Impostos a Recolher",
+      "normalized_name": NaN,
+      "value": 531000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 713000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 574000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 88000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 486000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 139000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 8061000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 8061000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Dividendos a Pagar",
+      "normalized_name": NaN,
+      "value": 49000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 13000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 55000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Operação Com Cartão de Crédito",
+      "normalized_name": NaN,
+      "value": 7534000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.05.02.08",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 410000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.06.01.05",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 10059000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 5065000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 3344000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 1677000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 1667000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 1721000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 264000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 264000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Operações Com Cartão de Crédito",
+      "normalized_name": NaN,
+      "value": 223000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Dividendos a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Outras Contas a Pagar",
+      "normalized_name": NaN,
+      "value": 23000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Receita Diferida",
+      "normalized_name": NaN,
+      "value": 18000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 602000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 602000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 4128000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 4128000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.04.01.05",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 3618000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.04.01.06",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 510000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 17045000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 7649000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 1911000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": -282000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.02.07",
+      "account_name": "Reserva de Capital",
+      "normalized_name": NaN,
+      "value": 2193000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 6143000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 6143000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 6000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 1336000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 4033000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 5416000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro antes do imposto de renda e contribuição social",
+      "normalized_name": "net_income_cfo",
+      "value": 3925000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Depreciação e Amortização",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 1092000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Provisão para Impairment de Ativos Imobilizados",
+      "normalized_name": NaN,
+      "value": -7000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Resultado da Equivalência Patrimonial",
+      "normalized_name": NaN,
+      "value": 8000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Imposto de Renda e Contribuição Social Corrente",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Baixa de Ativos e Ganhos (Perdas)",
+      "normalized_name": NaN,
+      "value": 120000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Receita de Juros não Realizados de Títulos e Valores Mobiliários",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Juros e Variações Cambial Sobre Empréstimos",
+      "normalized_name": NaN,
+      "value": 227000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Juros sobre operações de arrendamento mercantil",
+      "normalized_name": NaN,
+      "value": 183000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Perda (ganho) de Instrumento Derivativo",
+      "normalized_name": NaN,
+      "value": -514000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Atualização Monetária Sobre Depósitos Judiciais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Provisão para Contingências, Líquido de Reversões e Juros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.01.14",
+      "account_name": "Realização da Receita diferida",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.01.15",
+      "account_name": "Pagamento baseado em ações",
+      "normalized_name": NaN,
+      "value": 16000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.01.16",
+      "account_name": "Ganhos e perdas relativas a demandas judiciais",
+      "normalized_name": NaN,
+      "value": -208000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.01.17",
+      "account_name": "Créditos de ICMS, líquidos de depreciação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.01.18",
+      "account_name": "Variação Cambial Sobre Empréstimos",
+      "normalized_name": NaN,
+      "value": 574000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -182000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Variação no Capital de Giro",
+      "normalized_name": NaN,
+      "value": -4000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Variação do Crédito ao Consumidor Concedido pela Empresa de Soluções Financeiras",
+      "normalized_name": NaN,
+      "value": -178000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Depósitos Judiciais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.02.12",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.02.13",
+      "account_name": "Pagamento de Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.02.14",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.02.15",
+      "account_name": "Receita Diferida",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.02.16",
+      "account_name": "Utilização de provisão para reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -1201000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.01.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Pagos",
+      "normalized_name": NaN,
+      "value": -1201000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -3323000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Aquisição de Imobilizado",
+      "normalized_name": NaN,
+      "value": -3275000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Adição de Intangível",
+      "normalized_name": "capex",
+      "value": -170000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Fornecedores de ativos imobilizados e intangíveis",
+      "normalized_name": NaN,
+      "value": 81000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Alienação de ativo intangível",
+      "normalized_name": NaN,
+      "value": 42000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Contribuições de capital em controladas",
+      "normalized_name": NaN,
+      "value": -1000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -360000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Recursos oriundos da oferta de ações, líquidos de gastos com emissão de ações",
+      "normalized_name": "debt_issuance",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Aumento de Capital",
+      "normalized_name": "debt_repayment",
+      "value": 6000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Juros Pagos Sobre Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": -275000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Instrumento Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Liquidação de Instrumento Financeiro",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.03.09",
+      "account_name": "Dividendos Pagos",
+      "normalized_name": NaN,
+      "value": -573000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.03.10",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 236000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.03.11",
+      "account_name": "Aporte de Capital de Acionistas não Controladores em Controladas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.03.12",
+      "account_name": "Amortização de Empréstimos",
+      "normalized_name": NaN,
+      "value": -2641000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.03.13",
+      "account_name": "Capitação de Empréstimos",
+      "normalized_name": NaN,
+      "value": 3177000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.03.14",
+      "account_name": "Amortização de principal - Contratos de  arrendamento",
+      "normalized_name": NaN,
+      "value": -109000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.03.15",
+      "account_name": "Amortização de juros - Contratos de arrendamento",
+      "normalized_name": NaN,
+      "value": -181000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": 350000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 5322000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 5672000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "ATACADÃO S.A.",
+      "cvm_code": "024171"
+    }
+  ]
+}

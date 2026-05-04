@@ -1,0 +1,33 @@
+{
+  "ticker": "VALE3",
+  "sector_type": "mining",
+  "assessed_at": "2026-04-19",
+  "overall_severity": "high",
+  "risk_count": 3,
+  "risks": [
+    {
+      "code": "MARGIN_COMPRESSION",
+      "severity": "high",
+      "category": "profitability",
+      "description": "Margem EBITDA caindo 3 anos: 34.0% → 15.5%",
+      "detail": "",
+      "triggered_at": "2026-04-19"
+    },
+    {
+      "code": "LOW_EBITDA_MARGIN",
+      "severity": "high",
+      "category": "profitability",
+      "description": "Margem EBITDA abaixo do esperado p/ setor: 15.5% (mín. 25.0%)",
+      "detail": "",
+      "triggered_at": "2026-04-19"
+    },
+    {
+      "code": "FALLING_NET_INCOME",
+      "severity": "medium",
+      "category": "growth",
+      "description": "Lucro em queda por 2 anos consecutivos",
+      "detail": "2024: -20.9%  2025: -56.3%",
+      "triggered_at": "2026-04-19"
+    }
+  ]
+}

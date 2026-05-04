@@ -1,0 +1,112 @@
+{%- set flag = {"Brasil": "🇧🇷", "EUA": "🇺🇸", "USA": "🇺🇸", "Europa": "🇪🇺", "China": "🇨🇳", "Japao": "🇯🇵", "UK": "🇬🇧", "Global": "🌍"} -%}
+{%- set nums = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟"] -%}
+{{ nome_boletim }} 🙏🏼 🙏🏼 🙏🏼
+{{ data_extenso }} 🇧🇷
+
+Faltam…
+⏰ {{ dias_restantes }} dias pra acabar o ano
+{%- if dias_copa > 0 %}
+⚽️ {{ dias_copa }} dias para a Copa do Mundo
+{%- endif %}
+{%- if efemerides %}
+
+🤔 HOJE É DIA…
+{%- for e in efemerides %}
+{{ e }}
+{%- endfor %}
+{%- endif %}
+{%- if clima %}
+
+🌤 PREVISÃO DO TEMPO
+{%- for c in clima %}
+{{ c.sigla }} ❄️ {{ c.min }}  🌞 {{ c.max }}  ☔️ {{ c.chuva }}%
+{%- endfor %}
+{%- endif %}
+{%- set todas_destaques = destaques if destaques else alertas %}
+{%- if todas_destaques %}
+
+🤔 VOCÊ PRECISA SABER…
+{%- for n in todas_destaques[:3] %}
+{{ nums[loop.index0] }} {{ n.resumo_curto or n.titulo }}
+{%- endfor %}
+{%- endif %}
+{%- if noticias_boletim %}
+
+ ✅ PRINCIPAIS NOTÍCIAS
+{%- for n in noticias_boletim %}
+🗞️ {{ n.titulo }}{% if n.fonte %} - {{ n.fonte }}{% endif %}
+{%- endfor %}
+{%- endif %}
+{%- set agenda_principal = [] %}
+{%- for e in agenda %}
+  {%- if e.importancia in ["alta", "média"] %}
+    {%- set _ = agenda_principal.append(e) %}
+  {%- endif %}
+{%- endfor %}
+{%- set agenda_display = agenda_principal[:12] if agenda_principal else agenda[:12] %}
+{%- if agenda_display %}
+
+📅 AGENDA FINANCEIRA
+{%- for e in agenda_display %}
+{{ flag.get(e.pais, "🌍") }} {{ e.horario }} – {{ e.indicador }}{% if e.projecao and e.projecao != 'não disponível' %} – Projeção: {{ e.projecao }}{% endif %}{% if e.anterior and e.anterior != 'não disponível' %} | Anterior: {{ e.anterior }}{% endif %}
+{%- endfor %}
+Fonte: investing.com
+{%- endif %}
+{%- if cambio %}
+
+📊 CAMBIO
+{%- for c in cambio %}
+{{ c.nome }} {{ c.valor }}  {{ c.variacao }}
+{%- endfor %}
+{%- endif %}
+{%- if bolsas_cotacoes %}
+
+📈📉 BOLSAS
+{%- for b in bolsas_cotacoes %}
+{{ b.nome }}  {{ b.variacao }}  /  {{ b.valor }}
+{%- endfor %}
+{%- endif %}
+{%- if maiores_altas %}
+
+🎯🎯🎯 MAIORES ALTAS
+{%- for a in maiores_altas %}
+{{ nums[loop.index0] }} {{ a.variacao }} {{ a.ticker }}{% if a.nome %} / {{ a.nome }}{% endif %}
+{%- endfor %}
+{%- endif %}
+{%- if maiores_baixas %}
+
+🙈🙉🙊 MAIORES  BAIXAS
+{%- for b in maiores_baixas %}
+{{ nums[loop.index0] }} {{ b.variacao }}  {{ b.ticker }}{% if b.nome %} /  {{ b.nome }}{% endif %}
+{%- endfor %}
+{%- endif %}
+{%- if commodities_cotacoes %}
+
+💲 COMMODITIES
+{%- for c in commodities_cotacoes %}
+{{ c.nome }}  {{ c.valor }}  {{ c.variacao }}
+{%- endfor %}
+{%- endif %}
+{%- if cripto_cotacoes %}
+
+🤖 CRIPTOMOEDAS
+{%- for c in cripto_cotacoes %}
+{{ c.nome }}  {{ c.valor }}  {{ c.variacao }}
+{%- endfor %}
+{%- endif %}
+{%- if indicadores %}
+
+📊 INDICADORES
+{%- for i in indicadores %}
+📈{{ i.nome }}  {{ i.valor }}{% if i.periodo %}  {{ i.periodo }}{% endif %}
+{%- endfor %}
+{%- endif %}
+
+⚠️ DICA DO MÊS !!!
+😒 {{ dica_do_mes }}
+
+✍🏼 FRASE DO DIA
+"{{ frase_do_dia }}"
+
+Mensagem encaminhada por lista de transmissão, sem vínculo com a empresa onde o autor presta serviços.
+🖊 Ass:  Diego Carvalho - Analista CNPI-T 10114

@@ -1,0 +1,70 @@
+2026-05-02 11:27:13,754 [INFO] pipeline: ======================================================================
+2026-05-02 11:27:13,754 [INFO] pipeline: PIPELINE DE VALUATION [BANCÁRIO] — BBDC4 — Bradesco
+2026-05-02 11:27:13,755 [INFO] pipeline: Início: 2026-05-02 11:27:13
+2026-05-02 11:27:13,755 [INFO] pipeline:   Setor: bancos | Motor: KE
+2026-05-02 11:27:13,755 [INFO] pipeline: ======================================================================
+2026-05-02 11:27:13,756 [INFO] pipeline:   Banco cadastrado: Bradesco | tipo: ON_PN
+2026-05-02 11:27:13,756 [INFO] pipeline: 
+[1/6] Coletando dados de mercado...
+2026-05-02 11:27:14,290 [INFO] pipeline:   Buscando cotação via yfinance...
+2026-05-02 11:27:14,292 [INFO] pipeline.mercado: Buscando cotação atual: BBDC4.SA
+2026-05-02 11:27:14,293 [INFO] yfinance: Failed to create CookieCache, reason: Cannot read and write in CookieCache folder: '/Users/diegocarvalho/Library/Caches/py-yfinance'. CookieCache will not be used. Tip: You can direct cache to use a different location with 'set_tz_cache_location(mylocation)'
+2026-05-02 11:27:14,737 [ERROR] pipeline.mercado: Erro ao buscar cotação BBDC4.SA: Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-05-02 11:27:14,739 [INFO] pipeline.mercado: Buscando cotação atual: BBDC3.SA
+2026-05-02 11:27:14,743 [ERROR] pipeline.mercado: Erro ao buscar cotação BBDC3.SA: Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-05-02 11:27:14,745 [INFO] pipeline:   Cotação ON: R$ 0.00  |  Cotação PN: R$ 0.00
+2026-05-02 11:27:14,747 [INFO] pipeline:   Ações (fonte: bancos.py): ON=5,294,000 mil | PN=5,270,000 mil
+2026-05-02 11:27:14,748 [INFO] pipeline.mercado: Calculando beta: BBDC4 (252 dias úteis)
+2026-05-02 11:27:14,749 [INFO] pipeline.mercado: Baixando preços: BBDC4.SA (2019-01-01 → 2026-05-02)
+2026-05-02 11:27:14,751 [INFO] yfinance: Failed to create TzCache, reason: Cannot read and write in TzCache folder: '/Users/diegocarvalho/Library/Caches/py-yfinance'. TzCache will not be used. Tip: You can direct cache to use a different location with 'set_tz_cache_location(mylocation)'
+2026-05-02 11:27:14,757 [ERROR] yfinance: Failed to get ticker 'BBDC4.SA' reason: Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-05-02 11:27:14,765 [ERROR] yfinance: 
+1 Failed download:
+2026-05-02 11:27:14,766 [ERROR] yfinance: ['BBDC4.SA']: ProxyError('Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.')
+2026-05-02 11:27:14,780 [WARNING] pipeline.mercado: Sem dados de preços para BBDC4.SA
+2026-05-02 11:27:14,782 [INFO] pipeline.mercado: Baixando preços: ^BVSP (2019-01-01 → 2026-05-02)
+2026-05-02 11:27:14,786 [ERROR] yfinance: Failed to get ticker '^BVSP' reason: Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-05-02 11:27:14,793 [ERROR] yfinance: 
+1 Failed download:
+2026-05-02 11:27:14,794 [ERROR] yfinance: ['^BVSP']: ProxyError('Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.')
+2026-05-02 11:27:14,795 [WARNING] pipeline.mercado: Sem dados de preços para ^BVSP
+2026-05-02 11:27:14,796 [WARNING] pipeline.mercado: Dados insuficientes para calcular beta
+2026-05-02 11:27:14,796 [INFO] pipeline:   Beta estatístico: 0.850 | Beta utilizado: 0.850
+2026-05-02 11:27:14,797 [INFO] pipeline: 
+[2/6] Coletando dados macroeconômicos (BCB)...
+2026-05-02 11:27:14,858 [WARNING] pipeline.macro: Não foi possível obter Focus Selic: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Max retries exceeded with url: /olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'Selic'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-05-02 11:27:14,861 [WARNING] pipeline.macro: Não foi possível obter Focus IPCA: HTTPSConnectionPool(host='olinda.bcb.gov.br', port=443): Max retries exceeded with url: /olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'IPCA'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-05-02 11:27:14,861 [INFO] pipeline.macro: 
+=== Coletando dados macroeconômicos ===
+2026-05-02 11:27:14,862 [INFO] pipeline.macro: Baixando série BCB 432...
+2026-05-02 11:27:14,874 [ERROR] pipeline.macro: Erro ao baixar série BCB 432: HTTPSConnectionPool(host='api.bcb.gov.br', port=443): Max retries exceeded with url: /dados/serie/bcdata.sgs.432/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=02%2F05%2F2026 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-05-02 11:27:14,875 [WARNING] pipeline.macro: Série Selic meta sem DatetimeIndex — usando fallback histórico
+2026-05-02 11:27:14,876 [INFO] pipeline.macro: Baixando série BCB 12...
+2026-05-02 11:27:14,878 [ERROR] pipeline.macro: Erro ao baixar série BCB 12: HTTPSConnectionPool(host='api.bcb.gov.br', port=443): Max retries exceeded with url: /dados/serie/bcdata.sgs.12/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=02%2F05%2F2026 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-05-02 11:27:14,879 [WARNING] pipeline.macro: Série DI sem DatetimeIndex — usando fallback histórico
+2026-05-02 11:27:14,880 [INFO] pipeline.macro: Baixando série BCB 13522...
+2026-05-02 11:27:14,882 [ERROR] pipeline.macro: Erro ao baixar série BCB 13522: HTTPSConnectionPool(host='api.bcb.gov.br', port=443): Max retries exceeded with url: /dados/serie/bcdata.sgs.13522/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=02%2F05%2F2026 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-05-02 11:27:14,883 [WARNING] pipeline.macro: Série IPCA sem DatetimeIndex — usando fallback histórico
+2026-05-02 11:27:14,883 [INFO] pipeline.macro: Baixando série BCB 258...
+2026-05-02 11:27:14,886 [ERROR] pipeline.macro: Erro ao baixar série BCB 258: HTTPSConnectionPool(host='api.bcb.gov.br', port=443): Max retries exceeded with url: /dados/serie/bcdata.sgs.258/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=02%2F05%2F2026 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-05-02 11:27:14,886 [WARNING] pipeline.macro: Série TJLP sem DatetimeIndex — usando fallback histórico
+2026-05-02 11:27:14,887 [INFO] pipeline.macro: Baixando série BCB 29039...
+2026-05-02 11:27:14,889 [ERROR] pipeline.macro: Erro ao baixar série BCB 29039: HTTPSConnectionPool(host='api.bcb.gov.br', port=443): Max retries exceeded with url: /dados/serie/bcdata.sgs.29039/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=02%2F05%2F2026 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-05-02 11:27:14,890 [WARNING] pipeline.macro: CDS sem DatetimeIndex — usando fallback histórico
+2026-05-02 11:27:14,891 [INFO] pipeline.macro: Baixando série BCB 13522...
+2026-05-02 11:27:14,893 [ERROR] pipeline.macro: Erro ao baixar série BCB 13522: HTTPSConnectionPool(host='api.bcb.gov.br', port=443): Max retries exceeded with url: /dados/serie/bcdata.sgs.13522/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=02%2F05%2F2026 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-05-02 11:27:14,893 [WARNING] pipeline.macro: Série IPCA sem DatetimeIndex — usando fallback histórico
+2026-05-02 11:27:14,893 [INFO] pipeline.macro: 
+RESUMO MACRO HISTÓRICO:
+2026-05-02 11:27:14,894 [INFO] pipeline.macro:   selic_meta     : 2021: 9.25% | 2022: 13.75% | 2023: 11.75% | 2024: 11.75% | 2025: 10.00%
+2026-05-02 11:27:14,895 [INFO] pipeline.macro:   selic_efet     : 2021: 4.48% | 2022: 12.33% | 2023: 13.15% | 2024: 10.73% | 2025: 10.50%
+2026-05-02 11:27:14,895 [INFO] pipeline.macro:   ipca           : 2021: 10.06% | 2022: 5.62% | 2023: 4.62% | 2024: 4.83% | 2025: 4.50%
+2026-05-02 11:27:14,896 [INFO] pipeline.macro:   tjlp           : 2021: 5.25% | 2022: 6.25% | 2023: 7.00% | 2024: 7.00% | 2025: 6.50%
+2026-05-02 11:27:14,896 [INFO] pipeline.macro:   cds            : 2021: 0.90% | 2022: 1.20% | 2023: 0.85% | 2024: 0.70% | 2025: 0.50%
+2026-05-02 11:27:14,896 [INFO] pipeline.macro:   inflacao_impl  : 2021: 10.06% | 2022: 5.62% | 2023: 4.62% | 2024: 4.83% | 2025: 4.50%
+2026-05-02 11:27:14,897 [INFO] pipeline: 
+[3/6] Download CVM pulado (--sem-cvm)
+2026-05-02 11:27:14,898 [INFO] pipeline:   Qualidade dos dados: score=0/100 | warnings=0 | critical=2
+2026-05-02 11:27:14,898 [ERROR] pipeline:   [quality] DRE histórica está vazia.
+2026-05-02 11:27:14,899 [ERROR] pipeline:   [quality] Balanço histórico está vazio.
+2026-05-02 11:27:14,899 [ERROR] pipeline: Quality gate bloqueou o valuation por inconsistências críticas.

@@ -1,0 +1,65 @@
+2026-04-18 02:46:26 | INFO     | __main__ — Teste de inicialização do sistema...
+2026-04-18 02:46:26 | INFO     | __main__ — Ambiente: development
+2026-04-18 02:46:26 | INFO     | __main__ — Tickers ativos (13): ['BBAS3', 'ITUB4', 'BBDC4', 'SANB11', 'ITSA4', 'BPAC11', 'ABCB4', 'BRSR6', 'BMGB4', 'BPAN4', 'PINE4', 'INTR4', 'WEGE3']
+2026-04-18 02:46:26 | INFO     | __main__ — Data raw: /Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/data/raw
+2026-04-18 02:46:26 | SUCCESS  | __main__ — Sistema inicializado com sucesso.
+2026-04-18 02:49:36 | INFO     | __main__ — Teste de inicialização do sistema...
+2026-04-18 02:49:36 | INFO     | __main__ — Ambiente: development
+2026-04-18 02:49:36 | INFO     | __main__ — Tickers ativos (13): ['BBAS3', 'ITUB4', 'BBDC4', 'SANB11', 'ITSA4', 'BPAC11', 'ABCB4', 'BRSR6', 'BMGB4', 'BPAN4', 'PINE4', 'INTR4', 'WEGE3']
+2026-04-18 02:49:36 | INFO     | __main__ — Data raw: /Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/data/raw
+2026-04-18 02:49:36 | SUCCESS  | __main__ — Sistema inicializado com sucesso.
+2026-04-18 02:54:37 | INFO     | src.processing.pipeline — [BBAS3] processando 3 anos (banco=True, CVM=001023)
+2026-04-18 02:57:04 | INFO     | src.processing.pipeline — [BBAS3] 2022: OK
+2026-04-18 02:58:10 | INFO     | src.processing.pipeline — [BBAS3] processando 1 anos (banco=True, CVM=001023)
+2026-04-18 02:59:47 | INFO     | src.processing.pipeline — [BBAS3] 2024: OK
+2026-04-18 02:59:47 | INFO     | src.processing.pipeline — [BBAS3] concluído — ok=1 pulados=0 falhas=0
+2026-04-18 02:59:47 | INFO     | __main__ — Processamento concluído — ok=1 falhas=0
+2026-04-18 02:59:48 | INFO     | src.processing.pipeline — [BBAS3] 2023: OK
+2026-04-18 02:59:48 | INFO     | src.processing.pipeline — [BBAS3] 2024: OK
+2026-04-18 02:59:48 | INFO     | src.processing.pipeline — [BBAS3] concluído — ok=2 pulados=1 falhas=0
+2026-04-18 02:59:48 | INFO     | __main__ — Processamento concluído — ok=2 falhas=0
+2026-04-18 02:59:59 | INFO     | src.processing.pipeline — [BBAS3] processando 2 anos (banco=True, CVM=001023)
+2026-04-18 02:59:59 | INFO     | src.processing.pipeline — [BBAS3] 2022: OK
+2026-04-18 02:59:59 | INFO     | src.processing.pipeline — [BBAS3] 2023: OK
+2026-04-18 02:59:59 | INFO     | src.processing.pipeline — [BBAS3] concluído — ok=0 pulados=2 falhas=0
+2026-04-18 02:59:59 | INFO     | __main__ — Processamento concluído — ok=0 falhas=0
+2026-04-18 03:05:55 | INFO     | __main__ — [BBAS3] iniciando análise completa...
+2026-04-18 03:05:56 | INFO     | src.analysis.metrics_engine — [BBAS3] 2022: métricas calculadas
+2026-04-18 03:05:56 | INFO     | src.analysis.metrics_engine — [BBAS3] 2023: métricas calculadas
+2026-04-18 03:05:56 | INFO     | src.analysis.metrics_engine — [BBAS3] 2024: métricas calculadas
+2026-04-18 03:05:56 | SUCCESS  | src.analysis.metrics_engine — [BBAS3] 3 períodos calculados
+2026-04-18 03:05:56 | INFO     | src.analysis.risk_engine — [BBAS3] risco avaliado: LOW (0 alertas)
+2026-04-18 03:05:56 | SUCCESS  | src.valuation.auto_dcf — [BBAS3] valuation concluído — método: Gordon Growth Model (P/B Implícito)
+2026-04-18 03:05:56 | INFO     | src.analysis.insight_engine — [BBAS3] 3 insights gerados
+2026-04-18 03:06:51 | INFO     | __main__ — [BBAS3] iniciando análise completa...
+2026-04-18 03:06:51 | INFO     | src.analysis.metrics_engine — [BBAS3] 2022: métricas calculadas
+2026-04-18 03:06:51 | INFO     | src.analysis.metrics_engine — [BBAS3] 2023: métricas calculadas
+2026-04-18 03:06:51 | INFO     | src.analysis.metrics_engine — [BBAS3] 2024: métricas calculadas
+2026-04-18 03:06:51 | SUCCESS  | src.analysis.metrics_engine — [BBAS3] 3 períodos calculados
+2026-04-18 03:06:51 | INFO     | src.analysis.risk_engine — [BBAS3] risco avaliado: LOW (0 alertas)
+2026-04-18 03:06:51 | SUCCESS  | src.valuation.auto_dcf — [BBAS3] valuation concluído — método: Gordon Growth Model (P/B Implícito)
+2026-04-18 03:06:51 | INFO     | src.analysis.insight_engine — [BBAS3] 3 insights gerados
+2026-04-18 09:46:58 | INFO     | __main__ — [BBAS3] iniciando análise completa...
+2026-04-18 09:46:59 | INFO     | src.analysis.metrics_engine — [BBAS3] 2022: métricas calculadas [bank]
+2026-04-18 09:46:59 | INFO     | src.analysis.metrics_engine — [BBAS3] 2023: métricas calculadas [bank]
+2026-04-18 09:46:59 | INFO     | src.analysis.metrics_engine — [BBAS3] 2024: métricas calculadas [bank]
+2026-04-18 09:46:59 | SUCCESS  | src.analysis.metrics_engine — [BBAS3] 3 períodos calculados
+2026-04-18 09:46:59 | INFO     | src.analysis.risk_engine — [BBAS3] risco: MEDIUM (1 alerta(s)) [bank]
+2026-04-18 09:46:59 | INFO     | src.valuation.auto_dcf — [BBAS3] setor=bank  método=gordon_growth  modelo=bank
+2026-04-18 09:46:59 | SUCCESS  | src.valuation.auto_dcf — [BBAS3] valuation concluído — Gordon Growth Model (P/B Implícito) | base=215,806 R$ mi
+2026-04-18 09:46:59 | INFO     | src.analysis.insight_engine — [BBAS3] 3 insights gerados
+2026-04-18 09:47:20 | INFO     | src.processing.pipeline — [WEGE3] processando 3 anos (banco=False, CVM=005410)
+2026-04-18 09:47:21 | INFO     | src.processing.pipeline — [WEGE3] 2022: OK
+2026-04-18 09:47:21 | INFO     | src.processing.pipeline — [WEGE3] 2023: OK
+2026-04-18 09:47:21 | INFO     | src.processing.pipeline — [WEGE3] 2024: OK
+2026-04-18 09:47:21 | INFO     | src.processing.pipeline — [WEGE3] concluído — ok=3 pulados=0 falhas=0
+2026-04-18 09:47:21 | INFO     | __main__ — Processamento concluído — ok=3 falhas=0
+2026-04-18 09:47:28 | INFO     | __main__ — [WEGE3] iniciando análise completa...
+2026-04-18 09:47:34 | INFO     | src.analysis.metrics_engine — [WEGE3] 2022: métricas calculadas [industrial]
+2026-04-18 09:47:34 | INFO     | src.analysis.metrics_engine — [WEGE3] 2023: métricas calculadas [industrial]
+2026-04-18 09:47:34 | INFO     | src.analysis.metrics_engine — [WEGE3] 2024: métricas calculadas [industrial]
+2026-04-18 09:47:34 | SUCCESS  | src.analysis.metrics_engine — [WEGE3] 3 períodos calculados
+2026-04-18 09:47:34 | INFO     | src.analysis.risk_engine — [WEGE3] risco: LOW (0 alerta(s)) [industrial]
+2026-04-18 09:47:34 | INFO     | src.valuation.auto_dcf — [WEGE3] setor=industrial  método=dcf_fcff  modelo=industrial
+2026-04-18 09:47:34 | SUCCESS  | src.valuation.auto_dcf — [WEGE3] valuation concluído — DCF FCFF | base=99,808 R$ mi
+2026-04-18 09:47:34 | INFO     | src.analysis.insight_engine — [WEGE3] 2 insights gerados

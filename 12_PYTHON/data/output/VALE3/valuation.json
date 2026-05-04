@@ -1,0 +1,45 @@
+{
+  "ticker": "VALE3",
+  "sector_type": "mining",
+  "base_year": 2025,
+  "method": "EV/EBITDA Múltiplo",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 128920.0,
+      "current_price": 89.75,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 38362.8,
+        "ev_ebitda_multiple": 5.0,
+        "net_debt_mi": 62894.0,
+        "ev_mi": 191814.0
+      }
+    },
+    "optimistic": {
+      "fair_value": 186464.2,
+      "current_price": 89.75,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 38362.8,
+        "ev_ebitda_multiple": 6.5,
+        "net_debt_mi": 62894.0,
+        "ev_mi": 249358.2
+      }
+    },
+    "pessimistic": {
+      "fair_value": 71375.8,
+      "current_price": 89.75,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 38362.8,
+        "ev_ebitda_multiple": 3.5,
+        "net_debt_mi": 62894.0,
+        "ev_mi": 134269.8
+      }
+    }
+  }
+}

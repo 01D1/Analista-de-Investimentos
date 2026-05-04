@@ -1,0 +1,51 @@
+{
+  "ticker": "ABEV3",
+  "sector_type": "industrial",
+  "base_year": 2025,
+  "method": "DCF FCFF",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 345035.3357007634,
+      "current_price": 15.329999923706055,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.111,
+        "g_terminal": 0.055,
+        "rev_growth_avg": 0.09,
+        "ebitda_margin_avg": 0.3185,
+        "beta": 1.0,
+        "tax_rate": 0.27
+      }
+    },
+    "optimistic": {
+      "fair_value": 492119.6863762137,
+      "current_price": 15.329999923706055,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1101,
+        "g_terminal": 0.06,
+        "rev_growth_avg": 0.14,
+        "ebitda_margin_avg": 0.3345,
+        "beta": 1.0,
+        "tax_rate": 0.27
+      }
+    },
+    "pessimistic": {
+      "fair_value": 228628.20945782488,
+      "current_price": 15.329999923706055,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1119,
+        "g_terminal": 0.05,
+        "rev_growth_avg": 0.04,
+        "ebitda_margin_avg": 0.2962,
+        "beta": 1.0,
+        "tax_rate": 0.27
+      }
+    }
+  }
+}

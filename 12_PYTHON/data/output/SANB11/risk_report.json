@@ -1,0 +1,25 @@
+{
+  "ticker": "SANB11",
+  "sector_type": "bank",
+  "assessed_at": "2026-04-19",
+  "overall_severity": "high",
+  "risk_count": 2,
+  "risks": [
+    {
+      "code": "BANK_LOW_ROE",
+      "severity": "medium",
+      "category": "profitability",
+      "description": "ROE baixo: 10.4%",
+      "detail": "Threshold mínimo: 12.0%",
+      "triggered_at": "2026-04-19"
+    },
+    {
+      "code": "BANK_HIGH_EFFICIENCY_RATIO",
+      "severity": "high",
+      "category": "profitability",
+      "description": "Índice de eficiência elevado: 83.7%",
+      "detail": "Quanto maior o índice, mais pesada a estrutura de custos",
+      "triggered_at": "2026-04-19"
+    }
+  ]
+}

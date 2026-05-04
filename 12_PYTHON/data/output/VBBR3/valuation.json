@@ -1,0 +1,45 @@
+{
+  "ticker": "VBBR3",
+  "sector_type": "oil_gas",
+  "base_year": 2025,
+  "method": "EV/EBITDA Múltiplo",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 12282.6,
+      "current_price": 33.209999084472656,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 5791.2,
+        "ev_ebitda_multiple": 5.5,
+        "net_debt_mi": 19569.0,
+        "ev_mi": 31851.6
+      }
+    },
+    "optimistic": {
+      "fair_value": 20969.4,
+      "current_price": 33.209999084472656,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 5791.2,
+        "ev_ebitda_multiple": 7.0,
+        "net_debt_mi": 19569.0,
+        "ev_mi": 40538.4
+      }
+    },
+    "pessimistic": {
+      "fair_value": 3595.8,
+      "current_price": 33.209999084472656,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 5791.2,
+        "ev_ebitda_multiple": 4.0,
+        "net_debt_mi": 19569.0,
+        "ev_mi": 23164.8
+      }
+    }
+  }
+}

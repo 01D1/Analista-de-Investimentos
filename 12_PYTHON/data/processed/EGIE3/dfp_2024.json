@@ -1,0 +1,2683 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 11218635.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -5112053.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 6106582.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": 1575469.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -64610.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -443460.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 1397109.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.04.04.01",
+      "account_name": "Reversão de provisão para redução ao valor recuperável de ativos, líquida",
+      "normalized_name": NaN,
+      "value": 45061.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.04.04.02",
+      "account_name": "Alienação de participação societária em controlada em conjunto",
+      "normalized_name": NaN,
+      "value": 1336133.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.04.04.03",
+      "account_name": "Alienação de subsidiária",
+      "normalized_name": NaN,
+      "value": 15915.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -27685.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.04.05.01",
+      "account_name": "Outras despesas operacionais, líquidas",
+      "normalized_name": NaN,
+      "value": -27685.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": 714115.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.04.06.01",
+      "account_name": "Equivalência patrimonial",
+      "normalized_name": NaN,
+      "value": 714115.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 7682051.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -1976080.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 622113.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -2598193.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.06.02.01",
+      "account_name": "Despesas Financeiras com Juros e V.M. - Debêntures",
+      "normalized_name": NaN,
+      "value": -947568.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.06.02.02",
+      "account_name": "Despesas Financeiras com Juros e V.M. - Empréstimos e financiamentos",
+      "normalized_name": NaN,
+      "value": -668328.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.06.02.03",
+      "account_name": "Despesas Financeiras com Juros e V.M. - Hedge sobre instrumentos de dívida",
+      "normalized_name": NaN,
+      "value": -101013.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.06.02.04",
+      "account_name": "Despesas Financeiras com Juros e V.M. - Ações preferenciais resgatáveis",
+      "normalized_name": NaN,
+      "value": -65146.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.06.02.05",
+      "account_name": "Outras despesas financeiras",
+      "normalized_name": NaN,
+      "value": -60456.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.06.02.06",
+      "account_name": "Despesas de concessões a pagar (Uso de Bem Público)",
+      "normalized_name": NaN,
+      "value": -755682.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 5705971.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": -1403130.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -996255.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": -406875.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 4302841.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 4302841.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 4279349.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 23492.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 5.24476,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 5.24476,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 50112301.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 7198390.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 3958758.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 1174405.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 1174405.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.03.02.01",
+      "account_name": "Dividendos a receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 490704.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 490704.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.06.01.01",
+      "account_name": "Crédito de imposto de renda e contribuição social",
+      "normalized_name": NaN,
+      "value": 490704.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 1574523.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 4577.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 1569946.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Instrumentos financeiros derivativos - hedge",
+      "normalized_name": NaN,
+      "value": 54670.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Instrumentos financeiros derivativos - trading",
+      "normalized_name": NaN,
+      "value": 34844.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.08.03.03",
+      "account_name": "Depósitos vinculados",
+      "normalized_name": NaN,
+      "value": 37274.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.08.03.04",
+      "account_name": "Prêmio de riscos a apropriar - repactuação do risco hidrológico",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.08.03.05",
+      "account_name": "Ativo financeiro de concessão",
+      "normalized_name": NaN,
+      "value": 395040.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.08.03.06",
+      "account_name": "Ativo de contrato",
+      "normalized_name": NaN,
+      "value": 646028.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.08.03.07",
+      "account_name": "Títulos e valores mobiliários",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.08.03.08",
+      "account_name": "Indenização de seguro a receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.08.03.09",
+      "account_name": "Outros ativos circulantes",
+      "normalized_name": NaN,
+      "value": 402090.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.01.08.03.10",
+      "account_name": "Ativos não circulantes mantidos para venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 42913911.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 11387786.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.09.05",
+      "account_name": "Depósitos vinculados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.09.06",
+      "account_name": "Depósitos judiciais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.09.07",
+      "account_name": "Prêmio de riscos a apropriar - repactuação do risco hidrológico",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.09.08",
+      "account_name": "Ganhos não realizados em operações de hedge",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 11387786.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Instrumentos financeiros derivativos - hedge",
+      "normalized_name": NaN,
+      "value": 55305.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Instrumentos financeiros derivativos - trading",
+      "normalized_name": NaN,
+      "value": 7289.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Títulos e valores mobiliários",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Depósitos vinculados",
+      "normalized_name": NaN,
+      "value": 360682.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Depósitos judiciais",
+      "normalized_name": NaN,
+      "value": 72591.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.10.08",
+      "account_name": "Prêmio de riscos a apropriar - repactuação do risco hidrológico",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.10.09",
+      "account_name": "Ativo financeiro de concessão",
+      "normalized_name": NaN,
+      "value": 3070039.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.10.10",
+      "account_name": "Créditos Fiscais a Recuperar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.10.11",
+      "account_name": "Ativo de contrato",
+      "normalized_name": NaN,
+      "value": 7028394.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.10.12",
+      "account_name": "Direito de uso de arrendamentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.01.10.13",
+      "account_name": "Outros ativos não circulantes",
+      "normalized_name": NaN,
+      "value": 793486.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 1250625.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 1250625.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 1250625.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 25186537.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 17910233.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 329310.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 6946994.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 5088963.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 50112301.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 7273026.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 130989.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 130989.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 1099881.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 2610790.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 911871.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 629415.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 282456.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 1698919.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 3393263.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 3393263.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 1595587.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Arrendamentos a pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Concessões a pagar (Uso de Bem Público)",
+      "normalized_name": NaN,
+      "value": 796725.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Obrigações fiscais e regulatórias",
+      "normalized_name": NaN,
+      "value": 465332.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Instrumentos financeiros derivativos - trading",
+      "normalized_name": NaN,
+      "value": 29139.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.05.02.08",
+      "account_name": "Ações preferenciais resgatáveis",
+      "normalized_name": NaN,
+      "value": 10142.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.05.02.09",
+      "account_name": "Outros passivos circulantes",
+      "normalized_name": NaN,
+      "value": 496338.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 38103.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 5819.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 1343.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 4476.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 32284.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.06.02.04",
+      "account_name": "Obrigações com benefícios de aposentadoria",
+      "normalized_name": NaN,
+      "value": 32284.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.06.02.05",
+      "account_name": "Provisão para Desmobilização",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 30558877.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 21036859.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 12931409.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 12339694.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 591715.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 8105450.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 6172259.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 6172259.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Concessões a pagar (Uso de Bem Público)",
+      "normalized_name": NaN,
+      "value": 4572379.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Instrumentos financeiros derivativos - trading",
+      "normalized_name": NaN,
+      "value": 6986.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Ações preferenciais resgatáveis",
+      "normalized_name": NaN,
+      "value": 477145.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Arrendamentos a pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Outros passivos não circulantes",
+      "normalized_name": NaN,
+      "value": 1115749.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 2519353.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 2519353.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 830406.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 598429.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 128487.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 29500.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 74348.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.04.01.05",
+      "account_name": "Provisão para Desmobilização",
+      "normalized_name": NaN,
+      "value": 366094.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 231977.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.04.02.04",
+      "account_name": "Obrigações com benefícios de aposentadoria",
+      "normalized_name": NaN,
+      "value": 231977.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.04.02.05",
+      "account_name": "Provisão para Desmobilização",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 12280398.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 4902648.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": -176543.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 6734106.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 980530.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 5122519.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 283024.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.04.10",
+      "account_name": "Dividendos adicionais propostos",
+      "normalized_name": NaN,
+      "value": 348033.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 214157.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": -407667.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 1013697.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 4154242.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 5207967.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro antes dos tributos sobre o lucro",
+      "normalized_name": "net_income_cfo",
+      "value": 5705971.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Resultado de participações societárias",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": -714115.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Depreciação e amortização",
+      "normalized_name": NaN,
+      "value": 1072024.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Reversão de provisão para redução ao valor recuperável de ativos, líquida",
+      "normalized_name": NaN,
+      "value": -45061.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Juros e variação monetária",
+      "normalized_name": NaN,
+      "value": 1782033.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Despesas de concessões a pagar (Uso de Bem Público)",
+      "normalized_name": NaN,
+      "value": 755682.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Alienação de participação societária em controlada em conjunto",
+      "normalized_name": NaN,
+      "value": -1336133.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Alienação de subsidiária",
+      "normalized_name": NaN,
+      "value": -15915.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Repactuação do risco hidrológico",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Ajuste a valor justo de instrumentos de dívida",
+      "normalized_name": NaN,
+      "value": -100084.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Remuneração de ativo financeiro de concessão",
+      "normalized_name": NaN,
+      "value": -498797.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Remuneração de ativo de contrato",
+      "normalized_name": NaN,
+      "value": -934643.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Receita de construção de infraestrutura de transmissão",
+      "normalized_name": NaN,
+      "value": -499463.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.01.14",
+      "account_name": "Perdas por ineficiência na construção",
+      "normalized_name": NaN,
+      "value": 3231.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.01.15",
+      "account_name": "Perdas não realizadas em operações de trading, líquidas",
+      "normalized_name": NaN,
+      "value": 11622.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.01.16",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 21615.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": 1331764.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Contas a receber de clientes",
+      "normalized_name": NaN,
+      "value": -51716.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Crédito de imposto de renda e contribuição social",
+      "normalized_name": NaN,
+      "value": -248087.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Depósitos vinculados e judiciais",
+      "normalized_name": NaN,
+      "value": 13012.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Ativo financeiro de concessão",
+      "normalized_name": NaN,
+      "value": 367259.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Ativo de contrato",
+      "normalized_name": NaN,
+      "value": 611231.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Outros ativos",
+      "normalized_name": NaN,
+      "value": 294607.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 40313.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Obrigações fiscais e regulatórias",
+      "normalized_name": NaN,
+      "value": -18822.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Obrigações trabalhistas",
+      "normalized_name": NaN,
+      "value": -5398.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Obrigações com benefícios de aposentadoria",
+      "normalized_name": NaN,
+      "value": -45078.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "Outros passivos",
+      "normalized_name": NaN,
+      "value": 374443.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -2385489.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.03.01",
+      "account_name": "Pagamento de juros sobre dívidas, líquido de hedge",
+      "normalized_name": NaN,
+      "value": -1377917.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.01.03.02",
+      "account_name": "Pagamento de imposto de renda e contribuição social",
+      "normalized_name": NaN,
+      "value": -1007572.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -5910504.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Dividendos recebidos de controladas em conjunto",
+      "normalized_name": NaN,
+      "value": 937500.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Aumento de capital em controladas em conjunto",
+      "normalized_name": "capex",
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Redução de capital em controladas em conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Aquisição de subsidiárias",
+      "normalized_name": NaN,
+      "value": -2361046.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Caixa e equivalentes de caixa de subsidiária adquirida",
+      "normalized_name": NaN,
+      "value": 271494.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Recebimento pela alienação de participação societária em controlada em conjunto",
+      "normalized_name": NaN,
+      "value": 2766468.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Recebimento pela alienação de subsidiária, líquido dos custos de venda",
+      "normalized_name": NaN,
+      "value": 52679.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Caixa e equivalentes de caixa de subsidiária alienada",
+      "normalized_name": NaN,
+      "value": -19873.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.02.09",
+      "account_name": "Aplicação no imobilizado e no intangível",
+      "normalized_name": NaN,
+      "value": -6646060.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.02.10",
+      "account_name": "Pagamento de obrigações vinculadas à aquisição de ativos",
+      "normalized_name": NaN,
+      "value": -104225.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.02.11",
+      "account_name": "Pagamento de parcelas de concessões (Uso de Bem Público)",
+      "normalized_name": NaN,
+      "value": -806480.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.02.12",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -961.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": 459253.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Ingresso de instrumentos de dívida",
+      "normalized_name": "debt_issuance",
+      "value": 4016631.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Pagamento de instrumentos de dívida, líquido de hedge",
+      "normalized_name": "debt_repayment",
+      "value": -2462243.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Pagamento de dividendos e juros sobre o capital próprio",
+      "normalized_name": NaN,
+      "value": -1133999.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Depósitos vinculados ao serviço da dívida",
+      "normalized_name": "dividends_paid",
+      "value": 38864.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Aporte de capital de acionistas minoritários, líquido dos custos de emissão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": -1297009.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 5255767.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 3958758.0,
+      "reference_date": "2024-12-31",
+      "company_name": "ENGIE BRASIL ENERGIA S.A.",
+      "cvm_code": "017329"
+    }
+  ]
+}

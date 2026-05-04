@@ -1,0 +1,289 @@
+2026-04-28 10:20:38,584 [INFO] pipeline: ======================================================================
+2026-04-28 10:20:38,584 [INFO] pipeline: PIPELINE DE VALUATION [CONSUMO_VAREJO] — VIVA3 — Vivara
+2026-04-28 10:20:38,584 [INFO] pipeline: Início: 2026-04-28 10:20:38
+2026-04-28 10:20:38,584 [INFO] pipeline:   Setor: consumo_varejo | Motor: WACC
+2026-04-28 10:20:38,584 [INFO] pipeline: ======================================================================
+2026-04-28 10:20:38,584 [INFO] pipeline: 
+[1/6] Coletando dados de mercado...
+2026-04-28 10:20:39,317 [INFO] pipeline:   Buscando cotação via yfinance...
+2026-04-28 10:20:39,317 [INFO] pipeline.mercado: Buscando cotação atual: VIVA3.SA
+2026-04-28 10:20:39,319 [DEBUG] yfinance: get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/VIVA3.SA
+2026-04-28 10:20:39,319 [DEBUG] yfinance: Entering get()
+2026-04-28 10:20:39,319 [DEBUG] yfinance:  Entering _make_request()
+2026-04-28 10:20:39,319 [DEBUG] yfinance: url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/VIVA3.SA
+2026-04-28 10:20:39,319 [DEBUG] yfinance: params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'VIVA3.SA'}
+2026-04-28 10:20:39,320 [DEBUG] yfinance:   Entering _get_cookie_and_crumb()
+2026-04-28 10:20:39,320 [DEBUG] yfinance: cookie_mode = 'basic'
+2026-04-28 10:20:39,320 [DEBUG] yfinance:    Entering _get_cookie_and_crumb_basic()
+2026-04-28 10:20:39,320 [DEBUG] yfinance:     Entering _get_cookie_basic()
+2026-04-28 10:20:39,320 [DEBUG] yfinance:      Entering _load_cookie_curlCffi()
+2026-04-28 10:20:39,327 [DEBUG] peewee: ('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+2026-04-28 10:20:39,328 [DEBUG] peewee: ('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['curlCffi', 1, 0])
+2026-04-28 10:20:39,328 [DEBUG] yfinance:      Exiting _load_cookie_curlCffi()
+2026-04-28 10:20:39,328 [DEBUG] yfinance: reusing persistent cookie
+2026-04-28 10:20:39,328 [DEBUG] yfinance:     Exiting _get_cookie_basic()
+2026-04-28 10:20:39,328 [DEBUG] yfinance:     Entering _get_crumb_basic()
+2026-04-28 10:20:39,329 [DEBUG] yfinance:      Entering _get_cookie_basic()
+2026-04-28 10:20:39,329 [DEBUG] yfinance: reusing cookie
+2026-04-28 10:20:39,329 [DEBUG] yfinance:      Exiting _get_cookie_basic()
+2026-04-28 10:20:39,823 [DEBUG] yfinance: crumb = 'GvkfUB16O4E'
+2026-04-28 10:20:39,823 [DEBUG] yfinance:     Exiting _get_crumb_basic()
+2026-04-28 10:20:39,823 [DEBUG] yfinance:    Exiting _get_cookie_and_crumb_basic()
+2026-04-28 10:20:39,823 [DEBUG] yfinance:   Exiting _get_cookie_and_crumb()
+2026-04-28 10:20:40,178 [DEBUG] yfinance: response code=200
+2026-04-28 10:20:40,178 [DEBUG] yfinance:  Exiting _make_request()
+2026-04-28 10:20:40,178 [DEBUG] yfinance: Exiting get()
+2026-04-28 10:20:40,178 [DEBUG] yfinance: get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2026-04-28 10:20:40,178 [DEBUG] yfinance: Entering get()
+2026-04-28 10:20:40,178 [DEBUG] yfinance:  Entering _make_request()
+2026-04-28 10:20:40,179 [DEBUG] yfinance: url=https://query1.finance.yahoo.com/v7/finance/quote?
+2026-04-28 10:20:40,179 [DEBUG] yfinance: params={'symbols': 'VIVA3.SA', 'formatted': 'false'}
+2026-04-28 10:20:40,179 [DEBUG] yfinance:   Entering _get_cookie_and_crumb()
+2026-04-28 10:20:40,179 [DEBUG] yfinance: cookie_mode = 'basic'
+2026-04-28 10:20:40,179 [DEBUG] yfinance:    Entering _get_cookie_and_crumb_basic()
+2026-04-28 10:20:40,179 [DEBUG] yfinance:     Entering _get_cookie_basic()
+2026-04-28 10:20:40,179 [DEBUG] yfinance: reusing cookie
+2026-04-28 10:20:40,179 [DEBUG] yfinance:     Exiting _get_cookie_basic()
+2026-04-28 10:20:40,179 [DEBUG] yfinance:     Entering _get_crumb_basic()
+2026-04-28 10:20:40,179 [DEBUG] yfinance: reusing crumb
+2026-04-28 10:20:40,179 [DEBUG] yfinance:     Exiting _get_crumb_basic()
+2026-04-28 10:20:40,179 [DEBUG] yfinance:    Exiting _get_cookie_and_crumb_basic()
+2026-04-28 10:20:40,179 [DEBUG] yfinance:   Exiting _get_cookie_and_crumb()
+2026-04-28 10:20:40,388 [DEBUG] yfinance: response code=200
+2026-04-28 10:20:40,388 [DEBUG] yfinance:  Exiting _make_request()
+2026-04-28 10:20:40,389 [DEBUG] yfinance: Exiting get()
+2026-04-28 10:20:40,398 [DEBUG] yfinance: Entering get()
+2026-04-28 10:20:40,398 [DEBUG] yfinance:  Entering _make_request()
+2026-04-28 10:20:40,398 [DEBUG] yfinance: url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/VIVA3.SA?symbol=VIVA3.SA&type=trailingPegRatio&period1=1761609600&period2=1777420800
+2026-04-28 10:20:40,399 [DEBUG] yfinance: params=None
+2026-04-28 10:20:40,399 [DEBUG] yfinance:   Entering _get_cookie_and_crumb()
+2026-04-28 10:20:40,399 [DEBUG] yfinance: cookie_mode = 'basic'
+2026-04-28 10:20:40,399 [DEBUG] yfinance:    Entering _get_cookie_and_crumb_basic()
+2026-04-28 10:20:40,399 [DEBUG] yfinance:     Entering _get_cookie_basic()
+2026-04-28 10:20:40,399 [DEBUG] yfinance: reusing cookie
+2026-04-28 10:20:40,399 [DEBUG] yfinance:     Exiting _get_cookie_basic()
+2026-04-28 10:20:40,399 [DEBUG] yfinance:     Entering _get_crumb_basic()
+2026-04-28 10:20:40,399 [DEBUG] yfinance: reusing crumb
+2026-04-28 10:20:40,399 [DEBUG] yfinance:     Exiting _get_crumb_basic()
+2026-04-28 10:20:40,399 [DEBUG] yfinance:    Exiting _get_cookie_and_crumb_basic()
+2026-04-28 10:20:40,399 [DEBUG] yfinance:   Exiting _get_cookie_and_crumb()
+2026-04-28 10:20:40,615 [DEBUG] yfinance: response code=200
+2026-04-28 10:20:40,615 [DEBUG] yfinance:  Exiting _make_request()
+2026-04-28 10:20:40,615 [DEBUG] yfinance: Exiting get()
+2026-04-28 10:20:40,615 [INFO] pipeline:   Cotação ON: R$ 24.93  |  Cotação PN: R$ 0.00
+2026-04-28 10:20:40,615 [INFO] pipeline:   Ações (fonte: empresas.yaml): ON=452,000 mil | PN=0 mil
+2026-04-28 10:20:40,615 [INFO] pipeline.mercado: Calculando beta: VIVA3 (252 dias úteis)
+2026-04-28 10:20:40,616 [DEBUG] pipeline.mercado: Cache preços HIT: precos_VIVA3.SA_2019-01-01_2026-04-28
+2026-04-28 10:20:40,802 [DEBUG] pipeline.mercado: Cache preços HIT: precos_^BVSP_2019-01-01_2026-04-28
+2026-04-28 10:20:40,845 [INFO] pipeline.mercado:   Beta estatístico: 1.1588 | R²: 0.256 | n=251
+2026-04-28 10:20:40,849 [INFO] pipeline:   Beta estatístico: 1.159 | Beta utilizado: 0.850
+2026-04-28 10:20:40,849 [INFO] pipeline: 
+[2/6] Coletando dados macroeconômicos (BCB)...
+2026-04-28 10:20:40,857 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): olinda.bcb.gov.br:443
+2026-04-28 10:20:41,205 [DEBUG] urllib3.connectionpool: https://olinda.bcb.gov.br:443 "GET /olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'Selic'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana HTTP/1.1" 400 140
+2026-04-28 10:20:41,206 [WARNING] pipeline.macro: Não foi possível obter Focus Selic: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'Selic'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana
+2026-04-28 10:20:41,210 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): olinda.bcb.gov.br:443
+2026-04-28 10:20:41,483 [DEBUG] urllib3.connectionpool: https://olinda.bcb.gov.br:443 "GET /olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'IPCA'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana HTTP/1.1" 400 140
+2026-04-28 10:20:41,484 [WARNING] pipeline.macro: Não foi possível obter Focus IPCA: 400 Client Error: Bad Request for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'IPCA'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana
+2026-04-28 10:20:41,485 [INFO] pipeline.macro: 
+=== Coletando dados macroeconômicos ===
+2026-04-28 10:20:41,485 [INFO] pipeline.macro: Baixando série BCB 432...
+2026-04-28 10:20:41,486 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): api.bcb.gov.br:443
+2026-04-28 10:20:41,811 [DEBUG] urllib3.connectionpool: https://api.bcb.gov.br:443 "GET /dados/serie/bcdata.sgs.432/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=28%2F04%2F2026 HTTP/1.1" 406 806
+2026-04-28 10:20:41,812 [ERROR] pipeline.macro: Erro ao baixar série BCB 432: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=28%2F04%2F2026
+2026-04-28 10:20:41,812 [WARNING] pipeline.macro: Série Selic meta sem DatetimeIndex — usando fallback histórico
+2026-04-28 10:20:41,812 [INFO] pipeline.macro: Baixando série BCB 12...
+2026-04-28 10:20:41,913 [DEBUG] urllib3.connectionpool: https://api.bcb.gov.br:443 "GET /dados/serie/bcdata.sgs.12/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=28%2F04%2F2026 HTTP/1.1" 406 804
+2026-04-28 10:20:41,913 [ERROR] pipeline.macro: Erro ao baixar série BCB 12: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.12/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=28%2F04%2F2026
+2026-04-28 10:20:41,914 [WARNING] pipeline.macro: Série DI sem DatetimeIndex — usando fallback histórico
+2026-04-28 10:20:41,915 [DEBUG] pipeline.macro: Cache BCB HIT: série 13522
+2026-04-28 10:20:41,918 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (46.1%) para 2020 — usando fallback
+2026-04-28 10:20:41,919 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (159.3%) para 2021 — usando fallback
+2026-04-28 10:20:41,919 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (191.2%) para 2022 — usando fallback
+2026-04-28 10:20:41,920 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (71.5%) para 2023 — usando fallback
+2026-04-28 10:20:41,921 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (67.0%) para 2024 — usando fallback
+2026-04-28 10:20:41,922 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (80.0%) para 2025 — usando fallback
+2026-04-28 10:20:41,922 [INFO] pipeline.macro: Baixando série BCB 258...
+2026-04-28 10:20:42,021 [DEBUG] urllib3.connectionpool: https://api.bcb.gov.br:443 "GET /dados/serie/bcdata.sgs.258/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=28%2F04%2F2026 HTTP/1.1" 406 806
+2026-04-28 10:20:42,021 [ERROR] pipeline.macro: Erro ao baixar série BCB 258: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.258/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=28%2F04%2F2026
+2026-04-28 10:20:42,021 [WARNING] pipeline.macro: Série TJLP sem DatetimeIndex — usando fallback histórico
+2026-04-28 10:20:42,022 [DEBUG] pipeline.macro: Cache BCB HIT: série 29039
+2026-04-28 10:20:42,030 [DEBUG] pipeline.macro: Cache BCB HIT: série 13522
+2026-04-28 10:20:42,034 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (46.1%) para 2020 — usando fallback
+2026-04-28 10:20:42,035 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (159.3%) para 2021 — usando fallback
+2026-04-28 10:20:42,035 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (191.2%) para 2022 — usando fallback
+2026-04-28 10:20:42,035 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (71.5%) para 2023 — usando fallback
+2026-04-28 10:20:42,036 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (67.0%) para 2024 — usando fallback
+2026-04-28 10:20:42,036 [WARNING] pipeline.macro: IPCA calculado fora do intervalo plausível (80.0%) para 2025 — usando fallback
+2026-04-28 10:20:42,036 [INFO] pipeline.macro: 
+RESUMO MACRO HISTÓRICO:
+2026-04-28 10:20:42,036 [INFO] pipeline.macro:   selic_meta     : 2021: 9.25% | 2022: 13.75% | 2023: 11.75% | 2024: 11.75% | 2025: 10.00%
+2026-04-28 10:20:42,036 [INFO] pipeline.macro:   selic_efet     : 2021: 4.48% | 2022: 12.33% | 2023: 13.15% | 2024: 10.73% | 2025: 10.50%
+2026-04-28 10:20:42,037 [INFO] pipeline.macro:   ipca           : 2021: 10.06% | 2022: 5.62% | 2023: 4.62% | 2024: 4.83% | 2025: 4.50%
+2026-04-28 10:20:42,037 [INFO] pipeline.macro:   tjlp           : 2021: 5.25% | 2022: 6.25% | 2023: 7.00% | 2024: 7.00% | 2025: 6.50%
+2026-04-28 10:20:42,037 [INFO] pipeline.macro:   cds            : 2021: 0.73% | 2022: 1.26% | 2023: 0.84% | 2024: 0.81% | 2025: 0.76%
+2026-04-28 10:20:42,037 [INFO] pipeline.macro:   inflacao_impl  : 2021: 10.06% | 2022: 5.62% | 2023: 4.62% | 2024: 4.83% | 2025: 4.50%
+2026-04-28 10:20:42,037 [INFO] pipeline: 
+[3/6] Baixando demonstrações financeiras (CVM)...
+2026-04-28 10:20:42,040 [INFO] pipeline.cvm: 
+==================================================
+2026-04-28 10:20:42,040 [INFO] pipeline.cvm: Baixando DFP 2020...
+2026-04-28 10:20:42,040 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:42,355 [INFO] pipeline.cvm:   DFP dre 2020: 76 linhas
+2026-04-28 10:20:42,355 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:42,814 [INFO] pipeline.cvm:   DFP bpa 2020: 144 linhas
+2026-04-28 10:20:42,814 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:43,554 [INFO] pipeline.cvm:   DFP bpp 2020: 258 linhas
+2026-04-28 10:20:43,555 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:43,924 [INFO] pipeline.cvm:   DFP dfc_mi 2020: 114 linhas
+2026-04-28 10:20:43,925 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:43,956 [WARNING] pipeline.cvm:   Empresa 24805 não encontrada em dfc_md 2020
+2026-04-28 10:20:43,957 [INFO] pipeline.cvm: 
+==================================================
+2026-04-28 10:20:43,957 [INFO] pipeline.cvm: Baixando DFP 2021...
+2026-04-28 10:20:43,957 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:44,252 [INFO] pipeline.cvm:   DFP dre 2021: 78 linhas
+2026-04-28 10:20:44,252 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:44,801 [INFO] pipeline.cvm:   DFP bpa 2021: 144 linhas
+2026-04-28 10:20:44,802 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:45,952 [INFO] pipeline.cvm:   DFP bpp 2021: 258 linhas
+2026-04-28 10:20:45,953 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:46,415 [INFO] pipeline.cvm:   DFP dfc_mi 2021: 116 linhas
+2026-04-28 10:20:46,416 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:46,458 [WARNING] pipeline.cvm:   Empresa 24805 não encontrada em dfc_md 2021
+2026-04-28 10:20:46,459 [INFO] pipeline.cvm: 
+==================================================
+2026-04-28 10:20:46,459 [INFO] pipeline.cvm: Baixando DFP 2022...
+2026-04-28 10:20:46,460 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:46,772 [INFO] pipeline.cvm:   DFP dre 2022: 78 linhas
+2026-04-28 10:20:46,773 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:47,831 [INFO] pipeline.cvm:   DFP bpa 2022: 144 linhas
+2026-04-28 10:20:47,842 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:49,216 [INFO] pipeline.cvm:   DFP bpp 2022: 268 linhas
+2026-04-28 10:20:49,217 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:49,992 [INFO] pipeline.cvm:   DFP dfc_mi 2022: 120 linhas
+2026-04-28 10:20:49,993 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:50,062 [WARNING] pipeline.cvm:   Empresa 24805 não encontrada em dfc_md 2022
+2026-04-28 10:20:50,063 [INFO] pipeline.cvm: 
+==================================================
+2026-04-28 10:20:50,063 [INFO] pipeline.cvm: Baixando DFP 2023...
+2026-04-28 10:20:50,064 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:50,540 [INFO] pipeline.cvm:   DFP dre 2023: 78 linhas
+2026-04-28 10:20:50,541 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:51,277 [INFO] pipeline.cvm:   DFP bpa 2023: 144 linhas
+2026-04-28 10:20:51,278 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:52,384 [INFO] pipeline.cvm:   DFP bpp 2023: 268 linhas
+2026-04-28 10:20:52,385 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:52,929 [INFO] pipeline.cvm:   DFP dfc_mi 2023: 124 linhas
+2026-04-28 10:20:52,930 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:52,981 [WARNING] pipeline.cvm:   Empresa 24805 não encontrada em dfc_md 2023
+2026-04-28 10:20:52,981 [INFO] pipeline.cvm: 
+==================================================
+2026-04-28 10:20:52,981 [INFO] pipeline.cvm: Baixando DFP 2024...
+2026-04-28 10:20:52,982 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:53,328 [INFO] pipeline.cvm:   DFP dre 2024: 78 linhas
+2026-04-28 10:20:53,329 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:54,126 [INFO] pipeline.cvm:   DFP bpa 2024: 148 linhas
+2026-04-28 10:20:54,127 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:55,268 [INFO] pipeline.cvm:   DFP bpp 2024: 270 linhas
+2026-04-28 10:20:55,269 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:55,857 [INFO] pipeline.cvm:   DFP dfc_mi 2024: 128 linhas
+2026-04-28 10:20:55,857 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:55,897 [WARNING] pipeline.cvm:   Empresa 24805 não encontrada em dfc_md 2024
+2026-04-28 10:20:55,897 [INFO] pipeline.cvm: 
+==================================================
+2026-04-28 10:20:55,897 [INFO] pipeline.cvm: Baixando DFP 2025...
+2026-04-28 10:20:55,898 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:56,152 [INFO] pipeline.cvm:   DFP dre 2025: 78 linhas
+2026-04-28 10:20:56,153 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:56,626 [INFO] pipeline.cvm:   DFP bpa 2025: 148 linhas
+2026-04-28 10:20:56,628 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:57,645 [INFO] pipeline.cvm:   DFP bpp 2025: 270 linhas
+2026-04-28 10:20:57,646 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:58,147 [INFO] pipeline.cvm:   DFP dfc_mi 2025: 136 linhas
+2026-04-28 10:20:58,148 [DEBUG] pipeline.cvm: Cache HIT: zip:https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/
+2026-04-28 10:20:58,183 [WARNING] pipeline.cvm:   Empresa 24805 não encontrada em dfc_md 2025
+2026-04-28 10:20:58,183 [INFO] pipeline: 
+[4/6] Normalizando dados...
+2026-04-28 10:21:00,799 [INFO] pipeline:   DFC normalizada: 11 linhas
+2026-04-28 10:21:00,805 [INFO] pipeline:   DRE normalizada:
+2026-04-28 10:21:00,805 [INFO] pipeline:     receita_liquida: 2020: 1,047,547 | 2021: 1,466,387 | 2022: 1,843,735 | 2023: 2,186,975 | 2024: 2,577,113 | 2025: 3,026,582
+2026-04-28 10:21:00,806 [INFO] pipeline:     ebit: 2020: 205,079 | 2021: 294,686 | 2022: 376,372 | 2023: 450,646 | 2024: 683,585 | 2025: 726,321
+2026-04-28 10:21:00,806 [INFO] pipeline:     lucro_liquido: 2020: 146,672 | 2021: 298,490 | 2022: 360,854 | 2023: 369,245 | 2024: 653,394 | 2025: 619,502
+2026-04-28 10:21:00,806 [INFO] pipeline: 
+[5/6] Calculando projeções...
+2026-04-28 10:21:00,811 [INFO] pipeline.projecoes: 
+=== Projeções (não-financeira / FCFF) ===
+2026-04-28 10:21:00,812 [DEBUG] pipeline.projecoes:   Receita 2026: R$ 3,256,097 MM (+7.6%)
+2026-04-28 10:21:00,813 [DEBUG] pipeline.projecoes:   Receita 2027: R$ 3,489,451 MM (+7.2%)
+2026-04-28 10:21:00,813 [DEBUG] pipeline.projecoes:   Receita 2028: R$ 3,724,989 MM (+6.8%)
+2026-04-28 10:21:00,813 [DEBUG] pipeline.projecoes:   Receita 2029: R$ 3,960,905 MM (+6.3%)
+2026-04-28 10:21:00,813 [DEBUG] pipeline.projecoes:   Receita 2030: R$ 4,195,258 MM (+5.9%)
+2026-04-28 10:21:00,813 [DEBUG] pipeline.projecoes:   Receita 2031: R$ 4,425,998 MM (+5.5%)
+2026-04-28 10:21:00,813 [DEBUG] pipeline.projecoes:   Receita 2032: R$ 4,669,428 MM (+5.5%)
+2026-04-28 10:21:00,813 [DEBUG] pipeline.projecoes:   Receita 2033: R$ 4,926,246 MM (+5.5%)
+2026-04-28 10:21:00,813 [DEBUG] pipeline.projecoes:   Receita 2034: R$ 5,197,190 MM (+5.5%)
+2026-04-28 10:21:00,813 [DEBUG] pipeline.projecoes:   Receita 2035: R$ 5,483,035 MM (+5.5%)
+2026-04-28 10:21:00,815 [INFO] pipeline.projecoes:   Margem EBITDA: 26.3% → 24.0% (conv 6a)
+2026-04-28 10:21:00,817 [INFO] pipeline.projecoes:   D&A/Receita: 2.3%
+2026-04-28 10:21:00,820 [INFO] pipeline.projecoes:   CAPEX/Receita: 5.8% → 3.0%
+2026-04-28 10:21:00,821 [INFO] pipeline.projecoes:   NCG/Receita: 69.3% → 15.0%
+2026-04-28 10:21:00,826 [INFO] pipeline.projecoes:   Alíquota efetiva: 15.0%
+2026-04-28 10:21:00,827 [INFO] pipeline.projecoes: Projeções concluídas (FCFF). Resumo:
+2026-04-28 10:21:00,827 [INFO] pipeline.projecoes:    Ano      Receita     EBITDA    Mg%      NOPAT       FCFF
+2026-04-28 10:21:00,827 [INFO] pipeline.projecoes:   2026    3,256,097    843,864  25.9%    676,528    955,488
+2026-04-28 10:21:00,827 [INFO] pipeline.projecoes:   2027    3,489,451    890,967  25.5%    713,225    874,543
+2026-04-28 10:21:00,827 [INFO] pipeline.projecoes:   2028    3,724,989    936,830  25.1%    748,784    975,147
+2026-04-28 10:21:00,827 [INFO] pipeline.projecoes:   2029    3,960,905    980,980  24.8%    782,827  1,078,021
+2026-04-28 10:21:00,827 [INFO] pipeline.projecoes:   2030    4,195,258  1,022,942  24.4%    814,972  1,182,041
+2026-04-28 10:21:00,828 [INFO] pipeline.valuation:   Estrutura de capital: E=20% | D=80%
+2026-04-28 10:21:00,828 [INFO] pipeline: 
+[6/6] Calculando valuation (FCFF / WACC)...
+2026-04-28 10:21:00,829 [WARNING] pipeline.valuation: TIR > 150% — valor intrínseco muito acima do preço de mercado
+2026-04-28 10:21:00,829 [WARNING] pipeline.valuation: TIR > 150% — valor intrínseco muito acima do preço de mercado
+2026-04-28 10:21:00,829 [INFO] pipeline.valuation: 
+==================================================
+2026-04-28 10:21:00,830 [INFO] pipeline.valuation: VALUATION FCFF/WACC — VIVA3
+2026-04-28 10:21:00,830 [INFO] pipeline.valuation:   VP FCFF (10a):     R$    5,540,115 MM
+2026-04-28 10:21:00,830 [INFO] pipeline.valuation:   Valor Perp. (VP):  R$    8,946,263 MM
+2026-04-28 10:21:00,830 [INFO] pipeline.valuation:   ENTERPRISE VALUE:  R$   14,486,378 MM
+2026-04-28 10:21:00,830 [INFO] pipeline.valuation:   (-) Dívida Líq.:   R$      132,631 MM
+2026-04-28 10:21:00,830 [INFO] pipeline.valuation:   VALOR DO EQUITY:   R$   14,353,747 MM
+2026-04-28 10:21:00,830 [INFO] pipeline.valuation:   Preço Justo ON:    R$ 31756.08
+2026-04-28 10:21:00,830 [INFO] pipeline.valuation:   Preço Justo PN:    R$ 31756.08
+2026-04-28 10:21:00,831 [INFO] pipeline.valuation:   Cotação ON:        R$    24.93
+2026-04-28 10:21:00,831 [INFO] pipeline.valuation:   Upside ON:            127281.0%
+2026-04-28 10:21:00,831 [INFO] pipeline.valuation:   TIR (ON):               150.0%
+2026-04-28 10:21:00,831 [INFO] pipeline.valuation:   WACC último ano:          9.7%
+2026-04-28 10:21:00,833 [INFO] pipeline:   Sem template VAROS para VIVA3 — Excel será criado do zero
+2026-04-28 10:21:01,439 [INFO] pipeline.excel_geral: 
+============================================================
+2026-04-28 10:21:01,440 [INFO] pipeline.excel_geral: Criando Excel completo (12 abas) para: Vivara (VIVA3)
+2026-04-28 10:21:01,443 [INFO] pipeline.excel_geral:   → 1/12  Dashboard
+2026-04-28 10:21:01,459 [INFO] pipeline.excel_geral:   → 2/12  WACC
+2026-04-28 10:21:01,508 [INFO] pipeline.excel_geral:   → 3/12  TIR ON
+2026-04-28 10:21:01,522 [INFO] pipeline.excel_geral:   → 4/12  TIR PN
+2026-04-28 10:21:01,534 [INFO] pipeline.excel_geral:   → 5/12  Valor do Equity
+2026-04-28 10:21:01,541 [INFO] pipeline.excel_geral:   → 6/12  Preço Teto
+2026-04-28 10:21:01,548 [INFO] pipeline.excel_geral:   → 7/12  DRE + DCF
+2026-04-28 10:21:01,684 [INFO] pipeline.excel_geral:   → 8/12  DRE Contas Abertas
+2026-04-28 10:21:01,749 [INFO] pipeline.excel_geral:   → 9/12  Balanço Patrimonial
+2026-04-28 10:21:01,798 [INFO] pipeline.excel_geral:   → 10/12 Painel de Índices
+2026-04-28 10:21:01,875 [INFO] pipeline.excel_geral:   → 11/12 Projeções Premissas
+2026-04-28 10:21:01,905 [INFO] pipeline.excel_geral:   → 12/12 Projeções Capex e CG
+2026-04-28 10:21:02,029 [INFO] pipeline.excel_geral: 
+Arquivo salvo: C:\Users\55819\OneDrive - EPEJUD\DIEGO\OBSIDIAN\Analista de Investimentos\12_PYTHON\pipeline banco completo\outputs\Valuation_VIVA3_Vivara_20260428.xlsx
+2026-04-28 10:21:02,029 [INFO] pipeline: 
+======================================================================
+2026-04-28 10:21:02,029 [INFO] pipeline: RESUMO DO VALUATION (FCFF/WACC)
+2026-04-28 10:21:02,029 [INFO] pipeline: ======================================================================
+2026-04-28 10:21:02,029 [INFO] pipeline:   Empresa:           Vivara (VIVA3)
+2026-04-28 10:21:02,029 [INFO] pipeline:   Enterprise Value:  R$   14,486,378 MM
+2026-04-28 10:21:02,029 [INFO] pipeline:   Cotação ON:        R$ 24.93
+2026-04-28 10:21:02,029 [INFO] pipeline:   Preço Justo ON:    R$ 31756.08
+2026-04-28 10:21:02,030 [INFO] pipeline:   Upside ON:            127281.0%
+2026-04-28 10:21:02,030 [INFO] pipeline:   TIR:                  150.0%
+2026-04-28 10:21:02,030 [INFO] pipeline:   Preço Teto ON:     R$ 31756.08
+2026-04-28 10:21:02,030 [INFO] pipeline: 
+  Arquivo gerado:    C:\Users\55819\OneDrive - EPEJUD\DIEGO\OBSIDIAN\Analista de Investimentos\12_PYTHON\pipeline banco completo\outputs\Valuation_VIVA3_Vivara_20260428.xlsx
+2026-04-28 10:21:02,030 [INFO] pipeline: ======================================================================

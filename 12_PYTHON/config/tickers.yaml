@@ -1,0 +1,671 @@
+tickers:
+  # ── Bancos ────────────────────────────────────────────────────────────────
+  - ticker: BBAS3
+    name: Banco do Brasil
+    type: bank
+    sector: financials
+    active: true
+    priority: high
+
+  - ticker: ITUB4
+    name: Itaú Unibanco
+    type: bank
+    sector: financials
+    active: true
+    priority: high
+
+  - ticker: BBDC4
+    name: Bradesco
+    type: bank
+    sector: financials
+    active: true
+    priority: high
+
+  - ticker: BBDC3
+    name: Bradesco ON
+    type: bank
+    sector: financials
+    active: false
+    priority: low
+
+  - ticker: SANB11
+    name: Santander Brasil
+    type: bank
+    sector: financials
+    active: true
+    priority: high
+
+  - ticker: BPAC11
+    name: BTG Pactual
+    type: bank
+    sector: financials
+    active: true
+    priority: high
+
+  - ticker: BRSR6
+    name: Banrisul
+    type: bank
+    sector: financials
+    active: true
+    priority: medium
+
+  - ticker: ABCB4
+    name: Banco ABC Brasil
+    type: bank
+    sector: financials
+    active: true
+    priority: medium
+
+  - ticker: BMGB4
+    name: Banco BMG
+    type: bank
+    sector: financials
+    active: true
+    priority: low
+
+  - ticker: BPAN4
+    name: Banco Pan
+    type: bank
+    sector: financials
+    active: true
+    priority: low
+
+  - ticker: PINE4
+    name: Banco Pine
+    type: bank
+    sector: financials
+    active: true
+    priority: low
+
+  - ticker: INTR4
+    name: Inter & Co
+    type: bank
+    sector: financials
+    active: true
+    priority: medium
+
+  # ── Holdings Financeiras ──────────────────────────────────────────────────
+  - ticker: ITSA4
+    name: Itaúsa
+    type: holding
+    sector: financials
+    active: true
+    priority: medium
+
+  - ticker: BBSE3
+    name: BB Seguridade
+    type: holding
+    sector: financials
+    active: true
+    priority: medium
+
+  - ticker: BRAP4
+    name: Bradespar
+    type: holding
+    sector: financials
+    active: true
+    priority: low
+
+  - ticker: IRBR3
+    name: IRB Brasil Resseguros
+    type: holding
+    sector: financials
+    active: true
+    priority: low
+
+  - ticker: PSSA3
+    name: Porto Seguro
+    type: holding
+    sector: financials
+    active: true
+    priority: medium
+
+  - ticker: CXSE3
+    name: Caixa Seguridade
+    type: holding
+    sector: financials
+    active: true
+    priority: medium
+
+  - ticker: B3SA3
+    name: B3
+    type: holding
+    sector: financials
+    active: true
+    priority: high
+
+  # ── Petróleo & Gás ────────────────────────────────────────────────────────
+  - ticker: PETR4
+    name: Petrobras PN
+    type: oil_gas
+    sector: energy
+    active: true
+    priority: high
+
+  - ticker: PETR3
+    name: Petrobras ON
+    type: oil_gas
+    sector: energy
+    active: false
+    priority: low
+
+  - ticker: PRIO3
+    name: PetroRio
+    type: oil_gas
+    sector: energy
+    active: true
+    priority: high
+
+  - ticker: BRAV3
+    name: Brava Energia
+    type: oil_gas
+    sector: energy
+    active: true
+    priority: medium
+
+  - ticker: RECV3
+    name: Petrorecôncavo
+    type: oil_gas
+    sector: energy
+    active: true
+    priority: medium
+
+  - ticker: VBBR3
+    name: Vibra Energia
+    type: oil_gas
+    sector: energy
+    active: true
+    priority: medium
+
+  - ticker: RAIZ4
+    name: Raizen
+    type: oil_gas
+    sector: energy
+    active: true
+    priority: medium
+
+  - ticker: ENEV3
+    name: Eneva
+    type: oil_gas
+    sector: energy
+    active: true
+    priority: medium
+
+  - ticker: CSAN3
+    name: Cosan
+    type: holding
+    sector: energy
+    active: true
+    priority: medium
+
+  # ── Mineração / Siderurgia ────────────────────────────────────────────────
+  - ticker: VALE3
+    name: Vale
+    type: mining
+    sector: materials
+    active: true
+    priority: high
+
+  - ticker: CMIN3
+    name: CSN Mineração
+    type: mining
+    sector: materials
+    active: true
+    priority: medium
+
+  - ticker: GGBR4
+    name: Gerdau
+    type: industrial
+    sector: materials
+    active: true
+    priority: high
+
+  - ticker: GOAU4
+    name: Gerdau Metalúrgica
+    type: holding
+    sector: materials
+    active: true
+    priority: low
+
+  - ticker: CSNA3
+    name: CSN
+    type: industrial
+    sector: materials
+    active: true
+    priority: medium
+
+  - ticker: USIM5
+    name: Usiminas
+    type: industrial
+    sector: materials
+    active: true
+    priority: medium
+
+  - ticker: BRKM5
+    name: Braskem
+    type: industrial
+    sector: materials
+    active: true
+    priority: medium
+
+  # ── Utilities / Energia ───────────────────────────────────────────────────
+  - ticker: ELET3
+    name: Eletrobras ON
+    type: utilities
+    sector: utilities
+    active: true
+    priority: high
+
+  - ticker: ELET6
+    name: Eletrobras PNB
+    type: utilities
+    sector: utilities
+    active: false
+    priority: low
+
+  - ticker: CMIG4
+    name: Cemig
+    type: utilities
+    sector: utilities
+    active: true
+    priority: high
+
+  - ticker: CPFE3
+    name: CPFL Energia
+    type: utilities
+    sector: utilities
+    active: true
+    priority: medium
+
+  - ticker: CPLE6
+    name: Copel
+    type: utilities
+    sector: utilities
+    active: true
+    priority: medium
+
+  - ticker: EGIE3
+    name: Engie Brasil
+    type: utilities
+    sector: utilities
+    active: true
+    priority: medium
+
+  - ticker: ENGI11
+    name: Energisa
+    type: utilities
+    sector: utilities
+    active: true
+    priority: medium
+
+  - ticker: EQTL3
+    name: Equatorial Energia
+    type: utilities
+    sector: utilities
+    active: true
+    priority: high
+
+  - ticker: AURE3
+    name: Auren Energia
+    type: utilities
+    sector: utilities
+    active: true
+    priority: medium
+
+  - ticker: ISAE4
+    name: ISA Energia Brasil
+    type: utilities
+    sector: utilities
+    active: true
+    priority: medium
+
+  - ticker: TAEE11
+    name: Taesa
+    type: utilities
+    sector: utilities
+    active: true
+    priority: medium
+
+  - ticker: SBSP3
+    name: Sabesp
+    type: utilities
+    sector: utilities
+    active: true
+    priority: high
+
+  # ── Telecom ───────────────────────────────────────────────────────────────
+  - ticker: VIVT3
+    name: Telefônica Brasil (Vivo)
+    type: telecom
+    sector: communication
+    active: true
+    priority: high
+
+  - ticker: TIMS3
+    name: TIM
+    type: telecom
+    sector: communication
+    active: true
+    priority: medium
+
+  # ── Industrial ────────────────────────────────────────────────────────────
+  - ticker: WEGE3
+    name: WEG
+    type: industrial
+    sector: industrials
+    active: true
+    priority: high
+
+  - ticker: EMBR3
+    name: Embraer
+    type: industrial
+    sector: industrials
+    active: true
+    priority: high
+
+  - ticker: POMO4
+    name: Marcopolo
+    type: industrial
+    sector: industrials
+    active: true
+    priority: medium
+
+  - ticker: STBP3
+    name: Santos Brasil
+    type: industrial
+    sector: industrials
+    active: true
+    priority: medium
+
+  - ticker: CCRO3
+    name: CCR
+    type: industrial
+    sector: industrials
+    active: true
+    priority: medium
+
+  - ticker: RAIL3
+    name: Rumo
+    type: industrial
+    sector: industrials
+    active: true
+    priority: high
+
+  - ticker: UGPA3
+    name: Ultrapar
+    type: holding
+    sector: energy
+    active: true
+    priority: medium
+
+  # ── Papel & Celulose ──────────────────────────────────────────────────────
+  - ticker: SUZB3
+    name: Suzano
+    type: industrial
+    sector: materials
+    active: true
+    priority: high
+
+  - ticker: KLBN11
+    name: Klabin
+    type: industrial
+    sector: materials
+    active: true
+    priority: medium
+
+  # ── Alimentos & Bebidas ───────────────────────────────────────────────────
+  - ticker: ABEV3
+    name: Ambev
+    type: industrial
+    sector: consumer_staples
+    active: true
+    priority: high
+
+  - ticker: JBSS3
+    name: JBS
+    type: industrial
+    sector: consumer_staples
+    active: true
+    priority: high
+
+  - ticker: BRFS3
+    name: BRF
+    type: industrial
+    sector: consumer_staples
+    active: true
+    priority: medium
+
+  - ticker: MRFG3
+    name: Marfrig
+    type: industrial
+    sector: consumer_staples
+    active: true
+    priority: medium
+
+  - ticker: BEEF3
+    name: Minerva
+    type: industrial
+    sector: consumer_staples
+    active: true
+    priority: medium
+
+  - ticker: SMTO3
+    name: São Martinho
+    type: agro
+    sector: consumer_staples
+    active: true
+    priority: medium
+
+  - ticker: SLCE3
+    name: SLC Agrícola
+    type: agro
+    sector: consumer_staples
+    active: true
+    priority: medium
+
+  # ── Varejo ────────────────────────────────────────────────────────────────
+  - ticker: LREN3
+    name: Lojas Renner
+    type: retail
+    sector: consumer_discretionary
+    active: true
+    priority: high
+
+  - ticker: MGLU3
+    name: Magazine Luiza
+    type: retail
+    sector: consumer_discretionary
+    active: true
+    priority: medium
+
+  - ticker: AZZA3
+    name: Azzas 2154
+    type: retail
+    sector: consumer_discretionary
+    active: true
+    priority: medium
+
+  - ticker: NTCO3
+    name: Grupo Natura
+    type: retail
+    sector: consumer_discretionary
+    active: true
+    priority: medium
+
+  - ticker: CRFB3
+    name: Carrefour Brasil
+    type: retail
+    sector: consumer_staples
+    active: true
+    priority: medium
+
+  - ticker: PCAR3
+    name: Grupo Pão de Açúcar
+    type: retail
+    sector: consumer_staples
+    active: true
+    priority: medium
+
+  - ticker: PETZ3
+    name: Petz
+    type: retail
+    sector: consumer_discretionary
+    active: true
+    priority: low
+
+  - ticker: VIVA3
+    name: Vivara
+    type: retail
+    sector: consumer_discretionary
+    active: true
+    priority: low
+
+  - ticker: AMOB3
+    name: Automob
+    type: retail
+    sector: consumer_discretionary
+    active: true
+    priority: low
+
+  # ── Saúde ─────────────────────────────────────────────────────────────────
+  - ticker: RDOR3
+    name: Rede D'Or
+    type: healthcare
+    sector: healthcare
+    active: true
+    priority: high
+
+  - ticker: HAPV3
+    name: Hapvida
+    type: healthcare
+    sector: healthcare
+    active: true
+    priority: high
+
+  - ticker: FLRY3
+    name: Fleury
+    type: healthcare
+    sector: healthcare
+    active: true
+    priority: medium
+
+  - ticker: HYPE3
+    name: Hypera
+    type: healthcare
+    sector: healthcare
+    active: true
+    priority: medium
+
+  - ticker: RADL3
+    name: Raia Drogasil
+    type: healthcare
+    sector: healthcare
+    active: true
+    priority: high
+
+  # ── Real Estate / Shopping ────────────────────────────────────────────────
+  - ticker: MULT3
+    name: Multiplan
+    type: real_estate
+    sector: real_estate
+    active: true
+    priority: medium
+
+  - ticker: CYRE3
+    name: Cyrela
+    type: real_estate
+    sector: real_estate
+    active: true
+    priority: medium
+
+  - ticker: MRVE3
+    name: MRV
+    type: real_estate
+    sector: real_estate
+    active: true
+    priority: medium
+
+  - ticker: IGTI11
+    name: Iguatemi
+    type: real_estate
+    sector: real_estate
+    active: true
+    priority: medium
+
+  - ticker: ALOS3
+    name: Allos
+    type: real_estate
+    sector: real_estate
+    active: true
+    priority: medium
+
+  # ── Locação / Serviços ────────────────────────────────────────────────────
+  - ticker: RENT3
+    name: Localiza
+    type: industrial
+    sector: consumer_discretionary
+    active: true
+    priority: high
+
+  - ticker: VAMO3
+    name: Vamos Locação
+    type: industrial
+    sector: industrials
+    active: true
+    priority: medium
+
+  # ── Tecnologia ────────────────────────────────────────────────────────────
+  - ticker: TOTS3
+    name: TOTVS
+    type: technology
+    sector: technology
+    active: true
+    priority: high
+
+  - ticker: LWSA3
+    name: LWSA
+    type: technology
+    sector: technology
+    active: true
+    priority: low
+
+  # ── Educação ─────────────────────────────────────────────────────────────
+  - ticker: COGN3
+    name: Cogna
+    type: education
+    sector: consumer_discretionary
+    active: true
+    priority: medium
+
+  - ticker: YDUQ3
+    name: Yduqs
+    type: education
+    sector: consumer_discretionary
+    active: true
+    priority: medium
+
+  # ── Aviação ───────────────────────────────────────────────────────────────
+  - ticker: AZUL4
+    name: Azul
+    type: industrial
+    sector: industrials
+    active: true
+    priority: medium
+
+  # ── Turismo ───────────────────────────────────────────────────────────────
+  - ticker: CVCB3
+    name: CVC Brasil
+    type: retail
+    sector: consumer_discretionary
+    active: true
+    priority: low
+
+  # Para adicionar novo ticker, inserir aqui.
+  # O sistema detecta automaticamente e processa na próxima execução.
+  # Exemplo:
+  # - ticker: ABCD3
+  #   name: Empresa XYZ
+  #   type: industrial   # bank | industrial | retail | oil_gas | utilities | telecom | mining | real_estate | healthcare | agro | technology | holding | fintech | education
+  #   sector: industrials
+  #   active: true
+  #   priority: medium   # high | medium | low

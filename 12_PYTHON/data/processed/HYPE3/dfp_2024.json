@@ -1,0 +1,2413 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 7442466.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -3061467.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 4380999.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -2561049.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -2288299.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -365464.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 84572.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -16039.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": 24181.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 1819950.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -840712.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 271583.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -1112295.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 979238.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": 353762.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -145.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": 353907.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 1333000.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": -2125.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": -2125.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 1330875.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 1340990.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": -10115.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 2.11945,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 2.10222,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 24559083.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 6681876.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 1739327.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.01.01",
+      "account_name": "Caixa e Bancos",
+      "normalized_name": NaN,
+      "value": 58581.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": NaN,
+      "value": 1680746.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 2249259.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 2249259.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 1938600.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 414561.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 414561.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 113693.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 226436.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 226436.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 125455.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 95568.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.08.03.03",
+      "account_name": "Crédito com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.01.08.03.04",
+      "account_name": "Dividendos Propostos a Receber",
+      "normalized_name": NaN,
+      "value": 5413.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 17877207.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 2050702.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 7401.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 1684251.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 1684251.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 359050.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Tributos a Recuperar/Compensar",
+      "normalized_name": NaN,
+      "value": 65764.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Depósitos Judiciais",
+      "normalized_name": NaN,
+      "value": 163862.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 95429.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 33995.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 144494.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 144494.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 144494.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 3891156.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 3003147.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 194776.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 693233.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 11790855.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 11790855.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.04.01.02",
+      "account_name": "Intangível",
+      "normalized_name": NaN,
+      "value": 11790855.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 24559083.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 3940088.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 367523.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 98922.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 268601.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 448535.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 397865.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 50670.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 112837.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 50821.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 4609.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Outros Impostos Federais",
+      "normalized_name": NaN,
+      "value": 46212.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 60731.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 1285.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 1393636.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 497517.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 79425.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 418092.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 896119.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 1617557.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 1617557.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 648559.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Títulos a Pagar",
+      "normalized_name": NaN,
+      "value": 15367.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Outros Passivos",
+      "normalized_name": NaN,
+      "value": 409688.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 8336.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Cessão de Créditos no País",
+      "normalized_name": NaN,
+      "value": 327262.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.05.02.08",
+      "account_name": "Cessão de Créditos no Exterior",
+      "normalized_name": NaN,
+      "value": 208345.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 8517176.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 7986405.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 1097690.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 745486.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 352204.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 6888715.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 250367.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 250367.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Impostos de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Títulos a Pagar",
+      "normalized_name": NaN,
+      "value": 1959.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 32415.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 31923.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Outros Passivos",
+      "normalized_name": NaN,
+      "value": 184070.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.02.02.08",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 136824.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 136824.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 143580.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 143580.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 14292.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 75568.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 13493.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.04.01.05",
+      "account_name": "Provisões Diversas",
+      "normalized_name": NaN,
+      "value": 6213.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.04.01.06",
+      "account_name": "Provisão Empresas Adquiridas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.04.01.07",
+      "account_name": "Responsabilidade de Ex-proprietários",
+      "normalized_name": NaN,
+      "value": 34014.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 12101819.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 9705886.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 1183264.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.02.07",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 1183264.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 1486655.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 330040.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 670419.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 509024.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -22828.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.04.10",
+      "account_name": "Dividendos Adicionais Propostos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.04.11",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.04.12",
+      "account_name": "Resersão de Dividendos não Reclamados e Prescritos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": -279524.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 5538.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 2539599.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 1906768.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro/Prejuízo do Período",
+      "normalized_name": "net_income_cfo",
+      "value": 975514.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Depreciação e Amortização",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 281055.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Resultado na Venda de Ativos Permanentes",
+      "normalized_name": NaN,
+      "value": 957.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Equivalência Patrimonial",
+      "normalized_name": NaN,
+      "value": -24578.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "(Ganhos)/Perdas Cambiais",
+      "normalized_name": NaN,
+      "value": 33533.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Despesas/receitas de Juros e Relacionadas, Líquidas",
+      "normalized_name": NaN,
+      "value": 807179.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Remuneração com Base em Ações",
+      "normalized_name": NaN,
+      "value": 33203.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Perdas/ (Ganhos) (impairment) de ativos",
+      "normalized_name": NaN,
+      "value": 22135.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Indenizações de Direito Uso de Marcas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Provisões (reversões) e outros",
+      "normalized_name": NaN,
+      "value": -222230.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": 632831.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Contas a Receber de Clientes",
+      "normalized_name": NaN,
+      "value": 302909.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 80122.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 228911.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Depósitos Judiciais e Outros",
+      "normalized_name": NaN,
+      "value": -29812.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Demais Contas a Receber",
+      "normalized_name": NaN,
+      "value": 4309.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 20313.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Cessão de Créditos",
+      "normalized_name": NaN,
+      "value": 87299.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Tributos a Recolher",
+      "normalized_name": NaN,
+      "value": 51873.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Salários e Encargos Sociais",
+      "normalized_name": NaN,
+      "value": -28590.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Contas a pagar",
+      "normalized_name": NaN,
+      "value": -18755.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "Juros da Operação",
+      "normalized_name": NaN,
+      "value": -55528.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.02.12",
+      "account_name": "Demais Contas a Pagar",
+      "normalized_name": NaN,
+      "value": 3804.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.02.13",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": -6146.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.02.14",
+      "account_name": "Impostos de Renda e Contribuição Social Pagos",
+      "normalized_name": NaN,
+      "value": -7878.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -592438.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Aquisição de Controladas (Menos Caixa Líquido na Aquisição)",
+      "normalized_name": NaN,
+      "value": -7570.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Compra de Ativo Imobilizado",
+      "normalized_name": "capex",
+      "value": -429392.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Compra/desenvolvimento de Intangíves",
+      "normalized_name": NaN,
+      "value": -342875.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Venda de ativos de natureza permanentes",
+      "normalized_name": NaN,
+      "value": 1739.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Juros e Outros",
+      "normalized_name": NaN,
+      "value": 186314.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Aumento de Capital nas Controladas/Coligadas",
+      "normalized_name": NaN,
+      "value": -5311.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Dividendos recebidos",
+      "normalized_name": NaN,
+      "value": 4657.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -2788727.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Recebimento por Alienações de Ações em Tesouraria",
+      "normalized_name": "debt_issuance",
+      "value": 13246.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Integralização de Capital",
+      "normalized_name": "debt_repayment",
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Recebimento por Empréstimos Tomados",
+      "normalized_name": NaN,
+      "value": 2351000.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Pagamento de Empréstimos - Principal",
+      "normalized_name": "dividends_paid",
+      "value": -3108476.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": -6403.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Pagamento por Empréstimos - Juros",
+      "normalized_name": NaN,
+      "value": -1195001.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Compra de Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -55807.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Dividendos e JCP Pagos",
+      "normalized_name": NaN,
+      "value": -787286.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.03.09",
+      "account_name": "Restituição de Capital Pagos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": -841566.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 2580893.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 1739327.0,
+      "reference_date": "2024-12-31",
+      "company_name": "HYPERA S.A.",
+      "cvm_code": "021431"
+    }
+  ]
+}

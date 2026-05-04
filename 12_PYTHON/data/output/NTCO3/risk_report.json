@@ -1,0 +1,33 @@
+{
+  "ticker": "NTCO3",
+  "sector_type": "retail",
+  "assessed_at": "2026-04-19",
+  "overall_severity": "high",
+  "risk_count": 3,
+  "risks": [
+    {
+      "code": "HIGH_LEVERAGE",
+      "severity": "medium",
+      "category": "leverage",
+      "description": "DL/EBITDA elevada: 2.1x",
+      "detail": "Threshold (retail): médio=2.0x  alto=3.0x",
+      "triggered_at": "2026-04-19"
+    },
+    {
+      "code": "MARGIN_COMPRESSION",
+      "severity": "high",
+      "category": "profitability",
+      "description": "Margem EBITDA caindo 2 anos: 10.8% → 10.2%",
+      "detail": "",
+      "triggered_at": "2026-04-19"
+    },
+    {
+      "code": "FALLING_NET_INCOME",
+      "severity": "medium",
+      "category": "growth",
+      "description": "Lucro em queda por 2 anos consecutivos",
+      "detail": "2024: -88.2%  2025: -334.7%",
+      "triggered_at": "2026-04-19"
+    }
+  ]
+}

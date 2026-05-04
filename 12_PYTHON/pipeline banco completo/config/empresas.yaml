@@ -1,0 +1,1004 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# CADASTRO CENTRAL DE EMPRESAS — Intelligence System
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# Este arquivo centraliza TODOS os tickers monitorados pelo pipeline.
+# Cada empresa pertence a um setor, que define:
+#   - Qual mapeamento de contas CVM usar (bank vs general)
+#   - Qual motor de projeções usar (FCFE vs FCFF)
+#   - Qual layout Excel usar
+#   - Premissas default de valuation
+#
+# Para adicionar uma empresa nova:
+#   1. Adicione a entrada abaixo no setor correto
+#   2. Rode: python main.py --ticker XXXX3
+#   O pipeline detecta o tipo e aplica o fluxo correto automaticamente.
+#
+# Hierarquia de premissas: empresa > setor > global (settings.py)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ── Premissas globais (aplicadas quando setor/empresa não define) ────────────
+defaults:
+  anos_historicos: [2020, 2021, 2022, 2023, 2024, 2025]  # expandido dinamicamente até 2026 via ITR
+  anos_projecao: [2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034, 2035]
+  trimestre_atual: "4T25"  # atualizado dinamicamente pelo settings.py
+  beta: 1.00
+  premio_risco: 0.065        # ERP Brasil — Damodaran ajustado
+  g_perpetuidade: 0.055      # PIB nominal LP (IPCA ~4.5% + real ~1%)
+  payout: 0.40
+  ir_aliquota_nominal: 0.34  # IR 25% + CSLL 9%
+  divisor_valores: 1000      # CVM reporta em R$ mil → dividir p/ MM
+  cache_ttl_horas: 24
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SETORES — Premissas default por setor
+# ═══════════════════════════════════════════════════════════════════════════════
+
+setores:
+
+  # ── BANCOS ─────────────────────────────────────────────────────────────────
+  bancos:
+    tipo_empresa: bank             # usa mapeamento_contas.py (COSIF/bancário)
+    motor_projecao: fcfe           # FCFE = Lucro × Payout
+    motor_valuation: ke            # Ke (sem WACC — bancos não têm dívida "normal")
+    template: null
+    premissas:
+      nim_alvo: 0.055
+      pcld_pct_alvo: 0.035
+      basileia_alvo: 0.135
+      capex_pct_ativo: 0.0015
+      payout: 0.45
+      g_perpetuidade: 0.055
+      beta: 0.90
+      crescimento_receita:  # crescimento carteira crédito
+        default: 0.07
+      crescimento_servicos:
+        default: 0.065
+
+  # ── ENERGIA ────────────────────────────────────────────────────────────────
+  energia:
+    tipo_empresa: general
+    motor_projecao: fcff
+    motor_valuation: wacc
+    template: null  # usar layout interno do pipeline
+    premissas:
+      margem_ebitda_alvo: 0.65   # utilities têm margem alta
+      capex_pct_receita: 0.25    # setor capital-intensive
+      ncg_pct_receita: 0.05
+      depreciacao_pct_imobilizado: 0.04
+      payout: 0.70               # utilities pagam dividendo alto
+      g_perpetuidade: 0.050
+      beta: 0.70
+      crescimento_receita:
+        default: 0.06            # reajuste inflação + expansão
+
+  # ── INDUSTRIAL ─────────────────────────────────────────────────────────────
+  industrial:
+    tipo_empresa: general
+    motor_projecao: fcff
+    motor_valuation: wacc
+    template: null
+    premissas:
+      margem_ebitda_alvo: 0.22
+      capex_pct_receita: 0.06
+      ncg_pct_receita: 0.15
+      depreciacao_pct_imobilizado: 0.07
+      payout: 0.50
+      g_perpetuidade: 0.055
+      beta: 1.00
+      crescimento_receita:
+        default: 0.08
+
+  # ── PAPEL E CELULOSE ───────────────────────────────────────────────────────
+  papel_celulose:
+    tipo_empresa: general
+    motor_projecao: fcff
+    motor_valuation: wacc
+    template: null
+    premissas:
+      margem_ebitda_alvo: 0.45   # exportadoras, margem alta em ciclo de alta
+      capex_pct_receita: 0.20
+      ncg_pct_receita: 0.08
+      depreciacao_pct_imobilizado: 0.05
+      payout: 0.35
+      g_perpetuidade: 0.050
+      beta: 1.10
+      crescimento_receita:
+        default: 0.07
+
+  # ── LOGÍSTICA ──────────────────────────────────────────────────────────────
+  logistica:
+    tipo_empresa: general
+    motor_projecao: fcff
+    motor_valuation: wacc
+    template: null
+    premissas:
+      margem_ebitda_alvo: 0.20
+      capex_pct_receita: 0.15
+      ncg_pct_receita: 0.10
+      depreciacao_pct_imobilizado: 0.06
+      payout: 0.25
+      g_perpetuidade: 0.055
+      beta: 1.15
+      crescimento_receita:
+        default: 0.08
+
+  # ── CONSTRUÇÃO CIVIL ───────────────────────────────────────────────────────
+  construcao_civil:
+    tipo_empresa: general
+    motor_projecao: fcff
+    motor_valuation: wacc
+    template: null
+    premissas:
+      margem_ebitda_alvo: 0.18
+      capex_pct_receita: 0.03    # asset-light (terreno = estoque)
+      ncg_pct_receita: 0.30      # capital de giro alto (estoque terrenos)
+      depreciacao_pct_imobilizado: 0.05
+      payout: 0.30
+      g_perpetuidade: 0.055
+      beta: 1.20
+      crescimento_receita:
+        default: 0.08
+
+  # ── CONSUMO E VAREJO ───────────────────────────────────────────────────────
+  consumo_varejo:
+    tipo_empresa: general
+    motor_projecao: fcff
+    motor_valuation: wacc
+    template: null
+    premissas:
+      margem_ebitda_alvo: 0.12
+      capex_pct_receita: 0.04
+      ncg_pct_receita: 0.10
+      depreciacao_pct_imobilizado: 0.10
+      payout: 0.30
+      g_perpetuidade: 0.055
+      beta: 1.20
+      crescimento_receita:
+        default: 0.08
+
+  # ── AGRO ───────────────────────────────────────────────────────────────────
+  agro:
+    tipo_empresa: general
+    motor_projecao: fcff
+    motor_valuation: wacc
+    template: null
+    premissas:
+      margem_ebitda_alvo: 0.35
+      capex_pct_receita: 0.10
+      ncg_pct_receita: 0.15
+      depreciacao_pct_imobilizado: 0.05
+      payout: 0.35
+      g_perpetuidade: 0.055
+      beta: 1.00
+      crescimento_receita:
+        default: 0.07
+
+  # ── SANEAMENTO ─────────────────────────────────────────────────────────────
+  saneamento:
+    tipo_empresa: general
+    motor_projecao: fcff
+    motor_valuation: wacc
+    template: null
+    premissas:
+      margem_ebitda_alvo: 0.50
+      capex_pct_receita: 0.35   # muito capital-intensive (infra)
+      ncg_pct_receita: 0.05
+      depreciacao_pct_imobilizado: 0.03
+      payout: 0.50
+      g_perpetuidade: 0.050
+      beta: 0.70
+      crescimento_receita:
+        default: 0.07
+
+  # ── TELECOM ────────────────────────────────────────────────────────────────
+  telecom:
+    tipo_empresa: general
+    motor_projecao: fcff
+    motor_valuation: wacc
+    template: null
+    premissas:
+      margem_ebitda_alvo: 0.42
+      capex_pct_receita: 0.18
+      ncg_pct_receita: 0.05
+      depreciacao_pct_imobilizado: 0.08
+      payout: 0.60
+      g_perpetuidade: 0.050
+      beta: 0.75
+      crescimento_receita:
+        default: 0.05
+
+  # ── SAÚDE ──────────────────────────────────────────────────────────────────
+  saude:
+    tipo_empresa: general
+    motor_projecao: fcff
+    motor_valuation: wacc
+    template: null
+    premissas:
+      margem_ebitda_alvo: 0.22
+      capex_pct_receita: 0.06
+      ncg_pct_receita: 0.12
+      depreciacao_pct_imobilizado: 0.06
+      payout: 0.40
+      g_perpetuidade: 0.055
+      beta: 0.90
+      crescimento_receita:
+        default: 0.08
+
+  # ── LOCAÇÃO DE VEÍCULOS ────────────────────────────────────────────────────
+  locacao_veiculos:
+    tipo_empresa: general
+    motor_projecao: fcff
+    motor_valuation: wacc
+    template: null
+    premissas:
+      margem_ebitda_alvo: 0.55   # margem alta (EBITDA inclui depreciação frota)
+      capex_pct_receita: 0.60    # compra de frota = CAPEX alto
+      ncg_pct_receita: 0.05
+      depreciacao_pct_imobilizado: 0.15  # depreciação acelerada da frota
+      payout: 0.25
+      g_perpetuidade: 0.055
+      beta: 1.20
+      crescimento_receita:
+        default: 0.10
+
+  # ── PETRÓLEO E GÁS ──────────────────────────────────────────────────────
+  petroleo:
+    tipo_empresa: general
+    motor_projecao: fcff
+    motor_valuation: wacc
+    template: null
+    premissas:
+      margem_ebitda_alvo: 0.42    # upstream + downstream integrado
+      capex_pct_receita: 0.18     # capital-intensive (exploração + refino)
+      ncg_pct_receita: 0.05
+      depreciacao_pct_imobilizado: 0.08
+      payout: 0.50
+      g_perpetuidade: 0.045       # commodity, crescimento LP conservador
+      beta: 1.10
+      crescimento_receita:
+        default: 0.06
+
+  # ── TECNOLOGIA ─────────────────────────────────────────────────────────────
+  tecnologia:
+    tipo_empresa: general
+    motor_projecao: fcff
+    motor_valuation: wacc
+    template: null
+    premissas:
+      margem_ebitda_alvo: 0.25
+      capex_pct_receita: 0.05
+      ncg_pct_receita: 0.10
+      depreciacao_pct_imobilizado: 0.15
+      payout: 0.30
+      g_perpetuidade: 0.060
+      beta: 1.20
+      crescimento_receita:
+        default: 0.12
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# EMPRESAS — Cadastro individual
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# Campos obrigatórios: ticker, nome, setor
+# Campos opcionais: codigo_cvm (buscado auto), premissas (override do setor)
+#
+# Formato de ações: em MIL unidades (mesma unidade da CVM)
+# tipo_acao: ON_PN | ON_ONLY | UNITS
+#
+# Aliases: tickers alternativos que apontam para a mesma empresa
+#   Ex: BBDC3 → alias de BBDC4; ITUB3 → alias de ITUB4
+# ═══════════════════════════════════════════════════════════════════════════════
+
+empresas:
+
+  # ═══ BANCOS ═══════════════════════════════════════════════════════════════
+
+  BBDC4:
+    nome: Bradesco
+    setor: bancos
+    codigo_cvm: "906"
+    ticker_on: BBDC3
+    ticker_pn: BBDC4
+    acoes_on_mil: 5294000
+    acoes_pn_mil: 5270000
+    tipo_acao: ON_PN
+    relacao_pn_on: 1.10
+    aliases: [BBDC3]
+    premissas:
+      nim_alvo: 0.050
+      pcld_pct_alvo: 0.035
+      payout: 0.45
+      g_perpetuidade: 0.055
+      beta: 0.85
+      crescimento_receita: {2025: 0.08, 2026: 0.08, 2027: 0.07, 2028: 0.07, 2029: 0.07, 2030: 0.07, 2031: 0.06, 2032: 0.06, 2033: 0.06, 2034: 0.06, 2035: 0.06}
+      crescimento_servicos: {2025: 0.06, 2026: 0.06, 2027: 0.065, 2028: 0.065, 2029: 0.065, 2030: 0.065, 2031: 0.065, 2032: 0.065, 2033: 0.065, 2034: 0.065, 2035: 0.065}
+
+  BBAS3:
+    nome: Banco do Brasil
+    setor: bancos
+    codigo_cvm: "1023"
+    ticker_on: BBAS3
+    acoes_on_mil: 5730000
+    acoes_pn_mil: 0
+    tipo_acao: ON_ONLY
+    relacao_pn_on: 1.00
+    premissas:
+      nim_alvo: 0.060
+      pcld_pct_alvo: 0.030
+      payout: 0.40
+      g_perpetuidade: 0.055
+      beta: 0.90
+      crescimento_receita: {2025: 0.10, 2026: 0.09, 2027: 0.08, 2028: 0.08, 2029: 0.07, 2030: 0.07, 2031: 0.06, 2032: 0.06, 2033: 0.06, 2034: 0.06, 2035: 0.06}
+      crescimento_servicos: {2025: 0.07, 2026: 0.07, 2027: 0.065, 2028: 0.065, 2029: 0.065, 2030: 0.065, 2031: 0.065, 2032: 0.065, 2033: 0.065, 2034: 0.065, 2035: 0.065}
+
+  ITUB4:
+    nome: "Itaú Unibanco"
+    setor: bancos
+    codigo_cvm: "19348"
+    ticker_on: ITUB3
+    ticker_pn: ITUB4
+    acoes_on_mil: 5510000
+    acoes_pn_mil: 5490000
+    tipo_acao: ON_PN
+    relacao_pn_on: 1.10
+    aliases: [ITUB3]
+    premissas:
+      nim_alvo: 0.065
+      pcld_pct_alvo: 0.032
+      payout: 0.50
+      g_perpetuidade: 0.055
+      beta: 0.80
+      crescimento_receita: {2025: 0.09, 2026: 0.09, 2027: 0.08, 2028: 0.08, 2029: 0.07, 2030: 0.07, 2031: 0.06, 2032: 0.06, 2033: 0.06, 2034: 0.06, 2035: 0.06}
+      crescimento_servicos: {2025: 0.08, 2026: 0.08, 2027: 0.07, 2028: 0.07, 2029: 0.07, 2030: 0.07, 2031: 0.06, 2032: 0.06, 2033: 0.06, 2034: 0.06, 2035: 0.06}
+
+  SANB11:
+    nome: Santander Brasil
+    setor: bancos
+    codigo_cvm: "20532"
+    ticker_on: SANB11
+    acoes_on_mil: 3750000
+    acoes_pn_mil: 0
+    tipo_acao: UNITS
+    relacao_pn_on: 1.00
+    aliases: [SANB3, SANB4]
+    premissas:
+      nim_alvo: 0.060
+      pcld_pct_alvo: 0.040
+      payout: 0.80
+      g_perpetuidade: 0.050
+      beta: 1.00
+      crescimento_receita: {2025: 0.07, 2026: 0.07, 2027: 0.06, 2028: 0.06, 2029: 0.06, 2030: 0.06, 2031: 0.05, 2032: 0.05, 2033: 0.05, 2034: 0.05, 2035: 0.05}
+      crescimento_servicos: {2025: 0.05, 2026: 0.05, 2027: 0.055, 2028: 0.055, 2029: 0.055, 2030: 0.055, 2031: 0.055, 2032: 0.055, 2033: 0.055, 2034: 0.055, 2035: 0.055}
+
+  BPAC11:
+    nome: BTG Pactual
+    setor: bancos
+    codigo_cvm: "22616"
+    ticker_on: BPAC11
+    acoes_on_mil: 3890000
+    acoes_pn_mil: 0
+    tipo_acao: UNITS
+    relacao_pn_on: 1.00
+    aliases: [BPAC3]
+    premissas:
+      nim_alvo: 0.017
+      nim_maximo: 0.020
+      pcld_pct_alvo: 0.010
+      payout: 0.30
+      g_perpetuidade: 0.060
+      beta: 1.10
+      crescimento_receita: {2025: 0.15, 2026: 0.14, 2027: 0.12, 2028: 0.11, 2029: 0.10, 2030: 0.09, 2031: 0.08, 2032: 0.08, 2033: 0.07, 2034: 0.07, 2035: 0.07}
+      crescimento_servicos: {2025: 0.12, 2026: 0.12, 2027: 0.10, 2028: 0.10, 2029: 0.09, 2030: 0.09, 2031: 0.08, 2032: 0.08, 2033: 0.08, 2034: 0.08, 2035: 0.08}
+    mapa_override:
+      tvm_derivativos:
+        codigos: ["1.02.01", "1.02.02", "1.02.03.05"]
+      carteira_credito_bruta:
+        codigos: ["1.02.03.04"]
+      aplicacoes_interfinanceiras:
+        codigos: ["1.02.03.01", "1.02.03.02"]
+      compulsorios_bacen:
+        codigos: ["1.02.03.03"]
+      arrendamento_mercantil:
+        codigos: ["1.02.03.06"]
+
+  BRSR6:
+    nome: Banrisul
+    setor: bancos
+    codigo_cvm: "1120"
+    ticker_on: BRSR6
+    acoes_on_mil: 430000
+    acoes_pn_mil: 0
+    tipo_acao: UNITS
+    relacao_pn_on: 1.00
+    premissas:
+      nim_alvo: 0.060
+      pcld_pct_alvo: 0.040
+      payout: 0.50
+      beta: 1.00
+
+  ABCB4:
+    nome: ABC Brasil
+    setor: bancos
+    codigo_cvm: "14311"
+    ticker_on: ABCB3
+    ticker_pn: ABCB4
+    acoes_on_mil: 72000
+    acoes_pn_mil: 72000
+    tipo_acao: ON_PN
+    relacao_pn_on: 1.10
+    aliases: [ABCB3]
+    premissas:
+      nim_alvo: 0.040
+      pcld_pct_alvo: 0.020
+      payout: 0.60
+      beta: 0.90
+
+  # ═══ ENERGIA ═════════════════════════════════════════════════════════════
+
+  ELET3:
+    nome: Eletrobras
+    setor: energia
+    codigo_cvm: "2437"
+    ticker_on: ELET3
+    ticker_pn: ELET6
+    tipo_acao: ON_PN
+    aliases: [ELET6]
+
+  EGIE3:
+    nome: ENGIE Brasil
+    setor: energia
+    codigo_cvm: "17329"
+    ticker_on: EGIE3
+    tipo_acao: ON_ONLY
+
+  TAEE11:
+    nome: Taesa
+    setor: energia
+    codigo_cvm: "20257"
+    ticker_on: TAEE11
+    tipo_acao: UNITS
+    aliases: [TAEE3, TAEE4]
+    premissas:
+      payout: 0.90
+      beta: 0.55
+
+  TRPL4:
+    nome: ISA CTEEP
+    setor: energia
+    codigo_cvm: "18376"
+    ticker_on: TRPL3
+    ticker_pn: TRPL4
+    tipo_acao: ON_PN
+    aliases: [TRPL3]
+
+  AESB3:
+    nome: AES Brasil
+    setor: energia
+    codigo_cvm: "26620"
+    ticker_on: AESB3
+    tipo_acao: ON_ONLY
+    aliases: [AURE3]
+
+  ALUP11:
+    nome: Alupar
+    setor: energia
+    codigo_cvm: "21490"
+    ticker_on: ALUP11
+    tipo_acao: UNITS
+    aliases: [ALUP3, ALUP4]
+    premissas:
+      payout: 0.50
+      beta: 0.65
+
+  CLSC4:
+    nome: Celesc
+    setor: energia
+    codigo_cvm: "2461"
+    ticker_pn: CLSC4
+    tipo_acao: ON_PN
+    aliases: [CLSC3]
+
+  ENBR3:
+    nome: EDP Brasil
+    setor: energia
+    codigo_cvm: "19763"
+    ticker_on: ENBR3
+    tipo_acao: ON_ONLY
+
+  # ═══ INDUSTRIAL ══════════════════════════════════════════════════════════
+
+  WEGE3:
+    nome: WEG
+    setor: industrial
+    codigo_cvm: "5410"
+    ticker_on: WEGE3
+    tipo_acao: ON_ONLY
+    premissas:
+      margem_ebitda_alvo: 0.23
+      capex_pct_receita: 0.05
+      payout: 0.50
+      g_perpetuidade: 0.060
+      beta: 0.85
+      crescimento_receita:
+        default: 0.12
+
+  TUPY3:
+    nome: Tupy
+    setor: industrial
+    codigo_cvm: "6343"
+    ticker_on: TUPY3
+    tipo_acao: ON_ONLY
+
+  TASA4:
+    nome: Taurus Armas
+    setor: industrial
+    codigo_cvm: "6173"
+    ticker_pn: TASA4
+    tipo_acao: ON_PN
+    aliases: [TASA3]
+
+  AERI3:
+    nome: Aeris Energy
+    setor: industrial
+    codigo_cvm: "25283"
+    ticker_on: AERI3
+    tipo_acao: ON_ONLY
+
+  KEPL3:
+    nome: Kepler Weber
+    setor: industrial
+    codigo_cvm: "7544"
+    ticker_on: KEPL3
+    tipo_acao: ON_ONLY
+
+  # ═══ PAPEL E CELULOSE ════════════════════════════════════════════════════
+
+  SUZB3:
+    nome: Suzano
+    setor: papel_celulose
+    codigo_cvm: "13986"
+    ticker_on: SUZB3
+    tipo_acao: ON_ONLY
+    premissas:
+      beta: 1.15
+      crescimento_receita:
+        default: 0.06
+
+  KLBN11:
+    nome: Klabin
+    setor: papel_celulose
+    codigo_cvm: "12653"
+    ticker_on: KLBN11
+    tipo_acao: UNITS
+    aliases: [KLBN3, KLBN4]
+    premissas:
+      payout: 0.40
+
+  RANI3:
+    nome: Irani
+    setor: papel_celulose
+    codigo_cvm: "2429"
+    ticker_on: RANI3
+    tipo_acao: ON_ONLY
+
+  # ═══ LOGÍSTICA ═══════════════════════════════════════════════════════════
+
+  RAIL3:
+    nome: Rumo
+    setor: logistica
+    codigo_cvm: "17450"
+    ticker_on: RAIL3
+    tipo_acao: ON_ONLY
+    premissas:
+      margem_ebitda_alvo: 0.50
+      capex_pct_receita: 0.25
+
+  JSLG3:
+    nome: JSL
+    setor: logistica
+    codigo_cvm: "22020"
+    ticker_on: JSLG3
+    tipo_acao: ON_ONLY
+
+  SIMH3:
+    nome: Simpar
+    setor: logistica
+    codigo_cvm: "25003"
+    ticker_on: SIMH3
+    tipo_acao: ON_ONLY
+
+  SEQL3:
+    nome: Sequoia
+    setor: logistica
+    codigo_cvm: "25160"
+    ticker_on: SEQL3
+    tipo_acao: ON_ONLY
+
+  TGMA3:
+    nome: Tegma
+    setor: logistica
+    codigo_cvm: "20800"
+    ticker_on: TGMA3
+    tipo_acao: ON_ONLY
+
+  # ═══ CONSTRUÇÃO CIVIL ════════════════════════════════════════════════════
+
+  EVEN3:
+    nome: Even
+    setor: construcao_civil
+    codigo_cvm: "20915"
+    ticker_on: EVEN3
+    tipo_acao: ON_ONLY
+
+  MDNE3:
+    nome: Moura Dubeux
+    setor: construcao_civil
+    codigo_cvm: "21067"
+    ticker_on: MDNE3
+    tipo_acao: ON_ONLY
+
+  PLPL3:
+    nome: Plano & Plano
+    setor: construcao_civil
+    codigo_cvm: "25070"
+    ticker_on: PLPL3
+    tipo_acao: ON_ONLY
+
+  MELK3:
+    nome: Melnick
+    setor: construcao_civil
+    codigo_cvm: "25119"
+    ticker_on: MELK3
+    tipo_acao: ON_ONLY
+
+  LAVV3:
+    nome: Lavvi
+    setor: construcao_civil
+    codigo_cvm: "25062"
+    ticker_on: LAVV3
+    tipo_acao: ON_ONLY
+
+  # ═══ CONSUMO E VAREJO ════════════════════════════════════════════════════
+
+  LREN3:
+    nome: Lojas Renner
+    setor: consumo_varejo
+    codigo_cvm: "8133"
+    ticker_on: LREN3
+    tipo_acao: ON_ONLY
+    premissas:
+      margem_ebitda_alvo: 0.19
+      capex_pct_receita: 0.05
+      ncg_pct_receita: 0.08
+      payout: 0.40
+      beta: 1.05
+      crescimento_receita:
+        default: 0.09
+
+  MGLU3:
+    nome: Magazine Luiza
+    setor: consumo_varejo
+    codigo_cvm: "22470"
+    ticker_on: MGLU3
+    tipo_acao: ON_ONLY
+    premissas:
+      margem_ebitda_alvo: 0.05
+      capex_pct_receita: 0.04
+      ncg_pct_receita: 0.12
+      payout: 0.20
+      g_perpetuidade: 0.050
+      beta: 1.40
+      crescimento_receita:
+        default: 0.08
+
+  BHIA3:
+    nome: Casas Bahia
+    setor: consumo_varejo
+    codigo_cvm: "6505"
+    ticker_on: BHIA3
+    tipo_acao: ON_ONLY
+    premissas:
+      margem_ebitda_alvo: 0.06
+      capex_pct_receita: 0.03
+      ncg_pct_receita: 0.10
+      payout: 0.10
+      g_perpetuidade: 0.050
+      beta: 1.50
+      crescimento_receita:
+        default: 0.05
+
+  ASAI3:
+    nome: Assaí Atacadista
+    setor: consumo_varejo
+    codigo_cvm: "25372"
+    ticker_on: ASAI3
+    tipo_acao: ON_ONLY
+    premissas:
+      margem_ebitda_alvo: 0.08
+      capex_pct_receita: 0.06
+      ncg_pct_receita: 0.04      # supermercados têm NCG baixo/negativo
+      payout: 0.25
+      beta: 0.90
+      crescimento_receita:
+        default: 0.12
+
+  PCAR3:
+    nome: "GPA (Pão de Açúcar)"
+    setor: consumo_varejo
+    codigo_cvm: "14826"
+    ticker_on: PCAR3
+    tipo_acao: ON_ONLY
+    premissas:
+      margem_ebitda_alvo: 0.07
+      capex_pct_receita: 0.05
+      ncg_pct_receita: 0.05
+      payout: 0.30
+      beta: 1.00
+      crescimento_receita:
+        default: 0.06
+
+  VIVA3:
+    nome: Vivara
+    setor: consumo_varejo
+    codigo_cvm: "24805"
+    ticker_on: VIVA3
+    acoes_on_mil: 452000
+    divisor_cvm: 1000000    # DFP reporta em R$1 (ESCALA_MOEDA=REAL), não em R$ mil
+    tipo_acao: ON_ONLY
+    premissas:
+      margem_ebitda_alvo: 0.24
+      capex_pct_receita: 0.03
+      ncg_pct_receita: 0.15      # estoque de joias/metais
+      payout: 0.50
+      beta: 0.85
+      crescimento_receita:
+        default: 0.10
+
+  SBFG3:
+    nome: "SBF Group (Centauro)"
+    setor: consumo_varejo
+    codigo_cvm: "24694"
+    ticker_on: SBFG3
+    tipo_acao: ON_ONLY
+    premissas:
+      margem_ebitda_alvo: 0.14
+      capex_pct_receita: 0.04
+      payout: 0.35
+      beta: 1.10
+      crescimento_receita:
+        default: 0.09
+
+  NATU3:
+    nome: "Natura Cosméticos"
+    setor: consumo_varejo
+    codigo_cvm: "19550"
+    ticker_on: NATU3
+    tipo_acao: ON_ONLY
+    aliases: [NTCO3]
+    premissas:
+      margem_ebitda_alvo: 0.16
+      capex_pct_receita: 0.04
+      payout: 0.40
+      beta: 1.00
+      crescimento_receita:
+        default: 0.07
+
+  CEAB3:
+    nome: C&A Brasil
+    setor: consumo_varejo
+    codigo_cvm: "24848"
+    ticker_on: CEAB3
+    tipo_acao: ON_ONLY
+    premissas:
+      margem_ebitda_alvo: 0.11
+      beta: 1.20
+
+  AUAU3:
+    nome: "Petiko (Petz + Cobasi)"
+    setor: consumo_varejo
+    codigo_cvm: "25089"
+    ticker_on: AUAU3
+    tipo_acao: ON_ONLY
+    aliases: [PETZ3]
+    premissas:
+      margem_ebitda_alvo: 0.10
+      beta: 1.10
+      crescimento_receita:
+        default: 0.10
+
+  AZZA3:
+    nome: Azzas 2154
+    setor: consumo_varejo
+    codigo_cvm: "22349"
+    ticker_on: AZZA3
+    tipo_acao: ON_ONLY
+    premissas:
+      margem_ebitda_alvo: 0.18
+      beta: 1.10
+      crescimento_receita:
+        default: 0.10
+
+  AMAR3:
+    nome: Marisa Lojas
+    setor: consumo_varejo
+    codigo_cvm: "22055"
+    ticker_on: AMAR3
+    tipo_acao: ON_ONLY
+    premissas:
+      margem_ebitda_alvo: 0.05
+      payout: 0.10
+      g_perpetuidade: 0.045
+      beta: 1.40
+      crescimento_receita:
+        default: 0.04
+
+  # ═══ AGRO ════════════════════════════════════════════════════════════════
+
+  AGRO3:
+    nome: Brasil Agro
+    setor: agro
+    codigo_cvm: "20036"
+    ticker_on: AGRO3
+    tipo_acao: ON_ONLY
+
+  SOJA3:
+    nome: Boa Safra
+    setor: agro
+    codigo_cvm: "25704"
+    ticker_on: SOJA3
+    tipo_acao: ON_ONLY
+
+  # ═══ SANEAMENTO ══════════════════════════════════════════════════════════
+
+  SAPR11:
+    nome: Sanepar
+    setor: saneamento
+    codigo_cvm: "18627"
+    ticker_on: SAPR11
+    tipo_acao: UNITS
+    aliases: [SAPR3, SAPR4]
+
+  SBSP3:
+    nome: Sabesp
+    setor: saneamento
+    codigo_cvm: "14443"
+    ticker_on: SBSP3
+    tipo_acao: ON_ONLY
+
+  # ═══ TELECOM ═════════════════════════════════════════════════════════════
+
+  VIVT3:
+    nome: Vivo (Telefônica Brasil)
+    setor: telecom
+    codigo_cvm: "17671"
+    ticker_on: VIVT3
+    tipo_acao: ON_ONLY
+
+  BRIT3:
+    nome: Brisanet
+    setor: telecom
+    codigo_cvm: "27693"
+    ticker_on: BRIT3
+    tipo_acao: ON_ONLY
+
+  FIQE3:
+    nome: Unifique
+    setor: telecom
+    codigo_cvm: "26050"
+    ticker_on: FIQE3
+    tipo_acao: ON_ONLY
+
+  # ═══ SAÚDE ═══════════════════════════════════════════════════════════════
+
+  FLRY3:
+    nome: Fleury
+    setor: saude
+    codigo_cvm: "21881"
+    ticker_on: FLRY3
+    tipo_acao: ON_ONLY
+
+  RADL3:
+    nome: Raia Drogasil
+    setor: saude
+    codigo_cvm: "5258"
+    ticker_on: RADL3
+    tipo_acao: ON_ONLY
+
+  HYPE3:
+    nome: Hypera Pharma
+    setor: saude
+    codigo_cvm: "21431"
+    ticker_on: HYPE3
+    tipo_acao: ON_ONLY
+
+  # ═══ LOCAÇÃO DE VEÍCULOS ═════════════════════════════════════════════════
+
+  RENT3:
+    nome: Localiza
+    setor: locacao_veiculos
+    codigo_cvm: "19739"
+    ticker_on: RENT3
+    tipo_acao: ON_ONLY
+
+  MOVI3:
+    nome: Movida
+    setor: locacao_veiculos
+    codigo_cvm: "23825"
+    ticker_on: MOVI3
+    tipo_acao: ON_ONLY
+
+  VAMO3:
+    nome: Vamos
+    setor: locacao_veiculos
+    codigo_cvm: "24716"
+    ticker_on: VAMO3
+    tipo_acao: ON_ONLY
+
+  # ═══ PETRÓLEO E GÁS ═══════════════════════════════════════════════════
+
+  PETR4:
+    nome: Petrobras
+    setor: petroleo
+    codigo_cvm: "9512"
+    ticker_on: PETR3
+    ticker_pn: PETR4
+    acoes_on_mil: 7442455
+    acoes_pn_mil: 5602043
+    tipo_acao: ON_PN
+    relacao_pn_on: 1.00
+    aliases: [PETR3]
+    premissas:
+      margem_ebitda_alvo: 0.48
+      capex_pct_receita: 0.20
+      payout: 0.60
+      g_perpetuidade: 0.040
+      beta: 1.05
+      crescimento_receita: {2025: 0.05, 2026: 0.06, 2027: 0.06, 2028: 0.05, 2029: 0.05, 2030: 0.05, 2031: 0.04, 2032: 0.04, 2033: 0.04, 2034: 0.04, 2035: 0.04}
+
+  PRIO3:
+    nome: PRIO
+    setor: petroleo
+    codigo_cvm: "22187"
+    ticker_on: PRIO3
+    tipo_acao: ON_ONLY
+    premissas:
+      margem_ebitda_alvo: 0.70
+      capex_pct_receita: 0.25
+      g_perpetuidade: 0.040
+      beta: 1.30
+      crescimento_receita:
+        default: 0.10
+
+  RECV3:
+    nome: PetroReconcavo
+    setor: petroleo
+    codigo_cvm: "25780"
+    ticker_on: RECV3
+    tipo_acao: ON_ONLY
+    premissas:
+      margem_ebitda_alvo: 0.55
+      capex_pct_receita: 0.22
+      g_perpetuidade: 0.040
+      beta: 1.25
+
+  RRRP3:
+    nome: Brava Energia
+    setor: petroleo
+    codigo_cvm: "25291"
+    ticker_on: RRRP3
+    tipo_acao: ON_ONLY
+    aliases: [BRAV3]
+    premissas:
+      margem_ebitda_alvo: 0.60
+      beta: 1.40
+
+  # ═══ TECNOLOGIA ══════════════════════════════════════════════════════════
+
+  LVTC3:
+    nome: WDC Networks
+    setor: tecnologia
+    codigo_cvm: "25895"
+    ticker_on: LVTC3
+    tipo_acao: ON_ONLY

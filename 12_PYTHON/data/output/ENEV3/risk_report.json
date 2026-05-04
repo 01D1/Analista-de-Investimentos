@@ -1,0 +1,17 @@
+{
+  "ticker": "ENEV3",
+  "sector_type": "oil_gas",
+  "assessed_at": "2026-04-19",
+  "overall_severity": "medium",
+  "risk_count": 1,
+  "risks": [
+    {
+      "code": "HIGH_LEVERAGE",
+      "severity": "medium",
+      "category": "leverage",
+      "description": "DL/EBITDA elevada: 2.7x",
+      "detail": "Threshold (oil_gas): médio=2.5x  alto=3.5x",
+      "triggered_at": "2026-04-19"
+    }
+  ]
+}

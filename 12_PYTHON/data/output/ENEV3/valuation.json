@@ -1,0 +1,45 @@
+{
+  "ticker": "ENEV3",
+  "sector_type": "oil_gas",
+  "base_year": 2025,
+  "method": "EV/EBITDA Múltiplo",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 7049.625399999998,
+      "current_price": 27.1200008392334,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 4455.8387999999995,
+        "ev_ebitda_multiple": 5.5,
+        "net_debt_mi": 17457.488,
+        "ev_mi": 24507.1134
+      }
+    },
+    "optimistic": {
+      "fair_value": 13733.383599999997,
+      "current_price": 27.1200008392334,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 4455.8387999999995,
+        "ev_ebitda_multiple": 7.0,
+        "net_debt_mi": 17457.488,
+        "ev_mi": 31190.8716
+      }
+    },
+    "pessimistic": {
+      "fair_value": 365.86719999999923,
+      "current_price": 27.1200008392334,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 4455.8387999999995,
+        "ev_ebitda_multiple": 4.0,
+        "net_debt_mi": 17457.488,
+        "ev_mi": 17823.355199999998
+      }
+    }
+  }
+}

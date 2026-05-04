@@ -1,0 +1,45 @@
+{
+  "ticker": "CMIN3",
+  "sector_type": "mining",
+  "base_year": 2025,
+  "method": "EV/EBITDA Múltiplo",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 29752.333,
+      "current_price": 4.980000019073486,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 6013.3715999999995,
+        "ev_ebitda_multiple": 5.0,
+        "net_debt_mi": 314.525,
+        "ev_mi": 30066.858
+      }
+    },
+    "optimistic": {
+      "fair_value": 38772.3904,
+      "current_price": 4.980000019073486,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 6013.3715999999995,
+        "ev_ebitda_multiple": 6.5,
+        "net_debt_mi": 314.525,
+        "ev_mi": 39086.9154
+      }
+    },
+    "pessimistic": {
+      "fair_value": 20732.275599999997,
+      "current_price": 4.980000019073486,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 6013.3715999999995,
+        "ev_ebitda_multiple": 3.5,
+        "net_debt_mi": 314.525,
+        "ev_mi": 21046.8006
+      }
+    }
+  }
+}

@@ -1,0 +1,2836 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 13508787.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -9816078.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 3692709.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -1263482.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -927346.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -1006625.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": 71774.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": 598715.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.04.06.01",
+      "account_name": "Equivalência patrimonial em associadas",
+      "normalized_name": NaN,
+      "value": 15714.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.04.06.02",
+      "account_name": "Equivalência patrimonial das controladas em conjunto",
+      "normalized_name": NaN,
+      "value": 583001.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 2429227.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -1262562.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 2029715.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.06.01.01",
+      "account_name": "Receitas financeiras",
+      "normalized_name": NaN,
+      "value": 227925.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.06.01.02",
+      "account_name": "Variação cambial, líquida",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.06.01.03",
+      "account_name": "Derivativos",
+      "normalized_name": NaN,
+      "value": 1801790.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -3292277.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.06.02.01",
+      "account_name": "Despesas financeiras",
+      "normalized_name": NaN,
+      "value": -1679752.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.06.02.02",
+      "account_name": "Variação cambial",
+      "normalized_name": NaN,
+      "value": -1612525.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.06.02.03",
+      "account_name": "Derivativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 1166665.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": -257851.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -695832.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": 437981.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 908814.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 908814.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 851858.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 56956.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 2.2093,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 2.1887,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 35760824.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 11436399.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 4614053.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 1585708.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 1585708.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 685900.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 612981.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 612981.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.06.01.01",
+      "account_name": "Outros tributos a recuperar",
+      "normalized_name": NaN,
+      "value": 178501.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.06.01.02",
+      "account_name": "Imposto de renda e contribuição social a recuperar",
+      "normalized_name": NaN,
+      "value": 434480.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 3937757.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 3937757.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Títulos e valores mobiliários",
+      "normalized_name": NaN,
+      "value": 2271570.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 156208.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.08.03.03",
+      "account_name": "Recebíveis de partes relacionadas",
+      "normalized_name": NaN,
+      "value": 71783.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.08.03.04",
+      "account_name": "Dividendos e juros sobre capital próprio a receber",
+      "normalized_name": NaN,
+      "value": 77561.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.08.03.05",
+      "account_name": "Outros ativos financeiros",
+      "normalized_name": NaN,
+      "value": 848821.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.08.03.06",
+      "account_name": "Outros ativos",
+      "normalized_name": NaN,
+      "value": 270065.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.01.08.03.07",
+      "account_name": "Ativos setoriais",
+      "normalized_name": NaN,
+      "value": 241749.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 24324425.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 4760058.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 19131.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 19131.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 629591.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 629591.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 4111336.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Recebíveis de partes relacionadas",
+      "normalized_name": NaN,
+      "value": 199983.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Outros tributos a recuperar",
+      "normalized_name": NaN,
+      "value": 167224.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Depósitos judiciais",
+      "normalized_name": NaN,
+      "value": 544226.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 2971210.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Outros ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.10.08",
+      "account_name": "Outros ativos financeiros",
+      "normalized_name": NaN,
+      "value": 227857.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.01.10.09",
+      "account_name": "Imposto de renda e contribuição social a recuperar",
+      "normalized_name": NaN,
+      "value": 836.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 8321913.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 8321913.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 333705.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 7988208.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 1197158.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 416996.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 84224.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 695938.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.03.03.01",
+      "account_name": "Ativos de contrato",
+      "normalized_name": NaN,
+      "value": 695938.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.03.03.02",
+      "account_name": "Dividendos e juros sobre capital próprio a receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 10045296.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 10045296.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 35760824.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 6415113.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 1875192.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 741415.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 741415.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 374339.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Outros tributos a pagar",
+      "normalized_name": NaN,
+      "value": 367076.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 2372523.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 2352057.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 1321519.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 1030538.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 20466.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 1425983.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 1425983.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 285177.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 293656.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Ordenados e salários a pagar",
+      "normalized_name": NaN,
+      "value": 195881.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Pagáveis a partes relacionadas",
+      "normalized_name": NaN,
+      "value": 150484.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Outros passivos financeiros",
+      "normalized_name": NaN,
+      "value": 149293.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.05.02.08",
+      "account_name": "Outras contas a pagar",
+      "normalized_name": NaN,
+      "value": 259580.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.05.02.09",
+      "account_name": "Passivos setoriais",
+      "normalized_name": NaN,
+      "value": 91912.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 17839897.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 13134467.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 13075170.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 4929661.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 8145509.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 59297.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 3434222.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 3434222.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Obrigações com acionistas preferencialistas em subsidiárias",
+      "normalized_name": NaN,
+      "value": 387044.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 124171.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Outros tributos a pagar",
+      "normalized_name": NaN,
+      "value": 146895.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Provisão para demandas judiciais",
+      "normalized_name": NaN,
+      "value": 887794.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Obrigações de benefício pós-emprego",
+      "normalized_name": NaN,
+      "value": 728677.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.02.02.08",
+      "account_name": "Outras contas a pagar",
+      "normalized_name": NaN,
+      "value": 685642.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.02.02.09",
+      "account_name": "Investimentos com passivo a descoberto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.02.02.10",
+      "account_name": "Passivos setoriais",
+      "normalized_name": NaN,
+      "value": 473999.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 1271208.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 1271208.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 11505814.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 5727478.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": -1523288.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": -939347.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -583941.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 6896085.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": -252610.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 658149.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 2142815.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 3208442.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "(Prejuízo) lucro antes do imposto de renda    e contribuição social",
+      "normalized_name": "net_income_cfo",
+      "value": 1166665.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Depreciação e amortização",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 623084.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Equivalência patrimonial em controladas e associadas",
+      "normalized_name": NaN,
+      "value": -15714.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Equivalência patrimonial em controladas em conjunto",
+      "normalized_name": NaN,
+      "value": -583001.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Ganho apurada nas alienações de ativo não circulante",
+      "normalized_name": NaN,
+      "value": 11961.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Opção de ações outorgadas",
+      "normalized_name": NaN,
+      "value": 13543.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Mudança no valor justo de propriedades para investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Provisão para demandas judiciais",
+      "normalized_name": NaN,
+      "value": -59309.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Provisão para Realização de Impostos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Juros, variações monetárias e cambiais, líquidos",
+      "normalized_name": NaN,
+      "value": 1330283.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 200156.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Provisão de bônus e participação no resultado",
+      "normalized_name": NaN,
+      "value": 113470.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Cessão de créditos",
+      "normalized_name": NaN,
+      "value": 68311.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01.14",
+      "account_name": "Provisão com créditos de liquidação duvidosa",
+      "normalized_name": NaN,
+      "value": 31196.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01.15",
+      "account_name": "Indenizações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01.16",
+      "account_name": "Créditos fiscais extemporâneos",
+      "normalized_name": NaN,
+      "value": -29823.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01.17",
+      "account_name": "Ganho com ações indenizatoria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01.18",
+      "account_name": "Ganho atuarial com plano de pensão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01.19",
+      "account_name": "Ativos e passivos setoriais",
+      "normalized_name": NaN,
+      "value": 337620.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.01.20",
+      "account_name": "Resultado da alienação de investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -1065627.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Contas a receber de clientes",
+      "normalized_name": NaN,
+      "value": 54108.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Títulos e valores mobiliários",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Operações descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": -113066.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Outros tributos, líquidos",
+      "normalized_name": NaN,
+      "value": -712247.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Partes relacionadas",
+      "normalized_name": NaN,
+      "value": -89750.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 50860.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Ordenados e salários a pagar",
+      "normalized_name": NaN,
+      "value": -77225.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Provisão para demandas judiciais",
+      "normalized_name": NaN,
+      "value": -55461.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Impostos a pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "Outros ativos e passivos, líquidos.",
+      "normalized_name": NaN,
+      "value": -47329.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.02.12",
+      "account_name": "Depósito judicial",
+      "normalized_name": NaN,
+      "value": 24624.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.02.13",
+      "account_name": "Operação descontinuada",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.02.14",
+      "account_name": "Passivo atuarial",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.02.15",
+      "account_name": "Recebimento de direitos creditórios",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.02.16",
+      "account_name": "Outros passivos financeiros",
+      "normalized_name": NaN,
+      "value": -30840.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.02.17",
+      "account_name": "Gás pago e não retirado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.02.18",
+      "account_name": "Obrigações contratuais na cessão de direitos creditoriais",
+      "normalized_name": NaN,
+      "value": -31857.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.02.19",
+      "account_name": "Obrigações pós emprego",
+      "normalized_name": NaN,
+      "value": -37444.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -2340738.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Aporte de capital em controladas e coligadas",
+      "normalized_name": NaN,
+      "value": -1142.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Aquisições, líquidas de caixa adquirido",
+      "normalized_name": "capex",
+      "value": -94631.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Dividendos recebidos de controladas em conjunto",
+      "normalized_name": NaN,
+      "value": 1852.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Adições ao imobilizado e intangível",
+      "normalized_name": NaN,
+      "value": -1052502.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Operações descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Aquisição de outros investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Aplicação em título e valores mobiliários",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Dividendos recebidos de controladas e associadas",
+      "normalized_name": NaN,
+      "value": 9265.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.02.09",
+      "account_name": "Outros ativos financeiro",
+      "normalized_name": NaN,
+      "value": -289989.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.02.10",
+      "account_name": "Partes relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.02.11",
+      "account_name": "Caixa recebido na venda de outro ativos permanentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.02.12",
+      "account_name": "Aquisição de participações de não controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.02.13",
+      "account_name": "Caixa recebido de venda de operações descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.02.14",
+      "account_name": "Operação descontinuada",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.02.15",
+      "account_name": "Titulos e valores mobiliários",
+      "normalized_name": NaN,
+      "value": -862098.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.02.16",
+      "account_name": "Caixa restrito",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.02.17",
+      "account_name": "Custo de aquisição de novos negocios",
+      "normalized_name": NaN,
+      "value": -51299.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.02.18",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -194.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -1537196.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Captações de empréstimos e financiamentos",
+      "normalized_name": "debt_issuance",
+      "value": 2443732.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Amortização de empréstimos e financiamentos",
+      "normalized_name": "debt_repayment",
+      "value": -2739416.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Pagamento de juros s/ empréstimos e financiamentos",
+      "normalized_name": NaN,
+      "value": -796040.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Operações descontinuadas",
+      "normalized_name": "dividends_paid",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": -56811.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 765759.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Opções de ações exercidas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Aquisição de participações de acionista não controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03.09",
+      "account_name": "Dividendos pagos",
+      "normalized_name": NaN,
+      "value": -764996.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03.10",
+      "account_name": "Recursos provenientes de aporte de capital de acionistas",
+      "normalized_name": NaN,
+      "value": 6666.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03.11",
+      "account_name": "Partes relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03.12",
+      "account_name": "Recompra de ações próprias",
+      "normalized_name": NaN,
+      "value": -485042.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03.13",
+      "account_name": "Subscrição de acionistas não controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03.14",
+      "account_name": "Operação descontinuada",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03.15",
+      "account_name": "Capital de acionistas não controladores",
+      "normalized_name": NaN,
+      "value": 75000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03.16",
+      "account_name": "Amortização de principal sobre arrendamentos",
+      "normalized_name": NaN,
+      "value": -23699.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03.17",
+      "account_name": "Pagamento de juros sobre arrendamentos",
+      "normalized_name": NaN,
+      "value": -5023.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03.18",
+      "account_name": "Pagamento de remuneração baseada em ações",
+      "normalized_name": NaN,
+      "value": -22804.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03.19",
+      "account_name": "Recebimento de ativo de contraprestação",
+      "normalized_name": NaN,
+      "value": 65478.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.03.20",
+      "account_name": "Dividendos pagos a acionistas preferencialistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 272528.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": -1462591.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 6076644.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 4614053.0,
+      "reference_date": "2020-12-31",
+      "company_name": "COSAN S.A.",
+      "cvm_code": "019836"
+    }
+  ]
+}

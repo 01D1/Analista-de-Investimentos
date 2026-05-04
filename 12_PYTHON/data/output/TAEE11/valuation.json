@@ -1,0 +1,48 @@
+{
+  "ticker": "TAEE11",
+  "sector_type": "utilities",
+  "base_year": 2025,
+  "method": "DDM — Gordon Growth",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 0.0,
+      "current_price": 45.0099983215332,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "net_income": 0,
+        "payout": 0.6,
+        "dividends_total_mi": 0.0,
+        "coe": 0.12,
+        "g": 0.05
+      }
+    },
+    "optimistic": {
+      "fair_value": 0.0,
+      "current_price": 45.0099983215332,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "net_income": 0,
+        "payout": 0.6,
+        "dividends_total_mi": 0.0,
+        "coe": 0.11699999999999999,
+        "g": 0.053000000000000005
+      }
+    },
+    "pessimistic": {
+      "fair_value": 0.0,
+      "current_price": 45.0099983215332,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "net_income": 0,
+        "payout": 0.6,
+        "dividends_total_mi": 0.0,
+        "coe": 0.123,
+        "g": 0.047
+      }
+    }
+  }
+}

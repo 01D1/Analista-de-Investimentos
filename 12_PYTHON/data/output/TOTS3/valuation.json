@@ -1,0 +1,51 @@
+{
+  "ticker": "TOTS3",
+  "sector_type": "technology",
+  "base_year": 2025,
+  "method": "DCF FCFF",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 21261.647951865583,
+      "current_price": 35.439998626708984,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1239,
+        "g_terminal": 0.07,
+        "rev_growth_avg": 0.14,
+        "ebitda_margin_avg": 0.2334,
+        "beta": 1.2,
+        "tax_rate": 0.27
+      }
+    },
+    "optimistic": {
+      "fair_value": 34881.48677277358,
+      "current_price": 35.439998626708984,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1231,
+        "g_terminal": 0.078,
+        "rev_growth_avg": 0.21,
+        "ebitda_margin_avg": 0.2451,
+        "beta": 1.2,
+        "tax_rate": 0.27
+      }
+    },
+    "pessimistic": {
+      "fair_value": 12520.20759304789,
+      "current_price": 35.439998626708984,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1248,
+        "g_terminal": 0.062,
+        "rev_growth_avg": 0.07,
+        "ebitda_margin_avg": 0.2171,
+        "beta": 1.2,
+        "tax_rate": 0.27
+      }
+    }
+  }
+}

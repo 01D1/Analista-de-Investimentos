@@ -1,0 +1,2701 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 270204212.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -224985889.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 45218323.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -24715228.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -14481462.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -10792292.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 838627.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -333580.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": 53479.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 20503095.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -12238903.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 3557443.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -15796346.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 8264192.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": -3609243.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -2387038.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": -1222205.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 4654949.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 4654949.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 4598311.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 56638.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 1.73,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 1.73,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 163801806.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 60537299.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 15496570.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 4183173.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 4183173.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 4183173.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 14001211.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 14001211.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.03.01.01",
+      "account_name": "Contas a Receber de Clíentes",
+      "normalized_name": NaN,
+      "value": 14425731.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.03.01.02",
+      "account_name": "Perda Estimada c/ Crédito de Liq. Duvidosa-PECLD",
+      "normalized_name": NaN,
+      "value": -413856.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.03.01.03",
+      "account_name": "Ajuste a Valor Presente",
+      "normalized_name": NaN,
+      "value": -10664.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 17586744.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 5115720.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 2849898.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 2849898.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 1303983.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.08.01.01",
+      "account_name": "Ativos Disponíveis Para Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 1303983.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Derivativos a Receber",
+      "normalized_name": NaN,
+      "value": 228840.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 1075143.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.01.08.03.03",
+      "account_name": "Créditos com Empresas Ligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 103264507.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 13433155.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 1778565.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 1590194.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 1590194.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 382019.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 382019.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.09.05",
+      "account_name": "Direito de Uso de Arrendamento Mercantil",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 9682377.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Depósitos, Cauções e Outros",
+      "normalized_name": NaN,
+      "value": 1135882.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 8546495.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Direito de Uso de Arrendamento Mercantil",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 171096.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 171096.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 52711326.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 42809905.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.03.01.01",
+      "account_name": "Imobilizado Líquido",
+      "normalized_name": NaN,
+      "value": 42809905.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 5784709.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 4116712.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 36948930.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 7702309.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.04.01.02",
+      "account_name": "Ágio",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.04.01.03",
+      "account_name": "Marcas e Patentes",
+      "normalized_name": NaN,
+      "value": 4780368.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.04.01.04",
+      "account_name": "Softwares",
+      "normalized_name": NaN,
+      "value": 72603.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.04.01.05",
+      "account_name": "Direito de Exploração do Uso da Água",
+      "normalized_name": NaN,
+      "value": 61191.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.04.01.06",
+      "account_name": "Carteira de Clientes",
+      "normalized_name": NaN,
+      "value": 2597087.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.04.01.07",
+      "account_name": "Outros Intangíveis",
+      "normalized_name": NaN,
+      "value": 191060.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 29246621.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "1.02.04.02.01",
+      "account_name": "Ágio",
+      "normalized_name": NaN,
+      "value": 29246621.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 163801806.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 40835231.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 5677401.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 24298442.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 22711154.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.02.01.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 20625396.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.02.01.02",
+      "account_name": "Fornecedores Nacionais Risco Sacado",
+      "normalized_name": NaN,
+      "value": 2101001.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.02.01.03",
+      "account_name": "Ajuste a Valor Presente",
+      "normalized_name": NaN,
+      "value": -15243.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 1587288.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.02.02.01",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.02.02.02",
+      "account_name": "Fornecedores Estrangeiros Risco Sacado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 883053.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 514298.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 206433.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Outras Obrigações Fiscais e Federais",
+      "normalized_name": NaN,
+      "value": 307865.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 362925.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 5830.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 4562101.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 4562101.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 2932439.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 1629662.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 5414234.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 5414234.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Compromissos com Terceiros para Investimentos",
+      "normalized_name": NaN,
+      "value": 45622.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Outros Passivos Circulantes",
+      "normalized_name": NaN,
+      "value": 2694773.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Dividendos Declarados",
+      "normalized_name": NaN,
+      "value": 1093230.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Derivativos a Pagar",
+      "normalized_name": NaN,
+      "value": 287536.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.05.02.08",
+      "account_name": "Arrendamento a Pagar",
+      "normalized_name": NaN,
+      "value": 1293073.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.07.01.01",
+      "account_name": "Passivos Classificados Como Mantido Para Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 79422386.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 61344604.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 61344604.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 58915926.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 2428678.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 10477629.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 10477629.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Compromissos com Terceiros para Investimentos",
+      "normalized_name": NaN,
+      "value": 78668.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 840175.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Outros Passivos não Circulantes",
+      "normalized_name": NaN,
+      "value": 632302.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Obrigações Trabalhistas e Sociais",
+      "normalized_name": NaN,
+      "value": 4115068.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Arrendamento a Pagar",
+      "normalized_name": NaN,
+      "value": 4811416.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 6186715.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 6186715.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 1413438.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 1413438.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 457742.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 665439.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 290257.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 43544189.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 23576206.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": -434913.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 211879.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.02.07",
+      "account_name": "Transações de Capital",
+      "normalized_name": NaN,
+      "value": -679054.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.02.08",
+      "account_name": "Prêmio de Opções Sobre Ações",
+      "normalized_name": NaN,
+      "value": 13572.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.02.09",
+      "account_name": "Plano de Opções de Ações",
+      "normalized_name": NaN,
+      "value": 18690.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 49430.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 6862731.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 1003965.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 1419037.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -303565.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.04.10",
+      "account_name": "Reserva Estatutária para Investimento",
+      "normalized_name": NaN,
+      "value": 4743294.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": -29269.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 10095137.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 3424867.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 23781810.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 29694764.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro Líquido",
+      "normalized_name": "net_income_cfo",
+      "value": 4654949.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Depreciações e Amortizações",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 7837405.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Perda Esperadas com Créditos de Liquidação Duvidosa",
+      "normalized_name": NaN,
+      "value": 33173.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": NaN,
+      "value": -53479.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Lucro Atribuido aos Acionistas não Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Resultado na Venda de Imobilizado",
+      "normalized_name": NaN,
+      "value": -41606.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Imposto de Renda e Contribuição Social",
+      "normalized_name": NaN,
+      "value": 3609243.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Resultado Financeiro Liquido",
+      "normalized_name": NaN,
+      "value": 12238903.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Provisão para Riscos Processuais",
+      "normalized_name": NaN,
+      "value": 340453.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Plano de Opções de Ações",
+      "normalized_name": NaN,
+      "value": -5250.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Perda por Valor Recuperável",
+      "normalized_name": NaN,
+      "value": 19870.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Ganho por Compra Vantajosa",
+      "normalized_name": NaN,
+      "value": 15538.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Impactos da Atualização da Investigação no Âmbito do Acordo de Leniência",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01.14",
+      "account_name": "Resultado com Programa de Desinvestimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01.15",
+      "account_name": "Provisão de Ajustes para Valor Realizável Líquido dos Estoques",
+      "normalized_name": NaN,
+      "value": 25434.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01.16",
+      "account_name": "Parcelamento Fiscais, Trabalhistas e Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01.17",
+      "account_name": "Resultado na Venda de Controladas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01.18",
+      "account_name": "Fair Value (Marcação a Mercado) dos Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 158003.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01.19",
+      "account_name": "Acordos SEC, DOJ e Antitruste",
+      "normalized_name": NaN,
+      "value": 1283142.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.01.20",
+      "account_name": "Impactos Tributários Extemporâneos",
+      "normalized_name": NaN,
+      "value": -421014.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -2693191.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 778491.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": -764905.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Impostos a Recuperar",
+      "normalized_name": NaN,
+      "value": -143645.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Outros Ativos Circulantes e não Circulantes",
+      "normalized_name": NaN,
+      "value": -30542.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Créditos com Empresas Ligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": -2767811.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Fornecedores e Fornecedores Risco Sacado",
+      "normalized_name": NaN,
+      "value": 3342405.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Outros Passivos Circulantes e Não Circulantes",
+      "normalized_name": NaN,
+      "value": 767511.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Parcelamentos Fiscais, Trabalhistas e Sociais",
+      "normalized_name": NaN,
+      "value": -545946.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Imposto de Renda e Contribuição Social Pagos",
+      "normalized_name": NaN,
+      "value": -3328749.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -3219763.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.03.01",
+      "account_name": "Juros Pagos",
+      "normalized_name": NaN,
+      "value": -3504686.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.03.02",
+      "account_name": "Juros Recebidos",
+      "normalized_name": NaN,
+      "value": 284923.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.01.03.03",
+      "account_name": "Imposto de Renda e Contribuição Social Pagos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -7833134.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Adição de Ativo Imobilizado",
+      "normalized_name": NaN,
+      "value": -5986801.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Recebimento na Venda de Ativo Imobilizado",
+      "normalized_name": "capex",
+      "value": 364316.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Baixas nos Investimentos em Controladas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Aquisição de Controladas, Líquido do Caixa Obtido na Aquisição",
+      "normalized_name": NaN,
+      "value": -2185482.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Adição de Ativo Intangível",
+      "normalized_name": NaN,
+      "value": -48034.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Transações com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": -8064.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Efeito Líquido da Desconsolidação de Joint Venture",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Efeito Líquido do Capital de Giro de Empresa Baixada/ Incorporada",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.02.09",
+      "account_name": "Ajuste de Capital de Giro de Empresa Adquirida",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.02.10",
+      "account_name": "Caixa Líquido de Ativos Classificados como Mantidos para Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.02.12",
+      "account_name": "Recebimento de Dividendos",
+      "normalized_name": NaN,
+      "value": 30000.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.02.13",
+      "account_name": "Recebimento do Programa de Desinvestimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.02.14",
+      "account_name": "Baixa de Ativo Intangível",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.02.15",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 931.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -9022124.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Empréstimos e Financiamentos Captados",
+      "normalized_name": "debt_issuance",
+      "value": 11030414.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Pagamentos de Empréstimos e Financiamentos",
+      "normalized_name": "debt_repayment",
+      "value": -15051175.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Derivativos Pagos / Recebidos",
+      "normalized_name": NaN,
+      "value": -161806.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Derivativos Pagos",
+      "normalized_name": "dividends_paid",
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Aquisição de Ações de Emissão Própria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Custo de Transação na Emissão de Titulos e Valores Mobiliários",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Aquisição de Ações de Emissão Própria",
+      "normalized_name": NaN,
+      "value": -1272711.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Transações de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.03.09",
+      "account_name": "Pagamentos de Dividendos",
+      "normalized_name": NaN,
+      "value": -1441177.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.03.10",
+      "account_name": "Prêmio Recebido Opções de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.03.11",
+      "account_name": "Aquisição de Ações em Tesourária PPC",
+      "normalized_name": NaN,
+      "value": -546890.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.03.12",
+      "account_name": "Pagamento de Dividendos não Controladores",
+      "normalized_name": NaN,
+      "value": -3491.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.03.13",
+      "account_name": "Contribuição da PPC Mexico de não controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.03.14",
+      "account_name": "Alienação de Ações em Tesouraria PPC",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.03.15",
+      "account_name": "Pagamentos de Arrendamento",
+      "normalized_name": NaN,
+      "value": -1574941.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.03.16",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -347.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 2719224.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": 9645776.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 10033967.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 19679743.0,
+      "reference_date": "2020-12-31",
+      "company_name": "JBS S.A.",
+      "cvm_code": "020575"
+    }
+  ]
+}

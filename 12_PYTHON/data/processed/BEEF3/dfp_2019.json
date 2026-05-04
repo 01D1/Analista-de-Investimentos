@@ -1,0 +1,2314 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 17122825.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -13830264.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 3292561.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -1830479.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -1201107.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -625050.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -4322.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.04.05.01",
+      "account_name": "Outras Despesas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.04.05.02",
+      "account_name": "Resultado de Minoritários",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 1462082.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -1594692.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 64385.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -1659077.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": -132610.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": 148767.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -153037.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": 301804.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 16157.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 16157.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 16157.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 0.04035,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 0.04035,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 13233737.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 8269284.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 3219817.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 1249870.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 1778214.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 1778214.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 714565.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 235773.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 763227.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 763227.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 307818.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 307818.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Creditos diversos",
+      "normalized_name": NaN,
+      "value": 307818.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 4964453.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 643671.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 426386.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 426386.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 217285.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Tributos a recuperar",
+      "normalized_name": NaN,
+      "value": 179387.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Creditos diversos",
+      "normalized_name": NaN,
+      "value": 13348.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Depositos judiciais",
+      "normalized_name": NaN,
+      "value": 24550.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 3632800.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 3354908.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 44720.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 233172.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 687982.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 687982.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.04.01.02",
+      "account_name": "Agio pago em aquisições",
+      "normalized_name": NaN,
+      "value": 585388.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.04.01.03",
+      "account_name": "Software",
+      "normalized_name": NaN,
+      "value": 22420.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.04.01.04",
+      "account_name": "Cessão de servidão de passagem",
+      "normalized_name": NaN,
+      "value": 250.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.04.01.05",
+      "account_name": "Direito de uso de aeronave",
+      "normalized_name": NaN,
+      "value": 1793.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.04.01.06",
+      "account_name": "Marcas",
+      "normalized_name": NaN,
+      "value": 78131.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 13233737.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 5628000.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 138273.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 14117.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 124156.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 1362369.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 1268134.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 94235.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 191992.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 178807.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 113643.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Demais Impostos Federais",
+      "normalized_name": NaN,
+      "value": 65164.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 13185.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 2867602.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 2511480.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 780304.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 1731176.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 356122.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.04.02.01",
+      "account_name": "Debêntures Não Conversíveis",
+      "normalized_name": NaN,
+      "value": 356122.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 1067764.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 1067764.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Outras Contas a Pagar",
+      "normalized_name": NaN,
+      "value": 1060774.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Arrendamento mercantil",
+      "normalized_name": NaN,
+      "value": 6990.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 7887399.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 7610124.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 6727624.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 166583.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 6561041.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 882500.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.01.02.02",
+      "account_name": "Debêntures Conversíveis",
+      "normalized_name": NaN,
+      "value": 882500.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 105986.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 105986.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Obrigações Fiscais e Sociais",
+      "normalized_name": NaN,
+      "value": 64776.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Outras contas a pagar",
+      "normalized_name": NaN,
+      "value": 1753.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Arrendamento mercantil",
+      "normalized_name": NaN,
+      "value": 39457.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 133017.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 133017.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 38272.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 38272.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 1959.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 33829.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 2484.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.04.01.05",
+      "account_name": "Provisões Ambientais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": -281662.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 282017.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 85576.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -32695.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.02.07",
+      "account_name": "Reserva de Capital",
+      "normalized_name": NaN,
+      "value": 118271.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 50614.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": -380210.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": -319659.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 1757892.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 1387017.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Resultado do período",
+      "normalized_name": "net_income_cfo",
+      "value": 16157.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Depreciações e amortizações",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 263994.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Resultados atribuidos aos não controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Valor justo de ativos biológicos",
+      "normalized_name": NaN,
+      "value": -28836.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Realização dos tributos diferidos",
+      "normalized_name": NaN,
+      "value": -301804.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Realização líquida da reserva de reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Redução ao valor recuperável de ativo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Encargos financeiros",
+      "normalized_name": NaN,
+      "value": 951676.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Variação cambial não realizada",
+      "normalized_name": NaN,
+      "value": 307567.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Provisão para contingências",
+      "normalized_name": NaN,
+      "value": -4502.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Perda estimada com crédito da liquidaçao duvidosa",
+      "normalized_name": NaN,
+      "value": 7935.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Resultado na venda do imobilizado",
+      "normalized_name": NaN,
+      "value": 1772.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Correção monetária",
+      "normalized_name": NaN,
+      "value": 173058.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": 370875.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Contas a receber de clientes e outros recebíveis",
+      "normalized_name": NaN,
+      "value": -57994.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": -22106.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Ativos biológicos",
+      "normalized_name": NaN,
+      "value": -50239.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Tributos a recuperar",
+      "normalized_name": NaN,
+      "value": 99657.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Impostos Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Depósitos judiciais",
+      "normalized_name": NaN,
+      "value": -552.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 510014.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Obrigações trabalhistas e tributárias",
+      "normalized_name": NaN,
+      "value": 67504.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Outras contas a pagar",
+      "normalized_name": NaN,
+      "value": -175409.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.01.03.01",
+      "account_name": "Ajustes de conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -247063.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Aquisição de de controlada menos disponibilidade na aquisição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Aquisição de intangível",
+      "normalized_name": "capex",
+      "value": -4797.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Aquisição de imobilizado",
+      "normalized_name": NaN,
+      "value": -242266.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Aquisição de controlada menos disponibilidade na aquisição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -1268825.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Empréstimos e financiamentos tomados",
+      "normalized_name": "debt_issuance",
+      "value": 3723696.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Empréstimos e financiamentos liquidados",
+      "normalized_name": "debt_repayment",
+      "value": -5145845.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Partes relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Debêntures conversíveis em ações",
+      "normalized_name": "dividends_paid",
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Variação na participação de nao controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Integralização do capital em dinheiro",
+      "normalized_name": NaN,
+      "value": 172758.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Dividendos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Ações em tesouraria",
+      "normalized_name": NaN,
+      "value": 2240.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.03.09",
+      "account_name": "Arrendamento mercantil",
+      "normalized_name": NaN,
+      "value": -21674.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.03.10",
+      "account_name": "Juros sobre capital próprio",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.03.11",
+      "account_name": "(-) Custos de transação na emissão de ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.03.12",
+      "account_name": "Cancelamento de Ações em tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": -169302.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": 72702.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 4396985.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 4469687.0,
+      "reference_date": "2019-12-31",
+      "company_name": "MINERVA S.A.",
+      "cvm_code": "020931"
+    }
+  ]
+}

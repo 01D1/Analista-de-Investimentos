@@ -1,0 +1,783 @@
+[19:22:40] Modo seletivo: ELET3 RDOR3 RECV3 TAEE11 CRFB3 VIVT3 CCRO3 PCAR3 PETZ3 CVCB3
+[19:22:40] ==========================================
+[19:22:40] Bootstrap — Intelligence System
+[19:22:40] ==========================================
+[19:22:40] 
+[19:22:40] FASE 1 — Baixando dados da CVM e preços B3...
+[19:22:40]   ▶ ingest ELET3
+/Users/diegocarvalho/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[32m2026-04-19 19:22:41[0m | [1mINFO    [0m | [36m__main__[0m — [ELET3] iniciando ingestão...
+[32m2026-04-19 19:22:41[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [ELET3] DFP: baixando 1 ano(s): [2026]
+[32m2026-04-19 19:22:41[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [DFP 2026] Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2026.zip
+[32m2026-04-19 19:22:42[0m | [31m[1mERROR   [0m | [36msrc.ingestion.cvm_downloader[0m — [ELET3] DFP 2026: [DFP 2026] Não encontrado na CVM (404): https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2026.zip
+[32m2026-04-19 19:22:42[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [ELET3] ITR: todos os anos já disponíveis
+[32m2026-04-19 19:22:42[0m | [32m[1mSUCCESS [0m | [36msrc.ingestion.cvm_downloader[0m — [ELET3] Ingestão CVM concluída — CVM code: 002437
+[32m2026-04-19 19:22:42[0m | [1mINFO    [0m | [36m__main__[0m — [ELET3] CVM: {'DFP': [], 'ITR': []}
+[32m2026-04-19 19:22:42[0m | [1mINFO    [0m | [36msrc.ingestion.b3_scraper[0m — [ELET3] Download completo desde 2019-01-01
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: ELET3.SA"}}}
+$ELET3.SA: possibly delisted; no timezone found
+
+1 Failed download:
+['ELET3.SA']: possibly delisted; no timezone found
+[32m2026-04-19 19:22:44[0m | [33m[1mWARNING [0m | [36msrc.ingestion.b3_scraper[0m — [ELET3] Nenhum dado novo retornado pelo yfinance
+[19:22:44]   ▶ ingest RDOR3
+/Users/diegocarvalho/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[32m2026-04-19 19:22:45[0m | [1mINFO    [0m | [36m__main__[0m — [RDOR3] iniciando ingestão...
+[32m2026-04-19 19:22:45[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [RDOR3] DFP: baixando 1 ano(s): [2026]
+[32m2026-04-19 19:22:45[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [DFP 2026] Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2026.zip
+[32m2026-04-19 19:22:46[0m | [31m[1mERROR   [0m | [36msrc.ingestion.cvm_downloader[0m — [RDOR3] DFP 2026: [DFP 2026] Não encontrado na CVM (404): https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2026.zip
+[32m2026-04-19 19:22:46[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [RDOR3] ITR: todos os anos já disponíveis
+[32m2026-04-19 19:22:46[0m | [32m[1mSUCCESS [0m | [36msrc.ingestion.cvm_downloader[0m — [RDOR3] Ingestão CVM concluída — CVM code: 024821
+[32m2026-04-19 19:22:46[0m | [1mINFO    [0m | [36m__main__[0m — [RDOR3] CVM: {'DFP': [], 'ITR': []}
+[32m2026-04-19 19:22:46[0m | [1mINFO    [0m | [36msrc.ingestion.b3_scraper[0m — [RDOR3] Download incremental de 2026-04-18 até hoje
+[32m2026-04-19 19:22:47[0m | [32m[1mSUCCESS [0m | [36msrc.ingestion.b3_scraper[0m — [RDOR3] 1329 dias salvos em RDOR3.parquet
+[32m2026-04-19 19:22:47[0m | [1mINFO    [0m | [36m__main__[0m — [RDOR3] preços: 1329 dias (2020-12-15 → 2026-04-17)
+[19:22:47]   ▶ ingest RECV3
+/Users/diegocarvalho/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[32m2026-04-19 19:22:48[0m | [1mINFO    [0m | [36m__main__[0m — [RECV3] iniciando ingestão...
+[32m2026-04-19 19:22:48[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [RECV3] DFP: baixando 1 ano(s): [2026]
+[32m2026-04-19 19:22:48[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [DFP 2026] Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2026.zip
+[32m2026-04-19 19:22:49[0m | [31m[1mERROR   [0m | [36msrc.ingestion.cvm_downloader[0m — [RECV3] DFP 2026: [DFP 2026] Não encontrado na CVM (404): https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2026.zip
+[32m2026-04-19 19:22:49[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [RECV3] ITR: todos os anos já disponíveis
+[32m2026-04-19 19:22:49[0m | [32m[1mSUCCESS [0m | [36msrc.ingestion.cvm_downloader[0m — [RECV3] Ingestão CVM concluída — CVM code: 025780
+[32m2026-04-19 19:22:49[0m | [1mINFO    [0m | [36m__main__[0m — [RECV3] CVM: {'DFP': [], 'ITR': []}
+[32m2026-04-19 19:22:49[0m | [1mINFO    [0m | [36msrc.ingestion.b3_scraper[0m — [RECV3] Download incremental de 2026-04-18 até hoje
+[32m2026-04-19 19:22:50[0m | [32m[1mSUCCESS [0m | [36msrc.ingestion.b3_scraper[0m — [RECV3] 1237 dias salvos em RECV3.parquet
+[32m2026-04-19 19:22:50[0m | [1mINFO    [0m | [36m__main__[0m — [RECV3] preços: 1237 dias (2021-05-05 → 2026-04-17)
+[19:22:50]   ▶ ingest TAEE11
+/Users/diegocarvalho/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[32m2026-04-19 19:22:50[0m | [1mINFO    [0m | [36m__main__[0m — [TAEE11] iniciando ingestão...
+[32m2026-04-19 19:22:50[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [TAEE11] DFP: baixando 1 ano(s): [2026]
+[32m2026-04-19 19:22:50[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [DFP 2026] Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2026.zip
+[32m2026-04-19 19:22:51[0m | [31m[1mERROR   [0m | [36msrc.ingestion.cvm_downloader[0m — [TAEE11] DFP 2026: [DFP 2026] Não encontrado na CVM (404): https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2026.zip
+[32m2026-04-19 19:22:51[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [TAEE11] ITR: todos os anos já disponíveis
+[32m2026-04-19 19:22:51[0m | [32m[1mSUCCESS [0m | [36msrc.ingestion.cvm_downloader[0m — [TAEE11] Ingestão CVM concluída — CVM code: 020257
+[32m2026-04-19 19:22:51[0m | [1mINFO    [0m | [36m__main__[0m — [TAEE11] CVM: {'DFP': [], 'ITR': []}
+[32m2026-04-19 19:22:51[0m | [1mINFO    [0m | [36msrc.ingestion.b3_scraper[0m — [TAEE11] Download incremental de 2026-04-18 até hoje
+[32m2026-04-19 19:22:51[0m | [32m[1mSUCCESS [0m | [36msrc.ingestion.b3_scraper[0m — [TAEE11] 1815 dias salvos em TAEE11.parquet
+[32m2026-04-19 19:22:51[0m | [1mINFO    [0m | [36m__main__[0m — [TAEE11] preços: 1815 dias (2019-01-02 → 2026-04-17)
+[19:22:51]   ▶ ingest CRFB3
+/Users/diegocarvalho/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[32m2026-04-19 19:22:52[0m | [1mINFO    [0m | [36m__main__[0m — [CRFB3] iniciando ingestão...
+[32m2026-04-19 19:22:52[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [CRFB3] DFP: baixando 1 ano(s): [2026]
+[32m2026-04-19 19:22:52[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [DFP 2026] Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2026.zip
+[32m2026-04-19 19:22:52[0m | [31m[1mERROR   [0m | [36msrc.ingestion.cvm_downloader[0m — [CRFB3] DFP 2026: [DFP 2026] Não encontrado na CVM (404): https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2026.zip
+[32m2026-04-19 19:22:52[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [CRFB3] ITR: todos os anos já disponíveis
+[32m2026-04-19 19:22:52[0m | [32m[1mSUCCESS [0m | [36msrc.ingestion.cvm_downloader[0m — [CRFB3] Ingestão CVM concluída — CVM code: 024171
+[32m2026-04-19 19:22:52[0m | [1mINFO    [0m | [36m__main__[0m — [CRFB3] CVM: {'DFP': [], 'ITR': []}
+[32m2026-04-19 19:22:52[0m | [1mINFO    [0m | [36msrc.ingestion.b3_scraper[0m — [CRFB3] Download completo desde 2019-01-01
+$CRFB3.SA: possibly delisted; no timezone found
+
+1 Failed download:
+['CRFB3.SA']: possibly delisted; no timezone found
+[32m2026-04-19 19:22:54[0m | [33m[1mWARNING [0m | [36msrc.ingestion.b3_scraper[0m — [CRFB3] Nenhum dado novo retornado pelo yfinance
+[19:22:54]   ▶ ingest VIVT3
+/Users/diegocarvalho/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[32m2026-04-19 19:22:54[0m | [1mINFO    [0m | [36m__main__[0m — [VIVT3] iniciando ingestão...
+[32m2026-04-19 19:22:54[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [VIVT3] DFP: baixando 1 ano(s): [2026]
+[32m2026-04-19 19:22:54[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [DFP 2026] Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2026.zip
+[32m2026-04-19 19:22:54[0m | [31m[1mERROR   [0m | [36msrc.ingestion.cvm_downloader[0m — [VIVT3] DFP 2026: [DFP 2026] Não encontrado na CVM (404): https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2026.zip
+[32m2026-04-19 19:22:54[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [VIVT3] ITR: todos os anos já disponíveis
+[32m2026-04-19 19:22:54[0m | [32m[1mSUCCESS [0m | [36msrc.ingestion.cvm_downloader[0m — [VIVT3] Ingestão CVM concluída — CVM code: 017671
+[32m2026-04-19 19:22:54[0m | [1mINFO    [0m | [36m__main__[0m — [VIVT3] CVM: {'DFP': [], 'ITR': []}
+[32m2026-04-19 19:22:54[0m | [1mINFO    [0m | [36msrc.ingestion.b3_scraper[0m — [VIVT3] Download incremental de 2026-04-18 até hoje
+[32m2026-04-19 19:22:57[0m | [32m[1mSUCCESS [0m | [36msrc.ingestion.b3_scraper[0m — [VIVT3] 1815 dias salvos em VIVT3.parquet
+[32m2026-04-19 19:22:57[0m | [1mINFO    [0m | [36m__main__[0m — [VIVT3] preços: 1815 dias (2019-01-02 → 2026-04-17)
+[19:22:57]   ▶ ingest CCRO3
+/Users/diegocarvalho/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[32m2026-04-19 19:22:57[0m | [1mINFO    [0m | [36m__main__[0m — [CCRO3] iniciando ingestão...
+[32m2026-04-19 19:22:57[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [CCRO3] DFP: baixando 1 ano(s): [2026]
+[32m2026-04-19 19:22:57[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [DFP 2026] Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2026.zip
+[32m2026-04-19 19:22:57[0m | [31m[1mERROR   [0m | [36msrc.ingestion.cvm_downloader[0m — [CCRO3] DFP 2026: [DFP 2026] Não encontrado na CVM (404): https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2026.zip
+[32m2026-04-19 19:22:57[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [CCRO3] ITR: todos os anos já disponíveis
+[32m2026-04-19 19:22:57[0m | [32m[1mSUCCESS [0m | [36msrc.ingestion.cvm_downloader[0m — [CCRO3] Ingestão CVM concluída — CVM code: 018821
+[32m2026-04-19 19:22:57[0m | [1mINFO    [0m | [36m__main__[0m — [CCRO3] CVM: {'DFP': [], 'ITR': []}
+[32m2026-04-19 19:22:57[0m | [1mINFO    [0m | [36msrc.ingestion.b3_scraper[0m — [CCRO3] Download completo desde 2019-01-01
+$CCRO3.SA: possibly delisted; no timezone found
+
+1 Failed download:
+['CCRO3.SA']: possibly delisted; no timezone found
+[32m2026-04-19 19:22:59[0m | [33m[1mWARNING [0m | [36msrc.ingestion.b3_scraper[0m — [CCRO3] Nenhum dado novo retornado pelo yfinance
+[19:22:59]   ▶ ingest PCAR3
+/Users/diegocarvalho/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[32m2026-04-19 19:23:00[0m | [1mINFO    [0m | [36m__main__[0m — [PCAR3] iniciando ingestão...
+[32m2026-04-19 19:23:00[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [PCAR3] DFP: baixando 1 ano(s): [2026]
+[32m2026-04-19 19:23:00[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [DFP 2026] Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2026.zip
+[32m2026-04-19 19:23:00[0m | [31m[1mERROR   [0m | [36msrc.ingestion.cvm_downloader[0m — [PCAR3] DFP 2026: [DFP 2026] Não encontrado na CVM (404): https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2026.zip
+[32m2026-04-19 19:23:00[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [PCAR3] ITR: todos os anos já disponíveis
+[32m2026-04-19 19:23:00[0m | [32m[1mSUCCESS [0m | [36msrc.ingestion.cvm_downloader[0m — [PCAR3] Ingestão CVM concluída — CVM code: 014826
+[32m2026-04-19 19:23:00[0m | [1mINFO    [0m | [36m__main__[0m — [PCAR3] CVM: {'DFP': [], 'ITR': []}
+[32m2026-04-19 19:23:00[0m | [1mINFO    [0m | [36msrc.ingestion.b3_scraper[0m — [PCAR3] Download incremental de 2026-04-18 até hoje
+[32m2026-04-19 19:23:01[0m | [32m[1mSUCCESS [0m | [36msrc.ingestion.b3_scraper[0m — [PCAR3] 1815 dias salvos em PCAR3.parquet
+[32m2026-04-19 19:23:01[0m | [1mINFO    [0m | [36m__main__[0m — [PCAR3] preços: 1815 dias (2019-01-02 → 2026-04-17)
+[19:23:01]   ▶ ingest PETZ3
+/Users/diegocarvalho/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[32m2026-04-19 19:23:01[0m | [1mINFO    [0m | [36m__main__[0m — [PETZ3] iniciando ingestão...
+[32m2026-04-19 19:23:01[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [PETZ3] DFP: baixando 1 ano(s): [2026]
+[32m2026-04-19 19:23:01[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [DFP 2026] Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2026.zip
+[32m2026-04-19 19:23:01[0m | [31m[1mERROR   [0m | [36msrc.ingestion.cvm_downloader[0m — [PETZ3] DFP 2026: [DFP 2026] Não encontrado na CVM (404): https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2026.zip
+[32m2026-04-19 19:23:01[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [PETZ3] ITR: todos os anos já disponíveis
+[32m2026-04-19 19:23:01[0m | [32m[1mSUCCESS [0m | [36msrc.ingestion.cvm_downloader[0m — [PETZ3] Ingestão CVM concluída — CVM code: 025089
+[32m2026-04-19 19:23:01[0m | [1mINFO    [0m | [36m__main__[0m — [PETZ3] CVM: {'DFP': [], 'ITR': []}
+[32m2026-04-19 19:23:01[0m | [1mINFO    [0m | [36msrc.ingestion.b3_scraper[0m — [PETZ3] Download completo desde 2019-01-01
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: PETZ3.SA"}}}
+$PETZ3.SA: possibly delisted; no timezone found
+
+1 Failed download:
+['PETZ3.SA']: possibly delisted; no timezone found
+[32m2026-04-19 19:23:04[0m | [33m[1mWARNING [0m | [36msrc.ingestion.b3_scraper[0m — [PETZ3] Nenhum dado novo retornado pelo yfinance
+[19:23:04]   ▶ ingest CVCB3
+/Users/diegocarvalho/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[32m2026-04-19 19:23:04[0m | [1mINFO    [0m | [36m__main__[0m — [CVCB3] iniciando ingestão...
+[32m2026-04-19 19:23:04[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [CVCB3] DFP: baixando 1 ano(s): [2026]
+[32m2026-04-19 19:23:04[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [DFP 2026] Baixando: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2026.zip
+[32m2026-04-19 19:23:05[0m | [31m[1mERROR   [0m | [36msrc.ingestion.cvm_downloader[0m — [CVCB3] DFP 2026: [DFP 2026] Não encontrado na CVM (404): https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2026.zip
+[32m2026-04-19 19:23:05[0m | [1mINFO    [0m | [36msrc.ingestion.cvm_downloader[0m — [CVCB3] ITR: todos os anos já disponíveis
+[32m2026-04-19 19:23:05[0m | [32m[1mSUCCESS [0m | [36msrc.ingestion.cvm_downloader[0m — [CVCB3] Ingestão CVM concluída — CVM code: 023310
+[32m2026-04-19 19:23:05[0m | [1mINFO    [0m | [36m__main__[0m — [CVCB3] CVM: {'DFP': [], 'ITR': []}
+[32m2026-04-19 19:23:05[0m | [1mINFO    [0m | [36msrc.ingestion.b3_scraper[0m — [CVCB3] Download incremental de 2026-04-18 até hoje
+[32m2026-04-19 19:23:06[0m | [32m[1mSUCCESS [0m | [36msrc.ingestion.b3_scraper[0m — [CVCB3] 1815 dias salvos em CVCB3.parquet
+[32m2026-04-19 19:23:06[0m | [1mINFO    [0m | [36m__main__[0m — [CVCB3] preços: 1815 dias (2019-01-02 → 2026-04-17)
+[19:23:06] 
+[19:23:06] FASE 2 — Processando dados brutos...
+[19:23:06]   ▶ process ELET3
+/Users/diegocarvalho/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[32m2026-04-19 19:23:06[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [ELET3] processando 8 anos (banco=False, CVM=002437)
+[32m2026-04-19 19:23:06[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [ELET3] 2019: OK
+[32m2026-04-19 19:23:07[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [ELET3] 2020: OK
+[32m2026-04-19 19:23:07[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [ELET3] 2021: OK
+[32m2026-04-19 19:23:07[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [ELET3] 2022: OK
+[32m2026-04-19 19:23:08[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [ELET3] 2023: OK
+[32m2026-04-19 19:23:08[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [ELET3] 2024: OK
+[32m2026-04-19 19:23:08[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [ELET3] 2025: OK
+[32m2026-04-19 19:23:08[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [ELET3] 2026: FALHA — CSVs não encontrados em /Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/data/raw/cvm/DFP/2026 — execute 'ingest' primeiro
+[32m2026-04-19 19:23:08[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [ELET3] concluído — ok=7 pulados=0 falhas=1
+[32m2026-04-19 19:23:08[0m | [1mINFO    [0m | [36m__main__[0m — Processamento concluído — ok=7 falhas=1
+[19:23:09]   ▶ process RDOR3
+/Users/diegocarvalho/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[32m2026-04-19 19:23:09[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [RDOR3] processando 8 anos (banco=False, CVM=024821)
+[32m2026-04-19 19:23:09[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [RDOR3] 2019: OK
+[32m2026-04-19 19:23:10[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [RDOR3] 2020: OK
+[32m2026-04-19 19:23:10[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [RDOR3] 2021: OK
+[32m2026-04-19 19:23:10[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [RDOR3] 2022: OK
+[32m2026-04-19 19:23:11[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [RDOR3] 2023: OK
+[32m2026-04-19 19:23:11[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [RDOR3] 2024: OK
+[32m2026-04-19 19:23:11[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [RDOR3] 2025: OK
+[32m2026-04-19 19:23:11[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [RDOR3] 2026: FALHA — CSVs não encontrados em /Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/data/raw/cvm/DFP/2026 — execute 'ingest' primeiro
+[32m2026-04-19 19:23:11[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [RDOR3] concluído — ok=7 pulados=0 falhas=1
+[32m2026-04-19 19:23:11[0m | [1mINFO    [0m | [36m__main__[0m — Processamento concluído — ok=7 falhas=1
+[19:23:11]   ▶ process RECV3
+/Users/diegocarvalho/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[32m2026-04-19 19:23:12[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [RECV3] processando 8 anos (banco=False, CVM=025780)
+[DRE] Nenhum dado para cód. CVM 025780 em dfp_cia_aberta_DRE_con_2019.csv
+[BPA] Nenhum dado para cód. CVM 025780 em dfp_cia_aberta_BPA_con_2019.csv
+[BPP] Nenhum dado para cód. CVM 025780 em dfp_cia_aberta_BPP_con_2019.csv
+[DFC] Nenhum dado para cód. CVM 025780 em dfp_cia_aberta_DFC_MI_con_2019.csv
+[32m2026-04-19 19:23:12[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [RECV3] 2019: FALHA — DFPParser sem dados — verifique o código CVM
+[32m2026-04-19 19:23:12[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [RECV3] 2020: OK
+[32m2026-04-19 19:23:13[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [RECV3] 2021: OK
+[32m2026-04-19 19:23:13[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [RECV3] 2022: OK
+[32m2026-04-19 19:23:13[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [RECV3] 2023: OK
+[32m2026-04-19 19:23:14[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [RECV3] 2024: OK
+[32m2026-04-19 19:23:14[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [RECV3] 2025: OK
+[32m2026-04-19 19:23:14[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [RECV3] 2026: FALHA — CSVs não encontrados em /Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/data/raw/cvm/DFP/2026 — execute 'ingest' primeiro
+[32m2026-04-19 19:23:14[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [RECV3] concluído — ok=6 pulados=0 falhas=2
+[32m2026-04-19 19:23:14[0m | [1mINFO    [0m | [36m__main__[0m — Processamento concluído — ok=6 falhas=2
+[19:23:14]   ▶ process TAEE11
+/Users/diegocarvalho/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[32m2026-04-19 19:23:14[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [TAEE11] processando 8 anos (banco=False, CVM=020257)
+[32m2026-04-19 19:23:15[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [TAEE11] 2019: OK
+[32m2026-04-19 19:23:15[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [TAEE11] 2020: OK
+[32m2026-04-19 19:23:15[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [TAEE11] 2021: OK
+[32m2026-04-19 19:23:16[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [TAEE11] 2022: OK
+[32m2026-04-19 19:23:16[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [TAEE11] 2023: OK
+[32m2026-04-19 19:23:17[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [TAEE11] 2024: OK
+[32m2026-04-19 19:23:17[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [TAEE11] 2025: OK
+[32m2026-04-19 19:23:17[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [TAEE11] 2026: FALHA — CSVs não encontrados em /Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/data/raw/cvm/DFP/2026 — execute 'ingest' primeiro
+[32m2026-04-19 19:23:17[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [TAEE11] concluído — ok=7 pulados=0 falhas=1
+[32m2026-04-19 19:23:17[0m | [1mINFO    [0m | [36m__main__[0m — Processamento concluído — ok=7 falhas=1
+[19:23:17]   ▶ process CRFB3
+/Users/diegocarvalho/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[32m2026-04-19 19:23:17[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CRFB3] processando 8 anos (banco=False, CVM=024171)
+[32m2026-04-19 19:23:18[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CRFB3] 2019: OK
+[32m2026-04-19 19:23:18[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CRFB3] 2020: OK
+[32m2026-04-19 19:23:18[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CRFB3] 2021: OK
+[32m2026-04-19 19:23:19[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CRFB3] 2022: OK
+[32m2026-04-19 19:23:19[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CRFB3] 2023: OK
+[32m2026-04-19 19:23:19[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CRFB3] 2024: OK
+[DRE] Nenhum dado para cód. CVM 024171 em dfp_cia_aberta_DRE_con_2025.csv
+[BPA] Nenhum dado para cód. CVM 024171 em dfp_cia_aberta_BPA_con_2025.csv
+[BPP] Nenhum dado para cód. CVM 024171 em dfp_cia_aberta_BPP_con_2025.csv
+[DFC] Nenhum dado para cód. CVM 024171 em dfp_cia_aberta_DFC_MI_con_2025.csv
+[32m2026-04-19 19:23:20[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CRFB3] 2025: FALHA — DFPParser sem dados — verifique o código CVM
+[32m2026-04-19 19:23:20[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CRFB3] 2026: FALHA — CSVs não encontrados em /Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/data/raw/cvm/DFP/2026 — execute 'ingest' primeiro
+[32m2026-04-19 19:23:20[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CRFB3] concluído — ok=6 pulados=0 falhas=2
+[32m2026-04-19 19:23:20[0m | [1mINFO    [0m | [36m__main__[0m — Processamento concluído — ok=6 falhas=2
+[19:23:20]   ▶ process VIVT3
+/Users/diegocarvalho/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[32m2026-04-19 19:23:20[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [VIVT3] processando 8 anos (banco=False, CVM=017671)
+[32m2026-04-19 19:23:20[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [VIVT3] 2019: OK
+[32m2026-04-19 19:23:21[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [VIVT3] 2020: OK
+[32m2026-04-19 19:23:21[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [VIVT3] 2021: OK
+[32m2026-04-19 19:23:21[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [VIVT3] 2022: OK
+[32m2026-04-19 19:23:22[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [VIVT3] 2023: OK
+[32m2026-04-19 19:23:22[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [VIVT3] 2024: OK
+[32m2026-04-19 19:23:22[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [VIVT3] 2025: OK
+[32m2026-04-19 19:23:22[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [VIVT3] 2026: FALHA — CSVs não encontrados em /Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/data/raw/cvm/DFP/2026 — execute 'ingest' primeiro
+[32m2026-04-19 19:23:22[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [VIVT3] concluído — ok=7 pulados=0 falhas=1
+[32m2026-04-19 19:23:22[0m | [1mINFO    [0m | [36m__main__[0m — Processamento concluído — ok=7 falhas=1
+[19:23:22]   ▶ process CCRO3
+/Users/diegocarvalho/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[32m2026-04-19 19:23:23[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CCRO3] processando 8 anos (banco=False, CVM=018821)
+[32m2026-04-19 19:23:23[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CCRO3] 2019: OK
+[32m2026-04-19 19:23:23[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CCRO3] 2020: OK
+[32m2026-04-19 19:23:24[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CCRO3] 2021: OK
+[32m2026-04-19 19:23:24[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CCRO3] 2022: OK
+[32m2026-04-19 19:23:24[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CCRO3] 2023: OK
+[32m2026-04-19 19:23:25[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CCRO3] 2024: OK
+[32m2026-04-19 19:23:25[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CCRO3] 2025: OK
+[32m2026-04-19 19:23:25[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CCRO3] 2026: FALHA — CSVs não encontrados em /Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/data/raw/cvm/DFP/2026 — execute 'ingest' primeiro
+[32m2026-04-19 19:23:25[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CCRO3] concluído — ok=7 pulados=0 falhas=1
+[32m2026-04-19 19:23:25[0m | [1mINFO    [0m | [36m__main__[0m — Processamento concluído — ok=7 falhas=1
+[19:23:25]   ▶ process PCAR3
+/Users/diegocarvalho/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[32m2026-04-19 19:23:26[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [PCAR3] processando 8 anos (banco=False, CVM=014826)
+[32m2026-04-19 19:23:26[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [PCAR3] 2019: OK
+[32m2026-04-19 19:23:26[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [PCAR3] 2020: OK
+[32m2026-04-19 19:23:27[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [PCAR3] 2021: OK
+[32m2026-04-19 19:23:27[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [PCAR3] 2022: OK
+[32m2026-04-19 19:23:27[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [PCAR3] 2023: OK
+[32m2026-04-19 19:23:28[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [PCAR3] 2024: OK
+[32m2026-04-19 19:23:28[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [PCAR3] 2025: OK
+[32m2026-04-19 19:23:28[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [PCAR3] 2026: FALHA — CSVs não encontrados em /Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/data/raw/cvm/DFP/2026 — execute 'ingest' primeiro
+[32m2026-04-19 19:23:28[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [PCAR3] concluído — ok=7 pulados=0 falhas=1
+[32m2026-04-19 19:23:28[0m | [1mINFO    [0m | [36m__main__[0m — Processamento concluído — ok=7 falhas=1
+[19:23:28]   ▶ process PETZ3
+/Users/diegocarvalho/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[32m2026-04-19 19:23:28[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [PETZ3] processando 8 anos (banco=False, CVM=025089)
+[DRE] Nenhum dado para cód. CVM 025089 em dfp_cia_aberta_DRE_con_2019.csv
+[BPA] Nenhum dado para cód. CVM 025089 em dfp_cia_aberta_BPA_con_2019.csv
+[BPP] Nenhum dado para cód. CVM 025089 em dfp_cia_aberta_BPP_con_2019.csv
+[DFC] Nenhum dado para cód. CVM 025089 em dfp_cia_aberta_DFC_MI_con_2019.csv
+[32m2026-04-19 19:23:29[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [PETZ3] 2019: FALHA — DFPParser sem dados — verifique o código CVM
+[DRE] Nenhum dado para cód. CVM 025089 em dfp_cia_aberta_DRE_con_2020.csv
+[BPA] Nenhum dado para cód. CVM 025089 em dfp_cia_aberta_BPA_con_2020.csv
+[BPP] Nenhum dado para cód. CVM 025089 em dfp_cia_aberta_BPP_con_2020.csv
+[DFC] Nenhum dado para cód. CVM 025089 em dfp_cia_aberta_DFC_MI_con_2020.csv
+[32m2026-04-19 19:23:29[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [PETZ3] 2020: FALHA — DFPParser sem dados — verifique o código CVM
+[32m2026-04-19 19:23:29[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [PETZ3] 2021: OK
+[32m2026-04-19 19:23:30[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [PETZ3] 2022: OK
+[32m2026-04-19 19:23:30[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [PETZ3] 2023: OK
+[32m2026-04-19 19:23:30[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [PETZ3] 2024: OK
+[32m2026-04-19 19:23:31[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [PETZ3] 2025: OK
+[32m2026-04-19 19:23:31[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [PETZ3] 2026: FALHA — CSVs não encontrados em /Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/data/raw/cvm/DFP/2026 — execute 'ingest' primeiro
+[32m2026-04-19 19:23:31[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [PETZ3] concluído — ok=5 pulados=0 falhas=3
+[32m2026-04-19 19:23:31[0m | [1mINFO    [0m | [36m__main__[0m — Processamento concluído — ok=5 falhas=3
+[19:23:31]   ▶ process CVCB3
+/Users/diegocarvalho/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[32m2026-04-19 19:23:31[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CVCB3] processando 8 anos (banco=False, CVM=023310)
+[32m2026-04-19 19:23:31[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CVCB3] 2019: OK
+[32m2026-04-19 19:23:31[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CVCB3] 2020: OK
+[32m2026-04-19 19:23:31[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CVCB3] 2021: OK
+[32m2026-04-19 19:23:31[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CVCB3] 2022: OK
+[32m2026-04-19 19:23:31[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CVCB3] 2023: OK
+[32m2026-04-19 19:23:31[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CVCB3] 2024: OK
+[32m2026-04-19 19:23:31[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CVCB3] 2025: OK
+[32m2026-04-19 19:23:31[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CVCB3] 2026: FALHA — CSVs não encontrados em /Users/diegocarvalho/Library/CloudStorage/OneDrive-EPEJUD/DIEGO/OBSIDIAN/Analista de Investimentos/12_PYTHON/data/raw/cvm/DFP/2026 — execute 'ingest' primeiro
+[32m2026-04-19 19:23:31[0m | [1mINFO    [0m | [36msrc.processing.pipeline[0m — [CVCB3] concluído — ok=0 pulados=7 falhas=1
+[32m2026-04-19 19:23:31[0m | [1mINFO    [0m | [36m__main__[0m — Processamento concluído — ok=0 falhas=1
+[19:23:31] 
+[19:23:31] FASE 3 — Calculando métricas, risco e valuation...
+[19:23:31]   ▶ analyze ELET3
+[32m2026-04-19 19:23:31[0m | [1mINFO    [0m | [36m__main__[0m — [ELET3] iniciando análise completa...
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [ELET3] 2019: métricas calculadas [utilities]
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [ELET3] 2020: métricas calculadas [utilities]
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [ELET3] 2021: métricas calculadas [utilities]
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [ELET3] 2022: métricas calculadas [utilities]
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [ELET3] 2023: métricas calculadas [utilities]
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [ELET3] 2024: métricas calculadas [utilities]
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [ELET3] 2025: métricas calculadas [utilities]
+[32m2026-04-19 19:23:32[0m | [32m[1mSUCCESS [0m | [36msrc.analysis.metrics_engine[0m — [ELET3] 7 períodos calculados
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36msrc.analysis.risk_engine[0m — [ELET3] risco: LOW (0 alerta(s)) [utilities]
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36msrc.valuation.auto_dcf[0m — [ELET3] setor=utilities  método=ddm  modelo=industrial
+[32m2026-04-19 19:23:32[0m | [32m[1mSUCCESS [0m | [36msrc.valuation.auto_dcf[0m — [ELET3] valuation concluído — DDM — Gordon Growth | base=0 R$ mi
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36msrc.analysis.insight_engine[0m — [ELET3] 0 insights gerados
+      ELET3  — Análise 2025      
+┏━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓
+┃ Métrica        ┃        Valor ┃
+┡━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━┩
+│ ROE            │         5.5% │
+│ Margem EBITDA  │        58.3% │
+│ Margem Líquida │        15.9% │
+│ DL/EBITDA      │         2.4x │
+│ Dividend Yield │            — │
+│ FCF (R$ mi)    │ R$ 14,063 mi │
+│ Capex/Receita  │         1.1% │
+└────────────────┴──────────────┘
+
+Risco: LOW (0 alertas)
+
+Valuation:
+=== Valuation ELET3  (base 2025) — DDM — Gordon Growth ===
+  base         R$          0.0 mi  (N/D)  → N/D
+  optimistic   R$          0.0 mi  (N/D)  → N/D
+  pessimistic  R$          0.0 mi  (N/D)  → N/D
+[19:23:32]   ▶ analyze RDOR3
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36m__main__[0m — [RDOR3] iniciando análise completa...
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [RDOR3] 2019: métricas calculadas [healthcare]
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [RDOR3] 2020: métricas calculadas [healthcare]
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [RDOR3] 2021: métricas calculadas [healthcare]
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [RDOR3] 2022: métricas calculadas [healthcare]
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [RDOR3] 2023: métricas calculadas [healthcare]
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [RDOR3] 2024: métricas calculadas [healthcare]
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [RDOR3] 2025: métricas calculadas [healthcare]
+[32m2026-04-19 19:23:32[0m | [32m[1mSUCCESS [0m | [36msrc.analysis.metrics_engine[0m — [RDOR3] 7 períodos calculados
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36msrc.analysis.risk_engine[0m — [RDOR3] risco: MEDIUM (1 alerta(s)) [healthcare]
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36msrc.valuation.auto_dcf[0m — [RDOR3] setor=healthcare  método=dcf_fcff  modelo=industrial
+[32m2026-04-19 19:23:32[0m | [32m[1mSUCCESS [0m | [36msrc.valuation.auto_dcf[0m — [RDOR3] valuation concluído — DCF FCFF | base=113,302 R$ mi
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36msrc.analysis.insight_engine[0m — [RDOR3] 0 insights gerados
+        RDOR3  — Análise 2025         
+┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓
+┃ Métrica             ┃        Valor ┃
+┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━┩
+│ Margem EBITDA       │        21.0% │
+│ Margem Líquida      │         8.4% │
+│ ROE                 │        24.2% │
+│ ROIC                │        11.7% │
+│ DL/EBITDA           │         3.6x │
+│ FCF (R$ mi)         │ R$ -2,453 mi │
+│ Crescimento Receita │        10.2% │
+└─────────────────────┴──────────────┘
+
+Risco: MEDIUM (1 alertas)
+  • [AVISO] HIGH_LEVERAGE: DL/EBITDA elevada: 3.6x
+
+Valuation:
+=== Valuation RDOR3  (base 2025) — DCF FCFF ===
+  base         R$    113,302.4 mi  (N/D)  → N/D
+  optimistic   R$    190,801.0 mi  (N/D)  → N/D
+  pessimistic  R$     48,764.5 mi  (N/D)  → N/D
+[19:23:32]   ▶ analyze RECV3
+[32m2026-04-19 19:23:32[0m | [1mINFO    [0m | [36m__main__[0m — [RECV3] iniciando análise completa...
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [RECV3] 2020: métricas calculadas [oil_gas]
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [RECV3] 2021: métricas calculadas [oil_gas]
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [RECV3] 2022: métricas calculadas [oil_gas]
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [RECV3] 2023: métricas calculadas [oil_gas]
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [RECV3] 2024: métricas calculadas [oil_gas]
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [RECV3] 2025: métricas calculadas [oil_gas]
+[32m2026-04-19 19:23:33[0m | [32m[1mSUCCESS [0m | [36msrc.analysis.metrics_engine[0m — [RECV3] 6 períodos calculados
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.risk_engine[0m — [RECV3] risco: MEDIUM (1 alerta(s)) [oil_gas]
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.valuation.auto_dcf[0m — [RECV3] setor=oil_gas  método=ev_ebitda_multiple  modelo=industrial
+[32m2026-04-19 19:23:33[0m | [32m[1mSUCCESS [0m | [36msrc.valuation.auto_dcf[0m — [RECV3] valuation concluído — EV/EBITDA Múltiplo | base=1,887 R$ mi
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.insight_engine[0m — [RECV3] 1 insights gerados
+       RECV3  — Análise 2025        
+┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Métrica             ┃      Valor ┃
+┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│ Margem EBITDA       │      32.8% │
+│ Margem Líquida      │      20.2% │
+│ DL/EBITDA           │       2.8x │
+│ ROE                 │      14.7% │
+│ ROIC                │       7.3% │
+│ FCF (R$ mi)         │ R$ -135 mi │
+│ Capex/Receita       │      51.9% │
+│ Crescimento Receita │      -3.3% │
+└─────────────────────┴────────────┘
+
+Risco: MEDIUM (1 alertas)
+  • [AVISO] HIGH_LEVERAGE: DL/EBITDA elevada: 2.8x
+
+Valuation:
+=== Valuation RECV3  (base 2025) — EV/EBITDA Múltiplo ===
+  base         R$      1,886.9 mi  (N/D)  → N/D
+  optimistic   R$      3,185.8 mi  (N/D)  → N/D
+  pessimistic  R$        588.1 mi  (N/D)  → N/D
+
+Insights:
+  [!] Contração de receita: Receita recuou -3.3% — investigar perda de volume vs
+pressão de preço.
+[19:23:33]   ▶ analyze TAEE11
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36m__main__[0m — [TAEE11] iniciando análise completa...
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [TAEE11] 2019: métricas calculadas [utilities]
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [TAEE11] 2020: métricas calculadas [utilities]
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [TAEE11] 2021: métricas calculadas [utilities]
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [TAEE11] 2022: métricas calculadas [utilities]
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [TAEE11] 2023: métricas calculadas [utilities]
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [TAEE11] 2024: métricas calculadas [utilities]
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [TAEE11] 2025: métricas calculadas [utilities]
+[32m2026-04-19 19:23:33[0m | [32m[1mSUCCESS [0m | [36msrc.analysis.metrics_engine[0m — [TAEE11] 7 períodos calculados
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.risk_engine[0m — [TAEE11] risco: MEDIUM (1 alerta(s)) [utilities]
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.valuation.auto_dcf[0m — [TAEE11] setor=utilities  método=ddm  modelo=industrial
+[32m2026-04-19 19:23:33[0m | [32m[1mSUCCESS [0m | [36msrc.valuation.auto_dcf[0m — [TAEE11] valuation concluído — DDM — Gordon Growth | base=0 R$ mi
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.insight_engine[0m — [TAEE11] 1 insights gerados
+     TAEE11  — Análise 2025     
+┏━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┓
+┃ Métrica        ┃       Valor ┃
+┡━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━┩
+│ ROE            │       20.8% │
+│ Margem EBITDA  │       69.1% │
+│ Margem Líquida │       34.2% │
+│ DL/EBITDA      │        3.2x │
+│ Dividend Yield │           — │
+│ FCF (R$ mi)    │ R$ 1,531 mi │
+│ Capex/Receita  │        0.0% │
+└────────────────┴─────────────┘
+
+Risco: MEDIUM (1 alertas)
+  • [AVISO] HIGH_LEVERAGE: DL/EBITDA elevada: 3.2x
+
+Valuation:
+=== Valuation TAEE11  (base 2025) — DDM — Gordon Growth ===
+  base         R$          0.0 mi  (N/D)  → N/D
+  optimistic   R$          0.0 mi  (N/D)  → N/D
+  pessimistic  R$          0.0 mi  (N/D)  → N/D
+
+Insights:
+  [+] Crescimento de receita acelerado: Receita cresceu 24.4% — expansão 
+relevante de volume/preço.
+[19:23:33]   ▶ analyze CRFB3
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36m__main__[0m — [CRFB3] iniciando análise completa...
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [CRFB3] 2019: métricas calculadas [retail]
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [CRFB3] 2020: métricas calculadas [retail]
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [CRFB3] 2021: métricas calculadas [retail]
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [CRFB3] 2022: métricas calculadas [retail]
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [CRFB3] 2023: métricas calculadas [retail]
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [CRFB3] 2024: métricas calculadas [retail]
+[32m2026-04-19 19:23:33[0m | [32m[1mSUCCESS [0m | [36msrc.analysis.metrics_engine[0m — [CRFB3] 6 períodos calculados
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.risk_engine[0m — [CRFB3] risco: MEDIUM (2 alerta(s)) [retail]
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.valuation.auto_dcf[0m — [CRFB3] setor=retail  método=dcf_fcff  modelo=industrial
+[32m2026-04-19 19:23:33[0m | [32m[1mSUCCESS [0m | [36msrc.valuation.auto_dcf[0m — [CRFB3] valuation concluído — DCF FCFF | base=0 R$ mi
+[32m2026-04-19 19:23:33[0m | [1mINFO    [0m | [36msrc.analysis.insight_engine[0m — [CRFB3] 0 insights gerados
+     CRFB3  — Análise 2024      
+┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┓
+┃ Métrica             ┃  Valor ┃
+┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━┩
+│ Margem Bruta        │  18.3% │
+│ Margem EBITDA       │   5.3% │
+│ Margem Líquida      │   1.5% │
+│ DL/EBITDA           │   1.6x │
+│ Conversão de FCF    │ 255.5% │
+│ Crescimento Receita │   5.3% │
+│ ROE                 │   8.4% │
+│ Capex/Receita       │   0.2% │
+└─────────────────────┴────────┘
+
+Risco: MEDIUM (2 alertas)
+  • [AVISO] LOW_GROSS_MARGIN: Margem bruta baixa: 18.3% (mín. esperado: 25.0%)
+  • [AVISO] FALLING_NET_INCOME: Lucro em queda por 2 anos consecutivos
+
+Valuation:
+=== Valuation CRFB3  (base 2024) — DCF FCFF ===
+  base         R$          0.0 mi  (N/D)  → N/D
+  optimistic   R$          0.0 mi  (N/D)  → N/D
+  pessimistic  R$          0.0 mi  (N/D)  → N/D
+[19:23:33]   ▶ analyze VIVT3
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36m__main__[0m — [VIVT3] iniciando análise completa...
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [VIVT3] 2019: métricas calculadas [telecom]
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [VIVT3] 2020: métricas calculadas [telecom]
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [VIVT3] 2021: métricas calculadas [telecom]
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [VIVT3] 2022: métricas calculadas [telecom]
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [VIVT3] 2023: métricas calculadas [telecom]
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [VIVT3] 2024: métricas calculadas [telecom]
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [VIVT3] 2025: métricas calculadas [telecom]
+[32m2026-04-19 19:23:34[0m | [32m[1mSUCCESS [0m | [36msrc.analysis.metrics_engine[0m — [VIVT3] 7 períodos calculados
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36msrc.analysis.risk_engine[0m — [VIVT3] risco: LOW (0 alerta(s)) [telecom]
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36msrc.valuation.auto_dcf[0m — [VIVT3] setor=telecom  método=ev_ebitda_multiple  modelo=industrial
+[32m2026-04-19 19:23:34[0m | [32m[1mSUCCESS [0m | [36msrc.valuation.auto_dcf[0m — [VIVT3] valuation concluído — EV/EBITDA Múltiplo | base=45,841 R$ mi
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36msrc.analysis.insight_engine[0m — [VIVT3] 0 insights gerados
+        VIVT3  — Análise 2025         
+┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓
+┃ Métrica             ┃        Valor ┃
+┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━┩
+│ Margem EBITDA       │        41.6% │
+│ Margem Líquida      │        10.3% │
+│ DL/EBITDA           │         0.5x │
+│ Dividend Yield      │            — │
+│ Capex/Receita       │         0.7% │
+│ Crescimento Receita │         6.7% │
+│ FCF (R$ mi)         │ R$ 20,281 mi │
+└─────────────────────┴──────────────┘
+
+Risco: LOW (0 alertas)
+
+Valuation:
+=== Valuation VIVT3  (base 2025) — EV/EBITDA Múltiplo ===
+  base         R$     45,841.3 mi  (N/D)  → N/D
+  optimistic   R$     63,588.0 mi  (N/D)  → N/D
+  pessimistic  R$     34,010.2 mi  (N/D)  → N/D
+[19:23:34]   ▶ analyze CCRO3
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36m__main__[0m — [CCRO3] iniciando análise completa...
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [CCRO3] 2019: métricas calculadas [industrial]
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [CCRO3] 2020: métricas calculadas [industrial]
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [CCRO3] 2021: métricas calculadas [industrial]
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [CCRO3] 2022: métricas calculadas [industrial]
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [CCRO3] 2023: métricas calculadas [industrial]
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [CCRO3] 2024: métricas calculadas [industrial]
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [CCRO3] 2025: métricas calculadas [industrial]
+[32m2026-04-19 19:23:34[0m | [32m[1mSUCCESS [0m | [36msrc.analysis.metrics_engine[0m — [CCRO3] 7 períodos calculados
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36msrc.analysis.risk_engine[0m — [CCRO3] risco: HIGH (1 alerta(s)) [industrial]
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36msrc.valuation.auto_dcf[0m — [CCRO3] setor=industrial  método=dcf_fcff  modelo=industrial
+[32m2026-04-19 19:23:34[0m | [32m[1mSUCCESS [0m | [36msrc.valuation.auto_dcf[0m — [CCRO3] valuation concluído — DCF FCFF | base=80,308 R$ mi
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36msrc.analysis.insight_engine[0m — [CCRO3] 2 insights gerados
+        CCRO3  — Análise 2025        
+┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┓
+┃ Métrica             ┃       Valor ┃
+┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━┩
+│ ROE                 │       20.8% │
+│ ROIC                │       10.7% │
+│ Margem EBITDA       │       40.5% │
+│ Margem Líquida      │       17.4% │
+│ DL/EBITDA           │        4.4x │
+│ FCF (R$ mi)         │ R$ 5,088 mi │
+│ Conversão de FCF    │      155.1% │
+│ Crescimento Receita │      -13.5% │
+│ Capex/Receita       │        3.5% │
+└─────────────────────┴─────────────┘
+
+Risco: HIGH (1 alertas)
+  • [RISCO] HIGH_LEVERAGE: DL/EBITDA elevada: 4.4x
+
+Valuation:
+=== Valuation CCRO3  (base 2025) — DCF FCFF ===
+  base         R$     80,307.5 mi  (N/D)  → N/D
+  optimistic   R$    130,038.8 mi  (N/D)  → N/D
+  pessimistic  R$     42,062.3 mi  (N/D)  → N/D
+
+Insights:
+  [!] Contração de receita: Receita recuou -13.5% — investigar perda de volume 
+vs pressão de preço.
+  [!] Alertas de risco (HIGH): 1 risco(s) identificados. Principais: DL/EBITDA 
+elevada: 4.4x.
+[19:23:34]   ▶ analyze PCAR3
+[32m2026-04-19 19:23:34[0m | [1mINFO    [0m | [36m__main__[0m — [PCAR3] iniciando análise completa...
+[32m2026-04-19 19:23:35[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [PCAR3] 2019: métricas calculadas [retail]
+[32m2026-04-19 19:23:35[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [PCAR3] 2020: métricas calculadas [retail]
+[32m2026-04-19 19:23:35[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [PCAR3] 2021: métricas calculadas [retail]
+[32m2026-04-19 19:23:35[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [PCAR3] 2022: métricas calculadas [retail]
+[32m2026-04-19 19:23:35[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [PCAR3] 2023: métricas calculadas [retail]
+[32m2026-04-19 19:23:35[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [PCAR3] 2024: métricas calculadas [retail]
+[32m2026-04-19 19:23:35[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [PCAR3] 2025: métricas calculadas [retail]
+[32m2026-04-19 19:23:35[0m | [32m[1mSUCCESS [0m | [36msrc.analysis.metrics_engine[0m — [PCAR3] 7 períodos calculados
+[32m2026-04-19 19:23:35[0m | [1mINFO    [0m | [36msrc.analysis.risk_engine[0m — [PCAR3] risco: HIGH (1 alerta(s)) [retail]
+[32m2026-04-19 19:23:35[0m | [1mINFO    [0m | [36msrc.valuation.auto_dcf[0m — [PCAR3] setor=retail  método=dcf_fcff  modelo=industrial
+[32m2026-04-19 19:23:35[0m | [32m[1mSUCCESS [0m | [36msrc.valuation.auto_dcf[0m — [PCAR3] valuation concluído — DCF FCFF | base=0 R$ mi
+[32m2026-04-19 19:23:35[0m | [1mINFO    [0m | [36msrc.analysis.insight_engine[0m — [PCAR3] 1 insights gerados
+     PCAR3  — Análise 2025      
+┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┓
+┃ Métrica             ┃  Valor ┃
+┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━┩
+│ Margem Bruta        │  27.6% │
+│ Margem EBITDA       │   3.3% │
+│ Margem Líquida      │  -4.3% │
+│ DL/EBITDA           │   3.4x │
+│ Conversão de FCF    │ -99.6% │
+│ Crescimento Receita │   1.7% │
+│ ROE                 │ -39.1% │
+│ Capex/Receita       │   2.8% │
+└─────────────────────┴────────┘
+
+Risco: HIGH (1 alertas)
+  • [RISCO] HIGH_LEVERAGE: DL/EBITDA elevada: 3.4x
+
+Valuation:
+=== Valuation PCAR3  (base 2025) — DCF FCFF ===
+  base         R$          0.0 mi  (N/D)  → N/D
+  optimistic   R$          0.0 mi  (N/D)  → N/D
+  pessimistic  R$          0.0 mi  (N/D)  → N/D
+
+Insights:
+  [!] Alertas de risco (HIGH): 1 risco(s) identificados. Principais: DL/EBITDA 
+elevada: 3.4x.
+[19:23:35]   ▶ analyze PETZ3
+[32m2026-04-19 19:23:35[0m | [1mINFO    [0m | [36m__main__[0m — [PETZ3] iniciando análise completa...
+[32m2026-04-19 19:23:35[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [PETZ3] 2021: métricas calculadas [retail]
+[32m2026-04-19 19:23:35[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [PETZ3] 2022: métricas calculadas [retail]
+[32m2026-04-19 19:23:35[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [PETZ3] 2023: métricas calculadas [retail]
+[32m2026-04-19 19:23:35[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [PETZ3] 2024: métricas calculadas [retail]
+[32m2026-04-19 19:23:35[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [PETZ3] 2025: métricas calculadas [retail]
+[32m2026-04-19 19:23:35[0m | [32m[1mSUCCESS [0m | [36msrc.analysis.metrics_engine[0m — [PETZ3] 5 períodos calculados
+[32m2026-04-19 19:23:35[0m | [1mINFO    [0m | [36msrc.analysis.risk_engine[0m — [PETZ3] risco: LOW (0 alerta(s)) [retail]
+[32m2026-04-19 19:23:35[0m | [1mINFO    [0m | [36msrc.valuation.auto_dcf[0m — [PETZ3] setor=retail  método=dcf_fcff  modelo=industrial
+[32m2026-04-19 19:23:35[0m | [32m[1mSUCCESS [0m | [36msrc.valuation.auto_dcf[0m — [PETZ3] valuation concluído — DCF FCFF | base=0 R$ mi
+[32m2026-04-19 19:23:35[0m | [1mINFO    [0m | [36msrc.analysis.insight_engine[0m — [PETZ3] 0 insights gerados
+     PETZ3  — Análise 2025     
+┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Métrica             ┃ Valor ┃
+┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ Margem Bruta        │ 47.0% │
+│ Margem EBITDA       │  9.7% │
+│ Margem Líquida      │  0.0% │
+│ DL/EBITDA           │  0.8x │
+│ Conversão de FCF    │     — │
+│ Crescimento Receita │  7.9% │
+│ ROE                 │  0.0% │
+│ Capex/Receita       │  3.6% │
+└─────────────────────┴───────┘
+
+Risco: LOW (0 alertas)
+
+Valuation:
+=== Valuation PETZ3  (base 2025) — DCF FCFF ===
+  base         R$          0.0 mi  (N/D)  → N/D
+  optimistic   R$          0.0 mi  (N/D)  → N/D
+  pessimistic  R$          0.0 mi  (N/D)  → N/D
+[19:23:35]   ▶ analyze CVCB3
+[32m2026-04-19 19:23:35[0m | [1mINFO    [0m | [36m__main__[0m — [CVCB3] iniciando análise completa...
+[32m2026-04-19 19:23:36[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [CVCB3] 2019: métricas carregadas do cache
+[32m2026-04-19 19:23:36[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [CVCB3] 2020: métricas carregadas do cache
+[32m2026-04-19 19:23:36[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [CVCB3] 2021: métricas carregadas do cache
+[32m2026-04-19 19:23:36[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [CVCB3] 2022: métricas carregadas do cache
+[32m2026-04-19 19:23:36[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [CVCB3] 2023: métricas carregadas do cache
+[32m2026-04-19 19:23:36[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [CVCB3] 2024: métricas carregadas do cache
+[32m2026-04-19 19:23:36[0m | [1mINFO    [0m | [36msrc.analysis.metrics_engine[0m — [CVCB3] 2025: métricas carregadas do cache
+[32m2026-04-19 19:23:36[0m | [32m[1mSUCCESS [0m | [36msrc.analysis.metrics_engine[0m — [CVCB3] 7 períodos calculados
+[32m2026-04-19 19:23:36[0m | [1mINFO    [0m | [36msrc.valuation.auto_dcf[0m — [CVCB3] valuation carregado do cache
+     CVCB3  — Análise 2025      
+┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┓
+┃ Métrica             ┃  Valor ┃
+┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━┩
+│ Margem Bruta        │  25.2% │
+│ Margem EBITDA       │  15.7% │
+│ Margem Líquida      │   5.1% │
+│ DL/EBITDA           │   1.5x │
+│ Conversão de FCF    │ 248.2% │
+│ Crescimento Receita │   6.0% │
+│ ROE                 │  24.5% │
+│ Capex/Receita       │   3.5% │
+└─────────────────────┴────────┘
+
+Risco: LOW (0 alertas)
+
+Valuation:
+=== Valuation CVCB3  (base 2025) — DCF FCFF ===
+  base         R$     39,656.2 mi  (N/D)  → N/D
+  optimistic   R$     67,106.5 mi  (N/D)  → N/D
+  pessimistic  R$     16,157.6 mi  (N/D)  → N/D
+[19:23:36] 
+[19:23:36] FASE 4 — Status final:
+ Intelligence System — Configuração 
+┏━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Item           ┃ Valor           ┃
+┡━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ Ambiente       │ production      │
+│ Tickers ativos │ 89              │
+│ Supabase       │ não configurado │
+│ Telegram       │ configurado     │
+│ Claude API     │ configurada     │
+└────────────────┴─────────────────┘
+                     Dados Processados                      
+┏━━━━━━━━┳━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Ticker ┃ Anos ┃ Períodos                                 ┃
+┡━━━━━━━━╇━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ BBAS3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ ITUB4  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ BBDC4  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ SANB11 │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ BPAC11 │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ BRSR6  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ ABCB4  │    5 │ 2019, 2020, 2021, 2022, 2023             │
+│ BMGB4  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ BPAN4  │    6 │ 2019, 2020, 2021, 2022, 2023, 2024       │
+│ PINE4  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ INTR4  │    5 │ 2021, 2022, 2023, 2024, 2025             │
+│ ITSA4  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ BBSE3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ BRAP4  │    5 │ 2019, 2020, 2021, 2022, 2023             │
+│ IRBR3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ PSSA3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ CXSE3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ B3SA3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ PETR4  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ PRIO3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ BRAV3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ RECV3  │    6 │ 2020, 2021, 2022, 2023, 2024, 2025       │
+│ VBBR3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ RAIZ4  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ ENEV3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ CSAN3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ VALE3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ CMIN3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ GGBR4  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ GOAU4  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ CSNA3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ USIM5  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ BRKM5  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ ELET3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ CMIG4  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ CPFE3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ CPLE6  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ EGIE3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ ENGI11 │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ EQTL3  │    1 │ 2024                                     │
+│ AURE3  │    5 │ 2021, 2022, 2023, 2024, 2025             │
+│ ISAE4  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ TAEE11 │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ SBSP3  │    3 │ 2023, 2024, 2025                         │
+│ VIVT3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ TIMS3  │    5 │ 2020, 2022, 2023, 2024, 2025             │
+│ WEGE3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ EMBR3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ POMO4  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ STBP3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ CCRO3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ RAIL3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ UGPA3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ SUZB3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ KLBN11 │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ ABEV3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ JBSS3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ BRFS3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ MRFG3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ BEEF3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ SMTO3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ SLCE3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ LREN3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ MGLU3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ AZZA3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ NTCO3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ CRFB3  │    6 │ 2019, 2020, 2021, 2022, 2023, 2024       │
+│ PCAR3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ PETZ3  │    5 │ 2021, 2022, 2023, 2024, 2025             │
+│ VIVA3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ AMOB3  │    3 │ 2023, 2024, 2025                         │
+│ RDOR3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ HAPV3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ FLRY3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ HYPE3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ RADL3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ MULT3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ CYRE3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ MRVE3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ IGTI11 │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ ALOS3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ RENT3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ VAMO3  │    4 │ 2021, 2022, 2023, 2024                   │
+│ TOTS3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ LWSA3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ COGN3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ YDUQ3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ AZUL4  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+│ CVCB3  │    7 │ 2019, 2020, 2021, 2022, 2023, 2024, 2025 │
+└────────┴──────┴──────────────────────────────────────────┘
+[19:23:36] 
+[19:23:36] Bootstrap concluído! Log salvo em: logs/bootstrap_20260419_192240.log

@@ -1,0 +1,51 @@
+{
+  "ticker": "PETZ3",
+  "sector_type": "retail",
+  "base_year": 2025,
+  "method": "DCF FCFF",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 0.0,
+      "current_price": null,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1189,
+        "g_terminal": 0.045,
+        "rev_growth_avg": 0.1,
+        "ebitda_margin_avg": 0.0509,
+        "beta": 1.25,
+        "tax_rate": 0.27
+      }
+    },
+    "optimistic": {
+      "fair_value": 0.0,
+      "current_price": null,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1176,
+        "g_terminal": 0.05,
+        "rev_growth_avg": 0.16,
+        "ebitda_margin_avg": 0.0535,
+        "beta": 1.25,
+        "tax_rate": 0.27
+      }
+    },
+    "pessimistic": {
+      "fair_value": 0.0,
+      "current_price": null,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "wacc": 0.1202,
+        "g_terminal": 0.04,
+        "rev_growth_avg": 0.04,
+        "ebitda_margin_avg": 0.0474,
+        "beta": 1.25,
+        "tax_rate": 0.27
+      }
+    }
+  }
+}

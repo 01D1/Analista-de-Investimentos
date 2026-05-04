@@ -1,0 +1,510 @@
+# =============================================================================
+# sectors.yaml — Configuração de modelagem financeira por setor
+# =============================================================================
+#
+# Campos obrigatórios por setor:
+#   financial_model:    "bank" | "industrial"  (qual parser/DRE usar)
+#   valuation_method:   "gordon_growth" | "dcf_fcff" | "ev_ebitda_multiple" | "ddm"
+#   key_metrics:        lista ordenada de métricas para exibição (em metrics_engine)
+#   risk_thresholds:    limites numéricos para risk_engine
+#
+# Premissas macroeconômicas Brasil (atualizar periodicamente):
+#   SELIC meta:       10.5%
+#   IPCA esperado:    4.5%
+#   NTNB-P longa:     6.5% (taxa real)
+#   Risk-free nominal: ~11% (taxa real + IPCA)
+#   ERP (equity risk premium): 5.5%
+# =============================================================================
+
+sectors:
+
+  # ── BANCOS ──────────────────────────────────────────────────────────────────
+  bank:
+    description: "Bancos comerciais, de investimento e múltiplos"
+    financial_model: bank
+    valuation_method: gordon_growth
+    key_metrics:
+      - roe
+      - roa
+      - nii_margin         # NIM: NII / Ativos médios
+      - efficiency_ratio
+      - leverage           # Ativos / PL
+      - pdd_ratio          # PDD / Carteira de Crédito
+      - cost_of_credit     # PDD / Ativos
+      - net_income_growth
+      - nii_growth
+    gordon_assumptions:
+      coe: 0.135            # COE = Selic + prêmio risco
+      terminal_growth: 0.055 # IPCA + crescimento real ~1%
+      payout_ratio: 0.40    # Mínimo legal para bancos BR
+    scenario_deltas:
+      optimistic:  {coe: -0.005, terminal_growth: +0.005}
+      pessimistic: {coe: +0.005, terminal_growth: -0.005}
+    risk_thresholds:
+      roe_min_low: 0.12           # abaixo → MEDIUM
+      roe_min_high: 0.10          # abaixo → HIGH
+      roe_min_critical: 0.05      # abaixo → CRITICAL
+      leverage_max_high: 15.0     # HIGH
+      leverage_max_critical: 20.0 # CRITICAL
+      efficiency_max_medium: 0.60 # MEDIUM (acima)
+      efficiency_max_high: 0.70   # HIGH
+      pdd_growth_years: 3         # PDD crescendo N anos → HIGH
+      ni_growth_negative_years: 2 # queda consecutiva → MEDIUM
+
+  # ── HOLDINGS FINANCEIRAS ────────────────────────────────────────────────────
+  holding:
+    description: "Holdings financeiras (Itaúsa, etc.)"
+    financial_model: industrial   # DRE industrial (receita = dividendos/equiv.patrimonial)
+    valuation_method: gordon_growth
+    key_metrics:
+      - roe
+      - net_margin
+      - dividend_yield
+      - pb_ratio
+    gordon_assumptions:
+      coe: 0.130
+      terminal_growth: 0.055
+      payout_ratio: 0.50
+    scenario_deltas:
+      optimistic:  {coe: -0.005, terminal_growth: +0.005}
+      pessimistic: {coe: +0.005, terminal_growth: -0.005}
+    risk_thresholds:
+      roe_min_high: 0.10
+      leverage_max_high: 3.0
+
+  # ── INDUSTRIAL / BENS DE CAPITAL ────────────────────────────────────────────
+  industrial:
+    description: "Manufatura, bens de capital, equipamentos (WEG, Embraer, etc.)"
+    financial_model: industrial
+    valuation_method: dcf_fcff
+    key_metrics:
+      - roe
+      - roic
+      - ebitda_margin
+      - net_margin
+      - nd_ebitda
+      - fcf
+      - fcf_conversion
+      - revenue_growth
+      - capex_to_revenue
+    dcf_assumptions:
+      risk_free: 0.065
+      erp: 0.055
+      beta: 1.0
+      cost_of_debt: 0.115
+      tax_rate: 0.27
+      debt_to_capital: 0.25
+      terminal_growth: 0.055
+      n_years: 5
+      base_revenue_growth: [0.10, 0.10, 0.09, 0.08, 0.08]
+      base_ebitda_margin_offset: 0.0   # usar margem histórica como base
+      base_capex_pct: 0.06
+      scenario_growth_delta: 0.05      # otimista +5pp, pessimista -5pp
+      scenario_wacc_delta: 0.005
+    risk_thresholds:
+      nd_ebitda_medium: 2.5
+      nd_ebitda_high: 3.5
+      nd_ebitda_critical: 5.0
+      interest_coverage_high: 3.0
+      interest_coverage_critical: 1.5
+      fcf_negative: true               # FCF negativo → MEDIUM
+      margin_compression_years: 3      # compressão N anos → HIGH
+
+  # ── VAREJO ──────────────────────────────────────────────────────────────────
+  retail:
+    description: "Varejo físico e e-commerce (Americanas, Renner, Magazine Luiza, etc.)"
+    financial_model: industrial
+    valuation_method: dcf_fcff
+    key_metrics:
+      - gross_margin
+      - ebitda_margin
+      - net_margin
+      - nd_ebitda
+      - fcf_conversion
+      - revenue_growth
+      - roe
+      - capex_to_revenue
+    dcf_assumptions:
+      risk_free: 0.065
+      erp: 0.055
+      beta: 1.25            # varejo é mais cíclico
+      cost_of_debt: 0.125   # custo de capital mais alto
+      tax_rate: 0.27
+      debt_to_capital: 0.35
+      terminal_growth: 0.045 # crescimento menor, setor maduro
+      n_years: 5
+      base_revenue_growth: [0.12, 0.11, 0.10, 0.09, 0.08]
+      base_ebitda_margin_offset: 0.0
+      base_capex_pct: 0.04
+      scenario_growth_delta: 0.06
+      scenario_wacc_delta: 0.005
+    risk_thresholds:
+      nd_ebitda_medium: 2.0  # varejo tolera menos alavancagem
+      nd_ebitda_high: 3.0
+      nd_ebitda_critical: 4.5
+      interest_coverage_high: 2.5
+      interest_coverage_critical: 1.2
+      gross_margin_min_medium: 0.25    # margem bruta abaixo → MEDIUM
+      margin_compression_years: 2     # varejo: 2 anos já é sinal
+
+  # ── ENERGIA ELÉTRICA / UTILIDADES ───────────────────────────────────────────
+  utilities:
+    description: "Energia elétrica, saneamento, gás (CPLE6, SBSP3, ENGI11, etc.)"
+    financial_model: industrial
+    valuation_method: ddm              # fluxo de dividendos regulados
+    key_metrics:
+      - roe
+      - ebitda_margin
+      - net_margin
+      - nd_ebitda
+      - dividend_yield
+      - fcf
+      - capex_to_revenue
+    ddm_assumptions:
+      coe: 0.120                       # reguladas têm menor risco → menor COE
+      terminal_growth: 0.050
+      payout_ratio: 0.60               # utilities pagam dividendo alto
+    dcf_assumptions:                   # fallback se DDM não disponível
+      risk_free: 0.065
+      erp: 0.055
+      beta: 0.75                       # beta baixo (defensivo/regulado)
+      cost_of_debt: 0.110
+      tax_rate: 0.27
+      debt_to_capital: 0.50            # utilities têm mais dívida regulatoriamente
+      terminal_growth: 0.050
+      n_years: 5
+      base_revenue_growth: [0.06, 0.06, 0.05, 0.05, 0.05]
+      base_ebitda_margin_offset: 0.0
+      base_capex_pct: 0.12             # capex alto (infraestrutura)
+      scenario_growth_delta: 0.02
+      scenario_wacc_delta: 0.003
+    scenario_deltas:
+      optimistic:  {coe: -0.003, terminal_growth: +0.003}
+      pessimistic: {coe: +0.003, terminal_growth: -0.003}
+    risk_thresholds:
+      nd_ebitda_medium: 3.0
+      nd_ebitda_high: 4.5
+      nd_ebitda_critical: 6.0          # utilities toleram mais dívida
+      interest_coverage_high: 2.0
+      interest_coverage_critical: 1.2
+      dividend_yield_min_medium: 0.04  # yield abaixo de 4% é warning
+
+  # ── PETRÓLEO & GÁS ──────────────────────────────────────────────────────────
+  oil_gas:
+    description: "Exploração, produção e refino de petróleo e gás (PETR4, PRIO3, RECV3)"
+    financial_model: industrial
+    valuation_method: ev_ebitda_multiple
+    key_metrics:
+      - ebitda_margin
+      - net_margin
+      - nd_ebitda
+      - roe
+      - roic
+      - fcf
+      - capex_to_revenue
+      - revenue_growth
+    ev_ebitda_assumptions:
+      target_multiple_base: 5.5        # EV/EBITDA referência setor
+      target_multiple_min: 4.0         # pessimista
+      target_multiple_max: 7.0         # otimista
+    dcf_assumptions:                   # usado para sensibilidade
+      risk_free: 0.065
+      erp: 0.055
+      beta: 1.30
+      cost_of_debt: 0.115
+      tax_rate: 0.27
+      debt_to_capital: 0.40
+      terminal_growth: 0.030           # crescimento estrutural menor
+      n_years: 5
+      base_revenue_growth: [0.05, 0.05, 0.04, 0.04, 0.03]
+      base_ebitda_margin_offset: 0.0
+      base_capex_pct: 0.20             # capex elevadíssimo
+      scenario_growth_delta: 0.05
+      scenario_wacc_delta: 0.008
+    risk_thresholds:
+      nd_ebitda_medium: 2.5
+      nd_ebitda_high: 3.5
+      nd_ebitda_critical: 5.0
+      ebitda_margin_min_high: 0.20     # margem EBITDA abaixo → HIGH
+      interest_coverage_high: 2.5
+      interest_coverage_critical: 1.5
+
+  # ── MINERAÇÃO ───────────────────────────────────────────────────────────────
+  mining:
+    description: "Mineração metálica e não-metálica (VALE3, CSNA3, GGBR4)"
+    financial_model: industrial
+    valuation_method: ev_ebitda_multiple
+    key_metrics:
+      - ebitda_margin
+      - net_margin
+      - nd_ebitda
+      - roe
+      - roic
+      - fcf
+      - revenue_growth
+    ev_ebitda_assumptions:
+      target_multiple_base: 5.0
+      target_multiple_min: 3.5
+      target_multiple_max: 6.5
+    dcf_assumptions:
+      risk_free: 0.065
+      erp: 0.055
+      beta: 1.35
+      cost_of_debt: 0.115
+      tax_rate: 0.27
+      debt_to_capital: 0.35
+      terminal_growth: 0.025
+      n_years: 5
+      base_revenue_growth: [0.04, 0.04, 0.03, 0.03, 0.02]
+      base_ebitda_margin_offset: 0.0
+      base_capex_pct: 0.18
+      scenario_growth_delta: 0.06
+      scenario_wacc_delta: 0.008
+    risk_thresholds:
+      nd_ebitda_medium: 2.0
+      nd_ebitda_high: 3.0
+      nd_ebitda_critical: 4.5
+      ebitda_margin_min_high: 0.25
+
+  # ── TELECOMUNICAÇÕES ────────────────────────────────────────────────────────
+  telecom:
+    description: "Telecomunicações (VIVT3, TIMS3, OI, etc.)"
+    financial_model: industrial
+    valuation_method: ev_ebitda_multiple
+    key_metrics:
+      - ebitda_margin
+      - net_margin
+      - nd_ebitda
+      - dividend_yield
+      - capex_to_revenue
+      - revenue_growth
+      - fcf
+    ev_ebitda_assumptions:
+      target_multiple_base: 5.0
+      target_multiple_min: 4.0
+      target_multiple_max: 6.5
+    dcf_assumptions:
+      risk_free: 0.065
+      erp: 0.055
+      beta: 0.80                       # beta baixo (defensivo)
+      cost_of_debt: 0.110
+      tax_rate: 0.27
+      debt_to_capital: 0.50            # alavancagem típica alta
+      terminal_growth: 0.040
+      n_years: 5
+      base_revenue_growth: [0.05, 0.05, 0.04, 0.04, 0.04]
+      base_ebitda_margin_offset: 0.0
+      base_capex_pct: 0.18
+      scenario_growth_delta: 0.02
+      scenario_wacc_delta: 0.003
+    risk_thresholds:
+      nd_ebitda_medium: 3.0
+      nd_ebitda_high: 4.5
+      nd_ebitda_critical: 6.5
+      ebitda_margin_min_medium: 0.30   # abaixo é preocupante para telecom
+
+  # ── IMOBILIÁRIO / INCORPORADORAS ────────────────────────────────────────────
+  real_estate:
+    description: "Incorporadoras e FIIs (CYRE3, MRVE3, EZTC3, MRV)"
+    financial_model: industrial
+    valuation_method: ev_ebitda_multiple  # NAV/P-FFO seria mais preciso — evolução futura
+    key_metrics:
+      - gross_margin
+      - net_margin
+      - nd_ebitda
+      - roe
+      - fcf
+      - revenue_growth
+    ev_ebitda_assumptions:
+      target_multiple_base: 8.0        # incorporadoras negociam mais caro
+      target_multiple_min: 6.0
+      target_multiple_max: 12.0
+    dcf_assumptions:
+      risk_free: 0.065
+      erp: 0.055
+      beta: 1.10
+      cost_of_debt: 0.125
+      tax_rate: 0.27
+      debt_to_capital: 0.35
+      terminal_growth: 0.060           # demanda imobiliária + déficit habitacional
+      n_years: 5
+      base_revenue_growth: [0.12, 0.10, 0.09, 0.08, 0.07]
+      base_ebitda_margin_offset: 0.0
+      base_capex_pct: 0.03
+      scenario_growth_delta: 0.05
+      scenario_wacc_delta: 0.005
+    risk_thresholds:
+      nd_ebitda_medium: 2.0
+      nd_ebitda_high: 3.0
+      nd_ebitda_critical: 4.5
+      interest_coverage_high: 2.5
+      interest_coverage_critical: 1.5
+
+  # ── SAÚDE ───────────────────────────────────────────────────────────────────
+  healthcare:
+    description: "Hospitais, seguradoras de saúde, diagnósticos (RDOR3, HAPV3, FLRY3)"
+    financial_model: industrial
+    valuation_method: dcf_fcff
+    key_metrics:
+      - ebitda_margin
+      - net_margin
+      - roe
+      - roic
+      - nd_ebitda
+      - fcf
+      - revenue_growth
+    dcf_assumptions:
+      risk_free: 0.065
+      erp: 0.055
+      beta: 0.90                       # beta defensivo
+      cost_of_debt: 0.115
+      tax_rate: 0.27
+      debt_to_capital: 0.30
+      terminal_growth: 0.065           # setor em crescimento estrutural
+      n_years: 5
+      base_revenue_growth: [0.14, 0.13, 0.12, 0.11, 0.10]
+      base_ebitda_margin_offset: 0.0
+      base_capex_pct: 0.07
+      scenario_growth_delta: 0.04
+      scenario_wacc_delta: 0.005
+    risk_thresholds:
+      nd_ebitda_medium: 3.0
+      nd_ebitda_high: 4.5
+      nd_ebitda_critical: 6.0
+      interest_coverage_high: 3.0
+      interest_coverage_critical: 1.5
+      margin_compression_years: 2
+
+  # ── EDUCAÇÃO ────────────────────────────────────────────────────────────────
+  education:
+    description: "Ensino superior e básico (COGN3, YDUQ3, SEER3)"
+    financial_model: industrial
+    valuation_method: dcf_fcff
+    key_metrics:
+      - ebitda_margin
+      - net_margin
+      - roe
+      - nd_ebitda
+      - fcf_conversion
+      - revenue_growth
+    dcf_assumptions:
+      risk_free: 0.065
+      erp: 0.055
+      beta: 1.10
+      cost_of_debt: 0.130
+      tax_rate: 0.27
+      debt_to_capital: 0.35
+      terminal_growth: 0.050
+      n_years: 5
+      base_revenue_growth: [0.08, 0.08, 0.07, 0.07, 0.06]
+      base_ebitda_margin_offset: 0.0
+      base_capex_pct: 0.05
+      scenario_growth_delta: 0.04
+      scenario_wacc_delta: 0.005
+    risk_thresholds:
+      nd_ebitda_medium: 2.5
+      nd_ebitda_high: 3.5
+      nd_ebitda_critical: 5.0
+      interest_coverage_high: 3.0
+      interest_coverage_critical: 1.5
+      margin_compression_years: 2
+
+  # ── AGRONEGÓCIO ─────────────────────────────────────────────────────────────
+  agro:
+    description: "Agronegócio, grãos, proteínas, adubos (AGRO3, SLCE3, SMTO3)"
+    financial_model: industrial
+    valuation_method: dcf_fcff
+    key_metrics:
+      - ebitda_margin
+      - net_margin
+      - nd_ebitda
+      - roe
+      - roic
+      - fcf
+      - revenue_growth
+    dcf_assumptions:
+      risk_free: 0.065
+      erp: 0.055
+      beta: 1.10
+      cost_of_debt: 0.120
+      tax_rate: 0.15             # agro tem benefício fiscal
+      debt_to_capital: 0.35
+      terminal_growth: 0.050
+      n_years: 5
+      base_revenue_growth: [0.08, 0.08, 0.07, 0.06, 0.06]
+      base_ebitda_margin_offset: 0.0
+      base_capex_pct: 0.08
+      scenario_growth_delta: 0.06  # commodity — maior spread de cenários
+      scenario_wacc_delta: 0.007
+    risk_thresholds:
+      nd_ebitda_medium: 2.5
+      nd_ebitda_high: 3.5
+      nd_ebitda_critical: 5.0
+      interest_coverage_high: 2.5
+      interest_coverage_critical: 1.5
+
+  # ── TECNOLOGIA / SOFTWARE ────────────────────────────────────────────────────
+  technology:
+    description: "Software, SaaS, fintechs, pagamentos (TOTVS, INTB3, STNE)"
+    financial_model: industrial
+    valuation_method: dcf_fcff
+    key_metrics:
+      - ebitda_margin
+      - net_margin
+      - roe
+      - roic
+      - fcf
+      - fcf_conversion
+      - revenue_growth
+    dcf_assumptions:
+      risk_free: 0.065
+      erp: 0.055
+      beta: 1.20
+      cost_of_debt: 0.115
+      tax_rate: 0.27
+      debt_to_capital: 0.15            # tech geralmente pouco alavancada
+      terminal_growth: 0.070           # maior crescimento estrutural
+      n_years: 5
+      base_revenue_growth: [0.18, 0.16, 0.14, 0.12, 0.10]
+      base_ebitda_margin_offset: 0.0
+      base_capex_pct: 0.03
+      scenario_growth_delta: 0.07
+      scenario_wacc_delta: 0.008
+    risk_thresholds:
+      nd_ebitda_medium: 2.0
+      nd_ebitda_high: 3.0
+      nd_ebitda_critical: 4.5
+      interest_coverage_high: 3.0
+      interest_coverage_critical: 1.5
+      margin_compression_years: 2
+
+  # ── FINTECH / BDR ────────────────────────────────────────────────────────────
+  # Para holdings estrangeiras que publicam DRE como industrial (ex: INTR4)
+  fintech:
+    description: "Fintechs e neobanks com DRE industrial (INTR4, ROXO34)"
+    financial_model: industrial
+    valuation_method: dcf_fcff
+    key_metrics:
+      - net_margin
+      - roe
+      - revenue_growth
+      - fcf
+    dcf_assumptions:
+      risk_free: 0.065
+      erp: 0.055
+      beta: 1.40                       # alto beta (crescimento + incerteza)
+      cost_of_debt: 0.130
+      tax_rate: 0.27
+      debt_to_capital: 0.20
+      terminal_growth: 0.060
+      n_years: 5
+      base_revenue_growth: [0.20, 0.18, 0.15, 0.12, 0.10]
+      base_ebitda_margin_offset: 0.0
+      base_capex_pct: 0.04
+      scenario_growth_delta: 0.08
+      scenario_wacc_delta: 0.010
+    risk_thresholds:
+      nd_ebitda_medium: 2.0
+      nd_ebitda_high: 3.0
+      nd_ebitda_critical: 4.5
+      margin_compression_years: 2

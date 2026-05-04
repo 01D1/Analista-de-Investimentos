@@ -1,0 +1,2602 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 937677.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -300793.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 636884.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -146826.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -195177.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 3502.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": 44849.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 490058.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -150168.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 66561.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -216729.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 339890.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": -21485.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -61379.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": 39894.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 318405.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 318405.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 274868.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 43537.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 1.0364,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 1.0364,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 11114713.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 1775374.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 14862.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 1231460.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 1231460.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.02.01.03",
+      "account_name": "Aplicações Financeiras de curto prazo",
+      "normalized_name": NaN,
+      "value": 1231460.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 400545.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 400545.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.03.02.01",
+      "account_name": "Dividendos e juros sobre capital próprio a receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.03.02.02",
+      "account_name": "Valores a receber IPTU",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 52969.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 52969.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 1109.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 74429.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 74429.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Ativo não circulante mantido para venda",
+      "normalized_name": NaN,
+      "value": 38565.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 35864.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.01.08.03.03",
+      "account_name": "Valores a receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 9339339.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 227696.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 95447.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 54723.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 54723.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 3544.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 73982.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Valores a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 25863.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 4736.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Depósitos Judiciais",
+      "normalized_name": NaN,
+      "value": 33567.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Empréstimos, mútuos e outros contas a receber",
+      "normalized_name": NaN,
+      "value": 7889.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.01.10.08",
+      "account_name": "Impostos a recuperar",
+      "normalized_name": NaN,
+      "value": 1927.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 8741747.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 420541.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 420541.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 8321206.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.02.02.01",
+      "account_name": "Propriedades para investimentos - Shopping",
+      "normalized_name": NaN,
+      "value": 8321206.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 24495.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 24495.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 345401.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 137904.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.04.01.02",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 137904.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 207497.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 11114713.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 727481.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 34175.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 34175.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 56069.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 56069.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 29335.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Impostos e contribuições a recolher",
+      "normalized_name": NaN,
+      "value": 26734.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 637237.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 637237.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 70162.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Obrigações por compra de ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Empréstimos e financiamentos, CCI/CRI's e debêntures",
+      "normalized_name": NaN,
+      "value": 463503.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Receitas diferidas",
+      "normalized_name": NaN,
+      "value": 5412.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Contas a pagar - Leasing",
+      "normalized_name": NaN,
+      "value": 9440.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.05.02.08",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 88720.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 2577246.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 1632420.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 1632420.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Obrigação por compra de ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Receitas diferidas",
+      "normalized_name": NaN,
+      "value": 9183.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Impostos e contribuições a recolher",
+      "normalized_name": NaN,
+      "value": 7663.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Empréstimos e financiamentos, CCI/CRI's e debêntures",
+      "normalized_name": NaN,
+      "value": 1560089.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.02.02.08",
+      "account_name": "Contas a pagar - Leasing",
+      "normalized_name": NaN,
+      "value": 33547.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.02.02.09",
+      "account_name": "Outras obrigações",
+      "normalized_name": NaN,
+      "value": 21938.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 932436.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 932436.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 12390.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 12390.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.04.01.05",
+      "account_name": "Provisões para contingência",
+      "normalized_name": NaN,
+      "value": 12390.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 7809986.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 4156722.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 809996.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 882328.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.02.07",
+      "account_name": "Gasto com emissões de ações",
+      "normalized_name": NaN,
+      "value": -72332.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 299534.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 22197.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 296460.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -19123.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 1480677.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 1063057.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 600245.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 628019.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro líquido do período",
+      "normalized_name": "net_income_cfo",
+      "value": 318405.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Aluguel linear",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": -39720.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Depreciação e amortização",
+      "normalized_name": NaN,
+      "value": 191140.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Resultado de equivalência patrimonial",
+      "normalized_name": NaN,
+      "value": -44849.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Remuneração com base em ações",
+      "normalized_name": NaN,
+      "value": 12542.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Juros e variações monetárias sobre operações financeiras",
+      "normalized_name": NaN,
+      "value": 186732.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Valor justo dos instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 5807.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Imposto de renda e contribuição social diferidos",
+      "normalized_name": NaN,
+      "value": -39894.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Constituição de provisão para perda de crédito esperada",
+      "normalized_name": NaN,
+      "value": 52121.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Ganho na venda de participação na Boulevard Corporate Tower",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Earn Out Via Parque",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Ganho na alienação de ações em tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Valor residual do ativo imobilizado vendido",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.01.14",
+      "account_name": "(Reversão) constituição de provisão para contingência, líquida",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.01.15",
+      "account_name": "Atualização monetária sobre provisão para contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.01.16",
+      "account_name": "Ganho de capital na venda de participação/investimento",
+      "normalized_name": NaN,
+      "value": -14178.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.01.17",
+      "account_name": "Provisão para perda do valor recuperável de ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.01.18",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -87.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.01.19",
+      "account_name": "Ganho na renegociação de dívidas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -27774.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Contas a receber de clientes",
+      "normalized_name": NaN,
+      "value": -92641.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Impostos a recuperar",
+      "normalized_name": NaN,
+      "value": 14584.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 439.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Impostos e contribuições a recolher",
+      "normalized_name": NaN,
+      "value": 98027.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Receitas diferidas",
+      "normalized_name": NaN,
+      "value": -1596.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Obrigações relacionadas a propriedade para investimento - Torre Comercial",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Depósitos judiciais",
+      "normalized_name": NaN,
+      "value": -1898.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Impostos pagos - IRPJ e CSLL",
+      "normalized_name": NaN,
+      "value": -45985.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Impostos pagos - PIS, COFINS e ISS",
+      "normalized_name": NaN,
+      "value": -34298.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Outras obrigações",
+      "normalized_name": NaN,
+      "value": 26191.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 9403.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.02.12",
+      "account_name": "Empréstimos aos condomínios",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -309219.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Aquisições/Baixa de ativo imobilizado",
+      "normalized_name": NaN,
+      "value": -3839.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Aquisição de propriedade para investimento - Shoppings",
+      "normalized_name": "capex",
+      "value": -431853.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Venda de propriedade para investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Redução (aumento) em investimentos",
+      "normalized_name": NaN,
+      "value": 125000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Aplicação/Resgate de aplicações financeiras",
+      "normalized_name": NaN,
+      "value": 54059.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Pagamento em obrigações com compra de ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Aquisição de intangíveis",
+      "normalized_name": NaN,
+      "value": -64359.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Dividendos e juros sobre capital próprio recebidos",
+      "normalized_name": NaN,
+      "value": 45992.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.02.09",
+      "account_name": "Aumento de capital em controladas/coligadas",
+      "normalized_name": NaN,
+      "value": -9161.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.02.10",
+      "account_name": "Efeito da combinação de negócios",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.02.11",
+      "account_name": "Efeito do caixa dos eventos societários",
+      "normalized_name": NaN,
+      "value": -25058.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.02.12",
+      "account_name": "Pagamento em obrigação por compra de ativo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -289277.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Aumento de capital",
+      "normalized_name": "debt_issuance",
+      "value": 246.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Gastos com emissão de ações",
+      "normalized_name": "debt_repayment",
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Dividendos pagos",
+      "normalized_name": NaN,
+      "value": -60000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Pagamento de juros - empréstimos e financiamentos e CRI",
+      "normalized_name": "dividends_paid",
+      "value": -50136.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Pagamento de principal - empréstimos e financiamentos e CRI",
+      "normalized_name": NaN,
+      "value": -62652.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Pagamento de custo de estruturação de empréstimos e financiamentos",
+      "normalized_name": NaN,
+      "value": -297.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Pré-pagamento de juros - empréstimos e financiamentos e CRI",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Pré-pagamento de principal - empréstimos e financiamentos e CRI",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03.09",
+      "account_name": "Emissão de debênture",
+      "normalized_name": NaN,
+      "value": 415000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03.10",
+      "account_name": "Pagamento juros debêntures",
+      "normalized_name": NaN,
+      "value": -68213.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03.11",
+      "account_name": "Pagamento principal debêntures",
+      "normalized_name": NaN,
+      "value": -175529.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03.12",
+      "account_name": "Pagamento custo de estruturação debêntures",
+      "normalized_name": NaN,
+      "value": -11297.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03.13",
+      "account_name": "Pré-pagamento juros debêntures",
+      "normalized_name": NaN,
+      "value": -36975.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03.14",
+      "account_name": "Pré-pagamento principal debêntures",
+      "normalized_name": NaN,
+      "value": -125000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03.15",
+      "account_name": "Alienação (recompra) de ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03.16",
+      "account_name": "Recebimento referente ao programa de remuneração baseado em ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03.17",
+      "account_name": "Recompra de debêntures",
+      "normalized_name": NaN,
+      "value": -67898.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03.18",
+      "account_name": "Pagamento em obrigações com compra de ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03.19",
+      "account_name": "Transação com acionistas não controladores",
+      "normalized_name": NaN,
+      "value": -34024.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.03.20",
+      "account_name": "Pagamento de juros e principal - Leasing",
+      "normalized_name": NaN,
+      "value": -12502.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": 1749.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 13113.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 14862.0,
+      "reference_date": "2021-12-31",
+      "company_name": "ALLOS S.A.",
+      "cvm_code": "022357"
+    }
+  ]
+}

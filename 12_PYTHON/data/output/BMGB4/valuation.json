@@ -1,0 +1,45 @@
+{
+  "ticker": "BMGB4",
+  "sector_type": "bank",
+  "base_year": 2025,
+  "method": "Gordon Growth Model (P/B Implícito)",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 4282.548350663887,
+      "current_price": 5.550000190734863,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.12891307222992768,
+        "coe": 0.135,
+        "g": 0.055,
+        "pb_implied": 0.9239134028740958
+      }
+    },
+    "optimistic": {
+      "fair_value": 4563.253329330157,
+      "current_price": 5.550000190734863,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.12891307222992768,
+        "coe": 0.13,
+        "g": 0.06,
+        "pb_implied": 0.9844724604275382
+      }
+    },
+    "pessimistic": {
+      "fair_value": 4064.222256145677,
+      "current_price": 5.550000190734863,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.12891307222992768,
+        "coe": 0.14,
+        "g": 0.05,
+        "pb_implied": 0.876811913665863
+      }
+    }
+  }
+}

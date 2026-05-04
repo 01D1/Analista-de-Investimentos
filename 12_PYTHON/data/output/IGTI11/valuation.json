@@ -1,0 +1,45 @@
+{
+  "ticker": "IGTI11",
+  "sector_type": "real_estate",
+  "base_year": 2025,
+  "method": "EV/EBITDA Múltiplo",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 5638.502799999999,
+      "current_price": 30.3799991607666,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 1055.7875999999999,
+        "ev_ebitda_multiple": 8.0,
+        "net_debt_mi": 2807.798,
+        "ev_mi": 8446.300799999999
+      }
+    },
+    "optimistic": {
+      "fair_value": 9861.653199999999,
+      "current_price": 30.3799991607666,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 1055.7875999999999,
+        "ev_ebitda_multiple": 12.0,
+        "net_debt_mi": 2807.798,
+        "ev_mi": 12669.4512
+      }
+    },
+    "pessimistic": {
+      "fair_value": 3526.9275999999995,
+      "current_price": 30.3799991607666,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "ebitda_mi": 1055.7875999999999,
+        "ev_ebitda_multiple": 6.0,
+        "net_debt_mi": 2807.798,
+        "ev_mi": 6334.7256
+      }
+    }
+  }
+}

@@ -1,0 +1,2647 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 5092202.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -1864883.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 3227319.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -2924015.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -548718.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -1709188.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": -215434.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 14920.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -463708.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.04.05.01",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -28736.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.04.05.02",
+      "account_name": "Provisão para perda esperada",
+      "normalized_name": NaN,
+      "value": -434972.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": -1887.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 303304.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -895427.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 509905.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -1405332.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": -592123.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": 51125.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": 19718.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": 31407.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": -540998.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": -540998.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": -528930.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": -12068.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 26396751.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 5059727.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 121772.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 2007061.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 2011108.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 2011108.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 426322.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 258673.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 258673.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.06.01.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 53442.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.06.01.02",
+      "account_name": "Imposto de Renda e Contribuição Social a Recuperar",
+      "normalized_name": NaN,
+      "value": 205231.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 234791.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 234791.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Adiantamentos",
+      "normalized_name": NaN,
+      "value": 93278.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Demais Contas a Receber",
+      "normalized_name": NaN,
+      "value": 129323.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.08.03.04",
+      "account_name": "Contas a receber pela venda de controladas",
+      "normalized_name": NaN,
+      "value": 12190.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.01.08.03.05",
+      "account_name": "Partes relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 21337024.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 2033886.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 52012.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 289734.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 1174673.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 1174673.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 517467.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Adiantamentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 88118.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Depositos Judiciais",
+      "normalized_name": NaN,
+      "value": 52387.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Garantia para Provisões Previdenciárias, Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 144920.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Demais Contas a Receber",
+      "normalized_name": NaN,
+      "value": 35004.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.10.08",
+      "account_name": "Contas a receber pela venda de controladas",
+      "normalized_name": NaN,
+      "value": 16309.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.10.09",
+      "account_name": "Imposto de Renda e Contribuição Social a Recuperar",
+      "normalized_name": NaN,
+      "value": 175751.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.01.10.10",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 4978.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 92010.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 92010.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 83739.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 8271.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 4058943.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 15152185.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 26396751.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 4069278.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 387031.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 387031.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 977817.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 977817.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.02.01.01",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 664375.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.02.01.02",
+      "account_name": "Fornecedores risco sacado",
+      "normalized_name": NaN,
+      "value": 313442.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 119050.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 119050.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 22536.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Tributos a Pagar",
+      "normalized_name": NaN,
+      "value": 96514.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.03.01.03",
+      "account_name": "Impostos e Contribuições Parcelados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 2184815.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 2038312.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 146503.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 400565.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 400565.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Dividendos a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Contas a Pagar - Aquisições",
+      "normalized_name": NaN,
+      "value": 168061.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Adiantamentos de Clientes",
+      "normalized_name": NaN,
+      "value": 192768.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Demais contas a Pagar",
+      "normalized_name": NaN,
+      "value": 39736.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.05.02.08",
+      "account_name": "Fornecedores confirming",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 9086085.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 6019508.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 3152882.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 2866626.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 211477.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 211477.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Impostos e Contribuições Parcelados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Contas a Pagar - Aquisições",
+      "normalized_name": NaN,
+      "value": 84368.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Demais Contas a Pagar",
+      "normalized_name": NaN,
+      "value": 104077.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 23032.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 907160.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 907160.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 1947940.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 1947940.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.04.01.05",
+      "account_name": "Provisão para perdas tributárias, trabalhistas e cíveis",
+      "normalized_name": NaN,
+      "value": 720653.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.04.01.06",
+      "account_name": "Passivos assumidos na combinação de negócio",
+      "normalized_name": NaN,
+      "value": 1227287.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 13241388.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 7667615.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 4508947.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -8257.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.02.07",
+      "account_name": "Reserva de Capital",
+      "normalized_name": NaN,
+      "value": 4517204.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 1064826.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 117347.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 2018242.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Resultado antes do Imposto de Renda e Contribuição Social",
+      "normalized_name": "net_income_cfo",
+      "value": -592123.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Depreciação e Amortização",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 458040.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Provisão para Créditos de Liquidação Duvidosa",
+      "normalized_name": NaN,
+      "value": 434972.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Provisão (reversão) para perdas tributárias, trabalhistas e cíveis",
+      "normalized_name": NaN,
+      "value": -64773.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Provisão (Reversão) para Perdas dos Estoques",
+      "normalized_name": NaN,
+      "value": 29382.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Encargos financeiros",
+      "normalized_name": NaN,
+      "value": 1252799.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Ajuste a Valor Presente do Contas a Receber",
+      "normalized_name": NaN,
+      "value": -6627.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Opções Outorgadas Reconhecidas",
+      "normalized_name": NaN,
+      "value": 34189.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Rendimento de Títulos e Valores Mobiliários",
+      "normalized_name": NaN,
+      "value": -335508.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Resultado na Venda ou Baixa de Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 14105.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Baixa da Realização da Garantia \"Escrow\" de Ex-proprietários",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Equivalencia Patrimonial",
+      "normalized_name": NaN,
+      "value": 1887.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Depreciação IFRS-16",
+      "normalized_name": NaN,
+      "value": 211654.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01.14",
+      "account_name": "Amortização Mais Valia Ágio Alocado",
+      "normalized_name": NaN,
+      "value": 260871.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01.15",
+      "account_name": "Custos Editoriais",
+      "normalized_name": NaN,
+      "value": 93949.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01.16",
+      "account_name": "Amortização Mais Valia De Estoques",
+      "normalized_name": NaN,
+      "value": 2107.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01.17",
+      "account_name": "Atualização Monetária de Contas a Receber na Venda de Controladas",
+      "normalized_name": NaN,
+      "value": -10170.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01.18",
+      "account_name": "Atualização Monetária de Conta Escrow",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01.19",
+      "account_name": "Perda por redução ao valor recuperável dos ativos",
+      "normalized_name": NaN,
+      "value": 215434.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.01.20",
+      "account_name": "Resultado de operações derivativos",
+      "normalized_name": NaN,
+      "value": 18054.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -828370.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "(Aumento) em contas a receber",
+      "normalized_name": NaN,
+      "value": -451715.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "(Aumento) redução nos estoques",
+      "normalized_name": NaN,
+      "value": -202385.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "(Aumento) redução em adiantamentos",
+      "normalized_name": NaN,
+      "value": 31189.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "(Aumento) redução em tributos a recuperar",
+      "normalized_name": NaN,
+      "value": -63969.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "(Aumento) redução em depósitos judiciais",
+      "normalized_name": NaN,
+      "value": 4414.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "(Aumento) redução nos demais ativos",
+      "normalized_name": NaN,
+      "value": 14031.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Aumento (redução) em fornecedores",
+      "normalized_name": NaN,
+      "value": 15866.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Aumento (redução) em obrigações trabalhistas",
+      "normalized_name": NaN,
+      "value": -81.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Aumento (redução) em obrigações fiscais",
+      "normalized_name": NaN,
+      "value": -53235.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Aumento (redução) em adiantamentos de clientes",
+      "normalized_name": NaN,
+      "value": 16638.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "(Redução) em impostos e contribuições parcelados",
+      "normalized_name": NaN,
+      "value": -12.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.02.12",
+      "account_name": "Pagamento de contingencias tributárias, trabalhistas e cíveis",
+      "normalized_name": NaN,
+      "value": -108231.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.02.13",
+      "account_name": "Aumento (redução) nas demais contas a pagar",
+      "normalized_name": NaN,
+      "value": -34165.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.02.14",
+      "account_name": "(Redução) aumento em fornecedores confirming",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.02.15",
+      "account_name": "(Aumento) redução em partes relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.02.16",
+      "account_name": "(Redução) aumento em arrendamentos financeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.02.17",
+      "account_name": "(Redução) aumento em fornecedores Risco sacado",
+      "normalized_name": NaN,
+      "value": 3285.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -1072525.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.03.01",
+      "account_name": "Imposto de renda e contribuição social pagos",
+      "normalized_name": NaN,
+      "value": -36825.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.03.02",
+      "account_name": "Juros de empréstimos e debentures pagos",
+      "normalized_name": NaN,
+      "value": -739734.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.01.03.03",
+      "account_name": "Juros de arrendamento por direito de uso pagos",
+      "normalized_name": NaN,
+      "value": -295966.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": 439780.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Resgate de Títulos e Valores Mobiliários",
+      "normalized_name": NaN,
+      "value": 715873.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Adições de Imobilizado",
+      "normalized_name": "capex",
+      "value": -148079.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Adições de Intangível",
+      "normalized_name": NaN,
+      "value": -293490.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Contas a pagar por aquisições",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Aquisições de Controle Líquidas dos Caixas Adquiridos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Aquisição de Controladas",
+      "normalized_name": NaN,
+      "value": -29241.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Recebimento de Valores Cedidos em Caixa",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Recebimento pela venda de controladas",
+      "normalized_name": NaN,
+      "value": 191102.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.02.09",
+      "account_name": "Recebimento de garantia escrow",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.02.10",
+      "account_name": "Caixa adquirido em combinação de negócio",
+      "normalized_name": NaN,
+      "value": 379.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.02.11",
+      "account_name": "Recebimento de dividendos",
+      "normalized_name": NaN,
+      "value": 3236.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -2036823.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Alienações de Ações em Tesouraria",
+      "normalized_name": "debt_issuance",
+      "value": -3625.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Aumento de capital",
+      "normalized_name": "debt_repayment",
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Contratação de Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Pagamento de Empréstimos e Financiamentos",
+      "normalized_name": "dividends_paid",
+      "value": -1859524.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Pagamento de Dividendos aos Acionistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Emissão Debêntures",
+      "normalized_name": NaN,
+      "value": 500000.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Aquisição participação de não controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Pagamento de arrendamento por direito de uso",
+      "normalized_name": NaN,
+      "value": -140950.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.03.09",
+      "account_name": "Recebimento na Oferta de Ações de Controlada",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.03.10",
+      "account_name": "Participação de Não Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.03.11",
+      "account_name": "Custos de Repactuação das Debêntures",
+      "normalized_name": NaN,
+      "value": -19911.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.03.12",
+      "account_name": "Parcelas Pagas em Aquisição de Empresas",
+      "normalized_name": NaN,
+      "value": -116282.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.03.13",
+      "account_name": "Recompra de ações em tesouraria",
+      "normalized_name": NaN,
+      "value": -18842.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.03.14",
+      "account_name": "Recompra de debêntures",
+      "normalized_name": NaN,
+      "value": -377689.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": -1479696.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 0.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": -1479696.0,
+      "reference_date": "2022-12-31",
+      "company_name": "COGNA EDUCAÇÃO S.A.",
+      "cvm_code": "017973"
+    }
+  ]
+}

@@ -1,0 +1,2548 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 43687460.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -31990696.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 11696764.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -7426742.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -5453297.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -855999.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 252216.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -1817710.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": 448048.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 4270022.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -5813371.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 1398063.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -7211434.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.06.02.01",
+      "account_name": "Variação Cambial Líquida de Instrumentos Financeiros",
+      "normalized_name": NaN,
+      "value": -247167.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.06.02.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": NaN,
+      "value": -6964267.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": -1543349.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": 5208.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -1300719.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": 1305927.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": -1538141.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": -1538141.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": -2591851.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 1053710.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": -1.9545,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": -1.9545,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 103906654.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 39785693.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 23310197.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 911378.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 860591.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do resultado - Ações Usiminas",
+      "normalized_name": NaN,
+      "value": 860591.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 50787.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 2900998.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 10439741.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 1367316.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 856063.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 856063.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.08.03.03",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 152967.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.08.03.04",
+      "account_name": "Despesas antecipadas",
+      "normalized_name": NaN,
+      "value": 327403.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.08.03.06",
+      "account_name": "Dividendos a receber",
+      "normalized_name": NaN,
+      "value": 201436.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.01.08.03.07",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 174257.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 64120961.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 17308796.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 169977.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 1761172.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 7345326.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 8032321.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Tributos a recuperar",
+      "normalized_name": NaN,
+      "value": 2799951.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Dépositos Judiciais",
+      "normalized_name": NaN,
+      "value": 632950.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Despesas antecipadas",
+      "normalized_name": NaN,
+      "value": 57478.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Créditos Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 3695607.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 846335.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 5948051.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 5746011.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 202040.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 30426023.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 23787873.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 756814.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 5881336.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 10438091.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 103906654.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 25116475.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 560695.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 7030734.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 719253.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 8821679.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 7852002.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 7852002.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 61965.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Adiantamento de clientes",
+      "normalized_name": NaN,
+      "value": 3648639.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.05.02.09",
+      "account_name": "Fornecedores - Risco Sacado e Forfaiting",
+      "normalized_name": NaN,
+      "value": 2902593.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.05.02.10",
+      "account_name": "Passivos de Arrendamento",
+      "normalized_name": NaN,
+      "value": 206323.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.05.02.11",
+      "account_name": "Outras obrigações",
+      "normalized_name": NaN,
+      "value": 1032482.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 132112.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 132112.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 63331063.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 48092942.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 11844793.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 11844793.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Adiantamento de clientes",
+      "normalized_name": NaN,
+      "value": 10120950.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Instrumentos Financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 157857.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Passivos de Arrendamento",
+      "normalized_name": NaN,
+      "value": 633982.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.02.02.08",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 43263.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.02.02.09",
+      "account_name": "Outras obrigações",
+      "normalized_name": NaN,
+      "value": 888741.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 541329.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 2851999.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 1245590.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 1606409.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 1133363.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.04.02.04",
+      "account_name": "Plano de Pensão e Saúde",
+      "normalized_name": NaN,
+      "value": 473046.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.04.02.05",
+      "account_name": "Provisão para perda em investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.04.02.06",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 15459116.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 10240000.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 2056970.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 1799385.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 1158925.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 640460.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.04.11",
+      "account_name": "Reserva Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": -1824917.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 3187678.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 8650505.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 8289410.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro líquido/(prejuízo) do período atribuível aos acionistas controladores",
+      "normalized_name": "net_income_cfo",
+      "value": -2591851.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Resultado dos acionistas não controladores",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 1053710.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Encargos sobre empréstimos e financiamentos captados",
+      "normalized_name": NaN,
+      "value": 4023650.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Encargos sobre empréstimos e financiamentos concedidos",
+      "normalized_name": NaN,
+      "value": -163517.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Depreciação, exaustão e amortização",
+      "normalized_name": NaN,
+      "value": 3791413.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Resultado de equivalência patrimonial",
+      "normalized_name": NaN,
+      "value": -448048.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Tributos diferidos",
+      "normalized_name": NaN,
+      "value": -1305928.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Provisões fiscais, previdenciárias, trabalhistas, cíveis e ambientais",
+      "normalized_name": NaN,
+      "value": 27498.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Variações monetárias e cambiais líquidas",
+      "normalized_name": NaN,
+      "value": 2929120.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Atualização ações VJR",
+      "normalized_name": NaN,
+      "value": 632612.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Encargos sobre passivo de arrendamento",
+      "normalized_name": NaN,
+      "value": 99998.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Provisão (Reversão) para consumo e serviços",
+      "normalized_name": NaN,
+      "value": 24711.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Baixas de imobilizado, intangível e arrendamento",
+      "normalized_name": NaN,
+      "value": 62081.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01.14",
+      "account_name": "Dividendos Usiminas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01.15",
+      "account_name": "Reversão de impairment de investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01.16",
+      "account_name": "Recebíveis por indenização",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01.17",
+      "account_name": "Provisões passivos ambientais e desativação",
+      "normalized_name": NaN,
+      "value": 114704.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01.18",
+      "account_name": "Ganho líquido com alienação de participação societária",
+      "normalized_name": NaN,
+      "value": -8451.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01.19",
+      "account_name": "Dividendos de investidas",
+      "normalized_name": NaN,
+      "value": -44859.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.01.20",
+      "account_name": "Outras provisões",
+      "normalized_name": NaN,
+      "value": 92567.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": 361095.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Contas a receber - terceiros",
+      "normalized_name": NaN,
+      "value": 69518.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Contas a receber - partes relacionadas",
+      "normalized_name": NaN,
+      "value": -32730.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": -906034.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Dividendos e créditos com partes relacionadas",
+      "normalized_name": NaN,
+      "value": -42237.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Tributos a recuperar",
+      "normalized_name": NaN,
+      "value": 114230.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Depósitos judiciais",
+      "normalized_name": NaN,
+      "value": -137381.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": -851095.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Fornecedores - Risco Sacado e Forfaiting",
+      "normalized_name": NaN,
+      "value": -1327749.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Salários e encargos sociais",
+      "normalized_name": NaN,
+      "value": 87140.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": -215862.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "Contas a pagar - partes relacionadas",
+      "normalized_name": NaN,
+      "value": -24231.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.02.12",
+      "account_name": "Adiantamento de clientes",
+      "normalized_name": NaN,
+      "value": 6967508.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.02.13",
+      "account_name": "Recebimento de Títulos RFFSA",
+      "normalized_name": NaN,
+      "value": 442246.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.02.14",
+      "account_name": "Juros pagos",
+      "normalized_name": NaN,
+      "value": -4052226.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.02.15",
+      "account_name": "Recebimentos/(Pagamentos) de operações de hedge fluxo de caixa e derivativos",
+      "normalized_name": NaN,
+      "value": -65435.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.02.16",
+      "account_name": "Recebimento de empréstimo compulsório",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.02.17",
+      "account_name": "Outros Passivos",
+      "normalized_name": NaN,
+      "value": 335433.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -1119735.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Investimentos/AFAC",
+      "normalized_name": NaN,
+      "value": -32000.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Aquisição de ativos imobilizados, intangível e propriedade para investimento",
+      "normalized_name": "capex",
+      "value": -5494335.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Empréstimos concedidos -  partes relacionadas",
+      "normalized_name": NaN,
+      "value": -95951.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Aplicação financeira, líquido de resgate",
+      "normalized_name": NaN,
+      "value": 70335.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Aquisição da Topázio Energética, Santa Ana e Brasil Central",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Caixa recebido da aquisição de investimentos Topázio Energética e Santa Ana",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Aquisição da CSN Cimentos Brasil",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.02.09",
+      "account_name": "Caixa recebido na aquisição da CSN Cimentos Brasil",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.02.10",
+      "account_name": "Recebimento de empréstimos e juros de partes relacionadas",
+      "normalized_name": NaN,
+      "value": 12430.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.02.11",
+      "account_name": "Recebimento de alienação de participação societária",
+      "normalized_name": NaN,
+      "value": 4419786.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.02.14",
+      "account_name": "Aquisição da CEEE-G",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.02.15",
+      "account_name": "Caixa recebido da aquisição de investimentos CEEE-G",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.02.16",
+      "account_name": "Aquisição da Companhia Energética Chapecó",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.02.17",
+      "account_name": "Caixa recebido da aquisição de investimentos Chapecó",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.02.18",
+      "account_name": "Aquisição de direitos de concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.02.20",
+      "account_name": "Caixa recebido decorrente da aquisição de investimentos Metalgráfica",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -103832.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Captações empréstimos e financiamentos",
+      "normalized_name": "debt_issuance",
+      "value": 10148426.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Custo captação empréstimos",
+      "normalized_name": NaN,
+      "value": -145187.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Caixa recebido pela emissão de novas ações",
+      "normalized_name": "dividends_paid",
+      "value": 0.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Amortização empréstimos - principal",
+      "normalized_name": NaN,
+      "value": -6927383.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Amortização arrendamento",
+      "normalized_name": NaN,
+      "value": -308201.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Dividendos e juros sobre capital próprio pagos",
+      "normalized_name": NaN,
+      "value": -2535325.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Recompra de ações em tesouraria",
+      "normalized_name": NaN,
+      "value": -336162.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": -162959.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": 7263979.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 16046218.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 23310197.0,
+      "reference_date": "2024-12-31",
+      "company_name": "CIA SIDERURGICA NACIONAL",
+      "cvm_code": "004030"
+    }
+  ]
+}

@@ -1,0 +1,2557 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 6627566.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -4589655.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 2037911.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": 38638.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -221597.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -264367.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 519569.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": 5033.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 2076549.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -882937.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 374494.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -1257431.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 1193612.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": -177868.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -273804.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": 95936.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 1015744.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 1015744.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 1015744.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 2.9325,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 2.9325,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 18823785.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 5687475.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 273408.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 2804873.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 2804873.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.02.01.03",
+      "account_name": "Aplicações financeiras",
+      "normalized_name": NaN,
+      "value": 2804873.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 274904.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 274904.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 694118.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 1160568.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 308133.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 308133.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.06.01.01",
+      "account_name": "Imposto de renda e contribuição social",
+      "normalized_name": NaN,
+      "value": 93880.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.06.01.02",
+      "account_name": "Demais tributos a recuperar",
+      "normalized_name": NaN,
+      "value": 214253.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 171471.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 171471.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 163242.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Dividendos a receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.01.08.03.03",
+      "account_name": "Outros ativos",
+      "normalized_name": NaN,
+      "value": 8229.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 13136310.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 2092495.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 38497.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 38497.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 40692.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 40692.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 224678.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 1788628.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Imposto de renda e contribuição social",
+      "normalized_name": NaN,
+      "value": 8983.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Tributos a recuperar",
+      "normalized_name": NaN,
+      "value": 230676.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Depósitos judiciais",
+      "normalized_name": NaN,
+      "value": 1088976.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 225568.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Aplicações financeiras",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.10.08",
+      "account_name": "Imposto de renda e contribuição social",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.10.09",
+      "account_name": "Outros ativos",
+      "normalized_name": NaN,
+      "value": 234425.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.01.10.10",
+      "account_name": "Direito de uso",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 47798.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 47798.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 47798.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 10531892.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 7606567.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 2925325.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 464125.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 464125.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.04.01.02",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 464125.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 18823785.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 2615781.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 195162.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 195162.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.01.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 195162.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 281311.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 281311.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 29584.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 29584.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 8490.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Obrigação fiscais",
+      "normalized_name": NaN,
+      "value": 21094.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 1714218.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 1028509.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 653865.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 374644.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 685709.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.04.03.01",
+      "account_name": "Arrendamento a pagar",
+      "normalized_name": NaN,
+      "value": 115855.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.04.03.02",
+      "account_name": "Parceria agricola a pagar",
+      "normalized_name": NaN,
+      "value": 569854.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 395506.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 395506.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 5963.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 328695.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Obrigações com a Copersucar",
+      "normalized_name": NaN,
+      "value": 13539.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Adiantamentos de clientes",
+      "normalized_name": NaN,
+      "value": 5173.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Aquisição de participações societárias",
+      "normalized_name": NaN,
+      "value": 11571.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.05.02.08",
+      "account_name": "Outros passivos",
+      "normalized_name": NaN,
+      "value": 30565.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 10295641.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 7951436.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 5595374.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 4917622.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 677752.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 2356062.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.01.03.01",
+      "account_name": "Arrendamento a pagar",
+      "normalized_name": NaN,
+      "value": 586228.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.01.03.02",
+      "account_name": "Parceria agricola a pagar",
+      "normalized_name": NaN,
+      "value": 1769834.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 1235530.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 1235530.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Obrigações Copersucar",
+      "normalized_name": NaN,
+      "value": 162986.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Tributos a recolher",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Aquisição de participações societárias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 7250.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Outros passivos",
+      "normalized_name": NaN,
+      "value": 1916.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.02.02.08",
+      "account_name": "Tributos com exigibilidade suspensa",
+      "normalized_name": NaN,
+      "value": 1063378.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 997134.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 997134.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 111541.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 111541.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 111541.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 5912363.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 3161384.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.01.01",
+      "account_name": "Capital Social",
+      "normalized_name": NaN,
+      "value": 3161384.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.01.02",
+      "account_name": "Redutora de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": -139997.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -139997.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.02.07",
+      "account_name": "Reserva de capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 1828496.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 313563.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 16057.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 911987.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 317821.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 269068.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 1062480.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 2987368.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 4480781.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro Líquido do exercício",
+      "normalized_name": "net_income_cfo",
+      "value": 1015744.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Depreciação e amortização",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 1075457.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Ativos biológicos colhidos",
+      "normalized_name": NaN,
+      "value": 1049119.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Variação no valor justo de ativos biológicos",
+      "normalized_name": NaN,
+      "value": 176167.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Amortização de intangível",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Amortização de contratos de energia",
+      "normalized_name": NaN,
+      "value": 5642.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Resultado de equivalência patrimonial",
+      "normalized_name": NaN,
+      "value": -5033.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Resultado apurado em compra vantajosa/Remensuração de participação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Ganho de capital em investimento controlado em conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Resultado de investimento e imobilizado baixados",
+      "normalized_name": NaN,
+      "value": 2745.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Juros, variações monetárias e cambiais, líquidas",
+      "normalized_name": NaN,
+      "value": 398746.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": -36987.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Constituição de provisão para contingências, líquidas",
+      "normalized_name": NaN,
+      "value": 34392.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.01.14",
+      "account_name": "Imposto de renda e contribuição social",
+      "normalized_name": NaN,
+      "value": 177868.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.01.15",
+      "account_name": "Provisão (reversão para perdas na realização dos estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.01.16",
+      "account_name": "Ajuste a valor presente e outros",
+      "normalized_name": NaN,
+      "value": 249377.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.01.17",
+      "account_name": "Resultado de venda de participação societária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.01.18",
+      "account_name": "Tributos com exigibilidade suspensa",
+      "normalized_name": NaN,
+      "value": 337544.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -1122244.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Contas a receber de clientes",
+      "normalized_name": NaN,
+      "value": -100124.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": -52325.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Tributos a recuperar",
+      "normalized_name": NaN,
+      "value": -226678.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": -31179.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Aplicações financeiras",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Partes relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Outros ativos",
+      "normalized_name": NaN,
+      "value": -299366.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": -77099.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Salários e contribuições sociais",
+      "normalized_name": NaN,
+      "value": 3376.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Tributos a recolher",
+      "normalized_name": NaN,
+      "value": -242525.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "Obrigações Copersucar",
+      "normalized_name": NaN,
+      "value": -2446.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.02.12",
+      "account_name": "Provisão para contingências - liquidações",
+      "normalized_name": NaN,
+      "value": -22801.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.02.13",
+      "account_name": "Outros passivos",
+      "normalized_name": NaN,
+      "value": -71077.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -371169.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.03.01",
+      "account_name": "Pagamento de juros sobre empréstimos e financiamentos",
+      "normalized_name": NaN,
+      "value": -310702.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.01.03.02",
+      "account_name": "Imposto de renda e contribuição social pagos",
+      "normalized_name": NaN,
+      "value": -60467.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -2256680.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Aplicação de recursos em investimentos",
+      "normalized_name": NaN,
+      "value": -11837.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Adições ao imobilizado e intangível",
+      "normalized_name": "capex",
+      "value": -1197351.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Adições ao ativo (plantio e tratos)",
+      "normalized_name": NaN,
+      "value": -1373806.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Aplicações financeiras",
+      "normalized_name": NaN,
+      "value": 319078.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Recebimento de recursos pela venda de imobilizado",
+      "normalized_name": NaN,
+      "value": 5652.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Recebimento da venda de ativo biológico e direitos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Caixa e equivalentes de caixa incorporados de controlada",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Ganho no caixa e equivalentes de caixa por mudança de participação societária em investida",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.02.09",
+      "account_name": "Adiantamento para futuro aumento de capital (desembolso)",
+      "normalized_name": NaN,
+      "value": -139.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.02.10",
+      "account_name": "Recebimento de dividendos",
+      "normalized_name": NaN,
+      "value": 1723.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.02.11",
+      "account_name": "Devolução de capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -572183.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Captação de financiamentos - terceiros",
+      "normalized_name": "debt_issuance",
+      "value": 875242.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Amortização de financiamentos - terceiros",
+      "normalized_name": "debt_repayment",
+      "value": -494266.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Adiantamento para futuro aumento de capital (recebido)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Variação da participação dos acionistas minoritários",
+      "normalized_name": "dividends_paid",
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Compra de ações em tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Alienação de ações em tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Pagamento de dividendos",
+      "normalized_name": NaN,
+      "value": -375840.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Amortização de arrendamento mercantil",
+      "normalized_name": NaN,
+      "value": -577319.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 0.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": 158505.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 114903.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 273408.0,
+      "reference_date": "2023-03-31",
+      "company_name": "SAO MARTINHO S.A.",
+      "cvm_code": "020516"
+    }
+  ]
+}

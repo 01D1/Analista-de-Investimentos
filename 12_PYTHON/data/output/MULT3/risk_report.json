@@ -1,0 +1,17 @@
+{
+  "ticker": "MULT3",
+  "sector_type": "real_estate",
+  "assessed_at": "2026-04-19",
+  "overall_severity": "medium",
+  "risk_count": 1,
+  "risks": [
+    {
+      "code": "HIGH_LEVERAGE",
+      "severity": "medium",
+      "category": "leverage",
+      "description": "DL/EBITDA elevada: 2.6x",
+      "detail": "Threshold (real_estate): médio=2.0x  alto=3.0x",
+      "triggered_at": "2026-04-19"
+    }
+  ]
+}

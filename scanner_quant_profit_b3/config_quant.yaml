@@ -1,0 +1,101 @@
+# =============================================================================
+# Configuração da Estratégia CALL_CONTINUIDADE
+# Scanner Quant Profit B3 — Motor de Trade v1
+# =============================================================================
+
+# --- Capital e Risco ---
+capital_inicial: 10000.0          # Capital total disponível (R$)
+risco_por_trade: 0.005            # % do capital arriscado por operação (0.5%)
+taxa_livre_risco: 0.1475          # SELIC aproximada (atualizar conforme Copom)
+
+# --- Parâmetros da Opção ---
+stop_opcao_pct: 0.30              # Stop: perda de 30% no prêmio
+alvo_1_pct: 0.50                  # Alvo 1: ganho de 50% no prêmio
+alvo_2_pct: 1.00                  # Alvo 2: ganho de 100% (dobrar o prêmio)
+
+# --- Filtros de Liquidez ---
+min_volume_opcao: 30000           # Volume financeiro mínimo da opção (R$)
+min_negocios_opcao: 5             # Número mínimo de negócios do dia
+
+# --- Filtros de Vencimento ---
+min_dte: 15                       # Mínimo de dias até o vencimento
+max_dte: 45                       # Máximo de dias até o vencimento
+
+# --- Limites Operacionais ---
+max_trades_dia: 3                 # Máximo de operações abertas por dia
+contract_size: 100                # Lote padrão B3 (100 ações por contrato)
+max_opcoes_por_ativo: 3           # Máx de opções por ativo no ranking final
+
+# --- Ativos Permitidos ---
+ativos_permitidos:
+  - BBAS3
+  - BBDC4
+  - BPAC11
+  - ITUB4
+  - PETR4
+  - SANB11
+  - SUZB3
+  - VALE3
+  - WEGE3
+
+# --- Tipos de Opção ---
+tipos_opcao_permitidos:
+  - CALL                          # Estratégia direcional de alta
+
+# --- Pesos do Score Final (devem somar 1.0) ---
+score_weights:
+  stock_trend_score: 0.25         # Tendência do ativo objeto
+  stock_momentum_score: 0.20      # Momentum (RSI + MACD)
+  stock_volume_score: 0.15        # Volume relativo à média
+  option_liquidity_score: 0.20    # Liquidez da opção (negócios + volume)
+  option_moneyness_score: 0.10    # Moneyness (ATM/OTM leve preferido)
+  option_dte_score: 0.10          # Adequação do vencimento
+
+# --- Limites de Score para Classificação ---
+score_entrada_validada: 70        # Score >= 70 → ENTRADA_VALIDADA
+score_aguardar: 50                # Score 50-69 → AGUARDAR_GATILHO
+                                  # Score < 50  → INVALIDADO
+
+# --- Indicadores Técnicos ---
+sma_fast: 9                       # Período da média rápida (dias)
+sma_slow: 21                      # Período da média lenta (dias)
+rsi_period: 14                    # Período do RSI
+atr_period: 14                    # Período do ATR
+hv_window: 21                     # Janela para volatilidade histórica
+volume_avg_window: 20             # Janela para média de volume
+
+# --- Estimativa de Win Rate (para Kelly) ---
+win_rate_estimado: 0.45           # Taxa de acerto histórica estimada
+
+# --- Risk Engine ---
+limite_perda_diaria: 0.02            # máx perda diária (2% do capital)
+limite_perda_semanal: 0.04           # máx perda semanal (4% do capital)
+max_risco_abs_por_trade: 500.0       # teto absoluto por trade (R$)
+max_risco_por_ativo: 0.02            # máx 2% do capital por ativo
+max_trades_mesmo_vencimento: 2       # máx 2 trades no mesmo vencimento
+max_trades_mesmo_tipo: 3             # máx 3 trades do mesmo tipo
+max_posicoes_abertas: 5              # máx de posições simultâneas
+risco_ajustado_vol: false            # vol-targeting (true = ajusta risco pela vol)
+volatilidade_alvo: 0.25              # vol de referência para scaling (25%)
+
+# --- Backtester ---
+backtest:
+  slippage_pct: 0.005                # 0.5% de slippage na entrada e saída
+  custo_por_contrato: 0.50           # custo operacional por contrato (R$)
+  score_minimo: 50.0                 # score mínimo para abrir trade no backtest
+
+# --- Walk-Forward ---
+walk_forward:
+  train_pct: 0.70                    # 70% do período para treino (anchored)
+  test_window_dias: 63               # ~1 trimestre de teste por janela
+  anchored: true                     # true=anchored; false=rolling
+
+# --- Integração com projetos externos ---
+# Preencha os caminhos abaixo e troque ativar_* para true para habilitar.
+integracao:
+  pipeline_banco_completo:
+    outputs_dir: ""               # ex: "C:/projetos/pipeline_banco_completo/outputs"
+  news_hunter:
+    outputs_dir: ""               # ex: "C:/projetos/news_hunter/outputs"
+  ativar_valuation: false         # true → busca preço-alvo e upside DCF
+  ativar_noticias: false          # true → busca manchete mais recente

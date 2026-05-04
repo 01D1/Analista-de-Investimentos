@@ -1,0 +1,45 @@
+{
+  "ticker": "ABCB4",
+  "sector_type": "bank",
+  "base_year": 2023,
+  "method": "Gordon Growth Model (P/B Implícito)",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 6727.617088000205,
+      "current_price": 26.709999084472656,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.14659047738365794,
+        "coe": 0.135,
+        "g": 0.055,
+        "pb_implied": 1.144880967295724
+      }
+    },
+    "optimistic": {
+      "fair_value": 7268.97245771452,
+      "current_price": 26.709999084472656,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.14659047738365794,
+        "coe": 0.13,
+        "g": 0.06,
+        "pb_implied": 1.2370068197665418
+      }
+    },
+    "pessimistic": {
+      "fair_value": 6306.562911555738,
+      "current_price": 26.709999084472656,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.14659047738365794,
+        "coe": 0.14,
+        "g": 0.05,
+        "pb_implied": 1.0732275264850881
+      }
+    }
+  }
+}

@@ -1,0 +1,2422 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 3872651.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -2745758.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 1126893.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -459632.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -480999.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 21786.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -969.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.04.05.01",
+      "account_name": "Reversão (provisão) para riscos tributários, trabalhistas e cíveis",
+      "normalized_name": NaN,
+      "value": -969.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.04.05.02",
+      "account_name": "Outras receitas (despesas) operacionais, líquidas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": 550.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 667261.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -171153.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 48878.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -220031.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 496108.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": -144617.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -197093.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": 52476.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 351491.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 351491.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 349926.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 1565.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 1.10444,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 1.10123,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 6073770.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 1742471.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 33722.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 763372.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 763372.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.02.01.03",
+      "account_name": "Títulos e valores mobiliários",
+      "normalized_name": NaN,
+      "value": 763372.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 793851.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 793851.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 72610.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 27297.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 27297.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.06.01.01",
+      "account_name": "Impostos a recuperar",
+      "normalized_name": NaN,
+      "value": 17891.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.06.01.02",
+      "account_name": "IRPJ e CSLL a compensar",
+      "normalized_name": NaN,
+      "value": 9406.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 51619.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 51619.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.08.03.01",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.08.03.02",
+      "account_name": "Créditos a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.08.03.03",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.01.08.03.04",
+      "account_name": "Outros Ativos",
+      "normalized_name": NaN,
+      "value": 51619.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 4331299.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 136423.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 64332.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.03.01",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": NaN,
+      "value": 64332.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 25195.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 25195.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 46896.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Depositos Judiciais",
+      "normalized_name": NaN,
+      "value": 24009.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Créditos a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Outros Ativos",
+      "normalized_name": NaN,
+      "value": 22887.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 43083.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 43083.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 43083.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 1565182.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 814407.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 750775.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 2586611.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 2586611.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.04.01.02",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 2586611.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.04.01.03",
+      "account_name": "Direito de Uso",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 6073770.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 1206874.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 202168.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 202168.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 356881.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 355828.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 1053.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 91245.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 71389.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 52866.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Impostos e Contribuições a Recolher",
+      "normalized_name": NaN,
+      "value": 18523.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 67.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 19789.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 504700.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 180406.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 180406.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 194650.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 129644.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 51880.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 51880.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 15011.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Contas a Pagar - aquisição de empresas",
+      "normalized_name": NaN,
+      "value": 29673.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Instrumentos Financeiros Derivativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Outros Passivos",
+      "normalized_name": NaN,
+      "value": 7196.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Arrendamento Mercantil (IFRS16)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 3012413.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 2443955.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 467.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 467.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 1748913.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 694575.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 134701.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 134701.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Contas a Pagar aquisição de empresas",
+      "normalized_name": NaN,
+      "value": 118693.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Parcelamentos Tributários",
+      "normalized_name": NaN,
+      "value": 13197.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Arrendamento Mercantil (IFRS16)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Outros Passivos",
+      "normalized_name": NaN,
+      "value": 2811.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 397561.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 397561.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 36196.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 36196.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 25083.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 29843.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 4963.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.04.01.05",
+      "account_name": "Depósitos judiciais",
+      "normalized_name": NaN,
+      "value": -23693.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 1854483.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 1437253.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 12638.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 37474.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": -24836.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 143395.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 133221.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.04.10",
+      "account_name": "Reserva de Investimento",
+      "normalized_name": NaN,
+      "value": 10174.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 251997.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 9200.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 1018669.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 1168706.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro Líquído do Exercício",
+      "normalized_name": "net_income_cfo",
+      "value": 351491.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Imposto de renda e contribuição social",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 144617.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Receitas e despesas financeiras",
+      "normalized_name": NaN,
+      "value": 202107.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Depreciações e amortizações",
+      "normalized_name": NaN,
+      "value": 389280.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Resultado de equivalência patrimonial",
+      "normalized_name": NaN,
+      "value": -550.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Plano de opção de compra de ações",
+      "normalized_name": NaN,
+      "value": 10328.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Constituição (reversão) de provisão para riscos tributários, trabalhistas e cíveis",
+      "normalized_name": NaN,
+      "value": 969.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Perdas estimadas para glosa e inadimplência",
+      "normalized_name": NaN,
+      "value": 39491.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Participação nos lucros",
+      "normalized_name": NaN,
+      "value": 47032.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -16059.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": -7299.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "(Aumento) redução em contas a receber",
+      "normalized_name": NaN,
+      "value": -119002.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "(Aumento) redução nos estoques",
+      "normalized_name": NaN,
+      "value": 1113.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "(Aumento) redução em impostos a recuperar",
+      "normalized_name": NaN,
+      "value": 31069.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "(Aumento) redução em depósitos judicias",
+      "normalized_name": NaN,
+      "value": 1326.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "(Aumento) redução em outros ativos",
+      "normalized_name": NaN,
+      "value": 7642.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Aumento (redução) em fornecedores",
+      "normalized_name": NaN,
+      "value": 83448.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Aumento (redução) em salários e encargos a recolher",
+      "normalized_name": NaN,
+      "value": 8069.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Aumento (redução) em obrigações  tributárias",
+      "normalized_name": NaN,
+      "value": -1398.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Aumento (redução) em parcelamentos tributários",
+      "normalized_name": NaN,
+      "value": -5671.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Aumento (redução) em outros passivos",
+      "normalized_name": NaN,
+      "value": -13895.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -142738.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.01.03.01",
+      "account_name": "Imposto de renda e contribuição social pagos",
+      "normalized_name": NaN,
+      "value": -142738.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -591363.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Aquisição de ativo imobilizado e intangível",
+      "normalized_name": NaN,
+      "value": -413289.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Venda de ativo imobilizado",
+      "normalized_name": "capex",
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Titulos e valores mobiliários - captação e rendimentos",
+      "normalized_name": NaN,
+      "value": 255532.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Titulos e valores mobiliários - resgates",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Pagamentos de empresas adquiridas, menos caixa e equivalentes de caixa",
+      "normalized_name": NaN,
+      "value": -429375.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Pagamento de dividendos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Partes Relacionadas (AFAC)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Rendimento de aplicações financeiras (classificadas como caixa e equivalentes)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.02.09",
+      "account_name": "Caixa liquido de empresa investida",
+      "normalized_name": NaN,
+      "value": -650.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.02.10",
+      "account_name": "Aquisição de participaçoes societárias",
+      "normalized_name": NaN,
+      "value": -3497.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.02.11",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -84.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": -421768.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Captação de financiamentos e debêntures",
+      "normalized_name": "debt_issuance",
+      "value": 1000000.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Liquidação (principal) de financiamentos e debêntures",
+      "normalized_name": "debt_repayment",
+      "value": -817234.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Juros pagos de financiamentos e debêntures",
+      "normalized_name": NaN,
+      "value": -91627.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Comissões financeiras e outros",
+      "normalized_name": "dividends_paid",
+      "value": -11407.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Instrumentos financeiros derivativos",
+      "normalized_name": NaN,
+      "value": 1305.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 5050.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Dividendos e/ou juros sobre capital próprio",
+      "normalized_name": NaN,
+      "value": -296141.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Dividendos recebidos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.03.09",
+      "account_name": "Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.03.10",
+      "account_name": "Operação risco sacado",
+      "normalized_name": NaN,
+      "value": 6258.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.03.11",
+      "account_name": "Pagamento de Arrendamento Mercantil",
+      "normalized_name": NaN,
+      "value": -193142.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.03.12",
+      "account_name": "Compra de ações em tesouraria",
+      "normalized_name": NaN,
+      "value": -24830.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 0.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": 5538.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 28184.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 33722.0,
+      "reference_date": "2021-12-31",
+      "company_name": "FLEURY S.A.",
+      "cvm_code": "021881"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "ticker": "BBAS3",
+  "sector_type": "bank",
+  "base_year": 2024,
+  "method": "Gordon Growth Model (P/B Implícito)",
+  "calculated_at": "2026-04-18",
+  "scenarios": {
+    "base": {
+      "fair_value": 215805.81970498254,
+      "current_price": null,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.15111499555362445,
+        "coe": 0.135,
+        "g": 0.055,
+        "pb_implied": 1.2014374444203055
+      }
+    },
+    "optimistic": {
+      "fair_value": 233805.0069485515,
+      "current_price": null,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.15111499555362445,
+        "coe": 0.13,
+        "g": 0.06,
+        "pb_implied": 1.3016427936232065
+      }
+    },
+    "pessimistic": {
+      "fair_value": 201806.45184887337,
+      "current_price": null,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.15111499555362445,
+        "coe": 0.14,
+        "g": 0.05,
+        "pb_implied": 1.1234999505958272
+      }
+    }
+  }
+}

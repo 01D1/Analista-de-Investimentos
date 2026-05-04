@@ -1,0 +1,25 @@
+{
+  "ticker": "GOAU4",
+  "sector_type": "holding",
+  "assessed_at": "2026-04-19",
+  "overall_severity": "high",
+  "risk_count": 2,
+  "risks": [
+    {
+      "code": "MARGIN_COMPRESSION",
+      "severity": "high",
+      "category": "profitability",
+      "description": "Margem EBITDA caindo 3 anos: 19.5% → 10.6%",
+      "detail": "",
+      "triggered_at": "2026-04-19"
+    },
+    {
+      "code": "FALLING_NET_INCOME",
+      "severity": "medium",
+      "category": "growth",
+      "description": "Lucro em queda por 2 anos consecutivos",
+      "detail": "2024: -39.7%  2025: -69.2%",
+      "triggered_at": "2026-04-19"
+    }
+  ]
+}

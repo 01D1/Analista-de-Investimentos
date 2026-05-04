@@ -1,0 +1,2836 @@
+{
+  "DRE": [
+    {
+      "account_code": "3.01",
+      "account_name": "Receita de Venda de Bens e/ou Serviços",
+      "normalized_name": "net_revenue",
+      "value": 21479468.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.02",
+      "account_name": "Custo dos Bens e/ou Serviços Vendidos",
+      "normalized_name": "cogs",
+      "value": -16581428.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.03",
+      "account_name": "Resultado Bruto",
+      "normalized_name": "gross_profit",
+      "value": 4898040.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.04",
+      "account_name": "Despesas/Receitas Operacionais",
+      "normalized_name": "operating_expenses",
+      "value": -1203326.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.04.01",
+      "account_name": "Despesas com Vendas",
+      "normalized_name": "selling_expenses",
+      "value": -152638.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.04.02",
+      "account_name": "Despesas Gerais e Administrativas",
+      "normalized_name": "general_admin_expenses",
+      "value": -1078037.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.04.03",
+      "account_name": "Perdas pela Não Recuperabilidade de Ativos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.04.04",
+      "account_name": "Outras Receitas Operacionais",
+      "normalized_name": "other_operating_income",
+      "value": 94180.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.04.05",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -374640.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.04.05.01",
+      "account_name": "Outras Despesas Operacionais",
+      "normalized_name": NaN,
+      "value": -374640.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.04.05.02",
+      "account_name": "Provisão para destinação de créditos de PIS e Cofins",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.04.06",
+      "account_name": "Resultado de Equivalência Patrimonial",
+      "normalized_name": "equity_income",
+      "value": 307809.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.05",
+      "account_name": "Resultado Antes do Resultado Financeiro e dos Tributos",
+      "normalized_name": "ebit",
+      "value": 3694714.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.06",
+      "account_name": "Resultado Financeiro",
+      "normalized_name": "net_financial_result",
+      "value": -1204990.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.06.01",
+      "account_name": "Receitas Financeiras",
+      "normalized_name": "financial_income",
+      "value": 1069116.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.06.02",
+      "account_name": "Despesas Financeiras",
+      "normalized_name": "financial_expenses",
+      "value": -2274106.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.06.02.01",
+      "account_name": "Despesas financeiras",
+      "normalized_name": NaN,
+      "value": -2274106.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.06.02.02",
+      "account_name": "Atualização de provisão para destinação de créditos de PIS e Cofins",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.07",
+      "account_name": "Resultado Antes dos Tributos sobre o Lucro",
+      "normalized_name": "ebt",
+      "value": 2489724.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.08",
+      "account_name": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "normalized_name": "income_tax",
+      "value": -354057.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.08.01",
+      "account_name": "Corrente",
+      "normalized_name": NaN,
+      "value": -371104.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.08.02",
+      "account_name": "Diferido",
+      "normalized_name": NaN,
+      "value": 17047.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.09",
+      "account_name": "Resultado Líquido das Operações Continuadas",
+      "normalized_name": "net_income_consolidated",
+      "value": 2135667.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.10",
+      "account_name": "Resultado Líquido de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 191501.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.10.01",
+      "account_name": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 191501.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.10.02",
+      "account_name": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.11",
+      "account_name": "Lucro/Prejuízo Consolidado do Período",
+      "normalized_name": "net_income_consolidated",
+      "value": 2327168.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.11.01",
+      "account_name": "Atribuído a Sócios da Empresa Controladora",
+      "normalized_name": "net_income",
+      "value": 2258810.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.11.02",
+      "account_name": "Atribuído a Sócios Não Controladores",
+      "normalized_name": "minority_interest",
+      "value": 68358.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.99",
+      "account_name": "Lucro por Ação - (Reais / Ação)",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.99.01",
+      "account_name": "Lucro Básico por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.99.01.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 0.78574,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.99.01.02",
+      "account_name": "PNA",
+      "normalized_name": NaN,
+      "value": 0.90931,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.99.01.03",
+      "account_name": "PNB",
+      "normalized_name": NaN,
+      "value": 0.806,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.99.02",
+      "account_name": "Lucro Diluído por Ação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.99.02.01",
+      "account_name": "ON",
+      "normalized_name": NaN,
+      "value": 0.78574,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.99.02.02",
+      "account_name": "PNA",
+      "normalized_name": NaN,
+      "value": 0.90931,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "3.99.02.03",
+      "account_name": "PNB",
+      "normalized_name": NaN,
+      "value": 0.806,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    }
+  ],
+  "BPA": [
+    {
+      "account_code": "1",
+      "account_name": "Ativo Total",
+      "normalized_name": NaN,
+      "value": 55819074.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01",
+      "account_name": "Ativo Circulante",
+      "normalized_name": "total_current_assets",
+      "value": 13715730.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.01",
+      "account_name": "Caixa e Equivalentes de Caixa",
+      "normalized_name": "cash",
+      "value": 5634623.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.02",
+      "account_name": "Aplicações Financeiras",
+      "normalized_name": "short_term_investments",
+      "value": 4772.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.02.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 4763.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.02.01.01",
+      "account_name": "Títulos para Negociação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.02.01.02",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 4763.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.02.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.02.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 9.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.02.03.01",
+      "account_name": "Títulos Mantidos até o Vencimento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.02.03.02",
+      "account_name": "Cauções e Depósitos Vinculados",
+      "normalized_name": NaN,
+      "value": 9.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.03",
+      "account_name": "Contas a Receber",
+      "normalized_name": "accounts_receivable",
+      "value": 5117250.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.03.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 3761170.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.03.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 1356080.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.03.02.01",
+      "account_name": "Dividendos a Receber",
+      "normalized_name": NaN,
+      "value": 95569.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.03.02.02",
+      "account_name": "Repasse CRC ao Governo Estado do Paraná",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.03.02.03",
+      "account_name": "Ativos Financeiros Setoriais",
+      "normalized_name": NaN,
+      "value": 15473.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.03.02.04",
+      "account_name": "Contas a Receber Vinculadas à Concessão",
+      "normalized_name": NaN,
+      "value": 9354.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.03.02.05",
+      "account_name": "Ativos de contrato",
+      "normalized_name": NaN,
+      "value": 284616.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.03.02.06",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 1336.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.03.02.07",
+      "account_name": "Outros Créditos",
+      "normalized_name": NaN,
+      "value": 949732.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.04",
+      "account_name": "Estoques",
+      "normalized_name": "inventories",
+      "value": 174726.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.05",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.06",
+      "account_name": "Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 1258561.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.06.01",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 1258561.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.06.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social",
+      "normalized_name": NaN,
+      "value": 315218.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.06.01.02",
+      "account_name": "Outros Tributos a Recuperar",
+      "normalized_name": NaN,
+      "value": 943343.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.07",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 62869.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.08",
+      "account_name": "Outros Ativos Circulantes",
+      "normalized_name": NaN,
+      "value": 1462929.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.08.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.08.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 1462929.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.01.08.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02",
+      "account_name": "Ativo Não Circulante",
+      "normalized_name": "total_non_current_assets",
+      "value": 42103344.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01",
+      "account_name": "Ativo Realizável a Longo Prazo",
+      "normalized_name": "long_term_investments",
+      "value": 16596037.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.01",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através do Resultado",
+      "normalized_name": NaN,
+      "value": 522460.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.01.01",
+      "account_name": "Títulos Designados a Valor Justo",
+      "normalized_name": NaN,
+      "value": 522460.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.02",
+      "account_name": "Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.03",
+      "account_name": "Aplicações Financeiras Avaliadas ao Custo Amortizado",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.03.01",
+      "account_name": "Cauções e Depósitos Vinculados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.04",
+      "account_name": "Contas a Receber",
+      "normalized_name": NaN,
+      "value": 105259.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.04.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 105259.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.04.02",
+      "account_name": "Outras Contas a Receber",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.05",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.06",
+      "account_name": "Ativos Biológicos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.07",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 1757688.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.07.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 1757688.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.08",
+      "account_name": "Despesas Antecipadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.09",
+      "account_name": "Créditos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.09.01",
+      "account_name": "Créditos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.09.03",
+      "account_name": "Créditos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.09.04",
+      "account_name": "Créditos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.10",
+      "account_name": "Outros Ativos Não Circulantes",
+      "normalized_name": NaN,
+      "value": 14210630.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.10.01",
+      "account_name": "Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.10.02",
+      "account_name": "Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.10.03",
+      "account_name": "Ativos Financeiros Setoriais",
+      "normalized_name": NaN,
+      "value": 15473.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.10.04",
+      "account_name": "Contas a Receber Vinculadas à Concessão",
+      "normalized_name": NaN,
+      "value": 2809901.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.10.05",
+      "account_name": "Ativos de contrato",
+      "normalized_name": NaN,
+      "value": 7320445.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.10.06",
+      "account_name": "Repasse CRC ao Governo Estado do Paraná",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.10.07",
+      "account_name": "Depósitos Judiciais",
+      "normalized_name": NaN,
+      "value": 634712.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.10.08",
+      "account_name": "Imposto de Renda e Contribuição Social a Recuperar",
+      "normalized_name": NaN,
+      "value": 68003.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.10.09",
+      "account_name": "Tributos Correntes a Recuperar",
+      "normalized_name": NaN,
+      "value": 2256156.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.10.10",
+      "account_name": "Outros Créditos",
+      "normalized_name": NaN,
+      "value": 853340.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.01.10.11",
+      "account_name": "Direito de Uso em Andamento",
+      "normalized_name": NaN,
+      "value": 252600.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.02",
+      "account_name": "Investimentos",
+      "normalized_name": "equity_investments",
+      "value": 3511797.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.02.01",
+      "account_name": "Participações Societárias",
+      "normalized_name": NaN,
+      "value": 3511353.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.02.01.01",
+      "account_name": "Participações em Coligadas",
+      "normalized_name": NaN,
+      "value": 48856.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.02.01.04",
+      "account_name": "Participações em Controladas em Conjunto",
+      "normalized_name": NaN,
+      "value": 3462497.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.02.01.05",
+      "account_name": "Outros Investimentos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.02.02",
+      "account_name": "Propriedades para Investimento",
+      "normalized_name": NaN,
+      "value": 444.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.03",
+      "account_name": "Imobilizado",
+      "normalized_name": "ppe_net",
+      "value": 10825421.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.03.01",
+      "account_name": "Imobilizado em Operação",
+      "normalized_name": NaN,
+      "value": 10424703.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.03.02",
+      "account_name": "Direito de Uso em Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.03.03",
+      "account_name": "Imobilizado em Andamento",
+      "normalized_name": NaN,
+      "value": 400718.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.04",
+      "account_name": "Intangível",
+      "normalized_name": "intangibles_net",
+      "value": 11170089.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.04.01",
+      "account_name": "Intangíveis",
+      "normalized_name": NaN,
+      "value": 11170089.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.04.01.01",
+      "account_name": "Contrato de Concessão",
+      "normalized_name": NaN,
+      "value": 9620485.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.04.01.02",
+      "account_name": "Autorização e Concessão de Controladas",
+      "normalized_name": NaN,
+      "value": 1498544.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.04.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 51060.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "1.02.04.02",
+      "account_name": "Goodwill",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    }
+  ],
+  "BPP": [
+    {
+      "account_code": "2",
+      "account_name": "Passivo Total",
+      "normalized_name": NaN,
+      "value": 55819074.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01",
+      "account_name": "Passivo Circulante",
+      "normalized_name": "total_current_liabilities",
+      "value": 9309433.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.01",
+      "account_name": "Obrigações Sociais e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 927538.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.01.01",
+      "account_name": "Obrigações Sociais",
+      "normalized_name": NaN,
+      "value": 62531.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.01.02",
+      "account_name": "Obrigações Trabalhistas",
+      "normalized_name": NaN,
+      "value": 865007.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.02",
+      "account_name": "Fornecedores",
+      "normalized_name": "suppliers",
+      "value": 2154430.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.02.01",
+      "account_name": "Fornecedores Nacionais",
+      "normalized_name": NaN,
+      "value": 2154430.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.02.02",
+      "account_name": "Fornecedores Estrangeiros",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.03",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 479062.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.03.01",
+      "account_name": "Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 266697.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.03.01.01",
+      "account_name": "Imposto de Renda e Contribuição Social a Pagar",
+      "normalized_name": NaN,
+      "value": 132979.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.03.01.02",
+      "account_name": "Outras Obrigações Fiscais Federais",
+      "normalized_name": NaN,
+      "value": 133718.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.03.02",
+      "account_name": "Obrigações Fiscais Estaduais",
+      "normalized_name": NaN,
+      "value": 206099.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.03.03",
+      "account_name": "Obrigações Fiscais Municipais",
+      "normalized_name": NaN,
+      "value": 6266.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.04",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "short_term_debt",
+      "value": 1901629.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.04.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 675980.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.04.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 675980.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.04.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.04.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 1225649.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.04.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.05",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 2977510.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.05.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.05.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.05.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.05.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.05.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 2977510.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.05.02.01",
+      "account_name": "Dividendos e JCP a Pagar",
+      "normalized_name": NaN,
+      "value": 464147.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.05.02.02",
+      "account_name": "Dividendo Mínimo Obrigatório a Pagar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.05.02.03",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.05.02.04",
+      "account_name": "Benefícios Pós-Emprego",
+      "normalized_name": NaN,
+      "value": 85833.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.05.02.05",
+      "account_name": "Encargos setoriais a recolher",
+      "normalized_name": NaN,
+      "value": 61466.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.05.02.06",
+      "account_name": "Pesquisa e Desenvolvimento e Eficiência Energética",
+      "normalized_name": NaN,
+      "value": 320196.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.05.02.07",
+      "account_name": "Contas a Pagar Vinculadas a Concessão - Uso do Bem Público",
+      "normalized_name": NaN,
+      "value": 101976.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.05.02.08",
+      "account_name": "Passivos financeiros setoriais",
+      "normalized_name": NaN,
+      "value": 476103.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.05.02.09",
+      "account_name": "Passivo de arrendamentos",
+      "normalized_name": NaN,
+      "value": 49742.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.05.02.10",
+      "account_name": "Outras Contas a Pagar",
+      "normalized_name": NaN,
+      "value": 859456.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.05.02.11",
+      "account_name": "PIS e Cofins a restituir para consumidores",
+      "normalized_name": NaN,
+      "value": 558591.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.06",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 336000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.06.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 336000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.06.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.06.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.06.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.06.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 336000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.06.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.06.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.06.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.06.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.07",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 533264.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.07.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.01.07.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 533264.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02",
+      "account_name": "Passivo Não Circulante",
+      "normalized_name": "total_non_current_liabilities",
+      "value": 22317974.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": "long_term_debt",
+      "value": 13060694.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.01.01",
+      "account_name": "Empréstimos e Financiamentos",
+      "normalized_name": NaN,
+      "value": 4667237.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.01.01.01",
+      "account_name": "Em Moeda Nacional",
+      "normalized_name": NaN,
+      "value": 4667237.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.01.01.02",
+      "account_name": "Em Moeda Estrangeira",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.01.02",
+      "account_name": "Debêntures",
+      "normalized_name": NaN,
+      "value": 8393457.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.01.03",
+      "account_name": "Financiamento por Arrendamento",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.02",
+      "account_name": "Outras Obrigações",
+      "normalized_name": NaN,
+      "value": 6077571.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.02.01",
+      "account_name": "Passivos com Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.02.01.01",
+      "account_name": "Débitos com Coligadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.02.01.03",
+      "account_name": "Débitos com Controladores",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.02.01.04",
+      "account_name": "Débitos com Outras Partes Relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.02.02",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": 6077571.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.02.02.01",
+      "account_name": "Obrigações por Pagamentos Baseados em Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.02.02.02",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.02.02.03",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 131143.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.02.02.04",
+      "account_name": "Obrigações Fiscais",
+      "normalized_name": NaN,
+      "value": 612093.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.02.02.05",
+      "account_name": "Benefícios Pós-Emprego",
+      "normalized_name": NaN,
+      "value": 1398410.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.02.02.06",
+      "account_name": "Pesquisa e Desenvolvimento e Eficiência Energética",
+      "normalized_name": NaN,
+      "value": 233478.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.02.02.07",
+      "account_name": "Contas a Pagar Vinculadas a Concessão - Uso do Bem Público",
+      "normalized_name": NaN,
+      "value": 791879.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.02.02.08",
+      "account_name": "Passivos financeiros setoriais",
+      "normalized_name": NaN,
+      "value": 27888.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.02.02.09",
+      "account_name": "Passivo de arrendamentos",
+      "normalized_name": NaN,
+      "value": 220700.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.02.02.10",
+      "account_name": "Outras Contas a Pagar",
+      "normalized_name": NaN,
+      "value": 579070.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.02.02.11",
+      "account_name": "PIS e Cofins a restituir para consumidores",
+      "normalized_name": NaN,
+      "value": 173135.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.02.02.12",
+      "account_name": "Provisão para destinação de crédito de PIS e Cofins",
+      "normalized_name": NaN,
+      "value": 1909775.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.03",
+      "account_name": "Tributos Diferidos",
+      "normalized_name": NaN,
+      "value": 1686793.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.03.01",
+      "account_name": "Imposto de Renda e Contribuição Social Diferidos",
+      "normalized_name": NaN,
+      "value": 1686793.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.04",
+      "account_name": "Provisões",
+      "normalized_name": NaN,
+      "value": 1492916.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.04.01",
+      "account_name": "Provisões Fiscais Previdenciárias Trabalhistas e Cíveis",
+      "normalized_name": NaN,
+      "value": 1480585.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.04.01.01",
+      "account_name": "Provisões Fiscais",
+      "normalized_name": NaN,
+      "value": 208430.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.04.01.02",
+      "account_name": "Provisões Previdenciárias e Trabalhistas",
+      "normalized_name": NaN,
+      "value": 386639.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.04.01.03",
+      "account_name": "Provisões para Benefícios a Empregados",
+      "normalized_name": NaN,
+      "value": 37516.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.04.01.04",
+      "account_name": "Provisões Cíveis",
+      "normalized_name": NaN,
+      "value": 848000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.04.02",
+      "account_name": "Outras Provisões",
+      "normalized_name": NaN,
+      "value": 12331.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.04.02.01",
+      "account_name": "Provisões para Garantias",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.04.02.02",
+      "account_name": "Provisões para Reestruturação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.04.02.03",
+      "account_name": "Provisões para Passivos Ambientais e de Desativação",
+      "normalized_name": NaN,
+      "value": 4593.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.04.02.04",
+      "account_name": "Provisões para Passivos Regulatórios",
+      "normalized_name": NaN,
+      "value": 7738.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.05",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda e Descontinuados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.05.01",
+      "account_name": "Passivos sobre Ativos Não-Correntes a Venda",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.05.02",
+      "account_name": "Passivos sobre Ativos de Operações Descontinuadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.06",
+      "account_name": "Lucros e Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.06.01",
+      "account_name": "Lucros a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.06.02",
+      "account_name": "Receitas a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.02.06.03",
+      "account_name": "Subvenções de Investimento a Apropriar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03",
+      "account_name": "Patrimônio Líquido Consolidado",
+      "normalized_name": "total_equity",
+      "value": 24191667.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.01",
+      "account_name": "Capital Social Realizado",
+      "normalized_name": NaN,
+      "value": 12821758.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.02",
+      "account_name": "Reservas de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.02.01",
+      "account_name": "Ágio na Emissão de Ações",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.02.02",
+      "account_name": "Reserva Especial de Ágio na Incorporação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.02.03",
+      "account_name": "Alienação de Bônus de Subscrição",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.02.04",
+      "account_name": "Opções Outorgadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.02.05",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.02.06",
+      "account_name": "Adiantamento para Futuro Aumento de Capital",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.03",
+      "account_name": "Reservas de Reavaliação",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.04",
+      "account_name": "Reservas de Lucros",
+      "normalized_name": NaN,
+      "value": 10757345.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.04.01",
+      "account_name": "Reserva Legal",
+      "normalized_name": NaN,
+      "value": 1625628.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.04.02",
+      "account_name": "Reserva Estatutária",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.04.03",
+      "account_name": "Reserva para Contingências",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.04.04",
+      "account_name": "Reserva de Lucros a Realizar",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.04.05",
+      "account_name": "Reserva de Retenção de Lucros",
+      "normalized_name": NaN,
+      "value": 9000506.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.04.06",
+      "account_name": "Reserva Especial para Dividendos Não Distribuídos",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.04.07",
+      "account_name": "Reserva de Incentivos Fiscais",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.04.08",
+      "account_name": "Dividendo Adicional Proposto",
+      "normalized_name": NaN,
+      "value": 131211.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.04.09",
+      "account_name": "Ações em Tesouraria",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.05",
+      "account_name": "Lucros/Prejuízos Acumulados",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.06",
+      "account_name": "Ajustes de Avaliação Patrimonial",
+      "normalized_name": NaN,
+      "value": 307050.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.07",
+      "account_name": "Ajustes Acumulados de Conversão",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.08",
+      "account_name": "Outros Resultados Abrangentes",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "2.03.09",
+      "account_name": "Participação dos Acionistas Não Controladores",
+      "normalized_name": "minority_interest_bs",
+      "value": 305514.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    }
+  ],
+  "DFC": [
+    {
+      "account_code": "6.01",
+      "account_name": "Caixa Líquido Atividades Operacionais",
+      "normalized_name": "cfo",
+      "value": 3518476.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01",
+      "account_name": "Caixa Gerado nas Operações",
+      "normalized_name": NaN,
+      "value": 4775315.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01.01",
+      "account_name": "Lucro Líquido do Exercício",
+      "normalized_name": "net_income_cfo",
+      "value": 2135667.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01.02",
+      "account_name": "Encargos, variações monetárias e cambiais não realizadas - líquidas",
+      "normalized_name": "depreciation_amortization_cfo",
+      "value": 1951552.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01.03",
+      "account_name": "Juros efetivos - bonificação pela outorga de contrato de concessão em regime de cotas",
+      "normalized_name": NaN,
+      "value": -114370.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01.04",
+      "account_name": "Remuneração de contratos de concessão de transmissão",
+      "normalized_name": NaN,
+      "value": -730094.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01.05",
+      "account_name": "Provisão para destinação de créditos de PIS e Cofins",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01.06",
+      "account_name": "Imposto de renda e contribuição social",
+      "normalized_name": NaN,
+      "value": 371104.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01.07",
+      "account_name": "Imposto de renda e contribuição social diferidos",
+      "normalized_name": NaN,
+      "value": -17047.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01.08",
+      "account_name": "Resultado da equivalência patrimonial",
+      "normalized_name": NaN,
+      "value": -307809.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01.09",
+      "account_name": "Apropriação de obrigações de benefícios pós emprego",
+      "normalized_name": NaN,
+      "value": 267741.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01.10",
+      "account_name": "Constituição para programas de pesquisa e desenvolvimento e eficiência energética",
+      "normalized_name": NaN,
+      "value": 165459.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01.11",
+      "account_name": "Reconhecimento do valor justo do ativo indenizável da concessão",
+      "normalized_name": NaN,
+      "value": -62167.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01.12",
+      "account_name": "Resultado de ativos e passivos financeiros setoriais",
+      "normalized_name": NaN,
+      "value": -1070196.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01.13",
+      "account_name": "Depreciação e amortização",
+      "normalized_name": NaN,
+      "value": 1382040.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01.14",
+      "account_name": "Provisão decorrente do programa de demissão voluntária",
+      "normalized_name": NaN,
+      "value": 610057.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01.15",
+      "account_name": "Perdas estimadas, provisões e reversões operacionais líquidas",
+      "normalized_name": NaN,
+      "value": 92235.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01.16",
+      "account_name": "Resultado da repactuação do risco hidrológico - GSF",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01.17",
+      "account_name": "Realização de mais/menos valia em combinações de negócios",
+      "normalized_name": NaN,
+      "value": -722.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01.18",
+      "account_name": "Valor justo nas operações de compra e venda de energia no mercado ativo e derivativos",
+      "normalized_name": NaN,
+      "value": -5045.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01.19",
+      "account_name": "Baixas de contas a receber vinculadas à concessão e ativos de contrato",
+      "normalized_name": NaN,
+      "value": 16998.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.01.20",
+      "account_name": "Resultado das baixas de imobilizado, intangíveis, direito de uso de ativos e passivo de arrendamento",
+      "normalized_name": NaN,
+      "value": 89912.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.02",
+      "account_name": "Variações nos Ativos e Passivos",
+      "normalized_name": "working_capital_changes",
+      "value": 585388.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.02.01",
+      "account_name": "Clientes",
+      "normalized_name": NaN,
+      "value": 188437.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.02.02",
+      "account_name": "Dividendos e juros sobre o capital próprio recebidos",
+      "normalized_name": NaN,
+      "value": 174826.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.02.03",
+      "account_name": "Depósitos judiciais",
+      "normalized_name": NaN,
+      "value": 33298.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.02.04",
+      "account_name": "Ativos financeiros setoriais",
+      "normalized_name": NaN,
+      "value": 36964.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.02.05",
+      "account_name": "Outros créditos",
+      "normalized_name": NaN,
+      "value": -11555.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.02.06",
+      "account_name": "Estoques",
+      "normalized_name": NaN,
+      "value": 18741.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.02.07",
+      "account_name": "Imposto de renda e contribuição social a recuperar",
+      "normalized_name": NaN,
+      "value": -201003.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.02.08",
+      "account_name": "Outros tributos a recuperar",
+      "normalized_name": NaN,
+      "value": -138520.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.02.09",
+      "account_name": "Despesas antecipadas",
+      "normalized_name": NaN,
+      "value": -2281.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.02.10",
+      "account_name": "Partes relacionadas",
+      "normalized_name": NaN,
+      "value": -201.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.02.11",
+      "account_name": "Obrigações sociais e trabalhistas",
+      "normalized_name": NaN,
+      "value": 297343.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.02.12",
+      "account_name": "Fornecedores",
+      "normalized_name": NaN,
+      "value": 19506.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.02.13",
+      "account_name": "Outras obrigações fiscais",
+      "normalized_name": NaN,
+      "value": 974083.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.02.14",
+      "account_name": "Benefícios pós-emprego",
+      "normalized_name": NaN,
+      "value": -224809.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.02.15",
+      "account_name": "Encargos setoriais a recolher",
+      "normalized_name": NaN,
+      "value": 14978.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.02.16",
+      "account_name": "Pesquisa e desenvolvimento e eficiência energética",
+      "normalized_name": NaN,
+      "value": -255295.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.02.17",
+      "account_name": "Contas a pagar vinculadas à concessão",
+      "normalized_name": NaN,
+      "value": -115736.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.02.18",
+      "account_name": "Outras contas a pagar",
+      "normalized_name": NaN,
+      "value": 149450.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.02.19",
+      "account_name": "Provisões para lítígios quitadas",
+      "normalized_name": NaN,
+      "value": -372838.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.03",
+      "account_name": "Outros",
+      "normalized_name": NaN,
+      "value": -1842227.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.03.01",
+      "account_name": "Imposto de renda e contribuição social pagos",
+      "normalized_name": NaN,
+      "value": -294676.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.03.02",
+      "account_name": "Encargos de empréstimos e financiamentos pagos",
+      "normalized_name": NaN,
+      "value": -521134.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.03.03",
+      "account_name": "Encargos de debêntures pagos",
+      "normalized_name": NaN,
+      "value": -1127607.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.03.04",
+      "account_name": "Encargos de passivo de arrendamentos pagos",
+      "normalized_name": NaN,
+      "value": -24284.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.01.03.05",
+      "account_name": "Caixa líquido gerado pelas atividades operacionais provenientes de operações descontinuadas",
+      "normalized_name": NaN,
+      "value": 125474.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.02",
+      "account_name": "Caixa Líquido Atividades de Investimento",
+      "normalized_name": "cfi",
+      "value": -3135091.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.02.01",
+      "account_name": "Aplicações financeiras",
+      "normalized_name": NaN,
+      "value": -44061.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.02.02",
+      "account_name": "Empréstimos concedidos a partes relacionadas",
+      "normalized_name": "capex",
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.02.03",
+      "account_name": "Recebimento de empréstimos concedidos a partes relacionadas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.02.04",
+      "account_name": "Aquisições de ativos de contrato",
+      "normalized_name": NaN,
+      "value": -1973215.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.02.05",
+      "account_name": "Participação financeira do consumidor - ativos de contrato",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.02.06",
+      "account_name": "Aquisições de controladas - efeito no caixa",
+      "normalized_name": NaN,
+      "value": -911450.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.02.07",
+      "account_name": "Alienação de investimentos - adiantamento",
+      "normalized_name": NaN,
+      "value": 58132.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.02.08",
+      "account_name": "Aportes em investimentos",
+      "normalized_name": NaN,
+      "value": -10780.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.02.09",
+      "account_name": "Redução de capital em investidas",
+      "normalized_name": NaN,
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.02.10",
+      "account_name": "Aquisições de imobilizado",
+      "normalized_name": NaN,
+      "value": -204805.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.02.11",
+      "account_name": "Aquisições de intangível",
+      "normalized_name": NaN,
+      "value": -13388.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.02.12",
+      "account_name": "Caixa líquido utilizado pelas atividades de investimento provenientes de operações descontinuadas",
+      "normalized_name": NaN,
+      "value": -35524.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.03",
+      "account_name": "Caixa Líquido Atividades de Financiamento",
+      "normalized_name": "cff",
+      "value": 2696572.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.03.01",
+      "account_name": "Ingressos de empréstimos e financiamentos",
+      "normalized_name": "debt_issuance",
+      "value": 45325.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.03.02",
+      "account_name": "Custos de transação na captação de empréstimos e financiamentos",
+      "normalized_name": "debt_repayment",
+      "value": -6886.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.03.03",
+      "account_name": "Ingressos de debêntures emitidas",
+      "normalized_name": NaN,
+      "value": 2900000.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.03.04",
+      "account_name": "Custos de transação na emissão de debêntures",
+      "normalized_name": "dividends_paid",
+      "value": -60677.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.03.05",
+      "account_name": "Amortizações de principal de empréstimos e financiamentos",
+      "normalized_name": NaN,
+      "value": -260971.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.03.06",
+      "account_name": "Amortizações de principal de debêntures",
+      "normalized_name": NaN,
+      "value": -1193910.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.03.07",
+      "account_name": "Amortizações de principal de passivo de arrendamentos",
+      "normalized_name": NaN,
+      "value": -69293.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.03.08",
+      "account_name": "Aumento de capital",
+      "normalized_name": NaN,
+      "value": 2031619.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.03.09",
+      "account_name": "Custos de transação no aumento de capital",
+      "normalized_name": NaN,
+      "value": -14941.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.03.10",
+      "account_name": "Dividendos e juros sobre o capital próprio pagos",
+      "normalized_name": NaN,
+      "value": -750371.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.03.11",
+      "account_name": "Caixa líquido (utilizado) gerado pelas atividades de financiamento de operações descontinuadas",
+      "normalized_name": NaN,
+      "value": 76677.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.04",
+      "account_name": "Variação Cambial s/ Caixa e Equivalentes",
+      "normalized_name": "forex_effect_on_cash",
+      "value": 0.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.05",
+      "account_name": "Aumento (Redução) de Caixa e Equivalentes",
+      "normalized_name": "net_cash_change",
+      "value": 3079957.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.05.01",
+      "account_name": "Saldo Inicial de Caixa e Equivalentes",
+      "normalized_name": "beginning_cash",
+      "value": 2678457.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    },
+    {
+      "account_code": "6.05.02",
+      "account_name": "Saldo Final de Caixa e Equivalentes",
+      "normalized_name": "ending_cash",
+      "value": 5758414.0,
+      "reference_date": "2023-12-31",
+      "company_name": "CIA PARANAENSE DE ENERGIA - COPEL",
+      "cvm_code": "014311"
+    }
+  ]
+}

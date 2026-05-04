@@ -1,0 +1,45 @@
+{
+  "ticker": "INTR4",
+  "sector_type": "bank",
+  "base_year": 2025,
+  "method": "Gordon Growth Model (P/B Implícito)",
+  "calculated_at": "2026-04-19",
+  "scenarios": {
+    "base": {
+      "fair_value": 10509.892117606478,
+      "current_price": null,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.1376770255325479,
+        "coe": 0.135,
+        "g": 0.055,
+        "pb_implied": 1.0334628191568487
+      }
+    },
+    "optimistic": {
+      "fair_value": 11284.906062978833,
+      "current_price": null,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.1376770255325479,
+        "coe": 0.13,
+        "g": 0.06,
+        "pb_implied": 1.1096717933221127
+      }
+    },
+    "pessimistic": {
+      "fair_value": 9907.10349342798,
+      "current_price": null,
+      "upside": null,
+      "recommendation": "N/D",
+      "assumptions": {
+        "roe": 0.1376770255325479,
+        "coe": 0.14,
+        "g": 0.05,
+        "pb_implied": 0.9741891725838654
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+2026-04-14 20:42:47,120 [INFO] pipeline: ======================================================================
+2026-04-14 20:42:47,120 [INFO] pipeline: PIPELINE DE VALUATION BANCÁRIO — BBDC4 — Bradesco
+2026-04-14 20:42:47,120 [INFO] pipeline: Início: 2026-04-14 20:42:47
+2026-04-14 20:42:47,121 [INFO] pipeline: ======================================================================
+2026-04-14 20:42:47,121 [INFO] pipeline: 
+[1/6] Coletando dados de mercado...
+2026-04-14 20:42:49,349 [INFO] pipeline:   Buscando cotação via yfinance...
+2026-04-14 20:42:49,349 [INFO] pipeline.mercado: Buscando cotação atual: BBDC4.SA
+2026-04-14 20:42:50,852 [INFO] pipeline:   Cotação atual: R$ 20.78
+2026-04-14 20:42:50,983 [INFO] pipeline.mercado: Calculando beta: BBDC4 (252 dias úteis)
+2026-04-14 20:42:50,984 [INFO] pipeline.mercado: Baixando preços: BBDC4.SA (2019-01-01 → 2026-04-14)
+2026-04-14 20:42:55,589 [INFO] pipeline.mercado:   1811 dias de preços carregados
+2026-04-14 20:42:55,589 [INFO] pipeline.mercado: Baixando preços: ^BVSP.SA (2019-01-01 → 2026-04-14)
+2026-04-14 20:42:57,076 [ERROR] yfinance: HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: ^BVSP.SA"}}}
+2026-04-14 20:42:57,731 [ERROR] yfinance: $^BVSP.SA: possibly delisted; no timezone found
+2026-04-14 20:42:57,731 [ERROR] yfinance: 
+1 Failed download:
+2026-04-14 20:42:57,733 [ERROR] yfinance: ['^BVSP.SA']: possibly delisted; no timezone found
+2026-04-14 20:42:57,736 [WARNING] pipeline.mercado: Sem dados de preços para ^BVSP.SA
+2026-04-14 20:42:57,736 [WARNING] pipeline.mercado: Dados insuficientes para calcular beta
+2026-04-14 20:42:57,736 [INFO] pipeline:   Beta estatístico: 0.850 | Beta utilizado: 0.850
+2026-04-14 20:42:57,736 [INFO] pipeline: 
+[2/6] Coletando dados macroeconômicos (BCB)...
+2026-04-14 20:42:58,024 [WARNING] pipeline.macro: Não foi possível obter Focus Selic: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'Selic'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana
+2026-04-14 20:42:58,290 [WARNING] pipeline.macro: Não foi possível obter Focus IPCA: 503 Server Error: Service Temporarily Unavailable for url: https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais?%24filter=Indicador%20eq%20'IPCA'&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana
+2026-04-14 20:42:58,291 [INFO] pipeline.macro: 
+=== Coletando dados macroeconômicos ===
+2026-04-14 20:42:58,292 [INFO] pipeline.macro: Baixando série BCB 432...
+2026-04-14 20:42:58,573 [ERROR] pipeline.macro: Erro ao baixar série BCB 432: 406 Client Error: Not Acceptable for url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json&dataInicial=01%2F01%2F2010&dataFinal=14%2F04%2F2026

@@ -1,0 +1,53 @@
+# Dependências do projeto de inteligência financeira
+# Instalar com: pip install -r requirements.txt
+
+# --- Dados e HTTP ---
+requests>=2.31.0
+pandas>=2.1.0
+numpy>=1.26.0
+yfinance>=0.2.40
+
+# --- Claude API ---
+anthropic>=0.40.0
+
+# --- Config ---
+pydantic-settings>=2.2.0
+pyyaml>=6.0.0
+
+# --- CLI / Visualização ---
+rich>=13.7.0
+
+# --- Scheduler ---
+apscheduler>=3.10.0
+
+# --- Parsing de documentos ---
+lxml>=5.1.0
+beautifulsoup4>=4.12.0
+pdfplumber>=0.10.0
+openpyxl>=3.1.0
+
+# --- Validação e schemas ---
+pydantic>=2.5.0
+python-dotenv>=1.0.0
+
+# --- Persistência ---
+duckdb>=0.9.0
+pyarrow>=14.0.0
+
+# --- Qualidade de código ---
+ruff>=0.1.0
+black>=23.0.0
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# --- Logging ---
+loguru>=0.7.0
+
+# --- Visualização (opcional) ---
+# streamlit>=1.28.0
+# plotly>=5.18.0
+# matplotlib>=3.8.0
+
+# --- Notebooks ---
+# jupyter>=1.0.0
+# ipykernel>=6.27.0
