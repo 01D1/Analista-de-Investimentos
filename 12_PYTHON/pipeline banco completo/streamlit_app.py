@@ -869,13 +869,14 @@ def _tab_valuation(ticker: str) -> None:
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
-def main() -> None:
-    st.set_page_config(
-        page_title="Valuation Engine",
-        page_icon="📊",
-        layout="wide",
-        initial_sidebar_state="expanded",
-    )
+def main(skip_page_config: bool = False) -> None:
+    if not skip_page_config:
+        st.set_page_config(
+            page_title="Valuation Engine",
+            page_icon="📊",
+            layout="wide",
+            initial_sidebar_state="expanded",
+        )
     st.markdown(_CSS, unsafe_allow_html=True)
 
     if "detail_ticker" not in st.session_state:
