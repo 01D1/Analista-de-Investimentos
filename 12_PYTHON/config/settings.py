@@ -7,6 +7,8 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 ROOT = Path(__file__).parent.parent
 
+REQUIRED_IN_PRODUCTION = ["anthropic_api_key", "telegram_bot_token", "telegram_chat_id"]
+
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
@@ -48,6 +50,14 @@ class Settings(BaseSettings):
     def model_post_init(self, __context) -> None:
         for path in (self.data_raw, self.data_processed, self.data_output, self.logs_dir):
             path.mkdir(parents=True, exist_ok=True)
+
+        # Startup validation: fail loudly in production if required keys are missing (D-FOUND-02)
+        if self.env == "production":
+            missing = [k for k in REQUIRED_IN_PRODUCTION if not getattr(self, k, "")]
+            if missing:
+                import sys
+                print(f"[CONFIG] Variáveis obrigatórias ausentes no .env: {missing}")
+                sys.exit(1)
 
     @property
     def tickers(self) -> list[dict]:

@@ -7,6 +7,15 @@ Este arquivo contém apenas defaults globais e parâmetros de infraestrutura.
 """
 from pathlib import Path
 
+# Carregar credenciais do .env compartilhado em 12_PYTHON/.env (D-03)
+# pipeline banco completo/config/ → parent = config/ → parent.parent = pipeline banco completo/
+# → parent.parent.parent = 12_PYTHON/
+try:
+    from dotenv import load_dotenv
+    load_dotenv(dotenv_path=Path(__file__).parent.parent.parent / ".env")
+except ImportError:
+    pass
+
 # ── Diretórios ─────────────────────────────────────────────────────────────────
 ROOT_DIR    = Path(__file__).parent.parent
 CACHE_DIR   = ROOT_DIR / "cache"
@@ -109,9 +118,9 @@ BCB_SERIES = {
     "selic_meta":     432,    # Taxa Selic meta (% a.a.)
     "selic_diaria":   11,     # Selic Over diária
     "di":             12,     # DI (CETIP)
-    "ipca":           433,    # IPCA acumulado 12m
-    "ipca_mensal":    13522,  # IPCA mensal
-    "tjlp":           258,    # TJLP
+    "ipca_mensal":    433,    # IPCA mensal
+    "ipca_12m":       13522,  # IPCA acumulado 12m
+    "tjlp":           256,    # TJLP
     "cambio_dolar":   1,      # USD/BRL
     "pib_nominal":    4380,   # PIB nominal
     "pib_variacao":   4385,   # PIB variação

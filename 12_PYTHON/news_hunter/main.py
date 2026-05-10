@@ -124,6 +124,11 @@ def main():
 
     args = parser.parse_args()
 
+    # Startup guard (per D-10): fail loudly if Telegram is active but token is missing
+    if getattr(config, "TELEGRAM_ATIVO", False) and not getattr(config, "TELEGRAM_TOKEN", ""):
+        print("[news_hunter] ERRO: TELEGRAM_ATIVO=True mas TELEGRAM_BOT_TOKEN não está no .env")
+        sys.exit(1)
+
     # Inicializar banco (inclui migração segura)
     banco.inicializar()
 
