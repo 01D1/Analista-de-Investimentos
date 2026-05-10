@@ -5,8 +5,9 @@ Edite aqui sem precisar tocar no código principal.
 """
 
 try:
+    from pathlib import Path
     from dotenv import load_dotenv
-    load_dotenv()
+    load_dotenv(dotenv_path=Path(__file__).parent.parent / ".env")
 except ImportError:
     pass
 
@@ -57,8 +58,8 @@ USER_AGENT = (
 
 # Ative e preencha token + chat_id para habilitar envios
 TELEGRAM_ATIVO   = os.getenv("TELEGRAM_ATIVO", "true").lower() in ("true", "1", "yes")
-TELEGRAM_TOKEN   = os.getenv("TELEGRAM_TOKEN",   "8283626758:AAEx-rPwbFczQV3SoTCNnlC3Lj1SQo8bGVU")
-TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "-5236754554")
+TELEGRAM_TOKEN   = os.getenv("TELEGRAM_TOKEN",   "")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
 
 # Enviar boletim automaticamente após gerar
 TELEGRAM_ENVIAR_BOLETIM = True

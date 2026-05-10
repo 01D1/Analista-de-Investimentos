@@ -6,10 +6,16 @@ import importlib.util
 import sys
 import pytest
 from pathlib import Path
+from unittest.mock import patch
 
 
 def _load_news_hunter_config(monkeypatch, token=None, chat_id=None):
-    """Helper: load news_hunter/config.py in isolation."""
+    """Helper: load news_hunter/config.py in isolation.
+
+    Patches load_dotenv so the real .env file does not interfere with env vars
+    set or deleted by monkeypatch. This isolates the test to check only the
+    os.getenv() fallback values in config.py, not the .env file contents.
+    """
     if token is None:
         monkeypatch.delenv("TELEGRAM_TOKEN", raising=False)
     else:
@@ -19,12 +25,13 @@ def _load_news_hunter_config(monkeypatch, token=None, chat_id=None):
     else:
         monkeypatch.setenv("TELEGRAM_CHAT_ID", chat_id)
 
-    spec = importlib.util.spec_from_file_location(
-        "news_hunter_config",
-        Path(__file__).parent.parent / "news_hunter" / "config.py",
-    )
-    cfg = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(cfg)
+    with patch("dotenv.load_dotenv"):
+        spec = importlib.util.spec_from_file_location(
+            "news_hunter_config",
+            Path(__file__).parent.parent / "news_hunter" / "config.py",
+        )
+        cfg = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cfg)
     return cfg
 
 
