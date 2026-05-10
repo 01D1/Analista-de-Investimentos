@@ -21,7 +21,6 @@ Uso:
 from __future__ import annotations
 
 import json
-import sys
 from dataclasses import dataclass, field
 from datetime import date
 from pathlib import Path
@@ -32,17 +31,6 @@ import pandas as pd
 from src.utils.logger import get_logger
 
 log = get_logger(__name__)
-
-# ── Helpers de importação ─────────────────────────────────────────────────────
-# Os módulos legados usam imports relativos (sem prefixo src.).
-# Adicionamos src/ ao path antes de importar, se necessário.
-
-
-def _ensure_src_path() -> None:
-    src = str(Path(__file__).parent.parent)
-    if src not in sys.path:
-        sys.path.insert(0, src)
-
 
 # ── Tipos ─────────────────────────────────────────────────────────────────────
 
@@ -208,9 +196,8 @@ class ProcessingPipeline:
         raw_dir: Path,
         output_path: Path,
     ) -> PeriodResult:
-        _ensure_src_path()
-        from analysis.detect_inconsistencies import BankInconsistencyDetector
-        from parsers.bank_parser import BankParser
+        from src.analysis.detect_inconsistencies import BankInconsistencyDetector
+        from src.parsers.bank_parser import BankParser
 
         parser = BankParser()
         stmts = parser.parse(
@@ -269,8 +256,7 @@ class ProcessingPipeline:
         raw_dir: Path,
         output_path: Path,
     ) -> PeriodResult:
-        _ensure_src_path()
-        from parsers.dfp_parser import DFPParser
+        from src.parsers.dfp_parser import DFPParser
 
         parser = DFPParser()
         dfs = parser.parse_company(
