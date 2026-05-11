@@ -1140,6 +1140,14 @@ def _compute_and_write_signals(
         _write_null_signals(conn, ticker, computed_date)
         return
 
+    # WR-06: MA200 requires ≥200 rows; warn operators when momentum_score will be degraded
+    # (cross_score defaults to 10 = neutral when MA200/crossover cannot be computed).
+    if len(rows) < 200:
+        log.warning(
+            f"[{ticker}] sinais: apenas {len(rows)} linhas de preço disponíveis "
+            "(< 200 necessárias para MA200); momentum_score será parcialmente estimado"
+        )
+
     prices = pd.Series(
         {r["date"]: float(r["adj_close"]) for r in rows}
     )
