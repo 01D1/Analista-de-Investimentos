@@ -38,6 +38,19 @@ DEFAULT_START = "2019-01-01"
 _SA_SUFFIX = ".SA"
 
 
+def _to_float_or_none(val) -> float | None:
+    """Return None only if val is truly missing (None/NaN), not if it's zero.
+
+    WR-04: avoids converting genuine 0.0 close prices (suspended sessions,
+    penny stocks) to NULL. Only NaN and non-numeric values become None.
+    """
+    try:
+        f = float(val)
+        return None if pd.isna(f) else f
+    except (TypeError, ValueError):
+        return None
+
+
 class B3Scraper:
     """
     Busca e mantém série histórica de preços para tickers da B3.
@@ -180,7 +193,7 @@ class B3Scraper:
                 if hasattr(dt, "date")
                 else str(dt)[:10]
             )
-            conn.execute(
+            cur = conn.execute(
                 """INSERT OR IGNORE INTO price_ohlcv
                    (id, ticker, date, open, high, low, close, adj_close,
                     volume, is_gap, ingested_at)
@@ -189,17 +202,17 @@ class B3Scraper:
                     str(uuid.uuid4()),
                     ticker,
                     date_str,
-                    float(row.get("open", 0) or 0) or None,
-                    float(row.get("high", 0) or 0) or None,
-                    float(row.get("low", 0) or 0) or None,
-                    float(row.get("close", 0) or 0) or None,
-                    float(row.get("close", 0) or 0) or None,  # adj_close = close post auto_adjust
+                    _to_float_or_none(row.get("open")),
+                    _to_float_or_none(row.get("high")),
+                    _to_float_or_none(row.get("low")),
+                    _to_float_or_none(row.get("close")),
+                    _to_float_or_none(row.get("close")),  # adj_close = auto-adjusted close
                     int(row.get("volume", 0) or 0) or None,
                     now,
                 ),
             )
-            inserted += conn.execute("SELECT changes()").fetchone()[0]
-        conn.commit()
+            inserted += cur.rowcount  # 1 on insert, 0 on OR IGNORE — reliable
+        conn.commit()  # single commit after all rows
         return inserted
 
     def detect_and_insert_gaps(
@@ -234,13 +247,13 @@ class B3Scraper:
         now = datetime.utcnow().isoformat()
         gaps_inserted = 0
         for gap_date in sorted(gap_dates):
-            conn.execute(
+            cur = conn.execute(
                 """INSERT OR IGNORE INTO price_ohlcv
                    (id, ticker, date, is_gap, ingested_at)
                    VALUES (?, ?, ?, 1, ?)""",
                 (str(uuid.uuid4()), ticker, gap_date.isoformat(), now),
             )
-            gaps_inserted += conn.execute("SELECT changes()").fetchone()[0]
+            gaps_inserted += cur.rowcount  # 1 on insert, 0 on OR IGNORE — reliable
 
         if gaps_inserted:
             log.warning(

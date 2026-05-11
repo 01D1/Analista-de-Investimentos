@@ -148,13 +148,13 @@ def ingest_all_series(conn: sqlite3.Connection) -> dict:
                 log.warning(f"[bcb] data invalida em {series_name}: {item['data']}")
                 continue
 
-            conn.execute(
+            cur = conn.execute(
                 """INSERT OR IGNORE INTO macro_series
                    (id, series_code, series_name, date, value, ingested_at)
                    VALUES (?, ?, ?, ?, ?, ?)""",
                 (str(uuid.uuid4()), series_code, series_name, iso_date, value, now),
             )
-            inserted += conn.execute("SELECT changes()").fetchone()[0]
+            inserted += cur.rowcount  # 1 on insert, 0 on OR IGNORE — reliable
 
         conn.commit()
         log.info(f"[bcb] {series_name} — {len(rows)} pontos buscados")

@@ -172,7 +172,7 @@ class CVMDownloader:
         inserted = 0
         now = datetime.utcnow().isoformat()
         for rec in records:
-            conn.execute(
+            cur = conn.execute(
                 """INSERT OR IGNORE INTO cvm_statements
                    (id, ticker, cvm_code, year, period_type, account_code,
                     account_name, normalized_name, value, reference_date, ingested_at)
@@ -191,8 +191,8 @@ class CVMDownloader:
                     now,
                 ),
             )
-            inserted += conn.execute("SELECT changes()").fetchone()[0]
-        conn.commit()
+            inserted += cur.rowcount  # 1 on insert, 0 on OR IGNORE — reliable
+        conn.commit()  # single commit after all rows
         return inserted
 
     def parse_and_store(
