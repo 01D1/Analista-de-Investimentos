@@ -339,6 +339,10 @@ def run_ticker(ticker: str) -> FinancialResult:
         except Exception as exc:
             log.debug(f"[{ticker}] shares_outstanding não obtido: {exc}")
 
+        # WR-02: inject shares into ltm so _compute_multiples / _compute_dcf_industrial
+        # can access ltm.get("shares_outstanding") — _aggregate_ltm() never sets this key.
+        ltm["shares_outstanding"] = shares
+
         # Write financial_ltm
         computed_date = date.today().isoformat()
         conn.execute(
