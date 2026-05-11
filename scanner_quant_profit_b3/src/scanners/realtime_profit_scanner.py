@@ -6,6 +6,12 @@ from pathlib import Path
 import pandas as pd
 
 from src.collectors.profit_excel_collector import read_profit_excel, normalize_profit_df, save_snapshots
+from src.quant.calibration_store import save_calibration_run
+from src.quant.explanations import explain_signal
+from src.quant.liquidity import liquidity_profile
+from src.quant.score_comparison import compare_scores, score_distribution_report, textual_comparison_report
+from src.quant.scoring import score_asset
+from src.quant.signals import classify_asset_signal
 from src.utils import load_config, project_path
 
 def demo_data():
@@ -43,6 +49,9 @@ def score_realtime(df, cfg):
     neg_min = int(filtros.get("negocios_minimos", 1000))
     var_min = float(filtros.get("variacao_minima_pct", 0.3))
 
+    avg_volume = pd.to_numeric(df.get("volume"), errors="coerce").mean()
+    avg_trades = pd.to_numeric(df.get("trades"), errors="coerce").mean()
+
     rows = []
     for _, r in df.iterrows():
         score = 0
@@ -75,6 +84,52 @@ def score_realtime(df, cfg):
         item["score"] = min(score, 100)
         item["signal"] = signal
         item["motivos"] = "; ".join(motivos)
+
+        metrics = {
+            "variation_pct": r.get("variation_pct"),
+            "last_vs_open_pct": r.get("last_vs_open_pct"),
+            "last_vs_prev_close_pct": (
+                (r["last"] / r["prev_close"] - 1) * 100
+                if pd.notna(r.get("last")) and pd.notna(r.get("prev_close")) and r.get("prev_close") != 0
+                else 0
+            ),
+            "position_range_pct": r.get("position_range_pct"),
+            "range_pct": r.get("range_pct"),
+            "gap_pct": r.get("gap_pct"),
+        }
+        liquidity = liquidity_profile(
+            volume=r.get("volume"),
+            trades=r.get("trades"),
+            avg_volume=avg_volume,
+            avg_trades=avg_trades,
+            min_volume=vol_min,
+            min_trades=neg_min,
+        )
+        trend = {
+            "price_above_fast_ma": pd.notna(r.get("last")) and pd.notna(r.get("open")) and r.get("last") > r.get("open"),
+            "price_above_slow_ma": pd.notna(r.get("last")) and pd.notna(r.get("prev_close")) and r.get("last") > r.get("prev_close"),
+            "fast_ma_above_slow_ma": pd.notna(r.get("open")) and pd.notna(r.get("prev_close")) and r.get("open") >= r.get("prev_close"),
+        }
+        quant_score = score_asset(metrics=metrics, liquidity=liquidity, trend=trend)
+        quant_signal = classify_asset_signal(quant_score)
+
+        item.update({
+            "score_final": quant_score["score_final"],
+            "score_momentum": quant_score["score_momentum"],
+            "score_tendencia": quant_score["score_tendencia"],
+            "score_liquidez": quant_score["score_liquidez"],
+            "score_volatilidade": quant_score["score_volatilidade"],
+            "score_risco": quant_score["score_risco"],
+            "signal_type": quant_signal["signal_type"],
+            "signal_confidence": quant_signal["confidence"],
+            "explanation": explain_signal(
+                ticker=str(r.get("asset")),
+                signal_type=quant_signal["signal_type"],
+                metrics=metrics,
+                liquidity=liquidity,
+                risks=quant_score["risk_reasons"],
+            ),
+        })
         rows.append(item)
 
     out = pd.DataFrame(rows)
@@ -83,21 +138,42 @@ def score_realtime(df, cfg):
 def save_realtime_signals(df, db_path):
     if df is None or df.empty:
         return
-    cols = ["captured_at", "asset", "last", "variation_pct", "volume", "trades", "score", "signal", "motivos"]
+    cols = [
+        "captured_at", "asset", "last", "variation_pct", "volume", "trades",
+        "score", "signal", "motivos",
+        "score_final", "score_momentum", "score_tendencia", "score_liquidez",
+        "score_volatilidade", "score_risco", "signal_type", "signal_confidence",
+        "explanation",
+    ]
     save = df[[c for c in cols if c in df.columns]].copy()
     con = sqlite3.connect(db_path)
     save.to_sql("realtime_signals", con, if_exists="append", index=False)
     con.close()
 
-def write_report(df, reports_dir):
+def write_report(df, reports_dir, comparison=False):
     reports_dir.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    path = reports_dir / f"scanner_realtime_{stamp}.csv"
-    cols = ["captured_at", "asset", "last", "open", "high", "low", "prev_close", "variation_pct", "volume", "trades", "position_range_pct", "score", "signal", "motivos"]
+    prefix = "score_comparison" if comparison else "scanner_realtime"
+    path = reports_dir / f"{prefix}_{stamp}.csv"
+    cols = [
+        "captured_at", "asset", "last", "open", "high", "low", "prev_close",
+        "variation_pct", "volume", "trades", "position_range_pct", "score",
+        "signal", "motivos", "score_final", "score_momentum", "score_tendencia",
+        "score_liquidez", "score_volatilidade", "score_risco", "signal_type",
+        "signal_confidence", "divergence_type", "explanation",
+    ]
     df[[c for c in cols if c in df.columns]].to_csv(path, index=False, sep=";", decimal=",")
     return path
 
-def run_once(cfg, save_db=True, print_top=10, write_csv=False, demo=False):
+def run_once(
+    cfg,
+    save_db=True,
+    print_top=10,
+    write_csv=False,
+    demo=False,
+    compare_scores_flag=False,
+    save_calibration=False,
+):
     db_path = project_path(cfg["database_path"])
 
     if demo:
@@ -123,11 +199,32 @@ def run_once(cfg, save_db=True, print_top=10, write_csv=False, demo=False):
     print("\n" + datetime.now().strftime("%d/%m/%Y %H:%M:%S"))
     print(ranked[cols].head(print_top).to_string(index=False))
 
+    report_df = ranked
+    if compare_scores_flag:
+        comparison = compare_scores(ranked)
+        dist = score_distribution_report(comparison)
+        print("\nCOMPARAÇÃO SCORE LEGADO x SCORE QUANTITATIVO")
+        print(textual_comparison_report(comparison, dist))
+        detail_cols = ["asset", "score", "score_final", "rank_change", "signal", "signal_type", "divergence_type"]
+        print("\n" + comparison[[c for c in detail_cols if c in comparison.columns]].head(print_top).to_string(index=False))
+        if save_calibration:
+            run_id = save_calibration_run(
+                comparison,
+                dist,
+                dist.get("inflation_alert", {}),
+                db_path,
+                source="realtime_demo" if demo else "realtime",
+            )
+            print(f"\nCalibração salva no banco. run_id={run_id}")
+        report_df = comparison
+    elif save_calibration:
+        print("\nAviso: use --compare-scores junto com --save-calibration para salvar a calibração.")
+
     if write_csv:
-        report_path = write_report(ranked, project_path("data/reports"))
+        report_path = write_report(report_df, project_path("data/reports"), comparison=compare_scores_flag)
         print(f"Relatório salvo: {report_path}")
 
-    return ranked
+    return report_df
 
 def main():
     parser = argparse.ArgumentParser(description="Robô de leitura do Excel RTD do Profit + scanner intraday.")
@@ -136,19 +233,35 @@ def main():
     parser.add_argument("--top", type=int, default=10, help="Quantidade de ativos para exibir no ranking.")
     parser.add_argument("--csv", action="store_true", help="Salva um CSV do ranking a cada rodada.")
     parser.add_argument("--demo", action="store_true", help="Roda com dados simulados para testar fora do pregão.")
+    parser.add_argument("--compare-scores", action="store_true", help="Compara score legado com score quantitativo composto.")
+    parser.add_argument("--save-calibration", action="store_true", help="Salva a rodada de comparação de scores no SQLite.")
     args = parser.parse_args()
 
     cfg = load_config()
     interval = args.interval or int(cfg.get("snapshot_interval_seconds", 5))
 
     if args.once:
-        run_once(cfg, print_top=args.top, write_csv=args.csv, demo=args.demo)
+        run_once(
+            cfg,
+            print_top=args.top,
+            write_csv=args.csv,
+            demo=args.demo,
+            compare_scores_flag=args.compare_scores,
+            save_calibration=args.save_calibration,
+        )
         return
 
     print("Robô Profit RTD iniciado. Deixe Profit e Excel abertos. Para parar: CTRL+C.")
     while True:
         try:
-            run_once(cfg, print_top=args.top, write_csv=args.csv, demo=args.demo)
+            run_once(
+                cfg,
+                print_top=args.top,
+                write_csv=args.csv,
+                demo=args.demo,
+                compare_scores_flag=args.compare_scores,
+                save_calibration=args.save_calibration,
+            )
         except KeyboardInterrupt:
             print("\nRobô encerrado pelo usuário.")
             break

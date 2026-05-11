@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local configuration
+.env
+config.yaml
+config_quant.local.yaml
+
+# Runtime data
+data/database/
+data/raw/
+data/processed/
+data/reports/
+data/journal/
+data/realtime/*.xlsx
+data/realtime/*.xlsm
+
+# Streamlit and local tooling
+.streamlit/secrets.toml
+.claude/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

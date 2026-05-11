@@ -1,375 +1,470 @@
 # Scanner Quant Profit + B3
 
-Scanner quantitativo para acompanhamento de ações e opções da B3, com integração a dados em tempo real via Profit/Excel RTD, histórico diário da B3 por meio dos arquivos COTAHIST, armazenamento em SQLite e geração de rankings operacionais para análise de mercado.
+Scanner quantitativo para acompanhar acoes e opcoes da B3 usando duas fontes principais:
 
-O objetivo do projeto é servir como uma base prática para identificar ativos com movimentação relevante, volume acima do normal, força intradiária, rompimentos, oportunidades em opções e possíveis distorções quantitativas que possam ser analisadas posteriormente em dashboards, relatórios e conteúdos de mercado.
+- dados em tempo real do Profit exportados para Excel via RTD;
+- historico diario da B3 via COTAHIST.
 
----
+O projeto le a planilha do Profit, grava snapshots no SQLite, calcula sinais intraday, cruza esses sinais com opcoes do COTAHIST e expoe os resultados em linha de comando, arquivos CSV e dashboard Streamlit.
 
-## 1. O que o sistema faz
+> Este sistema e apenas uma ferramenta de apoio analitico. Ele nao envia ordens e nao substitui avaliacao operacional, controle de risco ou recomendacao profissional.
 
-O projeto reúne módulos para:
+## O Que Ele Faz
 
-- Ler cotações em tempo real a partir de uma planilha Excel conectada ao Profit via RTD;
-- Normalizar os dados recebidos do Profit;
-- Calcular métricas intradiárias de preço, volume, variação e posição no range do dia;
-- Criar ranking quantitativo de ativos com base em critérios de força, liquidez e comportamento intradiário;
-- Salvar snapshots e sinais em banco SQLite;
-- Baixar e processar arquivos históricos da B3 no formato COTAHIST;
-- Apoiar scanners de ações, opções e combinações entre ativo-objeto e derivativos;
-- Exportar relatórios em CSV;
-- Servir de base para dashboards em Streamlit.
+- Coleta cotacoes em tempo real do Profit por uma planilha Excel RTD.
+- Salva snapshots intraday em banco SQLite.
+- Gera ranking de acoes por forca, volume, negocios, posicao no range e rompimento.
+- Baixa e processa arquivos COTAHIST da B3.
+- Identifica opcoes relacionadas aos ativos configurados.
+- Cruza sinais de acoes com opcoes liquidas.
+- Calcula setups da estrategia `CALL_CONTINUIDADE`.
+- Gera relatorios CSV, diario de trades, backtests e dashboard Streamlit.
 
----
+## Requisitos
 
-## 2. Estrutura geral do projeto
+- Python 3.10 ou superior.
+- Windows, Excel e Profit Pro para uso com RTD em tempo real.
+- Acesso a internet para baixar COTAHIST da B3.
+- Uma planilha Excel com as formulas RTD do Profit.
 
-Estrutura esperada da pasta principal:
+Para usar apenas modo demo, COTAHIST, backtests e dashboard com dados ja salvos, o Profit nao precisa estar aberto.
 
-```text
-scanner_quant_profit_b3/
-│
-├── config.yaml
-├── README.md
-├── README_OBSIDIAN.md
-├── requirements.txt
-│
-├── src/
-│   ├── collectors/
-│   ├── db/
-│   ├── quant/
-│   ├── reports/
-│   ├── scanners/
-│   └── utils/
-│
-├── data/
-│   ├── raw/
-│   ├── processed/
-│   ├── realtime/
-│   ├── database/
-│   └── reports/
-│
-└── tests/
-```
+## Instalacao
 
-Principais módulos:
-
-| Módulo | Função |
-|---|---|
-| `src/collectors/profit_excel_collector.py` | Lê dados da planilha RTD do Profit |
-| `src/collectors/b3_cotahist_collector.py` | Baixa e processa histórico da B3 |
-| `src/collectors/b3_cotahist_downloader.py` | Faz download dos arquivos COTAHIST |
-| `src/collectors/parse_cotahist.py` | Interpreta o layout dos arquivos da B3 |
-| `src/scanners/realtime_profit_scanner.py` | Scanner intradiário com ranking dos ativos |
-| `src/scanners/stock_scanner.py` | Scanner de ações |
-| `src/scanners/option_scanner.py` | Scanner de opções |
-| `src/scanners/combined_stock_options_scanner.py` | Cruza ações e opções correspondentes |
-| `src/db/init_db.py` | Inicializa o banco SQLite |
-| `src/reports/` | Dashboards e relatórios |
-
----
-
-## 3. Requisitos
-
-Antes de rodar o projeto, é recomendável ter:
-
-- Python 3.10 ou superior;
-- Profit instalado e funcionando;
-- Microsoft Excel instalado;
-- Planilha RTD configurada para receber dados do Profit;
-- Git instalado, caso deseje clonar e versionar o projeto;
-- Ambiente virtual Python, como `venv`.
-
-Dependências comuns do projeto incluem:
-
-- `pandas`
-- `numpy`
-- `openpyxl`
-- `xlwings`
-- `pyyaml`
-- `streamlit`
-- `plotly`
-- `scipy`, quando necessário para modelos quantitativos
-
----
-
-## 4. Instalação
-
-Acesse a pasta do projeto:
+No PowerShell, entre na pasta do projeto:
 
 ```powershell
-cd scanner_quant_profit_b3
-```
-
-Crie um ambiente virtual:
-
-```powershell
+cd "Analista de Investimentos\scanner_quant_profit_b3"
 python -m venv .venv
+.\.venv\Scripts\activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+Copy-Item config.example.yaml config.yaml
+Copy-Item config_quant.example.yaml config_quant.yaml
 ```
 
-Ative o ambiente virtual no Windows:
-
-```powershell
-.venv\Scripts\activate
-```
-
-Instale as dependências:
-
-```powershell
-pip install -r requirements.txt
-```
-
-Inicialize o banco de dados:
+Depois inicialize o banco:
 
 ```powershell
 python -m src.db.init_db
 ```
 
----
+O banco padrao e criado em `data/database/scanner_quant.db`. Os arquivos `config.yaml` e `config_quant.yaml` sao locais; para publicar no GitHub, mantenha os modelos `config.example.yaml` e `config_quant.example.yaml`.
 
-## 5. Configuração do Profit RTD no Excel
+## Configuracao Da Planilha RTD
 
-O sistema lê os dados de mercado a partir de uma planilha Excel conectada ao Profit via RTD.
+1. Abra o Profit Pro.
+2. Abra sua planilha RTD no Excel.
+3. Confirme que os valores estao atualizando.
+4. Mantenha o Excel aberto enquanto o scanner estiver rodando.
+5. Ajuste o caminho da planilha no seu `config.yaml`.
 
-O arquivo esperado deve ficar preferencialmente em:
-
-```text
-data/realtime/RTD PROFIT.xlsx
-```
-
-No arquivo `config.yaml`, configure o caminho da planilha:
+Exemplo:
 
 ```yaml
 profit_excel_path: "data/realtime/RTD PROFIT.xlsx"
 profit_sheet_name: "Planilha1"
-```
-
-Também é possível usar um caminho absoluto, mas isso não é recomendado para versionamento no GitHub, pois o projeto pode quebrar ao mudar de computador ou diretório.
-
-Exemplo não recomendado:
-
-```yaml
-profit_excel_path: "C:/Users/seu_usuario/Downloads/scanner_quant_profit_b3/data/realtime/RTD PROFIT.xlsx"
-```
-
-Durante o pregão, mantenha o Profit e o Excel abertos para que os dados RTD sejam atualizados corretamente.
-
----
-
-## 6. Como rodar o scanner em tempo real
-
-Para rodar uma única leitura e exibir os 10 principais ativos:
-
-```powershell
-python -m src.scanners.realtime_profit_scanner --once --top 10
-```
-
-Para salvar também um relatório CSV:
-
-```powershell
-python -m src.scanners.realtime_profit_scanner --once --top 10 --csv
-```
-
-Para rodar em modo contínuo:
-
-```powershell
-python -m src.scanners.realtime_profit_scanner --top 10
-```
-
-O intervalo entre as leituras pode ser definido no `config.yaml`:
-
-```yaml
+database_path: "data/database/scanner_quant.db"
 snapshot_interval_seconds: 5
 ```
 
-Ou diretamente no comando:
+A planilha deve conter, quando disponiveis, as seguintes colunas:
 
-```powershell
-python -m src.scanners.realtime_profit_scanner --top 10 --interval 10
-```
+| Coluna no Excel | Campo interno |
+|---|---|
+| `Asset` | `asset` |
+| `Data` | `trade_date` |
+| `Hora` | `trade_time` |
+| `Último` | `last` |
+| `Abertura` | `open` |
+| `Máximo` | `high` |
+| `Mínimo` | `low` |
+| `Fechamento Anterior` | `prev_close` |
+| `Variação` | `variation_pct` |
+| `Variação(pts)` | `variation_pts` |
+| `Negócios` | `trades` |
+| `Quantidade` | `quantity` |
+| `Volume` | `volume` |
 
----
+Os ativos monitorados ficam em `ativos_base` no `config.yaml`.
 
-## 7. Modo demo
+## Rodar O Scanner
 
-Fora do pregão ou sem a planilha RTD configurada, é possível testar o scanner com dados simulados:
+Teste uma leitura unica com dados simulados:
 
 ```powershell
 python -m src.scanners.realtime_profit_scanner --once --top 10 --demo
 ```
 
-Esse modo é útil para validar se o ambiente Python, os módulos e a lógica do ranking estão funcionando antes de conectar dados reais do Profit.
+Rode uma leitura unica com dados reais do Profit:
 
----
+```powershell
+python -m src.scanners.realtime_profit_scanner --once --top 10 --csv
+```
 
-## 8. Como baixar dados históricos da B3
+Rode continuamente:
 
-O projeto utiliza arquivos COTAHIST da B3 para processamento de dados históricos.
+```powershell
+python -m src.scanners.realtime_profit_scanner --interval 5 --top 10 --csv
+```
 
-Para baixar e processar o histórico de um ano específico:
+### Modo De Comparacao De Scores
+
+O scanner calcula o score legado e o score quantitativo composto em paralelo. Para imprimir uma auditoria comparando os dois:
+
+```powershell
+python -m src.scanners.realtime_profit_scanner --once --top 10 --demo --compare-scores
+```
+
+Para salvar CSV com componentes do score e tipo de divergencia:
+
+```powershell
+python -m src.scanners.realtime_profit_scanner --once --top 10 --demo --compare-scores --csv
+```
+
+Para salvar a rodada de calibração no SQLite:
+
+```powershell
+python -m src.scanners.realtime_profit_scanner --once --top 10 --demo --compare-scores --save-calibration
+```
+
+Esse modo grava estatísticas da distribuição do `score_final` e detalhes por ativo para análise futura.
+
+Durante a execucao, o scanner:
+
+1. le a planilha RTD;
+2. normaliza os campos;
+3. salva snapshots no SQLite;
+4. calcula metricas intraday;
+5. gera o score legado de 0 a 100;
+6. calcula tambem o score quantitativo composto em paralelo;
+7. classifica os ativos como `COMPRA/FORÇA`, `OBSERVAR`, `NEUTRO` ou `FRAQUEZA`;
+8. grava componentes novos como momentum, tendencia, liquidez, volatilidade, risco e explicacao;
+9. opcionalmente exporta CSV em `data/reports`.
+
+## Baixar Dados Da B3
+
+Baixe e processe um ano especifico do COTAHIST:
 
 ```powershell
 python -m src.collectors.b3_cotahist_collector --year 2026
 ```
 
-Os arquivos brutos devem ser armazenados em:
-
-```text
-data/raw/
-```
-
-Os arquivos processados devem ser armazenados em:
-
-```text
-data/processed/
-```
-
-Esses diretórios podem ser configurados no `config.yaml`:
-
-```yaml
-b3:
-  raw_dir: "data/raw"
-  processed_dir: "data/processed"
-  years:
-    - 2024
-    - 2025
-    - 2026
-```
-
----
-
-## 9. Como rodar o dashboard Streamlit
-
-Caso o projeto esteja com dashboard Streamlit disponível em `src/reports/`, execute:
+Baixe todos os anos configurados em `config.yaml`:
 
 ```powershell
-python -m streamlit run src/reports/opportunity_dashboard.py --server.headless true
+python -m src.collectors.b3_cotahist_collector --all
 ```
 
-Após iniciar, o terminal deverá mostrar um endereço local semelhante a:
+Apenas baixe e extraia o arquivo, sem importar para o banco:
 
-```text
-Local URL: http://localhost:8501
+```powershell
+python -m src.collectors.b3_cotahist_collector --year 2026 --download-only
 ```
 
-Acesse esse endereço no navegador.
+Os arquivos ZIP/TXT ficam em `data/raw`. Os dados processados sao gravados no SQLite, na tabela `cotahist_daily`. A view `b3_quotes` existe para compatibilidade com scanners que ainda usam o nome antigo.
 
-Se o Streamlit solicitar e-mail ou perguntar sobre estatísticas de uso, o modo `--server.headless true` ajuda a evitar interrupções no terminal.
+## Cruzar Acoes E Opcoes
 
----
+Depois de ter sinais do Profit e dados COTAHIST no banco, rode:
 
-## 10. Dados de entrada
-
-O sistema pode utilizar as seguintes fontes de entrada:
-
-| Entrada | Descrição |
-|---|---|
-| Planilha RTD do Profit | Dados em tempo real de ações e opções |
-| COTAHIST B3 | Histórico diário oficial da B3 |
-| `config.yaml` | Parâmetros de filtros, caminhos e ativos |
-| Banco SQLite | Dados históricos processados, snapshots e sinais |
-
-Exemplo de colunas esperadas da planilha RTD, a depender da configuração:
-
-| Coluna | Descrição |
-|---|---|
-| `asset` | Código do ativo |
-| `last` | Último preço |
-| `open` | Preço de abertura |
-| `high` | Máxima do dia |
-| `low` | Mínima do dia |
-| `prev_close` | Fechamento anterior |
-| `variation_pct` | Variação percentual |
-| `trades` | Número de negócios |
-| `quantity` | Quantidade negociada |
-| `volume` | Volume financeiro |
-
----
-
-## 11. Dados de saída
-
-O sistema pode gerar:
-
-| Saída | Descrição |
-|---|---|
-| Ranking no terminal | Lista dos ativos com maior score quantitativo |
-| CSV em `data/reports/` | Relatórios exportados do scanner |
-| SQLite em `data/database/` | Banco local com snapshots e sinais |
-| Dashboard Streamlit | Visualização operacional dos dados |
-
-Exemplo de campos calculados pelo scanner:
-
-| Campo | Descrição |
-|---|---|
-| `range_pct` | Amplitude percentual entre máxima e mínima |
-| `position_range_pct` | Posição do preço atual dentro do range do dia |
-| `gap_pct` | Diferença entre abertura e fechamento anterior |
-| `last_vs_open_pct` | Diferença entre último preço e abertura |
-| `score` | Pontuação quantitativa do ativo |
-| `signal` | Classificação operacional do sinal |
-| `motivos` | Explicação textual dos critérios atendidos |
-
----
-
-## 12. Configuração dos filtros
-
-Os principais filtros ficam no `config.yaml`:
-
-```yaml
-filtros:
-  variacao_minima_pct: 0.3
-  negocios_minimos: 1000
-  volume_minimo: 50000000
-  rompimento_tolerancia: 0.995
+```powershell
+python -m src.scanners.combined_stock_options_scanner --min-volume 100000 --min-trades 10 --top 30 --csv
 ```
 
-Descrição dos parâmetros:
+Esse comando busca o ultimo sinal intraday de cada acao, encontra opcoes relacionadas pelo prefixo do ativo e gera um ranking combinado.
 
-| Parâmetro | Função |
+Para ver um scanner simples de opcoes do ultimo pregao importado:
+
+```powershell
+python -m src.scanners.option_scanner
+```
+
+## Estrategia CALL_CONTINUIDADE
+
+Rode o motor de decisao de opcoes:
+
+```powershell
+python -m src.strategies.call_continuity_strategy --top 20 --save
+```
+
+Para adicionar setups aprovados ao diario:
+
+```powershell
+python -m src.strategies.call_continuity_strategy --top 20 --save --journal
+```
+
+Os parametros de risco, filtros, score e integracoes ficam em `config_quant.yaml`. Use `config_quant.example.yaml` como modelo inicial.
+
+## Backtest E Relatorios
+
+Backtest simulado a partir dos sinais:
+
+```powershell
+python run_backtest.py --mode simulate --capital 10000 --risk 0.005 --top 20 --save
+```
+
+Backtest usando o diario de trades:
+
+```powershell
+python run_backtest.py --mode journal --capital 10000 --risk 0.005 --save
+```
+
+Backtest historico do `score_final` usando COTAHIST processado:
+
+```powershell
+python -m src.scanners.historical_quant_backtest --start 2024-01-01 --end 2026-12-31 --csv
+```
+
+Com tickers especificos:
+
+```powershell
+python -m src.scanners.historical_quant_backtest --start 2024-01-01 --end 2026-12-31 --tickers PETR4 VALE3 ITUB4 --csv
+```
+
+Para salvar o resultado estatistico no SQLite:
+
+```powershell
+python -m src.scanners.historical_quant_backtest --start 2024-01-01 --end 2026-12-31 --csv --save-db
+```
+
+Esse backtest mede retornos futuros por tipo de sinal, faixa de score e componentes do modelo. Ele serve para calibracao estatistica; nao substitui o score legado automaticamente.
+
+Backtest líquido com custos, slippage e liquidez mínima:
+
+```powershell
+python -m src.scanners.historical_quant_backtest --start 2024-01-01 --end 2026-12-31 --csv --save-db --net --cost-bps 10 --slippage-bps 5 --min-volume 5000000
+```
+
+Backtest líquido com filtros de qualidade:
+
+```powershell
+python -m src.scanners.historical_quant_backtest --start 2026-01-02 --end 2026-04-30 --net --quality-filter --min-score-final 80 --csv
+```
+
+Otimização exploratória de thresholds, sem aplicar automaticamente ao ranking:
+
+```powershell
+python -m src.scanners.historical_quant_backtest --start 2026-01-02 --end 2026-04-30 --net --optimize-thresholds --csv
+```
+
+Walk-forward dos filtros, usando thresholds escolhidos no treino e avaliados no teste seguinte:
+
+```powershell
+python -m src.scanners.filter_walk_forward_analysis --start 2026-01-02 --end 2026-04-30 --train-months 1 --test-months 1 --csv --save-db
+```
+
+Review de governança do último walk-forward dos filtros:
+
+```powershell
+python -m src.scanners.governance_review --source filter_walk_forward --latest --save-db
+```
+
+Análise de regimes de mercado:
+
+```powershell
+python -m src.scanners.regime_analysis --start 2026-01-02 --end 2026-04-30 --save-db --csv
+python -m src.scanners.historical_quant_backtest --start 2026-01-02 --end 2026-04-30 --net --with-regimes --csv --save-db
+```
+
+Análise walk-forward e fora da amostra:
+
+```powershell
+python -m src.scanners.walk_forward_quant_analysis --start 2024-01-01 --end 2026-12-31 --train-months 12 --test-months 3 --csv --save-db
+```
+
+Esse comando mede se sinais e faixas de score que funcionaram no treino continuam funcionando no teste seguinte. Ele não altera pesos automaticamente.
+
+Walk-forward usando retorno líquido:
+
+```powershell
+python -m src.scanners.walk_forward_quant_analysis --start 2024-01-01 --end 2026-12-31 --train-months 12 --test-months 3 --csv --save-db --net
+```
+
+Gerar relatorios operacionais:
+
+```powershell
+python run_report.py --capital 10000 --account 10000 --risk 0.005 --top 20 --plans
+```
+
+## Dashboard Streamlit
+
+Rode o dashboard principal:
+
+```powershell
+python -m streamlit run app.py
+```
+
+O app unificado abre paginas para radar quant, valuation engine, performance, calendario e agendador. Ele usa os dados do SQLite, CSVs gerados e configuracoes locais.
+
+Tambem existe um dashboard de oportunidades:
+
+```powershell
+python -m streamlit run src/reports/opportunity_dashboard.py
+```
+
+### Rodar Mesa Quant Streamlit
+
+A Mesa Quant mostra backtest histórico, calibração do score, comparação entre score legado e `score_final`, sinais por ativo, componentes e diagnósticos.
+
+Antes de abrir, gere uma rodada de calibração e um backtest salvo no SQLite:
+
+```powershell
+python -m src.scanners.realtime_profit_scanner --once --top 10 --demo --compare-scores --save-calibration
+python -m src.scanners.historical_quant_backtest --start 2024-01-01 --end 2026-12-31 --csv --save-db
+python -m src.scanners.walk_forward_quant_analysis --start 2024-01-01 --end 2026-12-31 --train-months 12 --test-months 3 --csv --save-db
+python -m src.scanners.historical_quant_backtest --start 2026-01-02 --end 2026-04-30 --net --quality-filter --min-score-final 80 --csv --save-db
+```
+
+Abra a mesa:
+
+```powershell
+python -m streamlit run src/reports/quant_mesa_dashboard.py --server.headless true
+```
+
+Esse dashboard é uma camada de análise estatística. Ele não substitui o score legado, não muda o ranking principal e não representa recomendação financeira.
+
+### Contexto De Eventos E Noticias
+
+Importe eventos locais/manuais:
+
+```powershell
+python -m src.scanners.import_market_events --csv data/events/market_events_example.csv --save-db
+```
+
+Rode o backtest marcando sinais com eventos:
+
+```powershell
+python -m src.scanners.historical_quant_backtest --start 2026-01-02 --end 2026-04-30 --net --with-regimes --with-events --csv --save-db
+```
+
+Analise eventos contra sinais historicos:
+
+```powershell
+python -m src.scanners.event_pipeline --start 2026-01-02 --end 2026-04-30 --sources csv --csv-path data/events/market_events_example.csv --save-db --csv
+python -m src.scanners.event_context_analysis --start 2026-01-02 --end 2026-04-30 --csv --save-db
+```
+
+Essa camada usa CSV/local primeiro, nao faz scraping pesado e nao altera score, ranking ou filtros automaticamente.
+
+## Validacao Local
+
+Rode a suite automatizada:
+
+```powershell
+python -m pytest -q
+```
+
+Rode os smoke tests principais:
+
+```powershell
+python -m src.db.init_db
+python -m src.scanners.realtime_profit_scanner --once --top 3 --demo
+```
+
+O projeto tambem inclui um workflow de GitHub Actions para rodar os testes em Windows com Python 3.10.
+
+## Documentacao Tecnica
+
+- `docs/DIAGNOSTICO_FASE1.md` — diagnostico da arquitetura atual, riscos e plano de refatoracao.
+- `docs/CORE_QUANTITATIVO_FASE2.md` — desenho do core quantitativo minimo criado na Fase 2.
+- `docs/SCORE_QUANTITATIVO.md` — metodologia, comparacao e calibracao do score composto.
+- `docs/BACKTEST_HISTORICO.md` — metodologia do backtest diario com COTAHIST e calibracao estatistica.
+- `docs/MESA_QUANT.md` — uso da Mesa Quant Streamlit, abas, metricas e fluxo operacional.
+- `docs/WALK_FORWARD.md` — validacao fora da amostra, janelas walk-forward e alertas de overfitting.
+- `docs/CUSTOS_E_EXECUCAO.md` — custos, slippage, liquidez mínima e retorno líquido.
+- `docs/FILTROS_E_CAPACIDADE.md` — filtros de qualidade, thresholds, capacidade por liquidez e sizing.
+- `docs/WALK_FORWARD_FILTROS.md` — validação fora da amostra dos filtros e thresholds.
+- `docs/GOVERNANCA_QUANT.md` — critérios de aprovação/rejeição de candidatos quantitativos.
+- `docs/REGIMES_DE_MERCADO.md` — regimes de tendência, volatilidade, liquidez, risco e governança por regime.
+- `docs/EVENTOS_E_NOTICIAS.md` — importação de eventos, link evento-sinal e análise event-driven.
+- `docs/PIPELINE_EVENTOS.md` — conectores locais, deduplicação, classificação e cobertura de eventos.
+
+## Dados De Entrada
+
+| Fonte | Uso |
 |---|---|
-| `variacao_minima_pct` | Variação mínima considerada relevante |
-| `negocios_minimos` | Número mínimo de negócios para validar liquidez |
-| `volume_minimo` | Volume financeiro mínimo |
-| `rompimento_tolerancia` | Tolerância para considerar preço próximo da máxima |
+| Planilha Profit RTD | Cotacoes intraday, volume, negocios, maxima, minima e variacao |
+| B3 COTAHIST | Historico diario de acoes e opcoes |
+| `config.yaml` | Caminhos, ativos monitorados, filtros intraday e anos da B3 |
+| `config_quant.yaml` | Parametros da estrategia, risco, score e integracoes |
+| Diario de trades | Historico manual/operacional para performance e backtest |
+| CSV de eventos | Eventos, notícias, fatos relevantes, resultados e contexto macro/setorial |
 
----
+## Dados De Saida
 
-## 13. Limitações atuais
+| Saida | Conteudo |
+|---|---|
+| SQLite | Snapshots do Profit, sinais, COTAHIST, diario e Greeks |
+| CSV em `data/reports` | Rankings, setups, backtests e relatorios |
+| Diario em `data/journal` | Setups adicionados para acompanhamento |
+| Dashboard Streamlit | Visualizacao operacional dos rankings, performance e calendario |
 
-Este projeto ainda deve ser tratado como uma base em desenvolvimento.
+Principais tabelas criadas no SQLite:
 
-Principais limitações:
+- `profit_snapshots`
+- `realtime_signals`
+- `cotahist_daily`
+- `b3_quotes` (view de compatibilidade)
+- `trade_journal`
+- `options_greeks_snapshot`
+- `score_calibration_runs`
+- `score_calibration_assets`
+- `historical_backtest_runs`
+- `historical_backtest_results`
+- `walk_forward_runs`
+- `walk_forward_results`
+- `quality_filter_runs`
+- `threshold_optimization_runs`
+- `filter_walk_forward_runs`
+- `filter_walk_forward_results`
+- `governance_reviews`
+- `market_regime_daily`
+- `regime_backtest_summary`
+- `market_events`
+- `signal_event_links`
+- `event_context_runs`
+- `event_coverage_runs`
 
-- A qualidade dos sinais depende da qualidade e atualização da planilha RTD;
-- O Profit e o Excel precisam estar abertos durante o uso em tempo real;
-- Caminhos absolutos no `config.yaml` podem quebrar o funcionamento ao mudar de máquina;
-- O score atual é uma heurística inicial e deve ser validado com histórico e backtests;
-- Dados de opções podem exigir tratamento adicional para vencimento, strike, liquidez, spread, volatilidade e Greeks;
-- O sistema ainda não deve ser usado isoladamente para tomada de decisão financeira;
-- Não há garantia de execução, liquidez ou acerto operacional;
-- É recomendável revisar os cálculos antes de utilizar o projeto em ambiente profissional.
+## Limitacoes
 
----
+- O scanner depende da planilha RTD estar aberta e atualizando no Excel.
+- Fora do pregao, os dados reais podem ficar vazios ou defasados; use `--demo` para teste tecnico.
+- O layout da planilha precisa manter nomes de colunas compativeis.
+- O download do COTAHIST depende da disponibilidade do endpoint publico da B3.
+- A relacao entre opcao e ativo objeto usa inferencia por prefixo; isso pode exigir revisao em casos especiais.
+- Scores e filtros sao heuristicas, nao garantia de retorno.
+- Backtests podem sofrer vieses de dados, liquidez, slippage e custos.
+- Thresholds e filtros sao exploratorios e podem sofrer overfitting se calibrados em amostra pequena.
+- A camada de eventos depende da cobertura do CSV local; ausência de evento importado não prova ausência real de notícia.
+- Nenhum modulo envia ordens automaticamente.
 
-## 14. Próximas melhorias recomendadas
+## Fluxo Recomendado
 
-Melhorias prioritárias:
+```powershell
+python -m src.db.init_db
+python -m src.collectors.b3_cotahist_collector --year 2026
+python -m src.scanners.realtime_profit_scanner --once --top 10 --demo
+python -m src.scanners.realtime_profit_scanner --once --top 10 --csv
+python -m src.scanners.historical_quant_backtest --start 2024-01-01 --end 2026-12-31 --csv
+python -m src.scanners.historical_quant_backtest --start 2024-01-01 --end 2026-12-31 --csv --net --cost-bps 10 --slippage-bps 5 --min-volume 5000000
+python -m src.scanners.historical_quant_backtest --start 2026-01-02 --end 2026-04-30 --net --quality-filter --min-score-final 80 --csv
+python -m src.scanners.historical_quant_backtest --start 2026-01-02 --end 2026-04-30 --net --optimize-thresholds --csv
+python -m src.scanners.filter_walk_forward_analysis --start 2026-01-02 --end 2026-04-30 --train-months 1 --test-months 1 --csv
+python -m src.scanners.governance_review --source filter_walk_forward --latest --save-db
+python -m src.scanners.regime_analysis --start 2026-01-02 --end 2026-04-30 --save-db --csv
+python -m src.scanners.historical_quant_backtest --start 2026-01-02 --end 2026-04-30 --net --with-regimes --csv --save-db
+python -m src.scanners.import_market_events --csv data/events/market_events_example.csv --save-db
+python -m src.scanners.event_pipeline --start 2026-01-02 --end 2026-04-30 --sources csv --csv-path data/events/market_events_example.csv --save-db --csv
+python -m src.scanners.historical_quant_backtest --start 2026-01-02 --end 2026-04-30 --net --with-regimes --with-events --csv --save-db
+python -m src.scanners.event_context_analysis --start 2026-01-02 --end 2026-04-30 --csv --save-db
+python -m src.scanners.walk_forward_quant_analysis --start 2024-01-01 --end 2026-12-31 --train-months 12 --test-months 3 --csv
+python -m streamlit run src/reports/quant_mesa_dashboard.py --server.headless true
+python -m src.scanners.combined_stock_options_scanner --top 30 --csv
+python -m src.strategies.call_continuity_strategy --top 20 --save
+python -m streamlit run app.py
+```
 
-- Criar `config.example.yaml` e manter `config.local.yaml` fora do Git;
-- Remover duplicidades de código e arquivos antigos;
-- Criar testes unitários para os cálculos quantitativos;
-- Validar parser COTAHIST com amostras reais;
-- Criar score relativo ao histórico do próprio ativo;
-- Incluir volume relativo, volatilidade relativa e força contra o Ibovespa;
-- Melhorar scanner de opções com moneyness, spread, vencimento, valor extrínseco e liquidez;
-- Criar camada de backtest para medir taxa de acerto dos sinais;
-- Integrar notícias, fatos relevantes, releases e dados fundamentalistas;
-- Evoluir dashboard Streamlit para formato de plataforma operacional.
+## Status
 
----
-
-## 15. Aviso importante
-
-Este projeto tem finalidade educacional, analítica e experimental. As informações geradas pelo sistema não constituem recomendação de investimento, oferta de compra ou venda de ativos, consultoria financeira, análise de valores mobiliários ou promessa de rentabilidade.
-
-Qualquer decisão de investimento deve considerar perfil de risco, liquidez, custos, tributação, estratégia própria e validação independente dos dados.
+Projeto em desenvolvimento ativo. Antes de usar em rotina operacional, valide caminhos, qualidade dos dados, liquidez das opcoes, custos, parametros de risco e consistencia dos resultados exportados.

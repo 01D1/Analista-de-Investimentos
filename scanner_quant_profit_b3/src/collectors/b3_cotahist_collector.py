@@ -2,7 +2,7 @@ import argparse
 import sqlite3
 import zipfile
 from pathlib import Path
-from urllib.request import urlretrieve
+from datetime import datetime
 import pandas as pd
 
 from src.utils import load_config, project_path
@@ -62,7 +62,16 @@ def parse_int(value):
         return None
     return int(value)
 
-def parse_cotahist_txt(txt_path, ativos_base=None):
+def parse_date(value):
+    value = str(value).strip()
+    if not value:
+        return None
+    try:
+        return datetime.strptime(value, "%Y%m%d").date().isoformat()
+    except ValueError:
+        return None
+
+def parse_cotahist_txt(txt_path, source_year, ativos_base=None):
     ativos_base = set(ativos_base or [])
     rows = []
     with open(txt_path, "r", encoding="latin-1") as f:
@@ -72,7 +81,7 @@ def parse_cotahist_txt(txt_path, ativos_base=None):
 
             trade_date = line[2:10]
             ticker = line[12:24].strip()
-            market_type = int(line[24:27])
+            market_type = line[24:27].strip()
             company_name = line[27:39].strip()
 
             if ativos_base:
@@ -82,10 +91,13 @@ def parse_cotahist_txt(txt_path, ativos_base=None):
                     continue
 
             row = {
-                "trade_date": f"{trade_date[:4]}-{trade_date[4:6]}-{trade_date[6:8]}",
+                "trade_date": parse_date(trade_date),
                 "ticker": ticker,
                 "market_type": market_type,
+                "bdi_code": line[10:12].strip(),
                 "company_name": company_name,
+                "specification": line[39:49].strip(),
+                "term_days": line[49:52].strip(),
                 "open": parse_price(line[56:69]),
                 "high": parse_price(line[69:82]),
                 "low": parse_price(line[82:95]),
@@ -96,32 +108,35 @@ def parse_cotahist_txt(txt_path, ativos_base=None):
                 "trades": parse_int(line[147:152]),
                 "quantity": parse_int(line[152:170]),
                 "volume": parse_price(line[170:188]),
-                "option_exercise_price": parse_price(line[188:201]),
-                "option_maturity": line[202:210].strip(),
+                "strike": parse_price(line[188:201]),
+                "expiration_date": parse_date(line[202:210]),
+                "source_year": source_year,
             }
 
-            if market_type == 10:
-                row["asset_type"] = "ACAO"
-            elif market_type == 70:
-                row["asset_type"] = "CALL"
-            elif market_type == 80:
-                row["asset_type"] = "PUT"
+            if market_type == "070":
+                row["option_type"] = "CALL"
+            elif market_type == "080":
+                row["option_type"] = "PUT"
             else:
-                row["asset_type"] = "OUTRO"
+                row["option_type"] = None
 
             rows.append(row)
 
     return pd.DataFrame(rows)
 
-def save_b3_quotes(df, db_path):
+def save_cotahist_daily(df, db_path, source_year):
     if df is None or df.empty:
         print("Nenhum dado para salvar.")
         return
     db_path.parent.mkdir(parents=True, exist_ok=True)
     con = sqlite3.connect(db_path)
-    df.to_sql("b3_quotes", con, if_exists="append", index=False)
-    con.close()
-    print(f"{len(df)} linhas salvas em b3_quotes.")
+    try:
+        con.execute("DELETE FROM cotahist_daily WHERE source_year = ?", (source_year,))
+        df.to_sql("cotahist_daily", con, if_exists="append", index=False)
+        con.commit()
+    finally:
+        con.close()
+    print(f"{len(df)} linhas salvas em cotahist_daily.")
 
 def process_year(year, cfg, only_download=False):
     raw_dir = project_path(cfg["b3"]["raw_dir"])
@@ -133,9 +148,9 @@ def process_year(year, cfg, only_download=False):
         return
 
     ativos_base = cfg.get("ativos_base", [])
-    df = parse_cotahist_txt(txt_path, ativos_base=ativos_base)
+    df = parse_cotahist_txt(txt_path, source_year=year, ativos_base=ativos_base)
     print(df.head(10).to_string(index=False))
-    save_b3_quotes(df, db_path)
+    save_cotahist_daily(df, db_path, source_year=year)
 
 def main():
     parser = argparse.ArgumentParser(description="Coletor automático B3 COTAHIST.")
