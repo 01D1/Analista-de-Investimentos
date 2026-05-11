@@ -30,7 +30,7 @@ from src.utils.errors import IngestionError
 from src.utils.logger import get_logger
 from src.valuation.sector_config import SectorConfig
 from src.valuation.calculate_metrics import calculate_industrial_metrics, calculate_bank_metrics
-from src.valuation.valuation_dcf import run_ddm
+from src.valuation.valuation_dcf import run_ddm, run_dcf, DCFAssumptions
 from src.normalization.account_mapper import AccountMapper
 from src.normalization.bank_account_mapper import BankAccountMapper
 
@@ -370,9 +370,8 @@ def run_ticker(ticker: str) -> FinancialResult:
         if cfg.is_bank_model:
             _compute_bank_model(ticker, conn, ltm, cfg, computed_date)
         else:
-            # Industrial DCF handled in Plan 03-03 (Wave 2)
-            # Stub _compute_dcf remains until Wave 2 executes
-            pass
+            # FIN-03/FIN-04: Industrial DCF (dcf_fcff or ev_ebitda_multiple)
+            _compute_dcf_industrial(ticker, conn, ltm, cfg, computed_date)
 
         return FinancialResult(ticker=ticker, success=True)
 
@@ -720,25 +719,260 @@ def _compute_bank_model(
 
 
 # ---------------------------------------------------------------------------
-# Stubs — implemented in Plans 03-05
+# WACC computation — FIN-03
 # ---------------------------------------------------------------------------
 
 
 def compute_wacc(
     ticker: str, conn: sqlite3.Connection
 ) -> tuple[float, float, float, bool]:
-    """Compute WACC from macro_series. Implemented in Plan 03-03.
+    """Compute WACC from macro_series Selic (series_code=11) + CDS Brasil (series_code=29039).
 
-    Returns minimal fallback (wacc=0.12, selic=0.105, cds=0.015, used_fallback=True)
-    so that run_ticker() remains compilable and testable before Plan 03-03.
+    D-09: Ke = selic + beta * ERP + CDS_brasil; WACC = Ke*(1-D/V) + Kd*(1-t)*(D/V)
+    D-10: Falls back to sectors.yaml static values when macro data is stale or missing.
+    CDS Brasil stored as decimal (e.g. 0.0155) per [02-02] — do NOT divide by 100 again.
+
+    Returns:
+        (wacc, selic_used, cds_used, used_fallback)
     """
-    # Minimal fallback — Plan 03-03 replaces with real macro_series lookup
-    return (0.12, 0.105, 0.015, True)
+    cfg = SectorConfig.for_ticker(ticker)
+    # For bank model, dcf_assumptions may not exist — use gordon_assumptions as fallback
+    if cfg.is_bank_model:
+        a = cfg.gordon_assumptions
+    else:
+        a = cfg.dcf_assumptions
+
+    rows = conn.execute(
+        """
+        SELECT series_code, value, date FROM macro_series
+        WHERE series_code IN (11, 29039)
+        ORDER BY date DESC
+        """,
+    ).fetchall()
+
+    # Keep only the latest row per series_code
+    macro: dict[int, tuple[float, str]] = {}
+    for r in rows:
+        code = r["series_code"]
+        if code not in macro:
+            macro[code] = (r["value"], r["date"])
+
+    selic_raw, selic_date = macro.get(11, (None, None))
+    cds_raw, cds_date = macro.get(29039, (None, None))
+
+    stale = (
+        _is_stale_date(selic_date)
+        or _is_stale_date(cds_date)
+        or selic_raw is None
+        or cds_raw is None
+    )
+
+    if stale:
+        log.warning(
+            f"[{ticker}] macro desatualizado — usando fallback sectors.yaml "
+            f"(selic_date={selic_date}, cds_date={cds_date})"
+        )
+        selic = float(a.get("risk_free", 0.105))
+        cds = float(a.get("country_risk", 0.015))
+        used_fallback = True
+    else:
+        selic = float(selic_raw)   # already decimal per [02-02] — e.g. 0.1065
+        cds = float(cds_raw)       # already decimal per [02-02] — do NOT /100
+        used_fallback = False
+
+    beta = float(a.get("beta", 1.0))
+    erp = float(a.get("erp", 0.055))
+    kd = float(a.get("cost_of_debt", 0.115))
+    tax = float(a.get("tax_rate", 0.27))
+    dv = float(a.get("debt_to_capital", 0.25))
+
+    ke = selic + beta * erp + cds
+    wacc = ke * (1.0 - dv) + kd * (1.0 - tax) * dv
+    return wacc, selic, cds, used_fallback
 
 
-def _compute_dcf(ticker: str, conn: sqlite3.Connection, ltm: dict):
-    """Run DCF / DDM valuation. Implemented in Plan 03-03 / 03-04."""
-    raise NotImplementedError("_compute_dcf implemented in Plans 03-03/04")  # noqa: EM101
+# ---------------------------------------------------------------------------
+# DCF input validation — FIN-04
+# ---------------------------------------------------------------------------
+
+
+def _validate_dcf_inputs(
+    ticker: str,
+    wacc: float,
+    terminal_growth: float,
+    current_price: float | None,
+    price_target: float | None,
+) -> str | None:
+    """Validate DCF inputs before calling run_dcf(). Returns confidence_flag or None.
+
+    FIN-04 / T-DCF-01 mitigation: MUST be called BEFORE run_dcf() — run_dcf() has
+    no internal guard against terminal_growth >= wacc (would produce division by zero).
+
+    Returns:
+        "INPUT_INVALIDO"           — if wacc <= 0.05 OR terminal_growth >= wacc
+        "FORA DO INTERVALO CONFIAVEL" — if price_target / current_price outside [0.1, 5.0]
+        None                       — if inputs are valid
+    """
+    if wacc <= 0.05:
+        log.error(f"[{ticker}] DCF inválido: WACC={wacc:.2%} <= 5% — abortando")
+        return "INPUT_INVALIDO"
+    if terminal_growth >= wacc:
+        log.error(
+            f"[{ticker}] DCF inválido: terminal_growth={terminal_growth:.2%} >= "
+            f"WACC={wacc:.2%} — divisão por zero no valor terminal"
+        )
+        return "INPUT_INVALIDO"
+    if current_price and current_price > 0 and price_target is not None:
+        ratio = price_target / current_price
+        if ratio < 0.1 or ratio > 5.0:
+            log.warning(
+                f"[{ticker}] fair_value fora do intervalo confiável: {ratio:.2f}x preço atual"
+            )
+            return "FORA DO INTERVALO CONFIAVEL"
+    return None
+
+
+# ---------------------------------------------------------------------------
+# Industrial DCF computation — FIN-03
+# ---------------------------------------------------------------------------
+
+
+def _compute_dcf_industrial(
+    ticker: str,
+    conn: sqlite3.Connection,
+    ltm: dict,
+    cfg: SectorConfig,
+    computed_date: str,
+) -> None:
+    """Compute and persist financial_dcf row for industrial (non-bank) tickers.
+
+    Handles both dcf_fcff and ev_ebitda_multiple valuation methods.
+    Never calls run_dcf() without prior _validate_dcf_inputs() check (FIN-04 / T-DCF-01).
+    T-DCF-02: All SQL via _write_dcf_row() uses positional params — ticker never in SQL.
+    T-03-03-05: EV/EBITDA division guarded by shares > 0 check.
+    """
+    wacc, selic_used, cds_used, used_fallback = compute_wacc(ticker, conn)
+    a = cfg.dcf_assumptions
+    terminal_growth = float(a.get("terminal_growth", 0.04))
+    current_price = _get_current_price(ticker, conn)
+    shares = ltm.get("shares_outstanding")
+
+    if cfg.valuation_method == "ev_ebitda_multiple":
+        # EV/EBITDA multiple path (PETR4, VALE3, VIVT3, GGBR4, etc.)
+        # ev_ebitda_assumptions is at sector level (not inside dcf_assumptions)
+        ev_ebitda_a = cfg.ev_ebitda_assumptions
+        target_multiple = float(ev_ebitda_a.get("target_multiple_base", 6.0))
+        ebitda = ltm.get("ebitda")
+        net_debt = ltm.get("net_debt")
+
+        # T-03-03-05: Guard shares > 0 before division
+        if ebitda is not None and net_debt is not None and shares and shares > 0:
+            ev = ebitda * target_multiple
+            equity_value = ev - net_debt
+            fair_value = equity_value / shares
+        else:
+            fair_value = None
+            log.warning(
+                f"[{ticker}] EV/EBITDA: ebitda/net_debt/shares ausentes — fair_value=NULL"
+            )
+
+        upside_pct = (
+            (fair_value - current_price) / current_price
+            if fair_value is not None and current_price and current_price > 0
+            else None
+        )
+        confidence_flag = _validate_dcf_inputs(
+            ticker, wacc, terminal_growth, current_price, fair_value
+        )
+        valuation_method_stored = "ev_ebitda"
+
+    else:
+        # dcf_fcff path (default industrial)
+        # Input validation BEFORE run_dcf() — T-DCF-01 mitigation: blocks division by zero
+        pre_flag = _validate_dcf_inputs(ticker, wacc, terminal_growth, current_price, None)
+        if pre_flag == "INPUT_INVALIDO":
+            _write_dcf_row(
+                conn, ticker, computed_date, "dcf_fcff", None, None,
+                wacc, terminal_growth, selic_used, cds_used, used_fallback,
+                "INPUT_INVALIDO",
+            )
+            return
+
+        base_revenue = ltm.get("net_revenue") or 0.0
+        base_ebitda = ltm.get("ebitda") or 0.0
+        net_debt = ltm.get("net_debt") or 0.0
+
+        # Build DCFAssumptions mapping sectors.yaml keys to DCFAssumptions field names
+        try:
+            dcf_assum = DCFAssumptions(
+                risk_free_rate=float(a.get("risk_free", selic_used)),
+                equity_risk_premium=float(a.get("erp", 0.055)),
+                beta=float(a.get("beta", 1.0)),
+                pre_tax_cost_of_debt=float(a.get("cost_of_debt", 0.115)),
+                tax_rate=float(a.get("tax_rate", 0.27)),
+                debt_to_capital=float(a.get("debt_to_capital", 0.25)),
+                governance_premium=0.0,
+                # Override with live WACC: adjust risk_free_rate so that DCFAssumptions.wacc == computed wacc
+                # Simpler: override risk_free_rate to make cost_of_equity ~ ke from compute_wacc
+                revenue_growth=list(a.get("base_revenue_growth", [0.05] * 5)),
+                ebitda_margin=[float(a.get("base_ebitda_margin_offset", 0.0)) + 0.20] * int(a.get("n_years", 5)),
+                capex_to_revenue=[float(a.get("base_capex_pct", 0.06))] * int(a.get("n_years", 5)),
+                wc_to_revenue=[0.01] * int(a.get("n_years", 5)),
+                depreciation_to_revenue=[float(a.get("base_capex_pct", 0.06)) * 0.6] * int(a.get("n_years", 5)),
+                terminal_growth_rate=terminal_growth,
+            )
+            # Override risk_free_rate so that the effective WACC uses the live selic
+            # ke = selic + beta*erp + cds; we set risk_free_rate = ke - beta*erp
+            # This ensures DCFAssumptions.wacc == compute_wacc() result
+            ke_live = selic_used + float(a.get("beta", 1.0)) * float(a.get("erp", 0.055)) + cds_used
+            dcf_assum.risk_free_rate = ke_live - float(a.get("beta", 1.0)) * float(a.get("erp", 0.055))
+
+            result = run_dcf(
+                ticker=ticker,
+                base_year=int(computed_date[:4]),
+                base_revenue=base_revenue,
+                base_ebitda=base_ebitda,
+                assumptions=dcf_assum,
+                net_debt=net_debt,
+                shares_outstanding=shares or 1.0,
+            )
+            fair_value = getattr(result, "price_target", None) or None
+            # Treat price_target=0.0 as None (no equity value)
+            if fair_value is not None and fair_value <= 0:
+                fair_value = None
+        except Exception as exc:
+            log.error(f"[{ticker}] run_dcf() falhou: {exc}")
+            _write_dcf_row(
+                conn, ticker, computed_date, "dcf_fcff", None, None,
+                wacc, terminal_growth, selic_used, cds_used, used_fallback,
+                "ERRO_CALCULO",
+            )
+            return
+
+        upside_pct = (
+            (fair_value - current_price) / current_price
+            if fair_value is not None and current_price and current_price > 0
+            else None
+        )
+        confidence_flag = _validate_dcf_inputs(
+            ticker, wacc, terminal_growth, current_price, fair_value
+        )
+        valuation_method_stored = "dcf_fcff"
+
+    _write_dcf_row(
+        conn, ticker, computed_date, valuation_method_stored,
+        fair_value, upside_pct, wacc, terminal_growth,
+        selic_used, cds_used, used_fallback, confidence_flag,
+    )
+    log.info(
+        f"[{ticker}] DCF industrial escrito — method={valuation_method_stored} "
+        f"fair_value={fair_value} flag={confidence_flag}"
+    )
+
+
+# ---------------------------------------------------------------------------
+# Stubs — implemented in Plan 03-05
+# ---------------------------------------------------------------------------
 
 
 def compute_signals(prices: "pd.Series") -> dict:
