@@ -30,7 +30,7 @@ import sqlite3
 import time
 import uuid
 import zipfile
-from datetime import date, datetime
+from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Literal
 
@@ -177,7 +177,7 @@ class CVMDownloader:
         reference_date) rows are silently skipped (T-02-01: parameterized queries only).
         """
         inserted = 0
-        now = datetime.utcnow().isoformat()
+        now = datetime.now(timezone.utc).isoformat()
         for rec in records:
             cur = conn.execute(
                 """INSERT OR IGNORE INTO cvm_statements

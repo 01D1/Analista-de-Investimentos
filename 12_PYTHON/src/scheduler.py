@@ -34,7 +34,7 @@ import sys
 import time
 import traceback
 from collections.abc import Callable
-from datetime import date, datetime
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 from src.utils.logger import get_logger
@@ -106,7 +106,7 @@ def job_b3_prices() -> str:
             records_updated=0,
             duration_ms=duration_ms,
             status=status,
-            last_ingested_at=datetime.utcnow().isoformat(),
+            last_ingested_at=datetime.now(timezone.utc).isoformat(),
             gap_rows_inserted=total_gaps,
             failed_tickers=failed,
         )
@@ -329,7 +329,7 @@ def job_cvm_ingest() -> str:
             records_updated=0,
             duration_ms=duration_ms,
             status=status,
-            last_ingested_at=datetime.utcnow().isoformat(),
+            last_ingested_at=datetime.now(timezone.utc).isoformat(),
             failed_jobs=failed,
         )
         return f"cvm_ingest: inserted={inserted} failed={len(failed)}"
@@ -362,7 +362,7 @@ def job_bcb_macro() -> str:
             records_updated=result["updated"],
             duration_ms=duration_ms,
             status=status,
-            last_ingested_at=result.get("last_ingested_at", datetime.utcnow().isoformat()),
+            last_ingested_at=result.get("last_ingested_at", datetime.now(timezone.utc).isoformat()),
             failed_series=result["failed"],
             stale_series=result.get("stale", []),
         )
@@ -415,7 +415,7 @@ def job_news_ingest() -> str:
             records_updated=0,
             duration_ms=duration_ms,
             status=status,
-            last_ingested_at=datetime.utcnow().isoformat(),
+            last_ingested_at=datetime.now(timezone.utc).isoformat(),
             subprocess_returncode=result.returncode,
         )
         return f"news_ingest: inserted={inserted} subprocess_rc={result.returncode}"
@@ -427,7 +427,7 @@ def job_financial_engine() -> str:
     """
     from src.financial_engine import run_all
     from src.utils.logger import bind_run_id, get_logger as _get
-    from datetime import datetime
+    from datetime import datetime, timezone
 
     _log = _get(__name__)
     with bind_run_id("financial") as run_id:
@@ -444,7 +444,7 @@ def job_financial_engine() -> str:
             records_updated=0,
             duration_ms=duration_ms,
             status="ok" if fail == 0 else "partial",
-            last_ingested_at=datetime.utcnow().isoformat(),
+            last_ingested_at=datetime.now(timezone.utc).isoformat(),
             failed_tickers=fail,
         )
         return f"financial_engine: ok={ok} failed={fail}"
