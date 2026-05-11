@@ -77,23 +77,24 @@ def job_b3_prices() -> str:
         init_db()
         t0 = time.time()
         conn = get_connection()
-        scraper = B3Scraper()
-        total_inserted = 0
-        total_gaps = 0
-        failed = []
+        try:
+            scraper = B3Scraper()
+            total_inserted = 0
+            total_gaps = 0
+            failed = []
 
-        for ticker in settings.active_tickers:
-            try:
-                res = scraper.fetch_and_store(ticker, conn)
-                total_inserted += res.get("inserted", 0)
-                total_gaps += res.get("gaps", 0)
-                if res.get("error"):
+            for ticker in settings.active_tickers:
+                try:
+                    res = scraper.fetch_and_store(ticker, conn)
+                    total_inserted += res.get("inserted", 0)
+                    total_gaps += res.get("gaps", 0)
+                    if res.get("error"):
+                        failed.append(ticker)
+                except Exception as exc:
+                    _log.warning(f"[{ticker}] b3_prices falhou: {exc}")
                     failed.append(ticker)
-            except Exception as exc:
-                _log.warning(f"[{ticker}] b3_prices falhou: {exc}")
-                failed.append(ticker)
-
-        conn.close()
+        finally:
+            conn.close()  # WR-06: always close connection even on exception
         duration_ms = int((time.time() - t0) * 1000)
         status = "ok" if not failed else "partial"
 
@@ -121,7 +122,9 @@ def job_cvm_check() -> str:
     for ticker in settings.active_tickers:
         try:
             result = ingest_ticker(ticker, doc_types=["DFP", "ITR"], force=False)
-            downloaded += result.get("downloaded", 0)
+            # WR-02: "downloaded" is dict[str, list[int]] — count total years downloaded
+            dl = result.get("downloaded", {})
+            downloaded += sum(len(v) for v in dl.values() if isinstance(v, list))
         except Exception as exc:
             log.warning(f"[cvm_check] [{ticker}] {exc}")
     return f"documentos novos: {downloaded}"
@@ -290,30 +293,31 @@ def job_cvm_ingest() -> str:
         init_db()
         t0 = time.time()
         conn = get_connection()
-        downloader = CVMDownloader()
-        raw_dir = settings.data_raw / "cvm"
-        inserted = 0
-        failed = []
+        try:
+            downloader = CVMDownloader()
+            raw_dir = settings.data_raw / "cvm"
+            inserted = 0
+            failed = []
 
-        for ticker in settings.active_tickers:
-            for year in [datetime.now().year, datetime.now().year - 1]:
-                for period_type in ("DFP", "ITR"):
+            for ticker in settings.active_tickers:
+                for year in [datetime.now().year, datetime.now().year - 1]:
+                    for period_type in ("DFP", "ITR"):
+                        try:
+                            n = downloader.parse_and_store(
+                                ticker, year, period_type, conn, raw_dir
+                            )
+                            inserted += n
+                        except Exception as exc:
+                            _log.warning(f"[{ticker}] {period_type} {year} falhou: {exc}")
+                            failed.append(f"{ticker}/{period_type}/{year}")
                     try:
-                        n = downloader.parse_and_store(
-                            ticker, year, period_type, conn, raw_dir
-                        )
+                        n = downloader.parse_and_store_ipe(ticker, year, conn)
                         inserted += n
                     except Exception as exc:
-                        _log.warning(f"[{ticker}] {period_type} {year} falhou: {exc}")
-                        failed.append(f"{ticker}/{period_type}/{year}")
-                try:
-                    n = downloader.parse_and_store_ipe(ticker, year, conn)
-                    inserted += n
-                except Exception as exc:
-                    _log.warning(f"[{ticker}] IPE {year} falhou: {exc}")
-                    failed.append(f"{ticker}/IPE/{year}")
-
-        conn.close()
+                        _log.warning(f"[{ticker}] IPE {year} falhou: {exc}")
+                        failed.append(f"{ticker}/IPE/{year}")
+        finally:
+            conn.close()  # WR-06: always close connection even on exception
         duration_ms = int((time.time() - t0) * 1000)
         status = "ok" if not failed else "partial"
 
@@ -343,8 +347,10 @@ def job_bcb_macro() -> str:
         init_db()
         t0 = time.time()
         conn = get_connection()
-        result = ingest_all_series(conn)
-        conn.close()
+        try:
+            result = ingest_all_series(conn)
+        finally:
+            conn.close()  # WR-06: always close connection even on exception
         duration_ms = int((time.time() - t0) * 1000)
         status = "ok" if not result["failed"] else "partial"
 
