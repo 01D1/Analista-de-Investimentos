@@ -43,6 +43,10 @@ schedules:
     cron: "15 19 * * 1-5"     # seg–sex 19:15 (staggered 15 min after b3_prices)
     description: Ingestão CVM DFP/ITR/IPE para watchlist
 
+  - job: financial_engine
+    cron: "0 20 * * 1-5"      # seg–sex 20:00 (após cvm_ingest + b3_prices)
+    description: Calcular LTM, múltiplos, DCF e sinais técnicos para watchlist
+
   # ── Semanais ──────────────────────────────────────────────
   - job: weekly_review
     cron: "0 10 * * 0"        # domingo 10:00

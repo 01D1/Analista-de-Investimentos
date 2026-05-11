@@ -852,6 +852,59 @@ def test_dcf_confidence_flag_out_of_range(monkeypatch):
     )
 
 
+# ---------------------------------------------------------------------------
+# Tests D-12: job_financial_engine() scheduler wiring (Plan 03-05)
+# ---------------------------------------------------------------------------
+
+def test_job_registered():
+    """D-12: job_financial_engine is registered in _JOB_REGISTRY under key 'financial_engine'."""
+    from src.scheduler import _JOB_REGISTRY
+    assert "financial_engine" in _JOB_REGISTRY, (
+        f"'financial_engine' not found in _JOB_REGISTRY. Keys: {list(_JOB_REGISTRY.keys())}"
+    )
+
+
+def test_job_summary_log(monkeypatch):
+    """D-15: job_financial_engine() emits INFO log with source='financial_engine', duration_ms, status."""
+    from contextlib import contextmanager
+    from unittest.mock import MagicMock
+
+    logged = []
+    mock_log = MagicMock()
+    mock_log.info = lambda msg, **kw: logged.append({"msg": str(msg), "kw": kw})
+    mock_log.warning = MagicMock()
+
+    # Patch get_logger at the source (scheduler imports it as _get inside the job function)
+    monkeypatch.setattr("src.utils.logger.get_logger", lambda *a, **k: mock_log)
+
+    # Patch bind_run_id to avoid context var issues in test
+    @contextmanager
+    def mock_bind(prefix):
+        yield f"{prefix}-test-run"
+
+    monkeypatch.setattr("src.utils.logger.bind_run_id", mock_bind)
+
+    # Patch run_all to return empty list (no real DB access)
+    monkeypatch.setattr("src.financial_engine.run_all", lambda: [])
+
+    from src.scheduler import job_financial_engine
+    result = job_financial_engine()
+
+    # Assert summary log was emitted
+    summary = [r for r in logged if "summary" in r["msg"]]
+    assert len(summary) >= 1, (
+        f"Expected at least 1 summary log entry, got {len(summary)}. All logs: {logged}"
+    )
+    s = summary[-1]
+    assert s["kw"].get("source") == "financial_engine", (
+        f"Expected source='financial_engine', got {s['kw'].get('source')!r}"
+    )
+    assert "duration_ms" in s["kw"], f"duration_ms missing from summary log kwargs: {s['kw']}"
+    assert s["kw"].get("status") in ("ok", "partial"), (
+        f"Expected status in ('ok', 'partial'), got {s['kw'].get('status')!r}"
+    )
+
+
 def test_dcf_invalid_input_writes_null_fair_value(monkeypatch):
     """_compute_dcf_industrial() writes NULL fair_value with 'INPUT_INVALIDO' when terminal_growth >= WACC."""
     from src.financial_engine import _compute_dcf_industrial

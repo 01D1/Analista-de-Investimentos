@@ -421,6 +421,35 @@ def job_news_ingest() -> str:
         return f"news_ingest: inserted={inserted} subprocess_rc={result.returncode}"
 
 
+def job_financial_engine() -> str:
+    """Calcula LTM, múltiplos, DCF e sinais técnicos para todos os tickers — FIN-01..06.
+    D-03: daily scheduled job; D-12: public job API.
+    """
+    from src.financial_engine import run_all
+    from src.utils.logger import bind_run_id, get_logger as _get
+    from datetime import datetime
+
+    _log = _get(__name__)
+    with bind_run_id("financial") as run_id:
+        _log.info(f"[financial_engine] iniciado — run_id={run_id}")
+        t0 = time.time()
+        results = run_all()
+        ok = sum(1 for r in results if r.success)
+        fail = len(results) - ok
+        duration_ms = int((time.time() - t0) * 1000)
+        _log.info(
+            "[financial_engine] summary",
+            source="financial_engine",
+            records_inserted=ok,
+            records_updated=0,
+            duration_ms=duration_ms,
+            status="ok" if fail == 0 else "partial",
+            last_ingested_at=datetime.utcnow().isoformat(),
+            failed_tickers=fail,
+        )
+        return f"financial_engine: ok={ok} failed={fail}"
+
+
 # ── Registro de jobs ──────────────────────────────────────────────────────────
 
 _JOB_REGISTRY: dict[str, Callable] = {
@@ -433,9 +462,10 @@ _JOB_REGISTRY: dict[str, Callable] = {
     "content":      job_content,
     "health_check": job_health_check,
     "weekly_review": job_weekly_review,
-    "cvm_ingest":   job_cvm_ingest,   # ING-01/02/03
-    "bcb_macro":    job_bcb_macro,    # ING-04
-    "news_ingest":  job_news_ingest,  # ING-06/07
+    "cvm_ingest":        job_cvm_ingest,         # ING-01/02/03
+    "bcb_macro":         job_bcb_macro,          # ING-04
+    "news_ingest":       job_news_ingest,        # ING-06/07
+    "financial_engine":  job_financial_engine,   # FIN-01..06
 }
 
 
