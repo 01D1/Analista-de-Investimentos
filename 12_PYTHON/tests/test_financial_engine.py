@@ -462,3 +462,239 @@ def test_bank_multiples_ev_ebitda_null(monkeypatch):
     assert row["pe_ratio"] is not None, (
         f"Expected pe_ratio not None for bank with price and net_income, got {row['pe_ratio']}"
     )
+
+
+# ---------------------------------------------------------------------------
+# Tests FIN-05: Bank model (Plan 03-04)
+# ---------------------------------------------------------------------------
+
+def test_bank_routing_uses_ddm(monkeypatch):
+    """_compute_bank_model() calls run_ddm() and writes financial_dcf with valuation_method='ddm'."""
+    from src.financial_engine import _compute_bank_model
+    from src.valuation.valuation_dcf import DDMResult
+    from unittest.mock import MagicMock, patch
+
+    conn = make_db()
+
+    # Insert price_ohlcv for ITUB4
+    conn.execute(
+        """INSERT INTO price_ohlcv
+           (id, ticker, date, adj_close, is_gap, ingested_at)
+           VALUES (?, ?, ?, ?, ?, ?)""",
+        (str(uuid.uuid4()), "ITUB4", "2026-05-11", 26.50, 0, "2026-05-11T00:00:00"),
+    )
+    conn.commit()
+
+    # Insert macro_series for selic (series_code=11) and CDS (series_code=29039)
+    for series_code, value in [(11, 0.1065), (29039, 0.0155)]:
+        conn.execute(
+            """INSERT OR IGNORE INTO macro_series
+               (id, series_code, series_name, date, value, ingested_at)
+               VALUES (?, ?, ?, ?, ?, ?)""",
+            (str(uuid.uuid4()), series_code, "test", "2026-05-11", value, "2026-05-11T00:00:00"),
+        )
+    conn.commit()
+
+    # Mock SectorConfig — bank ticker with gordon_assumptions
+    mock_cfg = MagicMock()
+    mock_cfg.is_bank_model = True
+    mock_cfg.gordon_assumptions = {
+        "coe": 0.135,
+        "terminal_growth": 0.055,
+        "payout_ratio": 0.50,
+    }
+
+    # Bank LTM — ebitda must be None (FIN-05 truth)
+    ltm = {
+        "net_income": 5000.0,
+        "total_equity": 30000.0,
+        "shares_outstanding": 1000.0,
+        "nii_gross": 8000.0,
+        "fee_income": 2000.0,
+        "loan_portfolio_gross": 80000.0,
+        "ebitda": None,
+    }
+
+    # Mock run_ddm to return a DDMResult with equity_value_per_share=30.0
+    mock_ddm_result = DDMResult(
+        ticker="ITUB4",
+        base_year=2026,
+        cost_of_equity=0.135,
+        terminal_growth_rate=0.055,
+        equity_value=30000.0,
+        equity_value_per_share=30.0,
+    )
+    ddm_call_count = []
+
+    def mock_run_ddm(*args, **kwargs):
+        ddm_call_count.append(1)
+        return mock_ddm_result
+
+    monkeypatch.setattr("src.financial_engine.run_ddm", mock_run_ddm)
+
+    _compute_bank_model("ITUB4", conn, ltm, mock_cfg, "2026-05-11")
+
+    # Assert run_ddm was called exactly once
+    assert len(ddm_call_count) == 1, f"Expected run_ddm called once, got {len(ddm_call_count)}"
+
+    # Assert financial_dcf row was written
+    row = conn.execute(
+        "SELECT * FROM financial_dcf WHERE ticker = 'ITUB4'"
+    ).fetchone()
+    assert row is not None, "Nenhuma linha inserida em financial_dcf para ITUB4"
+    assert row["valuation_method"] == "ddm", (
+        f"Expected valuation_method='ddm', got {row['valuation_method']}"
+    )
+    assert row["fair_value_brl"] is not None, "fair_value_brl deve ser não-nulo quando run_ddm retorna resultado válido"
+
+
+def test_bank_metrics_include_nim(monkeypatch):
+    """_compute_multiples() for bank ticker provides nii_margin (NIM proxy)."""
+    from src.financial_engine import _compute_multiples
+    from src.valuation.calculate_metrics import BankMetricsCalc
+    from unittest.mock import MagicMock
+
+    conn = make_db()
+
+    # Insert price_ohlcv for BBDC4
+    conn.execute(
+        """INSERT INTO price_ohlcv
+           (id, ticker, date, adj_close, is_gap, ingested_at)
+           VALUES (?, ?, ?, ?, ?, ?)""",
+        (str(uuid.uuid4()), "BBDC4", "2026-05-11", 15.0, 0, "2026-05-11T00:00:00"),
+    )
+    conn.commit()
+
+    # LTM for bank ticker
+    ltm_bank = {
+        "net_income": 3000.0,
+        "total_equity": 25000.0,
+        "shares_outstanding": 600.0,
+        "nii_gross": 8000.0,
+        "fee_income": 2000.0,
+        "loan_portfolio_gross": 120000.0,
+        "total_assets": 200000.0,
+        "ebitda": None,  # FIN-05: banks never have EBITDA
+    }
+
+    # Mock SectorConfig — bank
+    mock_bank_cfg = MagicMock()
+    mock_bank_cfg.is_bank_model = True
+
+    # Monkeypatch calculate_bank_metrics to return a controlled result
+    mock_bank_metrics = BankMetricsCalc(
+        ticker="BBDC4",
+        year=2026,
+        nii_margin=0.065,
+        pe_ratio=8.5,
+        pb_ratio=1.2,
+        dividend_yield=0.06,
+        efficiency_ratio=0.45,
+    )
+    monkeypatch.setattr(
+        "src.financial_engine.calculate_bank_metrics",
+        lambda **kwargs: mock_bank_metrics,
+    )
+
+    _compute_multiples("BBDC4", conn, ltm_bank, mock_bank_cfg, "2026-05-11")
+
+    # Assert financial_multiples row
+    row = conn.execute(
+        "SELECT * FROM financial_multiples WHERE ticker = 'BBDC4'"
+    ).fetchone()
+    assert row is not None, "Nenhuma linha inserida para BBDC4"
+    assert row["pe_ratio"] is not None, "pe_ratio deve estar presente para banco com dados"
+    assert row["ev_ebitda"] is None, (
+        f"Expected ev_ebitda=NULL for bank ticker, got {row['ev_ebitda']}"
+    )
+
+
+def test_bank_ltm_ebitda_is_null_in_db(monkeypatch):
+    """_aggregate_ltm() with is_bank=True returns ebitda=None (COSIF model, no EBITDA concept)."""
+    from src.financial_engine import _aggregate_ltm
+
+    conn = make_db()
+
+    # Insert 4 ITR quarters for BBAS3 with net_income values
+    quarters = [
+        ("2025-09-30", 2025, 1000.0),
+        ("2025-06-30", 2025, 1000.0),
+        ("2025-03-31", 2025, 1000.0),
+        ("2024-12-31", 2024, 1000.0),
+    ]
+    for ref_date, year, val in quarters:
+        _insert_itr_row(conn, "BBAS3", ref_date, year, "net_income", val)
+
+    # Also insert some ebit rows (which should be ignored for banks)
+    for ref_date, year, val in quarters:
+        _insert_itr_row(conn, "BBAS3", ref_date, year, "ebit", 800.0)
+
+    result = _aggregate_ltm("BBAS3", conn, is_bank=True)
+
+    # ebitda must be None — not computed, not 0.0 (Pitfall 2)
+    assert result.get("ebitda") is None, (
+        f"Expected ebitda=None for bank ticker (is_bank=True), got {result.get('ebitda')!r}"
+    )
+    # net_income should be aggregated
+    assert result.get("net_income") == pytest.approx(4000.0), (
+        f"Expected net_income=4000.0, got {result.get('net_income')}"
+    )
+
+
+def test_bank_routing_guard_prevents_dcf(monkeypatch):
+    """run_ticker() with bank ticker never calls run_dcf (industrial model never runs for banks)."""
+    from unittest.mock import MagicMock, patch
+
+    # Track run_dcf calls
+    run_dcf_mock = MagicMock()
+    monkeypatch.setattr("src.valuation.valuation_dcf.run_dcf", run_dcf_mock)
+
+    # Monkeypatch SectorConfig.for_ticker to return bank config
+    mock_bank_cfg = MagicMock()
+    mock_bank_cfg.is_bank_model = True
+    mock_bank_cfg.gordon_assumptions = {
+        "coe": 0.135,
+        "terminal_growth": 0.055,
+        "payout_ratio": 0.40,
+    }
+    monkeypatch.setattr(
+        "src.financial_engine.SectorConfig.for_ticker",
+        lambda ticker: mock_bank_cfg,
+    )
+
+    # Monkeypatch get_connection to use in-memory DB
+    conn = make_db()
+    # Add minimal price row so run_ticker doesn't fail on price fetch
+    conn.execute(
+        """INSERT INTO price_ohlcv
+           (id, ticker, date, adj_close, is_gap, ingested_at)
+           VALUES (?, ?, ?, ?, ?, ?)""",
+        (str(uuid.uuid4()), "ITUB4", "2026-05-11", 26.50, 0, "2026-05-11T00:00:00"),
+    )
+    conn.commit()
+    monkeypatch.setattr("src.financial_engine.get_connection", lambda: conn)
+
+    # Monkeypatch yfinance to prevent actual network call
+    monkeypatch.setattr("src.financial_engine.run_ticker.__module__", "src.financial_engine")
+
+    import importlib
+    import sys
+    # Monkeypatch yfinance import used inside run_ticker
+    yf_mock = MagicMock()
+    yf_mock.Ticker.return_value.info = {"sharesOutstanding": 10000.0}
+    monkeypatch.setitem(sys.modules, "yfinance", yf_mock)
+
+    # Also monkeypatch _compute_bank_model to avoid real DDM call (test only guards routing)
+    monkeypatch.setattr(
+        "src.financial_engine._compute_bank_model",
+        lambda *args, **kwargs: None,
+    )
+
+    from src.financial_engine import run_ticker
+    result = run_ticker("ITUB4")
+
+    # run_dcf must NOT have been called for bank ticker
+    assert run_dcf_mock.call_count == 0, (
+        f"run_dcf was called {run_dcf_mock.call_count} times for bank ticker — "
+        "routing guard failed (FIN-05 violation)"
+    )
