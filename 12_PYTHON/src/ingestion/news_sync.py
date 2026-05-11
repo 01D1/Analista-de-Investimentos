@@ -55,23 +55,19 @@ def sync_news_to_ingestion_db(
         )
         return 0
 
-    src = sqlite3.connect(banco_db_path)
-    src.row_factory = sqlite3.Row
-
     try:
-        rows = src.execute(
-            """SELECT hash, titulo, link, fonte, categoria, data_pub, score
-               FROM noticias
-               ORDER BY data_coleta DESC
-               LIMIT ?""",
-            (limit,),
-        ).fetchall()
+        with sqlite3.connect(banco_db_path) as src:
+            src.row_factory = sqlite3.Row
+            rows = src.execute(
+                """SELECT hash, titulo, link, fonte, categoria, data_pub, score
+                   FROM noticias
+                   ORDER BY data_coleta DESC
+                   LIMIT ?""",
+                (limit,),
+            ).fetchall()
     except sqlite3.OperationalError as exc:
         log.error(f"[news_sync] erro ao ler banco.db: {exc}")
-        src.close()
         return 0
-    finally:
-        src.close()
 
     inserted = 0
     now = datetime.utcnow().isoformat()
@@ -92,7 +88,12 @@ def sync_news_to_ingestion_db(
         if _is_b3_ticker(categoria):
             ticker_tags = json.dumps([categoria.upper()])
 
-        ingestion_conn.execute(
+        try:
+            score = int(row["score"] or 0)
+        except (ValueError, TypeError):
+            score = 0
+
+        cur = ingestion_conn.execute(
             """INSERT OR IGNORE INTO news_articles
                (id, url, title, published_at, source, ticker_tags, score, ingested_at)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
@@ -103,11 +104,11 @@ def sync_news_to_ingestion_db(
                 str(row["data_pub"] or "").strip() or None,
                 str(row["fonte"] or "").strip() or None,
                 ticker_tags,
-                int(row["score"] or 0),
+                score,
                 now,
             ),
         )
-        inserted += ingestion_conn.execute("SELECT changes()").fetchone()[0]
+        inserted += cur.rowcount  # 1 on insert, 0 on OR IGNORE — reliable
 
     ingestion_conn.commit()
     log.info(f"[news_sync] sincronizados {inserted} novos artigos de {len(rows)} lidos")
