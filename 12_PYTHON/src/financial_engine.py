@@ -887,6 +887,18 @@ def _compute_dcf_industrial(
 
     if cfg.valuation_method == "ev_ebitda_multiple":
         # EV/EBITDA multiple path (PETR4, VALE3, VIVT3, GGBR4, etc.)
+        # WR-04: Pre-validate inputs BEFORE computing fair_value — mirrors dcf_fcff guard.
+        # An INPUT_INVALIDO condition (e.g. wacc <= 0.05) writes a NULL row and returns,
+        # rather than writing a suspect fair_value with a confidence_flag attached.
+        pre_flag = _validate_dcf_inputs(ticker, wacc, terminal_growth, current_price, None)
+        if pre_flag == "INPUT_INVALIDO":
+            _write_dcf_row(
+                conn, ticker, computed_date, "ev_ebitda", None, None,
+                wacc, terminal_growth, selic_used, cds_used, used_fallback,
+                "INPUT_INVALIDO",
+            )
+            return
+
         # ev_ebitda_assumptions is at sector level (not inside dcf_assumptions)
         ev_ebitda_a = cfg.ev_ebitda_assumptions
         target_multiple = float(ev_ebitda_a.get("target_multiple_base", 6.0))
