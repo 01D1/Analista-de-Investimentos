@@ -38,6 +38,8 @@ import requests
 import yaml
 
 from src.normalization.account_mapper import AccountMapper
+from src.normalization.bank_account_mapper import BankAccountMapper
+from src.valuation.sector_config import SectorConfig
 from src.utils.logger import get_logger
 from src.utils.retry import retry
 
@@ -232,7 +234,15 @@ class CVMDownloader:
             csv_paths = self.download_itr(year)
 
         records: list[dict] = []
-        _mapper = AccountMapper()  # D-06: normalize account names at write time
+        # T-03-04-04: route bank tickers through COSIF BankAccountMapper
+        try:
+            _is_bank = SectorConfig.for_ticker(ticker).is_bank_model
+        except Exception:
+            _is_bank = False
+        if _is_bank:
+            _bank_mapper = BankAccountMapper()
+        else:
+            _mapper = AccountMapper()  # D-06: normalize account names at write time
         for csv_path in csv_paths:
             df = pd.read_csv(csv_path, encoding="iso-8859-1", sep=";", dtype=str)
             df["CD_CVM"] = df["CD_CVM"].astype(str).str.strip().str.zfill(6)
@@ -266,8 +276,10 @@ class CVMDownloader:
                     "period_type": period_type,
                     "account_code": account_code,
                     "account_name": account_name,
-                    "normalized_name": _mapper._map_row(  # D-06: populate at write time
-                        pd.Series({"account_code": account_code, "account_name": account_name})
+                    "normalized_name": (
+                        _bank_mapper._map_code(account_code) or _bank_mapper._map_name(account_name)
+                        if _is_bank else
+                        _mapper._map_row(pd.Series({"account_code": account_code, "account_name": account_name}))
                     ),
                     "value": value,
                     "reference_date": str(row.get("DT_FIM_EXERC", "")).strip() or None,

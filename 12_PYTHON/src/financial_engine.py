@@ -278,9 +278,11 @@ def backfill_normalized_names(conn: sqlite3.Connection) -> int:
         Count of rows updated.
     """
     mapper = AccountMapper()
+    bank_mapper = BankAccountMapper()
+    _bank_cache: dict[str, bool] = {}
     rows = conn.execute(
         """
-        SELECT id, account_code, account_name
+        SELECT id, ticker, account_code, account_name
         FROM cvm_statements
         WHERE normalized_name IS NULL
         """
@@ -288,11 +290,20 @@ def backfill_normalized_names(conn: sqlite3.Connection) -> int:
 
     updated = 0
     for row in rows:
-        # WR-05: use public map_row() instead of private _map_row() to respect API contract
-        norm = mapper.map_row(
-            account_code=row["account_code"] or "",
-            account_name=row["account_name"] or "",
-        )
+        t = row["ticker"] or ""
+        if t not in _bank_cache:
+            try:
+                _bank_cache[t] = SectorConfig.for_ticker(t).is_bank_model
+            except Exception:
+                _bank_cache[t] = False
+        ac = row["account_code"] or ""
+        an = row["account_name"] or ""
+        if _bank_cache[t]:
+            # T-03-04-04: route bank tickers through COSIF BankAccountMapper
+            norm = bank_mapper._map_code(ac) or bank_mapper._map_name(an)
+        else:
+            # WR-05: use public map_row() instead of private _map_row() to respect API contract
+            norm = mapper.map_row(account_code=ac, account_name=an)
         if norm:
             conn.execute(
                 "UPDATE cvm_statements SET normalized_name = ? WHERE id = ?",
