@@ -89,6 +89,11 @@ def init_db(db_path: Path = DB_PATH) -> None:
     """Cria as tabelas do ingestion.db se ainda não existirem. Idempotente."""
     db_path.parent.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(db_path)
+    # WR-01: WAL mode allows concurrent readers while writing; busy_timeout avoids
+    # immediate "database is locked" errors when two jobs overlap (e.g. b3_prices
+    # still running when cvm_ingest starts — 5 s grace period before failing).
+    conn.execute("PRAGMA journal_mode=WAL")
+    conn.execute("PRAGMA busy_timeout=5000")
     conn.executescript(_CREATE_SQL)
     conn.commit()
     conn.close()
