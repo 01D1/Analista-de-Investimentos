@@ -10,6 +10,9 @@ Objetivo:
 
 from __future__ import annotations
 
+import json
+from datetime import datetime
+from pathlib import Path
 from typing import Any
 
 import pandas as pd
@@ -39,6 +42,7 @@ def avaliar_qualidade(
         - score (0-100)
         - warnings (lista de alertas)
         - critical (lista de falhas críticas)
+        - status_valuation: CONFIAVEL | PRELIMINAR | BLOQUEADO
         - bloqueia_valuation (bool)
     """
     warnings: list[str] = []
@@ -57,11 +61,16 @@ def avaliar_qualidade(
             critical.append("Balanço histórico está vazio.")
 
     if critical:
+        status = "BLOQUEADO"
         return {
             "score": 0,
             "warnings": warnings,
             "critical": critical,
+            "status_valuation": status,
+            "valuation_preliminar": False,
             "bloqueia_valuation": True,
+            "decisao": "bloquear",
+            "motivo_status": "Falhas criticas nos dados historicos normalizados.",
         }
 
     # 1) Checagens básicas de balanço e plausibilidade
@@ -119,10 +128,76 @@ def avaliar_qualidade(
     score -= 30 * len(critical)
     score -= 5 * len(warnings)
     score = max(score, 0)
+    if critical or score < 70:
+        status = "BLOQUEADO"
+        decisao = "bloquear"
+        motivo = "Score baixo ou falhas criticas impedem valuation confiavel."
+    elif score < 90 or warnings:
+        status = "PRELIMINAR"
+        decisao = "preliminar"
+        motivo = "Dados aceitos para calculo, mas com alertas que exigem revisao."
+    else:
+        status = "CONFIAVEL"
+        decisao = "permitir"
+        motivo = "Dados normalizados passaram sem alertas relevantes."
 
     return {
         "score": score,
         "warnings": warnings,
         "critical": critical,
-        "bloqueia_valuation": len(critical) > 0,
+        "status_valuation": status,
+        "valuation_preliminar": status == "PRELIMINAR",
+        "bloqueia_valuation": decisao == "bloquear",
+        "decisao": decisao,
+        "motivo_status": motivo,
     }
+
+
+def gerar_relatorio_quality_gate_pre(
+    *,
+    ticker: str,
+    qualidade: dict[str, Any],
+    output_dir: str | Path,
+) -> dict[str, Any]:
+    """Persiste a decisao do quality gate antes do valuation."""
+    out_dir = Path(output_dir) / "pre_valuation_quality"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "ticker": ticker.upper(),
+        "timestamp": datetime.now().isoformat(),
+        "status_valuation": qualidade.get("status_valuation"),
+        "decisao": qualidade.get("decisao"),
+        "score": qualidade.get("score"),
+        "motivo_status": qualidade.get("motivo_status"),
+        "warnings": qualidade.get("warnings", []),
+        "critical": qualidade.get("critical", []),
+        "bloqueia_valuation": qualidade.get("bloqueia_valuation", False),
+    }
+    json_path = out_dir / f"pre_valuation_quality_{ticker.upper()}.json"
+    md_path = out_dir / f"pre_valuation_quality_{ticker.upper()}.md"
+    json_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
+
+    lines = [
+        f"# Quality Gate Pre-Valuation - {ticker.upper()}",
+        "",
+        f"- Status: **{payload['status_valuation']}**",
+        f"- Decisao: **{payload['decisao']}**",
+        f"- Score: **{payload['score']}/100**",
+        f"- Motivo: {payload['motivo_status']}",
+        "",
+        "## Falhas criticas",
+    ]
+    if payload["critical"]:
+        lines.extend(f"- {item}" for item in payload["critical"])
+    else:
+        lines.append("- Nenhuma.")
+    lines.append("")
+    lines.append("## Alertas")
+    if payload["warnings"]:
+        lines.extend(f"- {item}" for item in payload["warnings"])
+    else:
+        lines.append("- Nenhum.")
+    md_path.write_text("\n".join(lines), encoding="utf-8")
+    payload["json_path"] = str(json_path)
+    payload["markdown_path"] = str(md_path)
+    return payload

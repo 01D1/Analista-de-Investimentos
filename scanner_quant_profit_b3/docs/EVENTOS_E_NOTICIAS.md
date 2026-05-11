@@ -55,7 +55,13 @@ python -m src.scanners.event_pipeline --start 2026-01-02 --end 2026-04-30 --sour
 Também é possível combinar fontes locais:
 
 ```powershell
-python -m src.scanners.event_pipeline --start 2026-01-02 --end 2026-04-30 --sources csv news_hunter cvm releases --csv-path data/events/market_events_example.csv --save-db --csv
+python -m src.scanners.event_pipeline --start 2026-01-02 --end 2026-04-30 --sources csv news_hunter cvm releases macro_calendar --csv-path data/events/market_events_example.csv --save-db --csv
+```
+
+Para a rotina operacional recorrente com configuração local e cobertura por regime:
+
+```powershell
+python -m src.scanners.event_daily_update --start 2026-01-02 --end 2026-04-30 --save-db --csv --with-regimes
 ```
 
 Para usar sua base manual:
@@ -127,6 +133,7 @@ A governanca usa eventos para evitar conclusoes erradas:
 - se ha poucos eventos, fica `BLOQUEADO_EVENTO_INSUFICIENTE`;
 - se eventos contrariam os sinais e o resultado piora, fica `BLOQUEADO_EVENTO_CONTRA_SINAL`.
 - se a cobertura for fraca, fica `BLOQUEADO_COBERTURA_EVENTOS_INSUFICIENTE`.
+- se a cobertura por regime for fraca, fica `BLOQUEADO_COBERTURA_REGIME_INSUFICIENTE`.
 
 Isso nao aprova nada automaticamente. Apenas classifica a evidencia.
 
@@ -139,6 +146,7 @@ O pipeline mede:
 - tickers com e sem cobertura;
 - cobertura por mês;
 - cobertura por fonte;
+- cobertura por regime;
 - eventos deduplicados.
 
 Qualidades possíveis:

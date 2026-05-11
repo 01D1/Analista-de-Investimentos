@@ -31,6 +31,8 @@ from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.utils import get_column_letter
 from modules.excel_theme import THEME
+from modules.excel_audit_sheet import adicionar_aba_auditoria
+from modules.sector_operational_drivers import adicionar_aba_drivers_setoriais
 
 try:
     from openpyxl.drawing.image import Image as XLImage
@@ -397,6 +399,172 @@ class EscritorExcelGeral:
 
         return {}
 
+    def _ultimo_hist(self, dados: dict, chave: str, default: float = 0.0) -> float:
+        """Ultimo valor historico util de uma linha do modelo."""
+        serie = self._hist_modelo(dados, chave)
+        for ano in sorted(serie.keys(), reverse=True):
+            valor = serie.get(ano)
+            if valor is not None:
+                try:
+                    if not pd.isna(valor):
+                        return float(valor)
+                except Exception:
+                    return float(valor)
+        return default
+
+    def _proj_por_receita(self, dados: dict, chave: str) -> dict:
+        """Projeta uma linha mantendo a ultima proporcao sobre receita."""
+        receita_proj = dados.get("projecoes", {}).get("receita_liquida", {})
+        if not receita_proj:
+            return {}
+
+        hist_linha = self._hist_modelo(dados, chave)
+        hist_receita = self._hist_modelo(dados, "receita_liquida")
+        ano_ref = None
+        for ano in sorted(self.anos_hist, reverse=True):
+            if hist_linha.get(ano) is not None and hist_receita.get(ano):
+                ano_ref = ano
+                break
+        if ano_ref is None:
+            return {}
+
+        ratio = float(hist_linha.get(ano_ref, 0)) / float(hist_receita.get(ano_ref, 1))
+        return {
+            ano: round(float(receita_proj.get(ano, 0)) * ratio, 3)
+            for ano in self.anos_proj
+            if ano in receita_proj
+        }
+
+    @staticmethod
+    def _div_series(num: dict, den: dict) -> dict:
+        return {
+            ano: (num.get(ano, 0) / den.get(ano, 0))
+            for ano in set(num or {}) | set(den or {})
+            if den.get(ano)
+        }
+
+    def _proj_modelo(self, dados: dict, chave: str) -> dict:
+        """Resolve serie projetada direta ou derivada para evitar abas vazias."""
+        proj = dados.get("projecoes", {}) or {}
+        val = dados.get("valuation", {}) or {}
+
+        if chave in proj and proj.get(chave):
+            return proj.get(chave, {})
+
+        aliases = {
+            "capital_de_giro": "ncg",
+            "capex_receita": "capex_pct_receita",
+            "receita_mm": "receita_liquida",
+            "ebitda_mm": "ebitda",
+            "ebit_mm": "ebit",
+            "lucro_mm": "lucro_liquido",
+            "nopat_mm": "nopat",
+            "divida_liquida_mm": "divida_liquida",
+            "pl_mm": "patrimonio_liquido",
+            "ativo_total_mm": "ativo_total",
+            "margem_ebitda": "margem_ebitda_proj",
+            "margem_ebit": "margem_ebit_proj",
+            "aliquota_efetiva": "aliquota_efetiva_proj",
+        }
+        if chave in aliases:
+            return self._proj_modelo(dados, aliases[chave])
+
+        receita = proj.get("receita_liquida", {})
+        lucro = proj.get("lucro_liquido", {})
+        ebitda = proj.get("ebitda", {})
+        ebit = proj.get("ebit", {})
+        nopat = proj.get("nopat", {})
+
+        if chave == "margem_bruta":
+            return self._div_series(self._proj_modelo(dados, "lucro_bruto"), receita)
+        if chave == "margem_liquida":
+            return self._div_series(lucro, receita)
+        if chave == "capex_pct_receita":
+            capex = self._proj_modelo(dados, "capex")
+            return {ano: abs(v) / receita[ano] for ano, v in capex.items() if receita.get(ano)}
+        if chave == "da_pct_receita":
+            da = self._proj_modelo(dados, "depreciacao_amortizacao")
+            return {ano: v / receita[ano] for ano, v in da.items() if receita.get(ano)}
+        if chave == "ncg_pct_receita":
+            return self._div_series(self._proj_modelo(dados, "capital_de_giro"), receita)
+        if chave == "capex_liquido":
+            capex = self._proj_modelo(dados, "capex")
+            da = self._proj_modelo(dados, "depreciacao_amortizacao")
+            return {ano: capex.get(ano, 0) + da.get(ano, 0) for ano in self.anos_proj if ano in capex}
+
+        if chave == "patrimonio_liquido":
+            pl = self._ultimo_hist(dados, "patrimonio_liquido")
+            dividendos = proj.get("dividendos", {})
+            saida = {}
+            for ano in self.anos_proj:
+                pl += lucro.get(ano, 0) - dividendos.get(ano, 0)
+                saida[ano] = round(pl, 3)
+            return saida
+
+        if chave in {"divida_liquida", "divida_bruta"}:
+            base = self._ultimo_hist(dados, chave)
+            return {ano: round(base, 3) for ano in self.anos_proj} if base else {}
+
+        if chave == "capital_investido":
+            pl = self._proj_modelo(dados, "patrimonio_liquido")
+            dl = self._proj_modelo(dados, "divida_liquida")
+            return {ano: pl.get(ano, 0) + dl.get(ano, 0) for ano in self.anos_proj if pl.get(ano) or dl.get(ano)}
+
+        if chave == "ativo_total":
+            derivado = self._proj_por_receita(dados, "ativo_total")
+            if derivado:
+                return derivado
+            pl = self._proj_modelo(dados, "patrimonio_liquido")
+            dl = self._proj_modelo(dados, "divida_liquida")
+            return {ano: pl.get(ano, 0) + dl.get(ano, 0) for ano in self.anos_proj if pl.get(ano) or dl.get(ano)}
+
+        linhas_balanco = {
+            "caixa_equivalentes", "aplicacoes_financeiras_cp", "contas_receber",
+            "estoques", "outros_ativos_circulantes", "ativo_circulante",
+            "realizavel_lp", "investimentos", "imobilizado", "intangivel",
+            "ativo_nao_circulante", "fornecedores", "emprestimos_cp",
+            "outros_passivos_circulantes", "passivo_circulante",
+            "emprestimos_lp", "outros_passivos_nao_circ", "passivo_nao_circulante",
+        }
+        if chave in linhas_balanco:
+            return self._proj_por_receita(dados, chave)
+
+        ativo_total = self._proj_modelo(dados, "ativo_total")
+        pl = self._proj_modelo(dados, "patrimonio_liquido")
+        divida_liq = self._proj_modelo(dados, "divida_liquida")
+        divida_bruta = self._proj_modelo(dados, "divida_bruta")
+
+        if chave == "roe":
+            return self._div_series(lucro, pl)
+        if chave == "roa":
+            return self._div_series(lucro, ativo_total)
+        if chave == "roic":
+            return self._div_series(nopat, self._proj_modelo(dados, "capital_investido"))
+        if chave == "giro_ativo":
+            return self._div_series(receita, ativo_total)
+        if chave == "dl_ebitda":
+            return self._div_series(divida_liq, ebitda)
+        if chave == "dl_pl":
+            return self._div_series(divida_liq, pl)
+        if chave == "divida_bruta_pl":
+            return self._div_series(divida_bruta, pl)
+        if chave == "alavancagem":
+            return self._div_series(ativo_total, pl)
+        if chave in {"cobertura_juros_ebitda", "cobertura_juros_ebit"}:
+            juros = {ano: abs(v) for ano, v in self._proj_modelo(dados, "resultado_financeiro").items()}
+            return self._div_series(ebitda if chave.endswith("ebitda") else ebit, juros)
+        if chave == "ev_ebitda":
+            ev = val.get("ev_mm", 0)
+            return {ano: ev / v for ano, v in ebitda.items() if v and ev}
+        if chave == "p_l":
+            equity = val.get("equity_mm", 0)
+            return {ano: equity / v for ano, v in lucro.items() if v and equity}
+        if chave == "p_vp":
+            equity = val.get("equity_mm", 0)
+            return {ano: equity / v for ano, v in pl.items() if v and equity}
+
+        return {}
+
     def _calc_margin(self, dre, proj, num_key, den_key) -> (dict, dict):
         """Calcula margem (num/den) para histórico e projeção."""
         hist, proj_r = {}, {}
@@ -560,8 +728,10 @@ class EscritorExcelGeral:
 
         meta = dados.get("metodologia", {}) or {}
         prem = meta.get("premissas", {}) or {}
+        prem_efetivas = meta.get("premissas_efetivas", {}) or {}
         valuation = dados.get("valuation", {}) or {}
         proj = dados.get("projecoes", {}) or {}
+        mercado = dados.get("mercado", {}) or {}
 
         setor = str(meta.get("setor") or "geral")
         motor_val = str(meta.get("motor_valuation") or "wacc").upper()
@@ -686,6 +856,24 @@ class EscritorExcelGeral:
             cell.border = _border()
             ws.row_dimensions[i].height = 30
 
+        header(32, "Separação entre Dados e Premissas")
+        fonte_rows = [
+            ("Status do Valuation", prem_efetivas.get("status_valuation") or valuation.get("status_valuation")),
+            ("Classe Principal", prem_efetivas.get("classe_principal") or valuation.get("classe_principal")),
+            ("Beta usado", prem_efetivas.get("beta_usado")),
+            ("Fonte do beta", prem_efetivas.get("beta_fonte")),
+            ("g perpetuidade", prem_efetivas.get("g_perpetuidade")),
+            ("Origem dos demonstrativos", "CVM/DFP/ITR normalizados"),
+            ("Origem mercado", mercado.get("fonte_mercado") or "B3/yfinance/cache ou input CLI"),
+            ("Premissas subjetivas", "empresas.yaml/settings/CLI; ver outputs/assumptions"),
+        ]
+        r = 33
+        for label, value in fonte_rows:
+            if value is None:
+                continue
+            pair(r, label, value)
+            r += 1
+
         ws.freeze_panes = "A3"
 
     # ═══════════════════════════════════════════════════════════════════════
@@ -697,9 +885,66 @@ class EscritorExcelGeral:
         macro = dados.get("macro", {})
         hist  = macro.get("historico", {})
         proj  = macro.get("projecao", {})
+        meta = dados.get("metodologia", {}) or {}
+        prem = meta.get("premissas", {}) or {}
+        merc = dados.get("mercado", {}) or {}
+        val = dados.get("valuation", {}) or {}
 
         self._write_title(ws, f"WACC — {nome}", max_col=len(self.todos_anos)+1)
         col_mapa = self._write_header_anos(ws, row=3)
+
+        beta = (
+            prem.get("beta")
+            or prem.get("beta_utilizado")
+            or merc.get("beta_usar")
+            or merc.get("beta_calc")
+            or 0.85
+        )
+        erp = prem.get("premio_risco") or prem.get("equity_risk_premium") or 0.065
+        spread_divida = prem.get("custo_divida_spread") or prem.get("spread_divida") or 0.02
+        aliquota_ir = prem.get("aliquota_ir") or prem.get("aliquota_efetiva") or 0.34
+
+        di_hist = hist.get("selic_efet", {}) or hist.get("di", {})
+        di_proj = proj.get("di", {})
+        cds_hist = hist.get("cds", {})
+        cds_proj = proj.get("cds", {})
+
+        def serie_constante(anos, valor):
+            return {ano: valor for ano in anos}
+
+        def calcular_ke(di, cds):
+            resultado = {}
+            for ano, rf in (di or {}).items():
+                resultado[ano] = max((rf or 0) + (cds or {}).get(ano, 0) + beta * erp, 0.08)
+            return resultado
+
+        ke_hist = calcular_ke(di_hist, cds_hist)
+        ke_proj = proj.get("ke", {}) or calcular_ke(di_proj, cds_proj)
+
+        divida_liq = self._ultimo_hist(dados, "divida_liquida")
+        acoes_total_mil = val.get("acoes_on_mil", 0) + val.get("acoes_pn_mil", 0)
+        market_cap = merc.get("market_cap_mm") or 0
+        preco = merc.get("preco") or merc.get("cotacao_on") or 0
+        if not market_cap and preco and acoes_total_mil:
+            market_cap = preco * acoes_total_mil / 1000
+        ev_mercado = market_cap + max(divida_liq, 0)
+        peso_equity = market_cap / ev_mercado if ev_mercado else prem.get("peso_equity", 0.60)
+        peso_equity = max(0.20, min(float(peso_equity or 0.60), 0.95))
+        peso_divida = 1 - peso_equity
+
+        kd_bruto_hist = {ano: (di_hist.get(ano, 0) or 0) + spread_divida for ano in self.anos_hist if ano in di_hist}
+        kd_bruto_proj = {ano: (di_proj.get(ano, 0) or 0) + spread_divida for ano in self.anos_proj if ano in di_proj}
+        kd_liq_hist = {ano: kd_bruto_hist[ano] * (1 - aliquota_ir) for ano in kd_bruto_hist}
+        kd_liq_proj = {ano: kd_bruto_proj[ano] * (1 - aliquota_ir) for ano in kd_bruto_proj}
+        peso_e_hist = serie_constante(self.anos_hist, peso_equity)
+        peso_e_proj = serie_constante(self.anos_proj, peso_equity)
+        peso_d_hist = serie_constante(self.anos_hist, peso_divida)
+        peso_d_proj = serie_constante(self.anos_proj, peso_divida)
+        wacc_hist = {
+            ano: max(ke_hist.get(ano, 0) * peso_equity + kd_liq_hist.get(ano, 0) * peso_divida, 0.06)
+            for ano in self.anos_hist
+            if ano in ke_hist or ano in kd_liq_hist
+        }
 
         r = 5
         self._write_section_header(ws, r, "TAXAS MACROECONÔMICAS", col_mapa); r += 1
@@ -728,9 +973,22 @@ class EscritorExcelGeral:
             ("Ke — Custo do Equity (%)",    "ke",            PCT_FMT2),
         ]
         for lbl, pk, fmt in capm:
-            p = proj.get(pk, {}) if pk else {}
+            if pk == "di":
+                h, p = di_hist, di_proj
+            elif pk == "cds":
+                h, p = cds_hist, cds_proj
+            elif pk == "ke":
+                h, p = ke_hist, ke_proj
+            elif "Premium" in lbl:
+                h = serie_constante(self.anos_hist, erp)
+                p = serie_constante(self.anos_proj, erp)
+            elif lbl == "Beta":
+                h = serie_constante(self.anos_hist, beta)
+                p = serie_constante(self.anos_proj, beta)
+            else:
+                h, p = {}, {}
             acc = "Ke" in lbl
-            self._write_row(ws, r, lbl, col_mapa, {}, p, fmt=fmt, accent=acc); r += 1
+            self._write_row(ws, r, lbl, col_mapa, h, p, fmt=fmt, accent=acc); r += 1
 
         r += 1
         self._write_section_header(ws, r, "CUSTO DA DÍVIDA E WACC", col_mapa); r += 1
@@ -742,6 +1000,14 @@ class EscritorExcelGeral:
             ("E / (E+D) — Peso Equity",     {},    {},  PCT_FMT2, False),
             ("D / (E+D) — Peso Dívida",     {},    {},  PCT_FMT2, False),
             ("WACC (%)",                    {},    proj.get("wacc", {}), PCT_FMT2, True),
+        ]
+        wacc_items = [
+            ("Kd bruto (DI + spread)", kd_bruto_hist, kd_bruto_proj, PCT_FMT2, False),
+            ("Aliquota IR nominal", serie_constante(self.anos_hist, aliquota_ir), serie_constante(self.anos_proj, aliquota_ir), PCT_FMT2, False),
+            ("Kd liquido de IR", kd_liq_hist, kd_liq_proj, PCT_FMT2, False),
+            ("E / (E+D) - Peso Equity", peso_e_hist, peso_e_proj, PCT_FMT2, False),
+            ("D / (E+D) - Peso Divida", peso_d_hist, peso_d_proj, PCT_FMT2, False),
+            ("WACC (%)", wacc_hist, proj.get("wacc", {}), PCT_FMT2, True),
         ]
         for lbl, h, p, fmt, acc in wacc_items:
             self._write_row(ws, r, lbl, col_mapa, h, p, fmt=fmt, accent=acc); r += 1
@@ -1025,7 +1291,7 @@ class EscritorExcelGeral:
                 h, p = self._resolve_calc(chave, dre, proj)
             else:
                 h = self._hist_modelo(dados, chave)
-                p = proj.get(chave, {})
+                p = self._proj_modelo(dados, chave)
             self._write_row(ws, r, lbl, col_mapa, h, p, fmt=fmt, accent=acc, indent=indent)
             r += 1
 
@@ -1048,7 +1314,7 @@ class EscritorExcelGeral:
                 h, p = self._resolve_calc(chave, dre, proj)
             else:
                 h = self._hist_modelo(dados, chave)
-                p = proj.get(chave, {})
+                p = self._proj_modelo(dados, chave)
             self._write_row(ws, r, lbl, col_mapa, h, p, fmt=fmt, accent=acc, indent=indent)
             r += 1
 
@@ -1180,7 +1446,7 @@ class EscritorExcelGeral:
 
         for chave in contas_importantes:
             h = self._get_hist(dre, chave)
-            p = proj.get(chave, {})
+            p = self._proj_modelo(dados, chave)
             if not h and not p:
                 continue
             label = chave.replace("_", " ").title()
@@ -1220,7 +1486,7 @@ class EscritorExcelGeral:
 
         for lbl, chave, acc, indent in ativo:
             h = self._hist_modelo(dados, chave)
-            p = proj.get(chave, {})
+            p = self._proj_modelo(dados, chave)
             if not h and not p and not acc:
                 continue
             self._write_row(ws, r, lbl, col_mapa, h, p, accent=acc, indent=indent)
@@ -1250,7 +1516,7 @@ class EscritorExcelGeral:
             if not lbl:
                 r += 1; continue
             h = self._hist_modelo(dados, chave) if chave else {}
-            p = proj.get(chave, {}) if chave else {}
+            p = self._proj_modelo(dados, chave) if chave else {}
             if not h and not p and not acc:
                 continue
             self._write_row(ws, r, lbl, col_mapa, h, p, accent=acc, indent=indent)
@@ -1315,7 +1581,7 @@ class EscritorExcelGeral:
             self._write_section_header(ws, r, section_name, col_mapa); r += 1
             for lbl, chave, fmt, acc in items:
                 h = self._get_ind(ind, chave)
-                p = proj.get(chave, {})
+                p = self._proj_modelo(dados, chave)
                 if not h and not p:
                     continue
                 self._write_row(ws, r, lbl, col_mapa, h, p, fmt=fmt, accent=acc)
@@ -1418,7 +1684,7 @@ class EscritorExcelGeral:
         ]
         for lbl, chave, fmt, acc in capex_items:
             h = self._hist_modelo(dados, chave)
-            p = proj.get(chave, {})
+            p = self._proj_modelo(dados, chave)
             if not h and not p:
                 continue
             self._write_row(ws, r, lbl, col_mapa, h, p, fmt=fmt, accent=acc)
@@ -1437,7 +1703,7 @@ class EscritorExcelGeral:
         ]
         for lbl, chave, fmt, acc in ncg_items:
             h = self._hist_modelo(dados, chave)
-            p = proj.get(chave, {})
+            p = self._proj_modelo(dados, chave)
             if not h and not p:
                 continue
             self._write_row(ws, r, lbl, col_mapa, h, p, fmt=fmt, accent=acc)
@@ -1455,7 +1721,7 @@ class EscritorExcelGeral:
         ]
         for lbl, chave, fmt, acc in fcff_items:
             h = self._hist_modelo(dados, chave)
-            p = proj.get(chave, {})
+            p = self._proj_modelo(dados, chave)
             self._write_row(ws, r, lbl, col_mapa, h, p, fmt=fmt, accent=acc)
             r += 1
 
@@ -1552,6 +1818,12 @@ class EscritorExcelGeral:
         logger.info("  → 13/13 Projeções Capex e CG")
         self._aba_capex_cg(wb, nome, dados)
 
+        logger.info("  → Drivers Setoriais")
+        adicionar_aba_drivers_setoriais(wb, dados, nome, self.ticker)
+
+        logger.info("  → Status & Fontes")
+        adicionar_aba_auditoria(wb, dados, nome, self.ticker)
+
         try:
             wb.save(destino)
         except PermissionError as exc:
@@ -1620,6 +1892,8 @@ class EscritorExcelGeral:
                             c.font = _f(C_BLUE if eh else C_GREEN)
                             c.number_format = NUM_FMT
                 break
+
+        adicionar_aba_auditoria(wb, dados, nome, self.ticker)
 
         try:
             wb.save(destino)

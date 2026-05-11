@@ -345,6 +345,14 @@ python -m src.scanners.event_pipeline --start 2026-01-02 --end 2026-04-30 --sour
 python -m src.scanners.event_context_analysis --start 2026-01-02 --end 2026-04-30 --csv --save-db
 ```
 
+Rotina operacional de eventos com News Hunter, CVM/IPE, releases, calendário macro local e cobertura por regime:
+
+```powershell
+python -m src.scanners.event_daily_update --start 2026-01-02 --end 2026-04-30 --save-db --csv --with-regimes
+```
+
+As fontes ficam em `config/events.yaml`. A rotina não faz scraping pesado; ela lê arquivos e bancos locais, deduplica eventos, mede cobertura geral e grava cobertura por regime quando `market_regime_daily` existir.
+
 Essa camada usa CSV/local primeiro, nao faz scraping pesado e nao altera score, ranking ou filtros automaticamente.
 
 ## Validacao Local
@@ -379,6 +387,7 @@ O projeto tambem inclui um workflow de GitHub Actions para rodar os testes em Wi
 - `docs/REGIMES_DE_MERCADO.md` — regimes de tendência, volatilidade, liquidez, risco e governança por regime.
 - `docs/EVENTOS_E_NOTICIAS.md` — importação de eventos, link evento-sinal e análise event-driven.
 - `docs/PIPELINE_EVENTOS.md` — conectores locais, deduplicação, classificação e cobertura de eventos.
+- `docs/ROTINA_EVENTOS.md` — rotina operacional de eventos, calendário macro e cobertura por regime.
 
 ## Dados De Entrada
 
@@ -390,6 +399,7 @@ O projeto tambem inclui um workflow de GitHub Actions para rodar os testes em Wi
 | `config_quant.yaml` | Parametros da estrategia, risco, score e integracoes |
 | Diario de trades | Historico manual/operacional para performance e backtest |
 | CSV de eventos | Eventos, notícias, fatos relevantes, resultados e contexto macro/setorial |
+| `config/events.yaml` | Fontes locais de eventos, News Hunter, CVM, releases e calendário macro |
 
 ## Dados De Saida
 
@@ -425,6 +435,7 @@ Principais tabelas criadas no SQLite:
 - `signal_event_links`
 - `event_context_runs`
 - `event_coverage_runs`
+- `event_coverage_by_regime`
 
 ## Limitacoes
 
@@ -437,6 +448,7 @@ Principais tabelas criadas no SQLite:
 - Backtests podem sofrer vieses de dados, liquidez, slippage e custos.
 - Thresholds e filtros sao exploratorios e podem sofrer overfitting se calibrados em amostra pequena.
 - A camada de eventos depende da cobertura do CSV local; ausência de evento importado não prova ausência real de notícia.
+- A cobertura por regime depende de `market_regime_daily`; se estiver ausente, a rotina diária apenas salva a cobertura geral.
 - Nenhum modulo envia ordens automaticamente.
 
 ## Fluxo Recomendado
@@ -456,6 +468,7 @@ python -m src.scanners.regime_analysis --start 2026-01-02 --end 2026-04-30 --sav
 python -m src.scanners.historical_quant_backtest --start 2026-01-02 --end 2026-04-30 --net --with-regimes --csv --save-db
 python -m src.scanners.import_market_events --csv data/events/market_events_example.csv --save-db
 python -m src.scanners.event_pipeline --start 2026-01-02 --end 2026-04-30 --sources csv --csv-path data/events/market_events_example.csv --save-db --csv
+python -m src.scanners.event_daily_update --start 2026-01-02 --end 2026-04-30 --save-db --csv --with-regimes
 python -m src.scanners.historical_quant_backtest --start 2026-01-02 --end 2026-04-30 --net --with-regimes --with-events --csv --save-db
 python -m src.scanners.event_context_analysis --start 2026-01-02 --end 2026-04-30 --csv --save-db
 python -m src.scanners.walk_forward_quant_analysis --start 2024-01-01 --end 2026-12-31 --train-months 12 --test-months 3 --csv

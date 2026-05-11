@@ -314,6 +314,15 @@ def _gerar_tese(
     tir = _f(valuation.get("tir_on"), 0.0)
     pj = _f(valuation.get("preco_justo_on"), 0.0)
     pa = _f(mercado.get("preco"), 0.0)
+    status = str(valuation.get("status_valuation") or "").upper()
+    rec_head = recomendacao.split()[0] if recomendacao else ""
+    if rec_head in {"PRELIMINAR", "BLOQUEADO"}:
+        motivo = valuation.get("motivo_status") or "dados, mercado ou planilha exigem revisao antes de usar a recomendacao"
+        return (
+            f"{nome} ({ticker}) tem valuation marcado como {status or rec_head}. "
+            f"Resultado numerico deve ser tratado apenas como diagnostico preliminar: {motivo}. "
+            f"Score: {score}/100 | Risco: {risco} | Confianca: {confianca}."
+        )
 
     rec_base = recomendacao.split()[0]  # remove sufixo "(RISCO ALTO)" se houver
     if rec_base == "BUY":
@@ -401,8 +410,36 @@ def analisar_valuation(
 
     upside = _f(valuation.get("upside_on"), 0.0)
     tir = _f(valuation.get("tir_on"), 0.0)
+    status_valuation = str(
+        valuation.get("status_valuation") or qualidade.get("status_valuation") or "CONFIAVEL"
+    ).upper()
+    mercado_incompleto = (
+        _f(mercado.get("preco"), 0.0) <= 0
+        or _f(mercado.get("acoes_total"), 0.0) <= 0
+    )
+    preliminar = status_valuation != "CONFIAVEL" or mercado_incompleto
+    score_original = score_final
 
-    if risco == "ALTO":
+    if preliminar:
+        if status_valuation == "BLOQUEADO":
+            rec = "BLOQUEADO"
+            score_final = min(score_final, 25)
+            risco = "ALTO"
+        else:
+            rec = "PRELIMINAR"
+            score_final = min(score_final, 50)
+
+        motivos = []
+        if status_valuation != "CONFIAVEL":
+            motivos.append(f"status do valuation={status_valuation}")
+        if _f(mercado.get("preco"), 0.0) <= 0:
+            motivos.append("cotacao de mercado ausente")
+        if _f(mercado.get("acoes_total"), 0.0) <= 0:
+            motivos.append("base acionaria ausente")
+        confianca = "BAIXA"
+        motivo_conf = "; ".join(motivos) or "valuation exige revisao"
+        fatores.append(motivo_conf)
+    elif risco == "ALTO":
         if score_final >= 65 and upside > 0.30 and tir > 0.15:
             rec = "BUY (RISCO ALTO)"
         elif upside > 0:
@@ -418,7 +455,8 @@ def analisar_valuation(
     else:
         rec = "AVOID"
 
-    confianca, motivo_conf = _avaliar_confianca(qualidade, avisos, sem_cvm, indicadores)
+    if not preliminar:
+        confianca, motivo_conf = _avaliar_confianca(qualidade, avisos, sem_cvm, indicadores)
 
     tese = _gerar_tese(
         ticker, nome, rec, score_final, risco, confianca,
@@ -441,6 +479,9 @@ def analisar_valuation(
             "score_bruto": round(score_bruto, 1),
             "penalidade_risco": penalidade,
             "score_final": score_final,
+            "score_original_preliminar": score_original if preliminar else None,
+            "status_valuation": status_valuation,
+            "mercado_incompleto": mercado_incompleto,
             "upside_on": upside,
             "tir_on": tir,
             "fatores_risco": fatores,

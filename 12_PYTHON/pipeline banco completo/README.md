@@ -155,6 +155,81 @@ NIM_ALVO = 0.076
 | BTG Pactual | BPAC11  | 21610      |
 | Santander   | SANB11  | 20532      |
 
+## Analise Qualitativa
+
+O pipeline agora tambem gera uma leitura qualitativa separada dos numeros do valuation. Quando a empresa tem `codigo_cvm`, ele busca automaticamente documentos publicos de IPE/CVM dos ultimos anos e salva as evidencias em `data/qualitative/raw/<TICKER>/auto_cvm`.
+
+Alem da CVM, existe um crawler configuravel para sites de RI. Ele nao tenta adivinhar o portal de cada empresa; use uma URL inicial por ticker no `config/empresas.yaml` ou passe `--ri-url` no comando. A partir dessa fonte, ele navega links internos relevantes, baixa HTML/PDF legivel e salva em `data/qualitative/raw/<TICKER>/auto_ri`.
+
+Campos aceitos no cadastro:
+
+```yaml
+WEGE3:
+  ri_url: https://site-de-ri-da-empresa/
+  ri_urls:
+    - https://site-de-ri-da-empresa/resultados-e-comunicados/
+  fontes_ri:
+    - https://site-de-ri-da-empresa/governanca/
+```
+
+Pastas usadas:
+
+```text
+data/qualitative/raw
+data/qualitative/processed
+data/qualitative/summaries
+data/qualitative/events
+data/qualitative/reports
+```
+
+Se quiser complementar com documentos baixados diretamente do site de RI da empresa, coloque releases, apresentacoes, comunicados, atas, formularios de referencia, notas explicativas ou transcricoes em:
+
+```text
+data/qualitative/raw/<TICKER>/
+```
+
+Comandos:
+
+```bash
+python main.py --ticker WEGE3 --qualitativo-only
+python main.py --ticker WEGE3 --qualitativo-only --ri-url https://site-de-ri-da-empresa/
+python main.py --ticker WEGE3 --qualitativo-only --sem-cvm
+python main.py --ticker WEGE3 --qualitativo-only --sem-ri-crawler
+python main.py --ticker WEGE3 --sem-qualitativo
+```
+
+Saidas principais:
+
+- `data/qualitative/reports/<TICKER>/RELATORIO_QUALITATIVO_EMPRESA.md`
+- `data/qualitative/summaries/<TICKER>/qualitative_scorecard.json`
+- `data/qualitative/events/<TICKER>/events.json`
+- `data/qualitative/qualitative_runs.log`
+
+Painel:
+
+```bash
+streamlit run streamlit_app.py
+```
+
+A aba `Analise Qualitativa` mostra documentos, eventos, riscos, catalisadores, score qualitativo e alerta de mudanca de tese. Quando nao houver documento suficiente, o motor registra `sem evidencia` em vez de inventar conclusoes.
+
+## Controles de Confiabilidade
+
+O pipeline inclui camadas adicionais para reduzir retrabalho e evitar conclusoes falsas:
+
+- Cache CVM por ZIP anual: evita baixar o mesmo DFP/ITR varias vezes para DRE, BPA, BPP e DFC.
+- Cache de cotacao atual: reduz chamadas repetidas ao yfinance durante execucoes proximas.
+- BCB resiliente: quando a API rejeita `dataFinal` ou falha, tenta uma chamada alternativa e reaproveita cache expirado antes de cair no fallback.
+- Quality gate final do Excel: apos escrever a planilha, verifica abas vazias, anos ausentes/duplicados e formulas com erro.
+- Premissas auditaveis: gera JSON/Markdown com valor, fonte e justificativa das principais premissas usadas.
+- Perfil metodologico por setor: bancos, energia, saneamento, petroleo, varejo, saude, industrial e locadoras passam a carregar drivers/checks/riscos especificos.
+
+Saidas:
+
+- `outputs/post_excel_quality/post_excel_quality_<TICKER>.md`
+- `outputs/assumptions/premissas_<TICKER>.md`
+- Aba `Status de Qualidade` no Streamlit.
+
 ## Limitações e Próximos Passos
 - CVM pode ter latência alta — usar `--sem-cvm` para análises rápidas
 - Dados trimestrais (ITR) ainda não preenchem as projeções trimestrais do template

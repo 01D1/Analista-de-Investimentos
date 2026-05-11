@@ -14,6 +14,7 @@ from src.reports.quant_dashboard_data import (
     load_filter_walk_forward_runs_for_dashboard,
     load_event_context_runs_for_dashboard,
     load_event_context_summary_for_dashboard,
+    load_event_coverage_by_regime_for_dashboard,
     load_event_coverage_runs_for_dashboard,
     load_governance_reviews_for_dashboard,
     load_governance_summary_for_dashboard,
@@ -56,6 +57,7 @@ def test_dashboard_loaders_handle_missing_database(tmp_path):
     assert load_signal_event_links_for_dashboard(db_path).empty
     assert load_event_context_runs_for_dashboard(db_path).empty
     assert load_event_coverage_runs_for_dashboard(db_path).empty
+    assert load_event_coverage_by_regime_for_dashboard(db_path).empty
     assert load_event_context_summary_for_dashboard(db_path).empty
 
 
@@ -374,16 +376,28 @@ def test_dashboard_loaders_read_event_tables_and_summary(tmp_path):
                       'csv,cvm', 3, 2, 1, 1, 1.0, 1.0, 'COBERTURA_BOA')
             """
         )
+        con.execute(
+            """
+            INSERT INTO event_coverage_by_regime (
+                coverage_run_id, regime_type, regime_value, signals_count,
+                signals_with_event, signals_without_event, signals_with_event_pct,
+                dominant_event_type, dominant_event_source, coverage_quality
+            ) VALUES (1, 'primary_regime', 'ALTA_TENDENCIAL', 1, 1, 0, 1.0,
+                      'RESULTADO', 'manual', 'COBERTURA_BOA')
+            """
+        )
         con.commit()
 
     events = load_market_events_for_dashboard(db_path)
     links = load_signal_event_links_for_dashboard(db_path)
     runs = load_event_context_runs_for_dashboard(db_path)
     coverage_runs = load_event_coverage_runs_for_dashboard(db_path)
+    coverage_by_regime = load_event_coverage_by_regime_for_dashboard(db_path, coverage_run_id=1)
     summary = load_event_context_summary_for_dashboard(db_path)
 
     assert events.loc[0, "event_type"] == "RESULTADO"
     assert links.loc[0, "link_type"] == "SAME_DAY"
     assert runs.loc[0, "signals_linked"] == 1
     assert coverage_runs.loc[0, "coverage_quality"] == "COBERTURA_BOA"
+    assert coverage_by_regime.loc[0, "regime_value"] == "ALTA_TENDENCIAL"
     assert "event_context_type" in summary["group"].tolist()

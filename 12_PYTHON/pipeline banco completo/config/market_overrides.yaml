@@ -1,0 +1,17 @@
+# Overrides manuais e auditaveis de mercado.
+#
+# Use somente quando as fontes automaticas falharem ou quando quiser congelar
+# uma data-base do valuation. Por padrao, o pipeline so usa estes valores se
+# cotacao/base acionaria automaticas vierem zeradas. Para sobrescrever mesmo
+# com dados automaticos disponiveis, use forcar: true.
+#
+# Exemplo:
+# overrides:
+#   ELET3:
+#     cotacao_on: 41.20
+#     acoes_on_mil: 2300000
+#     fonte: "B3 manual - data-base 2026-05-05"
+#     data: "2026-05-05"
+#     forcar: false
+
+overrides: {}

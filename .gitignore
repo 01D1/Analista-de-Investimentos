@@ -68,3 +68,48 @@ desktop.ini
 .idea/
 *.swp
 *.swo
+
+# ── GSD baseline (auto-generated) ──
+.gsd
+.gsd-id
+.mcp.json
+.bg-shell/
+*~
+*.code-workspace
+.env.*
+!.env.example
+node_modules/
+.next/
+*.pyc
+target/
+vendor/
+*.log
+coverage/
+.cache/
+tmp/
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated data
+12_PYTHON/data/
+12_PYTHON/pipeline banco completo/data/
+scanner_quant_profit_b3/data/database/
+scanner_quant_profit_b3/data/reports/
+scanner_quant_profit_b3/data/raw/
+scanner_quant_profit_b3/data/processed/
+
+# Temporary / migration
+.gsd.migrating/
+
+# OneDrive / machine duplicates
+*MacBook Air de Diego.py
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/

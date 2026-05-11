@@ -23,6 +23,8 @@ from openpyxl import load_workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter, column_index_from_string
 from modules.excel_theme import THEME
+from modules.excel_audit_sheet import adicionar_aba_auditoria
+from modules.sector_operational_drivers import adicionar_aba_drivers_setoriais
 
 logger = logging.getLogger("pipeline.excel")
 
@@ -351,9 +353,11 @@ class EscritorExcel:
 
         meta = dados.get("metodologia", {}) or {}
         prem = meta.get("premissas", {}) or {}
+        prem_efetivas = meta.get("premissas_efetivas", {}) or {}
         valuation = dados.get("valuation", {}) or {}
         proj = dados.get("projecoes", {}) or {}
         macro = dados.get("macro", {}) or {}
+        mercado = dados.get("mercado", {}) or {}
 
         setor = meta.get("setor") or "bancos"
         motor_proj = (meta.get("motor_projecao") or "fcfe").upper()
@@ -484,6 +488,24 @@ class EscritorExcel:
             cell.border = THEME.border()
             ws.row_dimensions[i].height = 30
 
+        header(34, "Separacao entre Dados e Premissas")
+        fonte_rows = [
+            ("Status do Valuation", prem_efetivas.get("status_valuation") or valuation.get("status_valuation")),
+            ("Classe Principal", prem_efetivas.get("classe_principal") or valuation.get("classe_principal")),
+            ("Beta usado", prem_efetivas.get("beta_usado")),
+            ("Fonte do beta", prem_efetivas.get("beta_fonte")),
+            ("g perpetuidade", prem_efetivas.get("g_perpetuidade")),
+            ("Origem dos demonstrativos", "CVM/DFP/ITR normalizados"),
+            ("Origem mercado", mercado.get("fonte_mercado") or "B3/yfinance/cache ou input CLI"),
+            ("Premissas subjetivas", "empresas.yaml/settings/CLI; ver outputs/assumptions"),
+        ]
+        row = 35
+        for label, value in fonte_rows:
+            if value is None:
+                continue
+            pair(row, label, value)
+            row += 1
+
         ws.freeze_panes = "A3"
 
     # ── Populadores por aba ───────────────────────────────────────────────────
@@ -491,27 +513,37 @@ class EscritorExcel:
     def popular_dashboard(self, wb, dados: dict):
         """Popula a aba Dashboard."""
         ws     = wb["Dashboard"]
-        mercado = dados.get("mercado", {})
+        mercado = dados.get("mercado", {}) or dados
+        valuation = dados.get("valuation", {}) or dados
 
         campos = {
-            "Ticker":                 self.ticker,
-            "Valor do Equity (R$ MM)": dados.get("equity_mm", 0),
-            "Preço Justo por Ação ON (R$)": dados.get("preco_justo_on", 0),
-            "Preço Justo por Ação PN (R$)": dados.get("preco_justo_pn", 0),
-            "Cotação ON":             mercado.get("preco", 0),
+            "Ticker": (self.ticker, None),
+            "Trimestre Atual": (dados.get("_trimestre", mercado.get("_trimestre", "-")), None),
+            "Ações Emitidas ON (ex-treasury, mil)": (valuation.get("acoes_on_mil", 0), NUM_FMT),
+            "Ações Emitidas PN (ex-treasury, mil)": (valuation.get("acoes_pn_mil", 0), NUM_FMT),
+            "Relação PN/ON": (valuation.get("relacao_pn_on", 1.0), "0.00"),
+            "Valor do Equity (R$ MM)": (valuation.get("equity_mm", 0), NUM_FMT),
+            "Preço Justo por Ação ON (R$)": (valuation.get("preco_justo_on", 0), BRL_FMT),
+            "Preço Justo por Ação PN (R$)": (valuation.get("preco_justo_pn", 0), BRL_FMT),
+            "Cotação ON": (mercado.get("preco") or mercado.get("cotacao_on") or 0, BRL_FMT),
+            "Cotação PN": (mercado.get("preco_pn") or mercado.get("cotacao_pn") or 0, BRL_FMT),
+            "Upside ON": (valuation.get("upside_on", 0), PCT_FMT1),
+            "Upside PN": (valuation.get("upside_pn", 0), PCT_FMT1),
+            "TIR (ON)": (valuation.get("tir_on", 0), PCT_FMT1),
+            "TIR (PN)": (valuation.get("tir_pn", 0), PCT_FMT1),
+            "Preço Teto ON": (valuation.get("preco_teto_on", 0), BRL_FMT),
+            "Preço Teto PN": (valuation.get("preco_teto_pn", 0), BRL_FMT),
         }
 
         labels_ws = self._mapear_linhas_por_label(ws, col_label=4)
-        for label, valor in campos.items():
+        for label, (valor, fmt) in campos.items():
             row = self._match_label(labels_ws, label)
             if row:
-                ws.cell(row=row, column=5, value=valor)
-
-        # Ações emitidas
-        acoes = mercado.get("acoes_total", 0)
-        row_acoes = self._match_label(labels_ws, "Ações Emitidas ON")
-        if row_acoes:
-            ws.cell(row=row_acoes, column=5, value=acoes)
+                cell = ws.cell(row=row, column=5, value=valor)
+                if fmt:
+                    cell.number_format = fmt
+                cell.alignment = Alignment(horizontal="right", vertical="center")
+                cell.border = _thin_bottom()
 
     def popular_ke(self, wb, macro: dict):
         """Popula a aba Ke com taxas históricas e projetadas, incluindo o Ke por ano."""
@@ -964,7 +996,17 @@ class EscritorExcel:
         ws = wb["Projeções Trimestrais"]
         projecoes = projecoes or {}
 
-        for row in range(1, max(ws.max_row, 60) + 1):
+        max_row = max(ws.max_row, 60)
+        for merged_range in list(ws.merged_cells.ranges):
+            if not (
+                merged_range.max_col < 4
+                or merged_range.min_col > 10
+                or merged_range.max_row < 1
+                or merged_range.min_row > max_row
+            ):
+                ws.unmerge_cells(str(merged_range))
+
+        for row in range(1, max_row + 1):
             for col in range(4, 11):
                 ws.cell(row=row, column=col).value = None
 
@@ -1019,7 +1061,7 @@ class EscritorExcel:
                 if ano not in valores:
                     continue
                 valor = float(valores.get(ano, 0) or 0)
-                ws.cell(row=row, column=4, value=ano)
+                ws.cell(row=row, column=4, value="Historico" if ano in self.anos_hist else "Projetado")
                 ws.cell(row=row, column=5, value=ano)
                 partes = [valor / 4] * 4 if tipo == "fluxo" else [valor] * 4
                 for i, parte in enumerate(partes, start=6):
@@ -1074,7 +1116,7 @@ class EscritorExcel:
 
         # Popular cada aba
         logger.info("  → Dashboard")
-        self.popular_dashboard(wb, {**mercado, **valuation})
+        self.popular_dashboard(wb, dados_completos)
 
         logger.info("  → Ke")
         self.popular_ke(wb, macro)
@@ -1104,6 +1146,12 @@ class EscritorExcel:
 
         logger.info("  -> Projecoes Trimestrais")
         self.popular_trimestrais(wb, dre_hist, bp_hist, projecoes)
+
+        logger.info("  -> Drivers Setoriais")
+        adicionar_aba_drivers_setoriais(wb, dados_completos, nome_empresa, self.ticker)
+
+        logger.info("  -> Status & Fontes")
+        adicionar_aba_auditoria(wb, dados_completos, nome_empresa, self.ticker)
 
         wb.save(destino)
         logger.info(f"\nArquivo salvo: {destino}")

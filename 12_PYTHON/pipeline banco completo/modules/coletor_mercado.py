@@ -6,10 +6,14 @@ Fonte principal: yfinance (Yahoo Finance)
 Fonte alternativa: B3 (scraping público)
 """
 
+import json
 import logging
+import re
 from datetime import datetime, timedelta
+from html import unescape
 from pathlib import Path
 from typing import Optional
+from urllib.request import Request, urlopen
 
 import pandas as pd
 import yfinance as yf
@@ -65,6 +69,81 @@ class ColetorMercado:
 
     # ── Preços históricos ─────────────────────────────────────────────────────
 
+    def _cache_json_path(self, chave: str) -> Path:
+        nome = chave.replace("/", "_").replace("^", "") + ".json"
+        return self.cache_dir / nome
+
+    def _ler_cache_json(self, chave: str, ttl_minutos: int = 30) -> Optional[dict]:
+        p = self._cache_json_path(chave)
+        if not (self.usar_cache and p.exists()):
+            return None
+        mtime = datetime.fromtimestamp(p.stat().st_mtime)
+        if datetime.now() - mtime > timedelta(minutes=ttl_minutos):
+            return None
+        try:
+            return json.loads(p.read_text(encoding="utf-8"))
+        except Exception:
+            return None
+
+    def _salvar_cache_json(self, chave: str, payload: dict):
+        try:
+            self._cache_json_path(chave).write_text(
+                json.dumps(payload, ensure_ascii=False, default=str),
+                encoding="utf-8",
+            )
+        except Exception as e:
+            logger.debug(f"Nao foi possivel salvar cache json mercado: {e}")
+
+    @staticmethod
+    def _parse_numero_br(valor: str) -> float:
+        texto = str(valor or "").strip().replace("%", "")
+        if not texto or texto in {"-", "N/D"}:
+            return 0.0
+        texto = texto.replace(".", "").replace(",", ".")
+        try:
+            return float(texto)
+        except ValueError:
+            return 0.0
+
+    def _fundamentus_snapshot(self, ticker_b3: str) -> dict:
+        cache_key = f"fundamentus_{ticker_b3.upper()}"
+        cached = self._ler_cache_json(cache_key, ttl_minutos=60 * 24)
+        if cached:
+            return cached
+
+        url = f"https://www.fundamentus.com.br/detalhes.php?papel={ticker_b3.upper().strip()}"
+        try:
+            req = Request(url, headers={"User-Agent": "Mozilla/5.0", "Accept": "text/html"})
+            with urlopen(req, timeout=20) as resp:
+                html = resp.read().decode("iso-8859-1", "replace")
+
+            cells = re.findall(r"<td[^>]*>(.*?)</td>", html, flags=re.S | re.I)
+            cleaned = []
+            for cell in cells:
+                text = re.sub(r"<.*?>", "", cell)
+                text = unescape(text).replace("\n", " ").replace("\t", " ").strip()
+                if text:
+                    cleaned.append(text)
+
+            dados = {}
+            for idx, label in enumerate(cleaned[:-1]):
+                chave = label.replace("?", "").strip().lower()
+                if "cotação" in chave or "cotacao" in chave:
+                    dados["preco"] = self._parse_numero_br(cleaned[idx + 1])
+                elif "valor de mercado" in chave:
+                    dados["market_cap"] = self._parse_numero_br(cleaned[idx + 1]) / 1e6
+                elif "nro. ações" in chave or "nro. acoes" in chave:
+                    dados["acoes_total"] = self._parse_numero_br(cleaned[idx + 1]) / 1e3
+
+            if dados:
+                dados["fonte"] = "fundamentus"
+                dados["ticker"] = ticker_b3.upper()
+                self._salvar_cache_json(cache_key, dados)
+            return dados
+        except Exception as exc:
+            logger.debug("Fundamentus indisponivel para %s: %s", ticker_b3, exc)
+            return {}
+
     def baixar_precos(self, ticker_b3: str,
                       inicio: str = "2019-01-01",
                       fim: str = None) -> pd.DataFrame:
@@ -105,18 +184,51 @@ class ColetorMercado:
     def preco_atual(self, ticker_b3: str) -> dict:
         """Retorna cotação atual, market cap e dados básicos."""
         ticker_yf = self._ticker_yahoo(ticker_b3)
+        cache_key = f"quote_{ticker_yf}"
+        cached = self._ler_cache_json(cache_key, ttl_minutos=20)
+        if cached and cached.get("preco", 0):
+            return cached
+
         logger.info(f"Buscando cotação atual: {ticker_yf}")
         try:
             t    = yf.Ticker(ticker_yf)
             info = t.info or {}
+            fast = getattr(t, "fast_info", {}) or {}
+
+            def fast_get(*keys, default=0):
+                for key in keys:
+                    try:
+                        value = fast.get(key) if hasattr(fast, "get") else getattr(fast, key)
+                    except Exception:
+                        value = None
+                    if value:
+                        return value
+                return default
+
             preco = (info.get("currentPrice") or
                      info.get("regularMarketPrice") or
-                     info.get("previousClose", 0))
-            return {
+                     info.get("previousClose") or
+                     fast_get("last_price", "lastPrice", "regular_market_price", "previous_close"))
+            if not preco:
+                hist = t.history(period="5d")
+                if not hist.empty and "Close" in hist.columns:
+                    preco = float(hist["Close"].dropna().iloc[-1])
+
+            market_cap = info.get("marketCap") or fast_get("market_cap", "marketCap")
+            shares = info.get("sharesOutstanding") or fast_get("shares", "shares_outstanding")
+            if not shares and market_cap and preco:
+                shares = market_cap / preco
+            if not preco or not shares:
+                fund = self._fundamentus_snapshot(ticker_b3)
+                if fund:
+                    preco = preco or fund.get("preco")
+                    market_cap = market_cap or (fund.get("market_cap", 0) * 1e6)
+                    shares = shares or (fund.get("acoes_total", 0) * 1e3)
+            payload = {
                 "ticker":           ticker_b3,
-                "preco":            preco,
-                "market_cap":       info.get("marketCap", 0) / 1e6,   # em R$ MM
-                "acoes_total":      info.get("sharesOutstanding", 0) / 1e3,   # em mil
+                "preco":            preco or 0,
+                "market_cap":       (market_cap or 0) / 1e6,   # em R$ MM
+                "acoes_total":      (shares or 0) / 1e3,   # em mil
                 "volume_medio":     info.get("averageVolume", 0),
                 "52w_high":         info.get("fiftyTwoWeekHigh", 0),
                 "52w_low":          info.get("fiftyTwoWeekLow", 0),
@@ -127,6 +239,8 @@ class ColetorMercado:
                 "setor":            info.get("sector", "Financeiro"),
                 "data_consulta":    datetime.now().strftime("%Y-%m-%d %H:%M"),
             }
+            self._salvar_cache_json(cache_key, payload)
+            return payload
         except Exception as e:
             logger.error(f"Erro ao buscar cotação {ticker_yf}: {e}")
             return {"ticker": ticker_b3, "preco": 0, "market_cap": 0}
@@ -278,10 +392,34 @@ class ColetorMercado:
         try:
             t    = yf.Ticker(ticker_yf)
             info = t.info or {}
+            fast = getattr(t, "fast_info", {}) or {}
+
+            def fast_get(*keys, default=0):
+                for key in keys:
+                    try:
+                        value = fast.get(key) if hasattr(fast, "get") else getattr(fast, key)
+                    except Exception:
+                        value = None
+                    if value:
+                        return value
+                return default
+
+            preco = (info.get("currentPrice") or
+                     info.get("regularMarketPrice") or
+                     info.get("previousClose") or
+                     fast_get("last_price", "lastPrice", "regular_market_price", "previous_close"))
+            market_cap = info.get("marketCap") or fast_get("market_cap", "marketCap")
+            shares = info.get("sharesOutstanding") or fast_get("shares", "shares_outstanding")
+            if not shares and market_cap and preco:
+                shares = market_cap / preco
+            if not shares:
+                fund = self._fundamentus_snapshot(ticker_b3)
+                shares = fund.get("acoes_total", 0) * 1e3 if fund else 0
+                market_cap = market_cap or (fund.get("market_cap", 0) * 1e6 if fund else 0)
             return {
-                "total":       info.get("sharesOutstanding", 0) / 1e3,   # mil
+                "total":       (shares or 0) / 1e3,   # mil
                 "float":       info.get("floatShares", 0) / 1e3,
-                "market_cap":  info.get("marketCap", 0) / 1e6,
+                "market_cap":  (market_cap or 0) / 1e6,
             }
         except Exception as e:
             logger.error(f"Erro ao buscar ações emitidas: {e}")

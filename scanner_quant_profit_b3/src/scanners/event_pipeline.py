@@ -9,7 +9,14 @@ from pathlib import Path
 
 import pandas as pd
 
-from src.context.connectors import cvm_connector, local_csv_connector, manual_events_connector, news_hunter_connector, releases_connector
+from src.context.connectors import (
+    cvm_connector,
+    local_csv_connector,
+    macro_calendar_connector,
+    manual_events_connector,
+    news_hunter_connector,
+    releases_connector,
+)
 from src.context.event_coverage import calculate_event_coverage
 from src.context.event_normalizer import merge_duplicate_events, normalize_events
 from src.context.event_importer import save_events_to_db
@@ -23,6 +30,7 @@ CONNECTORS = {
     "news_hunter": news_hunter_connector,
     "cvm": cvm_connector,
     "releases": releases_connector,
+    "macro_calendar": macro_calendar_connector,
 }
 
 
@@ -47,7 +55,18 @@ def _load_signals(db_path: Path, start: str | None, end: str | None, tickers: li
             exists = con.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='historical_backtest_results'").fetchone()
             if not exists:
                 return pd.DataFrame()
-            return pd.read_sql_query(f"SELECT trade_date, ticker FROM historical_backtest_results {where}", con, params=params)
+            existing_cols = {row[1] for row in con.execute("PRAGMA table_info(historical_backtest_results)").fetchall()}
+            wanted = [
+                "trade_date",
+                "ticker",
+                "primary_regime",
+                "trend_regime",
+                "volatility_regime",
+                "liquidity_regime",
+                "risk_regime",
+            ]
+            cols = [col for col in wanted if col in existing_cols]
+            return pd.read_sql_query(f"SELECT {', '.join(cols)} FROM historical_backtest_results {where}", con, params=params)
     except Exception:
         return pd.DataFrame()
 
@@ -104,8 +123,16 @@ def _save_coverage_run(
         return int(cur.lastrowid)
 
 
-def _load_from_sources(sources: list[str], start: str | None, end: str | None, tickers: list[str] | None, csv_path: str | None) -> pd.DataFrame:
+def _load_from_sources(
+    sources: list[str],
+    start: str | None,
+    end: str | None,
+    tickers: list[str] | None,
+    csv_path: str | None,
+    source_options: dict[str, dict] | None = None,
+) -> pd.DataFrame:
     frames = []
+    source_options = source_options or {}
     for source in sources:
         connector = CONNECTORS.get(source)
         if connector is None:
@@ -113,6 +140,7 @@ def _load_from_sources(sources: list[str], start: str | None, end: str | None, t
         kwargs = {"start_date": start, "end_date": end, "tickers": tickers}
         if source in {"csv", "manual"}:
             kwargs["csv_path"] = csv_path
+        kwargs.update(source_options.get(source, {}))
         df = connector.load_events(**kwargs)
         if df is not None and not df.empty:
             if "event_source" not in df.columns:
@@ -134,13 +162,14 @@ def run(
     classify: bool = True,
     coverage: bool = True,
     db_path: str | Path | None = None,
+    source_options: dict[str, dict] | None = None,
 ) -> dict:
     if db_path is None:
         cfg = load_config()
         db_path = project_path(cfg["database_path"])
     db_path = Path(db_path)
     sources = sources or ["csv"]
-    loaded = _load_from_sources(sources, start, end, tickers, csv_path)
+    loaded = _load_from_sources(sources, start, end, tickers, csv_path, source_options=source_options)
     normalized = normalize_events(loaded) if classify else loaded.copy()
     final_events = merge_duplicate_events(normalized) if dedupe else normalized
     final_events["normalized_at"] = datetime.now().isoformat(timespec="seconds") if not final_events.empty else pd.Series(dtype=str)
@@ -220,4 +249,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

@@ -41,6 +41,7 @@ Os status possíveis são:
 - `BLOQUEADO_EVENTO_INSUFICIENTE`;
 - `BLOQUEADO_EVENTO_CONTRA_SINAL`.
 - `BLOQUEADO_COBERTURA_EVENTOS_INSUFICIENTE`.
+- `BLOQUEADO_COBERTURA_REGIME_INSUFICIENTE`.
 
 `CANDIDATO_OPERACIONAL` é o único status aprovado. Mesmo assim, ele apenas libera o candidato para estudo operacional; não executa ordens nem muda o scanner.
 
@@ -97,6 +98,7 @@ Eventos entram como contexto explicativo adicional. A governança pode classific
 - `BLOQUEADO_EVENTO_INSUFICIENTE`: a base de eventos ainda e pequena;
 - `BLOQUEADO_EVENTO_CONTRA_SINAL`: eventos contrários ao sinal pioram a estatística.
 - `BLOQUEADO_COBERTURA_EVENTOS_INSUFICIENTE`: a cobertura de eventos ainda não permite conclusão forte.
+- `BLOQUEADO_COBERTURA_REGIME_INSUFICIENTE`: a cobertura de eventos é fraca em um ou mais regimes, impedindo conclusão forte naquele ambiente.
 
 Essa leitura impede que um setup técnico seja tratado como robusto quando, na verdade, depende de resultado, fato relevante, evento macro ou commodity.
 
@@ -105,6 +107,7 @@ Comandos:
 ```powershell
 python -m src.scanners.import_market_events --csv data/events/market_events.csv --save-db
 python -m src.scanners.event_pipeline --start 2026-01-02 --end 2026-04-30 --sources csv --csv-path data/events/market_events_example.csv --save-db --csv
+python -m src.scanners.event_daily_update --start 2026-01-02 --end 2026-04-30 --save-db --csv --with-regimes
 python -m src.scanners.event_context_analysis --start 2026-01-02 --end 2026-04-30 --csv --save-db
 ```
 

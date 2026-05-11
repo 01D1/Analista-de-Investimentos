@@ -22,6 +22,7 @@ CANDIDATO_EVENT_DRIVEN = "CANDIDATO_EVENT_DRIVEN"
 BLOQUEADO_EVENTO_INSUFICIENTE = "BLOQUEADO_EVENTO_INSUFICIENTE"
 BLOQUEADO_EVENTO_CONTRA_SINAL = "BLOQUEADO_EVENTO_CONTRA_SINAL"
 BLOQUEADO_COBERTURA_EVENTOS_INSUFICIENTE = "BLOQUEADO_COBERTURA_EVENTOS_INSUFICIENTE"
+BLOQUEADO_COBERTURA_REGIME_INSUFICIENTE = "BLOQUEADO_COBERTURA_REGIME_INSUFICIENTE"
 
 STATUS_RANK = {
     CANDIDATO_OPERACIONAL: 0,
@@ -34,12 +35,13 @@ STATUS_RANK = {
     BLOQUEADO_REGIME_INSUFICIENTE: 7,
     BLOQUEADO_EVENTO_INSUFICIENTE: 8,
     BLOQUEADO_COBERTURA_EVENTOS_INSUFICIENTE: 9,
-    CONCENTRACAO_EXCESSIVA: 10,
-    LIQUIDEZ_INSUFICIENTE: 11,
-    BLOQUEADO_REGIME_RISCO: 12,
-    BLOQUEADO_EVENTO_CONTRA_SINAL: 13,
-    BLOQUEADO_OVERFITTING: 14,
-    REJEITADO: 15,
+    BLOQUEADO_COBERTURA_REGIME_INSUFICIENTE: 10,
+    CONCENTRACAO_EXCESSIVA: 11,
+    LIQUIDEZ_INSUFICIENTE: 12,
+    BLOQUEADO_REGIME_RISCO: 13,
+    BLOQUEADO_EVENTO_CONTRA_SINAL: 14,
+    BLOQUEADO_OVERFITTING: 15,
+    REJEITADO: 16,
 }
 
 DEFAULT_GOVERNANCE_RULES = {
@@ -82,7 +84,7 @@ def _risk_and_confidence(status: str, reasons_against: list[str], approved: bool
         return "BAIXO", "ALTA"
     if status in {BLOQUEADO_OVERFITTING, LIQUIDEZ_INSUFICIENTE, CONCENTRACAO_EXCESSIVA, BLOQUEADO_EVENTO_CONTRA_SINAL}:
         return "ALTO", "BAIXA"
-    if status in {AMOSTRA_INSUFICIENTE, BLOQUEADO_EVENTO_INSUFICIENTE, BLOQUEADO_COBERTURA_EVENTOS_INSUFICIENTE}:
+    if status in {AMOSTRA_INSUFICIENTE, BLOQUEADO_EVENTO_INSUFICIENTE, BLOQUEADO_COBERTURA_EVENTOS_INSUFICIENTE, BLOQUEADO_COBERTURA_REGIME_INSUFICIENTE}:
         return "MEDIO", "BAIXA"
     if status == PROMISSOR:
         return "MEDIO", "MEDIA"
@@ -404,3 +406,93 @@ def evaluate_event_context_governance(event_summary: pd.DataFrame, base_review: 
         review.setdefault("reasons_for", []).append("Sinais com evento performaram melhor que sinais sem evento.")
         review.setdefault("reasons_against", []).append("Evidência positiva depende de contexto event-driven.")
     return review
+
+
+def evaluate_event_coverage_governance(
+    coverage_summary: dict[str, Any],
+    coverage_by_regime: pd.DataFrame | None = None,
+) -> dict[str, Any]:
+    """Governa se a cobertura de eventos permite conclusões robustas."""
+    coverage = dict(coverage_summary or {})
+    quality = str(coverage.get("coverage_quality") or "").upper()
+    sources_count = int(_num(coverage.get("sources_count")))
+    signals_pct = _num(coverage.get("signals_with_event_pct"))
+    tickers_pct = _num(coverage.get("tickers_with_event_pct"))
+    reasons_for: list[str] = []
+    reasons_against: list[str] = []
+    actions: list[str] = []
+
+    if quality in {"COBERTURA_BOA", "COBERTURA_MEDIA"}:
+        reasons_for.append(f"Cobertura geral classificada como {quality}.")
+    else:
+        reasons_against.append(f"Cobertura geral classificada como {quality or 'INDEFINIDA'}.")
+        actions.append("Ampliar fontes, tickers e janela temporal antes de concluir evento x sem evento.")
+    if sources_count >= 2:
+        reasons_for.append("Há mais de uma fonte de eventos ativa.")
+    else:
+        reasons_against.append("Cobertura depende de fonte única ou fonte ausente.")
+        actions.append("Ativar pelo menos duas fontes independentes de eventos.")
+    if signals_pct >= 0.1 and tickers_pct >= 0.3:
+        reasons_for.append("Cobertura mínima por sinais e tickers foi atingida.")
+    else:
+        reasons_against.append("Poucos sinais ou tickers possuem cobertura de eventos.")
+
+    regime_status = None
+    weak_regimes: list[str] = []
+    tested_regimes = 0
+    if coverage_by_regime is not None and not coverage_by_regime.empty:
+        tested_regimes = int(coverage_by_regime[["regime_type", "regime_value"]].drop_duplicates().shape[0])
+        weak = coverage_by_regime[
+            coverage_by_regime.get("coverage_quality").astype(str).str.upper().isin({"COBERTURA_FRACA", "COBERTURA_INSUFICIENTE"})
+        ]
+        weak_regimes = (
+            weak.assign(label=weak["regime_type"].astype(str) + "=" + weak["regime_value"].astype(str))["label"]
+            .dropna()
+            .unique()
+            .tolist()
+        )
+        if weak_regimes:
+            reasons_against.append("Há regimes com cobertura fraca ou insuficiente.")
+            actions.append("Não tirar conclusão forte sobre eventos nos regimes sem cobertura.")
+            regime_status = BLOQUEADO_COBERTURA_REGIME_INSUFICIENTE
+        else:
+            reasons_for.append("Nenhum regime testado ficou com cobertura fraca.")
+    elif coverage_by_regime is not None:
+        reasons_against.append("Sem dados de cobertura por regime.")
+        actions.append("Rodar rotina de eventos com --with-regimes após gerar market_regime_daily.")
+        regime_status = BLOQUEADO_COBERTURA_REGIME_INSUFICIENTE
+
+    if regime_status:
+        status = regime_status
+    elif quality in {"COBERTURA_FRACA", "COBERTURA_INSUFICIENTE", ""}:
+        status = BLOQUEADO_COBERTURA_EVENTOS_INSUFICIENTE
+    elif quality == "COBERTURA_MEDIA":
+        status = EM_OBSERVACAO
+    else:
+        status = PROMISSOR
+
+    approved = False
+    risk, confidence = _risk_and_confidence(status, reasons_against, approved)
+    return {
+        "governance_status": status,
+        "approved": approved,
+        "risk_level": risk,
+        "confidence_level": confidence,
+        "event_status": status,
+        "reasons_for": reasons_for,
+        "reasons_against": reasons_against,
+        "required_actions": list(dict.fromkeys(actions)),
+        "metrics": {
+            "coverage_quality": quality,
+            "signals_with_event_pct": signals_pct,
+            "tickers_with_event_pct": tickers_pct,
+            "sources_count": sources_count,
+            "tested_regimes": tested_regimes,
+            "weak_regimes": weak_regimes,
+        },
+        "summary_text": (
+            f"Governança de cobertura de eventos: {status}. "
+            f"Cobertura geral: {quality or 'INDEFINIDA'}, sinais cobertos: {signals_pct:.2%}, "
+            f"tickers cobertos: {tickers_pct:.2%}, fontes: {sources_count}, regimes fracos: {len(weak_regimes)}."
+        ),
+    }

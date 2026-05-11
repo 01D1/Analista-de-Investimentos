@@ -148,6 +148,10 @@ def get_empresa(ticker: str) -> Optional[dict]:
         "tipo_acao":     empresa_raw.get("tipo_acao", "ON_ONLY"),
         "relacao_pn_on": empresa_raw.get("relacao_pn_on", 1.0),
         "aliases":       empresa_raw.get("aliases", []),
+        "ri_url":        empresa_raw.get("ri_url"),
+        "ri_urls":       empresa_raw.get("ri_urls", []),
+        "fontes_ri":     empresa_raw.get("fontes_ri", []),
+        "mercado_manual": empresa_raw.get("mercado_manual", empresa_raw.get("market_overrides", {})),
 
         # Pipeline config (vem do setor)
         "tipo_empresa":     setor_cfg.get("tipo_empresa", "general"),

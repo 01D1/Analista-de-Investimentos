@@ -263,6 +263,21 @@ EVENT_COVERAGE_RUN_COLUMNS = [
     "metadata_json",
 ]
 
+EVENT_COVERAGE_BY_REGIME_COLUMNS = [
+    "id",
+    "coverage_run_id",
+    "regime_type",
+    "regime_value",
+    "signals_count",
+    "signals_with_event",
+    "signals_without_event",
+    "signals_with_event_pct",
+    "dominant_event_type",
+    "dominant_event_source",
+    "coverage_quality",
+    "metadata_json",
+]
+
 MARKET_REGIME_DAILY_COLUMNS = [
     "id",
     "trade_date",
@@ -633,6 +648,19 @@ def load_event_coverage_runs_for_dashboard(db_path: str | Path, limit: int = 50)
         EVENT_COVERAGE_RUN_COLUMNS,
         order_by="id DESC",
         limit=limit,
+    )
+
+
+def load_event_coverage_by_regime_for_dashboard(db_path: str | Path, coverage_run_id: int | None = None) -> pd.DataFrame:
+    where = "coverage_run_id = ?" if coverage_run_id is not None else ""
+    params = (int(coverage_run_id),) if coverage_run_id is not None else None
+    return _read_table(
+        db_path,
+        "event_coverage_by_regime",
+        EVENT_COVERAGE_BY_REGIME_COLUMNS,
+        where=where,
+        params=params,
+        order_by="coverage_run_id DESC, regime_type, regime_value",
     )
 
 

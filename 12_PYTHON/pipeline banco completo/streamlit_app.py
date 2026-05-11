@@ -565,38 +565,56 @@ def _events_html(events: list, max_items: int = 12) -> str:
     return " ".join(pills)
 
 
-# ── Sidebar ───────────────────────────────────────────────────────────────────
+# ── Controles inline (sem sidebar) ───────────────────────────────────────────
 
-def _render_sidebar(tickers: list[str]) -> tuple[str, float, str]:
-    with st.sidebar:
-        st.markdown("### 📊 Valuation Engine")
-        st.markdown("---")
+def _render_sidebar(tickers: list[str]) -> tuple[str, float, list]:
+    """Controles no topo da área principal — sem depender da sidebar."""
+    st.markdown(
+        '<div style="background:#0D1421;border:1px solid #1E2D42;border-radius:10px;'
+        'padding:12px 16px;margin-bottom:16px">',
+        unsafe_allow_html=True,
+    )
+    c1, c2, c3 = st.columns([2, 1, 2])
 
-        st.markdown("**Empresa**")
-        ticker = st.selectbox(
-            "Ativo", tickers,
-            label_visibility="collapsed",
-        ) if tickers else st.text_input("Ticker", value="WEGE3").strip().upper()
+    with c1:
+        st.markdown(
+            '<div style="font-size:0.65rem;color:#475569;text-transform:uppercase;'
+            'letter-spacing:0.4px;margin-bottom:4px">Empresa</div>',
+            unsafe_allow_html=True,
+        )
+        ticker = (
+            st.selectbox("Empresa", tickers, label_visibility="collapsed", key="ve_ticker")
+            if tickers
+            else st.text_input("Ticker", value="WEGE3", key="ve_ticker_manual").strip().upper()
+        )
 
-        st.markdown("---")
-        st.markdown("**Filtros de listagem**")
+    with c2:
+        st.markdown(
+            '<div style="font-size:0.65rem;color:#475569;text-transform:uppercase;'
+            'letter-spacing:0.4px;margin-bottom:4px">Score mínimo</div>',
+            unsafe_allow_html=True,
+        )
+        score_min = st.number_input(
+            "Score mínimo", min_value=0.0, max_value=10.0,
+            value=0.0, step=0.5, format="%.1f",
+            label_visibility="collapsed", key="ve_score_min",
+        )
 
-        score_min = st.slider("Score mínimo", 0.0, 10.0, 0.0, 0.5)
-
+    with c3:
+        st.markdown(
+            '<div style="font-size:0.65rem;color:#475569;text-transform:uppercase;'
+            'letter-spacing:0.4px;margin-bottom:4px">Alerta de tese</div>',
+            unsafe_allow_html=True,
+        )
         alert_filter = st.multiselect(
             "Alerta de tese",
             ["SEM_ALERTA", "BAIXO", "MEDIO", "ALTO", "CRITICO"],
             default=[],
+            label_visibility="collapsed",
+            key="ve_alert_filter",
         )
 
-        st.markdown("---")
-        st.markdown(
-            '<div style="font-size:0.7rem;color:#334155">'
-            'Motor qualitativo B3<br>Análise fundamentalista autônoma'
-            '</div>',
-            unsafe_allow_html=True,
-        )
-
+    st.markdown("</div>", unsafe_allow_html=True)
     return ticker, score_min, alert_filter
 
 
@@ -824,10 +842,27 @@ def _tab_qualitativa(ticker: str) -> None:
                 unsafe_allow_html=True,
             )
 
-    # Relatório completo
+    # Relatório completo — exibe só a parte narrativa, sem caminhos de arquivo
     if report_path.exists():
         with st.expander("📄 Relatório qualitativo completo", expanded=False):
-            st.markdown(report_path.read_text(encoding="utf-8"))
+            import re as _re
+            report_text = report_path.read_text(encoding="utf-8")
+            # Corta seções com dados técnicos (caminhos de arquivo, hashes)
+            for _cutoff in ["## Documentos usados", "## Fontes", "## Raw", "## Arquivos"]:
+                if _cutoff in report_text:
+                    report_text = report_text[:report_text.index(_cutoff)].rstrip()
+                    break
+            # Remove backtick-quoted file paths residuais
+            report_text = _re.sub(r'`[A-Za-z]:\\[^`\n]*`', '', report_text)
+            report_text = _re.sub(r'`/[^`\n]{10,}`', '', report_text)
+            # Remove linhas que são só hashes ou caminhos
+            linhas = [
+                ln for ln in report_text.splitlines()
+                if not _re.match(r'^-\s+[a-f0-9]{16,}', ln)
+                and not _re.match(r'^-\s+\S+\|\s*tipo=', ln)
+            ]
+            report_text = "\n".join(linhas)
+            st.markdown(report_text)
 
 
 def _tab_valuation(ticker: str) -> None:
@@ -869,6 +904,50 @@ def _tab_valuation(ticker: str) -> None:
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
+def _tab_status_qualidade(ticker: str) -> None:
+    summary = _latest_run_summary(ticker)
+    excel_quality = _load_json(
+        ROOT / "outputs" / "post_excel_quality" / f"post_excel_quality_{ticker}.json",
+        {},
+    )
+    qualitative = _load_json(
+        QUAL_ROOT / "summaries" / ticker / "qualitative_scorecard.json",
+        {},
+    )
+    data_quality = summary.get("qualidade") or {}
+
+    st.markdown('<div class="sec-title">Status de Qualidade</div>', unsafe_allow_html=True)
+    cols = st.columns(4)
+    cols[0].metric("Dados CVM", data_quality.get("score", "s/info"))
+    cols[1].metric("Excel", excel_quality.get("score", "s/info"))
+    cols[2].metric("Qualitativo", qualitative.get("overall_score") or "s/evid.")
+    cols[3].metric("Status", excel_quality.get("status", "s/info"))
+
+    critical = []
+    critical.extend(data_quality.get("critical") or [])
+    critical.extend(
+        f"{f.get('sheet')}!{f.get('cell')}: {f.get('issue')}"
+        for f in excel_quality.get("findings", [])
+        if f.get("severity") in {"critica", "alta"}
+    )
+
+    st.markdown('<div class="sec-title">Alertas</div>', unsafe_allow_html=True)
+    if critical:
+        for item in critical[:20]:
+            st.error(item)
+    else:
+        st.success("Nenhum alerta critico registrado nos ultimos outputs.")
+
+    with st.expander("Artefatos de auditoria", expanded=False):
+        st.json({
+            "run_summary": summary.get("run_id"),
+            "excel": summary.get("output_excel"),
+            "post_excel_quality": excel_quality.get("markdown_path"),
+            "premissas": (summary.get("premissas_audit") or {}).get("markdown_path"),
+            "qualitativo": qualitative.get("ticker"),
+        })
+
+
 def main(skip_page_config: bool = False) -> None:
     if not skip_page_config:
         st.set_page_config(
@@ -903,10 +982,11 @@ def main(skip_page_config: bool = False) -> None:
     </div>
     """, unsafe_allow_html=True)
 
-    tab_geral, tab_qual, tab_num = st.tabs([
+    tab_geral, tab_qual, tab_num, tab_status = st.tabs([
         "🔥 Visão Geral & Top Picks",
         "📋 Análise Qualitativa",
         "📈 Valuation Numérico",
+        "Status de Qualidade",
     ])
 
     with tab_geral:
@@ -917,6 +997,9 @@ def main(skip_page_config: bool = False) -> None:
 
     with tab_num:
         _tab_valuation(ticker)
+
+    with tab_status:
+        _tab_status_qualidade(ticker)
 
 
 if __name__ == "__main__":

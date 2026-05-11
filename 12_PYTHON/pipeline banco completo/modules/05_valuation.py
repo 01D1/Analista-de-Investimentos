@@ -113,6 +113,11 @@ class MotorValuation:
             relacao_pn_on:  Relação de paridade PN/ON
         """
         relacao   = relacao_pn_on or self.cfg.get("RELACAO_PN_ON", 1.10)
+        try:
+            relacao = float(relacao)
+        except (TypeError, ValueError):
+            relacao = 1.0
+        relacao = relacao if relacao > 0 else 1.0
         acoes_on  = acoes_on_mil / 1_000   # converter para unidades MM
         acoes_pn  = acoes_pn_mil / 1_000
 
@@ -120,7 +125,7 @@ class MotorValuation:
         equity_total = equity_mm * 1_000_000   # de MM para R$ 1
 
         # Total de ações ponderado: ON + PN × relação
-        total_on_equiv = acoes_on + acoes_pn / relacao
+        total_on_equiv = acoes_on + acoes_pn * relacao
 
         if total_on_equiv <= 0:
             return {"preco_on": 0, "preco_pn": 0}
@@ -262,9 +267,9 @@ class MotorValuation:
         equity_mm = self.calcular_equity(vp_fcfe, vp_perpetuidade)
 
         # 5. Preços
+        relacao = self.cfg.get("RELACAO_PN_ON", 1.10)
         precos    = self.calcular_preco_justo(
-            equity_mm, acoes_on_mil, acoes_pn_mil,
-            self.cfg.get("RELACAO_PN_ON", 1.10))
+            equity_mm, acoes_on_mil, acoes_pn_mil, relacao)
         preco_on  = precos["preco_on"]
         preco_pn  = precos["preco_pn"]
 
@@ -281,7 +286,7 @@ class MotorValuation:
         # 8. Preço Teto
         equity_teto    = self.calcular_preco_teto(fcfe_proj, ke_list, g)
         precos_teto    = self.calcular_preco_justo(
-            equity_teto, acoes_on_mil, acoes_pn_mil)
+            equity_teto, acoes_on_mil, acoes_pn_mil, relacao)
         preco_teto_on  = precos_teto["preco_on"]
         preco_teto_pn  = precos_teto["preco_pn"]
 

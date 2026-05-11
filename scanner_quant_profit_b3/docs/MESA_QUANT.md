@@ -196,12 +196,12 @@ python -m src.scanners.import_market_events --csv data/events/market_events.csv 
 Fluxo recomendado:
 
 ```powershell
-python -m src.scanners.event_pipeline --start 2026-01-02 --end 2026-04-30 --sources csv --csv-path data/events/market_events_example.csv --save-db --csv
+python -m src.scanners.event_daily_update --start 2026-01-02 --end 2026-04-30 --save-db --csv --with-regimes
 python -m src.scanners.historical_quant_backtest --start 2026-01-02 --end 2026-04-30 --net --with-regimes --with-events --csv --save-db
 python -m src.scanners.event_context_analysis --start 2026-01-02 --end 2026-04-30 --csv --save-db
 ```
 
-A aba também mostra qualidade de cobertura, fontes usadas, eventos antes/depois da deduplicação e alerta quando a cobertura é fraca.
+A aba também mostra qualidade de cobertura, fontes usadas, eventos antes/depois da deduplicação, cobertura por regime e alerta quando a cobertura geral ou por regime é fraca.
 
 ### Alertas E Diagnostico
 
@@ -238,6 +238,7 @@ Mostra e permite baixar CSV de:
 - `signal_event_links`;
 - `event_context_runs`.
 - `event_coverage_runs`.
+- `event_coverage_by_regime`.
 
 ## Como Interpretar
 
@@ -256,7 +257,7 @@ Divergencias entre score legado e `score_final` nao sao erros automaticamente. E
 3. Rodar backtest historico com `--save-db`.
 4. Rodar walk-forward com `--save-db`.
 5. Rodar filtros ou otimização de thresholds em modo exploratório.
-6. Importar eventos locais, quando houver.
+6. Rodar a rotina de eventos com calendário macro e cobertura por regime.
 7. Rodar backtest/análise com `--with-events`.
 8. Abrir a Mesa Quant.
 9. Avaliar sinais, scores, calibracao, walk-forward, filtros, capacidade, regimes, eventos e alertas.

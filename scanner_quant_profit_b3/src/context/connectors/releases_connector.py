@@ -20,7 +20,7 @@ def _date_from_source(source: str | None):
 
 def load_events(start_date=None, end_date=None, tickers=None, root_path: str | Path | None = None) -> pd.DataFrame:
     root = Path(root_path) if root_path else DEFAULT_ROOT
-    events_root = root / "events"
+    events_root = root if root.name.lower() == "events" else root / "events"
     if not events_root.exists():
         return pd.DataFrame(columns=EVENT_COLUMNS)
     paths = []
@@ -64,4 +64,3 @@ def load_events(start_date=None, end_date=None, tickers=None, root_path: str | P
                 }
             )
     return pd.DataFrame(rows, columns=EVENT_COLUMNS)
-

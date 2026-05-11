@@ -11,6 +11,7 @@ from src.quant.governance import (
     BLOQUEADO_EVENTO_INSUFICIENTE,
     BLOQUEADO_EVENTO_CONTRA_SINAL,
     BLOQUEADO_COBERTURA_EVENTOS_INSUFICIENTE,
+    BLOQUEADO_COBERTURA_REGIME_INSUFICIENTE,
     CONCENTRACAO_EXCESSIVA,
     EM_OBSERVACAO,
     LIQUIDEZ_INSUFICIENTE,
@@ -19,6 +20,7 @@ from src.quant.governance import (
     evaluate_threshold_candidate,
     evaluate_regime_governance,
     evaluate_event_context_governance,
+    evaluate_event_coverage_governance,
     generate_governance_report,
     rank_governed_candidates,
 )
@@ -211,3 +213,48 @@ def test_evaluate_event_context_governance_blocks_insufficient_coverage_before_c
 
     assert review["governance_status"] == BLOQUEADO_COBERTURA_EVENTOS_INSUFICIENTE
     assert review["approved"] is False
+
+
+def test_evaluate_event_coverage_governance_blocks_weak_regime_coverage():
+    coverage_summary = {
+        "coverage_quality": "COBERTURA_MEDIA",
+        "signals_with_event_pct": 0.35,
+        "tickers_with_event_pct": 0.45,
+        "sources_count": 2,
+    }
+    by_regime = pd.DataFrame(
+        [
+            {
+                "regime_type": "primary_regime",
+                "regime_value": "ALTA_TENDENCIAL",
+                "signals_with_event_pct": 0.4,
+                "coverage_quality": "COBERTURA_MEDIA",
+            },
+            {
+                "regime_type": "primary_regime",
+                "regime_value": "ALTA_VOLATILIDADE",
+                "signals_with_event_pct": 0.02,
+                "coverage_quality": "COBERTURA_INSUFICIENTE",
+            },
+        ]
+    )
+
+    review = evaluate_event_coverage_governance(coverage_summary, by_regime)
+
+    assert review["governance_status"] == BLOQUEADO_COBERTURA_REGIME_INSUFICIENTE
+    assert review["approved"] is False
+    assert review["metrics"]["weak_regimes"]
+
+
+def test_evaluate_event_coverage_governance_blocks_general_weak_coverage():
+    review = evaluate_event_coverage_governance(
+        {
+            "coverage_quality": "COBERTURA_INSUFICIENTE",
+            "signals_with_event_pct": 0.01,
+            "tickers_with_event_pct": 0.05,
+            "sources_count": 1,
+        }
+    )
+
+    assert review["governance_status"] == BLOQUEADO_COBERTURA_EVENTOS_INSUFICIENTE
+    assert any("Cobertura geral" in reason for reason in review["reasons_against"])

@@ -54,6 +54,10 @@ class ColetorCVM:
         nome = hashlib.md5(chave.encode()).hexdigest() + ".json"
         return self.cache_dir / nome
 
+    def _zip_cache_path(self, url: str) -> Path:
+        nome = hashlib.md5(url.encode()).hexdigest() + ".zip"
+        return self.cache_dir / "cvm_zips" / nome
+
     def _cache_valido(self, path: Path) -> bool:
         if not path.exists():
             return False
@@ -80,6 +84,24 @@ class ColetorCVM:
         with open(p, "w", encoding="utf-8") as f:
             json.dump(dados, f, ensure_ascii=False, default=str)
 
+    def _baixar_zip_bytes(self, url: str) -> Optional[bytes]:
+        zip_path = self._zip_cache_path(url)
+        zip_path.parent.mkdir(parents=True, exist_ok=True)
+        if self.usar_cache and self._cache_valido(zip_path):
+            logger.debug(f"Cache ZIP CVM HIT: {url}")
+            return zip_path.read_bytes()
+
+        logger.info(f"Baixando: {url}")
+        try:
+            resp = self.session.get(url, timeout=self.TIMEOUT, stream=True)
+            resp.raise_for_status()
+            conteudo = b"".join(resp.iter_content(chunk_size=self.CHUNK_SIZE))
+            zip_path.write_bytes(conteudo)
+            return conteudo
+        except requests.RequestException as e:
+            logger.error(f"Erro ao baixar {url}: {e}")
+            return None
+
     # ── Download genérico ─────────────────────────────────────────────────────
 
     def _baixar_zip_csv(self, url: str, nome_arquivo: str) -> Optional[pd.DataFrame]:
@@ -91,14 +113,10 @@ class ColetorCVM:
         if cached is not None:
             return pd.DataFrame(cached)
 
-        logger.info(f"Baixando: {url}")
         try:
-            resp = self.session.get(url, timeout=self.TIMEOUT, stream=True)
-            resp.raise_for_status()
-
-            conteudo = b""
-            for chunk in resp.iter_content(chunk_size=self.CHUNK_SIZE):
-                conteudo += chunk
+            conteudo = self._baixar_zip_bytes(url)
+            if not conteudo:
+                return None
 
             with zipfile.ZipFile(io.BytesIO(conteudo)) as z:
                 # Procura o arquivo correto dentro do ZIP

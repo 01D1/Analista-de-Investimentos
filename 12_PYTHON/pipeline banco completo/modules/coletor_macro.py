@@ -5,9 +5,9 @@ Fonte: API pública do Banco Central do Brasil (BCB/SGS)
 Séries disponíveis:
   11   → DI Over (taxa Selic efetiva diária)
   432  → Selic meta
-  433  → IPCA acumulado 12 meses
-  13522→ IPCA mensal
-  258  → TJLP
+  433  → IPCA mensal
+  13522→ IPCA acumulado 12 meses
+  256  → TJLP
   12   → CDI diário
   4380 → PIB nominal
 """
@@ -36,9 +36,9 @@ class ColetorMacro:
         "di":           12,     # CDI/DI Over diário (% a.d.)
         "selic_meta":   432,    # Selic meta anual
         "selic_over":   11,     # Selic Over diária
-        "ipca_12m":     433,    # IPCA acumulado 12 meses
-        "ipca_mensal":  13522,  # IPCA mensal
-        "tjlp":         258,    # TJLP trimestral
+        "ipca_mensal":  433,    # IPCA mensal
+        "ipca_12m":     13522,  # IPCA acumulado 12 meses
+        "tjlp":         256,    # TJLP mensal (% a.a.)
         "pib_nominal":  4380,   # PIB nominal (R$ MM)
         "pib_variacao": 4385,   # PIB variação real %
         "cambio_dolar": 1,      # USD/BRL
@@ -51,20 +51,44 @@ class ColetorMacro:
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.session    = requests.Session()
         self.session.headers.update({
-            "Accept": "application/json",
+            "Accept": "*/*",
             "User-Agent": "PipelineValuacaoBancaria/1.0 (fins educacionais)",
         })
 
     # ── Cache ─────────────────────────────────────────────────────────────────
 
     def _cache_path(self, serie_cod: int) -> Path:
-        return self.cache_dir / f"bcb_serie_{serie_cod}.parquet"
+        return self.cache_dir / f"bcb_serie_{serie_cod}.csv"
 
     def _cache_valido(self, path: Path, ttl_horas: int = 12) -> bool:
         if not path.exists():
             return False
         mtime = datetime.fromtimestamp(path.stat().st_mtime)
         return datetime.now() - mtime < timedelta(hours=ttl_horas)
+
+    def _ler_cache(self, path: Path) -> pd.Series:
+        df = pd.read_csv(path)
+        df["data"] = pd.to_datetime(df["data"], errors="coerce")
+        df["valor"] = pd.to_numeric(df["valor"], errors="coerce")
+        serie = df.dropna().set_index("data")["valor"].sort_index()
+        return serie.astype(float)
+
+    def _gravar_cache(self, path: Path, serie: pd.Series) -> None:
+        out = serie.sort_index().reset_index()
+        out.columns = ["data", "valor"]
+        out.to_csv(path, index=False)
+
+    def _janelas_datas(self, inicio: str, fim: str) -> list[tuple[str, str]]:
+        """Divide consultas longas para respeitar limite recente do SGS."""
+        ini_dt = datetime.strptime(inicio, self.DATE_FMT)
+        fim_dt = datetime.strptime(fim, self.DATE_FMT)
+        janelas = []
+        atual = ini_dt
+        while atual <= fim_dt:
+            fim_janela = min(atual + timedelta(days=3650), fim_dt)
+            janelas.append((atual.strftime(self.DATE_FMT), fim_janela.strftime(self.DATE_FMT)))
+            atual = fim_janela + timedelta(days=1)
+        return janelas
 
     # ── Download de série ─────────────────────────────────────────────────────
 
@@ -88,22 +112,24 @@ class ColetorMacro:
         if self.usar_cache and self._cache_valido(cache_p):
             logger.debug(f"Cache BCB HIT: série {codigo}")
             try:
-                return pd.read_parquet(cache_p).squeeze()
+                return self._ler_cache(cache_p)
             except Exception:
                 pass
 
         url = self.BCB_URL.format(cod=codigo)
-        params = {
-            "formato": "json",
-            "dataInicial": inicio,
-            "dataFinal":   fim,
-        }
 
         logger.info(f"Baixando série BCB {codigo}...")
         try:
-            resp = self.session.get(url, params=params, timeout=self.TIMEOUT)
-            resp.raise_for_status()
-            dados = resp.json()
+            dados = []
+            for data_inicial, data_final in self._janelas_datas(inicio, fim):
+                params = {
+                    "formato": "json",
+                    "dataInicial": data_inicial,
+                    "dataFinal":   data_final,
+                }
+                resp = self.session.get(url, params=params, timeout=self.TIMEOUT)
+                resp.raise_for_status()
+                dados.extend(resp.json())
 
             if not dados:
                 logger.warning(f"Série {codigo} vazia")
@@ -114,15 +140,22 @@ class ColetorMacro:
                                           errors="coerce")
             df["valor"] = pd.to_numeric(df["valor"], errors="coerce")
             df = df.dropna().set_index("data")["valor"]
+            df = df[~df.index.duplicated(keep="last")].sort_index()
             df.name = str(codigo)
 
-            df.to_frame().to_parquet(cache_p)
+            self._gravar_cache(cache_p, df)
             logger.info(f"  Série {codigo}: {len(df)} observações "
                         f"({df.index[0].date()} → {df.index[-1].date()})")
             return df
 
         except Exception as e:
             logger.error(f"Erro ao baixar série BCB {codigo}: {e}")
+            if self.usar_cache and cache_p.exists():
+                try:
+                    logger.warning(f"Usando cache BCB expirado para série {codigo}")
+                    return self._ler_cache(cache_p)
+                except Exception:
+                    pass
             return pd.Series(dtype=float)
 
     # ── Taxas anuais ──────────────────────────────────────────────────────────
@@ -136,11 +169,11 @@ class ColetorMacro:
         Retorna a Selic média anual (acumulada no ano / 252 dias úteis).
         Converte taxa diária → anual.
         """
-        serie = self.baixar_serie(self.SERIES["di"])  # CDI diário em % a.d.
+        serie = self.baixar_serie(self.SERIES["selic_over"])  # Selic Over diária em % a.d.
         resultado = {}
 
         if not self._serie_tem_datetime_index(serie):
-            logger.warning("Série DI sem DatetimeIndex — usando fallback histórico")
+            logger.warning("Série Selic Over sem DatetimeIndex — usando fallback histórico")
             fallback = {2019: 0.0596, 2020: 0.0228, 2021: 0.0448,
                         2022: 0.1233, 2023: 0.1315, 2024: 0.1073}
             return {a: fallback.get(a, 0.105) for a in anos}
@@ -152,7 +185,7 @@ class ColetorMacro:
                 continue
             taxa_diaria = dados_ano.mean() / 100
             taxa_anual  = (1 + taxa_diaria) ** 252 - 1
-            resultado[ano] = round(taxa_anual, 6)
+            resultado[ano] = float(round(taxa_anual, 6))
             logger.debug(f"  Selic {ano}: {taxa_anual:.4%}")
 
         return resultado
@@ -200,7 +233,7 @@ class ColetorMacro:
             # Sanidade: IPCA anual de 2% a 30% é plausível; fora disso usa fallback
             ipca_calc = taxa_anual - 1
             if 0.02 <= ipca_calc <= 0.30:
-                resultado[ano] = round(ipca_calc, 6)
+                resultado[ano] = float(round(ipca_calc, 6))
             else:
                 logger.warning(f"IPCA calculado fora do intervalo plausível ({ipca_calc:.1%}) "
                                f"para {ano} — usando fallback")
@@ -357,13 +390,17 @@ class ColetorMacro:
         Returns:
             dict {ano: mediana}
         """
-        url = (f"https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/"
-               f"odata/ExpectativasMercadoAnuais"
-               f"?%24filter=Indicador%20eq%20'{indicador}'"
-               f"&%24top=100&%24format=json&%24select=Indicador,Data,Ano,Mediana")
+        url = (
+            "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/"
+            "odata/ExpectativasMercadoAnuais"
+            f"?%24filter=Indicador%20eq%20'{indicador}'"
+            "&%24top=5000&%24format=json"
+            "&%24orderby=Data%20desc"
+            "&%24select=Indicador,Data,DataReferencia,Mediana"
+        )
 
         try:
-            resp = requests.get(url, timeout=self.TIMEOUT)
+            resp = self.session.get(url, timeout=self.TIMEOUT)
             resp.raise_for_status()
             dados = resp.json().get("value", [])
 
@@ -372,6 +409,8 @@ class ColetorMacro:
 
             df = pd.DataFrame(dados)
             df["Data"] = pd.to_datetime(df["Data"], errors="coerce")
+            ref_col = "DataReferencia" if "DataReferencia" in df.columns else "Ano"
+            df["Ano"] = pd.to_numeric(df[ref_col], errors="coerce")
             # Pegar a expectativa mais recente por ano
             df = (df.sort_values("Data")
                     .groupby("Ano")["Mediana"]

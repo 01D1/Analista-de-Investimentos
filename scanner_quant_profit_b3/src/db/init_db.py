@@ -493,6 +493,23 @@ def init_database(db_path: str | Path, verbose: bool = True) -> None:
     """)
 
     cur.execute("""
+    CREATE TABLE IF NOT EXISTS event_coverage_by_regime (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        coverage_run_id INTEGER,
+        regime_type TEXT,
+        regime_value TEXT,
+        signals_count INTEGER,
+        signals_with_event INTEGER,
+        signals_without_event INTEGER,
+        signals_with_event_pct REAL,
+        dominant_event_type TEXT,
+        dominant_event_source TEXT,
+        coverage_quality TEXT,
+        metadata_json TEXT
+    )
+    """)
+
+    cur.execute("""
     CREATE TABLE IF NOT EXISTS market_regime_daily (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         trade_date TEXT,
@@ -700,6 +717,8 @@ def init_database(db_path: str | Path, verbose: bool = True) -> None:
     cur.execute("CREATE INDEX IF NOT EXISTS idx_market_events_ticker_date ON market_events(ticker, event_date)")
     cur.execute("CREATE INDEX IF NOT EXISTS idx_market_events_type_date ON market_events(event_type, event_date)")
     cur.execute("CREATE INDEX IF NOT EXISTS idx_event_coverage_runs_created ON event_coverage_runs(created_at)")
+    cur.execute("CREATE INDEX IF NOT EXISTS idx_event_coverage_by_regime_run ON event_coverage_by_regime(coverage_run_id)")
+    cur.execute("CREATE INDEX IF NOT EXISTS idx_event_coverage_by_regime_value ON event_coverage_by_regime(regime_type, regime_value)")
     cur.execute("CREATE INDEX IF NOT EXISTS idx_signal_event_links_signal ON signal_event_links(ticker, signal_date)")
     cur.execute("CREATE INDEX IF NOT EXISTS idx_market_regime_daily_date ON market_regime_daily(trade_date)")
     cur.execute("CREATE INDEX IF NOT EXISTS idx_regime_backtest_summary_run ON regime_backtest_summary(run_id)")
@@ -723,6 +742,7 @@ def init_database(db_path: str | Path, verbose: bool = True) -> None:
         print("  - Tabelas score_calibration_* criadas")
         print("  - Tabelas historical_backtest_* criadas")
         print("  - Tabelas market_events, signal_event_links e event_context_runs criadas")
+        print("  - Tabelas event_coverage_runs e event_coverage_by_regime criadas")
         print("  - Tabelas market_regime_daily e regime_backtest_summary criadas")
         print("  - Tabelas quality_filter_runs e threshold_optimization_runs criadas")
         print("  - Tabelas filter_walk_forward_* criadas")

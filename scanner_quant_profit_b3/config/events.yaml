@@ -1,0 +1,25 @@
+sources:
+  csv:
+    enabled: true
+    path: data/events/market_events_example.csv
+
+  news_hunter:
+    enabled: true
+    db_path: ../12_PYTHON/news_hunter/banco.db
+
+  macro_calendar:
+    enabled: true
+    path: ../12_PYTHON/news_hunter/dados/calendario_economico.json
+
+  cvm:
+    enabled: true
+    base_dir: ../12_PYTHON/pipeline banco completo/data/qualitative/processed
+
+  releases:
+    enabled: true
+    base_dir: ../12_PYTHON/pipeline banco completo/data/qualitative/events
+
+coverage:
+  min_signals_with_event_pct: 10
+  min_tickers_with_event_pct: 30
+  min_sources_count: 2

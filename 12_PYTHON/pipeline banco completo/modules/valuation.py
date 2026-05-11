@@ -116,12 +116,18 @@ class MotorValuation:
             relacao_pn_on:  Relação de paridade PN/ON
         """
         relacao   = relacao_pn_on or self.cfg.get("RELACAO_PN_ON", 1.10)
+        try:
+            relacao = float(relacao)
+        except (TypeError, ValueError):
+            relacao = 1.0
+        relacao   = relacao if relacao > 0 else 1.0
         # acoes_on_mil e acoes_pn_mil estão em MIL unidades
         # equity_mm está em R$ MM
         equity_total   = equity_mm * 1_000_000     # R$ MM → R$ 1
         acoes_on_u     = acoes_on_mil * 1_000       # mil → unidades
         acoes_pn_u     = acoes_pn_mil * 1_000       # mil → unidades
-        total_on_equiv = acoes_on_u + acoes_pn_u / relacao
+        # relacao_pn_on: PN/ON. Ex.: 1.10 => cada PN vale 1.10 ON-equivalente.
+        total_on_equiv = acoes_on_u + acoes_pn_u * relacao
 
         if total_on_equiv <= 0:
             return {"preco_on": 0, "preco_pn": 0}
@@ -294,13 +300,18 @@ class MotorValuation:
 
         # 5. Preços
         relacao   = self.cfg.get("RELACAO_PN_ON", 1.10)
+        try:
+            relacao = float(relacao)
+        except (TypeError, ValueError):
+            relacao = 1.0
         precos    = self.calcular_preco_justo(
             equity_mm, acoes_on_mil, acoes_pn_mil, relacao)
         preco_on  = precos["preco_on"]
         preco_pn  = precos["preco_pn"]
 
         # Denominador em MIL ações ON-equivalentes (mesmo que calcular_preco_justo)
-        total_on_equiv_mil = (acoes_on_mil + acoes_pn_mil / relacao)
+        relacao = relacao if relacao > 0 else 1.0
+        total_on_equiv_mil = (acoes_on_mil + acoes_pn_mil * relacao)
 
         # 6. Upside
         upside_on = (preco_on / cotacao_on - 1) if cotacao_on else 0
@@ -315,12 +326,12 @@ class MotorValuation:
         # então usamos cotacao_pn diretamente mas mantemos a escala por ON-equiv:
         tir_pn = self.calcular_tir(cotacao_pn, fcfe_proj, fcfe_desc,
                                     perpetuidade, fator_ult,
-                                    total_on_equiv_mil=total_on_equiv_mil)
+                                    total_on_equiv_mil=total_on_equiv_mil / relacao)
 
         # 8. Preço Teto
         equity_teto    = self.calcular_preco_teto(fcfe_proj, ke_list, g)
         precos_teto    = self.calcular_preco_justo(
-            equity_teto, acoes_on_mil, acoes_pn_mil)
+            equity_teto, acoes_on_mil, acoes_pn_mil, relacao)
         preco_teto_on  = precos_teto["preco_on"]
         preco_teto_pn  = precos_teto["preco_pn"]
 
@@ -454,12 +465,17 @@ class MotorValuation:
 
         # 6. Preços
         relacao   = self.cfg.get("RELACAO_PN_ON", 1.10)
+        try:
+            relacao = float(relacao)
+        except (TypeError, ValueError):
+            relacao = 1.0
         precos    = self.calcular_preco_justo(
             equity_mm, acoes_on_mil, acoes_pn_mil, relacao)
         preco_on  = precos["preco_on"]
         preco_pn  = precos["preco_pn"]
 
-        total_on_equiv_mil = (acoes_on_mil + acoes_pn_mil / relacao)
+        relacao = relacao if relacao > 0 else 1.0
+        total_on_equiv_mil = (acoes_on_mil + acoes_pn_mil * relacao)
 
         # 7. Upside
         upside_on = (preco_on / cotacao_on - 1) if cotacao_on else 0
@@ -474,13 +490,13 @@ class MotorValuation:
                                     total_on_equiv_mil=total_on_equiv_mil)
         tir_pn = self.calcular_tir(cotacao_pn, fcff_proj, fcff_desc,
                                     perpetuidade, fator_ult,
-                                    total_on_equiv_mil=total_on_equiv_mil)
+                                    total_on_equiv_mil=total_on_equiv_mil / relacao)
 
         # 9. Preço Teto
         equity_teto   = self.calcular_preco_teto(fcff_proj, wacc_map, g)
         equity_teto   = round(equity_teto - divida_liquida, 3)  # EV → equity
         precos_teto   = self.calcular_preco_justo(
-            equity_teto, acoes_on_mil, acoes_pn_mil)
+            equity_teto, acoes_on_mil, acoes_pn_mil, relacao)
         preco_teto_on = precos_teto["preco_on"]
         preco_teto_pn = precos_teto["preco_pn"]
 

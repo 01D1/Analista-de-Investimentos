@@ -144,8 +144,12 @@ def _resumo_executivo(analise) -> str:
 
 def _tabela_valuation(valuation, mercado) -> str:
     pa  = _brl(mercado.get("preco"))
+    classe = valuation.get("classe_principal") or mercado.get("classe_principal") or "ON"
+    status = valuation.get("status_valuation", "CONFIAVEL")
+    pj_principal = _brl(valuation.get("preco_justo_principal", valuation.get("preco_justo_on")))
+    up_principal = _pct(valuation.get("upside_principal", valuation.get("upside_on")))
     pj  = _brl(valuation.get("preco_justo_on"))
-    pjpn = _brl(valuation.get("preco_justo_pn"))
+    pjpn = _brl(valuation.get("preco_justo_pn")) if valuation.get("possui_pn") else "não aplicável"
     pt  = _brl(valuation.get("preco_teto_on"))
     up  = _pct(valuation.get("upside_on"))
     tir = _pct(valuation.get("tir_on"))
@@ -158,6 +162,10 @@ def _tabela_valuation(valuation, mercado) -> str:
 
 | Métrica | Valor |
 |---|---|
+| Status do Valuation | {status} |
+| Classe Principal | {classe} |
+| **Preço Justo Principal** | **{pj_principal}** |
+| **Upside Principal** | **{up_principal}** |
 | Cotação Atual (ON) | {pa} |
 | **Preço Justo ON** | **{pj}** |
 | Preço Justo PN | {pjpn} |
@@ -308,10 +316,17 @@ def _premissas_utilizadas(dados_empresa, valuation, mercado) -> str:
 
 
 def _avisos_limitacoes(avisos: list[str], qualidade: dict) -> str:
-    if not avisos and not qualidade.get("warnings") and not qualidade.get("critical"):
+    status = qualidade.get("status_valuation")
+    if not avisos and not qualidade.get("warnings") and not qualidade.get("critical") and status in {None, "CONFIAVEL"}:
         return ""
 
     linhas = ["## Avisos e Limitações\n"]
+    if status and status != "CONFIAVEL":
+        linhas.append(f"**Status do valuation:** {status} — {qualidade.get('motivo_status', 'revisar qualidade dos dados.')}")
+        report = (qualidade.get("pre_valuation_report") or {}).get("markdown_path")
+        if report:
+            linhas.append(f"Relatório do quality gate: `{report}`")
+        linhas.append("")
 
     criticos = qualidade.get("critical", [])
     if criticos:

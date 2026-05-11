@@ -434,6 +434,7 @@ class MotorProjecoes:
         # Série combinada Selic: histórico (anos reais) + projeção (anos futuros)
         # Necessária para a regressão NIM ~ Selic usar dados históricos reais
         selic_completa = {**selic_hist, **selic_proj}
+        avisos_modelo = []
 
         logger.info("\n=== Rodando projeções ===")
 
@@ -452,7 +453,17 @@ class MotorProjecoes:
 
         # 4. Margem financeira bruta
         spread_cli = serie(ind, "nim")   # proxy
+        mfb_hist_serie = serie(dre, "margem_financeira_bruta")
         mfb_proj   = {a: ar_proj[a] * nim_proj[a] for a in anos_proj}
+        if all(abs(v) < 1e-9 for v in mfb_proj.values()) and self._ultimo_valor(mfb_hist_serie) > 0:
+            aviso = "Ativos remuneraveis/carteira ausentes; MFB projetada diretamente pelo historico da DRE."
+            logger.warning("  %s", aviso)
+            avisos_modelo.append(aviso)
+            mfb_proj = self.projetar_servicos(mfb_hist_serie, anos_proj)
+            ar_proj = {
+                a: round(mfb_proj[a] / max(nim_proj.get(a, 0.005), 0.005), 3)
+                for a in anos_proj
+            }
 
         # 5. Margem com clientes e mercado
         mc_proj = self.projetar_margem_clientes(
@@ -494,8 +505,6 @@ class MotorProjecoes:
         # porque os mapeamentos de contas variam entre anos e omitem despesas.
         # Usar a margem operacional/MFB histórica é mais robusta.
         res_op_hist    = serie(dre, "resultado_operacional")
-        mfb_hist_serie = serie(dre, "margem_financeira_bruta")
-
         margens_hist = {}
         for a in res_op_hist.index:
             mfb_a = float(mfb_hist_serie.get(a, 0)) if a in mfb_hist_serie.index else 0
@@ -565,6 +574,7 @@ class MotorProjecoes:
             "capex":                        capex_proj,
             "capital_regulatorio":          cap_reg_proj,
             "fcfe":                         fcfe_proj,
+            "_avisos_modelo":                avisos_modelo,
         }
 
 

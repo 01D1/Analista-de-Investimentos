@@ -88,7 +88,10 @@ def parse_args():
     p.add_argument(
         "--all",
         action="store_true",
-        help="Com --auditar-dados, audita todos os tickers cadastrados",
+        help=(
+            "Com --auditar-dados, audita todos os tickers cadastrados; "
+            "sem --auditar-dados, roda valuation para todos os tickers cadastrados"
+        ),
     )
     p.add_argument(
         "--audit-excel",
@@ -99,6 +102,44 @@ def parse_args():
         "--sem-itr-audit",
         action="store_true",
         help="Com --auditar-dados, pula checagem ITR para acelerar a auditoria",
+    )
+    p.add_argument(
+        "--sem-qualitativo",
+        action="store_true",
+        help="Pula o motor qualitativo integrado ao valuation",
+    )
+    p.add_argument(
+        "--qualitativo-only",
+        action="store_true",
+        help="Gera apenas a analise qualitativa do ticker, sem rodar valuation numerico",
+    )
+    p.add_argument(
+        "--qualitativo-cvm",
+        action="store_true",
+        help="Mantido por compatibilidade; o motor qualitativo ja busca CVM/IPE automaticamente quando possivel",
+    )
+    p.add_argument(
+        "--sem-ri-crawler",
+        action="store_true",
+        help="Pula crawler configuravel de sites de RI no motor qualitativo",
+    )
+    p.add_argument(
+        "--ri-url",
+        action="append",
+        default=None,
+        help="URL inicial de RI para crawler qualitativo. Pode repetir para mais de uma fonte.",
+    )
+    p.add_argument(
+        "--ri-depth",
+        default=1,
+        type=int,
+        help="Profundidade do crawler de RI a partir da URL inicial (padrao: 1)",
+    )
+    p.add_argument(
+        "--ri-max-docs",
+        default=25,
+        type=int,
+        help="Numero maximo de documentos salvos pelo crawler de RI por empresa",
     )
 
     # Cotações
@@ -135,7 +176,7 @@ def parse_args():
         "--g",
         default=cfg.G_PERPETUIDADE,
         type=float,
-        help=f"Taxa de crescimento na perpetuidade (padrão: {cfg.G_PERPETUIDADE:.1%})",
+        help=f"Taxa de crescimento na perpetuidade (padrao: {cfg.G_PERPETUIDADE * 100:.1f}%%)",
     )
 
     # Controles
@@ -177,6 +218,199 @@ def _caminho_valuation_snapshot(ticker: str, nome: str) -> Path:
     nome_safe = _nome_arquivo_seguro(nome)
     data = datetime.now().strftime("%Y%m%d")
     return cfg.OUTPUT_DIR / "valuations" / ticker_safe / f"Valuation_{ticker_safe}_{nome_safe}_{data}.xlsx"
+
+
+def _coletar_ri_urls(dados_empresa: dict | None, args) -> list[str]:
+    """Coleta fontes de RI cadastradas na empresa e/ou passadas no CLI."""
+    dados_empresa = dados_empresa or {}
+    urls: list[str] = []
+
+    for key in ("ri_url", "url_ri", "site_ri"):
+        value = dados_empresa.get(key)
+        if value:
+            urls.append(str(value))
+
+    for key in ("ri_urls", "fontes_ri"):
+        value = dados_empresa.get(key)
+        if isinstance(value, (list, tuple, set)):
+            urls.extend(str(item) for item in value if item)
+        elif value:
+            urls.append(str(value))
+
+    urls.extend(str(item) for item in (getattr(args, "ri_url", None) or []) if item)
+
+    cleaned = []
+    for url in urls:
+        url = str(url or "").strip()
+        if url and url not in cleaned:
+            cleaned.append(url)
+    return cleaned
+
+
+def _carregar_market_overrides() -> dict:
+    """Carrega overrides manuais de mercado, se existirem."""
+    path = ROOT / "config" / "market_overrides.yaml"
+    if not path.exists():
+        return {}
+    try:
+        import yaml
+
+        with open(path, "r", encoding="utf-8") as f:
+            dados = yaml.safe_load(f) or {}
+        return dados.get("overrides", {}) or {}
+    except Exception as exc:
+        if logger:
+            logger.warning("Nao foi possivel carregar market_overrides.yaml: %s", exc)
+        return {}
+
+
+def _market_override_for(ticker: str, dados_empresa: dict | None) -> dict:
+    """Retorna override de cotacao/base acionaria para o ticker."""
+    dados_empresa = dados_empresa or {}
+    candidatos = [ticker.upper(), str(dados_empresa.get("ticker") or "").upper()]
+    candidatos.extend(str(a).upper() for a in dados_empresa.get("aliases", []) or [])
+
+    override = {}
+    for key in ("mercado_manual", "market_overrides"):
+        valor = dados_empresa.get(key)
+        if isinstance(valor, dict):
+            override.update(valor)
+
+    externos = _carregar_market_overrides()
+    for cand in candidatos:
+        if cand and isinstance(externos.get(cand), dict):
+            override.update(externos[cand])
+            break
+    return override
+
+
+def _float_positivo(valor) -> float:
+    try:
+        numero = float(valor)
+        return numero if numero > 0 else 0.0
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def _aplicar_market_override(
+    *,
+    ticker: str,
+    dados_empresa: dict | None,
+    cotacao_on: float,
+    cotacao_pn: float,
+    acoes_on: float,
+    acoes_pn: float,
+) -> tuple[float, float, float, float, dict]:
+    """Preenche lacunas de mercado com dados manuais auditaveis."""
+    override = _market_override_for(ticker, dados_empresa)
+    if not override:
+        return cotacao_on, cotacao_pn, acoes_on, acoes_pn, {}
+
+    force = bool(override.get("forcar", False))
+    aplicados = {
+        "fonte": override.get("fonte") or "market_overrides.yaml/empresas.yaml",
+        "data": override.get("data"),
+        "forcar": force,
+        "campos": [],
+    }
+
+    def maybe(current, *keys):
+        for key in keys:
+            val = _float_positivo(override.get(key))
+            if val and (force or not current):
+                aplicados["campos"].append(key)
+                return val
+        return current
+
+    cotacao_on = maybe(cotacao_on, "cotacao_on", "preco_on", "preco")
+    cotacao_pn = maybe(cotacao_pn, "cotacao_pn", "preco_pn")
+    acoes_on = maybe(acoes_on, "acoes_on_mil", "acoes_total_mil", "acoes_on")
+    acoes_pn = maybe(acoes_pn, "acoes_pn_mil", "acoes_pn")
+
+    if aplicados["campos"] and logger:
+        logger.warning(
+            "  Mercado manual aplicado para %s (%s): %s",
+            ticker,
+            aplicados["fonte"],
+            ", ".join(aplicados["campos"]),
+        )
+    return cotacao_on, cotacao_pn, acoes_on, acoes_pn, aplicados if aplicados["campos"] else {}
+
+
+def _classe_principal_acao(ticker: str, dados_acao: dict | None) -> str:
+    dados_acao = dados_acao or {}
+    ticker_up = ticker.upper()
+    tipo_acao = str(dados_acao.get("tipo_acao") or "").upper()
+    ticker_pn = str(dados_acao.get("ticker_pn") or "").upper()
+    ticker_on = str(dados_acao.get("ticker_on") or "").upper()
+    if tipo_acao == "UNITS":
+        return "UNIT"
+    if ticker_pn and ticker_up == ticker_pn:
+        return "PN"
+    if ticker_on and ticker_up == ticker_on:
+        return "ON"
+    if ticker_up.endswith("4") and tipo_acao == "ON_PN":
+        return "PN"
+    return "ON"
+
+
+def _enriquecer_valuation_classe_acao(
+    valuation: dict,
+    *,
+    ticker: str,
+    dados_acao: dict | None,
+    cotacao_on: float,
+    cotacao_pn: float,
+    acoes_on: float,
+    acoes_pn: float,
+) -> list[str]:
+    """Adiciona campos explicitos para ON/PN/UNIT sem quebrar chaves antigas."""
+    dados_acao = dados_acao or {}
+    tipo_acao = str(dados_acao.get("tipo_acao") or "ON_ONLY").upper()
+    classe = _classe_principal_acao(ticker, dados_acao)
+    relacao = valuation.get("relacao_pn_on") or dados_acao.get("relacao_pn_on") or 1.0
+    avisos: list[str] = []
+
+    if classe == "PN":
+        preco = valuation.get("preco_justo_pn")
+        upside = valuation.get("upside_pn")
+        tir = valuation.get("tir_pn")
+        cotacao = cotacao_pn or cotacao_on
+    elif classe == "UNIT":
+        preco = valuation.get("preco_justo_on")
+        upside = valuation.get("upside_on")
+        tir = valuation.get("tir_on")
+        cotacao = cotacao_on
+        valuation["preco_justo_unit"] = preco
+        valuation["cotacao_unit"] = cotacao
+        valuation["upside_unit"] = upside
+        valuation["tir_unit"] = tir
+        valuation["acoes_units_mil"] = acoes_on or acoes_pn
+        if acoes_pn:
+            avisos.append("Ticker UNIT com acoes_pn_mil preenchido; revisar se a base representa units ou classes subjacentes.")
+    else:
+        preco = valuation.get("preco_justo_on")
+        upside = valuation.get("upside_on")
+        tir = valuation.get("tir_on")
+        cotacao = cotacao_on
+
+    valuation.update(
+        {
+            "tipo_acao": tipo_acao,
+            "classe_principal": classe,
+            "ticker_principal": ticker.upper(),
+            "preco_justo_principal": preco,
+            "cotacao_principal": cotacao,
+            "upside_principal": upside,
+            "tir_principal": tir,
+            "acoes_on_mil": valuation.get("acoes_on_mil", acoes_on),
+            "acoes_pn_mil": valuation.get("acoes_pn_mil", acoes_pn),
+            "relacao_pn_on": relacao,
+            "possui_pn": bool(tipo_acao == "ON_PN" and acoes_pn),
+            "possui_unit": classe == "UNIT",
+        }
+    )
+    return avisos
 
 
 def _verificar_excel_livre(caminho: Path) -> bool:
@@ -254,6 +488,22 @@ def _localizar_template(
                 )
                 return candidatos_output[0]
 
+        # Fallback interno: se ainda nao existe arquivo canonico para este banco,
+        # usa uma planilha bancaria canonica ja criada como base de layout.
+        # O escritor sobrescreve dados, premissas e identidade da empresa.
+        candidatos_base = []
+        for ticker_base in ["BBDC4", "BBAS3", "ITUB4", "SANB11", "BPAC11"]:
+            base = cfg.OUTPUT_DIR / "valuations" / ticker_base / f"Valuation_{ticker_base}.xlsx"
+            if base.exists() and (not caminho_incremental or base.resolve() != Path(caminho_incremental).resolve()):
+                candidatos_base.append(base)
+        if candidatos_base:
+            if logger:
+                logger.info(
+                    f"  Usando base bancaria interna: {candidatos_base[0].name} "
+                    f"para iniciar {ticker}"
+                )
+            return candidatos_base[0]
+
         raise FileNotFoundError(
             f"Base bancária não encontrada para {ticker}.\n"
             f"  Rode uma vez com --template apontando para sua base bancária própria\n"
@@ -325,6 +575,9 @@ def _escrever_run_summary(
     premissas_efetivas: dict,
     caminho_arquivo: str,
     analise: dict = None,
+    qualitativo: dict = None,
+    post_excel_quality: dict = None,
+    premissas_audit: dict = None,
 ) -> Path:
     """Persiste resumo estruturado da execução para auditoria e automação."""
     ts = datetime.now()
@@ -374,6 +627,9 @@ def _escrever_run_summary(
         },
         "output_excel": caminho_arquivo,
         "intelligence": analise,
+        "qualitativo": qualitativo,
+        "post_excel_quality": post_excel_quality,
+        "premissas_audit": premissas_audit,
     }
 
     summary_path = summary_dir / f"run_summary_{ticker}_{ts.strftime('%Y%m%d_%H%M%S')}.json"
@@ -456,6 +712,11 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
     tipo_empresa = dados_empresa.get("tipo_empresa", "general")
     ticker = dados_empresa["ticker"]  # usar o ticker canônico (case correto)
     nome = nome or dados_empresa["nome"]
+    from config.metodologias_setoriais import get_metodologia_setorial
+
+    metodologia_setorial = get_metodologia_setorial(
+        dados_empresa.get("setor"), tipo_empresa
+    )
     logger.info("=" * 70)
     tipo_label = (
         "BANCÁRIO" if tipo_empresa == "bank" else dados_empresa.get("setor", "GERAL").upper()
@@ -494,20 +755,37 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
 
     coletor_merc = ColetorMercado(cfg.CACHE_DIR, usar_cache)
 
-    par_ticker = (
-        (dados_banco or {}).get("ticker_on")
-        if (dados_banco and (dados_banco or {}).get("ticker_on", "").upper() != ticker.upper())
-        else None
+    dados_acao = dados_banco or dados_empresa or {}
+    ticker_upper = ticker.upper()
+    ticker_on_cfg = (dados_acao.get("ticker_on") or "").upper()
+    ticker_pn_cfg = (dados_acao.get("ticker_pn") or "").upper()
+    tipo_acao_cfg = str(dados_acao.get("tipo_acao") or "ON_ONLY").upper()
+    eh_unit = tipo_acao_cfg == "UNITS"
+    relacao_acao = dados_acao.get("relacao_pn_on", cfg.RELACAO_PN_ON) or 1.0
+    try:
+        relacao_acao = float(relacao_acao)
+    except (TypeError, ValueError):
+        relacao_acao = float(cfg.RELACAO_PN_ON)
+    relacao_acao = relacao_acao if relacao_acao > 0 else 1.0
+    if eh_unit:
+        relacao_acao = 1.0
+
+    par_ticker = None
+    if not eh_unit and (ticker_on_cfg or ticker_pn_cfg):
+        if ticker_upper == ticker_pn_cfg and ticker_on_cfg:
+            par_ticker = ticker_on_cfg
+        elif ticker_upper == ticker_on_cfg and ticker_pn_cfg:
+            par_ticker = ticker_pn_cfg
+        elif ticker_on_cfg and ticker_on_cfg != ticker_upper:
+            par_ticker = ticker_on_cfg
+        elif ticker_pn_cfg and ticker_pn_cfg != ticker_upper:
+            par_ticker = ticker_pn_cfg
+
+    eh_pn = False if eh_unit else (
+        ticker_upper == ticker_pn_cfg
+        if ticker_pn_cfg
+        else ticker_upper.endswith("4")
     )
-    if dados_banco:
-        _ton = dados_banco.get("ticker_on", "")
-        _tpn = dados_banco.get("ticker_pn") or ""
-        par_ticker = (
-            _ton
-            if _ton.upper() != ticker.upper()
-            else (_tpn if _tpn.upper() != ticker.upper() else None)
-        )
-    eh_pn = ticker.upper().endswith("4") or ticker.upper().endswith("11")
 
     cotacao_on = args.cotacao_on
     cotacao_pn = args.cotacao_pn
@@ -516,21 +794,37 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
         logger.info("  Buscando cotação via yfinance...")
         info_atual = coletor_merc.preco_atual(ticker)
         preco_ticker = info_atual.get("preco", 0)
+        if not preco_ticker and dados_empresa:
+            for alias in dados_empresa.get("aliases", []) or []:
+                info_alias = coletor_merc.preco_atual(alias)
+                preco_alias = info_alias.get("preco", 0)
+                if preco_alias:
+                    logger.warning(
+                        "  Cotacao principal indisponivel para %s; usando alias de mercado %s.",
+                        ticker,
+                        alias,
+                    )
+                    info_atual = info_alias
+                    preco_ticker = preco_alias
+                    break
 
         if eh_pn and par_ticker:
             info_on = coletor_merc.preco_atual(par_ticker)
             preco_on_yf = info_on.get("preco", 0)
             cotacao_pn = cotacao_pn or preco_ticker
-            cotacao_on = cotacao_on or preco_on_yf or (preco_ticker / cfg.RELACAO_PN_ON)
+            cotacao_on = cotacao_on or preco_on_yf or (preco_ticker / relacao_acao)
         elif not eh_pn and par_ticker:
             info_pn = coletor_merc.preco_atual(par_ticker)
             preco_pn_yf = info_pn.get("preco", 0)
             cotacao_on = cotacao_on or preco_ticker
-            cotacao_pn = cotacao_pn or preco_pn_yf or (preco_ticker * cfg.RELACAO_PN_ON)
+            cotacao_pn = cotacao_pn or preco_pn_yf or (preco_ticker * relacao_acao)
         else:
             cotacao_on = cotacao_on or preco_ticker
 
-        logger.info(f"  Cotação ON: R$ {cotacao_on:.2f}  |  Cotação PN: R$ {cotacao_pn:.2f}")
+        if eh_unit:
+            logger.info(f"  Cotação UNIT: R$ {cotacao_on:.2f}")
+        else:
+            logger.info(f"  Cotação ON: R$ {cotacao_on:.2f}  |  Cotação PN: R$ {cotacao_pn:.2f}")
 
     # ── Ações emitidas — fonte: config/bancos.py (override Yahoo Finance) ──
     acoes_on = args.acoes_on
@@ -552,6 +846,19 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
         # Fallback: Yahoo Finance (menos confiável para ON+PN separados)
         info_acoes = coletor_merc.acoes_emitidas(ticker)
         acoes_total_yf = info_acoes.get("total", 1_000_000)
+        if acoes_total_yf <= 0 and dados_empresa:
+            for alias in dados_empresa.get("aliases", []) or []:
+                info_alias = coletor_merc.acoes_emitidas(alias)
+                acoes_alias = info_alias.get("total", 0)
+                if acoes_alias > 0:
+                    logger.warning(
+                        "  Base acionaria principal indisponivel para %s; usando alias de mercado %s.",
+                        ticker,
+                        alias,
+                    )
+                    info_acoes = info_alias
+                    acoes_total_yf = acoes_alias
+                    break
         if par_ticker and acoes_pn == 0:
             info_par = coletor_merc.acoes_emitidas(par_ticker)
             acoes_par = info_par.get("total", acoes_total_yf)
@@ -563,17 +870,39 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
         else:
             acoes_on = acoes_total_yf
 
+    cotacao_on, cotacao_pn, acoes_on, acoes_pn, mercado_manual = _aplicar_market_override(
+        ticker=ticker,
+        dados_empresa=dados_empresa,
+        cotacao_on=cotacao_on,
+        cotacao_pn=cotacao_pn,
+        acoes_on=acoes_on,
+        acoes_pn=acoes_pn,
+    )
+
     beta_dados = coletor_merc.calcular_beta(ticker)
     beta_calc = beta_dados.get("beta") or args.beta
-    beta_usar = args.beta
-    logger.info(f"  Beta estatístico: {beta_calc:.3f} | Beta utilizado: {beta_usar:.3f}")
+    premissas_cadastro = (dados_empresa or {}).get("premissas", {}) or {}
+    beta_config = premissas_cadastro.get("beta_utilizado", premissas_cadastro.get("beta"))
+    if args.beta == cfg.BETA_UTILIZADO and beta_config is not None:
+        beta_usar = beta_config
+        beta_fonte = "empresas.yaml/setor"
+    else:
+        beta_usar = args.beta
+        beta_fonte = "CLI/settings"
+    logger.info(f"  Beta estatístico: {beta_calc:.3f} | Beta utilizado: {beta_usar:.3f} ({beta_fonte})")
 
     dados_mercado = {
         "preco": cotacao_on,
-        "preco_pn": cotacao_pn or cotacao_on * cfg.RELACAO_PN_ON,
+        "preco_pn": cotacao_pn or cotacao_on * relacao_acao,
+        "preco_principal": cotacao_on if not eh_pn else (cotacao_pn or cotacao_on),
+        "classe_principal": _classe_principal_acao(ticker, dados_acao),
+        "tipo_acao": tipo_acao_cfg,
         "acoes_total": acoes_on + acoes_pn,
         "beta_calc": beta_calc,
         "beta_usar": beta_usar,
+        "beta_fonte": beta_fonte,
+        "fonte_mercado": mercado_manual.get("fonte") if mercado_manual else "B3/yfinance/cache/CLI",
+        "mercado_manual": mercado_manual,
         **beta_dados,
     }
 
@@ -782,7 +1111,7 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
             ind_hist = pd.DataFrame()
 
     # ── Quality gate (dados/escala) antes do valuation ───────────────────
-    from modules.quality_gate import avaliar_qualidade
+    from modules.quality_gate import avaliar_qualidade, gerar_relatorio_quality_gate_pre
 
     qualidade = avaliar_qualidade(
         dre_hist=dre_hist,
@@ -791,8 +1120,32 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
         permitir_sem_historico=args.sem_cvm,
     )
 
+    preco_principal = float(dados_mercado.get("preco_principal") or dados_mercado.get("preco") or 0)
+    acoes_total = float(dados_mercado.get("acoes_total") or 0)
+    if acoes_total <= 0:
+        qualidade["critical"].append(
+            "Base acionaria total ausente ou zerada; preco justo por acao nao e auditavel."
+        )
+        qualidade["score"] = max(0, qualidade.get("score", 100) - 35)
+        qualidade["status_valuation"] = "BLOQUEADO"
+        qualidade["valuation_preliminar"] = False
+        qualidade["bloqueia_valuation"] = True
+        qualidade["decisao"] = "bloquear"
+        qualidade["motivo_status"] = "Dados de mercado/base acionaria insuficientes para valuation por acao."
+    elif preco_principal <= 0:
+        qualidade["warnings"].append(
+            "Cotacao de mercado ausente ou zerada; upside e TIR devem ser tratados como preliminares."
+        )
+        qualidade["score"] = max(0, qualidade.get("score", 100) - 15)
+        if not qualidade.get("bloqueia_valuation"):
+            qualidade["status_valuation"] = "PRELIMINAR"
+            qualidade["valuation_preliminar"] = True
+            qualidade["decisao"] = "preliminar"
+            qualidade["motivo_status"] = "Cotacao de mercado indisponivel no momento da execucao."
+
     logger.info(
         f"  Qualidade dos dados: score={qualidade['score']}/100 | "
+        f"status={qualidade.get('status_valuation')} | "
         f"warnings={len(qualidade['warnings'])} | critical={len(qualidade['critical'])}"
     )
     for alerta in qualidade["warnings"]:
@@ -800,9 +1153,24 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
     for falha in qualidade["critical"]:
         logger.error(f"  [quality] {falha}")
 
+    pre_quality_report = gerar_relatorio_quality_gate_pre(
+        ticker=ticker,
+        qualidade=qualidade,
+        output_dir=cfg.OUTPUT_DIR,
+    )
+    qualidade["pre_valuation_report"] = pre_quality_report
+
     if qualidade["bloqueia_valuation"]:
-        logger.error("Quality gate bloqueou o valuation por inconsistências críticas.")
+        logger.error(
+            "Quality gate pre-valuation bloqueou o valuation. Relatorio: %s",
+            pre_quality_report.get("markdown_path"),
+        )
         return None
+    if qualidade.get("valuation_preliminar"):
+        logger.warning(
+            "Valuation marcado como PRELIMINAR pelo quality gate pre-valuation. Relatorio: %s",
+            pre_quality_report.get("markdown_path"),
+        )
 
     # ── 5. Projeções ───────────────────────────────────────────────────────
     logger.info("\n[5/6] Calculando projeções...")
@@ -859,7 +1227,7 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
                     cfg_key = ALIAS_CAMPOS.get(campo, campo.upper())
                     cfg_proj[cfg_key] = dados_banco[campo]
                     cfg_proj[campo] = dados_banco[campo]
-            relacao = dados_banco.get("relacao_pn_on", cfg.RELACAO_PN_ON)
+            relacao = dados_banco.get("relacao_pn_on", relacao_acao)
             cfg_proj["RELACAO_PN_ON"] = relacao
             logger.info(
                 f"  Premissas banco: NIM={dados_banco.get('nim_alvo', '-'):.1%} | "
@@ -882,7 +1250,12 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
         logger.info("\n[6/6] Calculando valuation (FCFE / Ke)...")
         fcfe_proj = projecoes.get("fcfe", {})
         g_banco = (dados_banco or {}).get("g_perpetuidade", args.g or cfg.G_PERPETUIDADE)
-        relacao_banco = (dados_banco or {}).get("relacao_pn_on", cfg.RELACAO_PN_ON)
+        relacao_banco = (dados_banco or {}).get("relacao_pn_on", relacao_acao)
+        try:
+            relacao_banco = float(relacao_banco)
+        except (TypeError, ValueError):
+            relacao_banco = relacao_acao
+        cfg_proj["RELACAO_PN_ON"] = relacao_banco
 
         valuation = motor_val.calcular_tudo(
             fcfe_proj=fcfe_proj,
@@ -907,6 +1280,13 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
         }
         projecoes = motor_proj.projetar_tudo(dados_norm, macro, anos_proj)
 
+        relacao_emp = (dados_empresa or {}).get("relacao_pn_on", relacao_acao)
+        try:
+            relacao_emp = float(relacao_emp)
+        except (TypeError, ValueError):
+            relacao_emp = relacao_acao
+        cfg_proj["RELACAO_PN_ON"] = relacao_emp
+
         motor_val = MotorValuation(cfg_proj)
         beta_emp = premissas_emp.get("beta", args.beta)
         ke_proj = motor_val.calcular_ke_por_ano(
@@ -919,7 +1299,11 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
         if bp_hist is not None and not bp_hist.empty and "divida_liquida" in bp_hist.index:
             divida_liq_atual = float(bp_hist.loc["divida_liquida"].iloc[-1])
 
-        market_cap = (cotacao_on * (acoes_on + acoes_pn) / 1000) if cotacao_on else 0
+        cotacao_pn_wacc = cotacao_pn or (cotacao_on * relacao_emp if cotacao_on else 0)
+        market_cap = (
+            (cotacao_on * acoes_on + cotacao_pn_wacc * acoes_pn) / 1000
+            if cotacao_on else 0
+        )
 
         aliquota_ef = projecoes.get("aliquota_efetiva", 0.34)
         spread_div = premissas_emp.get(
@@ -940,9 +1324,6 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
         logger.info("\n[6/6] Calculando valuation (FCFF / WACC)...")
         fcff_proj = projecoes.get("fcff", {})
         g_emp = premissas_emp.get("g_perpetuidade", args.g or cfg.G_PERPETUIDADE)
-        relacao_emp = (dados_empresa or {}).get("relacao_pn_on", cfg.RELACAO_PN_ON)
-        cfg_proj["RELACAO_PN_ON"] = relacao_emp
-
         valuation = motor_val.calcular_tudo_fcff(
             fcff_proj=fcff_proj,
             wacc_proj=wacc_proj,
@@ -954,8 +1335,34 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
             g=g_emp,
         )
 
+    avisos_classe_acao = _enriquecer_valuation_classe_acao(
+        valuation,
+        ticker=ticker,
+        dados_acao=dados_acao,
+        cotacao_on=cotacao_on,
+        cotacao_pn=cotacao_pn,
+        acoes_on=acoes_on,
+        acoes_pn=acoes_pn,
+    )
+    valuation["status_valuation"] = qualidade.get("status_valuation", "CONFIAVEL")
+    valuation["valuation_preliminar"] = bool(qualidade.get("valuation_preliminar"))
+    valuation["motivo_status"] = qualidade.get("motivo_status")
+
     # ── Validação ─────────────────────────────────────────────────────────
     avisos = _validar_dados(dre_hist, bp_hist, projecoes, valuation)
+    avisos.extend(avisos_classe_acao)
+    avisos_modelo = list((projecoes or {}).get("_avisos_modelo") or [])
+    if avisos_modelo:
+        avisos.extend(avisos_modelo)
+        qualidade.setdefault("warnings", [])
+        qualidade["warnings"].extend(avisos_modelo)
+        if not qualidade.get("bloqueia_valuation"):
+            qualidade["status_valuation"] = "PRELIMINAR"
+            qualidade["valuation_preliminar"] = True
+            qualidade["motivo_status"] = "Modelo usou fallback de projecao; revisar premissas antes de confiar na recomendacao."
+            valuation["status_valuation"] = "PRELIMINAR"
+            valuation["valuation_preliminar"] = True
+            valuation["motivo_status"] = qualidade["motivo_status"]
     if avisos:
         logger.warning("\n[!] AVISOS DE VALIDACAO:")
         for av in avisos:
@@ -976,6 +1383,34 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
         qualidade=qualidade,
         sem_cvm=args.sem_cvm,
     )
+
+    qualitativo = None
+    if not getattr(args, "sem_qualitativo", False):
+        try:
+            from modules.qualitative_engine import run_qualitative_analysis
+
+            ri_urls = _coletar_ri_urls(dados_empresa, args)
+            qualitativo = run_qualitative_analysis(
+                ticker=ticker,
+                nome=nome,
+                codigo_cvm=str((dados_empresa or {}).get("codigo_cvm") or codigo_cvm_override or ""),
+                base_dir=ROOT,
+                valuation_context=valuation,
+                collect_cvm=bool(not args.sem_cvm),
+                ri_urls=ri_urls,
+                collect_ri=bool(not getattr(args, "sem_ri_crawler", False)),
+                ri_depth=max(0, int(getattr(args, "ri_depth", 1) or 0)),
+                ri_max_docs=max(0, int(getattr(args, "ri_max_docs", 25) or 0)),
+            )
+            logger.info(
+                "  Qualitativo:       score=%s | eventos=%s | ri_docs=%s | relatorio=%s",
+                qualitativo.get("overall_score"),
+                qualitativo.get("events_count"),
+                qualitativo.get("ri_documents_count"),
+                qualitativo.get("report_path"),
+            )
+        except Exception as e:
+            logger.warning("[qualitative] Falha na analise qualitativa: %s", e)
 
     # ── Escrever Excel ────────────────────────────────────────────────────
     # Arquivo de valuation: por padrão atualiza uma pasta de trabalho canônica
@@ -1023,6 +1458,49 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
             anos_projecao=anos_proj,
         )
 
+    premissas_efetivas = {
+        "beta_usado": beta_usar,
+        "beta_fonte": beta_fonte,
+        "metodologia_setorial": metodologia_setorial,
+        "g_perpetuidade": (
+            (dados_banco or {}).get("g_perpetuidade", args.g or cfg.G_PERPETUIDADE)
+            if tipo_empresa == "bank"
+            else premissas_emp.get("g_perpetuidade", args.g or cfg.G_PERPETUIDADE)
+        ),
+        "anos_historicos": anos_hist,
+        "anos_projecao": anos_proj,
+        "status_valuation": valuation.get("status_valuation"),
+        "classe_principal": valuation.get("classe_principal"),
+        "tipo_acao": valuation.get("tipo_acao"),
+    }
+    if tipo_empresa == "bank":
+        premissas_efetivas.update(
+            {
+                "payout": (dados_banco or {}).get("payout_projetado") or premissas_emp.get("payout"),
+                "nim_alvo": (dados_banco or {}).get("nim_alvo") or premissas_emp.get("nim_alvo"),
+            }
+        )
+    else:
+        premissas_efetivas.update(
+            {
+                "motor": "fcff_wacc",
+                "setor": (dados_empresa or {}).get("setor"),
+                "margem_ebitda_alvo": premissas_emp.get("margem_ebitda_alvo"),
+                "capex_pct_receita": premissas_emp.get("capex_pct_receita"),
+                "ncg_pct_receita": premissas_emp.get("ncg_pct_receita"),
+                "custo_divida_spread": premissas_emp.get("custo_divida_spread"),
+            }
+        )
+
+    from modules.sector_operational_drivers import carregar_drivers_operacionais
+
+    drivers_operacionais = carregar_drivers_operacionais(
+        ticker=ticker,
+        setor=(dados_empresa or {}).get("setor"),
+        tipo_empresa=tipo_empresa,
+        root_dir=cfg.ROOT_DIR,
+    )
+
     dados_completos = {
         "dre": dre_hist,
         "balanco": bp_hist,
@@ -1032,6 +1510,9 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
         "mercado": dados_mercado,
         "projecoes": projecoes,
         "valuation": valuation,
+        "qualidade": qualidade,
+        "qualitativo": qualitativo,
+        "drivers_operacionais": drivers_operacionais,
         "metodologia": {
             "ticker": ticker,
             "nome": nome,
@@ -1040,7 +1521,9 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
             "motor_projecao": (dados_empresa or {}).get("motor_projecao"),
             "motor_valuation": (dados_empresa or {}).get("motor_valuation"),
             "tipo_acao": (dados_empresa or {}).get("tipo_acao"),
+            "perfil_setorial": metodologia_setorial,
             "premissas": premissas_metodologia,
+            "premissas_efetivas": premissas_efetivas,
         },
         "_trimestre": cfg.TRIMESTRE_ATUAL,
     }
@@ -1051,29 +1534,59 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
         destino=output_path,
     )
 
-    premissas_efetivas = {
-        "beta_usado": beta_usar,
-        "g_perpetuidade": (
-            (dados_banco or {}).get("g_perpetuidade", args.g or cfg.G_PERPETUIDADE)
-            if tipo_empresa == "bank"
-            else premissas_emp.get("g_perpetuidade", args.g or cfg.G_PERPETUIDADE)
-        ),
-        "anos_historicos": anos_hist,
-        "anos_projecao": anos_proj,
-    }
-    if tipo_empresa == "bank":
-        premissas_efetivas.update(
-            {
-                "payout": (dados_banco or {}).get("payout_projetado"),
-                "nim_alvo": (dados_banco or {}).get("nim_alvo"),
-            }
+    from modules.assumptions_auditor import gerar_relatorio_premissas
+    from modules.post_excel_quality_gate import executar_quality_gate_excel
+
+    premissas_audit = gerar_relatorio_premissas(
+        ticker=ticker,
+        tipo_empresa=tipo_empresa,
+        dados_empresa=dados_empresa,
+        dados_mercado=dados_mercado,
+        macro=macro,
+        valuation=valuation,
+        premissas_efetivas=premissas_efetivas,
+        output_dir=cfg.OUTPUT_DIR,
+    )
+
+    post_excel_quality = executar_quality_gate_excel(
+        ticker=ticker,
+        excel_path=caminho_final,
+        tipo_empresa=tipo_empresa,
+        anos_hist=anos_hist,
+        anos_proj=anos_proj,
+        output_dir=cfg.OUTPUT_DIR,
+    )
+    if post_excel_quality.get("bloqueia"):
+        logger.error(
+            "Quality gate final bloqueou o valuation. Relatorio: %s",
+            post_excel_quality.get("markdown_path"),
         )
-    else:
-        premissas_efetivas.update(
-            {
-                "motor": "fcff_wacc",
-                "setor": (dados_empresa or {}).get("setor"),
-            }
+        return None
+    if post_excel_quality.get("status") != "aprovado":
+        valuation["status_valuation"] = "PRELIMINAR_EXCEL"
+        valuation["valuation_preliminar"] = True
+        valuation["motivo_status"] = (
+            "Planilha final exige revisao: "
+            + str(post_excel_quality.get("markdown_path"))
+        )
+        qualidade["status_valuation"] = "PRELIMINAR_EXCEL"
+        qualidade["valuation_preliminar"] = True
+        logger.warning(
+            "Valuation marcado como PRELIMINAR_EXCEL pelo quality gate final. Relatorio: %s",
+            post_excel_quality.get("markdown_path"),
+        )
+        analise = _analisar(
+            ticker=ticker,
+            nome=nome,
+            dados_empresa=dados_empresa,
+            dre=dre_hist,
+            balanco=bp_hist,
+            indicadores=ind_hist,
+            mercado=dados_mercado,
+            valuation=valuation,
+            avisos=avisos,
+            qualidade=qualidade,
+            sem_cvm=args.sem_cvm,
         )
 
     summary_path = _escrever_run_summary(
@@ -1091,6 +1604,9 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
         premissas_efetivas=premissas_efetivas,
         caminho_arquivo=str(caminho_final),
         analise=analise,
+        qualitativo=qualitativo,
+        post_excel_quality=post_excel_quality,
+        premissas_audit=premissas_audit,
     )
     logger.info(f"  Run summary:       {summary_path}")
 
@@ -1152,6 +1668,7 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
     logger.info(f"RESUMO DO VALUATION ({motor_label})")
     logger.info("=" * 70)
     logger.info(f"  Empresa:           {nome} ({ticker})")
+    logger.info(f"  Status Valuation:  {valuation.get('status_valuation', 'CONFIAVEL')}")
     if tipo_empresa != "bank" and "ev_mm" in valuation:
         logger.info(f"  Enterprise Value:  R$ {valuation['ev_mm']:>12,.0f} MM")
     logger.info(f"  Cotação ON:        R$ {cotacao_on:.2f}")
@@ -1180,6 +1697,7 @@ def run_single(args, ticker: str, nome: str, codigo_cvm_override: str = None) ->
         "avisos": avisos,
         "qualidade": qualidade,
         "analise": analise,
+        "qualitativo": qualitativo,
         "tese_markdown": str(caminho_tese),
         "run_summary": str(summary_path),
     }
@@ -1199,6 +1717,8 @@ def run_batch(args) -> list[dict]:
                 tickers.extend(tickers_setor)
             else:
                 logger.warning(f"  Setor '{setor}' não encontrado ou sem tickers")
+    elif getattr(args, "all", False):
+        tickers = listar_tickers()
 
     if not tickers:
         logger.error("Nenhum ticker para processar no batch")
@@ -1327,6 +1847,41 @@ def run_auditoria_dados(args) -> dict:
     return {"auditorias": auditorias, "csv": str(csv_path) if csv_path else None, "erros": erros}
 
 
+def run_qualitativo_only(args) -> dict:
+    empresa_info = get_empresa(args.ticker)
+    if not empresa_info:
+        logger.error(
+            f"Ticker '{args.ticker}' nao encontrado em config/empresas.yaml. "
+            "Cadastre a empresa antes de executar."
+        )
+        return {}
+
+    from modules.qualitative_engine import run_qualitative_analysis
+
+    nome = args.nome or empresa_info.get("nome") or args.ticker
+    codigo = args.codigo_cvm or empresa_info.get("codigo_cvm")
+    logger.info("=" * 70)
+    logger.info(f"ANALISE QUALITATIVA — {args.ticker.upper()} — {nome}")
+    logger.info("=" * 70)
+    ri_urls = _coletar_ri_urls(empresa_info, args)
+    result = run_qualitative_analysis(
+        ticker=args.ticker,
+        nome=nome,
+        codigo_cvm=str(codigo or ""),
+        base_dir=ROOT,
+        valuation_context={},
+        collect_cvm=bool(not args.sem_cvm),
+        ri_urls=ri_urls,
+        collect_ri=bool(not getattr(args, "sem_ri_crawler", False)),
+        ri_depth=max(0, int(getattr(args, "ri_depth", 1) or 0)),
+        ri_max_docs=max(0, int(getattr(args, "ri_max_docs", 25) or 0)),
+    )
+    logger.info("  Relatorio: %s", result.get("report_path"))
+    logger.info("  Scorecard: %s", result.get("scorecard_path"))
+    logger.info("  Documentos RI: %s", result.get("ri_documents_count"))
+    return result
+
+
 def run(args):
     global logger
     log_level = "DEBUG" if args.debug else cfg.LOG_LEVEL
@@ -1334,7 +1889,9 @@ def run(args):
 
     if getattr(args, "auditar_dados", False):
         return run_auditoria_dados(args)
-    if args.batch or getattr(args, "batch_setor", None):
+    if getattr(args, "qualitativo_only", False):
+        return run_qualitativo_only(args)
+    if args.batch or getattr(args, "batch_setor", None) or getattr(args, "all", False):
         return run_batch(args)
     else:
         # Fonte de verdade: empresas.yaml
@@ -1368,7 +1925,15 @@ def main():
         else:
             print("\n[ERRO] Auditoria: nenhum ticker auditado. Verifique os logs.")
             sys.exit(1)
-    elif args.batch or getattr(args, "batch_setor", None):
+    elif getattr(args, "qualitativo_only", False):
+        if result:
+            print("\n[OK] Analise qualitativa concluida")
+            print(f"   Relatorio:  {result.get('report_path')}")
+            print(f"   Scorecard:  {result.get('scorecard_path')}")
+        else:
+            print("\n[ERRO] Analise qualitativa concluida com erros. Verifique os logs.")
+            sys.exit(1)
+    elif args.batch or getattr(args, "batch_setor", None) or getattr(args, "all", False):
         if result:
             print(f"\n[OK] Batch concluido: {len(result)} arquivo(s) gerado(s)")
             for r in result:

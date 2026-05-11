@@ -27,6 +27,7 @@ from src.reports.quant_dashboard_data import (
     load_filter_walk_forward_runs_for_dashboard,
     load_event_context_runs_for_dashboard,
     load_event_context_summary_for_dashboard,
+    load_event_coverage_by_regime_for_dashboard,
     load_event_coverage_runs_for_dashboard,
     load_governance_reviews_for_dashboard,
     load_governance_summary_for_dashboard,
@@ -635,11 +636,11 @@ def _tab_regimes(regimes: pd.DataFrame, regime_summary: pd.DataFrame, governance
         st.dataframe(governance_reviews[cols].head(20), use_container_width=True, hide_index=True)
 
 
-def _tab_events(events: pd.DataFrame, event_links: pd.DataFrame, event_runs: pd.DataFrame, event_coverage_runs: pd.DataFrame, event_summary: pd.DataFrame, results: pd.DataFrame, governance_reviews: pd.DataFrame) -> None:
+def _tab_events(events: pd.DataFrame, event_links: pd.DataFrame, event_runs: pd.DataFrame, event_coverage_runs: pd.DataFrame, event_coverage_by_regime: pd.DataFrame, event_summary: pd.DataFrame, results: pd.DataFrame, governance_reviews: pd.DataFrame) -> None:
     st.subheader("Eventos & Notícias")
     if events.empty:
         st.warning("Nenhum evento importado.")
-        st.code("python -m src.scanners.event_pipeline --start 2026-01-02 --end 2026-04-30 --sources csv --csv-path data/events/market_events_example.csv --save-db --csv")
+        st.code("python -m src.scanners.event_daily_update --start 2026-01-02 --end 2026-04-30 --save-db --csv --with-regimes")
         return
 
     c1, c2, c3, c4 = st.columns(4)
@@ -662,6 +663,23 @@ def _tab_events(events: pd.DataFrame, event_links: pd.DataFrame, event_runs: pd.
         st.dataframe(event_coverage_runs, use_container_width=True, hide_index=True)
         if str(latest_coverage.get("coverage_quality") or "").upper() in {"COBERTURA_FRACA", "COBERTURA_INSUFICIENTE"}:
             st.warning("Cobertura insuficiente: conclusões evento x sem evento devem permanecer bloqueadas ou em observação.")
+
+    st.subheader("Rotina de Atualização")
+    st.code("python -m src.scanners.event_daily_update --start 2026-01-02 --end 2026-04-30 --save-db --csv --with-regimes")
+
+    st.subheader("Cobertura por regime")
+    if event_coverage_by_regime.empty:
+        st.info("Sem cobertura por regime salva. Rode a rotina diária com --with-regimes depois de gerar market_regime_daily.")
+    else:
+        st.dataframe(event_coverage_by_regime, use_container_width=True, hide_index=True)
+        weak = event_coverage_by_regime[
+            event_coverage_by_regime["coverage_quality"].astype(str).str.upper().isin(["COBERTURA_FRACA", "COBERTURA_INSUFICIENTE"])
+        ]
+        if not weak.empty:
+            st.warning("Há regimes com cobertura fraca ou insuficiente; a governança deve bloquear conclusões fortes nesses ambientes.")
+        primary = event_coverage_by_regime[event_coverage_by_regime["regime_type"] == "primary_regime"]
+        if not primary.empty:
+            st.bar_chart(primary.set_index("regime_value")["signals_with_event_pct"])
 
     st.subheader("Eventos importados")
     st.dataframe(events, use_container_width=True, hide_index=True)
@@ -711,7 +729,7 @@ def _tab_events(events: pd.DataFrame, event_links: pd.DataFrame, event_runs: pd.
         st.dataframe(governance_reviews[cols].head(20), use_container_width=True, hide_index=True)
 
 
-def _tab_raw(runs, results, calibration_runs, calibration_assets, wf_runs, wf_results, filter_runs, threshold_runs, filter_wf_runs, filter_wf_results, governance_reviews, regimes, regime_summary, events, event_links, event_runs, event_coverage_runs) -> None:
+def _tab_raw(runs, results, calibration_runs, calibration_assets, wf_runs, wf_results, filter_runs, threshold_runs, filter_wf_runs, filter_wf_results, governance_reviews, regimes, regime_summary, events, event_links, event_runs, event_coverage_runs, event_coverage_by_regime) -> None:
     tables = {
         "historical_backtest_runs": runs,
         "historical_backtest_results": results,
@@ -730,6 +748,7 @@ def _tab_raw(runs, results, calibration_runs, calibration_assets, wf_runs, wf_re
         "signal_event_links": event_links,
         "event_context_runs": event_runs,
         "event_coverage_runs": event_coverage_runs,
+        "event_coverage_by_regime": event_coverage_by_regime,
     }
     for name, df in tables.items():
         st.subheader(name)
@@ -776,6 +795,8 @@ def main() -> None:
     event_links = load_signal_event_links_for_dashboard(db_path)
     event_runs = load_event_context_runs_for_dashboard(db_path)
     event_coverage_runs = load_event_coverage_runs_for_dashboard(db_path)
+    latest_event_coverage_id = int(event_coverage_runs.iloc[0]["id"]) if not event_coverage_runs.empty else None
+    event_coverage_by_regime = load_event_coverage_by_regime_for_dashboard(db_path, coverage_run_id=latest_event_coverage_id)
     event_summary = load_event_context_summary_for_dashboard(db_path)
     wf_runs = load_walk_forward_runs_for_dashboard(db_path)
     latest_wf_id = int(wf_runs.iloc[0]["id"]) if not wf_runs.empty else None
@@ -815,13 +836,13 @@ def main() -> None:
     with tabs[7]:
         _tab_regimes(regimes, regime_summary, governance_reviews)
     with tabs[8]:
-        _tab_events(events, event_links, event_runs, event_coverage_runs, event_summary, results, governance_reviews)
+        _tab_events(events, event_links, event_runs, event_coverage_runs, event_coverage_by_regime, event_summary, results, governance_reviews)
     with tabs[9]:
         _tab_governance(governance_reviews, governance_summary)
     with tabs[10]:
         _tab_alerts(runs, results, calibration_runs, calibration_assets, bucket_summary, net_summary)
     with tabs[11]:
-        _tab_raw(runs, results, calibration_runs, calibration_assets, wf_runs, wf_results, filter_runs, threshold_runs, filter_wf_runs, filter_wf_results, governance_reviews, regimes, regime_summary, events, event_links, event_runs, event_coverage_runs)
+        _tab_raw(runs, results, calibration_runs, calibration_assets, wf_runs, wf_results, filter_runs, threshold_runs, filter_wf_runs, filter_wf_results, governance_reviews, regimes, regime_summary, events, event_links, event_runs, event_coverage_runs, event_coverage_by_regime)
 
 
 if __name__ == "__main__":

@@ -299,6 +299,7 @@ empresas:
     nome: Bradesco
     setor: bancos
     codigo_cvm: "906"
+    ri_url: https://banco.bradesco/ri
     ticker_on: BBDC3
     ticker_pn: BBDC4
     acoes_on_mil: 5294000
@@ -319,6 +320,7 @@ empresas:
     nome: Banco do Brasil
     setor: bancos
     codigo_cvm: "1023"
+    ri_url: https://ri.bb.com.br
     ticker_on: BBAS3
     acoes_on_mil: 5730000
     acoes_pn_mil: 0
@@ -337,6 +339,7 @@ empresas:
     nome: "Itaú Unibanco"
     setor: bancos
     codigo_cvm: "19348"
+    ri_url: https://itau.com.br/ri
     ticker_on: ITUB3
     ticker_pn: ITUB4
     acoes_on_mil: 5510000
@@ -357,6 +360,7 @@ empresas:
     nome: Santander Brasil
     setor: bancos
     codigo_cvm: "20532"
+    ri_url: https://www.santander.com.br/ri
     ticker_on: SANB11
     acoes_on_mil: 3750000
     acoes_pn_mil: 0
@@ -376,6 +380,7 @@ empresas:
     nome: BTG Pactual
     setor: bancos
     codigo_cvm: "22616"
+    ri_url: https://btgpactual.com
     ticker_on: BPAC11
     acoes_on_mil: 3890000
     acoes_pn_mil: 0
@@ -435,6 +440,24 @@ empresas:
       payout: 0.60
       beta: 0.90
 
+  B3SA3:
+    nome: B3
+    setor: financeiro
+    ri_url: https://b3.com.br
+    ticker_on: B3SA3
+    tipo_acao: ON_ONLY
+    ativo: false
+    observacao: "Cadastro inicial para crawler RI; validar CVM/premissas antes de usar no valuation."
+
+  BBSE3:
+    nome: BB Seguridade
+    setor: seguros
+    ri_url: https://bbseguridade.com.br
+    ticker_on: BBSE3
+    tipo_acao: ON_ONLY
+    ativo: false
+    observacao: "Cadastro inicial para crawler RI; validar CVM/premissas antes de usar no valuation."
+
   # ═══ ENERGIA ═════════════════════════════════════════════════════════════
 
   ELET3:
@@ -446,10 +469,29 @@ empresas:
     tipo_acao: ON_PN
     aliases: [ELET6]
 
+  CPLE6:
+    nome: Copel
+    setor: energia
+    ri_url: https://copel.com
+    ticker_pn: CPLE6
+    tipo_acao: ON_PN
+    ativo: false
+    observacao: "Cadastro inicial para crawler RI; validar CVM/premissas antes de usar no valuation."
+
+  CPFE3:
+    nome: CPFL Energia
+    setor: energia
+    ri_url: https://cpfl.com.br
+    ticker_on: CPFE3
+    tipo_acao: ON_ONLY
+    ativo: false
+    observacao: "Cadastro inicial para crawler RI; validar CVM/premissas antes de usar no valuation."
+
   EGIE3:
     nome: ENGIE Brasil
     setor: energia
     codigo_cvm: "17329"
+    ri_url: https://engie.com.br/investidores
     ticker_on: EGIE3
     tipo_acao: ON_ONLY
 
@@ -457,6 +499,7 @@ empresas:
     nome: Taesa
     setor: energia
     codigo_cvm: "20257"
+    ri_url: https://taesa.com.br
     ticker_on: TAEE11
     tipo_acao: UNITS
     aliases: [TAEE3, TAEE4]
@@ -477,6 +520,7 @@ empresas:
     nome: AES Brasil
     setor: energia
     codigo_cvm: "26620"
+    ri_url: https://aurenenergia.com.br
     ticker_on: AESB3
     tipo_acao: ON_ONLY
     aliases: [AURE3]
@@ -506,6 +550,8 @@ empresas:
     codigo_cvm: "19763"
     ticker_on: ENBR3
     tipo_acao: ON_ONLY
+    ativo: false
+    observacao: "Companhia deslistada da B3 em 2023 apos OPA/fechamento de capital; manter apenas para auditoria historica."
 
   # ═══ INDUSTRIAL ══════════════════════════════════════════════════════════
 
@@ -513,6 +559,7 @@ empresas:
     nome: WEG
     setor: industrial
     codigo_cvm: "5410"
+    ri_url: https://ri.weg.net
     ticker_on: WEGE3
     tipo_acao: ON_ONLY
     premissas:
@@ -559,6 +606,7 @@ empresas:
     nome: Suzano
     setor: papel_celulose
     codigo_cvm: "13986"
+    ri_url: https://suzano.com.br
     ticker_on: SUZB3
     tipo_acao: ON_ONLY
     premissas:
@@ -662,10 +710,20 @@ empresas:
 
   # ═══ CONSUMO E VAREJO ════════════════════════════════════════════════════
 
+  ABEV3:
+    nome: Ambev
+    setor: consumo_varejo
+    ri_url: https://ri.ambev.com.br
+    ticker_on: ABEV3
+    tipo_acao: ON_ONLY
+    ativo: false
+    observacao: "Cadastro inicial para crawler RI; validar CVM/premissas antes de usar no valuation."
+
   LREN3:
     nome: Lojas Renner
     setor: consumo_varejo
     codigo_cvm: "8133"
+    ri_url: https://ri.lojasrenner.com.br
     ticker_on: LREN3
     tipo_acao: ON_ONLY
     premissas:
@@ -681,6 +739,7 @@ empresas:
     nome: Magazine Luiza
     setor: consumo_varejo
     codigo_cvm: "22470"
+    ri_url: https://ri.magazineluiza.com.br
     ticker_on: MGLU3
     tipo_acao: ON_ONLY
     premissas:
@@ -709,10 +768,20 @@ empresas:
       crescimento_receita:
         default: 0.05
 
+  AMER3:
+    nome: Americanas
+    setor: consumo_varejo
+    ri_url: https://ri.americanas.io
+    ticker_on: AMER3
+    tipo_acao: ON_ONLY
+    ativo: false
+    observacao: "Cadastro inicial para crawler RI; validar CVM/premissas antes de usar no valuation."
+
   ASAI3:
     nome: Assaí Atacadista
     setor: consumo_varejo
     codigo_cvm: "25372"
+    ri_url: https://assai.com.br
     ticker_on: ASAI3
     tipo_acao: ON_ONLY
     premissas:
@@ -774,6 +843,7 @@ empresas:
     nome: "Natura Cosméticos"
     setor: consumo_varejo
     codigo_cvm: "19550"
+    ri_url: https://natura.com.br
     ticker_on: NATU3
     tipo_acao: ON_ONLY
     aliases: [NTCO3]
@@ -856,6 +926,7 @@ empresas:
     nome: Sanepar
     setor: saneamento
     codigo_cvm: "18627"
+    ri_url: https://sanepar.com.br
     ticker_on: SAPR11
     tipo_acao: UNITS
     aliases: [SAPR3, SAPR4]
@@ -864,6 +935,7 @@ empresas:
     nome: Sabesp
     setor: saneamento
     codigo_cvm: "14443"
+    ri_url: https://sabesp.com.br
     ticker_on: SBSP3
     tipo_acao: ON_ONLY
 
@@ -896,6 +968,7 @@ empresas:
     nome: Fleury
     setor: saude
     codigo_cvm: "21881"
+    ri_url: https://fleury.com.br
     ticker_on: FLRY3
     tipo_acao: ON_ONLY
 
@@ -903,6 +976,7 @@ empresas:
     nome: Raia Drogasil
     setor: saude
     codigo_cvm: "5258"
+    ri_url: https://rd.com.br
     ticker_on: RADL3
     tipo_acao: ON_ONLY
 
@@ -938,10 +1012,20 @@ empresas:
 
   # ═══ PETRÓLEO E GÁS ═══════════════════════════════════════════════════
 
+  CSAN3:
+    nome: Cosan
+    setor: energia
+    ri_url: https://ri.cosan.com.br
+    ticker_on: CSAN3
+    tipo_acao: ON_ONLY
+    ativo: false
+    observacao: "Cadastro inicial para crawler RI; validar CVM/premissas antes de usar no valuation."
+
   PETR4:
     nome: Petrobras
     setor: petroleo
     codigo_cvm: "9512"
+    ri_url: https://petrobras.com.br/ri
     ticker_on: PETR3
     ticker_pn: PETR4
     acoes_on_mil: 7442455
@@ -996,9 +1080,74 @@ empresas:
 
   # ═══ TECNOLOGIA ══════════════════════════════════════════════════════════
 
+  TOTS3:
+    nome: TOTVS
+    setor: tecnologia
+    ri_url: https://ri.totvs.com.br
+    ticker_on: TOTS3
+    tipo_acao: ON_ONLY
+    ativo: false
+    observacao: "Cadastro inicial para crawler RI; validar CVM/premissas antes de usar no valuation."
+
   LVTC3:
     nome: WDC Networks
     setor: tecnologia
     codigo_cvm: "25895"
     ticker_on: LVTC3
     tipo_acao: ON_ONLY
+
+  # ═══ CADASTROS INICIAIS PARA CRAWLER RI ═══════════════════════════════
+
+  EMBR3:
+    nome: Embraer
+    setor: industrial
+    ri_url: https://embraer.com.br
+    ticker_on: EMBR3
+    tipo_acao: ON_ONLY
+    ativo: false
+    observacao: "Cadastro inicial para crawler RI; validar CVM/premissas antes de usar no valuation."
+
+  GGBR4:
+    nome: Gerdau
+    setor: industrial
+    ri_url: https://gerdau.com
+    ticker_pn: GGBR4
+    tipo_acao: ON_PN
+    ativo: false
+    observacao: "Cadastro inicial para crawler RI; validar CVM/premissas antes de usar no valuation."
+
+  MDIA3:
+    nome: M. Dias Branco
+    setor: consumo_varejo
+    ri_url: https://mdiasbranco.com.br
+    ticker_on: MDIA3
+    tipo_acao: ON_ONLY
+    ativo: false
+    observacao: "Cadastro inicial para crawler RI; validar CVM/premissas antes de usar no valuation."
+
+  MULT3:
+    nome: Multiplan
+    setor: shopping_centers
+    ri_url: https://ri.multiplan.com.br
+    ticker_on: MULT3
+    tipo_acao: ON_ONLY
+    ativo: false
+    observacao: "Cadastro inicial para crawler RI; validar CVM/premissas antes de usar no valuation."
+
+  PSSA3:
+    nome: Porto
+    setor: seguros
+    ri_url: https://ri.portoseguro.com.br
+    ticker_on: PSSA3
+    tipo_acao: ON_ONLY
+    ativo: false
+    observacao: "Cadastro inicial para crawler RI; validar CVM/premissas antes de usar no valuation."
+
+  VALE3:
+    nome: Vale
+    setor: mineracao
+    ri_url: https://vale.com/ri
+    ticker_on: VALE3
+    tipo_acao: ON_ONLY
+    ativo: false
+    observacao: "Cadastro inicial para crawler RI; validar CVM/premissas antes de usar no valuation."
