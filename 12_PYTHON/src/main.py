@@ -22,17 +22,6 @@ from src.utils.logger import configure_logging, get_logger
 configure_logging(settings.logs_dir, level="DEBUG" if settings.env == "development" else "INFO")
 log = get_logger(__name__)
 
-# Startup guard: fail loudly if production + missing required keys (per D-FOUND-02)
-if settings.env == "production":
-    _missing = [
-        k for k in ("anthropic_api_key", "telegram_bot_token", "telegram_chat_id")
-        if not getattr(settings, k, "")
-    ]
-    if _missing:
-        log.error(f"[startup] variáveis obrigatórias ausentes: {_missing}")
-        sys.exit(1)
-    log.info("[startup] configuração de produção validada")
-
 
 # ── Subcomandos ───────────────────────────────────────────────────────────────
 
@@ -590,6 +579,17 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def app() -> None:
+    # Startup guard: only runs when CLI is invoked directly — never during import/pytest
+    if settings.env == "production":
+        _missing = [
+            k for k in ("anthropic_api_key", "telegram_bot_token", "telegram_chat_id")
+            if not getattr(settings, k, "")
+        ]
+        if _missing:
+            log.error(f"[startup] variáveis obrigatórias ausentes: {_missing}")
+            sys.exit(1)
+        log.info("[startup] configuração de produção validada")
+
     parser = build_parser()
     args = parser.parse_args()
     args.func(args)
