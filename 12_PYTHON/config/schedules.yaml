@@ -44,7 +44,7 @@ schedules:
     description: Ingestão CVM DFP/ITR/IPE para watchlist
 
   - job: financial_engine
-    cron: "0 20 * * 1-5"      # seg–sex 20:00 (após cvm_ingest + b3_prices)
+    cron: "50 19 * * 1-5"     # seg–sex 19:50 — antes do analyze (20:00) para evitar race (WR-09)
     description: Calcular LTM, múltiplos, DCF e sinais técnicos para watchlist
 
   # ── Semanais ──────────────────────────────────────────────
