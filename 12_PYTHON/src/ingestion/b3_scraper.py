@@ -270,7 +270,16 @@ class B3Scraper:
         start_date: str = None,
     ) -> dict:
         """Incremental fetch + DB write + gap detection for one ticker.
-        Returns {"inserted": int, "gaps": int, "ticker": str}."""
+        Returns {"inserted": int, "gaps": int, "ticker": str}.
+
+        WR-07 NOTE — Parquet cache takes precedence over DB-derived start date:
+        When a Parquet file already exists for the ticker, self.fetch() uses the
+        Parquet's last date as the incremental start, overriding the DB-derived
+        `since` computed below. This is intentional: the Parquet acts as a local
+        cache layer. If Parquet and DB diverge (e.g. Parquet manually deleted and
+        rebuilt), call with start_date explicitly or use detect_and_insert_gaps()
+        to backfill missing rows after the fact.
+        """
         # Incremental: use last stored date if no start_date given
         if start_date is None:
             row = conn.execute(
