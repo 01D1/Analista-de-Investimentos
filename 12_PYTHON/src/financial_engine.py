@@ -396,7 +396,8 @@ def run_all() -> list[FinancialResult]:
 
     tickers_path = Path(__file__).parent.parent / "config" / "tickers.yaml"
     try:
-        data = yaml.safe_load(open(tickers_path, encoding="utf-8"))
+        with open(tickers_path, encoding="utf-8") as fh:
+            data = yaml.safe_load(fh)
         active_tickers = [
             t["ticker"]
             for t in data.get("tickers", [])
