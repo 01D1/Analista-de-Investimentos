@@ -698,3 +698,204 @@ def test_bank_routing_guard_prevents_dcf(monkeypatch):
         f"run_dcf was called {run_dcf_mock.call_count} times for bank ticker — "
         "routing guard failed (FIN-05 violation)"
     )
+
+
+# ---------------------------------------------------------------------------
+# Tests FIN-03: compute_wacc() from macro_series (Plan 03-03)
+# ---------------------------------------------------------------------------
+
+def test_wacc_from_macro_series(monkeypatch):
+    """compute_wacc() derives WACC from live Selic and CDS Brasil in macro_series."""
+    from datetime import date
+    from src.financial_engine import compute_wacc
+
+    conn = make_db()
+    today = date.today().isoformat()
+
+    # Insert fresh macro_series rows (today's date — not stale)
+    for series_code, value in [(11, 0.1065), (29039, 0.0155)]:
+        conn.execute(
+            """INSERT OR IGNORE INTO macro_series
+               (id, series_code, series_name, date, value, ingested_at)
+               VALUES (?, ?, ?, ?, ?, ?)""",
+            (str(uuid.uuid4()), series_code, "test", today, value, f"{today}T00:00:00"),
+        )
+    conn.commit()
+
+    # Mock SectorConfig to return industrial config with known assumptions
+    mock_cfg = MagicMock()
+    mock_cfg.is_bank_model = False
+    mock_cfg.dcf_assumptions = {
+        "beta": 1.0,
+        "erp": 0.055,
+        "cost_of_debt": 0.115,
+        "tax_rate": 0.27,
+        "debt_to_capital": 0.25,
+        "risk_free": 0.065,
+        "country_risk": 0.015,
+        "terminal_growth": 0.04,
+    }
+    monkeypatch.setattr("src.financial_engine.SectorConfig.for_ticker", lambda t: mock_cfg)
+
+    # Mock is_stale to return False (data is fresh)
+    monkeypatch.setattr("src.financial_engine.is_stale", lambda d: False)
+
+    result = compute_wacc("PETR4", conn)
+
+    assert len(result) == 4, f"Expected tuple of 4, got {len(result)}"
+    wacc, selic_float, cds_float, used_fallback = result
+
+    assert isinstance(wacc, float), f"wacc should be float, got {type(wacc)}"
+    assert 0.05 < wacc < 0.50, f"WACC={wacc:.4f} outside realistic range (0.05, 0.50)"
+    assert used_fallback is False, f"Expected used_fallback=False (fresh data), got {used_fallback}"
+    assert abs(selic_float - 0.1065) < 0.001, f"Expected selic~0.1065, got {selic_float}"
+    assert abs(cds_float - 0.0155) < 0.001, f"Expected cds~0.0155, got {cds_float}"
+
+
+def test_wacc_stale_macro_fallback(monkeypatch):
+    """compute_wacc() falls back to sectors.yaml when macro data is stale."""
+    from src.financial_engine import compute_wacc
+
+    conn = make_db()
+    stale_date = "2023-01-01"
+
+    # Insert stale macro_series rows (3 years ago)
+    for series_code, value in [(11, 0.1065), (29039, 0.0155)]:
+        conn.execute(
+            """INSERT OR IGNORE INTO macro_series
+               (id, series_code, series_name, date, value, ingested_at)
+               VALUES (?, ?, ?, ?, ?, ?)""",
+            (str(uuid.uuid4()), series_code, "test", stale_date, value, f"{stale_date}T00:00:00"),
+        )
+    conn.commit()
+
+    # Mock SectorConfig with known fallback values
+    mock_cfg = MagicMock()
+    mock_cfg.is_bank_model = False
+    mock_cfg.dcf_assumptions = {
+        "beta": 1.0,
+        "erp": 0.055,
+        "cost_of_debt": 0.115,
+        "tax_rate": 0.27,
+        "debt_to_capital": 0.25,
+        "risk_free": 0.065,
+        "country_risk": 0.015,
+        "terminal_growth": 0.04,
+    }
+    monkeypatch.setattr("src.financial_engine.SectorConfig.for_ticker", lambda t: mock_cfg)
+
+    # Mock is_stale to always return True (simulate stale data)
+    monkeypatch.setattr("src.financial_engine.is_stale", lambda d: True)
+
+    _, _, _, used_fallback = compute_wacc("PETR4", conn)
+
+    assert used_fallback is True, f"Expected used_fallback=True for stale macro, got {used_fallback}"
+
+    # Verify WACC is still a valid positive number (fallback path computes)
+    wacc, _, _, _ = compute_wacc("PETR4", conn)
+    assert wacc > 0, f"Fallback WACC should be > 0, got {wacc}"
+
+
+# ---------------------------------------------------------------------------
+# Tests FIN-04: _validate_dcf_inputs() input validation guard (Plan 03-03)
+# ---------------------------------------------------------------------------
+
+def test_dcf_input_validation_blocks_run(monkeypatch):
+    """_validate_dcf_inputs() returns 'INPUT_INVALIDO' for terminal_growth >= WACC or WACC <= 5%."""
+    from src.financial_engine import _validate_dcf_inputs
+
+    # Case 1: terminal_growth >= wacc → INPUT_INVALIDO
+    result = _validate_dcf_inputs("PETR4", wacc=0.12, terminal_growth=0.15,
+                                   current_price=35.0, price_target=None)
+    assert result == "INPUT_INVALIDO", (
+        f"Expected 'INPUT_INVALIDO' when terminal_growth=0.15 >= wacc=0.12, got {result!r}"
+    )
+
+    # Case 2: wacc <= 0.05 → INPUT_INVALIDO
+    result = _validate_dcf_inputs("PETR4", wacc=0.03, terminal_growth=0.02,
+                                   current_price=35.0, price_target=None)
+    assert result == "INPUT_INVALIDO", (
+        f"Expected 'INPUT_INVALIDO' when wacc=0.03 <= 0.05, got {result!r}"
+    )
+
+    # Case 3: valid inputs → None
+    result = _validate_dcf_inputs("PETR4", wacc=0.12, terminal_growth=0.04,
+                                   current_price=35.0, price_target=None)
+    assert result is None, (
+        f"Expected None for valid inputs (wacc=12% > tg=4%, wacc > 5%), got {result!r}"
+    )
+
+
+def test_dcf_confidence_flag_out_of_range(monkeypatch):
+    """_validate_dcf_inputs() returns 'FORA DO INTERVALO CONFIAVEL' for price_target outside [0.1x, 5.0x]."""
+    from src.financial_engine import _validate_dcf_inputs
+
+    # Case 1: ratio = 10.0 > 5.0 → FORA DO INTERVALO CONFIAVEL
+    result = _validate_dcf_inputs("PETR4", wacc=0.12, terminal_growth=0.04,
+                                   current_price=10.0, price_target=100.0)
+    assert result == "FORA DO INTERVALO CONFIAVEL", (
+        f"Expected 'FORA DO INTERVALO CONFIAVEL' for ratio=10.0, got {result!r}"
+    )
+
+    # Case 2: ratio = 0.05 < 0.1 → FORA DO INTERVALO CONFIAVEL
+    result = _validate_dcf_inputs("PETR4", wacc=0.12, terminal_growth=0.04,
+                                   current_price=100.0, price_target=5.0)
+    assert result == "FORA DO INTERVALO CONFIAVEL", (
+        f"Expected 'FORA DO INTERVALO CONFIAVEL' for ratio=0.05, got {result!r}"
+    )
+
+    # Case 3: ratio = 1.14 (within [0.1, 5.0]) → None
+    result = _validate_dcf_inputs("PETR4", wacc=0.12, terminal_growth=0.04,
+                                   current_price=35.0, price_target=40.0)
+    assert result is None, (
+        f"Expected None for ratio=1.14 (within range), got {result!r}"
+    )
+
+
+def test_dcf_invalid_input_writes_null_fair_value(monkeypatch):
+    """_compute_dcf_industrial() writes NULL fair_value with 'INPUT_INVALIDO' when terminal_growth >= WACC."""
+    from src.financial_engine import _compute_dcf_industrial
+
+    conn = make_db()
+
+    # Mock SectorConfig — dcf_fcff path with invalid terminal_growth=0.15 >= wacc=0.12
+    mock_cfg = MagicMock()
+    mock_cfg.is_bank_model = False
+    mock_cfg.valuation_method = "dcf_fcff"
+    mock_cfg.dcf_assumptions = {
+        "terminal_growth": 0.15,   # invalid: 0.15 >= 0.12 wacc
+        "risk_free": 0.065,
+        "country_risk": 0.015,
+        "beta": 1.0,
+        "erp": 0.055,
+        "cost_of_debt": 0.115,
+        "tax_rate": 0.27,
+        "debt_to_capital": 0.25,
+        "n_years": 5,
+        "base_revenue_growth": [0.05, 0.05, 0.05, 0.05, 0.05],
+        "base_capex_pct": 0.06,
+    }
+
+    # Monkeypatch compute_wacc to return controlled values (wacc=0.12)
+    monkeypatch.setattr(
+        "src.financial_engine.compute_wacc",
+        lambda ticker, conn: (0.12, 0.105, 0.015, False),
+    )
+
+    # _get_current_price returns None (no price data in empty DB — that's OK)
+    ltm = {}  # empty LTM — all fields will be None/0
+
+    _compute_dcf_industrial("PETR4", conn, ltm, mock_cfg, "2026-05-11")
+
+    # Check that financial_dcf row was written with NULL fair_value and INPUT_INVALIDO flag
+    row = conn.execute(
+        "SELECT * FROM financial_dcf WHERE ticker = 'PETR4'"
+    ).fetchone()
+
+    assert row is not None, "Nenhuma linha escrita em financial_dcf para PETR4"
+    assert row["fair_value_brl"] is None, (
+        f"Expected fair_value_brl=NULL when INPUT_INVALIDO, got {row['fair_value_brl']}"
+    )
+    assert row["confidence_flag"] == "INPUT_INVALIDO", (
+        f"Expected confidence_flag='INPUT_INVALIDO', got {row['confidence_flag']!r}"
+    )
