@@ -333,3 +333,132 @@ def test_normalized_name_backfill(monkeypatch):
         assert row["normalized_name"] == "ebit", (
             f"Expected 'ebit', got {row['normalized_name']!r}"
         )
+
+
+# ---------------------------------------------------------------------------
+# Test 7: FIN-02 — Industrial multiples computed correctly
+# ---------------------------------------------------------------------------
+
+def test_industrial_multiples_computed(monkeypatch):
+    """_compute_multiples() writes financial_multiples row for industrial ticker with price."""
+    from src.financial_engine import _compute_multiples
+    from unittest.mock import MagicMock
+
+    conn = make_db()
+
+    # Insert price_ohlcv row for PETR4
+    conn.execute(
+        """INSERT INTO price_ohlcv
+           (id, ticker, date, adj_close, is_gap, ingested_at)
+           VALUES (?, ?, ?, ?, ?, ?)""",
+        (str(uuid.uuid4()), "PETR4", "2026-05-11", 35.50, 0, "2026-05-11T00:00:00"),
+    )
+    conn.commit()
+
+    # LTM dict with enough data to compute multiples
+    ltm = {
+        "net_income": 5000.0,
+        "total_equity": 25000.0,
+        "ebitda": 8000.0,
+        "net_revenue": 20000.0,
+        "net_debt": 10000.0,
+        "shares_outstanding": 1000.0,
+        "dividends_paid": 500.0,
+        "ebit": 7000.0,
+        "gross_debt": 15000.0,
+        "cash": 5000.0,
+    }
+
+    # Mock SectorConfig — industrial ticker
+    mock_cfg = MagicMock()
+    mock_cfg.is_bank_model = False
+
+    _compute_multiples("PETR4", conn, ltm, mock_cfg, "2026-05-11")
+
+    row = conn.execute(
+        "SELECT * FROM financial_multiples WHERE ticker = 'PETR4'"
+    ).fetchone()
+
+    assert row is not None, "Nenhuma linha inserida em financial_multiples"
+    assert row["price"] == pytest.approx(35.50), (
+        f"Expected price=35.50, got {row['price']}"
+    )
+    assert row["pe_ratio"] is not None, "pe_ratio should not be None for industrial ticker"
+    assert row["pe_ratio"] > 0, f"pe_ratio should be > 0, got {row['pe_ratio']}"
+
+
+# ---------------------------------------------------------------------------
+# Test 8: FIN-02 — Missing price produces flagged NULL record (no crash)
+# ---------------------------------------------------------------------------
+
+def test_multiples_handles_missing_price(monkeypatch):
+    """_compute_multiples() writes NULL price row when no price in price_ohlcv — no crash."""
+    from src.financial_engine import _compute_multiples
+    from unittest.mock import MagicMock
+
+    conn = make_db()
+
+    # NO price_ohlcv rows for VALE3 — _get_current_price() must return None
+    mock_cfg = MagicMock()
+    mock_cfg.is_bank_model = False
+
+    # _compute_multiples must not raise — it should write a flagged row
+    _compute_multiples("VALE3", conn, {}, mock_cfg, "2026-05-11")
+
+    row = conn.execute(
+        "SELECT * FROM financial_multiples WHERE ticker = 'VALE3'"
+    ).fetchone()
+
+    assert row is not None, "Nenhuma linha inserida mesmo sem preço"
+    assert row["price"] is None, f"Expected price=None, got {row['price']}"
+    assert row["pe_ratio"] is None, f"Expected pe_ratio=None, got {row['pe_ratio']}"
+
+
+# ---------------------------------------------------------------------------
+# Test 9: FIN-02 — Bank multiples have ev_ebitda = NULL
+# ---------------------------------------------------------------------------
+
+def test_bank_multiples_ev_ebitda_null(monkeypatch):
+    """_compute_multiples() writes ev_ebitda=NULL for bank tickers (FIN-05 guard)."""
+    from src.financial_engine import _compute_multiples
+    from unittest.mock import MagicMock
+
+    conn = make_db()
+
+    # Insert price_ohlcv row for ITUB4
+    conn.execute(
+        """INSERT INTO price_ohlcv
+           (id, ticker, date, adj_close, is_gap, ingested_at)
+           VALUES (?, ?, ?, ?, ?, ?)""",
+        (str(uuid.uuid4()), "ITUB4", "2026-05-11", 25.0, 0, "2026-05-11T00:00:00"),
+    )
+    conn.commit()
+
+    # LTM dict for bank ticker
+    ltm = {
+        "net_income": 3000.0,
+        "total_equity": 20000.0,
+        "shares_outstanding": 800.0,
+        "nii_gross": 5000.0,
+        "fee_income": 1000.0,
+        "loan_portfolio_gross": 60000.0,
+        "total_assets": 100000.0,
+    }
+
+    # Mock SectorConfig — bank ticker
+    mock_bank_cfg = MagicMock()
+    mock_bank_cfg.is_bank_model = True
+
+    _compute_multiples("ITUB4", conn, ltm, mock_bank_cfg, "2026-05-11")
+
+    row = conn.execute(
+        "SELECT * FROM financial_multiples WHERE ticker = 'ITUB4'"
+    ).fetchone()
+
+    assert row is not None, "Nenhuma linha inserida para ITUB4"
+    assert row["ev_ebitda"] is None, (
+        f"Expected ev_ebitda=NULL for bank ticker, got {row['ev_ebitda']}"
+    )
+    assert row["pe_ratio"] is not None, (
+        f"Expected pe_ratio not None for bank with price and net_income, got {row['pe_ratio']}"
+    )
