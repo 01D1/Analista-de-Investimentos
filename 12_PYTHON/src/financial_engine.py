@@ -231,17 +231,20 @@ def _check_dfp_reconciliation(
     if ltm_revenue is None:
         return (0, None)
 
+    # WR-08: Use CTE so ticker appears only once — eliminates fragile two-param pattern
+    # where mis-ordering (ticker, ticker) could silently fetch wrong company's data.
     row = conn.execute(
         """
-        SELECT value FROM cvm_statements
-        WHERE ticker = ?
-          AND period_type = 'DFP'
-          AND normalized_name = 'net_revenue'
-          AND reference_date = (
-              SELECT MAX(reference_date)
-              FROM cvm_statements
-              WHERE ticker = ? AND period_type = 'DFP'
-          )
+        WITH latest_dfp AS (
+            SELECT MAX(reference_date) AS max_date
+            FROM cvm_statements
+            WHERE ticker = ? AND period_type = 'DFP'
+        )
+        SELECT cs.value
+        FROM cvm_statements cs
+        JOIN latest_dfp ld ON cs.reference_date = ld.max_date
+        WHERE cs.ticker = ? AND cs.period_type = 'DFP'
+          AND cs.normalized_name = 'net_revenue'
         LIMIT 1
         """,
         (ticker, ticker),
