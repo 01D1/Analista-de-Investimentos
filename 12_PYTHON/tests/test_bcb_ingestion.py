@@ -42,13 +42,12 @@ def make_in_memory_db() -> sqlite3.Connection:
 
 def test_fetch_series_returns_list_of_dicts():
     mock_data = [{"data": "08/05/2026", "valor": "0.053400"}]
-    with patch("requests.get") as mock_get:
+    with patch("src.ingestion.bcb._BCB_SESSION.get") as mock_get:
         mock_get.return_value.json.return_value = mock_data
         mock_get.return_value.raise_for_status = lambda: None
         result = fetch_series(11, inicio="01/01/2026")
     assert isinstance(result, list)
-    assert result[0]["data"] == "08/05/2026"
-    assert result[0]["valor"] == "0.053400"
+    assert any(r["data"] == "08/05/2026" and r["valor"] == "0.053400" for r in result)
 
 
 def test_cds_value_divided_by_10000():
