@@ -12,9 +12,7 @@ schedules:
     cron: "0 19 * * 1-5"      # seg–sex 19:00 (pós-fechamento B3)
     description: Atualizar preços OHLCV em ingestion.db
 
-  - job: cvm_check
-    cron: "0 19 * * 1-5"      # seg–sex 19:00
-    description: Verificar novos documentos na CVM
+  # cvm_check removed — superseded by cvm_ingest (ING-01/02/03)
 
   - job: pipeline
     cron: "30 19 * * 1-5"     # seg–sex 19:30
@@ -42,7 +40,7 @@ schedules:
     description: Coleta notícias (news_hunter) + sincronizar para ingestion.db
 
   - job: cvm_ingest
-    cron: "0 19 * * 1-5"      # seg–sex 19:00
+    cron: "15 19 * * 1-5"     # seg–sex 19:15 (staggered 15 min after b3_prices)
     description: Ingestão CVM DFP/ITR/IPE para watchlist
 
   # ── Semanais ──────────────────────────────────────────────
