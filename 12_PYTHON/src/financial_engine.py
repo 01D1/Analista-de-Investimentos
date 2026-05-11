@@ -30,6 +30,7 @@ from src.utils.errors import IngestionError
 from src.utils.logger import get_logger
 from src.valuation.sector_config import SectorConfig
 from src.valuation.calculate_metrics import calculate_industrial_metrics, calculate_bank_metrics
+from src.valuation.valuation_dcf import run_ddm
 from src.normalization.account_mapper import AccountMapper
 from src.normalization.bank_account_mapper import BankAccountMapper
 
@@ -364,6 +365,15 @@ def run_ticker(ticker: str) -> FinancialResult:
         # FIN-02: Compute and write financial_multiples
         _compute_multiples(ticker, conn, ltm, cfg, computed_date)
 
+        # FIN-05: Bank model routing — DDM fair value for bank tickers
+        # T-03-04-01: is_bank_model is the sole gate — industrial DCF never called for banks
+        if cfg.is_bank_model:
+            _compute_bank_model(ticker, conn, ltm, cfg, computed_date)
+        else:
+            # Industrial DCF handled in Plan 03-03 (Wave 2)
+            # Stub _compute_dcf remains until Wave 2 executes
+            pass
+
         return FinancialResult(ticker=ticker, success=True)
 
     except Exception as exc:
@@ -548,6 +558,164 @@ def _compute_multiples(
     log.info(
         f"[{ticker}] multiples escritos — price={current_price} "
         f"pe={getattr(metrics, 'pe_ratio', None)}"
+    )
+
+
+# ---------------------------------------------------------------------------
+# DCF write helper — used by Plan 03-03 (industrial DCF) and Plan 03-04 (bank DDM)
+# ---------------------------------------------------------------------------
+
+
+def _write_dcf_row(
+    conn: sqlite3.Connection,
+    ticker: str,
+    computed_date: str,
+    valuation_method: str,
+    fair_value_brl: float | None,
+    upside_pct: float | None,
+    wacc: float | None,
+    terminal_growth: float | None,
+    selic_used: float | None,
+    cds_used: float | None,
+    used_fallback: bool,
+    confidence_flag: str | None,
+) -> None:
+    """Write a row to financial_dcf. Shared by industrial DCF and bank DDM paths.
+
+    T-03-04-03 mitigation: All params positional — ticker never interpolated into SQL.
+    """
+    conn.execute(
+        """
+        INSERT OR REPLACE INTO financial_dcf
+        (id, ticker, computed_date, valuation_method, fair_value_brl, upside_pct,
+         wacc, terminal_growth, selic_used, cds_used, used_fallback, confidence_flag,
+         ingested_at)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """,
+        (
+            str(uuid.uuid4()),
+            ticker,
+            computed_date,
+            valuation_method,
+            fair_value_brl,
+            upside_pct,
+            wacc,
+            terminal_growth,
+            selic_used,
+            cds_used,
+            int(used_fallback),
+            confidence_flag,
+            datetime.now(timezone.utc).isoformat(),
+        ),
+    )
+    conn.commit()
+
+
+# ---------------------------------------------------------------------------
+# Bank model — FIN-05
+# ---------------------------------------------------------------------------
+
+
+def _compute_bank_model(
+    ticker: str,
+    conn: sqlite3.Connection,
+    ltm: dict,
+    cfg: SectorConfig,
+    computed_date: str,
+) -> None:
+    """Compute bank DDM fair value and bank multiples.
+
+    FIN-05: Banks use DDM (run_ddm) + bank metrics (calculate_bank_metrics).
+    Never uses EBITDA, DCF FCFF, or EV/EBITDA — these are COSIF tickers.
+
+    T-03-04-01 mitigation: is_bank_model gates all routing — enforced in run_ticker().
+    T-03-04-02 mitigation: ke > terminal_growth guard before run_ddm() — avoids DDM explosion.
+    T-03-04-04 mitigation: bank LTM uses BankAccountMapper (COSIF), not AccountMapper (IFRS).
+    """
+    # gordon_assumptions: {coe, terminal_growth, payout_ratio} — see sectors.yaml bank section
+    a = cfg.gordon_assumptions
+    current_price = _get_current_price(ticker, conn)
+    shares = ltm.get("shares_outstanding")
+
+    # --- DDM fair value ---
+    base_net_income = ltm.get("net_income") or 0.0
+    payout_ratio = float(a.get("payout_ratio", 0.40))
+    terminal_growth = float(a.get("terminal_growth", 0.055))
+    ke = float(a.get("coe", 0.135))  # cost of equity from gordon_assumptions
+
+    # 5-year income growth rates — not in gordon_assumptions; use terminal_growth as proxy
+    income_growth_rates = [terminal_growth] * 5
+
+    # WACC components for metadata (used_fallback tracking via compute_wacc)
+    wacc_full, selic_used, cds_used, used_fallback = compute_wacc(ticker, conn)
+
+    fair_value = None
+    confidence_flag = None
+
+    # T-03-04-02: Guard — ke must exceed terminal_growth and a minimum floor
+    if base_net_income > 0 and ke > terminal_growth and ke > 0.05:
+        try:
+            result = run_ddm(
+                ticker=ticker,
+                base_year=int(computed_date[:4]),
+                base_net_income=base_net_income,
+                payout_ratio=payout_ratio,
+                cost_of_equity=ke,
+                terminal_growth_rate=terminal_growth,
+                income_growth_rates=income_growth_rates,
+                shares_outstanding=shares if shares and shares > 0 else 0.0,
+            )
+            # DDMResult.equity_value_per_share if shares > 0; else derive from equity_value / shares
+            if shares and shares > 0 and result.equity_value_per_share > 0:
+                fair_value = result.equity_value_per_share
+            elif shares and shares > 0 and result.equity_value > 0:
+                fair_value = result.equity_value / shares
+            elif result.equity_value > 0:
+                fair_value = None  # no shares — cannot compute per-share price target
+            else:
+                fair_value = None
+
+            # Pitfall P7: validate result range (0.1x – 5.0x current price)
+            if fair_value and current_price and current_price > 0:
+                ratio = fair_value / current_price
+                if ratio < 0.1 or ratio > 5.0:
+                    confidence_flag = "FORA DO INTERVALO CONFIAVEL"
+                    log.warning(
+                        f"[{ticker}] DDM: fair_value fora do intervalo esperado: "
+                        f"ratio={ratio:.2f}x (fair={fair_value:.2f} price={current_price:.2f})"
+                    )
+        except Exception as exc:
+            log.error(f"[{ticker}] run_ddm() falhou: {exc}")
+            confidence_flag = "ERRO_CALCULO"
+    elif ke <= terminal_growth:
+        log.error(
+            f"[{ticker}] DDM inválido: ke={ke:.2%} <= terminal_growth={terminal_growth:.2%}"
+        )
+        confidence_flag = "INPUT_INVALIDO"
+    elif ke <= 0.05:
+        log.error(f"[{ticker}] DDM inválido: ke={ke:.2%} <= mínimo de 5%")
+        confidence_flag = "INPUT_INVALIDO"
+    elif base_net_income <= 0:
+        log.warning(f"[{ticker}] DDM ignorado: net_income={base_net_income} <= 0")
+        confidence_flag = "SEM_LUCRO"
+
+    upside_pct = (
+        (fair_value - current_price) / current_price
+        if fair_value and current_price and current_price > 0
+        else None
+    )
+
+    # ebitda is None for banks — enforced in _aggregate_ltm (is_bank=True)
+    # This write path stores ke (cost of equity) in the wacc column for DDM tickers
+    _write_dcf_row(
+        conn, ticker, computed_date, "ddm",
+        fair_value, upside_pct,
+        ke,              # store ke (not full WACC) in wacc column for DDM rows
+        terminal_growth, selic_used, cds_used, used_fallback, confidence_flag,
+    )
+    log.info(
+        f"[{ticker}] DDM escrito — fair_value={fair_value} "
+        f"ke={ke:.3f} terminal_growth={terminal_growth:.3f} flag={confidence_flag}"
     )
 
 
