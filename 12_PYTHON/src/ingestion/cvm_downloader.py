@@ -335,6 +335,10 @@ class CVMDownloader:
                     files = self.download_itr(year, force=force)
                 results[year] = files
                 time.sleep(RATE_LIMIT_SECONDS)
+            except FileNotFoundError as exc:
+                # CR-03: 404 = year not yet published — expected, not an error
+                log.debug(f"{doc_type} {year}: arquivo não publicado — {exc}")
+                results[year] = []
             except Exception as exc:
                 log.error(f"Falha ao baixar {doc_type} {year}: {exc}")
                 results[year] = []
@@ -464,6 +468,9 @@ def ingest_ticker(
                 if files:
                     downloaded[doc_type].append(year)
                 time.sleep(RATE_LIMIT_SECONDS)
+            except FileNotFoundError as exc:
+                # CR-03: 404 = year not yet published — expected, not an error
+                log.debug(f"[{ticker}] {doc_type} {year}: arquivo não publicado — {exc}")
             except Exception as exc:
                 log.error(f"[{ticker}] {doc_type} {year}: {exc}")
 
