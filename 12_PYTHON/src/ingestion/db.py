@@ -170,7 +170,13 @@ def init_db(db_path: Path = DB_PATH) -> None:
 
 
 def get_connection(db_path: Path = DB_PATH) -> sqlite3.Connection:
-    """Retorna conexão sqlite3 aberta com row_factory=sqlite3.Row."""
+    """Retorna conexão sqlite3 aberta com row_factory=sqlite3.Row.
+
+    CR-05: busy_timeout=5000 is a per-connection setting; re-apply here so that
+    every caller gets the same 5 s grace period before 'database is locked' errors,
+    matching the PRAGMA set in init_db().
+    """
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
+    conn.execute("PRAGMA busy_timeout=5000")  # match init_db setting
     return conn
