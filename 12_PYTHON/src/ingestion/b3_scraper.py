@@ -20,11 +20,14 @@ Uso:
 
 from __future__ import annotations
 
-from datetime import date, timedelta
+import sqlite3
+import uuid
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 import pandas as pd
 
+from src.utils.errors import IngestionError
 from src.utils.logger import get_logger
 from src.utils.retry import retry
 
@@ -159,6 +162,127 @@ class B3Scraper:
         raw = raw[[c for c in raw.columns if c in expected]]
 
         return raw.dropna(how="all")
+
+    def write_to_db(
+        self,
+        ticker: str,
+        df: pd.DataFrame,
+        conn: sqlite3.Connection,
+    ) -> int:
+        """Insert OHLCV rows into price_ohlcv table. Returns count of new rows inserted.
+        Uses INSERT OR IGNORE — duplicate (ticker, date) rows skipped silently.
+        Note: after yfinance auto_adjust=True, 'close' column contains adjusted close."""
+        inserted = 0
+        now = datetime.utcnow().isoformat()
+        for dt, row in df.iterrows():
+            date_str = (
+                dt.date().isoformat()
+                if hasattr(dt, "date")
+                else str(dt)[:10]
+            )
+            conn.execute(
+                """INSERT OR IGNORE INTO price_ohlcv
+                   (id, ticker, date, open, high, low, close, adj_close,
+                    volume, is_gap, ingested_at)
+                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 0, ?)""",
+                (
+                    str(uuid.uuid4()),
+                    ticker,
+                    date_str,
+                    float(row.get("open", 0) or 0) or None,
+                    float(row.get("high", 0) or 0) or None,
+                    float(row.get("low", 0) or 0) or None,
+                    float(row.get("close", 0) or 0) or None,
+                    float(row.get("close", 0) or 0) or None,  # adj_close = close post auto_adjust
+                    int(row.get("volume", 0) or 0) or None,
+                    now,
+                ),
+            )
+            inserted += conn.execute("SELECT changes()").fetchone()[0]
+        conn.commit()
+        return inserted
+
+    def detect_and_insert_gaps(
+        self,
+        ticker: str,
+        df: pd.DataFrame,
+        start_date: str,
+        conn: sqlite3.Connection,
+    ) -> int:
+        """Compare df.index against BMFBOVESPA calendar for start_date..today.
+        Insert is_gap=1 rows for any missing trading day.
+        Returns count of gap rows inserted. Never interpolates prices.
+        start_date: ISO string 'YYYY-MM-DD'."""
+        import pandas_market_calendars as mcal
+        from datetime import date as date_type
+
+        bmf = mcal.get_calendar("BMFBOVESPA")
+        schedule = bmf.schedule(
+            start_date=start_date,
+            end_date=str(date_type.today()),
+        )
+        expected_dates = {
+            ts.date() for ts in schedule.index
+        }
+        actual_dates = (
+            {dt.date() for dt in df.index}
+            if not df.empty
+            else set()
+        )
+        gap_dates = expected_dates - actual_dates
+
+        now = datetime.utcnow().isoformat()
+        gaps_inserted = 0
+        for gap_date in sorted(gap_dates):
+            conn.execute(
+                """INSERT OR IGNORE INTO price_ohlcv
+                   (id, ticker, date, is_gap, ingested_at)
+                   VALUES (?, ?, ?, 1, ?)""",
+                (str(uuid.uuid4()), ticker, gap_date.isoformat(), now),
+            )
+            gaps_inserted += conn.execute("SELECT changes()").fetchone()[0]
+
+        if gaps_inserted:
+            log.warning(
+                f"[{ticker}] {gaps_inserted} pregao(oes) sem dados — "
+                f"marcados como GAP em price_ohlcv"
+            )
+        conn.commit()
+        return gaps_inserted
+
+    def fetch_and_store(
+        self,
+        ticker: str,
+        conn: sqlite3.Connection,
+        start_date: str = None,
+    ) -> dict:
+        """Incremental fetch + DB write + gap detection for one ticker.
+        Returns {"inserted": int, "gaps": int, "ticker": str}."""
+        # Incremental: use last stored date if no start_date given
+        if start_date is None:
+            row = conn.execute(
+                "SELECT MAX(date) FROM price_ohlcv WHERE ticker = ? AND is_gap = 0",
+                (ticker,),
+            ).fetchone()
+            if row and row[0]:
+                # Start from day after last stored date
+                last_d = datetime.fromisoformat(row[0]).date()
+                since = str(last_d + timedelta(days=1))
+            else:
+                since = DEFAULT_START
+        else:
+            since = start_date
+
+        try:
+            df = self.fetch(ticker, start_date=since)
+        except IngestionError as exc:
+            log.error(f"[{ticker}] falha no fetch B3: {exc}")
+            return {"inserted": 0, "gaps": 0, "ticker": ticker, "error": str(exc)}
+
+        inserted = self.write_to_db(ticker, df, conn) if not df.empty else 0
+        gaps = self.detect_and_insert_gaps(ticker, df, since, conn)
+        log.info(f"[{ticker}] B3 — inserted={inserted} gaps={gaps}")
+        return {"inserted": inserted, "gaps": gaps, "ticker": ticker}
 
     @staticmethod
     def _load_existing(path: Path) -> pd.DataFrame:
