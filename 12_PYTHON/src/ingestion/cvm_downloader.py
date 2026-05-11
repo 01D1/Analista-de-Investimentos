@@ -24,6 +24,7 @@ Uso:
 
 from __future__ import annotations
 
+import functools
 import io
 import sqlite3
 import time
@@ -33,7 +34,6 @@ from datetime import date, datetime
 from pathlib import Path
 from typing import Literal
 
-import pdfplumber
 import requests
 import yaml
 
@@ -73,8 +73,10 @@ def extract_ipe_pdf_text(pdf_url: str) -> str:
 
     Returns empty string on any failure — never blocks ingestion.
     Caps extraction at 10 pages to mitigate T-02-03 (DoS via large PDFs).
+    pdfplumber is imported lazily so DFP/ITR-only runs don't require it.
     """
     try:
+        import pdfplumber  # lazy import — heavy dep only needed for IPE PDF extraction
         resp = requests.get(pdf_url, timeout=60)
         resp.raise_for_status()
         with pdfplumber.open(io.BytesIO(resp.content)) as pdf:
@@ -86,17 +88,17 @@ def extract_ipe_pdf_text(pdf_url: str) -> str:
         return ""
 
 
-_CVM_CODES: dict[str, str] | None = None
-
-
+@functools.lru_cache(maxsize=1)
 def _load_cvm_codes() -> dict[str, str]:
-    global _CVM_CODES
-    if _CVM_CODES is None:
-        path = Path(__file__).parent.parent.parent / "config" / "cvm_codes.yaml"
-        with open(path) as f:
-            data = yaml.safe_load(f)
-        _CVM_CODES = data.get("cvm_codes", {})
-    return _CVM_CODES
+    """Load CVM code map from YAML. Cached for the process lifetime (thread-safe via lru_cache).
+
+    WR-05: replaces double-checked locking on a global mutable dict.
+    lru_cache is GIL-safe and avoids repeated file reads.
+    """
+    path = Path(__file__).parent.parent.parent / "config" / "cvm_codes.yaml"
+    with open(path) as f:
+        data = yaml.safe_load(f)
+    return data.get("cvm_codes", {})
 
 
 def get_cvm_code(ticker: str) -> str:

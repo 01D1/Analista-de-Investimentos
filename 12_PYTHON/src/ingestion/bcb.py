@@ -39,6 +39,10 @@ _BP_SERIES = {29039}
 # Courtesy rate limit between sequential series calls (BCB soft rate limit)
 _INTER_SERIES_SLEEP = 0.5
 
+# WR-03: module-level session for connection reuse and keepalive (same pattern as CVMDownloader)
+_BCB_SESSION = requests.Session()
+_BCB_SESSION.headers.update({"User-Agent": "FinancialIntelligencePlatform/1.0"})
+
 
 @retry(
     attempts=3,
@@ -57,7 +61,7 @@ def fetch_series(cod: int, inicio: str = "01/01/2019") -> list[dict]:
         "dataInicial": inicio,
         "dataFinal": fim,
     }
-    resp = requests.get(url, params=params, timeout=30)
+    resp = _BCB_SESSION.get(url, params=params, timeout=30)
     resp.raise_for_status()
     return resp.json()
 
