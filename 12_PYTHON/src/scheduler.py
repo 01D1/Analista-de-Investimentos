@@ -399,10 +399,13 @@ def job_news_ingest() -> str:
             )
 
         # Step 2: Sync from banco.db to ingestion.db
+        # WR-07: wrap in try/finally so conn is always closed even if sync raises
         init_db()
         conn = get_connection()
-        inserted = sync_news_to_ingestion_db(conn)
-        conn.close()
+        try:
+            inserted = sync_news_to_ingestion_db(conn)
+        finally:
+            conn.close()
 
         duration_ms = int((time.time() - t0) * 1000)
         status = "ok" if result.returncode == 0 else "partial"
