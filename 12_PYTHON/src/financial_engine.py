@@ -755,9 +755,18 @@ def compute_wacc(
         (wacc, selic_used, cds_used, used_fallback)
     """
     cfg = SectorConfig.for_ticker(ticker)
-    # For bank model, dcf_assumptions may not exist — use gordon_assumptions as fallback
+    # WR-03: For bank tickers, gordon_assumptions typically contains only coe/terminal_growth/
+    # payout_ratio — NOT the industrial WACC fields (beta, erp, cost_of_debt, tax_rate,
+    # debt_to_capital). Fields absent from gordon_assumptions will silently fall back to
+    # hardcoded defaults. The returned wacc_full is only used for metadata (selic_used,
+    # cds_used, used_fallback) in _compute_bank_model(), so the numerical error is benign
+    # today — but callers must NOT use the returned wacc value for bank DCF discounting.
     if cfg.is_bank_model:
         a = cfg.gordon_assumptions
+        log.debug(
+            f"[{ticker}] compute_wacc: banco — wacc calculado com fallbacks industriais; "
+            "use ke direto do gordon_assumptions para valuation DDM/Gordon"
+        )
     else:
         a = cfg.dcf_assumptions
 
