@@ -35,14 +35,14 @@ _DEFAULT_SECTOR = "industrial"
 
 @lru_cache(maxsize=1)
 def _load_sectors() -> dict:
-    with open(_SECTORS_PATH) as f:
+    with open(_SECTORS_PATH, encoding="utf-8") as f:
         return yaml.safe_load(f).get("sectors", {})
 
 
 @lru_cache(maxsize=1)
 def _load_ticker_map() -> dict[str, str]:
     """Retorna {TICKER: tipo_setor}."""
-    with open(_TICKERS_PATH) as f:
+    with open(_TICKERS_PATH, encoding="utf-8") as f:
         data = yaml.safe_load(f)
     return {t["ticker"]: t.get("type", _DEFAULT_SECTOR) for t in data.get("tickers", [])}
 

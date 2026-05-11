@@ -82,6 +82,75 @@ CREATE TABLE IF NOT EXISTS news_articles (
     ingested_at  TEXT NOT NULL
 );
 CREATE UNIQUE INDEX IF NOT EXISTS idx_news_url ON news_articles(url);
+
+CREATE TABLE IF NOT EXISTS financial_ltm (
+    id                          TEXT PRIMARY KEY,
+    ticker                      TEXT NOT NULL,
+    computed_date               TEXT NOT NULL,
+    net_revenue                 REAL,
+    ebitda                      REAL,
+    net_income                  REAL,
+    fcf                         REAL,
+    net_debt                    REAL,
+    gross_debt                  REAL,
+    cash                        REAL,
+    shareholders_equity         REAL,
+    shares_outstanding          REAL,
+    ltm_quarters_used           INTEGER,
+    ltm_reconciliation_warning  INTEGER DEFAULT 0,
+    ltm_warning_detail          TEXT,
+    ingested_at                 TEXT NOT NULL
+);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_ltm_dedup ON financial_ltm(ticker, computed_date);
+
+CREATE TABLE IF NOT EXISTS financial_multiples (
+    id              TEXT PRIMARY KEY,
+    ticker          TEXT NOT NULL,
+    computed_date   TEXT NOT NULL,
+    price           REAL,
+    market_cap      REAL,
+    pe_ratio        REAL,
+    ev_ebitda       REAL,
+    pb_ratio        REAL,
+    dividend_yield  REAL,
+    ev_revenue      REAL,
+    ingested_at     TEXT NOT NULL
+);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_multiples_dedup ON financial_multiples(ticker, computed_date);
+
+CREATE TABLE IF NOT EXISTS financial_dcf (
+    id                  TEXT PRIMARY KEY,
+    ticker              TEXT NOT NULL,
+    computed_date       TEXT NOT NULL,
+    valuation_method    TEXT,
+    fair_value_brl      REAL,
+    upside_pct          REAL,
+    wacc                REAL,
+    terminal_growth     REAL,
+    selic_used          REAL,
+    cds_used            REAL,
+    used_fallback       INTEGER DEFAULT 0,
+    confidence_flag     TEXT,
+    ingested_at         TEXT NOT NULL
+);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_dcf_dedup ON financial_dcf(ticker, computed_date);
+
+CREATE TABLE IF NOT EXISTS financial_signals (
+    id              TEXT PRIMARY KEY,
+    ticker          TEXT NOT NULL,
+    computed_date   TEXT NOT NULL,
+    rsi_14          REAL,
+    macd_line       REAL,
+    macd_signal     REAL,
+    macd_histogram  REAL,
+    ma_50           REAL,
+    ma_200          REAL,
+    golden_cross    INTEGER,
+    death_cross     INTEGER,
+    momentum_score  INTEGER,
+    ingested_at     TEXT NOT NULL
+);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_signals_dedup ON financial_signals(ticker, computed_date);
 """
 
 

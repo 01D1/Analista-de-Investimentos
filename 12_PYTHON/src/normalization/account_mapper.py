@@ -29,7 +29,7 @@ import re
 
 import pandas as pd
 
-from parsers.dfp_parser import ACCOUNT_MAP as CODE_MAP
+from src.parsers.dfp_parser import ACCOUNT_MAP as CODE_MAP
 
 logger = logging.getLogger(__name__)
 

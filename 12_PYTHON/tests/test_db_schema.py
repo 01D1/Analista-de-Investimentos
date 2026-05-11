@@ -12,7 +12,7 @@ import pytest
 
 
 def test_init_db_creates_all_four_tables(tmp_path):
-    """init_db() creates all 4 required tables."""
+    """init_db() creates all 8 required tables (4 ingestion + 4 financial)."""
     from src.ingestion.db import init_db
 
     db = tmp_path / "ingestion.db"
@@ -27,11 +27,14 @@ def test_init_db_creates_all_four_tables(tmp_path):
     }
     conn.close()
 
-    assert tables == {"cvm_statements", "macro_series", "price_ohlcv", "news_articles"}
+    # Original 4 ingestion tables
+    assert {"cvm_statements", "macro_series", "price_ohlcv", "news_articles"}.issubset(tables)
+    # Phase 3 financial tables
+    assert {"financial_ltm", "financial_multiples", "financial_dcf", "financial_signals"}.issubset(tables)
 
 
 def test_init_db_is_idempotent(tmp_path):
-    """Calling init_db() twice raises no error and table count remains 4."""
+    """Calling init_db() twice raises no error and table count remains 8."""
     from src.ingestion.db import init_db
 
     db = tmp_path / "ingestion.db"
@@ -44,7 +47,7 @@ def test_init_db_is_idempotent(tmp_path):
     ).fetchone()[0]
     conn.close()
 
-    assert count == 4
+    assert count == 8
 
 
 def test_get_connection_returns_open_connection_with_row_factory(tmp_path):
