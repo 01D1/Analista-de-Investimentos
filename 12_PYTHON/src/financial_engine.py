@@ -195,11 +195,22 @@ def _aggregate_ltm(
         result["fcf"] = None  # DFC rows absent → mark as NULL, not 0
 
     # Gross debt and net debt
-    result["gross_debt"] = (
-        snapshot.get("short_term_debt", {}).get("value", 0.0)
-        + snapshot.get("long_term_debt", {}).get("value", 0.0)
-    )
-    result["net_debt"] = result["gross_debt"] - snapshot.get("cash", {}).get("value", 0.0)
+    # CR-02: use None sentinel when both debt components are absent to avoid
+    # silently returning 0.0 when data is incomplete; downstream DCF consumers
+    # must treat None as "insufficient data" and skip the calculation.
+    std = snapshot.get("short_term_debt", {}).get("value")
+    ltd = snapshot.get("long_term_debt", {}).get("value")
+    csh = snapshot.get("cash", {}).get("value")
+
+    if std is None and ltd is None:
+        result["gross_debt"] = None
+        result["net_debt"] = None
+    else:
+        result["gross_debt"] = (std or 0.0) + (ltd or 0.0)
+        if csh is None:
+            result["net_debt"] = None  # cannot compute net_debt without cash
+        else:
+            result["net_debt"] = result["gross_debt"] - csh
 
     result["ltm_quarters_used"] = ltm_quarters_used
 
