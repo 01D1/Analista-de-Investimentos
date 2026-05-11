@@ -161,7 +161,7 @@ def _aggregate_ltm(
 
     for row in rows:
         name = row["normalized_name"]
-        val = row["value"] or 0.0
+        val = float(row["value"]) if row["value"] is not None else 0.0
         ref = row["reference_date"]
         if name in FLOW_ITEMS:
             flow[name] = flow.get(name, 0.0) + val
