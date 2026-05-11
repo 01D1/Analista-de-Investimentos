@@ -29,6 +29,7 @@ from src.ingestion.bcb import is_stale
 from src.utils.errors import IngestionError
 from src.utils.logger import get_logger
 from src.valuation.sector_config import SectorConfig
+from src.valuation.calculate_metrics import calculate_industrial_metrics, calculate_bank_metrics
 from src.normalization.account_mapper import AccountMapper
 from src.normalization.bank_account_mapper import BankAccountMapper
 
@@ -359,6 +360,10 @@ def run_ticker(ticker: str) -> FinancialResult:
         conn.commit()
 
         log.info(f"[{ticker}] financial_ltm gravado — quarters={ltm.get('ltm_quarters_used')}")
+
+        # FIN-02: Compute and write financial_multiples
+        _compute_multiples(ticker, conn, ltm, cfg, computed_date)
+
         return FinancialResult(ticker=ticker, success=True)
 
     except Exception as exc:
@@ -404,18 +409,163 @@ def run_all() -> list[FinancialResult]:
 
 
 # ---------------------------------------------------------------------------
-# Stubs — implemented in Plans 02-05
+# Price fetch helper — FIN-02
 # ---------------------------------------------------------------------------
 
 
-def compute_wacc(ticker: str, conn: sqlite3.Connection):
-    """Compute WACC from macro_series. Implemented in Plan 03-03."""
-    raise NotImplementedError("compute_wacc implemented in Plan 03-03")  # noqa: EM101
+def _get_current_price(ticker: str, conn: sqlite3.Connection) -> float | None:
+    """Fetch latest non-gap adj_close from price_ohlcv. Returns None if no price available.
+
+    T-03-02-01 mitigation: parameterized query — ticker never in SQL string.
+    T-03-02-04 mitigation: is_gap = 0 filter excludes NULL adj_close gap rows.
+    """
+    row = conn.execute(
+        """
+        SELECT adj_close FROM price_ohlcv
+        WHERE ticker = ? AND is_gap = 0 AND adj_close IS NOT NULL
+        ORDER BY date DESC
+        LIMIT 1
+        """,
+        (ticker,),
+    ).fetchone()
+    if row is None:
+        log.warning(f"[{ticker}] sem preço disponível em price_ohlcv (is_gap=0)")
+        return None
+    return float(row["adj_close"])
 
 
-def _compute_multiples(ticker: str, conn: sqlite3.Connection, ltm: dict):
-    """Compute valuation multiples. Implemented in Plan 03-02."""
-    raise NotImplementedError("_compute_multiples implemented in Plan 03-02")  # noqa: EM101
+# ---------------------------------------------------------------------------
+# Multiples computation — FIN-02
+# ---------------------------------------------------------------------------
+
+
+def _compute_multiples(
+    ticker: str,
+    conn: sqlite3.Connection,
+    ltm: dict,
+    cfg: SectorConfig,
+    computed_date: str,
+) -> None:
+    """Compute and write financial_multiples row for ticker.
+
+    Routes to calculate_bank_metrics() for bank tickers (is_bank_model=True)
+    or calculate_industrial_metrics() for industrial tickers.
+
+    T-03-02-02 mitigation: INSERT OR REPLACE uses positional params — ticker never in SQL string.
+    T-03-02-03 mitigation: None price passed through to metric functions; they return None ratios.
+    """
+    current_price = _get_current_price(ticker, conn)
+    shares = ltm.get("shares_outstanding")
+
+    # Use today's year as proxy for metrics year (LTM period)
+    metrics_year = date.today().year
+
+    if cfg.is_bank_model:
+        # Bank path: P/BV, P/E, dividend_yield via calculate_bank_metrics()
+        # EV/EBITDA is never computed for banks (FIN-05)
+        metrics = calculate_bank_metrics(
+            ticker=ticker,
+            year=metrics_year,
+            nii_gross=ltm.get("nii_gross") or 0.0,
+            fee_income=ltm.get("fee_income") or 0.0,
+            loan_loss_provision=ltm.get("loan_loss_provision") or 0.0,
+            net_income=ltm.get("net_income") or 0.0,
+            total_assets=ltm.get("total_assets") or 0.0,
+            shareholders_equity=ltm.get("total_equity") or 0.0,
+            loan_portfolio_gross=ltm.get("loan_portfolio_gross") or 0.0,
+            shares_outstanding=shares,
+            dividends_paid=ltm.get("dividends_paid"),
+            price=current_price,
+        )
+        ev_ebitda_val = None  # FIN-05: banks never get EV/EBITDA
+        ev_revenue_val = None
+        # calculate_bank_metrics() has no market_cap field — compute manually
+        if current_price is not None and shares is not None and shares > 0:
+            market_cap_val = current_price * shares
+        else:
+            market_cap_val = None
+    else:
+        # Industrial path: P/E, EV/EBITDA, P/BV, dividend_yield, EV/Revenue
+        # market_cap computed from price × shares (no market_cap param in calculate_industrial_metrics)
+        if current_price is not None and shares is not None and shares > 0:
+            market_cap_val = current_price * shares
+        else:
+            market_cap_val = None
+
+        metrics = calculate_industrial_metrics(
+            ticker=ticker,
+            year=metrics_year,
+            net_revenue=ltm.get("net_revenue") or 0.0,
+            ebit=ltm.get("ebit") or 0.0,
+            ebitda=ltm.get("ebitda") or 0.0,
+            net_income=ltm.get("net_income") or 0.0,
+            shareholders_equity=ltm.get("total_equity") or 0.0,
+            gross_debt=ltm.get("gross_debt") or 0.0,
+            cash=ltm.get("cash") or 0.0,
+            cfo=ltm.get("cfo") or 0.0,
+            capex=ltm.get("capex") or 0.0,
+            depreciation=ltm.get("depreciation_amortization_cfo") or 0.0,
+            dividends_paid=ltm.get("dividends_paid") or 0.0,
+            market_cap=market_cap_val,
+            shares_outstanding=shares,
+            price=current_price,
+        )
+        ev_ebitda_val = getattr(metrics, "ev_ebitda", None)
+        # EV/Revenue not in IndustrialMetrics — compute manually if we have the data
+        if market_cap_val is not None and (ltm.get("net_debt") is not None):
+            net_debt = ltm.get("net_debt") or 0.0
+            net_rev = ltm.get("net_revenue")
+            if net_rev and net_rev > 0:
+                ev_revenue_val = (market_cap_val + net_debt) / net_rev
+            else:
+                ev_revenue_val = None
+        else:
+            ev_revenue_val = None
+
+    # T-03-02-02: all INSERT params positional — ticker never interpolated into SQL
+    conn.execute(
+        """
+        INSERT OR REPLACE INTO financial_multiples
+        (id, ticker, computed_date, price, market_cap, pe_ratio, ev_ebitda,
+         pb_ratio, dividend_yield, ev_revenue, ingested_at)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """,
+        (
+            str(uuid.uuid4()),
+            ticker,
+            computed_date,
+            current_price,
+            market_cap_val,
+            getattr(metrics, "pe_ratio", None),
+            ev_ebitda_val,
+            getattr(metrics, "pb_ratio", None),
+            getattr(metrics, "dividend_yield", None),
+            ev_revenue_val,
+            datetime.now(timezone.utc).isoformat(),
+        ),
+    )
+    conn.commit()
+    log.info(
+        f"[{ticker}] multiples escritos — price={current_price} "
+        f"pe={getattr(metrics, 'pe_ratio', None)}"
+    )
+
+
+# ---------------------------------------------------------------------------
+# Stubs — implemented in Plans 03-05
+# ---------------------------------------------------------------------------
+
+
+def compute_wacc(
+    ticker: str, conn: sqlite3.Connection
+) -> tuple[float, float, float, bool]:
+    """Compute WACC from macro_series. Implemented in Plan 03-03.
+
+    Returns minimal fallback (wacc=0.12, selic=0.105, cds=0.015, used_fallback=True)
+    so that run_ticker() remains compilable and testable before Plan 03-03.
+    """
+    # Minimal fallback — Plan 03-03 replaces with real macro_series lookup
+    return (0.12, 0.105, 0.015, True)
 
 
 def _compute_dcf(ticker: str, conn: sqlite3.Connection, ltm: dict):
