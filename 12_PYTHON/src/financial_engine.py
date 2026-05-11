@@ -373,6 +373,9 @@ def run_ticker(ticker: str) -> FinancialResult:
             # FIN-03/FIN-04: Industrial DCF (dcf_fcff or ev_ebitda_multiple)
             _compute_dcf_industrial(ticker, conn, ltm, cfg, computed_date)
 
+        # FIN-06: Technical signals — all tickers
+        _compute_and_write_signals(ticker, conn, computed_date)
+
         return FinancialResult(ticker=ticker, success=True)
 
     except Exception as exc:
@@ -971,10 +974,172 @@ def _compute_dcf_industrial(
 
 
 # ---------------------------------------------------------------------------
-# Stubs — implemented in Plan 03-05
+# Technical signals — FIN-06
 # ---------------------------------------------------------------------------
 
 
-def compute_signals(prices: "pd.Series") -> dict:
-    """Compute RSI-14, MACD, MA50/200, momentum score. Implemented in Plan 03-05."""
-    raise NotImplementedError("compute_signals implemented in Plan 03-05")  # noqa: EM101
+def compute_signals(prices: pd.Series) -> dict:
+    """Compute RSI-14 (Wilder's), MACD (12/26/9), MA50/200, crossover, momentum score.
+
+    Args:
+        prices: pd.Series indexed by date (ascending), values = adj_close.
+
+    Returns:
+        dict with keys: rsi_14, macd_line, macd_signal, macd_histogram,
+                        ma_50, ma_200, golden_cross, death_cross, momentum_score.
+
+    T-03-05-03 mitigation: loss.replace(0, float('nan')) prevents RSI division by zero.
+    T-03-05-04 mitigation: crossover uses iloc[-1] and iloc[-2] — caller guards len >= 2.
+    """
+    n = len(prices)
+
+    # RSI-14: Wilder's smoothing = EWM com=13 (always computed — EWM handles short series)
+    delta = prices.diff()
+    gain = delta.clip(lower=0).ewm(com=13, adjust=False).mean()
+    loss = (-delta.clip(upper=0)).ewm(com=13, adjust=False).mean()
+    rsi = 100 - (100 / (1 + gain / loss.replace(0, float("nan"))))
+
+    # MACD (12, 26, 9) — standard EWM spans
+    ema12 = prices.ewm(span=12, adjust=False).mean()
+    ema26 = prices.ewm(span=26, adjust=False).mean()
+    macd_line = ema12 - ema26
+    macd_signal_series = macd_line.ewm(span=9, adjust=False).mean()
+    macd_hist = macd_line - macd_signal_series
+
+    # Moving averages — None if insufficient data
+    if n >= 50:
+        ma50 = prices.rolling(50).mean()
+        ma50_val = round(float(ma50.iloc[-1]), 2) if not pd.isna(ma50.iloc[-1]) else None
+    else:
+        ma50 = None
+        ma50_val = None
+
+    if n >= 200:
+        ma200 = prices.rolling(200).mean()
+        ma200_val = round(float(ma200.iloc[-1]), 2) if not pd.isna(ma200.iloc[-1]) else None
+    else:
+        ma200 = None
+        ma200_val = None
+
+    # Crossover: compare current vs previous bar (requires MA50, MA200, and >= 2 rows)
+    golden_cross = 0
+    death_cross = 0
+    if ma50 is not None and ma200 is not None and n >= 2:
+        cur50 = ma50.iloc[-1]
+        prev50 = ma50.iloc[-2]
+        cur200 = ma200.iloc[-1]
+        prev200 = ma200.iloc[-2]
+        if not any(pd.isna(v) for v in [cur50, prev50, cur200, prev200]):
+            if cur50 > cur200 and prev50 <= prev200:
+                golden_cross = 1
+            elif cur50 < cur200 and prev50 >= prev200:
+                death_cross = 1
+
+    # Composite momentum score — increments of 10, sums to value in {0,10,...,100}
+    rsi_val = float(rsi.iloc[-1]) if not pd.isna(rsi.iloc[-1]) else None
+    macd_hist_val = float(macd_hist.iloc[-1]) if not pd.isna(macd_hist.iloc[-1]) else None
+
+    rsi_score = 30 if (rsi_val is not None and rsi_val > 50) else 0
+    macd_score = 30 if (macd_hist_val is not None and macd_hist_val > 0) else 0
+
+    if ma200_val is not None:
+        ma200_score = 20 if prices.iloc[-1] > ma200_val else 0
+        cross_score = 20 if golden_cross else (0 if death_cross else 10)
+    else:
+        ma200_score = 0
+        cross_score = 10  # neutral when MA200 not available
+
+    composite = rsi_score + macd_score + ma200_score + cross_score
+
+    return {
+        "rsi_14": round(float(rsi.iloc[-1]), 2) if rsi_val is not None else None,
+        "macd_line": round(float(macd_line.iloc[-1]), 4),
+        "macd_signal": round(float(macd_signal_series.iloc[-1]), 4),
+        "macd_histogram": round(float(macd_hist.iloc[-1]), 4),
+        "ma_50": ma50_val,
+        "ma_200": ma200_val,
+        "golden_cross": int(golden_cross),
+        "death_cross": int(death_cross),
+        "momentum_score": composite,
+    }
+
+
+def _write_null_signals(conn: sqlite3.Connection, ticker: str, computed_date: str) -> None:
+    """Write a NULL signals row to financial_signals (used when price series is insufficient)."""
+    conn.execute(
+        """
+        INSERT OR REPLACE INTO financial_signals
+        (id, ticker, computed_date, rsi_14, macd_line, macd_signal, macd_histogram,
+         ma_50, ma_200, golden_cross, death_cross, momentum_score, ingested_at)
+        VALUES (?, ?, ?, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, ?)
+        """,
+        (str(uuid.uuid4()), ticker, computed_date, datetime.now(timezone.utc).isoformat()),
+    )
+    conn.commit()
+
+
+def _compute_and_write_signals(
+    ticker: str, conn: sqlite3.Connection, computed_date: str
+) -> None:
+    """Fetch price series, compute technical signals, write financial_signals row.
+
+    T-03-05-01 mitigation: WHERE is_gap = 0 AND adj_close IS NOT NULL filters gap rows.
+    T-03-05-02 mitigation: parameterized queries — ticker never embedded in SQL string.
+    T-03-05-04 mitigation: len(rows) < 2 guard prevents iloc[-2] IndexError on crossover.
+    """
+    rows = conn.execute(
+        """
+        SELECT date, adj_close FROM price_ohlcv
+        WHERE ticker = ? AND is_gap = 0 AND adj_close IS NOT NULL
+        ORDER BY date ASC
+        LIMIT 300
+        """,
+        (ticker,),
+    ).fetchall()
+
+    if len(rows) < 2:
+        log.warning(
+            f"[{ticker}] sinais: série de preços insuficiente ({len(rows)} linhas)"
+        )
+        _write_null_signals(conn, ticker, computed_date)
+        return
+
+    prices = pd.Series(
+        {r["date"]: float(r["adj_close"]) for r in rows}
+    )
+
+    try:
+        signals = compute_signals(prices)
+    except Exception as exc:
+        log.warning(f"[{ticker}] sinais: erro de cálculo — {exc}")
+        _write_null_signals(conn, ticker, computed_date)
+        return
+
+    conn.execute(
+        """
+        INSERT OR REPLACE INTO financial_signals
+        (id, ticker, computed_date, rsi_14, macd_line, macd_signal, macd_histogram,
+         ma_50, ma_200, golden_cross, death_cross, momentum_score, ingested_at)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """,
+        (
+            str(uuid.uuid4()),
+            ticker,
+            computed_date,
+            signals.get("rsi_14"),
+            signals.get("macd_line"),
+            signals.get("macd_signal"),
+            signals.get("macd_histogram"),
+            signals.get("ma_50"),
+            signals.get("ma_200"),
+            signals.get("golden_cross"),
+            signals.get("death_cross"),
+            signals.get("momentum_score"),
+            datetime.now(timezone.utc).isoformat(),
+        ),
+    )
+    conn.commit()
+    log.info(
+        f"[{ticker}] sinais escritos — "
+        f"rsi={signals.get('rsi_14')} momentum={signals.get('momentum_score')}"
+    )
