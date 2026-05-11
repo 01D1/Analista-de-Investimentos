@@ -37,6 +37,7 @@ from typing import Literal
 import requests
 import yaml
 
+from src.normalization.account_mapper import AccountMapper
 from src.utils.logger import get_logger
 from src.utils.retry import retry
 
@@ -231,6 +232,7 @@ class CVMDownloader:
             csv_paths = self.download_itr(year)
 
         records: list[dict] = []
+        _mapper = AccountMapper()  # D-06: normalize account names at write time
         for csv_path in csv_paths:
             df = pd.read_csv(csv_path, encoding="iso-8859-1", sep=";", dtype=str)
             df["CD_CVM"] = df["CD_CVM"].astype(str).str.strip().str.zfill(6)
@@ -264,7 +266,9 @@ class CVMDownloader:
                     "period_type": period_type,
                     "account_code": account_code,
                     "account_name": account_name,
-                    "normalized_name": None,  # Phase 3 enrichment
+                    "normalized_name": _mapper._map_row(  # D-06: populate at write time
+                        pd.Series({"account_code": account_code, "account_name": account_name})
+                    ),
                     "value": value,
                     "reference_date": str(row.get("DT_FIM_EXERC", "")).strip() or None,
                 })
