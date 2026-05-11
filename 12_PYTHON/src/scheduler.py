@@ -29,6 +29,8 @@ Uso:
 
 from __future__ import annotations
 
+import subprocess
+import sys
 import time
 import traceback
 from collections.abc import Callable
@@ -62,21 +64,52 @@ def job_morning_call() -> str:
 
 
 def job_b3_prices() -> str:
-    """Atualiza preços de todos os tickers ativos."""
+    """Atualiza preços OHLCV em ingestion.db para todos os tickers ativos — ING-05.
+    Replaces the previous Parquet-based stub."""
     from config.settings import settings
     from src.ingestion.b3_scraper import B3Scraper
+    from src.ingestion.db import init_db, get_connection
+    from src.utils.logger import bind_run_id, get_logger as _get
 
-    scraper = B3Scraper()
-    ok = fail = 0
-    for ticker in settings.active_tickers:
-        try:
-            df = scraper.fetch(ticker)
-            if not df.empty:
-                ok += 1
-        except Exception as exc:
-            log.warning(f"[b3_prices] [{ticker}] {exc}")
-            fail += 1
-    return f"preços: ok={ok} falhas={fail}"
+    _log = _get(__name__)
+    with bind_run_id("ingest") as run_id:
+        _log.info(f"[b3_prices] iniciado — run_id={run_id}")
+        init_db()
+        t0 = time.time()
+        conn = get_connection()
+        scraper = B3Scraper()
+        total_inserted = 0
+        total_gaps = 0
+        failed = []
+
+        for ticker in settings.active_tickers:
+            try:
+                res = scraper.fetch_and_store(ticker, conn)
+                total_inserted += res.get("inserted", 0)
+                total_gaps += res.get("gaps", 0)
+                if res.get("error"):
+                    failed.append(ticker)
+            except Exception as exc:
+                _log.warning(f"[{ticker}] b3_prices falhou: {exc}")
+                failed.append(ticker)
+
+        conn.close()
+        duration_ms = int((time.time() - t0) * 1000)
+        status = "ok" if not failed else "partial"
+
+        # D-15: structured summary log
+        _log.info(
+            "[b3_prices] summary",
+            source="b3_prices",
+            records_inserted=total_inserted,
+            records_updated=0,
+            duration_ms=duration_ms,
+            status=status,
+            last_ingested_at=datetime.utcnow().isoformat(),
+            gap_rows_inserted=total_gaps,
+            failed_tickers=failed,
+        )
+        return f"b3_prices: inserted={total_inserted} gaps={total_gaps} failed={len(failed)}"
 
 
 def job_cvm_check() -> str:
@@ -244,18 +277,159 @@ def job_weekly_review() -> str:
     return summary
 
 
+def job_cvm_ingest() -> str:
+    """Ingestão CVM DFP/ITR/IPE para todos os tickers ativos — ING-01/02/03."""
+    from config.settings import settings
+    from src.ingestion.cvm_downloader import CVMDownloader
+    from src.ingestion.db import init_db, get_connection
+    from src.utils.logger import bind_run_id, get_logger as _get
+
+    _log = _get(__name__)
+    with bind_run_id("ingest") as run_id:
+        _log.info(f"[cvm_ingest] iniciado — run_id={run_id}")
+        init_db()
+        t0 = time.time()
+        conn = get_connection()
+        downloader = CVMDownloader()
+        raw_dir = settings.data_raw / "cvm"
+        inserted = 0
+        failed = []
+
+        for ticker in settings.active_tickers:
+            for year in [datetime.now().year, datetime.now().year - 1]:
+                for period_type in ("DFP", "ITR"):
+                    try:
+                        n = downloader.parse_and_store(
+                            ticker, year, period_type, conn, raw_dir
+                        )
+                        inserted += n
+                    except Exception as exc:
+                        _log.warning(f"[{ticker}] {period_type} {year} falhou: {exc}")
+                        failed.append(f"{ticker}/{period_type}/{year}")
+                try:
+                    n = downloader.parse_and_store_ipe(ticker, year, conn)
+                    inserted += n
+                except Exception as exc:
+                    _log.warning(f"[{ticker}] IPE {year} falhou: {exc}")
+                    failed.append(f"{ticker}/IPE/{year}")
+
+        conn.close()
+        duration_ms = int((time.time() - t0) * 1000)
+        status = "ok" if not failed else "partial"
+
+        # D-15: structured summary log
+        _log.info(
+            "[cvm_ingest] summary",
+            source="cvm_ingest",
+            records_inserted=inserted,
+            records_updated=0,
+            duration_ms=duration_ms,
+            status=status,
+            last_ingested_at=datetime.utcnow().isoformat(),
+            failed_jobs=failed,
+        )
+        return f"cvm_ingest: inserted={inserted} failed={len(failed)}"
+
+
+def job_bcb_macro() -> str:
+    """Ingestão séries macro BCB SGS (Selic, IPCA, PTAX, CDS Brasil, PIB) — ING-04."""
+    from src.ingestion.bcb import ingest_all_series
+    from src.ingestion.db import init_db, get_connection
+    from src.utils.logger import bind_run_id, get_logger as _get
+
+    _log = _get(__name__)
+    with bind_run_id("ingest") as run_id:
+        _log.info(f"[bcb_macro] iniciado — run_id={run_id}")
+        init_db()
+        t0 = time.time()
+        conn = get_connection()
+        result = ingest_all_series(conn)
+        conn.close()
+        duration_ms = int((time.time() - t0) * 1000)
+        status = "ok" if not result["failed"] else "partial"
+
+        # D-15: structured summary log
+        _log.info(
+            "[bcb_macro] summary",
+            source="bcb_macro",
+            records_inserted=result["inserted"],
+            records_updated=result["updated"],
+            duration_ms=duration_ms,
+            status=status,
+            last_ingested_at=result.get("last_ingested_at", datetime.utcnow().isoformat()),
+            failed_series=result["failed"],
+            stale_series=result.get("stale", []),
+        )
+        return f"bcb_macro: inserted={result['inserted']} failed={result['failed']}"
+
+
+def job_news_ingest() -> str:
+    """Coleta notícias via news_hunter subprocess + sincroniza para ingestion.db — ING-06/07.
+    D-01: news_hunter internals not modified. D-02: agendador.py not launched."""
+    from src.ingestion.db import init_db, get_connection
+    from src.ingestion.news_sync import sync_news_to_ingestion_db
+    from src.utils.logger import bind_run_id, get_logger as _get
+
+    _log = _get(__name__)
+    news_hunter_dir = Path(__file__).parent.parent / "news_hunter"
+
+    with bind_run_id("ingest") as run_id:
+        _log.info(f"[news_ingest] iniciado — run_id={run_id}")
+        t0 = time.time()
+
+        # Step 1: Run news_hunter crawler as subprocess (list form, not shell=True)
+        # SECURITY: list form prevents shell injection; cwd isolates news_hunter imports
+        result = subprocess.run(
+            [sys.executable, "main.py", "--coletar"],
+            cwd=news_hunter_dir,
+            timeout=300,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode != 0:
+            _log.warning(
+                f"[news_ingest] subprocess terminou com código {result.returncode}: "
+                f"{result.stderr[:500]}"
+            )
+
+        # Step 2: Sync from banco.db to ingestion.db
+        init_db()
+        conn = get_connection()
+        inserted = sync_news_to_ingestion_db(conn)
+        conn.close()
+
+        duration_ms = int((time.time() - t0) * 1000)
+        status = "ok" if result.returncode == 0 else "partial"
+
+        # D-15: structured summary log
+        _log.info(
+            "[news_ingest] summary",
+            source="news_ingest",
+            records_inserted=inserted,
+            records_updated=0,
+            duration_ms=duration_ms,
+            status=status,
+            last_ingested_at=datetime.utcnow().isoformat(),
+            subprocess_returncode=result.returncode,
+        )
+        return f"news_ingest: inserted={inserted} subprocess_rc={result.returncode}"
+
+
 # ── Registro de jobs ──────────────────────────────────────────────────────────
 
 _JOB_REGISTRY: dict[str, Callable] = {
     "news_fetcher": job_news_fetcher,
     "morning_call": job_morning_call,
-    "b3_prices": job_b3_prices,
-    "cvm_check": job_cvm_check,
-    "pipeline": job_pipeline,
-    "analyze": job_analyze,
-    "content": job_content,
+    "b3_prices":    job_b3_prices,    # updated to DB-writing version (ING-05)
+    "cvm_check":    job_cvm_check,
+    "pipeline":     job_pipeline,
+    "analyze":      job_analyze,
+    "content":      job_content,
     "health_check": job_health_check,
     "weekly_review": job_weekly_review,
+    "cvm_ingest":   job_cvm_ingest,   # ING-01/02/03
+    "bcb_macro":    job_bcb_macro,    # ING-04
+    "news_ingest":  job_news_ingest,  # ING-06/07
 }
 
 

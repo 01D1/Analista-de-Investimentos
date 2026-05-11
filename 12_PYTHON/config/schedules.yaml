@@ -9,8 +9,8 @@ schedules:
     description: Gerar morning call
 
   - job: b3_prices
-    cron: "0 7 * * 1-5"       # seg–sex 07:00
-    description: Atualizar preços do dia anterior
+    cron: "0 19 * * 1-5"      # seg–sex 19:00 (pós-fechamento B3)
+    description: Atualizar preços OHLCV em ingestion.db
 
   - job: cvm_check
     cron: "0 19 * * 1-5"      # seg–sex 19:00
@@ -31,6 +31,19 @@ schedules:
   - job: health_check
     cron: "0 * * * *"         # a cada hora
     description: Verificar saúde do sistema
+
+  # ── Ingestão de dados ────────────────────────────────────
+  - job: bcb_macro
+    cron: "0 8 * * 1-5"       # seg–sex 08:00
+    description: Ingestão séries macro BCB SGS (Selic, IPCA, PTAX, CDS Brasil, PIB)
+
+  - job: news_ingest
+    cron: "0 7 * * 1-5"       # seg–sex 07:00
+    description: Coleta notícias (news_hunter) + sincronizar para ingestion.db
+
+  - job: cvm_ingest
+    cron: "0 19 * * 1-5"      # seg–sex 19:00
+    description: Ingestão CVM DFP/ITR/IPE para watchlist
 
   # ── Semanais ──────────────────────────────────────────────
   - job: weekly_review

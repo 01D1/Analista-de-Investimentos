@@ -59,8 +59,9 @@ def test_job_bcb_macro_calls_init_db_before_ingest(monkeypatch):
 
 # ─── Test 3: D-15 summary log ────────────────────────────────────────────────
 
-def test_job_bcb_macro_emits_summary_log(monkeypatch, capsys):
-    """job_bcb_macro() emits INFO log with source='bcb_macro' after completion."""
+def test_job_bcb_macro_emits_summary_log(monkeypatch):
+    """job_bcb_macro() emits INFO log with source='bcb_macro' after completion.
+    Patches get_logger to capture log calls made via the internal _log variable."""
     logged_records = []
 
     mock_result = {
@@ -71,16 +72,19 @@ def test_job_bcb_macro_emits_summary_log(monkeypatch, capsys):
     monkeypatch.setattr("src.ingestion.bcb.ingest_all_series", lambda conn: mock_result)
     monkeypatch.setattr("src.ingestion.db.get_connection", lambda *a, **k: MagicMock())
 
+    # job_bcb_macro creates a local _log via get_logger inside the function.
+    # Patch get_logger at its source to return a capturing mock.
+    mock_logger = MagicMock()
+
+    def capture_log_info(msg, **kwargs):
+        logged_records.append({"msg": str(msg), "kwargs": kwargs})
+
+    mock_logger.info = capture_log_info
+    mock_logger.warning = MagicMock()
+    monkeypatch.setattr("src.utils.logger.get_logger", lambda *a, **k: mock_logger)
+
     from src.scheduler import job_bcb_macro
-    import src.scheduler as sched_mod
-
-    with patch.object(sched_mod, "log") as mock_log:
-        def capture_log_info(msg, **kwargs):
-            logged_records.append({"msg": str(msg), "kwargs": kwargs})
-        mock_log.info = capture_log_info
-        mock_log.warning = MagicMock()
-
-        job_bcb_macro()
+    job_bcb_macro()
 
     # Find the summary log
     summary_logs = [r for r in logged_records if "summary" in r["msg"]]
@@ -157,6 +161,8 @@ def test_job_news_ingest_calls_sync_after_subprocess(monkeypatch):
 
 def test_job_b3_prices_iterates_active_tickers(monkeypatch):
     """job_b3_prices() calls fetch_and_store() once per active ticker."""
+    import sys
+
     called_tickers = []
     mock_settings = MagicMock()
     mock_settings.active_tickers = ["PETR4", "VALE3", "BBAS3"]
@@ -168,12 +174,17 @@ def test_job_b3_prices_iterates_active_tickers(monkeypatch):
     monkeypatch.setattr("src.ingestion.db.init_db", lambda *a, **k: None)
     monkeypatch.setattr("src.ingestion.db.get_connection", lambda *a, **k: MagicMock())
 
-    with patch("config.settings.settings", mock_settings):
-        mock_scraper = MagicMock()
-        mock_scraper.fetch_and_store.side_effect = mock_fetch_and_store
-        with patch("src.ingestion.b3_scraper.B3Scraper", return_value=mock_scraper):
-            from src.scheduler import job_b3_prices
-            job_b3_prices()
+    # Ensure config.settings module is loaded, then patch its settings attribute
+    import config.settings  # noqa: F401 (ensure module in sys.modules)
+    settings_module = sys.modules["config.settings"]
+    monkeypatch.setattr(settings_module, "settings", mock_settings)
+
+    mock_scraper = MagicMock()
+    mock_scraper.fetch_and_store.side_effect = mock_fetch_and_store
+    monkeypatch.setattr("src.ingestion.b3_scraper.B3Scraper", lambda *a, **k: mock_scraper)
+
+    from src.scheduler import job_b3_prices
+    job_b3_prices()
 
     assert set(called_tickers) == {"PETR4", "VALE3", "BBAS3"}
 
