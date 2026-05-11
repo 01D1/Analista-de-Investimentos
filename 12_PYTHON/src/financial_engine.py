@@ -285,11 +285,10 @@ def backfill_normalized_names(conn: sqlite3.Connection) -> int:
 
     updated = 0
     for row in rows:
-        norm = mapper._map_row(
-            pd.Series({
-                "account_code": row["account_code"] or "",
-                "account_name": row["account_name"] or "",
-            })
+        # WR-05: use public map_row() instead of private _map_row() to respect API contract
+        norm = mapper.map_row(
+            account_code=row["account_code"] or "",
+            account_name=row["account_name"] or "",
         )
         if norm:
             conn.execute(

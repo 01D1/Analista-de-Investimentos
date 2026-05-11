@@ -147,6 +147,18 @@ class AccountMapper:
                     pass
         return result
 
+    def map_row(self, account_code: str, account_name: str) -> str | None:
+        """Public single-row mapping. WR-05: use this instead of calling _map_row directly.
+
+        Args:
+            account_code: Raw CVM account code (e.g. "3.03.01")
+            account_name: Raw account name (e.g. "Receita Líquida de Vendas")
+
+        Returns:
+            Normalized canonical field name, or None if no match.
+        """
+        return self._map_row(pd.Series({"account_code": account_code, "account_name": account_name}))
+
     # ------------------------------------------------------------------
     # Internos
     # ------------------------------------------------------------------
