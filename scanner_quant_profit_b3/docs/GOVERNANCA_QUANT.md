@@ -108,8 +108,12 @@ Comandos:
 python -m src.scanners.import_market_events --csv data/events/market_events.csv --save-db
 python -m src.scanners.event_pipeline --start 2026-01-02 --end 2026-04-30 --sources csv --csv-path data/events/market_events_example.csv --save-db --csv
 python -m src.scanners.event_daily_update --start 2026-01-02 --end 2026-04-30 --save-db --csv --with-regimes
+python -m src.scanners.source_health_check --save-db --csv
+python -m src.scanners.daily_quant_routine --start 2026-01-02 --end 2026-04-30 --with-regimes --with-event-context --with-governance --save-db --csv
 python -m src.scanners.event_context_analysis --start 2026-01-02 --end 2026-04-30 --csv --save-db
 ```
+
+Health checks e alertas operacionais não aprovam candidatos. Eles apenas reduzem o risco de interpretar ausência de dados como ausência de evento.
 
 ## Comando
 

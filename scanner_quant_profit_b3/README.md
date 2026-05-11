@@ -314,6 +314,7 @@ python -m src.scanners.realtime_profit_scanner --once --top 10 --demo --compare-
 python -m src.scanners.historical_quant_backtest --start 2024-01-01 --end 2026-12-31 --csv --save-db
 python -m src.scanners.walk_forward_quant_analysis --start 2024-01-01 --end 2026-12-31 --train-months 12 --test-months 3 --csv --save-db
 python -m src.scanners.historical_quant_backtest --start 2026-01-02 --end 2026-04-30 --net --quality-filter --min-score-final 80 --csv --save-db
+python -m src.scanners.operational_observability --window-days 30 --save-db --csv
 ```
 
 Abra a mesa:
@@ -355,6 +356,52 @@ As fontes ficam em `config/events.yaml`. A rotina não faz scraping pesado; ela 
 
 Essa camada usa CSV/local primeiro, nao faz scraping pesado e nao altera score, ranking ou filtros automaticamente.
 
+### Saúde Das Fontes E Rotina Diária
+
+Verifique a saúde das fontes:
+
+```powershell
+python -m src.scanners.source_health_check --save-db --csv
+```
+
+Rode a rotina diária completa:
+
+```powershell
+python -m src.scanners.daily_quant_routine --start 2026-01-02 --end 2026-04-30 --with-regimes --with-event-context --with-governance --save-db --csv
+```
+
+Calcule SLA e observabilidade operacional:
+
+```powershell
+python -m src.scanners.operational_observability --window-days 30 --save-db --csv
+```
+
+Rode retenção em modo seguro:
+
+```powershell
+python -m src.scanners.data_retention_cleanup --dry-run --save-db --csv
+```
+
+Execução real de retenção exige confirmação:
+
+```powershell
+python -m src.scanners.data_retention_cleanup --execute --confirm --archive --save-db --csv
+```
+
+Gere o relatório semanal operacional:
+
+```powershell
+python -m src.scanners.weekly_operational_report --window-days 7 --save-md --csv
+```
+
+Rodar via PowerShell no Windows:
+
+```powershell
+powershell.exe -ExecutionPolicy Bypass -File scripts/windows/run_daily_quant_routine.ps1
+```
+
+O script salva logs em `logs/`. Para agendar no Windows Task Scheduler, veja `scripts/windows/create_task_scheduler_command.md`.
+
 ## Validacao Local
 
 Rode a suite automatizada:
@@ -388,6 +435,15 @@ O projeto tambem inclui um workflow de GitHub Actions para rodar os testes em Wi
 - `docs/EVENTOS_E_NOTICIAS.md` — importação de eventos, link evento-sinal e análise event-driven.
 - `docs/PIPELINE_EVENTOS.md` — conectores locais, deduplicação, classificação e cobertura de eventos.
 - `docs/ROTINA_EVENTOS.md` — rotina operacional de eventos, calendário macro e cobertura por regime.
+- `docs/SAUDE_DAS_FONTES.md` — health checks das fontes locais.
+- `docs/ROTINA_DIARIA.md` — orquestração diária, registros e status.
+- `docs/ALERTAS_OPERACIONAIS.md` — alertas persistidos e Telegram opcional.
+- `docs/WINDOWS_TASK_SCHEDULER.md` — execução automática no Windows.
+- `docs/SLA_DADOS.md` — SLA historico, disponibilidade e confiabilidade por fonte.
+- `docs/OBSERVABILIDADE_OPERACIONAL.md` — snapshots, alertas recorrentes e tendencia operacional.
+- `docs/RETENCAO_E_LIMPEZA.md` — política de retenção, dry-run, archive e limpeza segura.
+- `docs/CONTRATOS_QUALIDADE_FONTES.md` — mínimos de idade, registros e cobertura por fonte.
+- `docs/RELATORIO_SEMANAL_OPERACIONAL.md` — relatório consolidado de rotina, SLA, cobertura e governança.
 
 ## Dados De Entrada
 
@@ -436,6 +492,13 @@ Principais tabelas criadas no SQLite:
 - `event_context_runs`
 - `event_coverage_runs`
 - `event_coverage_by_regime`
+- `source_health_checks`
+- `daily_routine_runs`
+- `operational_alerts`
+- `source_sla_snapshots`
+- `operational_observability_snapshots`
+- `retention_cleanup_runs`
+- `retention_cleanup_details`
 
 ## Limitacoes
 
@@ -469,6 +532,11 @@ python -m src.scanners.historical_quant_backtest --start 2026-01-02 --end 2026-0
 python -m src.scanners.import_market_events --csv data/events/market_events_example.csv --save-db
 python -m src.scanners.event_pipeline --start 2026-01-02 --end 2026-04-30 --sources csv --csv-path data/events/market_events_example.csv --save-db --csv
 python -m src.scanners.event_daily_update --start 2026-01-02 --end 2026-04-30 --save-db --csv --with-regimes
+python -m src.scanners.source_health_check --save-db --csv
+python -m src.scanners.daily_quant_routine --start 2026-01-02 --end 2026-04-30 --with-regimes --with-event-context --with-governance --save-db --csv
+python -m src.scanners.operational_observability --window-days 30 --save-db --csv
+python -m src.scanners.data_retention_cleanup --dry-run --save-db --csv
+python -m src.scanners.weekly_operational_report --window-days 7 --save-md --csv
 python -m src.scanners.historical_quant_backtest --start 2026-01-02 --end 2026-04-30 --net --with-regimes --with-events --csv --save-db
 python -m src.scanners.event_context_analysis --start 2026-01-02 --end 2026-04-30 --csv --save-db
 python -m src.scanners.walk_forward_quant_analysis --start 2024-01-01 --end 2026-12-31 --train-months 12 --test-months 3 --csv

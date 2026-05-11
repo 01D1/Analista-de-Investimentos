@@ -22,6 +22,9 @@ python -m src.scanners.historical_quant_backtest --start 2026-01-02 --end 2026-0
 python -m src.scanners.filter_walk_forward_analysis --start 2026-01-02 --end 2026-04-30 --train-months 1 --test-months 1 --csv --save-db
 python -m src.scanners.governance_review --source filter_walk_forward --latest --save-db
 python -m src.scanners.regime_analysis --start 2026-01-02 --end 2026-04-30 --save-db --csv
+python -m src.scanners.operational_observability --window-days 30 --save-db --csv
+python -m src.scanners.data_retention_cleanup --dry-run --save-db --csv
+python -m src.scanners.weekly_operational_report --window-days 7 --save-md --csv
 ```
 
 ## Abas Disponiveis
@@ -203,6 +206,53 @@ python -m src.scanners.event_context_analysis --start 2026-01-02 --end 2026-04-3
 
 A aba também mostra qualidade de cobertura, fontes usadas, eventos antes/depois da deduplicação, cobertura por regime e alerta quando a cobertura geral ou por regime é fraca.
 
+### Operação & Saúde Das Fontes
+
+Mostra:
+
+- último `daily_routine_run`;
+- status geral da rotina;
+- saúde das fontes;
+- fontes `OK`, `WARNING`, `ERROR`, `MISSING`, `STALE` ou `EMPTY`;
+- qualidade de cobertura de eventos;
+- eventos carregados;
+- sinais cobertos;
+- alertas operacionais abertos.
+
+Se não houver dados:
+
+```powershell
+python -m src.scanners.daily_quant_routine --start 2026-01-02 --end 2026-04-30 --with-regimes --with-event-context --with-governance --save-db --csv
+```
+
+### SLA & Observabilidade
+
+Mostra:
+
+- SLA por fonte;
+- disponibilidade historica;
+- classe de confiabilidade;
+- ultimo status e dias desde ultimo `OK`;
+- historico de checks;
+- tendencia de cobertura de eventos;
+- cobertura por regime;
+- alertas recorrentes;
+- resumo da rotina diaria;
+- snapshots de observabilidade.
+- últimas limpezas de retenção;
+- contratos de qualidade por fonte;
+- último relatório semanal.
+
+Se não houver dados:
+
+```powershell
+python -m src.scanners.source_health_check --save-db --csv
+python -m src.scanners.daily_quant_routine --start 2026-01-02 --end 2026-04-30 --with-regimes --with-event-context --with-governance --save-db --csv
+python -m src.scanners.operational_observability --window-days 30 --save-db --csv
+python -m src.scanners.data_retention_cleanup --dry-run --save-db --csv
+python -m src.scanners.weekly_operational_report --window-days 7 --save-md --csv
+```
+
 ### Alertas E Diagnostico
 
 Gera um relatorio com:
@@ -239,6 +289,13 @@ Mostra e permite baixar CSV de:
 - `event_context_runs`.
 - `event_coverage_runs`.
 - `event_coverage_by_regime`.
+- `source_health_checks`;
+- `daily_routine_runs`;
+- `operational_alerts`.
+- `source_sla_snapshots`;
+- `operational_observability_snapshots`.
+- `retention_cleanup_runs`;
+- `retention_cleanup_details`.
 
 ## Como Interpretar
 
@@ -258,10 +315,13 @@ Divergencias entre score legado e `score_final` nao sao erros automaticamente. E
 4. Rodar walk-forward com `--save-db`.
 5. Rodar filtros ou otimização de thresholds em modo exploratório.
 6. Rodar a rotina de eventos com calendário macro e cobertura por regime.
-7. Rodar backtest/análise com `--with-events`.
-8. Abrir a Mesa Quant.
-9. Avaliar sinais, scores, calibracao, walk-forward, filtros, capacidade, regimes, eventos e alertas.
-10. Decidir proximos testes sem alterar automaticamente os pesos.
+7. Rodar health check e rotina diária operacional.
+8. Rodar observabilidade operacional.
+9. Rodar retenção em dry-run e relatório semanal.
+10. Rodar backtest/análise com `--with-events`.
+11. Abrir a Mesa Quant.
+12. Avaliar sinais, scores, calibracao, walk-forward, filtros, capacidade, regimes, eventos, fontes, SLA, retenção e alertas.
+13. Decidir proximos testes sem alterar automaticamente os pesos.
 
 ## Limitacoes
 

@@ -1,0 +1,32 @@
+sources:
+  news_hunter:
+    required: true
+    max_age_days: 3
+    min_records: 20
+    min_coverage_pct: 5
+    severity_if_fail: WARNING
+
+  macro_calendar:
+    required: false
+    max_age_days: 7
+    min_records: 1
+    severity_if_fail: WARNING
+
+  cvm:
+    required: true
+    max_age_days: 30
+    min_records: 5
+    min_tickers: 3
+    severity_if_fail: CRITICAL
+
+  releases:
+    required: false
+    max_age_days: 45
+    min_records: 5
+    severity_if_fail: WARNING
+
+  csv:
+    required: false
+    max_age_days: 30
+    min_records: 1
+    severity_if_fail: INFO

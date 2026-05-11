@@ -22,6 +22,7 @@ from src.reports.quant_dashboard_data import (
     load_calibration_assets_for_dashboard,
     load_calibration_runs_for_dashboard,
     load_component_summary_for_dashboard,
+    load_daily_routine_runs_for_dashboard,
     load_execution_quality_summary_for_dashboard,
     load_filter_walk_forward_results_for_dashboard,
     load_filter_walk_forward_runs_for_dashboard,
@@ -34,17 +35,28 @@ from src.reports.quant_dashboard_data import (
     load_latest_backtest_run,
     load_market_events_for_dashboard,
     load_net_summary_for_dashboard,
+    load_observability_snapshots_for_dashboard,
     load_quality_filter_runs_for_dashboard,
     load_market_regimes_for_dashboard,
     load_regime_backtest_summary_for_dashboard,
+    load_retention_cleanup_details_for_dashboard,
+    load_retention_cleanup_runs_for_dashboard,
     load_signal_event_links_for_dashboard,
     load_score_bucket_summary_for_dashboard,
     load_score_distribution_history_for_dashboard,
     load_signal_summary_for_dashboard,
+    load_source_health_checks_for_dashboard,
+    load_source_sla_snapshots_for_dashboard,
+    load_operational_alerts_for_dashboard,
     load_threshold_optimization_runs_for_dashboard,
     load_walk_forward_results_for_dashboard,
     load_walk_forward_runs_for_dashboard,
 )
+from src.context.coverage_trends import calculate_event_coverage_trend, calculate_regime_coverage_trend
+from src.context.routine_observability import summarize_daily_routine_runs
+from src.context.source_quality_contracts import evaluate_source_contracts, load_source_quality_contracts
+from src.context.source_sla import calculate_source_sla
+from src.notifications.alert_analytics import detect_recurring_alerts
 from src.utils import load_config, project_path
 
 
@@ -729,7 +741,193 @@ def _tab_events(events: pd.DataFrame, event_links: pd.DataFrame, event_runs: pd.
         st.dataframe(governance_reviews[cols].head(20), use_container_width=True, hide_index=True)
 
 
-def _tab_raw(runs, results, calibration_runs, calibration_assets, wf_runs, wf_results, filter_runs, threshold_runs, filter_wf_runs, filter_wf_results, governance_reviews, regimes, regime_summary, events, event_links, event_runs, event_coverage_runs, event_coverage_by_regime) -> None:
+def _tab_operation(daily_runs: pd.DataFrame, source_health: pd.DataFrame, open_alerts: pd.DataFrame) -> None:
+    st.subheader("Operação & Saúde das Fontes")
+    if daily_runs.empty:
+        st.warning("Nenhuma rotina diária salva.")
+        st.code(
+            "python -m src.scanners.daily_quant_routine --start 2026-01-02 --end 2026-04-30 "
+            "--with-regimes --with-event-context --with-governance --save-db --csv"
+        )
+    else:
+        latest = daily_runs.iloc[0]
+        c1, c2, c3, c4 = st.columns(4)
+        c1.metric("Status", latest.get("status") or "-")
+        c2.metric("Health", latest.get("health_overall_status") or "-")
+        c3.metric("Cobertura eventos", latest.get("event_coverage_quality") or "-")
+        c4.metric("Alertas", int(latest.get("alerts_count") or 0))
+        c5, c6, c7 = st.columns(3)
+        c5.metric("Eventos carregados", int(latest.get("events_loaded") or 0))
+        c6.metric("Após dedupe", int(latest.get("events_after_dedup") or 0))
+        c7.metric("Sinais cobertos", _metric_value(float(latest.get("signals_covered_pct") or 0) * 100, "%"))
+        st.dataframe(daily_runs, use_container_width=True, hide_index=True)
+
+    st.subheader("Saúde das fontes")
+    if source_health.empty:
+        st.info("Nenhum health check salvo.")
+        st.code("python -m src.scanners.source_health_check --save-db --csv")
+    else:
+        st.dataframe(source_health, use_container_width=True, hide_index=True)
+        if "status" in source_health.columns:
+            st.bar_chart(source_health["status"].value_counts())
+        bad = source_health[source_health["status"].astype(str).str.upper().isin(["ERROR", "MISSING", "STALE", "EMPTY"])]
+        if not bad.empty:
+            st.warning("Há fontes ausentes, vazias ou desatualizadas. A cobertura de eventos deve ser interpretada com cautela.")
+
+    st.subheader("Alertas abertos")
+    if open_alerts.empty:
+        st.success("Sem alertas operacionais abertos.")
+    else:
+        st.dataframe(open_alerts, use_container_width=True, hide_index=True)
+        if "severity" in open_alerts.columns:
+            st.bar_chart(open_alerts["severity"].value_counts())
+
+
+def _tab_sla_observability(
+    source_sla_snapshots: pd.DataFrame,
+    observability_snapshots: pd.DataFrame,
+    source_health: pd.DataFrame,
+    event_coverage_runs: pd.DataFrame,
+    event_coverage_by_regime: pd.DataFrame,
+    all_alerts: pd.DataFrame,
+    daily_runs: pd.DataFrame,
+    retention_runs: pd.DataFrame,
+    retention_details: pd.DataFrame,
+) -> None:
+    st.subheader("SLA & Observabilidade")
+    if source_sla_snapshots.empty and source_health.empty and observability_snapshots.empty:
+        st.warning("Ainda não há histórico suficiente de SLA/observabilidade.")
+        st.code("python -m src.scanners.source_health_check --save-db --csv")
+        st.code(
+            "python -m src.scanners.daily_quant_routine --start 2026-01-02 --end 2026-04-30 "
+            "--with-regimes --with-event-context --with-governance --save-db --csv"
+        )
+        st.code("python -m src.scanners.operational_observability --window-days 30 --save-db --csv")
+        return
+
+    latest_obs = observability_snapshots.iloc[0] if not observability_snapshots.empty else {}
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Status geral", latest_obs.get("overall_status", "-") if hasattr(latest_obs, "get") else "-")
+    c2.metric("Disponibilidade média", _metric_value(latest_obs.get("overall_availability_pct") if hasattr(latest_obs, "get") else None, "%"))
+    c3.metric("Fontes críticas", int(latest_obs.get("critical_sources") or 0) if hasattr(latest_obs, "get") else 0)
+    c4.metric("Alertas abertos", int(latest_obs.get("open_alerts") or 0) if hasattr(latest_obs, "get") else 0)
+
+    st.subheader("SLA por fonte")
+    sla_view = source_sla_snapshots.copy()
+    if sla_view.empty and not source_health.empty:
+        sla_view = calculate_source_sla(source_health, window_days=30)
+    if sla_view.empty:
+        st.info("Sem snapshots de SLA por fonte. Rode operational_observability com --save-db.")
+    else:
+        cols = [
+            c
+            for c in [
+                "created_at",
+                "source_name",
+                "availability_pct",
+                "reliability_class",
+                "latest_status",
+                "days_since_last_ok",
+                "total_checks",
+                "avg_age_days",
+            ]
+            if c in sla_view.columns
+        ]
+        st.dataframe(sla_view[cols].head(50), use_container_width=True, hide_index=True)
+        if "reliability_class" in sla_view.columns:
+            st.bar_chart(sla_view["reliability_class"].value_counts())
+
+    st.subheader("Histórico de checks")
+    if source_health.empty:
+        st.info("Sem health checks salvos.")
+    else:
+        st.dataframe(source_health, use_container_width=True, hide_index=True)
+        if "status" in source_health.columns:
+            st.bar_chart(source_health["status"].value_counts())
+
+    st.subheader("Tendência de cobertura de eventos")
+    coverage_trend = calculate_event_coverage_trend(event_coverage_runs)
+    if coverage_trend.empty:
+        st.info("Sem histórico de cobertura de eventos.")
+    else:
+        st.dataframe(coverage_trend, use_container_width=True, hide_index=True)
+        st.line_chart(coverage_trend.set_index("period")[["avg_signals_with_event_pct", "avg_tickers_with_event_pct"]])
+
+    st.subheader("Cobertura por regime")
+    regime_trend = calculate_regime_coverage_trend(event_coverage_by_regime)
+    if regime_trend.empty:
+        st.info("Sem histórico de cobertura por regime.")
+    else:
+        st.dataframe(regime_trend, use_container_width=True, hide_index=True)
+        if "avg_coverage_pct" in regime_trend.columns:
+            labels = regime_trend["regime_type"].astype(str) + "=" + regime_trend["regime_value"].astype(str)
+            st.bar_chart(regime_trend.assign(regime=labels).set_index("regime")["avg_coverage_pct"])
+
+    st.subheader("Alertas recorrentes")
+    recurring = detect_recurring_alerts(all_alerts, min_occurrences=3)
+    if recurring.empty:
+        st.success("Sem alertas recorrentes na amostra carregada.")
+    else:
+        st.warning("Há alertas recorrentes que merecem tratamento operacional.")
+        st.dataframe(recurring, use_container_width=True, hide_index=True)
+
+    st.subheader("Rotina diária")
+    routine_summary = summarize_daily_routine_runs(daily_runs, window_days=30)
+    c5, c6, c7, c8 = st.columns(4)
+    c5.metric("Saúde da rotina", routine_summary.get("routine_health_status") or "-")
+    c6.metric("Taxa de sucesso", _metric_value(routine_summary.get("success_rate_pct"), "%"))
+    c7.metric("Média de alertas", _metric_value(routine_summary.get("avg_alerts_count"), decimals=1))
+    c8.metric("Cobertura média", _metric_value(float(routine_summary.get("avg_signals_covered_pct") or 0) * 100, "%"))
+    if daily_runs.empty:
+        st.info("Sem execuções da rotina diária.")
+    else:
+        st.dataframe(daily_runs, use_container_width=True, hide_index=True)
+
+    st.subheader("Snapshots de observabilidade")
+    if observability_snapshots.empty:
+        st.info("Sem snapshots de observabilidade operacional.")
+        st.code("python -m src.scanners.operational_observability --window-days 30 --save-db --csv")
+    else:
+        st.dataframe(observability_snapshots, use_container_width=True, hide_index=True)
+
+    st.subheader("Retenção")
+    if retention_runs.empty:
+        st.info("Nenhuma limpeza de retenção registrada.")
+        st.code("python -m src.scanners.data_retention_cleanup --dry-run --save-db --csv")
+    else:
+        latest = retention_runs.iloc[0]
+        r1, r2, r3, r4 = st.columns(4)
+        r1.metric("Modo", "DRY-RUN" if int(latest.get("dry_run") or 0) else "EXECUTE")
+        r2.metric("Linhas candidatas", int(latest.get("rows_candidates") or 0))
+        r3.metric("Arquivadas", int(latest.get("rows_archived") or 0))
+        r4.metric("Deletadas", int(latest.get("rows_deleted") or 0))
+        st.dataframe(retention_runs, use_container_width=True, hide_index=True)
+        if not retention_details.empty:
+            st.dataframe(retention_details, use_container_width=True, hide_index=True)
+
+    st.subheader("Contratos de Qualidade")
+    contracts = evaluate_source_contracts(source_health, event_coverage_runs, load_source_quality_contracts())
+    if contracts.empty:
+        st.info("Nenhum contrato de qualidade avaliado.")
+    else:
+        st.dataframe(contracts, use_container_width=True, hide_index=True)
+        if "contract_status" in contracts.columns:
+            st.bar_chart(contracts["contract_status"].value_counts())
+
+    st.subheader("Relatório Semanal")
+    reports_dir = project_path("data/reports")
+    reports = sorted(reports_dir.glob("weekly_operational_report_*.md")) if reports_dir.exists() else []
+    if not reports:
+        st.info("Nenhum relatório semanal encontrado.")
+        st.code("python -m src.scanners.weekly_operational_report --window-days 7 --save-md --csv")
+    else:
+        latest_report = reports[-1]
+        st.write(str(latest_report))
+        preview = latest_report.read_text(encoding="utf-8", errors="ignore")[:2000]
+        st.markdown(preview)
+
+
+def _tab_raw(runs, results, calibration_runs, calibration_assets, wf_runs, wf_results, filter_runs, threshold_runs, filter_wf_runs, filter_wf_results, governance_reviews, regimes, regime_summary, events, event_links, event_runs, event_coverage_runs, event_coverage_by_regime, daily_runs, source_health, open_alerts, source_sla_snapshots, observability_snapshots, retention_runs, retention_details) -> None:
     tables = {
         "historical_backtest_runs": runs,
         "historical_backtest_results": results,
@@ -749,6 +947,13 @@ def _tab_raw(runs, results, calibration_runs, calibration_assets, wf_runs, wf_re
         "event_context_runs": event_runs,
         "event_coverage_runs": event_coverage_runs,
         "event_coverage_by_regime": event_coverage_by_regime,
+        "daily_routine_runs": daily_runs,
+        "source_health_checks": source_health,
+        "operational_alerts": open_alerts,
+        "source_sla_snapshots": source_sla_snapshots,
+        "operational_observability_snapshots": observability_snapshots,
+        "retention_cleanup_runs": retention_runs,
+        "retention_cleanup_details": retention_details,
     }
     for name, df in tables.items():
         st.subheader(name)
@@ -798,6 +1003,15 @@ def main() -> None:
     latest_event_coverage_id = int(event_coverage_runs.iloc[0]["id"]) if not event_coverage_runs.empty else None
     event_coverage_by_regime = load_event_coverage_by_regime_for_dashboard(db_path, coverage_run_id=latest_event_coverage_id)
     event_summary = load_event_context_summary_for_dashboard(db_path)
+    daily_runs = load_daily_routine_runs_for_dashboard(db_path)
+    source_health = load_source_health_checks_for_dashboard(db_path)
+    open_alerts = load_operational_alerts_for_dashboard(db_path)
+    all_alerts = load_operational_alerts_for_dashboard(db_path, open_only=False)
+    source_sla_snapshots = load_source_sla_snapshots_for_dashboard(db_path)
+    observability_snapshots = load_observability_snapshots_for_dashboard(db_path)
+    retention_runs = load_retention_cleanup_runs_for_dashboard(db_path)
+    latest_retention_id = int(retention_runs.iloc[0]["id"]) if not retention_runs.empty else None
+    retention_details = load_retention_cleanup_details_for_dashboard(db_path, run_id=latest_retention_id)
     wf_runs = load_walk_forward_runs_for_dashboard(db_path)
     latest_wf_id = int(wf_runs.iloc[0]["id"]) if not wf_runs.empty else None
     wf_results = load_walk_forward_results_for_dashboard(db_path, run_id=latest_wf_id)
@@ -813,6 +1027,8 @@ def main() -> None:
             "Filtros & Capacidade",
             "Regimes de Mercado",
             "Eventos & Notícias",
+            "Operação & Saúde das Fontes",
+            "SLA & Observabilidade",
             "Governança Quant",
             "Alertas e Diagnóstico",
             "Dados Brutos",
@@ -838,11 +1054,15 @@ def main() -> None:
     with tabs[8]:
         _tab_events(events, event_links, event_runs, event_coverage_runs, event_coverage_by_regime, event_summary, results, governance_reviews)
     with tabs[9]:
-        _tab_governance(governance_reviews, governance_summary)
+        _tab_operation(daily_runs, source_health, open_alerts)
     with tabs[10]:
-        _tab_alerts(runs, results, calibration_runs, calibration_assets, bucket_summary, net_summary)
+        _tab_sla_observability(source_sla_snapshots, observability_snapshots, source_health, event_coverage_runs, event_coverage_by_regime, all_alerts, daily_runs, retention_runs, retention_details)
     with tabs[11]:
-        _tab_raw(runs, results, calibration_runs, calibration_assets, wf_runs, wf_results, filter_runs, threshold_runs, filter_wf_runs, filter_wf_results, governance_reviews, regimes, regime_summary, events, event_links, event_runs, event_coverage_runs, event_coverage_by_regime)
+        _tab_governance(governance_reviews, governance_summary)
+    with tabs[12]:
+        _tab_alerts(runs, results, calibration_runs, calibration_assets, bucket_summary, net_summary)
+    with tabs[13]:
+        _tab_raw(runs, results, calibration_runs, calibration_assets, wf_runs, wf_results, filter_runs, threshold_runs, filter_wf_runs, filter_wf_results, governance_reviews, regimes, regime_summary, events, event_links, event_runs, event_coverage_runs, event_coverage_by_regime, daily_runs, source_health, open_alerts, source_sla_snapshots, observability_snapshots, retention_runs, retention_details)
 
 
 if __name__ == "__main__":

@@ -70,6 +70,18 @@ A governança deve bloquear conclusões fortes quando um regime tem cobertura `C
 python -m src.scanners.event_daily_update --start 2026-01-02 --end 2026-04-30 --save-db --csv --with-regimes
 ```
 
+Antes da rotina, é possível verificar a saúde das fontes:
+
+```powershell
+python -m src.scanners.source_health_check --save-db --csv
+```
+
+Para orquestrar health check, eventos, contexto e governança:
+
+```powershell
+python -m src.scanners.daily_quant_routine --start 2026-01-02 --end 2026-04-30 --with-regimes --with-event-context --with-governance --save-db --csv
+```
+
 Para testar sem persistir:
 
 ```powershell

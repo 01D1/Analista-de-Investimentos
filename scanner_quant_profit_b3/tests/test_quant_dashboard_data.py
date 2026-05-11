@@ -10,6 +10,7 @@ from src.reports.quant_dashboard_data import (
     load_calibration_runs_for_dashboard,
     load_component_summary_for_dashboard,
     load_capacity_summary_for_dashboard,
+    load_daily_routine_runs_for_dashboard,
     load_filter_walk_forward_results_for_dashboard,
     load_filter_walk_forward_runs_for_dashboard,
     load_event_context_runs_for_dashboard,
@@ -20,12 +21,18 @@ from src.reports.quant_dashboard_data import (
     load_governance_summary_for_dashboard,
     load_market_regimes_for_dashboard,
     load_market_events_for_dashboard,
+    load_operational_alerts_for_dashboard,
+    load_observability_snapshots_for_dashboard,
     load_regime_backtest_summary_for_dashboard,
+    load_retention_cleanup_details_for_dashboard,
+    load_retention_cleanup_runs_for_dashboard,
     load_signal_event_links_for_dashboard,
     load_latest_backtest_run,
     load_score_bucket_summary_for_dashboard,
     load_score_distribution_history_for_dashboard,
     load_signal_summary_for_dashboard,
+    load_source_health_checks_for_dashboard,
+    load_source_sla_snapshots_for_dashboard,
     load_execution_quality_summary_for_dashboard,
     load_net_summary_for_dashboard,
     load_quality_filter_runs_for_dashboard,
@@ -59,6 +66,13 @@ def test_dashboard_loaders_handle_missing_database(tmp_path):
     assert load_event_coverage_runs_for_dashboard(db_path).empty
     assert load_event_coverage_by_regime_for_dashboard(db_path).empty
     assert load_event_context_summary_for_dashboard(db_path).empty
+    assert load_source_health_checks_for_dashboard(db_path).empty
+    assert load_daily_routine_runs_for_dashboard(db_path).empty
+    assert load_operational_alerts_for_dashboard(db_path).empty
+    assert load_source_sla_snapshots_for_dashboard(db_path).empty
+    assert load_observability_snapshots_for_dashboard(db_path).empty
+    assert load_retention_cleanup_runs_for_dashboard(db_path).empty
+    assert load_retention_cleanup_details_for_dashboard(db_path).empty
 
 
 def test_dashboard_loaders_handle_empty_tables(tmp_path):
@@ -79,6 +93,12 @@ def test_dashboard_loaders_handle_empty_tables(tmp_path):
     assert "event_context_type" in results.columns
     assert calibration.empty
     assert "mean_score_final" in calibration.columns
+    assert load_source_sla_snapshots_for_dashboard(db_path).empty
+    assert "availability_pct" in load_source_sla_snapshots_for_dashboard(db_path).columns
+    assert load_observability_snapshots_for_dashboard(db_path).empty
+    assert "overall_status" in load_observability_snapshots_for_dashboard(db_path).columns
+    assert load_retention_cleanup_runs_for_dashboard(db_path).empty
+    assert "rows_candidates" in load_retention_cleanup_runs_for_dashboard(db_path).columns
 
 
 def test_dashboard_loaders_read_backtest_and_summarize(tmp_path):
@@ -401,3 +421,100 @@ def test_dashboard_loaders_read_event_tables_and_summary(tmp_path):
     assert coverage_runs.loc[0, "coverage_quality"] == "COBERTURA_BOA"
     assert coverage_by_regime.loc[0, "regime_value"] == "ALTA_TENDENCIAL"
     assert "event_context_type" in summary["group"].tolist()
+
+
+def test_dashboard_loaders_read_operation_tables(tmp_path):
+    db_path = tmp_path / "scanner_quant.db"
+    init_database(db_path, verbose=False)
+    with sqlite3.connect(db_path) as con:
+        con.execute(
+            """
+            INSERT INTO source_health_checks (
+                checked_at, source_name, status, available, records_count,
+                latest_date, age_days, coverage_hint, path, message, metadata_json
+            ) VALUES ('2026-01-05T10:00:00', 'csv', 'OK', 1, 3,
+                      '2026-01-05', 0, 'usable', 'events.csv', 'ok', '{}')
+            """
+        )
+        con.execute(
+            """
+            INSERT INTO daily_routine_runs (
+                started_at, finished_at, status, start_date, end_date, sources,
+                health_overall_status, event_coverage_quality, events_loaded,
+                events_after_dedup, signals_covered_pct, alerts_count
+            ) VALUES ('2026-01-05T10:00:00', '2026-01-05T10:01:00',
+                      'SUCCESS_WITH_WARNINGS', '2026-01-01', '2026-01-31',
+                      'csv', 'WARNING', 'COBERTURA_FRACA', 3, 3, 0.2, 1)
+            """
+        )
+        con.execute(
+            """
+            INSERT INTO operational_alerts (
+                created_at, alert_type, severity, title, message, source, resolved
+            ) VALUES ('2026-01-05T10:00:00', 'SOURCE_STALE', 'WARNING',
+                      'Fonte stale', 'stale', 'csv', 0)
+            """
+        )
+        con.execute(
+            """
+            INSERT INTO source_sla_snapshots (
+                created_at, window_days, source_name, total_checks,
+                availability_pct, ok_pct, warning_pct, error_pct,
+                missing_pct, stale_pct, avg_age_days, max_age_days,
+                latest_status, last_ok_at, days_since_last_ok,
+                reliability_class, metadata_json
+            ) VALUES ('2026-01-05T10:00:00', 30, 'csv', 1,
+                      100, 100, 0, 0, 0, 0, 0, 0,
+                      'OK', '2026-01-05T10:00:00', 0,
+                      'EXCELENTE', '{}')
+            """
+        )
+        con.execute(
+            """
+            INSERT INTO operational_observability_snapshots (
+                created_at, window_days, overall_status, overall_availability_pct,
+                total_sources, critical_sources, total_alerts, critical_alerts,
+                open_alerts, routine_success_rate_pct, routine_failure_rate_pct,
+                avg_signals_covered_pct, coverage_trend_direction,
+                summary_text, metadata_json
+            ) VALUES ('2026-01-05T10:00:00', 30, 'WARNING', 100,
+                      1, 0, 1, 0, 1, 100, 0, 0.2,
+                      'INSUFICIENTE', 'summary', '{}')
+            """
+        )
+        con.execute(
+            """
+            INSERT INTO retention_cleanup_runs (
+                started_at, finished_at, dry_run, status, tables_evaluated,
+                rows_candidates, rows_archived, rows_deleted, archive_dir,
+                warnings_count, errors_count
+            ) VALUES ('2026-01-05T10:00:00', '2026-01-05T10:01:00',
+                      1, 'DRY_RUN', 2, 10, 0, 0, 'data/archive', 0, 0)
+            """
+        )
+        con.execute(
+            """
+            INSERT INTO retention_cleanup_details (
+                run_id, table_name, cutoff_date, rows_total, rows_to_delete,
+                rows_archived, rows_deleted, protected, status, archive_path, message
+            ) VALUES (1, 'source_health_checks', '2025-01-01', 20, 10,
+                      0, 0, 0, 'DRY_RUN', '', 'dry')
+            """
+        )
+        con.commit()
+
+    health = load_source_health_checks_for_dashboard(db_path)
+    runs = load_daily_routine_runs_for_dashboard(db_path)
+    alerts = load_operational_alerts_for_dashboard(db_path)
+    sla = load_source_sla_snapshots_for_dashboard(db_path)
+    observability = load_observability_snapshots_for_dashboard(db_path)
+    retention_runs = load_retention_cleanup_runs_for_dashboard(db_path)
+    retention_details = load_retention_cleanup_details_for_dashboard(db_path, run_id=1)
+
+    assert health.loc[0, "source_name"] == "csv"
+    assert runs.loc[0, "status"] == "SUCCESS_WITH_WARNINGS"
+    assert alerts.loc[0, "alert_type"] == "SOURCE_STALE"
+    assert sla.loc[0, "reliability_class"] == "EXCELENTE"
+    assert observability.loc[0, "overall_status"] == "WARNING"
+    assert retention_runs.loc[0, "rows_candidates"] == 10
+    assert retention_details.loc[0, "table_name"] == "source_health_checks"

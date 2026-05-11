@@ -510,6 +510,139 @@ def init_database(db_path: str | Path, verbose: bool = True) -> None:
     """)
 
     cur.execute("""
+    CREATE TABLE IF NOT EXISTS source_health_checks (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        checked_at TEXT,
+        source_name TEXT,
+        status TEXT,
+        available INTEGER,
+        records_count INTEGER,
+        latest_date TEXT,
+        age_days REAL,
+        coverage_hint TEXT,
+        path TEXT,
+        message TEXT,
+        metadata_json TEXT
+    )
+    """)
+
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS daily_routine_runs (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        started_at TEXT,
+        finished_at TEXT,
+        status TEXT,
+        start_date TEXT,
+        end_date TEXT,
+        sources TEXT,
+        health_overall_status TEXT,
+        event_coverage_quality TEXT,
+        events_loaded INTEGER,
+        events_after_dedup INTEGER,
+        signals_covered_pct REAL,
+        governance_status TEXT,
+        alerts_count INTEGER,
+        report_path TEXT,
+        metadata_json TEXT
+    )
+    """)
+
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS operational_alerts (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        created_at TEXT,
+        alert_type TEXT,
+        severity TEXT,
+        title TEXT,
+        message TEXT,
+        source TEXT,
+        resolved INTEGER DEFAULT 0,
+        resolved_at TEXT,
+        metadata_json TEXT
+    )
+    """)
+
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS source_sla_snapshots (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        created_at TEXT,
+        window_days INTEGER,
+        source_name TEXT,
+        total_checks INTEGER,
+        availability_pct REAL,
+        ok_pct REAL,
+        warning_pct REAL,
+        error_pct REAL,
+        missing_pct REAL,
+        stale_pct REAL,
+        avg_age_days REAL,
+        max_age_days REAL,
+        latest_status TEXT,
+        last_ok_at TEXT,
+        days_since_last_ok REAL,
+        reliability_class TEXT,
+        metadata_json TEXT
+    )
+    """)
+
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS operational_observability_snapshots (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        created_at TEXT,
+        window_days INTEGER,
+        overall_status TEXT,
+        overall_availability_pct REAL,
+        total_sources INTEGER,
+        critical_sources INTEGER,
+        total_alerts INTEGER,
+        critical_alerts INTEGER,
+        open_alerts INTEGER,
+        routine_success_rate_pct REAL,
+        routine_failure_rate_pct REAL,
+        avg_signals_covered_pct REAL,
+        coverage_trend_direction TEXT,
+        summary_text TEXT,
+        metadata_json TEXT
+    )
+    """)
+
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS retention_cleanup_runs (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        started_at TEXT,
+        finished_at TEXT,
+        dry_run INTEGER,
+        status TEXT,
+        tables_evaluated INTEGER,
+        rows_candidates INTEGER,
+        rows_archived INTEGER,
+        rows_deleted INTEGER,
+        archive_dir TEXT,
+        warnings_count INTEGER,
+        errors_count INTEGER,
+        metadata_json TEXT
+    )
+    """)
+
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS retention_cleanup_details (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        run_id INTEGER,
+        table_name TEXT,
+        cutoff_date TEXT,
+        rows_total INTEGER,
+        rows_to_delete INTEGER,
+        rows_archived INTEGER,
+        rows_deleted INTEGER,
+        protected INTEGER,
+        status TEXT,
+        archive_path TEXT,
+        message TEXT,
+        metadata_json TEXT
+    )
+    """)
+
+    cur.execute("""
     CREATE TABLE IF NOT EXISTS market_regime_daily (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         trade_date TEXT,
@@ -719,6 +852,13 @@ def init_database(db_path: str | Path, verbose: bool = True) -> None:
     cur.execute("CREATE INDEX IF NOT EXISTS idx_event_coverage_runs_created ON event_coverage_runs(created_at)")
     cur.execute("CREATE INDEX IF NOT EXISTS idx_event_coverage_by_regime_run ON event_coverage_by_regime(coverage_run_id)")
     cur.execute("CREATE INDEX IF NOT EXISTS idx_event_coverage_by_regime_value ON event_coverage_by_regime(regime_type, regime_value)")
+    cur.execute("CREATE INDEX IF NOT EXISTS idx_source_health_checks_source ON source_health_checks(source_name, checked_at)")
+    cur.execute("CREATE INDEX IF NOT EXISTS idx_daily_routine_runs_started ON daily_routine_runs(started_at)")
+    cur.execute("CREATE INDEX IF NOT EXISTS idx_operational_alerts_open ON operational_alerts(resolved, severity, created_at)")
+    cur.execute("CREATE INDEX IF NOT EXISTS idx_source_sla_snapshots_source ON source_sla_snapshots(source_name, created_at)")
+    cur.execute("CREATE INDEX IF NOT EXISTS idx_operational_observability_created ON operational_observability_snapshots(created_at)")
+    cur.execute("CREATE INDEX IF NOT EXISTS idx_retention_cleanup_runs_started ON retention_cleanup_runs(started_at)")
+    cur.execute("CREATE INDEX IF NOT EXISTS idx_retention_cleanup_details_run ON retention_cleanup_details(run_id)")
     cur.execute("CREATE INDEX IF NOT EXISTS idx_signal_event_links_signal ON signal_event_links(ticker, signal_date)")
     cur.execute("CREATE INDEX IF NOT EXISTS idx_market_regime_daily_date ON market_regime_daily(trade_date)")
     cur.execute("CREATE INDEX IF NOT EXISTS idx_regime_backtest_summary_run ON regime_backtest_summary(run_id)")
@@ -743,6 +883,9 @@ def init_database(db_path: str | Path, verbose: bool = True) -> None:
         print("  - Tabelas historical_backtest_* criadas")
         print("  - Tabelas market_events, signal_event_links e event_context_runs criadas")
         print("  - Tabelas event_coverage_runs e event_coverage_by_regime criadas")
+        print("  - Tabelas source_health_checks, daily_routine_runs e operational_alerts criadas")
+        print("  - Tabelas source_sla_snapshots e operational_observability_snapshots criadas")
+        print("  - Tabelas retention_cleanup_* criadas")
         print("  - Tabelas market_regime_daily e regime_backtest_summary criadas")
         print("  - Tabelas quality_filter_runs e threshold_optimization_runs criadas")
         print("  - Tabelas filter_walk_forward_* criadas")

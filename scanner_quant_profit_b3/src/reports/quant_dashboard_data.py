@@ -278,6 +278,125 @@ EVENT_COVERAGE_BY_REGIME_COLUMNS = [
     "metadata_json",
 ]
 
+SOURCE_HEALTH_CHECK_COLUMNS = [
+    "id",
+    "checked_at",
+    "source_name",
+    "status",
+    "available",
+    "records_count",
+    "latest_date",
+    "age_days",
+    "coverage_hint",
+    "path",
+    "message",
+    "metadata_json",
+]
+
+DAILY_ROUTINE_RUN_COLUMNS = [
+    "id",
+    "started_at",
+    "finished_at",
+    "status",
+    "start_date",
+    "end_date",
+    "sources",
+    "health_overall_status",
+    "event_coverage_quality",
+    "events_loaded",
+    "events_after_dedup",
+    "signals_covered_pct",
+    "governance_status",
+    "alerts_count",
+    "report_path",
+    "metadata_json",
+]
+
+OPERATIONAL_ALERT_COLUMNS = [
+    "id",
+    "created_at",
+    "alert_type",
+    "severity",
+    "title",
+    "message",
+    "source",
+    "resolved",
+    "resolved_at",
+    "metadata_json",
+]
+
+SOURCE_SLA_SNAPSHOT_COLUMNS = [
+    "id",
+    "created_at",
+    "window_days",
+    "source_name",
+    "total_checks",
+    "availability_pct",
+    "ok_pct",
+    "warning_pct",
+    "error_pct",
+    "missing_pct",
+    "stale_pct",
+    "avg_age_days",
+    "max_age_days",
+    "latest_status",
+    "last_ok_at",
+    "days_since_last_ok",
+    "reliability_class",
+    "metadata_json",
+]
+
+OBSERVABILITY_SNAPSHOT_COLUMNS = [
+    "id",
+    "created_at",
+    "window_days",
+    "overall_status",
+    "overall_availability_pct",
+    "total_sources",
+    "critical_sources",
+    "total_alerts",
+    "critical_alerts",
+    "open_alerts",
+    "routine_success_rate_pct",
+    "routine_failure_rate_pct",
+    "avg_signals_covered_pct",
+    "coverage_trend_direction",
+    "summary_text",
+    "metadata_json",
+]
+
+RETENTION_CLEANUP_RUN_COLUMNS = [
+    "id",
+    "started_at",
+    "finished_at",
+    "dry_run",
+    "status",
+    "tables_evaluated",
+    "rows_candidates",
+    "rows_archived",
+    "rows_deleted",
+    "archive_dir",
+    "warnings_count",
+    "errors_count",
+    "metadata_json",
+]
+
+RETENTION_CLEANUP_DETAIL_COLUMNS = [
+    "id",
+    "run_id",
+    "table_name",
+    "cutoff_date",
+    "rows_total",
+    "rows_to_delete",
+    "rows_archived",
+    "rows_deleted",
+    "protected",
+    "status",
+    "archive_path",
+    "message",
+    "metadata_json",
+]
+
 MARKET_REGIME_DAILY_COLUMNS = [
     "id",
     "trade_date",
@@ -661,6 +780,81 @@ def load_event_coverage_by_regime_for_dashboard(db_path: str | Path, coverage_ru
         where=where,
         params=params,
         order_by="coverage_run_id DESC, regime_type, regime_value",
+    )
+
+
+def load_source_health_checks_for_dashboard(db_path: str | Path, limit: int = 100) -> pd.DataFrame:
+    return _read_table(
+        db_path,
+        "source_health_checks",
+        SOURCE_HEALTH_CHECK_COLUMNS,
+        order_by="checked_at DESC, source_name",
+        limit=limit,
+    )
+
+
+def load_daily_routine_runs_for_dashboard(db_path: str | Path, limit: int = 50) -> pd.DataFrame:
+    return _read_table(
+        db_path,
+        "daily_routine_runs",
+        DAILY_ROUTINE_RUN_COLUMNS,
+        order_by="id DESC",
+        limit=limit,
+    )
+
+
+def load_operational_alerts_for_dashboard(db_path: str | Path, open_only: bool = True, limit: int = 100) -> pd.DataFrame:
+    where = "COALESCE(resolved, 0) = 0" if open_only else ""
+    return _read_table(
+        db_path,
+        "operational_alerts",
+        OPERATIONAL_ALERT_COLUMNS,
+        where=where,
+        order_by="id DESC",
+        limit=limit,
+    )
+
+
+def load_source_sla_snapshots_for_dashboard(db_path: str | Path, limit: int = 100) -> pd.DataFrame:
+    return _read_table(
+        db_path,
+        "source_sla_snapshots",
+        SOURCE_SLA_SNAPSHOT_COLUMNS,
+        order_by="id DESC",
+        limit=limit,
+    )
+
+
+def load_observability_snapshots_for_dashboard(db_path: str | Path, limit: int = 100) -> pd.DataFrame:
+    return _read_table(
+        db_path,
+        "operational_observability_snapshots",
+        OBSERVABILITY_SNAPSHOT_COLUMNS,
+        order_by="id DESC",
+        limit=limit,
+    )
+
+
+def load_retention_cleanup_runs_for_dashboard(db_path: str | Path, limit: int = 50) -> pd.DataFrame:
+    return _read_table(
+        db_path,
+        "retention_cleanup_runs",
+        RETENTION_CLEANUP_RUN_COLUMNS,
+        order_by="id DESC",
+        limit=limit,
+    )
+
+
+def load_retention_cleanup_details_for_dashboard(db_path: str | Path, run_id: int | None = None) -> pd.DataFrame:
+    where = "run_id = ?" if run_id is not None else ""
+    params = (int(run_id),) if run_id is not None else None
+    return _read_table(
+        db_path,
+        "retention_cleanup_details",
+        RETENTION_CLEANUP_DETAIL_COLUMNS,
+        where=where,
+        params=params,
+        order_by="id DESC",
     )
 
 

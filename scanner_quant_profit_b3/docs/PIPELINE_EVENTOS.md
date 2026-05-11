@@ -108,6 +108,12 @@ Rotina operacional com configuração e cobertura por regime:
 python -m src.scanners.event_daily_update --start 2026-01-02 --end 2026-04-30 --save-db --csv --with-regimes
 ```
 
+Rotina diária completa com health check e alertas:
+
+```powershell
+python -m src.scanners.daily_quant_routine --start 2026-01-02 --end 2026-04-30 --with-regimes --with-event-context --with-governance --save-db --csv
+```
+
 Depois:
 
 ```powershell
@@ -121,6 +127,9 @@ Tabelas usadas:
 - `market_events`
 - `event_coverage_runs`
 - `event_coverage_by_regime`
+- `source_health_checks`
+- `daily_routine_runs`
+- `operational_alerts`
 - `signal_event_links`
 - `event_context_runs`
 

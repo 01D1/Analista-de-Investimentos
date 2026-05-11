@@ -23,3 +23,12 @@ coverage:
   min_signals_with_event_pct: 10
   min_tickers_with_event_pct: 30
   min_sources_count: 2
+
+health:
+  max_stale_days: 45
+  warning_stale_days: 15
+  min_csv_records: 1
+  min_news_records: 1
+  min_macro_records: 1
+  min_cvm_files: 1
+  min_release_records: 1
