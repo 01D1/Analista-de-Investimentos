@@ -82,13 +82,14 @@ def test_itr_reconciliation_keeps_ultimo(tmp_path):
     downloader = CVMDownloader(output_dir=tmp_path / "cvm")
 
     # Build fake ITR CSV with both ULTIMO and PENULTIMO rows
+    # CR-05: use explicit Unicode string "ÚLTIMO" — encoding-safe, readable
     csv_content = (
         "CD_CVM;ORDEM_EXERC;DT_FIM_EXERC;CD_CONTA;DS_CONTA;VL_CONTA;ESCALA_MOEDA;MOEDA\n"
-        "001023;\xda\x4c\x54\x49\x4d\x4f;2024-09-30;3.01;Receita;100000;UNIDADE;BRL\n"
-        "001023;PEN\xda\x4c\x54\x49\x4d\x4f;2024-09-30;3.01;Receita;90000;UNIDADE;BRL\n"
+        "001023;ÚLTIMO;2024-09-30;3.01;Receita;100000;UNIDADE;BRL\n"
+        "001023;PENÚLTIMO;2024-09-30;3.01;Receita;90000;UNIDADE;BRL\n"
     )
     csv_path = tmp_path / "itr_cia_aberta_2024.csv"
-    csv_path.write_bytes(csv_content.encode("latin-1"))
+    csv_path.write_bytes(csv_content.encode("iso-8859-1"))
 
     with patch.object(downloader, "download_itr", return_value=[csv_path]):
         raw_dir = tmp_path / "raw" / "cvm"

@@ -46,6 +46,10 @@ BASE_URL = "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC"
 RATE_LIMIT_SECONDS = 1.5
 DocType = Literal["DFP", "ITR"]
 
+# CR-05: explicit Unicode constant — avoids opaque escape sequence "\xda\x4c\x54\x49\x4d\x4f"
+# which, while correct in CPython, is a maintenance landmine if encoding changes.
+_ULTIMO = "ÚLTIMO"
+
 # ── IPE event classification ──────────────────────────────────────────────────
 
 IPE_EVENT_TYPE_MAP: dict[str, str] = {
@@ -239,7 +243,7 @@ class CVMDownloader:
 
             # ING-02: ITR reconciliation — keep only ÚLTIMO for overlapping periods
             if period_type == "ITR" and "ORDEM_EXERC" in filtered.columns:
-                filtered = filtered[filtered["ORDEM_EXERC"].str.strip() == "\xda\x4c\x54\x49\x4d\x4f"]
+                filtered = filtered[filtered["ORDEM_EXERC"].str.strip() == _ULTIMO]
 
             for _, row in filtered.iterrows():
                 scale = {"MIL": 1_000, "UNIDADE": 1}.get(
