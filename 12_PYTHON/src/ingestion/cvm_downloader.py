@@ -25,12 +25,15 @@ Uso:
 from __future__ import annotations
 
 import io
+import sqlite3
 import time
+import uuid
 import zipfile
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 from typing import Literal
 
+import pdfplumber
 import requests
 import yaml
 
@@ -42,6 +45,42 @@ log = get_logger(__name__)
 BASE_URL = "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC"
 RATE_LIMIT_SECONDS = 1.5
 DocType = Literal["DFP", "ITR"]
+
+# ── IPE event classification ──────────────────────────────────────────────────
+
+IPE_EVENT_TYPE_MAP: dict[str, str] = {
+    "Resultados": "earnings",
+    "Fato Relevante": "material_fact",
+    "Assembleia": "meeting",
+    "Comunicado ao Mercado": "announcement",
+    "Aviso aos Acionistas": "shareholder_notice",
+    "Distribuição de Proventos": "dividend",
+    "Acordo de Acionistas": "shareholder_agreement",
+}
+
+
+def classify_event(categoria: str) -> str:
+    """Map IPE Categoria column to internal event_type string."""
+    return IPE_EVENT_TYPE_MAP.get(categoria.strip(), "other")
+
+
+def extract_ipe_pdf_text(pdf_url: str) -> str:
+    """Download IPE PDF from Link_Download and extract text with pdfplumber.
+
+    Returns empty string on any failure — never blocks ingestion.
+    Caps extraction at 10 pages to mitigate T-02-03 (DoS via large PDFs).
+    """
+    try:
+        resp = requests.get(pdf_url, timeout=60)
+        resp.raise_for_status()
+        with pdfplumber.open(io.BytesIO(resp.content)) as pdf:
+            return "\n".join(
+                page.extract_text() or "" for page in pdf.pages[:10]
+            )
+    except Exception as exc:
+        log.warning(f"[ipe_pdf] extração falhou: {exc}")
+        return ""
+
 
 _CVM_CODES: dict[str, str] | None = None
 
@@ -97,6 +136,10 @@ class CVMDownloader:
 
     # ── API pública ───────────────────────────────────────────────────────────
 
+    def get_cvm_code(self, ticker: str) -> str:
+        """Retorna o CD_CVM de um ticker (6 dígitos, zero-padded). Delega ao módulo."""
+        return get_cvm_code(ticker)
+
     def download_dfp(self, year: int, force: bool = False) -> list[Path]:
         """Baixa e extrai os CSVs de DFP para o ano. Pula se já existirem."""
         url = f"{BASE_URL}/DFP/DADOS/dfp_cia_aberta_{year}.zip"
@@ -108,6 +151,172 @@ class CVMDownloader:
         url = f"{BASE_URL}/ITR/DADOS/itr_cia_aberta_{year}.zip"
         dest = self.output_dir / "ITR" / str(year)
         return self._download_and_extract(url, dest, label=f"ITR {year}", force=force)
+
+    def download_ipe(self, year: int, force: bool = False) -> list[Path]:
+        """Baixa e extrai o CSV de IPE para o ano. Pula se já existir."""
+        url = f"{BASE_URL}/IPE/DADOS/ipe_cia_aberta_{year}.zip"
+        dest = self.output_dir / "IPE" / str(year)
+        time.sleep(RATE_LIMIT_SECONDS)
+        return self._download_and_extract(url, dest, label=f"IPE {year}", force=force)
+
+    def write_to_db(
+        self,
+        records: list[dict],
+        conn: sqlite3.Connection,
+    ) -> int:
+        """Insert CVM records into cvm_statements. Returns count of new rows inserted.
+
+        Uses INSERT OR IGNORE — duplicate (ticker, period_type, year, account_code,
+        reference_date) rows are silently skipped (T-02-01: parameterized queries only).
+        """
+        inserted = 0
+        now = datetime.utcnow().isoformat()
+        for rec in records:
+            conn.execute(
+                """INSERT OR IGNORE INTO cvm_statements
+                   (id, ticker, cvm_code, year, period_type, account_code,
+                    account_name, normalized_name, value, reference_date, ingested_at)
+                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                (
+                    str(uuid.uuid4()),
+                    rec["ticker"],
+                    rec["cvm_code"],
+                    rec["year"],
+                    rec["period_type"],
+                    rec.get("account_code"),
+                    rec.get("account_name"),
+                    rec.get("normalized_name"),
+                    rec.get("value"),
+                    rec.get("reference_date"),
+                    now,
+                ),
+            )
+            inserted += conn.execute("SELECT changes()").fetchone()[0]
+        conn.commit()
+        return inserted
+
+    def parse_and_store(
+        self,
+        ticker: str,
+        year: int,
+        period_type: str,
+        conn: sqlite3.Connection,
+        raw_dir: Path,
+    ) -> int:
+        """Download CVM ZIP, filter to ticker, save raw CSV, parse, write to DB.
+
+        Args:
+            ticker: B3 ticker code (e.g. "BBAS3")
+            year: Calendar year to download
+            period_type: "DFP" or "ITR"
+            conn: Open sqlite3 connection to ingestion.db
+            raw_dir: Base directory for raw CSVs (settings.data_raw / "cvm")
+
+        Returns:
+            Count of rows inserted into cvm_statements.
+        """
+        import pandas as pd
+
+        cvm_code = self.get_cvm_code(ticker)
+
+        if period_type == "DFP":
+            csv_paths = self.download_dfp(year)
+        else:
+            csv_paths = self.download_itr(year)
+
+        records: list[dict] = []
+        for csv_path in csv_paths:
+            df = pd.read_csv(csv_path, encoding="iso-8859-1", sep=";", dtype=str)
+            df["CD_CVM"] = df["CD_CVM"].astype(str).str.strip().str.zfill(6)
+            filtered = df[df["CD_CVM"] == cvm_code].copy()
+            if filtered.empty:
+                continue
+
+            # D-09: Save raw filtered CSV before any processing
+            raw_out = raw_dir / str(year) / f"{ticker}_{period_type}_{csv_path.stem}.csv"
+            raw_out.parent.mkdir(parents=True, exist_ok=True)
+            filtered.to_csv(raw_out, index=False, encoding="utf-8")
+
+            # ING-02: ITR reconciliation — keep only ÚLTIMO for overlapping periods
+            if period_type == "ITR" and "ORDEM_EXERC" in filtered.columns:
+                filtered = filtered[filtered["ORDEM_EXERC"].str.strip() == "\xda\x4c\x54\x49\x4d\x4f"]
+
+            for _, row in filtered.iterrows():
+                scale = {"MIL": 1_000, "UNIDADE": 1}.get(
+                    str(row.get("ESCALA_MOEDA", "UNIDADE")).strip(), 1
+                )
+                try:
+                    value = float(str(row.get("VL_CONTA", "")).replace(",", ".")) * scale
+                except (ValueError, TypeError):
+                    value = None
+                account_code = str(row.get("CD_CONTA", "")).strip()
+                account_name = str(row.get("DS_CONTA", "")).strip()
+                records.append({
+                    "ticker": ticker,
+                    "cvm_code": cvm_code,
+                    "year": year,
+                    "period_type": period_type,
+                    "account_code": account_code,
+                    "account_name": account_name,
+                    "normalized_name": None,  # Phase 3 enrichment
+                    "value": value,
+                    "reference_date": str(row.get("DT_FIM_EXERC", "")).strip() or None,
+                })
+
+        return self.write_to_db(records, conn)
+
+    def parse_and_store_ipe(
+        self,
+        ticker: str,
+        year: int,
+        conn: sqlite3.Connection,
+        extract_pdf: bool = True,
+    ) -> int:
+        """Download IPE CSV, filter to ticker, classify events, extract PDF text, write to DB.
+
+        Args:
+            ticker: B3 ticker code
+            year: Calendar year
+            conn: Open sqlite3 connection to ingestion.db
+            extract_pdf: Set False to skip PDF download (useful for tests / dry runs)
+
+        Returns:
+            Count of rows inserted.
+        """
+        import pandas as pd
+
+        cvm_code = self.get_cvm_code(ticker)
+        csv_paths = self.download_ipe(year)
+
+        records: list[dict] = []
+        for csv_path in csv_paths:
+            df = pd.read_csv(csv_path, encoding="iso-8859-1", sep=";", dtype=str)
+            df["Codigo_CVM"] = df["Codigo_CVM"].astype(str).str.strip().str.zfill(6)
+            filtered = df[df["Codigo_CVM"] == cvm_code].copy()
+            if filtered.empty:
+                continue
+
+            for _, row in filtered.iterrows():
+                categoria = str(row.get("Categoria", "")).strip()
+                event_type = classify_event(categoria)
+                pdf_text = ""
+                link = str(row.get("Link_Download", "")).strip()
+                if extract_pdf and link.startswith("http"):
+                    pdf_text = extract_ipe_pdf_text(link)
+
+                records.append({
+                    "ticker": ticker,
+                    "cvm_code": cvm_code,
+                    "year": year,
+                    "period_type": "IPE",
+                    "account_code": event_type,
+                    "account_name": pdf_text[:4000] if pdf_text else categoria,
+                    "normalized_name": categoria,
+                    "value": None,
+                    "reference_date": str(row.get("Data_Referencia", "")).strip() or None,
+                })
+
+        return self.write_to_db(records, conn)
 
     def download_range(
         self,
