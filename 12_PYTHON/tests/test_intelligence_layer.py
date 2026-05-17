@@ -242,7 +242,6 @@ def test_compute_input_hash_deterministic():
     assert h1 == h2  # sorted(news_urls) makes it order-independent
 
 
-@pytest.mark.xfail(reason="run_ticker not yet implemented — Plan 04-02")
 def test_hash_gate_skips_on_match(monkeypatch):
     """INT-03: run_ticker() skips generation when same input_hash already exists in thesis_versions."""
     conn = make_db()
@@ -254,6 +253,12 @@ def test_hash_gate_skips_on_match(monkeypatch):
          existing_hash, "COMPRAR", "ALTA", 48.30, "{}"),
     )
     conn.commit()
+    # Monkeypatch _assemble_prompt_data to return minimal data so hash gate is reached
+    _mock_data = {"dcf_fair_value": 48.30, "upside_pct": 0.20, "pe_ratio": 10.0,
+                  "ev_ebitda": 6.0, "pb_ratio": 1.5, "dividend_yield": 0.06,
+                  "selic": 0.1065, "cds_brasil": 0.0215, "momentum_score": 62,
+                  "news_items": []}
+    monkeypatch.setattr("src.intelligence_layer._assemble_prompt_data", lambda *a, **k: _mock_data)
     monkeypatch.setattr("src.intelligence_layer.compute_input_hash", lambda *a, **k: existing_hash)
     monkeypatch.setattr("src.intelligence_layer.get_connection", lambda: conn)
     from src.intelligence_layer import run_ticker
@@ -264,7 +269,6 @@ def test_hash_gate_skips_on_match(monkeypatch):
     conn.close()
 
 
-@pytest.mark.xfail(reason="run_ticker not yet implemented — Plan 04-02")
 def test_daily_cap_after_two_runs(monkeypatch):
     """INT-03 + D-11: run_ticker() skips after 2 thesis rows for same ticker today."""
     conn = make_db()
@@ -277,6 +281,14 @@ def test_daily_cap_after_two_runs(monkeypatch):
              f"hash{i}", "MANTER", "MEDIA", 45.00, "{}"),
         )
     conn.commit()
+    # Monkeypatch _assemble_prompt_data so hash gate + daily cap gate are reached
+    _mock_data = {"dcf_fair_value": 45.00, "upside_pct": 0.10, "pe_ratio": 8.0,
+                  "ev_ebitda": 5.0, "pb_ratio": 1.2, "dividend_yield": 0.05,
+                  "selic": 0.1065, "cds_brasil": 0.0215, "momentum_score": 50,
+                  "news_items": []}
+    monkeypatch.setattr("src.intelligence_layer._assemble_prompt_data", lambda *a, **k: _mock_data)
+    # Use a different hash so hash_match gate doesn't trigger first
+    monkeypatch.setattr("src.intelligence_layer.compute_input_hash", lambda *a, **k: "newhash999")
     monkeypatch.setattr("src.intelligence_layer.get_connection", lambda: conn)
     from src.intelligence_layer import run_ticker
 
@@ -289,13 +301,29 @@ def test_daily_cap_after_two_runs(monkeypatch):
 # -- INT-04: Thesis versioning ------------------------------------------------
 
 
-@pytest.mark.xfail(reason="run_ticker not yet implemented — Plan 04-02")
 def test_thesis_versions_write(monkeypatch):
     """INT-04: thesis_versions row written with correct version_num, input_hash, positioning, thesis_json."""
     conn = make_db()
     mock_thesis = _make_thesis()
-    monkeypatch.setattr("src.intelligence_layer.get_connection", lambda: conn)
+
+    # Wrap conn so close() is a no-op — run_ticker() calls conn.close() in finally block
+    class _NoCloseConn:
+        def __init__(self, c): self._c = c
+        def execute(self, *a, **k): return self._c.execute(*a, **k)
+        def executescript(self, *a, **k): return self._c.executescript(*a, **k)
+        def commit(self): return self._c.commit()
+        def close(self): pass  # no-op so test can still query after run_ticker()
+
+    nc = _NoCloseConn(conn)
+    monkeypatch.setattr("src.intelligence_layer.get_connection", lambda: nc)
+    # Mock _assemble_prompt_data to return valid data (bypasses DB reads for financial tables)
+    _mock_data = {"dcf_fair_value": 48.30, "upside_pct": 0.20, "pe_ratio": 10.0,
+                  "ev_ebitda": 6.0, "pb_ratio": 1.5, "dividend_yield": 0.06,
+                  "selic": 0.1065, "cds_brasil": 0.0215, "momentum_score": 62,
+                  "news_items": [], "ticker": "PETR4"}
+    monkeypatch.setattr("src.intelligence_layer._assemble_prompt_data", lambda *a, **k: _mock_data)
     monkeypatch.setattr("src.intelligence_layer.compute_input_hash", lambda *a, **k: "testhash123")
+    monkeypatch.setattr("src.intelligence_layer._render_thesis_prompt", lambda data: "mock prompt")
     mock_client_instance = MagicMock()
     mock_client_instance.generate_thesis.return_value = mock_thesis
     monkeypatch.setattr("src.intelligence_layer.IntelligenceClient", lambda: mock_client_instance)
@@ -315,7 +343,6 @@ def test_thesis_versions_write(monkeypatch):
     conn.close()
 
 
-@pytest.mark.xfail(reason="thesis_latest VIEW tested in test_db_schema.py::test_thesis_latest_view — this tests query behaviour")
 def test_thesis_latest_view_query(monkeypatch):
     """INT-04: thesis_latest VIEW returns only MAX(version_num) row per ticker."""
     conn = make_db()
