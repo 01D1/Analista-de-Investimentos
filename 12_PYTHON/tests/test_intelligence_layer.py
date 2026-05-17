@@ -185,7 +185,8 @@ def test_generate_thesis_returns_valid_schema(monkeypatch):
     mock_thesis = _make_thesis()
     mock_client = MagicMock()
     mock_client.messages.create.return_value = mock_thesis
-    monkeypatch.setattr("instructor.from_anthropic", lambda *a, **k: mock_client)
+    # instructor 1.15.1 uses from_provider (not from_anthropic — API changed in >=1.0 refactor)
+    monkeypatch.setattr("instructor.from_provider", lambda *a, **k: mock_client)
     client = IntelligenceClient()
     result = client.generate_thesis("PETR4", "prompt text", "system text")
     assert isinstance(result, type(mock_thesis))
@@ -200,7 +201,8 @@ def test_hard_fail_on_validation_error(monkeypatch):
 
     mock_client = MagicMock()
     mock_client.messages.create.side_effect = Exception("InstructorRetryException: max retries exceeded")
-    monkeypatch.setattr("instructor.from_anthropic", lambda *a, **k: mock_client)
+    # instructor 1.15.1 uses from_provider (not from_anthropic — API changed in >=1.0 refactor)
+    monkeypatch.setattr("instructor.from_provider", lambda *a, **k: mock_client)
     client = IntelligenceClient()
     with pytest.raises(IngestionError):
         client.generate_thesis("PETR4", "prompt", "system")
