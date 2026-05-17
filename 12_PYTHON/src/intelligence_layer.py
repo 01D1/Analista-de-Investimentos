@@ -737,7 +737,46 @@ def run_ticker(ticker: str) -> ThesisResult:
 
 
 def run_all() -> list[ThesisResult]:
-    """Run run_ticker() for all active tickers in tickers.yaml.
-    Implemented in Plan 04-04.
+    """Generate investment theses and opportunity signals for all active tickers.
+
+    Loads tickers from config/tickers.yaml (active=True only).
+    Calls run_ticker() per ticker; catches IngestionError and appends error result
+    so one failure does not abort the entire run.
+    Mirrors financial_engine.run_all() pattern (D-20).
     """
-    raise NotImplementedError("run_all() implemented in Plan 04-04")
+    import yaml
+    from pathlib import Path
+
+    tickers_path = Path(__file__).parent.parent / "config" / "tickers.yaml"
+    try:
+        with open(tickers_path, encoding="utf-8") as fh:
+            data = yaml.safe_load(fh)
+        active_tickers = [
+            t["ticker"]
+            for t in data.get("tickers", [])
+            if t.get("active", True)
+        ]
+    except Exception as exc:
+        log.error(f"[run_all] falha ao carregar tickers.yaml: {exc}")
+        return []
+
+    results: list[ThesisResult] = []
+    for ticker in active_tickers:
+        try:
+            result = run_ticker(ticker)
+            results.append(result)
+        except IngestionError as exc:
+            # D-05: IngestionError = hard fail on LLM validation; log and continue
+            log.warning(f"[{ticker}] IngestionError em run_ticker: {exc}")
+            results.append(ThesisResult(ticker=ticker, error=str(exc)))
+        except Exception as exc:
+            log.warning(f"[{ticker}] excecao nao capturada em run_ticker: {exc}")
+            results.append(ThesisResult(ticker=ticker, error=str(exc)))
+
+    ok = sum(1 for r in results if not r.skipped and r.thesis is not None)
+    skipped = sum(1 for r in results if r.skipped)
+    failed = sum(1 for r in results if r.error is not None)
+    log.info(
+        f"[run_all] concluido — ok={ok} skipped={skipped} failed={failed} total={len(results)}"
+    )
+    return results
