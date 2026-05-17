@@ -178,7 +178,6 @@ def test_risk_severity_literals():
         Risk(title="Test", description="Test", severity="CRITICAL")
 
 
-@pytest.mark.xfail(reason="IntelligenceClient not yet implemented — Plan 04-02")
 def test_generate_thesis_returns_valid_schema(monkeypatch):
     """INT-01: IntelligenceClient.generate_thesis() returns InvestmentThesis with all required fields."""
     from src.intelligence_layer import IntelligenceClient
@@ -194,7 +193,6 @@ def test_generate_thesis_returns_valid_schema(monkeypatch):
     assert result.fair_value_brl == 48.30
 
 
-@pytest.mark.xfail(reason="IntelligenceClient not yet implemented — Plan 04-02")
 def test_hard_fail_on_validation_error(monkeypatch):
     """INT-01 + D-05: IngestionError raised on instructor validation exhaustion; no partial thesis stored."""
     from src.intelligence_layer import IntelligenceClient
@@ -211,7 +209,6 @@ def test_hard_fail_on_validation_error(monkeypatch):
 # -- INT-02: DCF cross-check --------------------------------------------------
 
 
-@pytest.mark.xfail(reason="compute_input_hash / _check_dcf_deviation not yet implemented — Plan 04-02")
 def test_dcf_deviation_flag():
     """INT-02: dcf_deviation_flag=True when thesis.fair_value_brl deviates >10% from DCF."""
     from src.intelligence_layer import _check_dcf_deviation
@@ -221,7 +218,6 @@ def test_dcf_deviation_flag():
     assert flag is True
 
 
-@pytest.mark.xfail(reason="_check_dcf_deviation not yet implemented — Plan 04-02")
 def test_dcf_deviation_within_tolerance():
     """INT-02: dcf_deviation_flag=False when deviation is within +-10%."""
     from src.intelligence_layer import _check_dcf_deviation
@@ -234,7 +230,6 @@ def test_dcf_deviation_within_tolerance():
 # -- INT-03: Hash gate + daily cap --------------------------------------------
 
 
-@pytest.mark.xfail(reason="compute_input_hash not yet implemented — Plan 04-02")
 def test_compute_input_hash_deterministic():
     """INT-03: Same inputs always produce the same hash (deterministic)."""
     from src.intelligence_layer import compute_input_hash
