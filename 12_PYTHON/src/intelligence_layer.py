@@ -402,6 +402,179 @@ def _compute_diff_summary(
     return "; ".join(parts) if parts else "Sem alterações materiais"
 
 
+# ── Opportunity signal computation — D-15, D-16, D-17, D-18 ──────────────────
+
+
+def _score_dcf_divergence(price: float, fair_value: float) -> int:
+    """Compute DCF_DIVERGENCE conviction score (0–40).
+
+    Returns 0 if divergence is <= 20% (below emission threshold).
+    Proportional scale: 20% divergence = 0pts; 100%+ divergence = 40pts (capped).
+    D-17.
+    """
+    if fair_value <= 0 or price <= 0:
+        return 0
+    divergence = abs(fair_value - price) / price
+    if divergence <= 0.20:
+        return 0
+    score = int(min((divergence - 0.20) / 0.80 * 40, 40))
+    return score
+
+
+def _score_momentum_crossover(
+    golden_cross: Optional[int],
+    death_cross: Optional[int],
+    momentum_score: Optional[int],
+) -> int:
+    """Compute MOMENTUM_CROSSOVER conviction score (0–60).
+
+    Returns 0 if no qualifying crossover. D-17.
+    golden_cross=1 AND momentum_score>=60 → bullish signal (up to 60pts)
+    death_cross=1 AND momentum_score<=40 → bearish signal (up to 60pts)
+    Score scales linearly with momentum_score strength.
+    """
+    if momentum_score is None:
+        return 0
+    if golden_cross == 1 and momentum_score >= 60:
+        return int(min(momentum_score / 100 * 60, 60))
+    if death_cross == 1 and momentum_score <= 40:
+        return int(min((100 - momentum_score) / 100 * 60, 60))
+    return 0
+
+
+def _score_ipe_event(ticker: str, conn: sqlite3.Connection) -> int:
+    """Return 30 (binary) if IPE event in last 30 days, else 0. D-17.
+
+    CRITICAL: No normalized_name IS NOT NULL filter — IPE rows have NULL normalized_name
+    (Pitfall 7). Query uses period_type = 'IPE' only.
+    """
+    row = conn.execute(
+        """
+        SELECT COUNT(*) FROM cvm_statements
+        WHERE ticker = ? AND period_type = 'IPE'
+          AND reference_date >= DATE('now', '-30 days')
+        """,
+        (ticker,),
+    ).fetchone()
+    return 30 if (row[0] or 0) > 0 else 0
+
+
+def compute_opportunity_signals(
+    ticker: str,
+    conn: sqlite3.Connection,
+) -> list[OpportunitySignal]:
+    """Compute all opportunity signals for a ticker and return top-3 by conviction_score.
+
+    Signal types: DCF_DIVERGENCE, MOMENTUM_CROSSOVER, IPE_EVENT.
+    Only signals with conviction_score >= 40 are included.
+    Result is sorted by conviction_score DESC, top-3 returned.
+    D-15, D-17.
+    """
+    generated_at = datetime.now(timezone.utc).isoformat()
+    signals: list[OpportunitySignal] = []
+
+    # Fetch latest multiples for price and fair_value
+    mult_row = conn.execute(
+        "SELECT * FROM financial_multiples WHERE ticker = ? ORDER BY computed_date DESC LIMIT 1",
+        (ticker,),
+    ).fetchone()
+    dcf_row = conn.execute(
+        "SELECT * FROM financial_dcf WHERE ticker = ? ORDER BY computed_date DESC LIMIT 1",
+        (ticker,),
+    ).fetchone()
+    sig_row = conn.execute(
+        "SELECT * FROM financial_signals WHERE ticker = ? ORDER BY computed_date DESC LIMIT 1",
+        (ticker,),
+    ).fetchone()
+
+    # ── DCF_DIVERGENCE ──────────────────────────────────────────────────────
+    if mult_row and dcf_row and mult_row["price"] and dcf_row["fair_value_brl"]:
+        price = float(mult_row["price"])
+        fair_value = float(dcf_row["fair_value_brl"])
+        score = _score_dcf_divergence(price, fair_value)
+        if score > 0:
+            direction = "subvalorizado" if fair_value > price else "sobrevalorizado"
+            divergence_pct = abs(fair_value - price) / price * 100
+            signals.append(OpportunitySignal(
+                ticker=ticker,
+                signal_type="DCF_DIVERGENCE",
+                description=(
+                    f"{ticker} {direction}: preço R${price:.2f} vs preço justo R${fair_value:.2f} "
+                    f"({divergence_pct:.1f}% de divergência)"
+                ),
+                conviction_score=score,
+                generated_at=generated_at,
+            ))
+
+    # ── MOMENTUM_CROSSOVER ─────────────────────────────────────────────────
+    if sig_row:
+        golden = sig_row["golden_cross"]
+        death = sig_row["death_cross"]
+        momentum = sig_row["momentum_score"]
+        score = _score_momentum_crossover(golden, death, momentum)
+        if score > 0:
+            cross_type = "golden cross (alta)" if golden == 1 else "death cross (baixa)"
+            signals.append(OpportunitySignal(
+                ticker=ticker,
+                signal_type="MOMENTUM_CROSSOVER",
+                description=(
+                    f"{ticker}: {cross_type} com momentum score {momentum}/100 — "
+                    f"sinal técnico de {'compra' if golden == 1 else 'venda'}"
+                ),
+                conviction_score=score,
+                generated_at=generated_at,
+            ))
+
+    # ── IPE_EVENT ──────────────────────────────────────────────────────────
+    score = _score_ipe_event(ticker, conn)
+    if score > 0:
+        signals.append(OpportunitySignal(
+            ticker=ticker,
+            signal_type="IPE_EVENT",
+            description=(
+                f"{ticker}: evento corporativo relevante (IPE) publicado na CVM nos últimos 30 dias"
+            ),
+            conviction_score=score,
+            generated_at=generated_at,
+        ))
+
+    # Sort by conviction_score DESC, return top-3 (D-17: filter >= 40 already applied above)
+    signals.sort(key=lambda s: s.conviction_score, reverse=True)
+    return signals[:3]
+
+
+def _write_opportunity_signals(
+    ticker: str,
+    signals: list[OpportunitySignal],
+    conn: sqlite3.Connection,
+) -> None:
+    """Write top signals to opportunity_signals table via INSERT OR REPLACE.
+
+    Keyed by (ticker, computed_date, signal_type) UNIQUE constraint — safe to call
+    multiple times for the same day. D-18.
+    All SQL parameterized — ticker never in SQL string.
+    """
+    computed_date = date.today().isoformat()
+    ingested_at = datetime.now(timezone.utc).isoformat()
+    for sig in signals:
+        conn.execute(
+            """
+            INSERT OR REPLACE INTO opportunity_signals
+            (id, ticker, computed_date, signal_type, description, conviction_score, ingested_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                str(uuid.uuid4()),
+                ticker,
+                computed_date,
+                sig.signal_type,
+                sig.description,
+                sig.conviction_score,
+                ingested_at,
+            ),
+        )
+
+
 # ── Gate checks — D-10, D-11 ─────────────────────────────────────────────────
 
 
@@ -537,10 +710,18 @@ def run_ticker(ticker: str) -> ThesisResult:
             f"deviation_flag={deviation_flag}"
         )
 
+        # ── 9. Compute and persist opportunity signals (D-15) ────────────────
+        signals = compute_opportunity_signals(ticker, conn)
+        if signals:
+            _write_opportunity_signals(ticker, signals, conn)
+            conn.commit()
+            log.info(f"[{ticker}] {len(signals)} sinais de oportunidade gravados")
+
         return ThesisResult(
             ticker=ticker,
             skipped=False,
             thesis=thesis,
+            signals=signals,
             version_num=version_num,
             dcf_deviation_flag=deviation_flag,
         )
