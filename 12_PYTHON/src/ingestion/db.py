@@ -151,6 +151,43 @@ CREATE TABLE IF NOT EXISTS financial_signals (
     ingested_at     TEXT NOT NULL
 );
 CREATE UNIQUE INDEX IF NOT EXISTS idx_signals_dedup ON financial_signals(ticker, computed_date);
+
+CREATE TABLE IF NOT EXISTS thesis_versions (
+    id                 TEXT PRIMARY KEY,
+    ticker             TEXT NOT NULL,
+    version_num        INTEGER NOT NULL,
+    generated_at       TEXT NOT NULL,
+    input_hash         TEXT NOT NULL,
+    positioning        TEXT NOT NULL,
+    confidence         TEXT NOT NULL,
+    fair_value_brl     REAL NOT NULL,
+    dcf_deviation_flag INTEGER DEFAULT 0,
+    thesis_json        TEXT NOT NULL,
+    diff_summary       TEXT,
+    UNIQUE(ticker, version_num)
+);
+CREATE INDEX IF NOT EXISTS idx_thesis_ticker ON thesis_versions(ticker);
+CREATE INDEX IF NOT EXISTS idx_thesis_hash   ON thesis_versions(ticker, input_hash);
+
+CREATE TABLE IF NOT EXISTS opportunity_signals (
+    id               TEXT PRIMARY KEY,
+    ticker           TEXT NOT NULL,
+    computed_date    TEXT NOT NULL,
+    signal_type      TEXT NOT NULL,
+    description      TEXT NOT NULL,
+    conviction_score INTEGER NOT NULL,
+    ingested_at      TEXT NOT NULL,
+    UNIQUE(ticker, computed_date, signal_type)
+);
+CREATE INDEX IF NOT EXISTS idx_signals_ticker ON opportunity_signals(ticker);
+
+CREATE VIEW IF NOT EXISTS thesis_latest AS
+SELECT * FROM thesis_versions
+WHERE (ticker, version_num) IN (
+    SELECT ticker, MAX(version_num)
+    FROM thesis_versions
+    GROUP BY ticker
+);
 """
 
 
