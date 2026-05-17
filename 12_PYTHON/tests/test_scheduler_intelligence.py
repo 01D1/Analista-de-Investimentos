@@ -25,7 +25,6 @@ def test_job_intelligence_registered():
     )
 
 
-@pytest.mark.xfail(reason="job_intelligence() not yet implemented — Plan 04-04")
 def test_job_intelligence_calls_run_all(monkeypatch):
     """D-19: job_intelligence() calls run_all() and returns 'intelligence: ok=...' string."""
     from src.intelligence_layer import ThesisResult
@@ -54,7 +53,6 @@ def test_job_intelligence_calls_run_all(monkeypatch):
     assert len(call_count) == 1
 
 
-@pytest.mark.xfail(reason="job_intelligence() not yet implemented — Plan 04-04")
 def test_job_intelligence_summary_log(monkeypatch):
     """D-15 + D-19: job_intelligence() emits structured summary log with source='intelligence'."""
     logged = []
