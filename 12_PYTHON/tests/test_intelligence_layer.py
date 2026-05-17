@@ -363,7 +363,6 @@ def test_thesis_latest_view_query(monkeypatch):
 # -- INT-05: Opportunity signals ----------------------------------------------
 
 
-@pytest.mark.xfail(reason="compute_opportunity_signals not yet implemented — Plan 04-03")
 def test_dcf_divergence_signal():
     """INT-05: DCF_DIVERGENCE signal emitted when price vs DCF fair value divergence > 20%."""
     from src.intelligence_layer import _score_dcf_divergence
@@ -374,7 +373,6 @@ def test_dcf_divergence_signal():
     assert score <= 40
 
 
-@pytest.mark.xfail(reason="_score_dcf_divergence not yet implemented — Plan 04-03")
 def test_dcf_divergence_below_threshold():
     """INT-05: DCF_DIVERGENCE signal NOT emitted when divergence <= 20%."""
     from src.intelligence_layer import _score_dcf_divergence
@@ -383,7 +381,6 @@ def test_dcf_divergence_below_threshold():
     assert score == 0
 
 
-@pytest.mark.xfail(reason="compute_opportunity_signals not yet implemented — Plan 04-03")
 def test_momentum_crossover_signal():
     """INT-05: MOMENTUM_CROSSOVER signal emitted when golden_cross=1 and momentum_score>=60."""
     from src.intelligence_layer import compute_opportunity_signals
@@ -420,7 +417,6 @@ def test_momentum_crossover_signal():
     conn.close()
 
 
-@pytest.mark.xfail(reason="compute_opportunity_signals not yet implemented — Plan 04-03")
 def test_ipe_event_signal():
     """INT-05: IPE_EVENT signal emitted when IPE event in last 30 days (no normalized_name filter)."""
     from src.intelligence_layer import compute_opportunity_signals
@@ -463,7 +459,6 @@ def test_ipe_event_signal():
     conn.close()
 
 
-@pytest.mark.xfail(reason="_score_dcf_divergence not yet implemented — Plan 04-03")
 def test_signal_conviction_threshold():
     """INT-05: Signals with conviction_score < 40 are filtered out from compute_opportunity_signals()."""
     from src.intelligence_layer import _score_dcf_divergence
@@ -476,7 +471,6 @@ def test_signal_conviction_threshold():
 # -- INT-06: opportunity_signals table ----------------------------------------
 
 
-@pytest.mark.xfail(reason="_write_opportunity_signals not yet implemented — Plan 04-03")
 def test_opportunity_signals_write(monkeypatch):
     """INT-06: opportunity_signals table receives top-3 signals via INSERT OR REPLACE."""
     from src.intelligence_layer import OpportunitySignal, _write_opportunity_signals
