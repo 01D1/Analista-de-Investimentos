@@ -157,7 +157,7 @@ class TelegramBot:
             f"Fair Value: `R$ {fair_value:,.2f}`",
             f"Upside/Downside: `{upside:+.1%}`",
         ]
-        if current_price:
+        if current_price is not None:
             lines.append(f"Preço atual: `R$ {current_price:,.2f}`")
         return self.send("\n".join(lines))
 
@@ -261,6 +261,11 @@ class TelegramBot:
                     f"{body.get('description', resp.text[:200])}"
                 )
 
+                # 4xx (except 429) = terminal client error — retrying is pointless
+                if 400 <= resp.status_code < 500 and resp.status_code != 429:
+                    log.error(f"[Telegram] erro terminal {resp.status_code} — sem retry")
+                    return False
+
                 # 429 = rate limit
                 if resp.status_code == 429:
                     retry_after = body.get("parameters", {}).get("retry_after", delay)
@@ -269,7 +274,9 @@ class TelegramBot:
                     continue
 
             except Exception as exc:
-                log.warning(f"[Telegram] falha (tentativa {attempt}/{retry}): {exc}")
+                # Use only exception type name — exc message may embed the URL (and token)
+                safe_msg = type(exc).__name__
+                log.warning(f"[Telegram] falha (tentativa {attempt}/{retry}): {safe_msg}")
 
             if attempt < retry:
                 time.sleep(delay)
