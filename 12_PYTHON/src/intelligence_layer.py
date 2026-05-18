@@ -493,7 +493,7 @@ def _score_ipe_event(ticker: str, conn: sqlite3.Connection) -> int:
         """,
         (ticker,),
     ).fetchone()
-    return 30 if (row[0] or 0) > 0 else 0
+    return 40 if (row[0] or 0) > 0 else 0  # 40 = minimum qualifying score for >= 40 threshold
 
 
 def compute_opportunity_signals(

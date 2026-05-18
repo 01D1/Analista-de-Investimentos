@@ -260,7 +260,7 @@ def test_hash_gate_skips_on_match(monkeypatch):
                   "news_items": []}
     monkeypatch.setattr("src.intelligence_layer._assemble_prompt_data", lambda *a, **k: _mock_data)
     monkeypatch.setattr("src.intelligence_layer.compute_input_hash", lambda *a, **k: existing_hash)
-    monkeypatch.setattr("src.intelligence_layer.get_connection", lambda: conn)
+    monkeypatch.setattr("src.intelligence_layer.get_connection", lambda *a, **k: conn)
     from src.intelligence_layer import run_ticker
 
     result = run_ticker("PETR4")
@@ -289,7 +289,7 @@ def test_daily_cap_after_two_runs(monkeypatch):
     monkeypatch.setattr("src.intelligence_layer._assemble_prompt_data", lambda *a, **k: _mock_data)
     # Use a different hash so hash_match gate doesn't trigger first
     monkeypatch.setattr("src.intelligence_layer.compute_input_hash", lambda *a, **k: "newhash999")
-    monkeypatch.setattr("src.intelligence_layer.get_connection", lambda: conn)
+    monkeypatch.setattr("src.intelligence_layer.get_connection", lambda *a, **k: conn)
     from src.intelligence_layer import run_ticker
 
     result = run_ticker("PETR4")
@@ -315,7 +315,7 @@ def test_thesis_versions_write(monkeypatch):
         def close(self): pass  # no-op so test can still query after run_ticker()
 
     nc = _NoCloseConn(conn)
-    monkeypatch.setattr("src.intelligence_layer.get_connection", lambda: nc)
+    monkeypatch.setattr("src.intelligence_layer.get_connection", lambda *a, **k: nc)
     # Mock _assemble_prompt_data to return valid data (bypasses DB reads for financial tables)
     _mock_data = {"dcf_fair_value": 48.30, "upside_pct": 0.20, "pe_ratio": 10.0,
                   "ev_ebitda": 6.0, "pb_ratio": 1.5, "dividend_yield": 0.06,
@@ -455,7 +455,7 @@ def test_ipe_event_signal():
     signals = compute_opportunity_signals("PETR4", conn)
     ipe_signals = [s for s in signals if s.signal_type == "IPE_EVENT"]
     assert len(ipe_signals) == 1
-    assert ipe_signals[0].conviction_score == 30
+    assert ipe_signals[0].conviction_score == 40  # raised from 30 to meet >= 40 threshold (CR-04)
     conn.close()
 
 
