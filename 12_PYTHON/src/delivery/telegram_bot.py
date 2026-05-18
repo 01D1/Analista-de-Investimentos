@@ -191,6 +191,48 @@ class TelegramBot:
         header = "📅 *Resumo Semanal — Intelligence System*\n\n"
         return self.send(header + summary[:3500])
 
+    def send_thesis_alert(
+        self,
+        ticker: str,
+        old_positioning: str,
+        new_positioning: str,
+        confidence: str,
+        rationale_one_line: str,
+        top_opportunity_desc: str,
+    ) -> bool:
+        """Envia alerta quando tese muda de posicionamento — DEL-03 / D-12."""
+        text = (
+            f"*{ticker}* - Tese atualizada\n"
+            f"Posicionamento: {old_positioning} -> *{new_positioning}*\n"
+            f"Confianca: {confidence}\n"
+            f"{rationale_one_line}\n"
+            f"Top oportunidade: {top_opportunity_desc}"
+        )
+        return self.send(text)  # self.send() ja trata truncamento em 4096 chars
+
+    def send_daily_brief(
+        self,
+        macro_snapshot: dict,
+        top_movers: list[dict],
+        top_opportunity: dict | None,
+    ) -> bool:
+        """Envia resumo diario de mercado — DEL-04 / D-12."""
+        from datetime import date
+
+        date_str = date.today().strftime("%d/%m/%Y")
+        selic = macro_snapshot.get("selic", 0.0)
+        ptax = macro_snapshot.get("ptax", 0.0)
+        ibov_pct = macro_snapshot.get("ibov_pct", 0.0)
+        lines = [
+            f"*Resumo de Mercado - {date_str}*",
+            f"Selic: {selic:.2f}% | PTAX: R${ptax:.4f} | IBOV: {ibov_pct:+.1f}%",
+            "",
+            "*Top Oportunidades*",
+        ]
+        for i, m in enumerate(top_movers[:3], 1):
+            lines.append(f"{i}. {m['ticker']}: {m['description']} (score: {m.get('score', '-')})")
+        return self.send("\n".join(lines))
+
     # ── HTTP helper ───────────────────────────────────────────────────────────
 
     def _post(

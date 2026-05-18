@@ -44,6 +44,7 @@ dependencies = [
 
     # Delivery
     "python-telegram-bot>=21.0.0",
+    "fpdf2>=2.7.0",              # PDF report generation (Phase 5 D-15)
 
     # Observability
     "loguru>=0.7.0",

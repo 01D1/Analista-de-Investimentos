@@ -483,6 +483,69 @@ def job_financial_engine() -> str:
         return f"financial_engine: ok={ok} failed={fail}"
 
 
+def job_morning_brief() -> str:
+    """Envia resumo diario de mercado via Telegram — DEL-04 / D-14."""
+    from src.delivery.telegram_bot import get_bot
+    from src.ingestion.db import DB_PATH, get_connection
+    from src.utils.logger import bind_run_id, get_logger as _get
+
+    _log = _get(__name__)
+    with bind_run_id("delivery") as run_id:
+        _log.info(f"[morning_brief] iniciado - run_id={run_id}")
+        t0 = time.time()
+        conn = get_connection(DB_PATH)
+        try:
+            # Leitura do snapshot macro (Selic + PTAX)
+            macro_snapshot: dict = {}
+            selic_row = conn.execute(
+                "SELECT value FROM macro_series WHERE series_code = 11 ORDER BY date DESC LIMIT 1"
+            ).fetchone()
+            macro_snapshot["selic"] = selic_row["value"] if selic_row else 0.0
+            ptax_row = conn.execute(
+                "SELECT value FROM macro_series WHERE series_code = 1 ORDER BY date DESC LIMIT 1"
+            ).fetchone()
+            macro_snapshot["ptax"] = ptax_row["value"] if ptax_row else 0.0
+            macro_snapshot["ibov_pct"] = 0.0  # fallback — IBOV pode nao estar na watchlist
+
+            # Top 3 tickers por upside_pct
+            top_rows = conn.execute("""
+                SELECT ticker, upside_pct FROM financial_dcf
+                WHERE computed_date = (SELECT MAX(computed_date) FROM financial_dcf)
+                ORDER BY upside_pct DESC LIMIT 3
+            """).fetchall()
+            top_movers = [
+                {
+                    "ticker": r["ticker"],
+                    "description": f"upside {r['upside_pct']:+.1f}%",
+                    "score": "-",
+                }
+                for r in top_rows
+            ]
+
+            # Top oportunidade do dia
+            opp_row = conn.execute(
+                "SELECT * FROM opportunity_signals"
+                " WHERE computed_date = (SELECT MAX(computed_date) FROM opportunity_signals)"
+                " ORDER BY conviction_score DESC LIMIT 1"
+            ).fetchone()
+            top_opportunity = dict(opp_row) if opp_row else None
+        finally:
+            conn.close()  # WR-06: sempre fechar mesmo em excecao
+
+        duration_ms = int((time.time() - t0) * 1000)
+        _log.info(
+            "[morning_brief] summary",
+            source="morning_brief",
+            records_inserted=0,
+            records_updated=0,
+            duration_ms=duration_ms,
+            status="ok",
+            last_ingested_at=datetime.now(timezone.utc).isoformat(),
+        )
+        get_bot().send_daily_brief(macro_snapshot, top_movers, top_opportunity)
+        return "morning_brief: sent"
+
+
 # ── Registro de jobs ──────────────────────────────────────────────────────────
 
 _JOB_REGISTRY: dict[str, Callable] = {
@@ -500,6 +563,7 @@ _JOB_REGISTRY: dict[str, Callable] = {
     "news_ingest":       job_news_ingest,        # ING-06/07
     "financial_engine":  job_financial_engine,   # FIN-01..06
     "intelligence":      job_intelligence,       # INT-01..06 (Phase 4)
+    "morning_brief":     job_morning_brief,      # DEL-04 (Phase 5)
 }
 
 

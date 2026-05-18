@@ -399,7 +399,44 @@ def _compute_diff_summary(
     new_bull = new_thesis.bull_case[:80]
     if old_bull != new_bull:
         parts.append("Bull case alterado")
-    return "; ".join(parts) if parts else "Sem alterações materiais"
+    return "; ".join(parts) if parts else "Sem alteracoes materiais"
+
+
+def _maybe_send_thesis_alert(
+    ticker: str,
+    new_positioning: str,
+    prev_positioning: Optional[str],
+    confidence: str,
+    summary_one_line: str,
+    conn: sqlite3.Connection,
+) -> None:
+    """Dispara alerta Telegram quando posicionamento muda. D-13.
+
+    Nunca levanta excecao — falha no alerta nao bloqueia armazenamento de tese.
+    Pattern G (PATTERNS.md): alert never raises.
+    """
+    if prev_positioning is None or new_positioning == prev_positioning:
+        return
+    opp_row = conn.execute(
+        "SELECT description FROM opportunity_signals WHERE ticker = ? "
+        "ORDER BY conviction_score DESC LIMIT 1",
+        (ticker,),
+    ).fetchone()
+    top_opp_desc = opp_row["description"] if opp_row else "-"
+    try:
+        from src.delivery.telegram_bot import get_bot
+
+        get_bot().send_thesis_alert(
+            ticker=ticker,
+            old_positioning=prev_positioning,
+            new_positioning=new_positioning,
+            confidence=confidence,
+            rationale_one_line=summary_one_line,
+            top_opportunity_desc=top_opp_desc,
+        )
+    except Exception as exc:
+        log.warning(f"[{ticker}] Telegram alert failed: {exc}")
+        # Nunca re-raise — falha no alerta nao bloqueia armazenamento de tese
 
 
 # ── Opportunity signal computation — D-15, D-16, D-17, D-18 ──────────────────
@@ -705,9 +742,25 @@ def run_ticker(ticker: str) -> ThesisResult:
         )
         conn.commit()
         log.info(
-            f"[{ticker}] thesis v{version_num} gravada — "
+            f"[{ticker}] thesis v{version_num} gravada - "
             f"positioning={thesis.positioning} fair_value={thesis.fair_value_brl:.2f} "
             f"deviation_flag={deviation_flag}"
+        )
+
+        # ── 8b. Positioning-change Telegram alert (D-13) ─────────────────────
+        prev_positioning: Optional[str] = None
+        if prior_json:
+            try:
+                prev_positioning = json.loads(prior_json).get("positioning")
+            except (json.JSONDecodeError, TypeError):
+                pass
+        _maybe_send_thesis_alert(
+            ticker=ticker,
+            new_positioning=thesis.positioning,
+            prev_positioning=prev_positioning,
+            confidence=thesis.confidence,
+            summary_one_line=thesis.summary_one_line,
+            conn=conn,
         )
 
         # ── 9. Compute and persist opportunity signals (D-15) ────────────────

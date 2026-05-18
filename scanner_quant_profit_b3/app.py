@@ -141,12 +141,17 @@ _PAGES = [
     st.Page("pages/performance.py",      title="Performance",      icon="📈"),
     st.Page("pages/calendario.py",       title="Calendário",       icon="📅"),
     st.Page("pages/agendador.py",        title="Agendador",        icon="⏱"),
+    # Páginas de inteligência (Phase 5 — D-01, D-02)
+    st.Page("pages/inteligencia_watchlist.py",    title="Watchlist",    icon="🔭"),
+    st.Page("pages/inteligencia_ativo.py",        title="Ativo",        icon="🧠"),
+    st.Page("pages/inteligencia_macro.py",        title="Macro",        icon="🌐"),
+    st.Page("pages/inteligencia_oportunidades.py", title="Oportunidades", icon="🏆"),
 ]
 
 # st.navigation DEVE ser chamado antes de st.page_link
 pages = st.navigation(_PAGES, position="hidden")
 
-c_logo, *c_navs = st.columns([1.6] + [1] * len(_PAGES))
+c_logo, *c_navs = st.columns([1.4] + [1] * len(_PAGES))
 with c_logo:
     st.markdown(
         '<div style="padding:6px 0 6px 4px;font-size:0.88rem;font-weight:900;'

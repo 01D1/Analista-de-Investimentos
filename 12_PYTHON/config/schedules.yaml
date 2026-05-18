@@ -51,6 +51,10 @@ schedules:
     cron: "0 21 * * 1-5"      # seg-sex 21:00 — após financial_engine (19:50)
     description: Gerar teses estruturadas e sinais de oportunidade
 
+  - job: morning_brief
+    cron: "15 8 * * 1-5"      # seg-sex 08:15 — apos bcb_macro (08:00)
+    description: Resumo diario de mercado via Telegram
+
   # ── Semanais ──────────────────────────────────────────────
   - job: weekly_review
     cron: "0 10 * * 0"        # domingo 10:00
