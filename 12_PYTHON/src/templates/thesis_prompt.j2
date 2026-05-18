@@ -1,0 +1,74 @@
+{#
+  thesis_prompt.j2
+  ----------------
+  Jinja2 template for InvestmentThesis generation prompt.
+  Variables injected by intelligence_layer.py _assemble_prompt_data().
+
+  Required variables (all guaranteed non-None by _assemble_prompt_data — Pitfall 5):
+    ticker, sector, is_bank_model
+    net_revenue, ebitda, net_income, fcf, net_debt  (from financial_ltm)
+    pe_ratio, ev_ebitda, pb_ratio, dividend_yield   (from financial_multiples)
+    dcf_fair_value, upside_pct, wacc, terminal_growth, confidence_flag  (from financial_dcf)
+    selic, ipca_12m, cds_brasil                     (from macro_series)
+    rsi_14, macd_trend, momentum_score              (from financial_signals)
+    news_items  (list of dicts with title, published_at, url — top 3)
+#}
+Você é um analista de investimentos especializado no mercado brasileiro (B3).
+Gere uma tese de investimento estruturada para o ativo {{ ticker }} com base nos dados abaixo.
+Responda EXCLUSIVAMENTE em Português brasileiro. Não adicione campos extras além do schema.
+
+=== DADOS DO ATIVO ===
+Ticker: {{ ticker }}
+Setor: {{ sector }}
+Modelo: {% if is_bank_model %}Banco/Financeiro (DDM/ROE){% else %}Industrial (DCF/FCFF){% endif %}
+
+=== FINANCEIROS LTM (Últimos 12 Meses) ===
+Receita Líquida: R$ {{ "%.2f" | format(net_revenue / 1e6) if net_revenue else "N/D" }} MM
+EBITDA:          {% if ebitda %}R$ {{ "%.2f" | format(ebitda / 1e6) }} MM{% else %}N/D (banco — não aplicável){% endif %}
+Lucro Líquido:   R$ {{ "%.2f" | format(net_income / 1e6) if net_income else "N/D" }} MM
+FCF:             {% if fcf %}R$ {{ "%.2f" | format(fcf / 1e6) }} MM{% else %}N/D{% endif %}
+Dívida Líquida:  R$ {{ "%.2f" | format(net_debt / 1e6) if net_debt else "N/D" }} MM
+
+=== MÚLTIPLOS DE MERCADO ===
+P/L:             {{ "%.1f" | format(pe_ratio) if pe_ratio else "N/D" }}x
+EV/EBITDA:       {% if ev_ebitda %}{{ "%.1f" | format(ev_ebitda) }}x{% else %}N/D{% endif %}
+P/VPA:           {{ "%.2f" | format(pb_ratio) if pb_ratio else "N/D" }}x
+Dividend Yield:  {{ "%.1f%%" | format(dividend_yield * 100) if dividend_yield else "N/D" }}
+
+=== VALUATION (DCF/DDM) ===
+{# fair_value_brl is guaranteed non-None here — None case skips generation in _assemble_prompt_data #}
+Preço Justo (DCF): R$ {{ "%.2f" | format(dcf_fair_value) }}
+Upside/Downside:   {{ "%+.1f%%" | format(upside_pct * 100) if upside_pct else "N/D" }}
+WACC:              {{ "%.1f%%" | format(wacc * 100) if wacc else "N/D" }}
+Taxa Terminal:     {{ "%.1f%%" | format(terminal_growth * 100) if terminal_growth else "N/D" }}
+{% if confidence_flag %}
+AVISO VALUATION: {{ confidence_flag }} — refletir no campo methodology_disclosure e no nível de confiança.
+{% endif %}
+
+=== MACRO (BCB) ===
+Selic (over):  {{ "%.2f%%" | format(selic * 100) if selic else "N/D" }}
+IPCA (12m):    {{ "%.2f%%" | format(ipca_12m * 100) if ipca_12m else "N/D" }}
+CDS Brasil:    {{ "%.0f" | format(cds_brasil * 10000) if cds_brasil else "N/D" }} bps
+
+=== SINAIS TÉCNICOS ===
+RSI-14:         {{ "%.1f" | format(rsi_14) if rsi_14 else "N/D" }}
+MACD Tendência: {{ macd_trend if macd_trend else "N/D" }}
+Momentum Score: {{ momentum_score if momentum_score is not none else "N/D" }}/100
+
+=== ÚLTIMAS NOTÍCIAS (top 3) ===
+{%- for item in news_items %}
+{{ loop.index }}. [{{ item.published_at[:10] if item.published_at else "?" }}] {{ item.title }}
+   URL: {{ item.url }}
+{%- else %}
+(sem notícias recentes disponíveis)
+{%- endfor %}
+
+=== INSTRUÇÃO CRÍTICA ===
+O campo `fair_value_brl` na tese DEVE ser exatamente {{ "%.2f" | format(dcf_fair_value) }} (use ponto como separador decimal).
+Não calcule nem altere este valor. Reproduza-o exatamente como fornecido acima.
+Use formato numérico en-US para todos os valores monetários (ponto como decimal, sem separador de milhar).
+
+Gere o objeto InvestmentThesis em conformidade com o schema Pydantic fornecido.
+Posicionamento deve ser COMPRAR, MANTER ou VENDER.
+Confiança deve ser ALTA, MEDIA ou BAIXA.
+Inclua 3 a 5 drivers e 3 a 5 riscos.

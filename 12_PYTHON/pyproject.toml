@@ -39,6 +39,8 @@ dependencies = [
 
     # AI / Content
     "anthropic>=0.39.0",
+    "instructor>=1.0.0",    # structured LLM output (latest: 1.15.1) — INT-01
+    "jinja2>=3.1.0",        # prompt template rendering — INT-01
 
     # Delivery
     "python-telegram-bot>=21.0.0",
