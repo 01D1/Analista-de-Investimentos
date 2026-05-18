@@ -1,0 +1,13 @@
+scanner:
+  min_volume: 10000
+  min_trades: 5
+  max_spread_pct: 15
+  min_dte: 7
+  max_dte: 90
+  risk_free_rate: 0.10
+
+governance:
+  min_financial_volume: 50000
+  max_spread_pct: 15
+  min_dte: 7
+  min_liquidity_score: 35

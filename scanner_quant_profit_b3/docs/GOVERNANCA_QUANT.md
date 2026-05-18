@@ -115,6 +115,52 @@ python -m src.scanners.event_context_analysis --start 2026-01-02 --end 2026-04-3
 
 Health checks e alertas operacionais não aprovam candidatos. Eles apenas reduzem o risco de interpretar ausência de dados como ausência de evento.
 
+## Governança De Opções
+
+Opções e estruturas possuem governança própria. Os status principais são:
+
+- `OPTION_APPROVED_FOR_STUDY`;
+- `OPTION_OBSERVATION_ONLY`;
+- `OPTION_BLOCKED_LIQUIDITY`;
+- `OPTION_BLOCKED_SPREAD`;
+- `OPTION_BLOCKED_EXPIRY`;
+- `OPTION_BLOCKED_DATA`;
+- `OPTION_BLOCKED_RISK`;
+- `STRUCTURE_APPROVED_FOR_STUDY`;
+- `STRUCTURE_OBSERVATION_ONLY`;
+- `STRUCTURE_BLOCKED_RISK`;
+- `STRUCTURE_BLOCKED_LIQUIDITY`;
+- `STRUCTURE_BLOCKED_DATA`.
+
+`APPROVED_FOR_STUDY` significa apenas que a opção ou estrutura pode ser analisada com mais detalhe. Não é recomendação, não executa ordem e não altera o ranking principal de ações.
+
+Comando:
+
+```powershell
+python -m src.scanners.options_intelligence_scanner --underlyings PETR4 VALE3 ITUB4 --save-db --csv
+```
+
+Backtests preliminares de estruturas recebem status próprios:
+
+- `OPTIONS_BACKTEST_PROMISSOR`;
+- `OPTIONS_BACKTEST_EM_OBSERVACAO`;
+- `OPTIONS_BACKTEST_REJEITADO`;
+- `OPTIONS_BACKTEST_BLOQUEADO_DADOS`;
+- `OPTIONS_BACKTEST_BLOQUEADO_EXECUCAO`;
+- `OPTIONS_BACKTEST_BLOQUEADO_AMOSTRA`.
+
+Comando:
+
+```powershell
+python -m src.scanners.options_structure_backtest --start 2026-01-02 --end 2026-04-30 --underlyings PETR4 VALE3 ITUB4 --structure LONG_CALL --save-db --csv
+```
+
+Governança fora da amostra de opções usa o walk-forward:
+
+```powershell
+python -m src.scanners.options_walk_forward_analysis --start 2026-01-02 --end 2026-04-30 --underlyings PETR4 VALE3 ITUB4 --structure LONG_CALL --train-months 3 --test-months 1 --save-db --csv
+```
+
 ## Comando
 
 Para revisar o último walk-forward dos filtros:
@@ -169,6 +215,35 @@ A aba `Governança Quant` mostra:
 - contagem por status;
 - status por regime e por evento, quando existir;
 - alertas de overfitting, amostra, concentração e liquidez.
+
+## Governança Técnica
+
+A camada técnica possui governança própria em `src/technical/technical_governance.py`.
+
+Ela classifica setups como:
+
+- `TECH_APPROVED_FOR_STUDY`;
+- `TECH_OBSERVATION_ONLY`;
+- `TECH_BLOCKED_INSUFFICIENT_DATA`;
+- `TECH_BLOCKED_HIGH_VOLATILITY`;
+- `TECH_BLOCKED_NEGATIVE_NET_RETURN`.
+
+Mesmo quando um setup é aprovado para estudo, ele não é promovido a operação e não altera o score/ranking principal.
+
+## Governança Integrada
+
+A Fase 24 adiciona `src/integration/integrated_governance.py`, que cruza técnico, quant, valuation, eventos, regimes e opções.
+
+Status principais:
+
+- `INTEGRATED_APPROVED_FOR_STUDY`;
+- `INTEGRATED_OBSERVATION_ONLY`;
+- `INTEGRATED_BLOCKED_GOVERNANCE`;
+- `INTEGRATED_BLOCKED_DATA`;
+- `INTEGRATED_DIVERGENT_SIGNALS`;
+- `INTEGRATED_REQUIRES_REVIEW`.
+
+Essa governança não promove ativos para operação. Ela apenas explicita bloqueios, divergências, risco, confiança e ações necessárias.
 
 ## Interpretação
 

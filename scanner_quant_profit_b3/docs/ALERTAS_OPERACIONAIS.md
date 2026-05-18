@@ -74,4 +74,29 @@ python -m src.scanners.data_retention_cleanup --dry-run --save-db --csv
 python -m src.scanners.weekly_operational_report --window-days 7 --save-md --csv
 ```
 
+Para gerar alertas de mudança material na inteligência integrada:
+
+```powershell
+python -m src.scanners.asset_intelligence_diff --latest --save-db --csv
+```
+
+Tipos adicionados:
+
+- `ASSET_STATUS_CHANGED`
+- `ASSET_GOVERNANCE_BLOCKED`
+- `ASSET_SCORE_DROPPED`
+- `ASSET_VALUATION_CHANGED`
+- `ASSET_EVENT_RISK_CHANGED`
+- `ASSET_REGIME_CHANGED`
+- `ASSET_DATA_QUALITY_DROPPED`
+
 Esses alertas não bloqueiam o scanner por conta própria. Eles documentam risco operacional para a Mesa Quant e para a governança.
+## Alertas de qualidade de dados
+
+A auditoria de fontes pode gerar alertas como `DATA_SOURCE_MISSING`, `DATA_SOURCE_LOW_RELIABILITY`, `PRIMARY_SOURCE_UNAVAILABLE`, `B3_DATA_STALE`, `CVM_DATA_STALE`, `PROFIT_RTD_STALE`, `OPTIONS_DATA_INSUFFICIENT`, `VALUATION_STALE` e `RI_URL_MISSING`.
+
+```bash
+python -m src.scanners.data_source_audit --save-db --csv
+python -m src.scanners.data_reconciliation --sources b3 options profit ri --save-db --csv
+python -m src.scanners.ingestion_assistant --sources b3 profit options ri --dry-run --save-db --csv
+```

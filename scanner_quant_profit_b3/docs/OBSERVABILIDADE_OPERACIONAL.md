@@ -88,3 +88,10 @@ A aba `SLA & Observabilidade` mostra:
 - Um SLA bom nao garante cobertura completa de noticias.
 - Alertas recorrentes devem ser investigados antes de promover qualquer candidato quantitativo.
 - A limpeza real de histórico operacional não roda por padrão; use dry-run para auditoria.
+## Auditoria de origem dos dados
+
+Para confirmar cobertura, origem e rastreabilidade das fontes primarias e derivadas:
+
+```bash
+python -m src.scanners.data_source_audit --save-db --csv
+```

@@ -21,10 +21,19 @@ logger = logging.getLogger("radar_quant.news_bridge")
 
 # ── Localização do news_hunter ────────────────────────────────────────────────
 
-_THIS    = Path(__file__).resolve()
-_VAULT   = _THIS.parents[4]
-_NH_DIR  = _VAULT / "12_PYTHON" / "news_hunter"
-_NH_DB   = _NH_DIR / "banco.db"
+_THIS = Path(__file__).resolve()
+
+ROOT = _THIS.parents[2]
+
+_NH_DB = (
+    ROOT.parent
+    / "12_PYTHON"
+    / "news_hunter"
+    / "banco.db"
+)
+
+print("NEWS DB:", _NH_DB)
+print("EXISTS:", _NH_DB.exists())
 
 
 def nh_db_available() -> bool:
@@ -91,10 +100,10 @@ def get_news_for_asset(
     params.append(since)
 
     sql = f"""
-        SELECT titulo, fonte, categoria, data_pub, data_coleta, link, score, resumo_curto
+        SELECT titulo, fonte, categoria, data_pub, data_coleta, link, score, resumo_curto, resumo_ia, sentimento, impacto_macro, tickers,score_volatilidade, risco_opcoes
         FROM noticias
         WHERE ({like_clauses})
-          AND data_coleta >= ?
+        AND data_coleta >= ?
         ORDER BY score DESC, data_coleta DESC
         LIMIT {limit}
     """

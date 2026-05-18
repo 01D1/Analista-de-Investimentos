@@ -17,6 +17,7 @@ import sqlite3
 import sys
 from datetime import datetime
 from pathlib import Path
+import streamlit as st
 
 import pandas as pd
 
@@ -41,7 +42,20 @@ from src.quant.risk_engine import RiskEngine
 from src.quant.execution_assistant import build_execution_plan
 from src.reports.report_generator import rank_assets, rank_options
 
+def load_css():
+    st.markdown("""
+    <style>
 
+    .card {
+        background:#111827;
+        border:1px solid #1f2937;
+        border-radius:14px;
+        padding:18px;
+        margin-bottom:16px;
+    }
+
+    </style>
+    """, unsafe_allow_html=True)
 # ---------------------------------------------------------------------------
 # Constantes de estilo
 # ---------------------------------------------------------------------------
@@ -582,6 +596,7 @@ def run_streamlit_app() -> None:
         page_icon="📊",
         layout="wide",
     )
+    load_css()
 
     sidebar_result = _render_sidebar()
     qcfg, min_vol, min_trades, min_dte, max_dte, top, run_btn, filter_status = sidebar_result

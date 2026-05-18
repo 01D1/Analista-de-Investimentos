@@ -52,3 +52,10 @@ python -m src.scanners.source_health_check --save-db --csv --fail-on-error
 Se uma fonte está `MISSING`, `ERROR`, `EMPTY` ou `STALE`, a análise evento x sem evento deve ser lida com cautela. O sistema não altera score ou ranking; ele apenas registra o risco operacional da base de contexto.
 
 O SLA historico adiciona a dimensao de recorrencia: uma falha isolada pode ser apenas warning, mas falhas repetidas classificam a fonte como `INSTAVEL`, `RUIM` ou `CRITICA`.
+## Auditoria complementar de fontes
+
+O health check mede presenca e atualizacao operacional. A auditoria de fontes adiciona rastreabilidade, origem primaria/secundaria e score de confiabilidade.
+
+```bash
+python -m src.scanners.data_source_audit --save-db --csv
+```

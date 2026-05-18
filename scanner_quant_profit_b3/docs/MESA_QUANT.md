@@ -6,6 +6,8 @@ A Mesa Quant e um dashboard Streamlit para acompanhar backtest historico, calibr
 
 Ela nao altera pesos, nao substitui o score legado, nao muda ranking e nao gera recomendacao de investimento. A funcao da mesa e tornar a evidencia estatistica visivel para decisao tecnica futura.
 
+Na aba Paper Trading, a seção Cobertura das Fontes de Sinal mostra `quant`, `technical` e `integrated`, com sinais, tickers, dias ativos, regimes, percentual de cobertura e status dos requisitos. Se não houver cobertura, a própria Mesa exibe o comando de checagem.
+
 ## Como Abrir
 
 ```powershell
@@ -25,7 +27,18 @@ python -m src.scanners.regime_analysis --start 2026-01-02 --end 2026-04-30 --sav
 python -m src.scanners.operational_observability --window-days 30 --save-db --csv
 python -m src.scanners.data_retention_cleanup --dry-run --save-db --csv
 python -m src.scanners.weekly_operational_report --window-days 7 --save-md --csv
+python -m src.scanners.options_intelligence_scanner --underlyings PETR4 VALE3 ITUB4 --save-db --csv
+python -m src.scanners.paper_investigation --paper-run-id 2 --fragility-run-id 1 --save-db --csv
+python -m src.scanners.hypothesis_oos_validation --investigation-run-id 1 --hypothesis-id REDUCE_VOLATILITY_EXPOSURE --save-db --csv
+python -m src.scanners.hypothesis_oos_validation --investigation-run-id 1 --hypothesis-id REDUCE_VOLATILITY_EXPOSURE --train-months 1 --test-months 1 --include-cost-scenarios --include-regimes --signal-sources quant technical integrated --expand-signal-coverage --filter-coverage --save-db --csv
+python -m src.scanners.populate_technical_signals --start 2026-01-02 --end 2026-04-30 --tickers PETR4 VALE3 ITUB4 --dedupe --save-db --csv
+python -m src.scanners.populate_asset_intelligence_history --start 2026-01-02 --end 2026-04-30 --tickers PETR4 VALE3 ITUB4 BBAS3 --save-db --csv
+python -m src.scanners.signal_coverage_check --start 2026-01-02 --end 2026-04-30 --sources quant technical integrated --save-db --csv
+python -m src.scanners.hypothesis_ranking --start 2026-01-02 --end 2026-04-30 --sources quant technical integrated --save-db --csv
+python -m src.scanners.hypothesis_deep_dive --ranking-run-id 1 --top-n 3 --save-db --csv
 ```
+
+Na aba Paper Trading, a seção `Deep Dive de Hipóteses` mostra governança profunda, motivo principal de bloqueio, sensibilidade a custo, sensibilidade a slippage, fonte de sinal, regime, ativo, explicação e ações necessárias. Se não houver dados, a própria Mesa mostra o comando operacional.
 
 ## Abas Disponiveis
 
@@ -206,6 +219,35 @@ python -m src.scanners.event_context_analysis --start 2026-01-02 --end 2026-04-3
 
 A aba também mostra qualidade de cobertura, fontes usadas, eventos antes/depois da deduplicação, cobertura por regime e alerta quando a cobertura geral ou por regime é fraca.
 
+### Opções Inteligentes
+
+Mostra:
+
+- runs do scanner inteligente de opções;
+- opções analisadas;
+- estruturas geradas;
+- estruturas aprovadas para estudo;
+- estruturas bloqueadas;
+- cadeia de opções com tipo, strike, vencimento, DTE, preço, spread, volume, moneyness, liquidez, risco e Greeks aproximados;
+- estruturas com débito, perda máxima, lucro máximo, breakeven, payoff ratio, score, status e explicação.
+- backtests preliminares de estruturas;
+- win rate, retorno líquido médio, profit factor e custo médio;
+- resultados por estrutura, ativo-objeto e status.
+
+A aba reforça que `aprovada para estudo` não é recomendação. Se não houver dados, a Mesa orienta executar:
+
+```powershell
+python -m src.scanners.options_intelligence_scanner --underlyings PETR4 VALE3 ITUB4 --save-db --csv
+```
+
+Para alimentar a seção de backtest:
+
+```powershell
+python -m src.scanners.options_history_builder --start 2026-01-02 --end 2026-04-30 --underlyings PETR4 VALE3 ITUB4 --save-db --csv
+python -m src.scanners.options_structure_backtest --start 2026-01-02 --end 2026-04-30 --underlyings PETR4 VALE3 ITUB4 --structure LONG_CALL --save-db --csv
+python -m src.scanners.options_walk_forward_analysis --start 2026-01-02 --end 2026-04-30 --underlyings PETR4 VALE3 ITUB4 --structure LONG_CALL --train-months 3 --test-months 1 --save-db --csv
+```
+
 ### Operação & Saúde Das Fontes
 
 Mostra:
@@ -319,9 +361,56 @@ Divergencias entre score legado e `score_final` nao sao erros automaticamente. E
 8. Rodar observabilidade operacional.
 9. Rodar retenção em dry-run e relatório semanal.
 10. Rodar backtest/análise com `--with-events`.
-11. Abrir a Mesa Quant.
-12. Avaliar sinais, scores, calibracao, walk-forward, filtros, capacidade, regimes, eventos, fontes, SLA, retenção e alertas.
-13. Decidir proximos testes sem alterar automaticamente os pesos.
+11. Rodar análise técnica quantitativa opcional.
+12. Abrir a Mesa Quant.
+13. Avaliar sinais, scores, calibracao, walk-forward, filtros, capacidade, regimes, eventos, opções, análise técnica, fontes, SLA, retenção e alertas.
+14. Decidir proximos testes sem alterar automaticamente os pesos.
+
+## Aba Análise Técnica Quant
+
+A aba `Análise Técnica Quant` mostra:
+
+- ativos analisados;
+- setups técnicos detectados;
+- setup mais comum;
+- score técnico médio;
+- tabela de setups com score, confiança, direção, status e explicação;
+- snapshots de features técnicas;
+- backtest técnico salvo.
+- walk-forward técnico;
+- thresholds sugeridos;
+- deduplicação e redundância removida;
+- governança técnica OOS.
+
+Comando sugerido:
+
+```bash
+python -m src.scanners.technical_analysis_scanner --start 2026-01-02 --end 2026-04-30 --tickers PETR4 VALE3 ITUB4 --save-db --csv --with-backtest
+python -m src.scanners.technical_walk_forward_analysis --start 2026-01-02 --end 2026-04-30 --tickers PETR4 VALE3 ITUB4 --train-months 3 --test-months 1 --dedupe --optimize-thresholds --save-db --csv
+```
+
+## Aba Inteligência Integrada
+
+A aba `Inteligência Integrada` mostra o último snapshot consolidado por ativo:
+
+- score técnico, score quant e upside;
+- valuation disponível ou ausente;
+- melhor estrutura de opções para estudo;
+- regime e contexto de evento;
+- score e status integrado;
+- governança integrada;
+- explicação, razões favoráveis, razões contrárias e ações necessárias.
+
+Comandos sugeridos:
+
+```bash
+python -m src.scanners.asset_intelligence_snapshot --tickers PETR4 VALE3 ITUB4 BBAS3 --save-db --csv
+python -m src.scanners.generate_asset_intelligence_reports --tickers PETR4 VALE3 --output-dir data/reports/asset_intelligence
+python -m src.scanners.asset_intelligence_diff --latest --save-db --csv
+python -m src.scanners.generate_asset_change_reports --tickers PETR4 VALE3 --output-dir data/reports/asset_intelligence_changes
+```
+
+A seção `Histórico & Mudanças` mostra últimos diffs, tipo de mudança material, delta de score, delta de qualidade de dados e evolução por ativo.
 
 ## Limitacoes
 
@@ -331,4 +420,51 @@ Divergencias entre score legado e `score_final` nao sao erros automaticamente. E
 - A persistencia atual do backtest salva resultados principais; componentes detalhados podem depender da calibracao.
 - Filtros e thresholds podem overfitar se a amostra ficar pequena.
 - A aba de eventos depende da cobertura local importada por CSV.
+- A aba técnica depende de histórico diário e usa setups objetivos para estudo, não calls operacionais.
+- A aba integrada depende da presença das camadas salvas; dados ausentes reduzem confiança e não quebram a Mesa.
 - O dashboard e uma ferramenta de pesquisa e auditoria, nao uma recomendacao financeira.
+## Auditoria de Dados
+
+A Mesa Quant possui uma aba de auditoria para acompanhar confiabilidade geral, score por fonte, status, registros, tickers cobertos e rastreabilidade.
+
+```bash
+python -m src.scanners.data_source_audit --save-db --csv
+python -m src.scanners.data_source_audit --sources ri --check-ri-online --save-db --csv
+python -m src.scanners.data_reconciliation --sources b3 options profit ri --save-db --csv
+python -m src.scanners.ingestion_assistant --sources b3 profit options ri --dry-run --save-db --csv
+```
+## Risco & Volatilidade
+
+A Mesa Quant possui a aba `Risco & Volatilidade` para exibir:
+
+- volatilidade por ativo e regime de volatilidade;
+- VaR 95%;
+- Expected Shortfall 95%;
+- sizing sugerido para estudo;
+- fator limitante;
+- status de risco;
+- stress tests.
+
+Se não houver dados, rode:
+
+```powershell
+python -m src.scanners.risk_engine_snapshot --tickers PETR4 VALE3 ITUB4 --capital 100000 --risk-pct 0.005 --save-db --csv
+```
+
+Essa aba é diagnóstica e não executa ordens.
+
+## Paper Trading
+
+A aba `Paper Trading` mostra runs de simulação, capital inicial/final, retorno, Sharpe, Sortino, drawdown, ordens simuladas, posições simuladas, exposição, VaR/ES da carteira e governança.
+Também mostra eventos de saída, eventos de rebalanceamento, decomposição de P&L e robustez das regras quando gerados.
+
+Se não houver dados:
+
+```powershell
+python -m src.scanners.paper_trading_simulation --start 2026-01-02 --end 2026-04-30 --capital 100000 --save-db --csv
+python -m src.scanners.paper_rules_walk_forward --start 2026-01-02 --end 2026-04-30 --capital 100000 --signal-source quant --train-months 2 --test-months 1 --save-db --csv
+python -m src.scanners.paper_scenario_validation --start 2026-01-02 --end 2026-04-30 --capital 100000 --signal-sources quant technical integrated --save-db --csv
+python -m src.scanners.paper_fragility_analysis --paper-run-id 1 --save-db --csv
+```
+
+Essa aba é apenas simulação. Não executa ordens reais.

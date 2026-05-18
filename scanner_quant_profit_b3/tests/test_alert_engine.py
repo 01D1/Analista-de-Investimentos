@@ -1,5 +1,8 @@
 import pandas as pd
 
+from src.data_quality.data_quality_alerts import build_alerts_from_data_source_audit
+from src.data_quality.source_inventory import make_audit_row
+from src.data_quality.source_reliability import calculate_source_reliability_score
 from src.notifications.alert_engine import (
     build_alerts_from_observability,
     build_alerts_from_retention_cleanup,
@@ -79,6 +82,14 @@ def test_build_alerts_from_source_contracts_and_retention_cleanup():
 
     assert set(contract_alerts["alert_type"]) == {"SOURCE_CONTRACT_FAILED", "SOURCE_CONTRACT_WARNING"}
     assert retention_alerts.loc[0, "alert_type"] == "RETENTION_CANDIDATES_HIGH"
+
+
+def test_build_alerts_from_data_source_audit_low_reliability():
+    audit = pd.DataFrame(
+        [make_audit_row(source_name="profit_rtd", source_type="REALTIME", primary_or_secondary="PRIMARY", status="STALE")]
+    )
+    alerts = build_alerts_from_data_source_audit(calculate_source_reliability_score(audit))
+    assert "PROFIT_RTD_STALE" in set(alerts["alert_type"])
 
 
 def test_send_alerts_to_telegram_without_config_returns_message(monkeypatch):

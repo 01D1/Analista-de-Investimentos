@@ -254,8 +254,8 @@ def build_chain(
                 continue
 
             expiry = str(row.get("option_maturity", "") or "").strip()
-            dte    = int(days_to_expiration(trade_date, expiry))
-            if not (min_dte <= dte <= max_dte):
+            dte = int(days_to_expiration(trade_date, expiry))
+            if dte < 0:
                 continue
 
             volume = float(row.get("volume", 0) or 0)

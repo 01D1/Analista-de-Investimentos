@@ -116,3 +116,89 @@ def rank_summary(opportunities: List[StrategyOpportunity]) -> str:
             f"{cost:>8}  {p.dte:>4}d  {opp.market_condition.value}"
         )
     return "\n".join(lines)
+
+
+# ---------------------------------------------------------------------------
+# Ranking institucional leve para a Fase 19
+# ---------------------------------------------------------------------------
+
+def _clip_score(value: float) -> float:
+    if value != value:
+        return 0.0
+    return round(max(0.0, min(100.0, float(value))), 4)
+
+
+def score_option_structure(structure: dict, context: dict | None = None) -> dict:
+    context = context or {}
+    max_profit = structure.get("max_profit", 0)
+    max_loss = structure.get("max_loss", 0)
+    ratio = structure.get("payoff_ratio", 0) or 0
+    liquidity = float(structure.get("liquidity_score") or 0)
+    risk = float(structure.get("risk_score") or 0)
+    dte = float(context.get("days_to_maturity") or 30)
+    spread = float(context.get("spread_pct") or 0)
+    payoff_score = 70 if math.isinf(max_profit) else _clip_score(min(float(ratio), 3) / 3 * 100)
+    liquidity_score = liquidity
+    risk_score = risk if max_loss and not math.isinf(max_loss) else 20
+    cost_score = _clip_score(100 - min(spread, 50) * 2)
+    time_decay_score = _clip_score(100 - max(0, 15 - dte) * 4)
+    moneyness_score = float(context.get("moneyness_score") or 60)
+    volatility_score = float(context.get("volatility_score") or 50)
+    regime_score = float(context.get("regime_score") or 50)
+    event_context_score = float(context.get("event_context_score") or 50)
+    score_final = _clip_score(
+        payoff_score * 0.22
+        + liquidity_score * 0.22
+        + risk_score * 0.18
+        + cost_score * 0.12
+        + time_decay_score * 0.10
+        + moneyness_score * 0.06
+        + volatility_score * 0.04
+        + regime_score * 0.03
+        + event_context_score * 0.03
+    )
+    row = {
+        **structure,
+        "payoff_score": round(payoff_score, 4),
+        "cost_score": round(cost_score, 4),
+        "time_decay_score": round(time_decay_score, 4),
+        "moneyness_score": round(moneyness_score, 4),
+        "volatility_score": round(volatility_score, 4),
+        "regime_score": round(regime_score, 4),
+        "event_context_score": round(event_context_score, 4),
+        "structure_score": score_final,
+    }
+    row["candidate_status"] = classify_option_strategy_candidate(row)
+    row["explanation"] = explain_option_structure_score(row)
+    return row
+
+
+def classify_option_strategy_candidate(score_row: dict) -> str:
+    if not score_row:
+        return "DADOS_INSUFICIENTES"
+    if float(score_row.get("liquidity_score") or 0) < 30:
+        return "LIQUIDEZ_INSUFICIENTE"
+    if float(score_row.get("risk_score") or 0) < 25:
+        return "RISCO_ELEVADO"
+    score = float(score_row.get("structure_score") or 0)
+    if score >= 75:
+        return "ESTRUTURA_INTERESSANTE"
+    if score >= 60:
+        return "ASSIMETRIA_A_INVESTIGAR"
+    if score >= 45:
+        return "APENAS_OBSERVAR"
+    return "DESCARTAR"
+
+
+def explain_option_structure_score(score_row: dict) -> str:
+    status = score_row.get("candidate_status", "DADOS_INSUFICIENTES")
+    notes = []
+    if float(score_row.get("liquidity_score") or 0) < 30:
+        notes.append("liquidez insuficiente")
+    if float(score_row.get("risk_score") or 0) < 35:
+        notes.append("risco elevado")
+    if float(score_row.get("time_decay_score") or 0) < 50:
+        notes.append("theta/vencimento exigem cautela")
+    if not notes:
+        notes.append("payoff/risco e liquidez em patamar aceitável para estudo")
+    return f"{status}: estrutura potencial a estudar com {', '.join(notes)}. Não é recomendação operacional."

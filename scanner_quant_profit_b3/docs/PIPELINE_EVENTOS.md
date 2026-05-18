@@ -120,6 +120,12 @@ Depois:
 python -m src.scanners.event_context_analysis --start 2026-01-02 --end 2026-04-30 --csv --save-db
 ```
 
+Integração final por ativo:
+
+```powershell
+python -m src.scanners.asset_intelligence_snapshot --tickers PETR4 VALE3 ITUB4 BBAS3 --save-db --csv
+```
+
 ## Persistencia
 
 Tabelas usadas:
@@ -132,6 +138,7 @@ Tabelas usadas:
 - `operational_alerts`
 - `signal_event_links`
 - `event_context_runs`
+- `asset_intelligence_snapshots`, quando a camada integrada usa eventos como contexto por ativo.
 
 Colunas extras de dedupe em `market_events`:
 
@@ -158,3 +165,8 @@ Assim, um resultado evento x sem evento não vira conclusão forte quando a base
 - Deduplicação por título é heurística.
 - Conectores CVM/release usam índices e JSONs locais, não baixam documentos.
 - A camada não altera score, ranking, filtros ou pesos.
+## Auditoria de eventos e noticias
+
+```bash
+python -m src.scanners.data_source_audit --sources news events --save-db --csv
+```

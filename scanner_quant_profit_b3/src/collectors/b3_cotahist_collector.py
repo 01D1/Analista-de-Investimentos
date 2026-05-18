@@ -2,10 +2,20 @@ import argparse
 import sqlite3
 import zipfile
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timedelta
 import pandas as pd
-
+import requests
 from src.utils import load_config, project_path
+
+from datetime import datetime, timedelta
+
+
+
+def cotahist_daily_url(date_str: str) -> str:
+    return (
+        "https://bvmf.bmfbovespa.com.br/InstDados/SerHist/"
+        f"COTAHIST_D{date_str}.ZIP"
+    )
 
 def cotahist_url(year):
     return f"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_A{year}.ZIP"
@@ -14,7 +24,12 @@ def download_cotahist(year, raw_dir):
     import requests
 
     raw_dir.mkdir(parents=True, exist_ok=True)
-    zip_path = raw_dir / f"COTAHIST_A{year}.ZIP"
+    annual_path = raw_dir / f"COTAHIST_A{year}.ZIP"
+    daily_files = sorted(raw_dir.glob("COTAHIST_D*.ZIP"))
+    if daily_files:
+        zip_path = daily_files[-1]
+    else:
+        zip_path = annual_path
 
     if zip_path.exists() and zip_path.stat().st_size > 0:
         print(f"Arquivo já existe: {zip_path}")
@@ -39,15 +54,31 @@ def download_cotahist(year, raw_dir):
     print(f"Salvo em: {zip_path}")
     return zip_path
 
-def extract_txt(zip_path, raw_dir):
+def process_daily_file(date_str: str, cfg):
+    """Processa um arquivo diário específico (ex: '01012026')"""
+    raw_dir = project_path(cfg["b3"]["raw_dir"])
+    db_path = project_path(cfg["database_path"])
+    ativos_base = cfg.get("ativos_base", [])
+    
+    zip_path = raw_dir / f"COTAHIST_D{date_str}.ZIP"
+    if not zip_path.exists():
+        print(f"Arquivo não encontrado: {zip_path}")
+        return
+    
+    txt_path = extract_txt(zip_path, project_path("data/processed"))
+    df = parse_cotahist_txt(txt_path, source_year=2026, ativos_base=ativos_base)
+    save_cotahist_daily(df, db_path, source_year=2026)
+
+def extract_txt(zip_path: Path, extract_dir: Path) -> Path:
+    extract_dir.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(zip_path, "r") as z:
         txts = [n for n in z.namelist() if n.upper().endswith(".TXT")]
         if not txts:
             raise ValueError(f"Nenhum TXT encontrado em {zip_path}")
         member = txts[0]
-        out_path = raw_dir / Path(member).name
+        out_path = extract_dir / Path(member).name
         if not out_path.exists():
-            z.extract(member, raw_dir)
+            z.extract(member, extract_dir)
         return out_path
 
 def parse_price(value):
@@ -128,6 +159,10 @@ def save_cotahist_daily(df, db_path, source_year):
     if df is None or df.empty:
         print("Nenhum dado para salvar.")
         return
+    if df.duplicated(subset=["trade_date", "ticker", "market_type"]).any():
+        dup_count = int(df.duplicated(subset=["trade_date", "ticker", "market_type"]).sum())
+        print(f"Aviso: {dup_count} linhas duplicadas por (trade_date, ticker, market_type) serão removidas antes de salvar.")
+        df = df.drop_duplicates(subset=["trade_date", "ticker", "market_type"], keep="last")
     db_path.parent.mkdir(parents=True, exist_ok=True)
     con = sqlite3.connect(db_path)
     try:
@@ -152,12 +187,95 @@ def process_year(year, cfg, only_download=False):
     print(df.head(10).to_string(index=False))
     save_cotahist_daily(df, db_path, source_year=year)
 
+
+def process_daily_zip(zip_path: Path, db_path: Path):
+    import zipfile
+
+    processed_dir = project_path("data/processed")
+    processed_dir.mkdir(parents=True, exist_ok=True)
+
+    print(f"Processando diário: {zip_path.name}")
+
+    with zipfile.ZipFile(zip_path, "r") as z:
+        txt_files = [n for n in z.namelist() if n.upper().endswith(".TXT")]
+
+        if not txt_files:
+            print(f"Nenhum TXT encontrado dentro de {zip_path.name}")
+            return
+
+        txt_name = txt_files[0]
+
+        # Extrai para data/processed
+        z.extract(txt_name, processed_dir)
+
+        txt_path = processed_dir / txt_name
+
+    print(f"TXT extraído: {txt_path}")
+
+    df = parse_cotahist_txt(txt_path, source_year=2026)
+
+    if df is None or df.empty:
+        print("Nenhum dado no diário.")
+        return
+
+    df = df.drop_duplicates(
+        subset=["trade_date", "ticker", "market_type"],
+        keep="last"
+    )
+
+    dates = df["trade_date"].dropna().unique().tolist()
+
+    con = sqlite3.connect(db_path)
+
+    try:
+
+        for dt in dates:
+            con.execute(
+                "DELETE FROM cotahist_daily WHERE trade_date = ?",
+                (dt,)
+            )
+
+        df.to_sql(
+            "cotahist_daily",
+            con,
+            if_exists="append",
+            index=False
+        )
+
+        con.commit()
+
+    finally:
+        con.close()
+
+    print(f"{len(df)} linhas adicionadas/atualizadas em cotahist_daily.")
+
+
 def main():
+    cfg = load_config()
     parser = argparse.ArgumentParser(description="Coletor automático B3 COTAHIST.")
+    parser.add_argument("--daily", type=str, default=None, help="Processa um diário específico. Ex: --daily 01012026")
     parser.add_argument("--year", type=int, default=None, help="Ano específico. Ex.: 2026")
     parser.add_argument("--all", action="store_true", help="Processa todos os anos do config.yaml.")
     parser.add_argument("--download-only", action="store_true", help="Apenas baixa e extrai o arquivo.")
+    parser.add_argument(
+        "--daily-history",
+        action="store_true",
+        help="Baixa histórico diário da B3"
+    )
     args = parser.parse_args()
+    if args.daily_history:
+
+        raw_dir = project_path("data/raw")
+        db_path = project_path(cfg["database_path"])
+        
+        download_daily_history(raw_dir, db_path)
+
+        print("Download diário concluído.")
+        raise SystemExit
+    if args.daily:
+        process_daily_file(args.daily, cfg)
+        raise SystemExit
+
 
     cfg = load_config()
     years = cfg.get("b3", {}).get("years", [])
@@ -168,6 +286,57 @@ def main():
 
     for y in years:
         process_year(int(y), cfg, only_download=args.download_only)
+
+def download_daily_history(raw_dir, db_path: Path):
+
+    start = datetime(2026, 1, 1)
+    end = datetime.today()
+
+    cur = start
+
+    while cur <= end:
+
+        ds = cur.strftime("%d%m%Y")
+
+        filename = f"COTAHIST_D{ds}.ZIP"
+
+        zip_path = raw_dir / filename
+
+        if zip_path.exists():
+            print(f"Já existe: {filename}")
+
+            process_daily_zip(zip_path, db_path)
+
+            cur += timedelta(days=1)
+            continue
+
+        url = (
+            "https://bvmf.bmfbovespa.com.br/InstDados/SerHist/"
+            f"{filename}"
+        )
+
+        try:
+
+            print(f"Baixando {filename}...")
+
+            r = requests.get(url, timeout=30)
+
+            if r.status_code == 200:
+
+                zip_path.write_bytes(r.content)
+
+                process_daily_zip(zip_path, db_path)
+
+                print(f"OK: {filename}")
+
+            else:
+                print(f"Não encontrado: {filename}")
+
+        except Exception as e:
+
+            print(f"Erro em {filename}: {e}")
+
+        cur += timedelta(days=1)
 
 if __name__ == "__main__":
     main()

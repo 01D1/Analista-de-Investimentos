@@ -19,6 +19,7 @@ O projeto le a planilha do Profit, grava snapshots no SQLite, calcula sinais int
 - Cruza sinais de acoes com opcoes liquidas.
 - Calcula setups da estrategia `CALL_CONTINUIDADE`.
 - Gera relatorios CSV, diario de trades, backtests e dashboard Streamlit.
+- Estima risco institucional com volatilidade, VaR, Expected Shortfall, sizing sugerido para estudo, stress tests e governança de risco.
 
 ## Requisitos
 
@@ -50,6 +51,70 @@ python -m src.db.init_db
 ```
 
 O banco padrao e criado em `data/database/scanner_quant.db`. Os arquivos `config.yaml` e `config_quant.yaml` sao locais; para publicar no GitHub, mantenha os modelos `config.example.yaml` e `config_quant.example.yaml`.
+
+## Risk Engine
+
+Para gerar snapshots analíticos de risco:
+
+```powershell
+python -m src.scanners.risk_engine_snapshot --tickers PETR4 VALE3 ITUB4 --capital 100000 --risk-pct 0.005 --save-db --csv
+```
+
+O comando calcula volatilidade, VaR, Expected Shortfall, sizing sugerido para estudo, stress tests e governança de risco. Ele não executa ordens, não altera score principal e não substitui o ranking padrão.
+
+## Paper Trading
+
+Para simular uma carteira com sinais, custos, risco e governança:
+
+```powershell
+python -m src.scanners.paper_trading_simulation --start 2026-01-02 --end 2026-04-30 --capital 100000 --save-db --csv
+```
+
+O resultado é uma carteira simulada com ordens simuladas, posições, equity curve, exposição, VaR/ES agregado e governança. Nada é enviado ao mercado.
+
+## Cobertura de Fontes de Sinal
+
+Antes de validar hipóteses OOS por múltiplas fontes, popule e cheque as fontes em estudo:
+
+```powershell
+python -m src.scanners.populate_technical_signals --start 2026-01-02 --end 2026-04-30 --tickers PETR4 VALE3 ITUB4 --dedupe --save-db --csv
+python -m src.scanners.populate_asset_intelligence_history --start 2026-01-02 --end 2026-04-30 --tickers PETR4 VALE3 ITUB4 BBAS3 --save-db --csv
+python -m src.scanners.signal_coverage_check --start 2026-01-02 --end 2026-04-30 --sources quant technical integrated --save-db --csv
+python -m src.scanners.hypothesis_ranking --start 2026-01-02 --end 2026-04-30 --sources quant technical integrated --save-db --csv
+python -m src.scanners.hypothesis_deep_dive --ranking-run-id 1 --top-n 3 --save-db --csv
+```
+
+Se `technical` ou `integrated` estiverem com cobertura insuficiente, a validação OOS registra bloqueio por amostra e não conclui robustez multi-fonte.
+
+O deep dive aprofunda as melhores hipóteses do ranking, separando condição de fragilidade por fonte de sinal, custo, slippage, regime e ativo. O resultado é explicação de bloqueio ou observação analítica, sempre como não recomendação.
+
+Simulação avançada:
+
+```powershell
+python -m src.scanners.paper_trading_simulation --start 2026-01-02 --end 2026-04-30 --capital 100000 --signal-source quant --exit-mode advanced --stop-loss-pct 0.03 --take-profit-pct 0.06 --trailing-stop-pct 0.04 --daily-loss-limit-pct 0.02 --enable-rebalancing --save-db --csv
+```
+
+Investigações analíticas sobre fragilidade:
+
+```powershell
+python -m src.scanners.paper_investigation --paper-run-id 2 --fragility-run-id 1 --save-db --csv
+```
+
+O comando testa hipóteses simuladas, como exclusão analítica de ativo crítico, redução de fonte frágil e carteira sem rebalanceamento. É apenas comparação antes/depois em paper trading.
+
+Validação OOS de hipótese promissora:
+
+```powershell
+python -m src.scanners.hypothesis_oos_validation --investigation-run-id 1 --hypothesis-id REDUCE_VOLATILITY_EXPOSURE --save-db --csv
+```
+
+Essa validação compara a hipótese contra baseline em janelas fora da amostra e cenários de custo, slippage, regime e fonte de sinal. A hipótese não é aplicada automaticamente.
+
+Reteste robusto com diagnóstico de cobertura:
+
+```powershell
+python -m src.scanners.hypothesis_oos_validation --investigation-run-id 1 --hypothesis-id REDUCE_VOLATILITY_EXPOSURE --train-months 1 --test-months 1 --include-cost-scenarios --include-regimes --signal-sources quant technical integrated --expand-signal-coverage --filter-coverage --save-db --csv
+```
 
 ## Configuracao Da Planilha RTD
 
@@ -178,6 +243,22 @@ Para ver um scanner simples de opcoes do ultimo pregao importado:
 
 ```powershell
 python -m src.scanners.option_scanner
+```
+
+Para rodar o scanner inteligente de opções, com moneyness, valor intrínseco/extrínseco, Greeks aproximados, ranking de estruturas e governança analítica:
+
+```powershell
+python -m src.scanners.options_intelligence_scanner --underlyings PETR4 VALE3 ITUB4 --save-db --csv
+```
+
+Esse modo classifica opções e estruturas como material para estudo, observação ou bloqueio. Ele não executa ordens e não é recomendação financeira.
+
+Para construir histórico de cadeia e preparar backtest preliminar de estruturas:
+
+```powershell
+python -m src.scanners.options_history_builder --start 2026-01-02 --end 2026-04-30 --underlyings PETR4 VALE3 ITUB4 --save-db --csv
+python -m src.scanners.options_structure_backtest --start 2026-01-02 --end 2026-04-30 --underlyings PETR4 VALE3 ITUB4 --structure LONG_CALL --save-db --csv
+python -m src.scanners.options_walk_forward_analysis --start 2026-01-02 --end 2026-04-30 --underlyings PETR4 VALE3 ITUB4 --structure LONG_CALL --train-months 3 --test-months 1 --save-db --csv
 ```
 
 ## Estrategia CALL_CONTINUIDADE
@@ -444,6 +525,15 @@ O projeto tambem inclui um workflow de GitHub Actions para rodar os testes em Wi
 - `docs/RETENCAO_E_LIMPEZA.md` — política de retenção, dry-run, archive e limpeza segura.
 - `docs/CONTRATOS_QUALIDADE_FONTES.md` — mínimos de idade, registros e cobertura por fonte.
 - `docs/RELATORIO_SEMANAL_OPERACIONAL.md` — relatório consolidado de rotina, SLA, cobertura e governança.
+- `docs/OPCOES_INTELIGENTES.md` — scanner analítico de opções, métricas, Greeks, ranking e governança.
+- `docs/ESTRUTURAS_OPCOES.md` — estruturas iniciais, payoff, risco e interpretação dos status.
+- `docs/BACKTEST_OPCOES.md` — desenho futuro e limitações de backtest histórico de opções.
+- `docs/HISTORICO_CADEIA_OPCOES.md` — construção de snapshots históricos da cadeia de opções.
+- `docs/BACKTEST_ESTRUTURAS_OPCOES.md` — backtest preliminar com bid/ask, custos e vencimento.
+- `docs/CUSTOS_OPCOES.md` — custos por perna, slippage e qualidade de execução.
+- `docs/WALK_FORWARD_OPCOES.md` — validação fora da amostra de estruturas de opções.
+- `docs/GOVERNANCA_OOS_OPCOES.md` — governança específica do walk-forward de opções.
+- `docs/ESTABILIDADE_OPCOES.md` — estabilidade por vencimento, moneyness, liquidez, regime e evento.
 
 ## Dados De Entrada
 
@@ -537,6 +627,12 @@ python -m src.scanners.daily_quant_routine --start 2026-01-02 --end 2026-04-30 -
 python -m src.scanners.operational_observability --window-days 30 --save-db --csv
 python -m src.scanners.data_retention_cleanup --dry-run --save-db --csv
 python -m src.scanners.weekly_operational_report --window-days 7 --save-md --csv
+python -m src.scanners.options_intelligence_scanner --underlyings PETR4 VALE3 ITUB4 --save-db --csv
+python -m src.scanners.options_history_builder --start 2026-01-02 --end 2026-04-30 --underlyings PETR4 VALE3 ITUB4 --save-db --csv
+python -m src.scanners.options_structure_backtest --start 2026-01-02 --end 2026-04-30 --underlyings PETR4 VALE3 ITUB4 --structure LONG_CALL --save-db --csv
+python -m src.scanners.options_walk_forward_analysis --start 2026-01-02 --end 2026-04-30 --underlyings PETR4 VALE3 ITUB4 --structure LONG_CALL --train-months 3 --test-months 1 --save-db --csv
+python -m src.scanners.technical_analysis_scanner --start 2026-01-02 --end 2026-04-30 --tickers PETR4 VALE3 ITUB4 --save-db --csv --with-backtest
+python -m src.scanners.technical_walk_forward_analysis --start 2026-01-02 --end 2026-04-30 --tickers PETR4 VALE3 ITUB4 --train-months 3 --test-months 1 --dedupe --optimize-thresholds --save-db --csv
 python -m src.scanners.historical_quant_backtest --start 2026-01-02 --end 2026-04-30 --net --with-regimes --with-events --csv --save-db
 python -m src.scanners.event_context_analysis --start 2026-01-02 --end 2026-04-30 --csv --save-db
 python -m src.scanners.walk_forward_quant_analysis --start 2024-01-01 --end 2026-12-31 --train-months 12 --test-months 3 --csv
@@ -548,4 +644,98 @@ python -m streamlit run app.py
 
 ## Status
 
-Projeto em desenvolvimento ativo. Antes de usar em rotina operacional, valide caminhos, qualidade dos dados, liquidez das opcoes, custos, parametros de risco e consistencia dos resultados exportados.
+Projeto em desenvolvimento ativo. Antes de usar em rotina operacional, valide caminhos, qualidade dos dados, liquidez das opcoes, custos, parametros de risco, setups tecnicos e consistencia dos resultados exportados. A camada tecnica e analitica e nao altera o score principal.
+## Fase 24 - Inteligência Integrada por Ativo
+
+A camada de inteligência integrada consolida técnico quantitativo, score quant, valuation/fundamentos, eventos, regimes, opções e governança em snapshots por ticker. Ela não altera o score principal, não substitui o ranking e não gera recomendação financeira.
+
+Comandos:
+
+```bash
+python -m src.scanners.asset_intelligence_snapshot --tickers PETR4 VALE3 ITUB4 BBAS3 --save-db --csv
+python -m src.scanners.generate_asset_intelligence_reports --tickers PETR4 VALE3 --output-dir data/reports/asset_intelligence
+```
+
+Documentação:
+
+- `docs/INTELIGENCIA_INTEGRADA_ATIVOS.md`
+- `docs/GOVERNANCA_INTEGRADA.md`
+- `docs/RELATORIO_INTEGRADO_ATIVO.md`
+
+## Fase 25 - Histórico e Mudanças da Inteligência Integrada
+
+A camada de histórico compara snapshots integrados por ativo e cria trilha auditável de mudanças de status, score, governança, valuation, eventos, regimes, opções e qualidade de dados.
+
+Comandos:
+
+```bash
+python -m src.scanners.asset_intelligence_diff --latest --save-db --csv
+python -m src.scanners.generate_asset_change_reports --tickers PETR4 VALE3 --output-dir data/reports/asset_intelligence_changes
+```
+
+Documentação:
+
+- `docs/HISTORICO_INTELIGENCIA_ATIVOS.md`
+- `docs/MUDANCAS_STATUS_INTEGRADO.md`
+- `docs/ALERTAS_INTELIGENCIA_INTEGRADA.md`
+## Auditoria de fontes de dados
+
+```bash
+python -m src.scanners.data_source_audit --save-db --csv
+python -m src.scanners.data_source_audit --sources ri --check-ri-online --save-db --csv
+python -m src.scanners.b3_reconciliation --csv --save-db
+python -m src.scanners.data_reconciliation --sources b3 options profit ri --save-db --csv
+python -m src.scanners.ingestion_assistant --sources b3 profit options ri --dry-run --save-db --csv
+```
+
+## Fase 32 - Robustez das Regras de Paper Trading
+
+A camada de robustez compara simulação simples vs avançada, otimiza parâmetros de saída como estudo e roda walk-forward fora da amostra. Ela não executa ordens reais, não recomenda compra/venda e não aplica parâmetros automaticamente.
+
+Comandos:
+
+```bash
+python -m src.scanners.paper_rules_walk_forward --start 2026-01-02 --end 2026-04-30 --capital 100000 --signal-source quant --train-months 2 --test-months 1 --save-db --csv
+python -m src.scanners.compare_paper_simulations --simple-run-id 1 --advanced-run-id 2 --save-db --csv
+python -m src.scanners.generate_paper_rules_report --output-dir data/reports/paper_rules
+```
+
+Documentação:
+
+- `docs/PAPER_TRADING_WALK_FORWARD.md`
+- `docs/PAPER_TRADING_ROBUSTEZ_REGRAS.md`
+- `docs/PAPER_TRADING_OTIMIZACAO_SAIDAS.md`
+
+## Fase 33 - Validação Multi-Cenário do Paper Trading
+
+A validacao multi-cenario testa a carteira simulada em multiplos periodos, fontes de sinal, custos, slippage e regimes. Ela serve para separar parametro em estudo de melhora potencialmente superajustada.
+
+Comando:
+
+```bash
+python -m src.scanners.paper_scenario_validation --start 2026-01-02 --end 2026-04-30 --capital 100000 --signal-sources quant technical integrated --save-db --csv
+python -m src.scanners.generate_paper_scenario_report --output-dir data/reports/paper_scenario_validation
+```
+
+Documentação:
+
+- `docs/PAPER_TRADING_VALIDACAO_MULTICENARIO.md`
+- `docs/PAPER_TRADING_CENARIOS_CUSTO.md`
+- `docs/PAPER_TRADING_FONTES_SINAL.md`
+
+## Fase 34 - Diagnóstico de Fragilidade da Carteira Simulada
+
+A camada de fragilidade decompõe P&L, custos, slippage, drawdown, ativos e fontes de sinal para explicar por que uma carteira simulada perde robustez.
+
+Comandos:
+
+```bash
+python -m src.scanners.paper_fragility_analysis --paper-run-id 1 --save-db --csv
+python -m src.scanners.generate_paper_fragility_report --output-dir data/reports/paper_fragility
+```
+
+Documentação:
+
+- `docs/PAPER_TRADING_FRAGILIDADE.md`
+- `docs/PAPER_TRADING_DRAWDOWN_ATTRIBUTION.md`
+- `docs/PAPER_TRADING_CUSTO_FRAGILIDADE.md`

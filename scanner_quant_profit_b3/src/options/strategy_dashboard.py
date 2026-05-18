@@ -4,6 +4,8 @@ Dark mode · Cards · Nível XP / BTG / TradingView
 """
 from __future__ import annotations
 
+import streamlit.components.v1 as components
+import html
 import math
 import sqlite3
 import sys
@@ -388,47 +390,47 @@ def _compact_card(opp) -> str:
 
     return f"""
 <div class="cc" style="border-left:4px solid {sl_color}">
-  <div class="cc-top">
-    <div>
-      <div class="cc-ativo">{p.underlying}</div>
-      <div class="cc-opcao">{opcao_str}</div>
+    <div class="cc-top">
+        <div>
+        <div class="cc-ativo">{p.underlying}</div>
+        <div class="cc-opcao">{opcao_str}</div>
+        </div>
+        <div>
+        <div class="cc-score" style="color:{sc_color}">{opp.score:.0f}</div>
+        <div class="cc-score-lbl">score</div>
+        </div>
     </div>
-    <div>
-      <div class="cc-score" style="color:{sc_color}">{opp.score:.0f}</div>
-      <div class="cc-score-lbl">score</div>
-    </div>
-  </div>
 
-  <div class="cc-badges">
-    <span class="badge {status_badge}">{status_icon} {opp.status}</span>
-    <span class="badge {dir_cls}">{dir_text}</span>
-    <span class="cc-dte">DTE {p.dte}d · {p.expiry}</span>
-  </div>
-
-  <div class="cc-grid4">
-    <div class="cc-kv"><span class="cc-k">P(Lucro)</span><span class="cc-v" style="color:#22C55E">{opp.prob_profit:.0%}</span></div>
-    <div class="cc-kv"><span class="cc-k">R / R</span><span class="cc-v" style="color:#3B82F6">{rr_txt}</span></div>
-    <div class="cc-kv"><span class="cc-k">Ganho Máx</span><span class="cc-v" style="color:#22C55E">{profit_txt}</span></div>
-    <div class="cc-kv"><span class="cc-k">Risco Máx</span><span class="cc-v" style="color:#EF4444">{loss_txt}</span></div>
-  </div>
-
-  <div class="cc-ações">
-    <div class="cc-e">
-      <span class="cc-albl" style="color:#475569">Entrada</span>
-      <span class="cc-aval" style="color:#3B82F6">{entry_val}</span>
+    <div class="cc-badges">
+        <span class="badge {status_badge}">{status_icon} {opp.status}</span>
+        <span class="badge {dir_cls}">{dir_text}</span>
+        <span class="cc-dte">DTE {p.dte}d · {p.expiry}</span>
     </div>
-    <div class="cc-s">
-      <span class="cc-albl" style="color:#ef4444">Stop</span>
-      <span class="cc-aval" style="color:#EF4444">{stop_pct}</span>
-    </div>
-    <div class="cc-t">
-      <span class="cc-albl" style="color:#22c55e">Alvo</span>
-      <span class="cc-aval" style="color:#22C55E">{alvo_pct}</span>
-    </div>
-  </div>
 
-  <div class="cc-bar"><div style="width:{sc_w}%;height:2px;border-radius:2px;background:{sc_color}"></div></div>
-</div>"""
+    <div class="cc-grid4">
+        <div class="cc-kv"><span class="cc-k">P(Lucro)</span><span class="cc-v" style="color:#22C55E">{opp.prob_profit:.0%}</span></div>
+        <div class="cc-kv"><span class="cc-k">R / R</span><span class="cc-v" style="color:#3B82F6">{rr_txt}</span></div>
+        <div class="cc-kv"><span class="cc-k">Ganho Máx</span><span class="cc-v" style="color:#22C55E">{profit_txt}</span></div>
+        <div class="cc-kv"><span class="cc-k">Risco Máx</span><span class="cc-v" style="color:#EF4444">{loss_txt}</span></div>
+    </div>
+
+    <div class="cc-ações">
+        <div class="cc-e">
+        <span class="cc-albl" style="color:#475569">Entrada</span>
+        <span class="cc-aval" style="color:#3B82F6">{entry_val}</span>
+        </div>
+        <div class="cc-s">
+        <span class="cc-albl" style="color:#ef4444">Stop</span>
+        <span class="cc-aval" style="color:#EF4444">{stop_pct}</span>
+        </div>
+        <div class="cc-t">
+        <span class="cc-albl" style="color:#22c55e">Alvo</span>
+        <span class="cc-aval" style="color:#22C55E">{alvo_pct}</span>
+        </div>
+    </div>
+
+    <div class="cc-bar"><div style="width:{sc_w}%;height:2px;border-radius:2px;background:{sc_color}"></div></div>
+    </div>"""
 
 
 def _moneyness(spot: float, strike: float, opt_type: str = "CALL") -> str:
@@ -539,13 +541,13 @@ def generate_human_report(opp) -> dict:
     )
 
     return {
-        "contexto":   contexto,
-        "leitura":    leitura,
-        "estrategia": estrategia,
-        "por_que":    por_que,
-        "cenario":    p.best_scenario,
-        "risco":      risco,
-    }
+        "contexto":   html.escape(str(contexto)),
+        "leitura":    html.escape(str(leitura)),
+        "estrategia": html.escape(str(estrategia)),
+        "por_que":    html.escape(str(por_que)),
+        "cenario":    html.escape(str(p.best_scenario)),
+        "risco":      html.escape(str(risco)),
+}
 
 
 def generate_human_text(row: dict) -> str:
@@ -678,61 +680,61 @@ def _top_trade_card(opp, rank: int) -> str:
         stop_val = entry_px * 0.70
         t1_val   = entry_px * 1.50
         action_html = f"""
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-bottom:10px">
-    <div style="text-align:center;padding:8px 4px;background:#0A0E1A;border-radius:7px;border:1px solid #1E2D42">
-      <div style="font-size:0.54rem;color:#475569;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px">👉 Entrada</div>
-      <div style="font-size:0.85rem;font-weight:900;color:#3B82F6">R${entry_px:.4f}</div>
-    </div>
-    <div style="text-align:center;padding:8px 4px;background:#1c0909;border-radius:7px;border:1px solid #7f1d1d">
-      <div style="font-size:0.54rem;color:#ef4444;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px">⛔ Stop</div>
-      <div style="font-size:0.85rem;font-weight:900;color:#EF4444">−30%</div>
-    </div>
-    <div style="text-align:center;padding:8px 4px;background:#052e16;border-radius:7px;border:1px solid #166534">
-      <div style="font-size:0.54rem;color:#22c55e;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px">🎯 Alvo</div>
-      <div style="font-size:0.85rem;font-weight:900;color:#22C55E">+50%</div>
-    </div>
-  </div>"""
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-bottom:10px">
+        <div style="text-align:center;padding:8px 4px;background:#0A0E1A;border-radius:7px;border:1px solid #1E2D42">
+        <div style="font-size:0.54rem;color:#475569;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px">👉 Entrada</div>
+        <div style="font-size:0.85rem;font-weight:900;color:#3B82F6">R${entry_px:.4f}</div>
+        </div>
+        <div style="text-align:center;padding:8px 4px;background:#1c0909;border-radius:7px;border:1px solid #7f1d1d">
+        <div style="font-size:0.54rem;color:#ef4444;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px">⛔ Stop</div>
+        <div style="font-size:0.85rem;font-weight:900;color:#EF4444">−30%</div>
+        </div>
+        <div style="text-align:center;padding:8px 4px;background:#052e16;border-radius:7px;border:1px solid #166534">
+        <div style="font-size:0.54rem;color:#22c55e;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px">🎯 Alvo</div>
+        <div style="font-size:0.85rem;font-weight:900;color:#22C55E">+50%</div>
+        </div>
+    </div>"""
     else:
         action_html = f"""
-  <div style="display:flex;justify-content:space-between;padding:8px 0;font-size:0.78rem">
-    <span style="color:#334155">Risco <strong style="color:#EF4444">{loss_txt}</strong></span>
-    <span style="color:#334155">Alvo <strong style="color:#22C55E">{profit_txt}</strong></span>
-  </div>"""
+    <div style="display:flex;justify-content:space-between;padding:8px 0;font-size:0.78rem">
+        <span style="color:#334155">Risco <strong style="color:#EF4444">{loss_txt}</strong></span>
+        <span style="color:#334155">Alvo <strong style="color:#22C55E">{profit_txt}</strong></span>
+    </div>"""
 
     return f"""
-<div class="tt-card {card_cls}">
-  <div class="tt-card-top">
-    <div>
-      <div class="tt-ativo">#{rank} {p.underlying}</div>
-      <div class="tt-opcao">{opcao_str}</div>
+    <div class="tt-card {card_cls}">
+    <div class="tt-card-top">
+        <div>
+        <div class="tt-ativo">#{rank} {p.underlying}</div>
+        <div class="tt-opcao">{opcao_str}</div>
+        </div>
+        <div style="text-align:right">
+        <div class="tt-score-val" style="color:{sc_color}">{sc:.0f}</div>
+        <div class="tt-score-lbl">score</div>
+        </div>
     </div>
-    <div style="text-align:right">
-      <div class="tt-score-val" style="color:{sc_color}">{sc:.0f}</div>
-      <div class="tt-score-lbl">score</div>
+
+    <div class="tt-badges">
+        {forte_html}
+        <span class="badge {dir_cls}">{dir_text}</span>
+        {money_html}
     </div>
-  </div>
 
-  <div class="tt-badges">
-    {forte_html}
-    <span class="badge {dir_cls}">{dir_text}</span>
-    {money_html}
-  </div>
+    <div class="tt-divider"></div>
 
-  <div class="tt-divider"></div>
+    {action_html}
 
-  {action_html}
+    <div style="display:flex;justify-content:space-between;font-size:0.7rem;margin-top:4px">
+        <span style="color:#334155">P(lucro) <strong style="color:#94A3B8">{opp.prob_profit:.0%}</strong></span>
+        <span style="color:#334155">R/R <strong style="color:#94A3B8">{rr_txt}</strong></span>
+        <span style="color:#334155">DTE <strong style="color:#94A3B8">{p.dte}d</strong></span>
+    </div>
 
-  <div style="display:flex;justify-content:space-between;font-size:0.7rem;margin-top:4px">
-    <span style="color:#334155">P(lucro) <strong style="color:#94A3B8">{opp.prob_profit:.0%}</strong></span>
-    <span style="color:#334155">R/R <strong style="color:#94A3B8">{rr_txt}</strong></span>
-    <span style="color:#334155">DTE <strong style="color:#94A3B8">{p.dte}d</strong></span>
-  </div>
-
-  <div class="tt-bar-bg">
-    <div class="tt-bar" style="width:{sc_w}%;background:{sc_color}"></div>
-  </div>
-</div>
-"""
+    <div class="tt-bar-bg">
+        <div class="tt-bar" style="width:{sc_w}%;background:{sc_color}"></div>
+    </div>
+    </div>
+    """
 
 
 # ── HERO CARD — Top Trade #1 (destaque total) ───────────────────────────────
@@ -759,107 +761,107 @@ def _top_trade_hero(opp) -> str:
         t1_px      = entry_px * 1.50
         entry_cond = (p.entry_condition or "Condição técnica favorável")[:60]
         actions_html = f"""
-<div class="hero-actions">
-  <div class="hero-action" style="background:#0D1421;border:1px solid #1E3A5F">
-    <span class="hero-action-lbl" style="color:#475569">👉 Entrada</span>
-    <span class="hero-action-val" style="color:#3B82F6">R${entry_px:.4f}</span>
-    <span class="hero-action-sub" style="color:#334155">{entry_cond}</span>
-  </div>
-  <div class="hero-action" style="background:#1c0909;border:1px solid #7f1d1d">
-    <span class="hero-action-lbl" style="color:#ef4444">⛔ Stop</span>
-    <span class="hero-action-val" style="color:#EF4444">R${stop_px:.4f}</span>
-    <span class="hero-action-sub" style="color:#7f1d1d">−30% do prêmio</span>
-  </div>
-  <div class="hero-action" style="background:#052e16;border:1px solid #166534">
-    <span class="hero-action-lbl" style="color:#22c55e">🎯 Alvo</span>
-    <span class="hero-action-val" style="color:#22C55E">R${t1_px:.4f}</span>
-    <span class="hero-action-sub" style="color:#166534">+50% do prêmio</span>
-  </div>
-</div>"""
+    <div class="hero-actions">
+    <div class="hero-action" style="background:#0D1421;border:1px solid #1E3A5F">
+        <span class="hero-action-lbl" style="color:#475569">👉 Entrada</span>
+        <span class="hero-action-val" style="color:#3B82F6">R${entry_px:.4f}</span>
+        <span class="hero-action-sub" style="color:#334155">{entry_cond}</span>
+    </div>
+    <div class="hero-action" style="background:#1c0909;border:1px solid #7f1d1d">
+        <span class="hero-action-lbl" style="color:#ef4444">⛔ Stop</span>
+        <span class="hero-action-val" style="color:#EF4444">R${stop_px:.4f}</span>
+        <span class="hero-action-sub" style="color:#7f1d1d">−30% do prêmio</span>
+    </div>
+    <div class="hero-action" style="background:#052e16;border:1px solid #166534">
+        <span class="hero-action-lbl" style="color:#22c55e">🎯 Alvo</span>
+        <span class="hero-action-val" style="color:#22C55E">R${t1_px:.4f}</span>
+        <span class="hero-action-sub" style="color:#166534">+50% do prêmio</span>
+    </div>
+    </div>"""
     else:
         loss_txt   = f"R${p.max_loss:,.0f}"   if not math.isinf(p.max_loss)   else "Ilimitado"
         profit_txt = f"R${p.max_profit:,.0f}" if not math.isinf(p.max_profit) else "Ilimitado"
         actions_html = f"""
-<div class="hero-actions">
-  <div class="hero-action" style="background:#0D1421;border:1px solid #1E3A5F">
-    <span class="hero-action-lbl" style="color:#475569">👉 Estratégia</span>
-    <span class="hero-action-val" style="color:#60A5FA;font-size:1rem">{p.name}</span>
-  </div>
-  <div class="hero-action" style="background:#1c0909;border:1px solid #7f1d1d">
-    <span class="hero-action-lbl" style="color:#ef4444">⛔ Risco máx</span>
-    <span class="hero-action-val" style="color:#EF4444">{loss_txt}</span>
-  </div>
-  <div class="hero-action" style="background:#052e16;border:1px solid #166534">
-    <span class="hero-action-lbl" style="color:#22c55e">🎯 Ganho máx</span>
-    <span class="hero-action-val" style="color:#22C55E">{profit_txt}</span>
-  </div>
-</div>"""
+    <div class="hero-actions">
+    <div class="hero-action" style="background:#0D1421;border:1px solid #1E3A5F">
+        <span class="hero-action-lbl" style="color:#475569">👉 Estratégia</span>
+        <span class="hero-action-val" style="color:#60A5FA;font-size:1rem">{p.name}</span>
+    </div>
+    <div class="hero-action" style="background:#1c0909;border:1px solid #7f1d1d">
+        <span class="hero-action-lbl" style="color:#ef4444">⛔ Risco máx</span>
+        <span class="hero-action-val" style="color:#EF4444">{loss_txt}</span>
+    </div>
+    <div class="hero-action" style="background:#052e16;border:1px solid #166534">
+        <span class="hero-action-lbl" style="color:#22c55e">🎯 Ganho máx</span>
+        <span class="hero-action-val" style="color:#22C55E">{profit_txt}</span>
+    </div>
+    </div>"""
 
     return f"""
-<div class="hero-card">
-  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px">
-    <div>
-      <div class="hero-rank">🔥 #1 · Top Trade do Dia</div>
-      <div class="hero-ativo">{p.underlying}</div>
-      <div class="hero-opcao">{opcao_str}</div>
+    <div class="hero-card">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px">
+        <div>
+        <div class="hero-rank">🔥 #1 · Top Trade do Dia</div>
+        <div class="hero-ativo">{p.underlying}</div>
+        <div class="hero-opcao">{opcao_str}</div>
+        </div>
+        <div style="text-align:right">
+        <div class="hero-score" style="color:{sc_color}">{sc:.0f}</div>
+        <div class="hero-score-lbl">score</div>
+        </div>
     </div>
-    <div style="text-align:right">
-      <div class="hero-score" style="color:{sc_color}">{sc:.0f}</div>
-      <div class="hero-score-lbl">score</div>
-    </div>
-  </div>
 
-  <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
-    {_forte_badge(opp)}
-    <span class="badge {dir_cls}">{dir_text}</span>
-    <span style="font-size:0.7rem;color:#334155;align-self:center">DTE {p.dte}d · {p.expiry}</span>
-  </div>
+    <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
+        {_forte_badge(opp)}
+        <span class="badge {dir_cls}">{dir_text}</span>
+        <span style="font-size:0.7rem;color:#334155;align-self:center">DTE {p.dte}d · {p.expiry}</span>
+    </div>
 
-  <!-- DECISION STRIP — 6 perguntas respondidas em 1 olhada -->
-  <div class="decision-strip">
-    <div class="ds-item">
-      <span class="ds-q">Vale operar?</span>
-      <span class="ds-a ds-a-yes">✅ SIM</span>
+    <!-- DECISION STRIP — 6 perguntas respondidas em 1 olhada -->
+    <div class="decision-strip">
+        <div class="ds-item">
+        <span class="ds-q">Vale operar?</span>
+        <span class="ds-a ds-a-yes">✅ SIM</span>
+        </div>
+        <div class="ds-item">
+        <span class="ds-q">Qual ativo?</span>
+        <span class="ds-a">{p.underlying}</span>
+        </div>
+        <div class="ds-item">
+        <span class="ds-q">Qual opção?</span>
+        <span class="ds-a" style="font-family:monospace;font-size:0.82rem">{opcao_str}</span>
+        </div>
+        <div class="ds-item">
+        <span class="ds-q">Qual direção?</span>
+        <span class="ds-a">{dir_text}</span>
+        </div>
+        <div class="ds-item">
+        <span class="ds-q">Risco máximo</span>
+        <span class="ds-a ds-a-no">{"R${:,.0f}".format(p.max_loss) if not math.isinf(p.max_loss) else "Ilimitado"}</span>
+        </div>
+        <div class="ds-item">
+        <span class="ds-q">Alvo máximo</span>
+        <span class="ds-a ds-a-yes">{"R${:,.0f}".format(p.max_profit) if not math.isinf(p.max_profit) else "∞"}</span>
+        </div>
     </div>
-    <div class="ds-item">
-      <span class="ds-q">Qual ativo?</span>
-      <span class="ds-a">{p.underlying}</span>
-    </div>
-    <div class="ds-item">
-      <span class="ds-q">Qual opção?</span>
-      <span class="ds-a" style="font-family:monospace;font-size:0.82rem">{opcao_str}</span>
-    </div>
-    <div class="ds-item">
-      <span class="ds-q">Qual direção?</span>
-      <span class="ds-a">{dir_text}</span>
-    </div>
-    <div class="ds-item">
-      <span class="ds-q">Risco máximo</span>
-      <span class="ds-a ds-a-no">{"R${:,.0f}".format(p.max_loss) if not math.isinf(p.max_loss) else "Ilimitado"}</span>
-    </div>
-    <div class="ds-item">
-      <span class="ds-q">Alvo máximo</span>
-      <span class="ds-a ds-a-yes">{"R${:,.0f}".format(p.max_profit) if not math.isinf(p.max_profit) else "∞"}</span>
-    </div>
-  </div>
 
-  <div class="hero-narrative">{narrative}</div>
+    <div class="hero-narrative">{narrative}</div>
 
-  {actions_html}
+    {actions_html}
 
-  <div class="hero-stats">
-    <div><div class="hero-stat-k">P(Lucro)</div><div class="hero-stat-v" style="color:#22C55E">{opp.prob_profit:.0%}</div></div>
-    <div><div class="hero-stat-k">R/R</div><div class="hero-stat-v" style="color:#3B82F6">{rr_txt}</div></div>
-    <div><div class="hero-stat-k">Vol Histórica</div><div class="hero-stat-v">{opp.hv:.1%}</div></div>
-    <div><div class="hero-stat-k">Aderência</div><div class="hero-stat-v">{opp.scenario_adherence:.0%}</div></div>
-    <div><div class="hero-stat-k">Mercado</div><div class="hero-stat-v" style="font-size:0.78rem">{opp.market_condition.value}</div></div>
-  </div>
+    <div class="hero-stats">
+        <div><div class="hero-stat-k">P(Lucro)</div><div class="hero-stat-v" style="color:#22C55E">{opp.prob_profit:.0%}</div></div>
+        <div><div class="hero-stat-k">R/R</div><div class="hero-stat-v" style="color:#3B82F6">{rr_txt}</div></div>
+        <div><div class="hero-stat-k">Vol Histórica</div><div class="hero-stat-v">{opp.hv:.1%}</div></div>
+        <div><div class="hero-stat-k">Aderência</div><div class="hero-stat-v">{opp.scenario_adherence:.0%}</div></div>
+        <div><div class="hero-stat-k">Mercado</div><div class="hero-stat-v" style="font-size:0.78rem">{opp.market_condition.value}</div></div>
+    </div>
 
-  <div class="tt-bar-bg" style="margin-top:12px">
-    <div class="tt-bar" style="width:{sc_w}%;background:{sc_color}"></div>
-  </div>
-</div>
-"""
+    <div class="tt-bar-bg" style="margin-top:12px">
+        <div class="tt-bar" style="width:{sc_w}%;background:{sc_color}"></div>
+    </div>
+    </div>
+    """
 
 
 # ── SETUP CARD (lista completa) ──────────────────────────────────────────────
@@ -895,20 +897,20 @@ def _setup_card(opp) -> str:
     if _sc_main:
         _ep = _sc_main.price
         sc_action_strip = f"""
-    <div class="sc-actions" style="margin-top:10px">
-      <div class="sc-action" style="background:#0A0E1A;border:1px solid #1E2D42">
-        <span class="sc-action-lbl" style="color:#475569">👉 Entrada</span>
-        <span class="sc-action-val" style="color:#3B82F6">R${_ep:.4f}</span>
-      </div>
-      <div class="sc-action" style="background:#1c0909;border:1px solid #7f1d1d">
-        <span class="sc-action-lbl" style="color:#ef4444">⛔ Stop</span>
-        <span class="sc-action-val" style="color:#EF4444">−30%</span>
-      </div>
-      <div class="sc-action" style="background:#052e16;border:1px solid #166534">
-        <span class="sc-action-lbl" style="color:#22c55e">🎯 Alvo</span>
-        <span class="sc-action-val" style="color:#22C55E">+50%</span>
-      </div>
-    </div>"""
+        <div class="sc-actions" style="margin-top:10px">
+        <div class="sc-action" style="background:#0A0E1A;border:1px solid #1E2D42">
+            <span class="sc-action-lbl" style="color:#475569">👉 Entrada</span>
+            <span class="sc-action-val" style="color:#3B82F6">R${_ep:.4f}</span>
+        </div>
+        <div class="sc-action" style="background:#1c0909;border:1px solid #7f1d1d">
+            <span class="sc-action-lbl" style="color:#ef4444">⛔ Stop</span>
+            <span class="sc-action-val" style="color:#EF4444">−30%</span>
+        </div>
+        <div class="sc-action" style="background:#052e16;border:1px solid #166534">
+            <span class="sc-action-lbl" style="color:#22c55e">🎯 Alvo</span>
+            <span class="sc-action-val" style="color:#22C55E">+50%</span>
+        </div>
+        </div>"""
     else:
         sc_action_strip = ""
 
@@ -926,81 +928,81 @@ def _setup_card(opp) -> str:
     ) or f"{p.underlying} @ R${p.stock_price:.2f}"
 
     return f"""
-<div class="sc sc-{status_cls}">
+    <div class="sc sc-{status_cls}">
 
-  <div class="sc-head">
-    <div class="sc-title-row">
-      <div>
-        <span class="sc-ativo">{p.underlying}</span>
-        <span class="sc-nome" style="margin-left:8px">{p.name}</span>
-        {margin_html}
-      </div>
-      <div class="sc-score-block">
-        <span style="font-size:0.72rem;color:#334155">Score </span>
-        <span class="sc-score-val" style="color:{sc_color}">{opp.score:.0f}</span>
-      </div>
-    </div>
-    <div class="sc-meta">
-      <span class="badge {status_badge}">{status_icon} {opp.status}</span>
-      <span class="badge {dir_cls}">{dir_text}</span>
-      {money_html}
-      <span style="font-size:0.7rem;font-weight:700;background:{cat_bg};color:{cat_fg};padding:2px 8px;border-radius:10px">{cat_short}</span>
-      <span style="font-size:0.72rem;color:#334155">
-        DTE {p.dte}d &nbsp;·&nbsp; {p.expiry} &nbsp;·&nbsp;
-        {opp.market_condition.value} &nbsp;·&nbsp; Aderência {opp.scenario_adherence:.0%}
-      </span>
-    </div>
-    <div class="sc-prog">
-      <div style="width:{sc_w}%;height:3px;border-radius:3px;background:{sc_color}"></div>
-    </div>
-    {sc_action_strip}
-  </div>
-
-  <div class="sc-body" style="border-bottom:1px solid #162034">
-    <div class="sc-col-head">📈 Leitura</div>
-    <div class="human-text">{report['contexto']} {report['leitura']}</div>
-  </div>
-
-  <div class="sc-body">
-    <div class="sc-grid">
-      <div>
-        <div class="sc-col-head">💰 Risco</div>
-        <div class="sc-row"><span class="sc-dk">Custo entrada</span><span class="sc-dv">{cost_txt}</span></div>
-        <div class="sc-row"><span class="sc-dk">Ganho máx</span><span class="sc-dv sc-dv-g">{profit_txt}</span></div>
-        <div class="sc-row"><span class="sc-dk">Perda máx</span><span class="sc-dv sc-dv-r">{loss_txt}</span></div>
-        <div class="sc-row"><span class="sc-dk">R/R</span><span class="sc-dv">{rr_txt}</span></div>
-        <div class="sc-row"><span class="sc-dk">P(Lucro)</span><span class="sc-dv">{opp.prob_profit:.1%}</span></div>
-        <div class="sc-row"><span class="sc-dk">Breakeven</span><span class="sc-dv">{be_txt}</span></div>
-      </div>
-      <div>
-        <div class="sc-col-head">🎯 Estratégia</div>
-        <div style="font-size:0.78rem;color:#64748B;line-height:1.5;margin-bottom:10px">{report['estrategia']}</div>
-        <div class="sc-col-head" style="margin-top:4px">Por que essa estrutura</div>
-        <div style="font-size:0.76rem;color:#475569;line-height:1.45">{report['por_que']}</div>
-      </div>
-      <div>
-        <div class="sc-col-head">⚙️ Entrada / Saída</div>
-        <div style="font-size:0.75rem;margin-bottom:8px">
-          <div style="color:#334155;font-weight:700;margin-bottom:3px">Entrada</div>
-          <div style="color:#64748B">{p.entry_condition}</div>
+    <div class="sc-head">
+        <div class="sc-title-row">
+        <div>
+            <span class="sc-ativo">{p.underlying}</span>
+            <span class="sc-nome" style="margin-left:8px">{p.name}</span>
+            {margin_html}
         </div>
-        <div style="font-size:0.75rem">
-          <div style="color:#334155;font-weight:700;margin-bottom:3px">Saída</div>
-          <div style="color:#64748B">{p.exit_condition}</div>
+        <div class="sc-score-block">
+            <span style="font-size:0.72rem;color:#334155">Score </span>
+            <span class="sc-score-val" style="color:{sc_color}">{opp.score:.0f}</span>
         </div>
-      </div>
+        </div>
+        <div class="sc-meta">
+        <span class="badge {status_badge}">{status_icon} {opp.status}</span>
+        <span class="badge {dir_cls}">{dir_text}</span>
+        {money_html}
+        <span style="font-size:0.7rem;font-weight:700;background:{cat_bg};color:{cat_fg};padding:2px 8px;border-radius:10px">{cat_short}</span>
+        <span style="font-size:0.72rem;color:#334155">
+            DTE {p.dte}d &nbsp;·&nbsp; {p.expiry} &nbsp;·&nbsp;
+            {opp.market_condition.value} &nbsp;·&nbsp; Aderência {opp.scenario_adherence:.0%}
+        </span>
+        </div>
+        <div class="sc-prog">
+        <div style="width:{sc_w}%;height:3px;border-radius:3px;background:{sc_color}"></div>
+        </div>
+        {sc_action_strip}
     </div>
-  </div>
 
-  <div class="sc-scenarios">
-    <div class="sc-win"><strong>📈 Quando ganha</strong><br>{p.best_scenario}</div>
-    <div class="sc-lose"><strong>📉 Quando perde</strong><br>{p.worst_scenario}</div>
-  </div>
+    <div class="sc-body" style="border-bottom:1px solid #162034">
+        <div class="sc-col-head">📈 Leitura</div>
+        <div class="human-text">{report['contexto']} {report['leitura']}</div>
+    </div>
 
-  <div class="sc-foot">Pernas: {legs_footer}</div>
+    <div class="sc-body">
+        <div class="sc-grid">
+        <div>
+            <div class="sc-col-head">💰 Risco</div>
+            <div class="sc-row"><span class="sc-dk">Custo entrada</span><span class="sc-dv">{cost_txt}</span></div>
+            <div class="sc-row"><span class="sc-dk">Ganho máx</span><span class="sc-dv sc-dv-g">{profit_txt}</span></div>
+            <div class="sc-row"><span class="sc-dk">Perda máx</span><span class="sc-dv sc-dv-r">{loss_txt}</span></div>
+            <div class="sc-row"><span class="sc-dk">R/R</span><span class="sc-dv">{rr_txt}</span></div>
+            <div class="sc-row"><span class="sc-dk">P(Lucro)</span><span class="sc-dv">{opp.prob_profit:.1%}</span></div>
+            <div class="sc-row"><span class="sc-dk">Breakeven</span><span class="sc-dv">{be_txt}</span></div>
+        </div>
+        <div>
+            <div class="sc-col-head">🎯 Estratégia</div>
+            <div style="font-size:0.78rem;color:#64748B;line-height:1.5;margin-bottom:10px">{report['estrategia']}</div>
+            <div class="sc-col-head" style="margin-top:4px">Por que essa estrutura</div>
+            <div style="font-size:0.76rem;color:#475569;line-height:1.45">{report['por_que']}</div>
+        </div>
+        <div>
+            <div class="sc-col-head">⚙️ Entrada / Saída</div>
+            <div style="font-size:0.75rem;margin-bottom:8px">
+            <div style="color:#334155;font-weight:700;margin-bottom:3px">Entrada</div>
+            <div style="color:#64748B">{p.entry_condition}</div>
+            </div>
+            <div style="font-size:0.75rem">
+            <div style="color:#334155;font-weight:700;margin-bottom:3px">Saída</div>
+            <div style="color:#64748B">{p.exit_condition}</div>
+            </div>
+        </div>
+        </div>
+    </div>
 
-</div>
-"""
+    <div class="sc-scenarios">
+        <div class="sc-win"><strong>📈 Quando ganha</strong><br>{p.best_scenario}</div>
+        <div class="sc-lose"><strong>📉 Quando perde</strong><br>{p.worst_scenario}</div>
+    </div>
+
+    <div class="sc-foot">Pernas: {legs_footer}</div>
+
+    </div>
+    """
 
 
 # ── Detalhe expandido (expander) ─────────────────────────────────────────────
@@ -1009,26 +1011,26 @@ def _detail_html(opp) -> str:
     r = generate_human_report(opp)
     p = opp.payoff
     return f"""
-<div class="detail-box">
-  <div class="detail-grid">
-    <div class="detail-block">
-      <h4>Estratégia</h4>
-      <p>{r['estrategia']}</p>
+    <div class="detail-box">
+    <div class="detail-grid">
+        <div class="detail-block">
+        <h4>Estratégia</h4>
+        <p>{r['estrategia']}</p>
+        </div>
+        <div class="detail-block">
+        <h4>Por que essa estrutura</h4>
+        <p>{r['por_que']}</p>
+        </div>
+        <div class="detail-block">
+        <h4>Observação de risco</h4>
+        <p style="color:{'#FCA5A5' if p.risk_level == 'ILIMITADO' else '#F59E0B'}">{r['risco']}</p>
+        </div>
+        <div class="detail-block">
+        <h4>Cenário esperado</h4>
+        <p>{r['cenario']}</p>
+        </div>
     </div>
-    <div class="detail-block">
-      <h4>Por que essa estrutura</h4>
-      <p>{r['por_que']}</p>
     </div>
-    <div class="detail-block">
-      <h4>Observação de risco</h4>
-      <p style="color:{'#FCA5A5' if p.risk_level == 'ILIMITADO' else '#F59E0B'}">{r['risco']}</p>
-    </div>
-    <div class="detail-block">
-      <h4>Cenário esperado</h4>
-      <p>{r['cenario']}</p>
-    </div>
-  </div>
-</div>
 """
 
 
@@ -1141,7 +1143,12 @@ def _payoff_chart(opp, st_mod, height: int = 380, show_metrics: bool = True):
         height=height,
     )
 
-    st_mod.plotly_chart(fig, use_container_width=True)
+    from uuid import uuid4
+    st_mod.plotly_chart(
+        fig,
+        use_container_width=True,
+        key=f"payoff_{uuid4().hex}"
+    )
 
     if show_metrics:
         c1, c2, c3, c4, c5 = st_mod.columns(5)
@@ -1181,36 +1188,36 @@ def _render_technical_signals(st_mod, asset: str, data: dict) -> None:
     # Header: score geral + métricas rápidas
     bar_w = min(int(ov_score), 100)
     st_mod.markdown(f"""
-<div style="background:#0D1421;border:1px solid #1E3A5F;border-radius:12px;padding:18px 22px;margin-bottom:14px">
-  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-    <div>
-      <div style="font-size:0.62rem;color:#334155;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:4px">{asset} · Consenso Técnico</div>
-      <div style="font-size:1.6rem;font-weight:900;color:{ov_color}">{ov_label}</div>
+    <div style="background:#0D1421;border:1px solid #1E3A5F;border-radius:12px;padding:18px 22px;margin-bottom:14px">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <div>
+        <div style="font-size:0.62rem;color:#334155;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:4px">{asset} · Consenso Técnico</div>
+        <div style="font-size:1.6rem;font-weight:900;color:{ov_color}">{ov_label}</div>
+        </div>
+        <div style="display:flex;gap:20px;flex-wrap:wrap">
+        <div style="text-align:center">
+            <div style="font-size:0.6rem;color:#334155;text-transform:uppercase;letter-spacing:1px">Score</div>
+            <div style="font-size:2rem;font-weight:900;color:{ov_color}">{ov_score:.0f}</div>
+        </div>
+        <div style="text-align:center">
+            <div style="font-size:0.6rem;color:#334155;text-transform:uppercase;letter-spacing:1px">RSI</div>
+            <div style="font-size:2rem;font-weight:900;color:{'#EF4444' if rsi_val>=70 else '#22C55E' if rsi_val<=30 else '#E2E8F0'}">{rsi_val:.1f}</div>
+        </div>
+        <div style="text-align:center">
+            <div style="font-size:0.6rem;color:#334155;text-transform:uppercase;letter-spacing:1px">ATR%</div>
+            <div style="font-size:2rem;font-weight:900;color:{'#EF4444' if atr_pct>4 else '#F59E0B' if atr_pct>2 else '#22C55E'}">{atr_pct:.1f}%</div>
+        </div>
+        <div style="text-align:center">
+            <div style="font-size:0.6rem;color:#334155;text-transform:uppercase;letter-spacing:1px">Vol</div>
+            <div style="font-size:2rem;font-weight:900;color:{'#3B82F6' if vol_rat>2 else '#E2E8F0'}">{vol_rat:.1f}×</div>
+        </div>
+        </div>
     </div>
-    <div style="display:flex;gap:20px;flex-wrap:wrap">
-      <div style="text-align:center">
-        <div style="font-size:0.6rem;color:#334155;text-transform:uppercase;letter-spacing:1px">Score</div>
-        <div style="font-size:2rem;font-weight:900;color:{ov_color}">{ov_score:.0f}</div>
-      </div>
-      <div style="text-align:center">
-        <div style="font-size:0.6rem;color:#334155;text-transform:uppercase;letter-spacing:1px">RSI</div>
-        <div style="font-size:2rem;font-weight:900;color:{'#EF4444' if rsi_val>=70 else '#22C55E' if rsi_val<=30 else '#E2E8F0'}">{rsi_val:.1f}</div>
-      </div>
-      <div style="text-align:center">
-        <div style="font-size:0.6rem;color:#334155;text-transform:uppercase;letter-spacing:1px">ATR%</div>
-        <div style="font-size:2rem;font-weight:900;color:{'#EF4444' if atr_pct>4 else '#F59E0B' if atr_pct>2 else '#22C55E'}">{atr_pct:.1f}%</div>
-      </div>
-      <div style="text-align:center">
-        <div style="font-size:0.6rem;color:#334155;text-transform:uppercase;letter-spacing:1px">Vol</div>
-        <div style="font-size:2rem;font-weight:900;color:{'#3B82F6' if vol_rat>2 else '#E2E8F0'}">{vol_rat:.1f}×</div>
-      </div>
+    <div style="background:#1E2D42;border-radius:3px;height:4px;margin-top:14px">
+        <div style="width:{bar_w}%;height:4px;border-radius:3px;background:{ov_color};transition:width 0.3s"></div>
     </div>
-  </div>
-  <div style="background:#1E2D42;border-radius:3px;height:4px;margin-top:14px">
-    <div style="width:{bar_w}%;height:4px;border-radius:3px;background:{ov_color};transition:width 0.3s"></div>
-  </div>
-</div>
-""", unsafe_allow_html=True)
+    </div>
+    """, unsafe_allow_html=True)
 
     # Cards por indicador
     scored_signals = [s for s in signals if s.get("score") is not None]
@@ -1226,30 +1233,30 @@ def _render_technical_signals(st_mod, asset: str, data: dict) -> None:
                 color = sig["color"]
                 bar   = min(int(sc), 100)
                 col.markdown(f"""
-<div style="background:#111827;border:1px solid #1E2D42;border-radius:10px;padding:14px 16px;height:100%">
-  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
-    <div style="font-size:0.68rem;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:0.8px">{sig['name']}</div>
-    <div style="font-size:1.1rem;font-weight:900;color:{color}">{sc:.0f}</div>
-  </div>
-  <div style="font-size:1.2rem;font-weight:800;color:{color};margin-bottom:6px;font-family:monospace">{sig['value']}</div>
-  <div style="font-size:0.75rem;color:#475569;line-height:1.5">{sig['interpretation']}</div>
-  <div style="background:#1E2D42;border-radius:2px;height:3px;margin-top:10px">
-    <div style="width:{bar}%;height:3px;border-radius:2px;background:{color}"></div>
-  </div>
-</div>
-""", unsafe_allow_html=True)
+    <div style="background:#111827;border:1px solid #1E2D42;border-radius:10px;padding:14px 16px;height:100%">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
+        <div style="font-size:0.68rem;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:0.8px">{sig['name']}</div>
+        <div style="font-size:1.1rem;font-weight:900;color:{color}">{sc:.0f}</div>
+    </div>
+    <div style="font-size:1.2rem;font-weight:800;color:{color};margin-bottom:6px;font-family:monospace">{sig['value']}</div>
+    <div style="font-size:0.75rem;color:#475569;line-height:1.5">{sig['interpretation']}</div>
+    <div style="background:#1E2D42;border-radius:2px;height:3px;margin-top:10px">
+        <div style="width:{bar}%;height:3px;border-radius:2px;background:{color}"></div>
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
 
     # Linha de informações (ATR, Volume)
     if info_signals:
         cols = st_mod.columns(len(info_signals))
         for col, sig in zip(cols, info_signals):
             col.markdown(f"""
-<div style="background:#0A0E1A;border:1px solid #1E2D42;border-radius:8px;padding:12px 14px">
-  <div style="font-size:0.65rem;font-weight:700;color:#334155;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:5px">{sig['name']}</div>
-  <div style="font-size:1.0rem;font-weight:800;color:{sig['color']};margin-bottom:4px;font-family:monospace">{sig['value']}</div>
-  <div style="font-size:0.72rem;color:#334155">{sig['interpretation']}</div>
-</div>
-""", unsafe_allow_html=True)
+    <div style="background:#0A0E1A;border:1px solid #1E2D42;border-radius:8px;padding:12px 14px">
+    <div style="font-size:0.65rem;font-weight:700;color:#334155;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:5px">{sig['name']}</div>
+    <div style="font-size:1.0rem;font-weight:800;color:{sig['color']};margin-bottom:4px;font-family:monospace">{sig['value']}</div>
+    <div style="font-size:0.72rem;color:#334155">{sig['interpretation']}</div>
+    </div>
+    """, unsafe_allow_html=True)
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -1433,49 +1440,49 @@ def main(skip_page_config: bool = False):
 
     # ── HEADER ──
     st.markdown(f"""
-<div class="rq-header">
-  <div class="rq-header-top">
-    <div>
-      <div class="rq-title">🎯 <em>Radar Quant</em></div>
-      <div class="rq-sub">Scanner quantitativo de opções B3 &nbsp;·&nbsp; {date_str}</div>
+    <div class="rq-header">
+    <div class="rq-header-top">
+        <div>
+        <div class="rq-title">🎯 <em>Radar Quant</em></div>
+        <div class="rq-sub">Scanner quantitativo de opções B3 &nbsp;·&nbsp; {date_str}</div>
+        </div>
+        <div class="rq-meta">
+        <div class="rq-clock" id="rq-clock-val">{clock_str}</div>
+        <span class="rq-market {mkt_cls}">{mkt_dot} {mkt_text}</span>
+        <span class="rq-pill">🎯 {n_op} setup{"s" if n_op != 1 else ""} ativos</span>
+        </div>
     </div>
-    <div class="rq-meta">
-      <div class="rq-clock" id="rq-clock-val">{clock_str}</div>
-      <span class="rq-market {mkt_cls}">{mkt_dot} {mkt_text}</span>
-      <span class="rq-pill">🎯 {n_op} setup{"s" if n_op != 1 else ""} ativos</span>
     </div>
-  </div>
-</div>
-{_CLOCK_JS}
-""", unsafe_allow_html=True)
+    {_CLOCK_JS}
+    """, unsafe_allow_html=True)
 
     # ── KPI STRIP ──
     _op_txt  = "oportunidade clara" if n_op == 1 else "oportunidades claras"
     _est_txt = "em monitoramento"   if n_est == 1 else "em monitoramento"
     st.markdown(f"""
-<div class="kpi-strip">
-  <div class="kpi-card kc-green">
-    <div class="kpi-label">🔥 Operar agora</div>
-    <div class="kpi-value" style="color:#22C55E">{n_op}</div>
-    <div class="kpi-sub">{_op_txt} · {n_ativos} ativo{"s" if n_ativos != 1 else ""}</div>
-  </div>
-  <div class="kpi-card kc-amber">
-    <div class="kpi-label">⚠️ Monitorar</div>
-    <div class="kpi-value" style="color:#F59E0B">{n_est}</div>
-    <div class="kpi-sub">{_est_txt}</div>
-  </div>
-  <div class="kpi-card kc-purple">
-    <div class="kpi-label">Tendência Geral</div>
-    <div class="kpi-value" style="color:{tend_color};font-size:1.1rem">{tend_txt}</div>
-    <div class="kpi-sub">mercado dominante</div>
-  </div>
-  <div class="kpi-card kc-slate">
-    <div class="kpi-label">P(Lucro) Médio</div>
-    <div class="kpi-value">{avg_pp:.0%}</div>
-    <div class="kpi-sub">score médio {avg_sc:.0f} · {total} setups</div>
-  </div>
-</div>
-""", unsafe_allow_html=True)
+    <div class="kpi-strip">
+    <div class="kpi-card kc-green">
+        <div class="kpi-label">🔥 Operar agora</div>
+        <div class="kpi-value" style="color:#22C55E">{n_op}</div>
+        <div class="kpi-sub">{_op_txt} · {n_ativos} ativo{"s" if n_ativos != 1 else ""}</div>
+    </div>
+    <div class="kpi-card kc-amber">
+        <div class="kpi-label">⚠️ Monitorar</div>
+        <div class="kpi-value" style="color:#F59E0B">{n_est}</div>
+        <div class="kpi-sub">{_est_txt}</div>
+    </div>
+    <div class="kpi-card kc-purple">
+        <div class="kpi-label">Tendência Geral</div>
+        <div class="kpi-value" style="color:{tend_color};font-size:1.1rem">{tend_txt}</div>
+        <div class="kpi-sub">mercado dominante</div>
+    </div>
+    <div class="kpi-card kc-slate">
+        <div class="kpi-label">P(Lucro) Médio</div>
+        <div class="kpi-value">{avg_pp:.0%}</div>
+        <div class="kpi-sub">score médio {avg_sc:.0f} · {total} setups</div>
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
 
     if not opps:
         st.warning("Nenhuma estrutura encontrada. Relaxe os filtros ou rode o scanner.")
@@ -1530,7 +1537,44 @@ def main(skip_page_config: bool = False):
             )
             c_left, c_right = st.columns([3, 2])
             with c_left:
-                st.markdown(_setup_card(sel), unsafe_allow_html=True)
+                p = sel.payoff
+                main_leg = next((l for l in p.legs if l.option_type != "STOCK"), None)
+
+                st.markdown(f"### {p.underlying} · {p.name}")
+
+                c1, c2, c3, c4 = st.columns(4)
+                c1.metric("Score", f"{sel.score:.0f}")
+                c2.metric("Status", sel.status)
+                c3.metric("DTE", f"{p.dte} dias")
+                c4.metric("P(Lucro)", f"{sel.prob_profit:.1%}")
+
+                st.divider()
+
+                a1, a2, a3 = st.columns(3)
+                a1.metric("Entrada", f"R$ {main_leg.price:.4f}" if main_leg else "—")
+                a2.metric("Stop", "-30%")
+                a3.metric("Alvo", "+50%")
+
+                st.divider()
+
+                r1, r2, r3, r4 = st.columns(4)
+                r1.metric("Custo", f"R$ {abs(p.net_cost):,.2f}")
+                r2.metric("Ganho Máx", f"R$ {p.max_profit:,.2f}")
+                r3.metric("Perda Máx", f"R$ {p.max_loss:,.2f}")
+                r4.metric("R/R", f"{p.risk_reward:.2f}x")
+
+                st.markdown("#### Leitura")
+                st.write(generate_human_report(sel)["contexto"])
+                st.write(generate_human_report(sel)["leitura"])
+
+                st.markdown("#### Estratégia")
+                st.write(generate_human_report(sel)["estrategia"])
+
+                st.markdown("#### Quando ganha")
+                st.success(p.best_scenario)
+
+                st.markdown("#### Quando perde")
+                st.error(p.worst_scenario)
             with c_right:
                 _payoff_chart(sel, st, height=340, show_metrics=False)
                 st.markdown(_detail_html(sel), unsafe_allow_html=True)
@@ -1574,25 +1618,25 @@ def main(skip_page_config: bool = False):
             p_h = hero_opp.payoff
             rr_h = f"{p_h.risk_reward:.1f}x" if not math.isinf(p_h.risk_reward) else "∞"
             st.markdown(f"""
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
-  <div style="background:#0D1421;border:1px solid #1E3A5F;border-radius:8px;padding:10px 14px">
-    <div style="font-size:0.6rem;color:#334155;text-transform:uppercase;letter-spacing:1px">P(Lucro)</div>
-    <div style="font-size:1.4rem;font-weight:900;color:#22C55E">{hero_opp.prob_profit:.0%}</div>
-  </div>
-  <div style="background:#0D1421;border:1px solid #1E3A5F;border-radius:8px;padding:10px 14px">
-    <div style="font-size:0.6rem;color:#334155;text-transform:uppercase;letter-spacing:1px">R / R</div>
-    <div style="font-size:1.4rem;font-weight:900;color:#3B82F6">{rr_h}</div>
-  </div>
-  <div style="background:#052e16;border:1px solid #166534;border-radius:8px;padding:10px 14px">
-    <div style="font-size:0.6rem;color:#166534;text-transform:uppercase;letter-spacing:1px">Ganho Máx</div>
-    <div style="font-size:1.1rem;font-weight:900;color:#22C55E">{"R${:,.2f}".format(p_h.max_profit) if not math.isinf(p_h.max_profit) else "∞"}</div>
-  </div>
-  <div style="background:#1c0909;border:1px solid #7f1d1d;border-radius:8px;padding:10px 14px">
-    <div style="font-size:0.6rem;color:#7f1d1d;text-transform:uppercase;letter-spacing:1px">Perda Máx</div>
-    <div style="font-size:1.1rem;font-weight:900;color:#EF4444">{"R${:,.2f}".format(p_h.max_loss) if not math.isinf(p_h.max_loss) else "∞"}</div>
-  </div>
-</div>
-""", unsafe_allow_html=True)
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
+    <div style="background:#0D1421;border:1px solid #1E3A5F;border-radius:8px;padding:10px 14px">
+        <div style="font-size:0.6rem;color:#334155;text-transform:uppercase;letter-spacing:1px">P(Lucro)</div>
+        <div style="font-size:1.4rem;font-weight:900;color:#22C55E">{hero_opp.prob_profit:.0%}</div>
+    </div>
+    <div style="background:#0D1421;border:1px solid #1E3A5F;border-radius:8px;padding:10px 14px">
+        <div style="font-size:0.6rem;color:#334155;text-transform:uppercase;letter-spacing:1px">R / R</div>
+        <div style="font-size:1.4rem;font-weight:900;color:#3B82F6">{rr_h}</div>
+    </div>
+    <div style="background:#052e16;border:1px solid #166534;border-radius:8px;padding:10px 14px">
+        <div style="font-size:0.6rem;color:#166534;text-transform:uppercase;letter-spacing:1px">Ganho Máx</div>
+        <div style="font-size:1.1rem;font-weight:900;color:#22C55E">{"R${:,.2f}".format(p_h.max_profit) if not math.isinf(p_h.max_profit) else "∞"}</div>
+    </div>
+    <div style="background:#1c0909;border:1px solid #7f1d1d;border-radius:8px;padding:10px 14px">
+        <div style="font-size:0.6rem;color:#7f1d1d;text-transform:uppercase;letter-spacing:1px">Perda Máx</div>
+        <div style="font-size:1.1rem;font-weight:900;color:#EF4444">{"R${:,.2f}".format(p_h.max_loss) if not math.isinf(p_h.max_loss) else "∞"}</div>
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
 
     # ── Telegram button (sidebar) ──
     with st.sidebar:
@@ -1647,9 +1691,9 @@ def main(skip_page_config: bool = False):
                 cols = st.columns(N_COLS)
                 for col, opp_g in zip(cols, row):
                     with col:
-                        st.markdown(_compact_card(opp_g), unsafe_allow_html=True)
+                        st.html(_compact_card(opp_g))
                         with st.expander("📊 Detalhe completo", expanded=False):
-                            st.markdown(_setup_card(opp_g), unsafe_allow_html=True)
+                            st.markdown(_detail_html(opp_g), unsafe_allow_html=True)
                             _payoff_chart(opp_g, st, height=280, show_metrics=False)
 
         # ESTUDO — grid 2 colunas
@@ -1665,7 +1709,7 @@ def main(skip_page_config: bool = False):
                 cols = st.columns(2)
                 for col, opp_g in zip(cols, row):
                     with col:
-                        st.markdown(_compact_card(opp_g), unsafe_allow_html=True)
+                        st.html(_compact_card(opp_g))
 
         # DESCARTAR — lista compacta
         desc_opps = [o for o in opps if o.status == "DESCARTAR"]
@@ -1673,7 +1717,7 @@ def main(skip_page_config: bool = False):
             any_shown = True
             with st.expander(f"❌ Descartar — evitar ({len(desc_opps)})", expanded=False):
                 for opp_g in desc_opps:
-                    st.markdown(_compact_card(opp_g), unsafe_allow_html=True)
+                    st.html(_compact_card(opp_g))
 
         if not any_shown:
             st.info("Nenhuma oportunidade com os filtros atuais.")
@@ -1735,7 +1779,24 @@ def main(skip_page_config: bool = False):
                     fig_chart.update_layout(height=620)
                     st.plotly_chart(fig_chart, use_container_width=True)
                 if setup_for_chart:
-                    st.markdown(_setup_card(setup_for_chart), unsafe_allow_html=True)
+                    st.markdown(_compact_card(opp), unsafe_allow_html=True)
+                    m1, m2, m3, m4 = st.columns(4)
+                    m1.metric("Score", f"{opp.score:.0f}")
+                    m2.metric("P(Lucro)", f"{opp.prob_profit:.0%}")
+                    m3.metric("R/R", f"{opp.payoff.risk_reward:.1f}x")
+                    m4.metric("DTE", f"{opp.payoff.dte}d")
+                    with st.expander("📋 Leitura operacional", expanded=True):
+
+                        r = generate_human_report(opp)
+
+                        st.markdown("#### 🌍 Contexto")
+                        st.info(r["contexto"])
+
+                        st.markdown("#### 📈 Leitura")
+                        st.success(r["leitura"])
+
+                        st.markdown("#### 🎯 Estratégia")
+                        st.warning(r["estrategia"])
 
             # ── Painel de Sinais Técnicos ──────────────────────────────────
             signals_data = compute_signals(df_ohlcv)
@@ -1759,13 +1820,13 @@ def main(skip_page_config: bool = False):
         status_icon       = _STATUS_ICON.get(opp_sel.status, "")
 
         st.markdown(f"""
-<div style="display:flex;gap:8px;align-items:center;margin-bottom:14px;flex-wrap:wrap">
-  <span class="badge {status_badge}">{status_icon} {opp_sel.status}</span>
-  <span class="badge {dir_cls}">{dir_text}</span>
-  <span style="font-size:0.72rem;font-weight:700;background:{cat_bg};color:{cat_fg};
-               padding:2px 9px;border-radius:10px">{p_sel.risk_category}</span>
-  <span style="font-size:0.78rem;color:#334155;font-style:italic">{opp_sel.why_ranked}</span>
-</div>
+    <div style="display:flex;gap:8px;align-items:center;margin-bottom:14px;flex-wrap:wrap">
+    <span class="badge {status_badge}">{status_icon} {opp_sel.status}</span>
+    <span class="badge {dir_cls}">{dir_text}</span>
+    <span style="font-size:0.72rem;font-weight:700;background:{cat_bg};color:{cat_fg};
+                padding:2px 9px;border-radius:10px">{p_sel.risk_category}</span>
+    <span style="font-size:0.78rem;color:#334155;font-style:italic">{opp_sel.why_ranked}</span>
+    </div>
 """, unsafe_allow_html=True)
 
         col_pf, col_det = st.columns([3, 2])
@@ -1932,39 +1993,39 @@ def main(skip_page_config: bool = False):
                 _skew_color = "#EF4444" if (not math.isnan(_skew) and _skew > 0.03) else "#64748B"
 
                 st.markdown(f"""
-<div style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:18px">
-  <div style="background:#111827;border:1px solid #1E2D42;border-radius:10px;padding:14px 16px;text-align:center;border-top:3px solid #3B82F6">
-    <div style="font-size:0.62rem;color:#334155;text-transform:uppercase;letter-spacing:1px">IV ATM</div>
-    <div style="font-size:1.5rem;font-weight:900;color:#3B82F6">{_iv_atm:.1%}</div>
-    <div style="font-size:0.65rem;color:#475569">volatilidade implícita</div>
-  </div>
-  <div style="background:#111827;border:1px solid #1E2D42;border-radius:10px;padding:14px 16px;text-align:center;border-top:3px solid #22C55E">
-    <div style="font-size:0.62rem;color:#334155;text-transform:uppercase;letter-spacing:1px">HV 21d</div>
-    <div style="font-size:1.5rem;font-weight:900;color:#22C55E">{_hv21:.1%}</div>
-    <div style="font-size:0.65rem;color:#475569">vol histórica</div>
-  </div>
-  <div style="background:#111827;border:1px solid #1E2D42;border-radius:10px;padding:14px 16px;text-align:center;border-top:3px solid {_ivhv_color}">
-    <div style="font-size:0.62rem;color:#334155;text-transform:uppercase;letter-spacing:1px">IV − HV</div>
-    <div style="font-size:1.5rem;font-weight:900;color:{_ivhv_color}">{_ivhv:+.1%}</div>
-    <div style="font-size:0.65rem;color:#475569">prêmio de vol</div>
-  </div>
-  <div style="background:#111827;border:1px solid #1E2D42;border-radius:10px;padding:14px 16px;text-align:center;border-top:3px solid #7C3AED">
-    <div style="font-size:0.62rem;color:#334155;text-transform:uppercase;letter-spacing:1px">IV Rank</div>
-    <div style="font-size:1.5rem;font-weight:900;color:#7C3AED">{"N/A" if math.isnan(_ivr) else f"{_ivr:.0f}"}</div>
-    <div style="font-size:0.65rem;color:#475569">vs 1 ano (0–100)</div>
-  </div>
-  <div style="background:#111827;border:1px solid #1E2D42;border-radius:10px;padding:14px 16px;text-align:center;border-top:3px solid #F59E0B">
-    <div style="font-size:0.62rem;color:#334155;text-transform:uppercase;letter-spacing:1px">IV %ile</div>
-    <div style="font-size:1.5rem;font-weight:900;color:#F59E0B">{"N/A" if math.isnan(_ivp) else f"{_ivp:.0f}"}</div>
-    <div style="font-size:0.65rem;color:#475569">% do tempo abaixo</div>
-  </div>
-  <div style="background:#111827;border:1px solid #1E2D42;border-radius:10px;padding:14px 16px;text-align:center;border-top:3px solid {_skew_color}">
-    <div style="font-size:0.62rem;color:#334155;text-transform:uppercase;letter-spacing:1px">Skew 25Δ</div>
-    <div style="font-size:1.5rem;font-weight:900;color:{_skew_color}">{"N/A" if math.isnan(_skew) else f"{_skew:+.1%}"}</div>
-    <div style="font-size:0.65rem;color:#475569">put IV − call IV</div>
-  </div>
-</div>
-""", unsafe_allow_html=True)
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:18px">
+    <div style="background:#111827;border:1px solid #1E2D42;border-radius:10px;padding:14px 16px;text-align:center;border-top:3px solid #3B82F6">
+        <div style="font-size:0.62rem;color:#334155;text-transform:uppercase;letter-spacing:1px">IV ATM</div>
+        <div style="font-size:1.5rem;font-weight:900;color:#3B82F6">{_iv_atm:.1%}</div>
+        <div style="font-size:0.65rem;color:#475569">volatilidade implícita</div>
+    </div>
+    <div style="background:#111827;border:1px solid #1E2D42;border-radius:10px;padding:14px 16px;text-align:center;border-top:3px solid #22C55E">
+        <div style="font-size:0.62rem;color:#334155;text-transform:uppercase;letter-spacing:1px">HV 21d</div>
+        <div style="font-size:1.5rem;font-weight:900;color:#22C55E">{_hv21:.1%}</div>
+        <div style="font-size:0.65rem;color:#475569">vol histórica</div>
+    </div>
+    <div style="background:#111827;border:1px solid #1E2D42;border-radius:10px;padding:14px 16px;text-align:center;border-top:3px solid {_ivhv_color}">
+        <div style="font-size:0.62rem;color:#334155;text-transform:uppercase;letter-spacing:1px">IV − HV</div>
+        <div style="font-size:1.5rem;font-weight:900;color:{_ivhv_color}">{_ivhv:+.1%}</div>
+        <div style="font-size:0.65rem;color:#475569">prêmio de vol</div>
+    </div>
+    <div style="background:#111827;border:1px solid #1E2D42;border-radius:10px;padding:14px 16px;text-align:center;border-top:3px solid #7C3AED">
+        <div style="font-size:0.62rem;color:#334155;text-transform:uppercase;letter-spacing:1px">IV Rank</div>
+        <div style="font-size:1.5rem;font-weight:900;color:#7C3AED">{"N/A" if math.isnan(_ivr) else f"{_ivr:.0f}"}</div>
+        <div style="font-size:0.65rem;color:#475569">vs 1 ano (0–100)</div>
+    </div>
+    <div style="background:#111827;border:1px solid #1E2D42;border-radius:10px;padding:14px 16px;text-align:center;border-top:3px solid #F59E0B">
+        <div style="font-size:0.62rem;color:#334155;text-transform:uppercase;letter-spacing:1px">IV %ile</div>
+        <div style="font-size:1.5rem;font-weight:900;color:#F59E0B">{"N/A" if math.isnan(_ivp) else f"{_ivp:.0f}"}</div>
+        <div style="font-size:0.65rem;color:#475569">% do tempo abaixo</div>
+    </div>
+    <div style="background:#111827;border:1px solid #1E2D42;border-radius:10px;padding:14px 16px;text-align:center;border-top:3px solid {_skew_color}">
+        <div style="font-size:0.62rem;color:#334155;text-transform:uppercase;letter-spacing:1px">Skew 25Δ</div>
+        <div style="font-size:1.5rem;font-weight:900;color:{_skew_color}">{"N/A" if math.isnan(_skew) else f"{_skew:+.1%}"}</div>
+        <div style="font-size:0.65rem;color:#475569">put IV − call IV</div>
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
 
                 # ── Gráficos ──────────────────────────────────────────────
                 _col_smile, _col_cone = st.columns(2)
@@ -2179,11 +2240,52 @@ def main(skip_page_config: bool = False):
 
         setups_flow = [o for o in opps if o.payoff.underlying == flow_asset] or opps[:5]
         for opp in setups_flow[:6]:
+
+            pred = ml_predict(ml_model, opp) if ml_model else ml_predict(None, opp)
+
+            col_l, col_r = st.columns([3, 2])
+        
+        with col_l:
+            st.markdown(_compact_card(opp), unsafe_allow_html=True)
+            m1, m2, m3, m4 = st.columns(4)
+
+            m1.metric("Score", f"{opp.score:.0f}")
+            m2.metric("P(Lucro)", f"{opp.prob_profit:.0%}")
+            m3.metric("R/R", f"{opp.payoff.risk_reward:.1f}x")
+            m4.metric("DTE", f"{opp.payoff.dte}d")
+            with st.expander("📋 Leitura operacional", expanded=True):
+
+                r = generate_human_report(opp)
+
+                st.markdown("#### 🌍 Contexto")
+                st.info(r["contexto"])
+
+                st.markdown("#### 📈 Leitura")
+                st.success(r["leitura"])
+
+                st.markdown("#### 🎯 Estratégia")
+                st.warning(r["estrategia"])
+            with col_r:
+                st.markdown(predict_html(pred), unsafe_allow_html=True)
+
+            st.divider()
             pred = ml_predict(ml_model, opp) if ml_model else ml_predict(None, opp)
 
             col_l, col_r = st.columns([3, 2])
             with col_l:
-                st.markdown(_setup_card(opp), unsafe_allow_html=True)
+                st.markdown(_compact_card(opp), unsafe_allow_html=True)
+                with st.expander("📋 Leitura operacional", expanded=True):
+
+                    r = generate_human_report(opp)
+
+                    st.markdown("#### 🌍 Contexto")
+                    st.info(r["contexto"])
+
+                    st.markdown("#### 📈 Leitura")
+                    st.success(r["leitura"])
+
+                    st.markdown("#### 🎯 Estratégia")
+                    st.warning(r["estrategia"])
             with col_r:
                 st.markdown(predict_html(pred), unsafe_allow_html=True)
 
@@ -2266,33 +2368,33 @@ def main(skip_page_config: bool = False):
                 else:
                     # KPIs do backtest
                     st.markdown(f"""
-                    <div class="kpi-strip" style="margin-top:16px">
-                      <div class="kpi-card kc-blue">
-                        <div class="kpi-label">Trades</div>
-                        <div class="kpi-value">{summ.get('total_trades', 0)}</div>
-                      </div>
-                      <div class="kpi-card {'kc-green' if summ.get('win_rate',0)>=0.5 else 'kc-amber'}">
-                        <div class="kpi-label">Win Rate</div>
-                        <div class="kpi-value" style="color:{'#22C55E' if summ.get('win_rate',0)>=0.5 else '#F59E0B'}">{summ.get('win_rate',0):.1%}</div>
-                      </div>
-                      <div class="kpi-card kc-purple">
-                        <div class="kpi-label">Sharpe</div>
-                        <div class="kpi-value">{summ.get('sharpe',0):.2f}</div>
-                      </div>
-                      <div class="kpi-card kc-amber">
-                        <div class="kpi-label">Max Drawdown</div>
-                        <div class="kpi-value" style="color:#EF4444">{summ.get('max_drawdown',0):.1%}</div>
-                      </div>
-                      <div class="kpi-card {'kc-green' if summ.get('total_pnl',0)>=0 else 'kc-slate'}">
-                        <div class="kpi-label">P&L Total</div>
-                        <div class="kpi-value" style="color:{'#22C55E' if summ.get('total_pnl',0)>=0 else '#EF4444'}">R${summ.get('total_pnl',0):,.0f}</div>
-                      </div>
-                      <div class="kpi-card kc-blue">
-                        <div class="kpi-label">Capital Final</div>
-                        <div class="kpi-value">R${summ.get('final_capital',bt_capital):,.0f}</div>
-                      </div>
-                    </div>
-                    """, unsafe_allow_html=True)
+                        <div class="kpi-strip" style="margin-top:16px">
+                        <div class="kpi-card kc-blue">
+                            <div class="kpi-label">Trades</div>
+                            <div class="kpi-value">{summ.get('total_trades', 0)}</div>
+                        </div>
+                        <div class="kpi-card {'kc-green' if summ.get('win_rate',0)>=0.5 else 'kc-amber'}">
+                            <div class="kpi-label">Win Rate</div>
+                            <div class="kpi-value" style="color:{'#22C55E' if summ.get('win_rate',0)>=0.5 else '#F59E0B'}">{summ.get('win_rate',0):.1%}</div>
+                        </div>
+                        <div class="kpi-card kc-purple">
+                            <div class="kpi-label">Sharpe</div>
+                            <div class="kpi-value">{summ.get('sharpe',0):.2f}</div>
+                        </div>
+                        <div class="kpi-card kc-amber">
+                            <div class="kpi-label">Max Drawdown</div>
+                            <div class="kpi-value" style="color:#EF4444">{summ.get('max_drawdown',0):.1%}</div>
+                        </div>
+                        <div class="kpi-card {'kc-green' if summ.get('total_pnl',0)>=0 else 'kc-slate'}">
+                            <div class="kpi-label">P&L Total</div>
+                            <div class="kpi-value" style="color:{'#22C55E' if summ.get('total_pnl',0)>=0 else '#EF4444'}">R${summ.get('total_pnl',0):,.0f}</div>
+                        </div>
+                        <div class="kpi-card kc-blue">
+                            <div class="kpi-label">Capital Final</div>
+                            <div class="kpi-value">R${summ.get('final_capital',bt_capital):,.0f}</div>
+                        </div>
+                        </div>
+                        """, unsafe_allow_html=True)
 
                     # Curva de equity (Plotly)
                     try:
@@ -2446,61 +2548,61 @@ def main(skip_page_config: bool = False):
 
                 # Card do plano
                 st.markdown(f"""
-                <div style="background:#0D1421;border:1px solid #1E3A5F;border-radius:12px;
-                            padding:22px;margin-bottom:16px">
-                  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px">
-                    <div>
-                      <div style="font-size:1.4rem;font-weight:900;color:#F1F5F9">{p_exec.underlying}</div>
-                      <div style="font-family:monospace;font-size:0.82rem;color:#334155">{main_leg_exec.ticker}</div>
+                    <div style="background:#0D1421;border:1px solid #1E3A5F;border-radius:12px;
+                                padding:22px;margin-bottom:16px">
+                    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px">
+                        <div>
+                        <div style="font-size:1.4rem;font-weight:900;color:#F1F5F9">{p_exec.underlying}</div>
+                        <div style="font-family:monospace;font-size:0.82rem;color:#334155">{main_leg_exec.ticker}</div>
+                        </div>
+                        <div style="text-align:right">
+                        <div style="font-size:0.72rem;color:#334155">Risk Engine</div>
+                        <div style="font-size:1rem;font-weight:900;color:{verd_color}">{verd_icon} {verdict.verdict_str}</div>
+                        </div>
                     </div>
-                    <div style="text-align:right">
-                      <div style="font-size:0.72rem;color:#334155">Risk Engine</div>
-                      <div style="font-size:1rem;font-weight:900;color:{verd_color}">{verd_icon} {verdict.verdict_str}</div>
-                    </div>
-                  </div>
 
-                  <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px;margin-bottom:16px">
-                    <div style="background:#111827;border:1px solid #1E2D42;border-radius:8px;padding:12px;text-align:center">
-                      <div style="font-size:0.6rem;color:#334155;text-transform:uppercase;letter-spacing:1px">Entrada</div>
-                      <div style="font-size:1.2rem;font-weight:800;color:#3B82F6">R${entry_px:.4f}</div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px;margin-bottom:16px">
+                        <div style="background:#111827;border:1px solid #1E2D42;border-radius:8px;padding:12px;text-align:center">
+                        <div style="font-size:0.6rem;color:#334155;text-transform:uppercase;letter-spacing:1px">Entrada</div>
+                        <div style="font-size:1.2rem;font-weight:800;color:#3B82F6">R${entry_px:.4f}</div>
+                        </div>
+                        <div style="background:#1c0909;border:1px solid #7f1d1d;border-radius:8px;padding:12px;text-align:center">
+                        <div style="font-size:0.6rem;color:#334155;text-transform:uppercase;letter-spacing:1px">Stop</div>
+                        <div style="font-size:1.2rem;font-weight:800;color:#EF4444">R${stop_px:.4f}</div>
+                        <div style="font-size:0.65rem;color:#7f1d1d">−{stop_pct_show:.1f}%</div>
+                        </div>
+                        <div style="background:#052e16;border:1px solid #166534;border-radius:8px;padding:12px;text-align:center">
+                        <div style="font-size:0.6rem;color:#334155;text-transform:uppercase;letter-spacing:1px">Alvo 1</div>
+                        <div style="font-size:1.2rem;font-weight:800;color:#22C55E">R${t1_px:.4f}</div>
+                        <div style="font-size:0.65rem;color:#166534">+{t1_pct_show:.1f}%</div>
+                        </div>
+                        <div style="background:#052e16;border:1px solid #166534;border-radius:8px;padding:12px;text-align:center">
+                        <div style="font-size:0.6rem;color:#334155;text-transform:uppercase;letter-spacing:1px">Alvo 2</div>
+                        <div style="font-size:1.2rem;font-weight:800;color:#4ADE80">R${t2_px:.4f}</div>
+                        <div style="font-size:0.65rem;color:#166534">+{t2_pct_show:.1f}%</div>
+                        </div>
                     </div>
-                    <div style="background:#1c0909;border:1px solid #7f1d1d;border-radius:8px;padding:12px;text-align:center">
-                      <div style="font-size:0.6rem;color:#334155;text-transform:uppercase;letter-spacing:1px">Stop</div>
-                      <div style="font-size:1.2rem;font-weight:800;color:#EF4444">R${stop_px:.4f}</div>
-                      <div style="font-size:0.65rem;color:#7f1d1d">−{stop_pct_show:.1f}%</div>
-                    </div>
-                    <div style="background:#052e16;border:1px solid #166534;border-radius:8px;padding:12px;text-align:center">
-                      <div style="font-size:0.6rem;color:#334155;text-transform:uppercase;letter-spacing:1px">Alvo 1</div>
-                      <div style="font-size:1.2rem;font-weight:800;color:#22C55E">R${t1_px:.4f}</div>
-                      <div style="font-size:0.65rem;color:#166534">+{t1_pct_show:.1f}%</div>
-                    </div>
-                    <div style="background:#052e16;border:1px solid #166534;border-radius:8px;padding:12px;text-align:center">
-                      <div style="font-size:0.6rem;color:#334155;text-transform:uppercase;letter-spacing:1px">Alvo 2</div>
-                      <div style="font-size:1.2rem;font-weight:800;color:#4ADE80">R${t2_px:.4f}</div>
-                      <div style="font-size:0.65rem;color:#166534">+{t2_pct_show:.1f}%</div>
-                    </div>
-                  </div>
 
-                  <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin-bottom:16px">
-                    <div>
-                      <div style="font-size:0.6rem;color:#334155;text-transform:uppercase">Contratos sugeridos</div>
-                      <div style="font-size:1rem;font-weight:800;color:#F1F5F9">{contracts}</div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin-bottom:16px">
+                        <div>
+                        <div style="font-size:0.6rem;color:#334155;text-transform:uppercase">Contratos sugeridos</div>
+                        <div style="font-size:1rem;font-weight:800;color:#F1F5F9">{contracts}</div>
+                        </div>
+                        <div>
+                        <div style="font-size:0.6rem;color:#334155;text-transform:uppercase">Risco financeiro</div>
+                        <div style="font-size:1rem;font-weight:800;color:#EF4444">R${risk_fin:,.0f}</div>
+                        </div>
+                        <div>
+                        <div style="font-size:0.6rem;color:#334155;text-transform:uppercase">R/R Alvo 1</div>
+                        <div style="font-size:1rem;font-weight:800;color:#F1F5F9">{rr_exec:.1f}x</div>
+                        </div>
+                        <div>
+                        <div style="font-size:0.6rem;color:#334155;text-transform:uppercase">P(Lucro)</div>
+                        <div style="font-size:1rem;font-weight:800;color:#F1F5F9">{opp_exec.prob_profit:.1%}</div>
+                        </div>
                     </div>
-                    <div>
-                      <div style="font-size:0.6rem;color:#334155;text-transform:uppercase">Risco financeiro</div>
-                      <div style="font-size:1rem;font-weight:800;color:#EF4444">R${risk_fin:,.0f}</div>
                     </div>
-                    <div>
-                      <div style="font-size:0.6rem;color:#334155;text-transform:uppercase">R/R Alvo 1</div>
-                      <div style="font-size:1rem;font-weight:800;color:#F1F5F9">{rr_exec:.1f}x</div>
-                    </div>
-                    <div>
-                      <div style="font-size:0.6rem;color:#334155;text-transform:uppercase">P(Lucro)</div>
-                      <div style="font-size:1rem;font-weight:800;color:#F1F5F9">{opp_exec.prob_profit:.1%}</div>
-                    </div>
-                  </div>
-                </div>
-                """, unsafe_allow_html=True)
+                    """, unsafe_allow_html=True)
 
                 # Alertas do Risk Engine
                 if verdict.blocks:
@@ -2599,18 +2701,18 @@ def main(skip_page_config: bool = False):
                 for _, row in alerts_df.iterrows():
                     score_html = _score_badge(row.get("score"))
                     st.markdown(f"""
-                    <div style="background:#111827;border-left:3px solid #EF4444;
-                                border-radius:0 8px 8px 0;padding:10px 16px;margin-bottom:8px">
-                      <div style="display:flex;justify-content:space-between;align-items:center">
-                        <div style="font-size:0.82rem;font-weight:700;color:#E2E8F0">
-                          {row.get('titulo','')}</div>
-                        {score_html}
-                      </div>
-                      <div style="font-size:0.68rem;color:#334155;margin-top:4px">
-                        {row.get('fonte','')} · {row.get('categoria','')} · {row.get('data_pub','')}
-                      </div>
-                    </div>
-                    """, unsafe_allow_html=True)
+                        <div style="background:#111827;border-left:3px solid #EF4444;
+                                    border-radius:0 8px 8px 0;padding:10px 16px;margin-bottom:8px">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <div style="font-size:0.82rem;font-weight:700;color:#E2E8F0">
+                            {row.get('titulo','')}</div>
+                            {score_html}
+                        </div>
+                        <div style="font-size:0.68rem;color:#334155;margin-top:4px">
+                            {row.get('fonte','')} · {row.get('categoria','')} · {row.get('data_pub','')}
+                        </div>
+                        </div>
+                        """, unsafe_allow_html=True)
 
             # ── Por ativo scaneado ──
             ativos_scan = sorted({o.payoff.underlying for o in opps})
@@ -2627,21 +2729,30 @@ def main(skip_page_config: bool = False):
                 else:
                     for n in asset_news:
                         score_html = _score_badge(n.get("score"))
-                        resumo     = n.get("resumo_curto") or ""
+                        resumo = n.get("resumo_ia") or n.get("resumo_curto") or ""
+                        sentimento = n.get("sentimento") or "-"
+                        tickers = n.get("tickers") or "-"
+                        risco_opcoes = n.get("risco_opcoes") or "-"
+                        score_vol = n.get("score_volatilidade") or "-"
                         st.markdown(f"""
-                        <div style="background:#111827;border:1px solid #1E2D42;
-                                    border-radius:8px;padding:12px 16px;margin-bottom:8px">
-                          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px">
-                            <div style="font-size:0.84rem;font-weight:700;color:#E2E8F0;flex:1">
-                              {n.get('titulo','')}</div>
-                            {score_html}
-                          </div>
-                          {"<div style='font-size:0.76rem;color:#64748B;margin-top:6px;line-height:1.5'>" + resumo + "</div>" if resumo else ""}
-                          <div style="font-size:0.67rem;color:#334155;margin-top:6px">
-                            {n.get('fonte','')} · {n.get('categoria','')} · {n.get('data_pub','')}
-                          </div>
-                        </div>
-                        """, unsafe_allow_html=True)
+                            <div style="font-size:0.72rem;color:#94A3B8;margin-top:8px;line-height:1.6">
+                            🤖 <b>IA:</b> Sentimento: {sentimento} · Tickers: {tickers} · 
+                            Risco Opções: {risco_opcoes} · Score Vol: {score_vol}
+                            </div>
+                            {"<div style='font-size:0.76rem;color:#64748B;margin-top:6px;line-height:1.5'>" + resumo + "</div>" if resumo else ""}
+                            <div style="background:#111827;border:1px solid #1E2D42;
+                                        border-radius:8px;padding:12px 16px;margin-bottom:8px">
+                            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px">
+                                <div style="font-size:0.84rem;font-weight:700;color:#E2E8F0;flex:1">
+                                {n.get('titulo','')}</div>
+                                {score_html}
+                            </div>
+                            {"<div style='font-size:0.76rem;color:#64748B;margin-top:6px;line-height:1.5'>" + resumo + "</div>" if resumo else ""}
+                            <div style="font-size:0.67rem;color:#334155;margin-top:6px">
+                                {n.get('fonte','')} · {n.get('categoria','')} · {n.get('data_pub','')}
+                            </div>
+                            </div>
+                            """, unsafe_allow_html=True)
 
             # ── Feed geral recente ──
             with st.expander("📋 Feed geral recente (todos os ativos)", expanded=False):
@@ -2651,14 +2762,14 @@ def main(skip_page_config: bool = False):
                 else:
                     for _, row in all_news.iterrows():
                         st.markdown(f"""
-                        <div style="background:#0D1421;border-left:2px solid #1E3A5F;
-                                    padding:8px 14px;margin-bottom:6px;border-radius:0 6px 6px 0">
-                          <div style="font-size:0.8rem;color:#CBD5E1">{row.get('titulo','')}</div>
-                          <div style="font-size:0.65rem;color:#334155;margin-top:3px">
-                            {row.get('fonte','')} · {row.get('categoria','')} · {row.get('data_pub','')}
-                          </div>
-                        </div>
-                        """, unsafe_allow_html=True)
+                            <div style="background:#0D1421;border-left:2px solid #1E3A5F;
+                                        padding:8px 14px;margin-bottom:6px;border-radius:0 6px 6px 0">
+                            <div style="font-size:0.8rem;color:#CBD5E1">{row.get('titulo','')}</div>
+                            <div style="font-size:0.65rem;color:#334155;margin-top:3px">
+                                {row.get('fonte','')} · {row.get('categoria','')} · {row.get('data_pub','')}
+                            </div>
+                            </div>
+                            """, unsafe_allow_html=True)
 
             # ── Botão Telegram: enviar alerta de notícia urgente ──
             st.markdown("---")
@@ -2772,10 +2883,17 @@ def main(skip_page_config: bool = False):
             st.info("Nenhuma estrutura com esses filtros.")
         else:
             from src.options.strategy_report import format_strategy_report
+            for o in filtered[:10]:
+                st.html(_compact_card(o))
+                with st.expander("📊 Detalhes", expanded=False):
+                    st.html(_detail_html(o))
+                    _payoff_chart(o, st, height=320, show_metrics=False)
+
+
             report_txt = "\n\n".join(
                 format_strategy_report(o, o.rank) for o in filtered[:10]
             )
-            st.code(report_txt, language=None)
+
             st.download_button(
                 "⬇️ Baixar Relatório .txt",
                 report_txt.encode("utf-8"),
