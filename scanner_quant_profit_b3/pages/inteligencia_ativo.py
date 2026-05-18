@@ -73,10 +73,10 @@ def main() -> None:
 
     # ── Bull / Bear cases ─────────────────────────────────────────────────
     st.subheader("Cenário Otimista")
-    st.markdown(thesis.get("bull_case", "—"))
+    st.write(thesis.get("bull_case", "—"))   # CR-02: st.write avoids HTML rendering of LLM content
 
     st.subheader("Cenário Pessimista")
-    st.markdown(thesis.get("bear_case", "—"))
+    st.write(thesis.get("bear_case", "—"))   # CR-02: st.write avoids HTML rendering of LLM content
 
     # ── Drivers ───────────────────────────────────────────────────────────
     st.subheader("Drivers de Investimento")
@@ -135,5 +135,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-main()
