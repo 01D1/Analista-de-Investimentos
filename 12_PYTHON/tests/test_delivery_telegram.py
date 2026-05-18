@@ -134,3 +134,46 @@ def test_send_daily_brief_format(monkeypatch):
     # Deve conter dados macro
     assert "14.75" in text or "Selic" in text
     assert "PETR4" in text
+
+
+# ── WR-07: send_morning_call_summary frontmatter stripping ──────────────────
+
+def test_morning_call_strip_frontmatter(monkeypatch, tmp_path):
+    """WR-07: send_morning_call_summary() remove YAML frontmatter corretamente."""
+    sent_texts = []
+
+    def mock_send(self, text, **kwargs):
+        sent_texts.append(text)
+        return True
+
+    monkeypatch.setattr("src.delivery.telegram_bot.TelegramBot.send", mock_send)
+
+    from src.delivery.telegram_bot import TelegramBot
+
+    bot = TelegramBot(token="fake", chat_id="123")
+
+    # Case 1: file with frontmatter — stripped, only body reaches send()
+    f1 = tmp_path / "morning_call_2026-05-18.md"
+    f1.write_text("---\ntitle: test\ndate: 2026-05-18\n---\nCorpo do resumo aqui.", encoding="utf-8")
+    bot.send_morning_call_summary(f1)
+    assert len(sent_texts) == 1
+    assert "Corpo do resumo aqui." in sent_texts[0]
+    assert "title: test" not in sent_texts[0]
+
+    # Case 2: file without frontmatter — full content forwarded
+    sent_texts.clear()
+    f2 = tmp_path / "morning_call_2026-05-19.md"
+    f2.write_text("Sem frontmatter. Conteudo direto.", encoding="utf-8")
+    bot.send_morning_call_summary(f2)
+    assert len(sent_texts) == 1
+    assert "Sem frontmatter. Conteudo direto." in sent_texts[0]
+
+    # Case 3: file where --- appears inside content (not frontmatter closing)
+    sent_texts.clear()
+    f3 = tmp_path / "morning_call_2026-05-20.md"
+    f3.write_text("---\ntitle: test\n---\nCorpo com --- separador horizontal.", encoding="utf-8")
+    bot.send_morning_call_summary(f3)
+    assert len(sent_texts) == 1
+    # Frontmatter must be stripped; body text preserved
+    assert "Corpo com" in sent_texts[0]
+    assert "title: test" not in sent_texts[0]
