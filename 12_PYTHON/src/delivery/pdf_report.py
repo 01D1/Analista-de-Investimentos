@@ -272,10 +272,16 @@ class ReportGenerator(FPDF):
             ("P/L", _fmt_mult(multiples.get("pe_ratio"))),
             ("EV/EBITDA", _fmt_mult(multiples.get("ev_ebitda"))),
         ]
+        def _fmt_yield(v: object) -> str:
+            try:
+                return f"{float(v) * 100:.2f}%"  # type: ignore[arg-type]
+            except (TypeError, ValueError):
+                return "-"
+
         if multiples.get("pbv_ratio") is not None:
             rows.append(("P/VPA", _fmt_mult(multiples.get("pbv_ratio"))))
         if multiples.get("dividend_yield") is not None:
-            rows.append(("Dividend Yield", _fmt_pct(multiples.get("dividend_yield"))))
+            rows.append(("Dividend Yield", _fmt_yield(multiples.get("dividend_yield"))))
         if multiples.get("price") is not None:
             rows.append(("Preco Atual (R$)", _fmt_brl(multiples.get("price"))))
 
