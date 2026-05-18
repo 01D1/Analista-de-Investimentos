@@ -68,6 +68,8 @@ def get_asset_detail(ticker: str) -> dict | None:
     Retorna None se o ticker nao estiver em thesis_latest.
     thesis_json e deserializado via json.loads() antes de retornar.
     """
+    # WR-04: call get_macro_panel() before opening conn to avoid nested open connections
+    macro = get_macro_panel()
     conn = get_connection(DB_PATH)
     try:
         thesis_row = conn.execute(
@@ -103,8 +105,7 @@ def get_asset_detail(ticker: str) -> dict | None:
         ).fetchall()
         result["news"] = [dict(r) for r in news_rows]
 
-        # Macro reutiliza cache compartilhado de get_macro_panel()
-        result["macro"] = get_macro_panel()
+        result["macro"] = macro
         return result
     finally:
         conn.close()  # WR-06: sempre fechar mesmo em excecao
