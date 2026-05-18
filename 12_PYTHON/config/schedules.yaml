@@ -47,10 +47,6 @@ schedules:
     cron: "50 19 * * 1-5"     # seg–sex 19:50 — antes do analyze (20:00) para evitar race (WR-09)
     description: Calcular LTM, múltiplos, DCF e sinais técnicos para watchlist
 
-  - job: intelligence
-    cron: "0 21 * * 1-5"      # seg-sex 21:00 — após financial_engine (19:50)
-    description: Gerar teses estruturadas e sinais de oportunidade
-
   # ── Semanais ──────────────────────────────────────────────
   - job: weekly_review
     cron: "0 10 * * 0"        # domingo 10:00

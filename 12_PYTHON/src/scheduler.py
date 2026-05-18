@@ -424,36 +424,6 @@ def job_news_ingest() -> str:
         return f"news_ingest: inserted={inserted} subprocess_rc={result.returncode}"
 
 
-def job_intelligence() -> str:
-    """Generates AI investment theses and opportunity signals for all tickers — INT-01..06.
-    D-19: registered in _JOB_REGISTRY. Full implementation in Plan 04-04.
-    """
-    from src.intelligence_layer import run_all
-    from src.utils.logger import bind_run_id, get_logger as _get
-
-    _log = _get(__name__)
-    with bind_run_id("intelligence") as run_id:
-        _log.info(f"[intelligence] iniciado — run_id={run_id}")
-        t0 = time.time()
-        results = run_all()
-        ok = sum(1 for r in results if not r.skipped and r.thesis is not None)
-        skipped = sum(1 for r in results if r.skipped)
-        failed = sum(1 for r in results if r.error is not None)
-        duration_ms = int((time.time() - t0) * 1000)
-        _log.info(
-            "[intelligence] summary",
-            source="intelligence",
-            records_inserted=ok,
-            records_updated=0,
-            duration_ms=duration_ms,
-            status="ok" if failed == 0 else "partial",
-            last_ingested_at=datetime.now(timezone.utc).isoformat(),
-            skipped_tickers=skipped,
-            failed_tickers=failed,
-        )
-        return f"intelligence: ok={ok} skipped={skipped} failed={failed}"
-
-
 def job_financial_engine() -> str:
     """Calcula LTM, múltiplos, DCF e sinais técnicos para todos os tickers — FIN-01..06.
     D-03: daily scheduled job; D-12: public job API.
@@ -499,7 +469,6 @@ _JOB_REGISTRY: dict[str, Callable] = {
     "bcb_macro":         job_bcb_macro,          # ING-04
     "news_ingest":       job_news_ingest,        # ING-06/07
     "financial_engine":  job_financial_engine,   # FIN-01..06
-    "intelligence":      job_intelligence,       # INT-01..06 (Phase 4)
 }
 
 

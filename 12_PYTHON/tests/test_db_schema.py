@@ -47,7 +47,7 @@ def test_init_db_is_idempotent(tmp_path):
     ).fetchone()[0]
     conn.close()
 
-    assert count >= 10
+    assert count == 8
 
 
 def test_get_connection_returns_open_connection_with_row_factory(tmp_path):
@@ -75,7 +75,7 @@ def test_all_tables_have_text_pk(tmp_path):
     init_db(db)
     conn = sqlite3.connect(db)
 
-    tables = ["cvm_statements", "macro_series", "price_ohlcv", "news_articles", "thesis_versions", "opportunity_signals"]
+    tables = ["cvm_statements", "macro_series", "price_ohlcv", "news_articles"]
     for table in tables:
         cols = conn.execute(f"PRAGMA table_info({table})").fetchall()
         pk_cols = [c for c in cols if c[5] == 1]  # column 5 is 'pk' flag
@@ -104,33 +104,3 @@ def test_unique_indexes_exist(tmp_path):
     assert "idx_news_url" in indexes, "idx_news_url not found"
 
     conn.close()
-
-
-def test_phase4_schema(tmp_path):
-    """init_db() creates thesis_versions and opportunity_signals tables (Phase 4 — INT-04)."""
-    from src.ingestion.db import init_db
-
-    db = tmp_path / "ingestion.db"
-    init_db(db)
-    conn = sqlite3.connect(db)
-    tables = {r[0] for r in conn.execute(
-        "SELECT name FROM sqlite_master WHERE type='table'"
-    ).fetchall()}
-    conn.close()
-    assert {"thesis_versions", "opportunity_signals"}.issubset(tables), (
-        f"Phase 4 tables missing. Found: {tables}"
-    )
-
-
-def test_thesis_latest_view(tmp_path):
-    """init_db() creates thesis_latest VIEW visible in sqlite_master with type='view' (D-14)."""
-    from src.ingestion.db import init_db
-
-    db = tmp_path / "ingestion.db"
-    init_db(db)
-    conn = sqlite3.connect(db)
-    views = {r[0] for r in conn.execute(
-        "SELECT name FROM sqlite_master WHERE type='view'"
-    ).fetchall()}
-    conn.close()
-    assert "thesis_latest" in views, f"thesis_latest VIEW not found in sqlite_master. Views: {views}"
