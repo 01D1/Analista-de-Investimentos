@@ -35,7 +35,7 @@ from typing import Literal, Optional
 
 from pydantic import BaseModel, Field
 
-from src.ingestion.db import get_connection
+from src.ingestion.db import DB_PATH, get_connection
 from src.utils.errors import IngestionError
 from src.utils.logger import get_logger
 
@@ -575,8 +575,9 @@ def compute_opportunity_signals(
             generated_at=generated_at,
         ))
 
-    # Sort by conviction_score DESC, return top-3 (D-17: filter >= 40 already applied above)
+    # Sort by conviction_score DESC and enforce documented >= 40 threshold (CR-04)
     signals.sort(key=lambda s: s.conviction_score, reverse=True)
+    signals = [s for s in signals if s.conviction_score >= 40]
     return signals[:3]
 
 
@@ -650,7 +651,7 @@ def run_ticker(ticker: str) -> ThesisResult:
     Signals are computed separately in Plan 04-03 (compute_opportunity_signals).
     All SQL parameterized — never f-string with ticker.
     """
-    conn = get_connection()
+    conn = get_connection(DB_PATH)
     try:
         # ── 1. Assemble prompt data ──────────────────────────────────────────
         data = _assemble_prompt_data(ticker, conn)
