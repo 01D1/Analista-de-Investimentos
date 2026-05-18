@@ -198,11 +198,9 @@ def test_get_opportunities(mem_db):
     get_opportunities.clear()
     opps = get_opportunities()
     assert isinstance(opps, list)
-    # Deve ter pelo menos o sinal inserido no fixture (mesmo que seja hoje)
-    # Apenas verificamos a estrutura se retornar resultados
-    if opps:
-        assert "ticker" in opps[0]
-        assert "conviction_score" in opps[0]
+    assert len(opps) >= 1, "fixture should produce at least one opportunity signal"
+    assert "ticker" in opps[0]
+    assert "conviction_score" in opps[0]
 
 
 def test_cache_decorators_present():
