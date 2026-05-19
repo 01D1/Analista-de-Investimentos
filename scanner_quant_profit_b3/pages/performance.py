@@ -589,11 +589,4 @@ def main():
                 st.error(f"Erro ao ler CSV: {e}")
 
 
-if __name__ == "__main__":
-    st.set_page_config(
-        page_title="Performance · Radar Quant",
-        page_icon="📈",
-        layout="wide",
-        initial_sidebar_state="expanded",
-    )
-    main()
+main()

@@ -5,24 +5,24 @@ import sys
 from pathlib import Path
 
 SCANNER_ROOT  = Path(__file__).resolve().parents[1]   # scanner_quant_profit_b3/
-PIPELINE_ROOT = SCANNER_ROOT.parent / "12_PYTHON"     # Analista de Investimentos/12_PYTHON/
+root_str = str(SCANNER_ROOT)
+if root_str in sys.path:
+    sys.path.remove(root_str)
+sys.path.insert(0, root_str)
 
-# Clear cached src so Python re-resolves with pipeline root first.
-# Needed because radar_quant/performance load scanner's src first, which
-# shadows pipeline's src.utils.logger that data.py depends on.
+# pipeline root must precede scanner root so data.py gets src.utils.logger (pipeline pkg)
+_PIPELINE_ROOT = str(SCANNER_ROOT.parent / "12_PYTHON")
+if _PIPELINE_ROOT in sys.path:
+    sys.path.remove(_PIPELINE_ROOT)
+sys.path.insert(0, _PIPELINE_ROOT)
 for _k in list(sys.modules):
-    if _k == "src" or _k.startswith("src."):
+    if _k in ("src", "src.utils") or _k.startswith("src.utils."):
         del sys.modules[_k]
-
-if str(PIPELINE_ROOT) in sys.path:
-    sys.path.remove(str(PIPELINE_ROOT))
-sys.path.insert(0, str(PIPELINE_ROOT))
-if str(SCANNER_ROOT) not in sys.path:
-    sys.path.append(str(SCANNER_ROOT))
 
 import streamlit as st
 
 from _style import DARK_CSS
+from src.data_quality.ri_sites import get_valid_ri_url_for_ticker
 from src.dashboard.data import get_watchlist_summary, get_asset_detail
 
 # ---------------------------------------------------------------------------
@@ -79,6 +79,12 @@ def main() -> None:
     with col3:
         upside = detail.get("dcf", {}).get("upside_pct")
         st.metric("Upside", f"{upside:+.1f}%" if upside is not None else "—")
+
+    ri_url = get_valid_ri_url_for_ticker(ticker)
+    if ri_url:
+        st.link_button("Site de RI", ri_url)
+    else:
+        st.caption("RI pendente de validação")
 
     # ── Bull / Bear cases ─────────────────────────────────────────────────
     st.subheader("Cenário Otimista")
@@ -142,5 +148,4 @@ def main() -> None:
     st.caption(f"Atualizado em: {generated_at}")
 
 
-if __name__ == "__main__":
-    main()
+main()

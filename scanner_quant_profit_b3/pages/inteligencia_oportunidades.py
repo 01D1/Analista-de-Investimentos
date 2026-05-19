@@ -5,17 +5,18 @@ import sys
 from pathlib import Path
 
 SCANNER_ROOT  = Path(__file__).resolve().parents[1]   # scanner_quant_profit_b3/
-PIPELINE_ROOT = SCANNER_ROOT.parent / "12_PYTHON"     # Analista de Investimentos/12_PYTHON/
+root_str = str(SCANNER_ROOT)
+if root_str in sys.path:
+    sys.path.remove(root_str)
+sys.path.insert(0, root_str)
 
+_PIPELINE_ROOT = str(SCANNER_ROOT.parent / "12_PYTHON")
+if _PIPELINE_ROOT in sys.path:
+    sys.path.remove(_PIPELINE_ROOT)
+sys.path.insert(0, _PIPELINE_ROOT)
 for _k in list(sys.modules):
-    if _k == "src" or _k.startswith("src."):
+    if _k in ("src", "src.utils") or _k.startswith("src.utils."):
         del sys.modules[_k]
-
-if str(PIPELINE_ROOT) in sys.path:
-    sys.path.remove(str(PIPELINE_ROOT))
-sys.path.insert(0, str(PIPELINE_ROOT))
-if str(SCANNER_ROOT) not in sys.path:
-    sys.path.append(str(SCANNER_ROOT))
 
 import streamlit as st
 
@@ -72,5 +73,4 @@ def main() -> None:
         st.markdown("---")
 
 
-if __name__ == "__main__":
-    main()
+main()

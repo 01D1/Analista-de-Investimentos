@@ -276,5 +276,4 @@ def main():
             st.code(_leitura_log(ult_log_pl), language="")
 
 
-if __name__ == "__main__":
-    main()
+main()
