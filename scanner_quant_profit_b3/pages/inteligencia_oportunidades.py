@@ -1,10 +1,11 @@
-"""Oportunidades de Investimento — Phase 5 DEL-01."""
+"""Oportunidades de Investimento — Premium UI (Phase 5 DEL-01)."""
 from __future__ import annotations
 
 import sys
 from pathlib import Path
 
-SCANNER_ROOT  = Path(__file__).resolve().parents[1]   # scanner_quant_profit_b3/
+# ── Path setup ─────────────────────────────────────────────────────────────────
+SCANNER_ROOT = Path(__file__).resolve().parents[1]
 root_str = str(SCANNER_ROOT)
 if root_str in sys.path:
     sys.path.remove(root_str)
@@ -20,57 +21,77 @@ for _k in list(sys.modules):
 
 import streamlit as st
 
-from _style import DARK_CSS
+from src.ui.styles import PREMIUM_CSS
+from src.ui.components import (
+    opportunity_card,
+    section_title,
+    empty_state,
+)
 from src.dashboard.data import get_opportunities
 
-# ---------------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------------
 
-_SIGNAL_COLORS = {
-    "DCF_DIVERGENCE":     "background-color:#3B82F6;color:white",
-    "MOMENTUM_CROSSOVER": "background-color:#ca8a04;color:white",
-    "IPE_EVENT":          "background-color:#1E3A5F;color:#93C5FD",
-}
-
-
-# ---------------------------------------------------------------------------
-# Page
-# ---------------------------------------------------------------------------
+# ── Page ──────────────────────────────────────────────────────────────────────
 
 def main() -> None:
-    st.markdown(DARK_CSS, unsafe_allow_html=True)
-    st.title("Oportunidades de Investimento")
+    st.markdown(PREMIUM_CSS, unsafe_allow_html=True)
+
+    # ── Page header ──────────────────────────────────────────────────────────
+    st.markdown(
+        """
+<div class="page-header">
+  <div class="page-header-title">Top Oportunidades Quantitativas</div>
+  <div class="page-header-sub">Sinais de alta convicção identificados pelo motor de inteligencia</div>
+</div>""",
+        unsafe_allow_html=True,
+    )
 
     opps = get_opportunities()
 
     if not opps:
-        st.info("Nenhum sinal de oportunidade encontrado para hoje.")
+        empty_state("Nenhum sinal de oportunidade encontrado para hoje.", icon="")
         st.stop()
 
-    for opp in opps:
-        col1, col2, col3, col4 = st.columns([1, 3, 1, 2])
+    # ── Conviction score threshold filter ────────────────────────────────────
+    min_score = st.slider(
+        "Conviction score minimo:",
+        min_value=0,
+        max_value=100,
+        value=0,
+        step=5,
+        format="%d",
+    )
 
-        with col1:
-            st.markdown(f"**{opp['ticker']}**")
+    filtered = [o for o in opps if int(o.get("conviction_score") or 0) >= min_score]
 
-        with col2:
-            st.write(opp["description"])
+    # ── Section title ─────────────────────────────────────────────────────────
+    section_title(
+        "{0} oportunidades com score >= {1}".format(len(filtered), min_score),
+        icon="",
+    )
 
-        with col3:
-            signal_type = opp["signal_type"]
-            badge_style = _SIGNAL_COLORS.get(signal_type, "background-color:#475569;color:white")
-            st.markdown(
-                f'<span style="{badge_style}; padding:2px 8px; border-radius:4px; '
-                f'font-size:0.75rem">{signal_type}</span>',
-                unsafe_allow_html=True,
-            )
+    if not filtered:
+        empty_state(
+            "Nenhuma oportunidade com conviction score >= {0}.".format(min_score),
+            icon="",
+        )
+        st.stop()
 
-        with col4:
-            score = opp.get("conviction_score", 0)
-            st.progress(score / 100, text=f"{score}/100")
-
-        st.markdown("---")
+    # ── Cards grid (2 per row) ────────────────────────────────────────────────
+    cards_per_row = 2
+    for row_start in range(0, len(filtered), cards_per_row):
+        chunk = filtered[row_start : row_start + cards_per_row]
+        cols = st.columns(len(chunk))
+        for col, opp in zip(cols, chunk):
+            with col:
+                st.markdown(
+                    opportunity_card(
+                        ticker=opp.get("ticker", "—"),
+                        description=opp.get("description", ""),
+                        signal_type=opp.get("signal_type", ""),
+                        conviction_score=int(opp.get("conviction_score") or 0),
+                    ),
+                    unsafe_allow_html=True,
+                )
 
 
 main()

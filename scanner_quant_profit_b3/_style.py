@@ -1,4 +1,8 @@
-"""Shared dark theme CSS for scanner_quant_profit_b3 pages."""
+"""Shared dark theme CSS for scanner_quant_profit_b3 pages.
+
+DARK_CSS  — original dark theme (kept for backward compatibility)
+PREMIUM_CSS is imported from src.ui.styles for the intelligence pages.
+"""
 
 DARK_CSS: str = """
 <style>

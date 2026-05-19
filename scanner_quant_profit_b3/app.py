@@ -6,13 +6,37 @@ Navegação horizontal no topo — funciona em desktop, mobile e Cloudflare.
 import sys
 from pathlib import Path
 
-# Ensure scanner root is on sys.path for _style import
-_SCANNER_ROOT = Path(__file__).resolve().parent
-if str(_SCANNER_ROOT) not in sys.path:
-    sys.path.insert(0, str(_SCANNER_ROOT))
+ROOT = Path(__file__).resolve().parent
+
+# força a raiz do scanner no topo
+if str(ROOT) in sys.path:
+    sys.path.remove(str(ROOT))
+
+sys.path.insert(0, str(ROOT))
+
+# agora importa normalmente
+import streamlit as st
+
+from src.bootstrap import ensure_project_root
+ensure_project_root()
+
+from _style import DARK_CSS
+
+# Remove qualquer ocorrência anterior da raiz para recolocar no topo
+root_str = str(ROOT)
+if root_str in sys.path:
+    sys.path.remove(root_str)
+
+# Garante que scanner_quant_profit_b3 venha antes de 12_PYTHON/src
+sys.path.insert(0, root_str)
 
 import streamlit as st
-from _style import DARK_CSS  # WR-05: single source of truth for CSS
+from _style import DARK_CSS
+
+try:
+    from src.ui.styles import PREMIUM_CSS as _PREMIUM_CSS
+except Exception:
+    _PREMIUM_CSS = DARK_CSS
 
 st.set_page_config(
     page_title="Plataforma Quant · B3",
@@ -21,8 +45,8 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-# ── CSS global ────────────────────────────────────────────────────────────────
-st.markdown(DARK_CSS, unsafe_allow_html=True)
+# ── CSS global (premium includes all dark base styles) ───────────────────────
+st.markdown(_PREMIUM_CSS, unsafe_allow_html=True)
 
 # ── Navegação superior ────────────────────────────────────────────────────────
 _PAGES = [
