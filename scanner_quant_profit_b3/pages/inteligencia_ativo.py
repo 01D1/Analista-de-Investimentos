@@ -7,9 +7,18 @@ from pathlib import Path
 SCANNER_ROOT  = Path(__file__).resolve().parents[1]   # scanner_quant_profit_b3/
 PIPELINE_ROOT = SCANNER_ROOT.parent / "12_PYTHON"     # Analista de Investimentos/12_PYTHON/
 
-for _p in (str(PIPELINE_ROOT), str(SCANNER_ROOT)):
-    if _p not in sys.path:
-        sys.path.insert(0, _p)
+# Clear cached src so Python re-resolves with pipeline root first.
+# Needed because radar_quant/performance load scanner's src first, which
+# shadows pipeline's src.utils.logger that data.py depends on.
+for _k in list(sys.modules):
+    if _k == "src" or _k.startswith("src."):
+        del sys.modules[_k]
+
+if str(PIPELINE_ROOT) in sys.path:
+    sys.path.remove(str(PIPELINE_ROOT))
+sys.path.insert(0, str(PIPELINE_ROOT))
+if str(SCANNER_ROOT) not in sys.path:
+    sys.path.append(str(SCANNER_ROOT))
 
 import streamlit as st
 

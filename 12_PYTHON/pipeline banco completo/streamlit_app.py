@@ -750,7 +750,7 @@ def _tab_visao_geral(tickers: list[str], score_min: float, alert_filter: list) -
                 if st.button("▶ Ver análise", key=f"pick_btn_{i}", use_container_width=True):
                     st.session_state["detail_ticker"] = t
 
-        if "detail_ticker" in st.session_state:
+        if st.session_state.get("detail_ticker"):
             sel_t = st.session_state["detail_ticker"]
             sel_d = _load_ticker_data(sel_t)
             st.markdown(

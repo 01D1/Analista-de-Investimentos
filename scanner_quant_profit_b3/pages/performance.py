@@ -12,9 +12,18 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
+ROOT          = Path(__file__).resolve().parents[1]
+PIPELINE_ROOT = ROOT.parent / "12_PYTHON"
+
+for _k in list(sys.modules):
+    if _k == "src" or _k.startswith("src."):
+        del sys.modules[_k]
+
+if str(ROOT) in sys.path:
+    sys.path.remove(str(ROOT))
+sys.path.insert(0, str(ROOT))
+if str(PIPELINE_ROOT) not in sys.path:
+    sys.path.append(str(PIPELINE_ROOT))
 
 import streamlit as st
 import pandas as pd

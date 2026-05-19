@@ -7,9 +7,15 @@ from pathlib import Path
 SCANNER_ROOT  = Path(__file__).resolve().parents[1]   # scanner_quant_profit_b3/
 PIPELINE_ROOT = SCANNER_ROOT.parent / "12_PYTHON"     # Analista de Investimentos/12_PYTHON/
 
-for _p in (str(PIPELINE_ROOT), str(SCANNER_ROOT)):
-    if _p not in sys.path:
-        sys.path.insert(0, _p)
+for _k in list(sys.modules):
+    if _k == "src" or _k.startswith("src."):
+        del sys.modules[_k]
+
+if str(PIPELINE_ROOT) in sys.path:
+    sys.path.remove(str(PIPELINE_ROOT))
+sys.path.insert(0, str(PIPELINE_ROOT))
+if str(SCANNER_ROOT) not in sys.path:
+    sys.path.append(str(SCANNER_ROOT))
 
 import streamlit as st
 import plotly.graph_objects as go
