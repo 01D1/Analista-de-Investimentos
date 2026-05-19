@@ -923,26 +923,143 @@ def _tab_valuation(ticker: str) -> None:
         """.format(ticker), unsafe_allow_html=True)
         return
 
-    # Mostra as métricas chave do summary de forma humanizada
-    st.markdown(
-        '<div class="sec-title">📈 Resumo Numérico</div>',
-        unsafe_allow_html=True,
+    res      = summary.get("resultado_avaliacao") or {}
+    intel    = summary.get("inteligencia") or {}
+    qual_s   = summary.get("qualidade") or {}
+    premissas= (summary.get("premissas_audit") or {})
+    prem_val = premissas.get("valores") or {}
+    nome     = summary.get("nome", ticker)
+
+    # ── valores principais ────────────────────────────────────────────────────
+    cotacao     = prem_val.get("cotacao_on") or prem_val.get("cotacao_pn")
+    preco_justo = res.get("preco_justo_on") or res.get("preco_justo_pn")
+    upside_raw  = res.get("upside") or res.get("upside_on") or res.get("upside_pn")
+    tir_raw     = res.get("tir_on") or res.get("tir_pn")
+    equity_mm   = res.get("equity_mm") or res.get("valor_equity") or res.get("equidade_mm")
+    recomendacao= str(intel.get("recomendacao") or "—").upper()
+    score_intel = intel.get("score") or intel.get("pontuacao") or 0
+    risco       = str(intel.get("risco") or "—").upper()
+    confianca   = str(intel.get("confianca") or "—").upper()
+    tese        = intel.get("tese") or ""
+    status_val  = qual_s.get("avaliacao_de_status") or qual_s.get("status") or "—"
+
+    # normaliza upside para %
+    try:
+        upside_pct = float(upside_raw) * 100 if upside_raw is not None and abs(float(upside_raw)) < 50 else float(upside_raw or 0)
+    except (TypeError, ValueError):
+        upside_pct = None
+
+    try:
+        tir_pct = float(tir_raw) * 100 if tir_raw is not None and abs(float(tir_raw)) < 2 else float(tir_raw or 0)
+    except (TypeError, ValueError):
+        tir_pct = None
+
+    # ── badge de recomendação ─────────────────────────────────────────────────
+    rec_lower = recomendacao.lower()
+    if "buy" in rec_lower or "compra" in rec_lower or "forte" in rec_lower:
+        rec_badge = f'<span class="badge b-compra">🟢 {recomendacao}</span>'
+        card_color = "#22C55E"
+        kc_class = "kc-green"
+    elif "preliminar" in rec_lower or "obs" in rec_lower or "watch" in rec_lower:
+        rec_badge = f'<span class="badge b-obs">🟡 {recomendacao}</span>'
+        card_color = "#F59E0B"
+        kc_class = "kc-amber"
+    else:
+        rec_badge = f'<span class="badge b-alerta">🔴 {recomendacao}</span>'
+        card_color = "#EF4444"
+        kc_class = "kc-red"
+
+    risco_badge = (
+        '<span class="badge b-compra">BAIXO</span>' if "BAIXO" in risco else
+        '<span class="badge b-obs">MÉDIO</span>'    if "MEDIO" in risco or "MÉDIO" in risco else
+        '<span class="badge b-alerta">ALTO</span>'
     )
 
-    # Métricas principais (se existirem)
-    keys_of_interest = ["ticker", "preco_justo", "upside", "tir", "ev_ebitda", "p_l", "dividend_yield"]
-    cols_data = {k: summary.get(k) for k in keys_of_interest if k in summary}
+    # ── KPI strip ─────────────────────────────────────────────────────────────
+    st.markdown('<div class="sec-title">📈 Resumo Numérico</div>', unsafe_allow_html=True)
 
-    if cols_data:
-        col_groups = list(cols_data.items())
-        chunk_size = 4
-        for i in range(0, len(col_groups), chunk_size):
-            chunk = col_groups[i : i + chunk_size]
-            cols  = st.columns(len(chunk))
-            for col, (k, v) in zip(cols, chunk):
-                col.metric(k.replace("_", " ").title(), v)
+    def _kpi(label, value, sub="", color_class="kc-blue"):
+        return f"""
+        <div class="kpi-card {color_class}">
+          <div class="kpi-label">{label}</div>
+          <div class="kpi-value">{value}</div>
+          <div class="kpi-sub">{sub}</div>
+        </div>"""
 
-    # JSON completo em expander escuro
+    cotacao_fmt     = f"R$ {float(cotacao):.2f}"   if cotacao     else "—"
+    preco_justo_fmt = f"R$ {float(preco_justo):.2f}" if preco_justo else "—"
+    upside_fmt      = f"{upside_pct:+.1f}%"         if upside_pct is not None else "—"
+    tir_fmt         = f"{tir_pct:.1f}%"             if tir_pct    is not None else "—"
+    equity_fmt      = f"R$ {float(equity_mm)/1000:.0f}B" if equity_mm else "—"
+    score_fmt       = f"{int(score_intel)}/100"
+
+    upside_kc = "kc-green" if (upside_pct or 0) >= 15 else "kc-amber" if (upside_pct or 0) >= 5 else "kc-red"
+    tir_kc    = "kc-green" if (tir_pct or 0) >= 12    else "kc-amber" if (tir_pct or 0) >= 8  else "kc-red"
+
+    st.markdown(f"""
+    <div class="kpi-strip">
+      {_kpi("Cotação Atual", cotacao_fmt, "último pregão", "kc-blue")}
+      {_kpi("Preço Justo", preco_justo_fmt, "DCF / Ke", "kc-purple")}
+      {_kpi("Upside", upside_fmt, "vs. cotação", upside_kc)}
+      {_kpi("TIR", tir_fmt, "retorno implícito", tir_kc)}
+      {_kpi("Score Intel.", score_fmt, risco.lower() + " risco", kc_class)}
+      {_kpi("Equity Value", equity_fmt, status_val.lower(), "kc-blue")}
+    </div>
+    """, unsafe_allow_html=True)
+
+    # ── Recomendação + tese ───────────────────────────────────────────────────
+    st.markdown('<div class="sec-title">🧠 Tese de Investimento</div>', unsafe_allow_html=True)
+    st.markdown(f"""
+    <div class="ac ac-{'buy' if 'buy' in rec_lower or 'compra' in rec_lower else 'watch' if 'obs' in rec_lower or 'prelim' in rec_lower else 'alert'}">
+      <div class="ac-head">
+        <div class="ac-title-row">
+          <div>
+            <div class="ac-ativo">{ticker} <span style="font-size:0.85rem;font-weight:400;color:#475569">· {nome}</span></div>
+            <div class="ac-meta">
+              {rec_badge}
+              {risco_badge}
+              <span class="badge b-neutro">Confiança: {confianca}</span>
+              <span class="badge b-neutro">{status_val}</span>
+            </div>
+          </div>
+          <div class="ac-score-block">
+            <div class="ac-score-val" style="color:{card_color}">{int(score_intel)}</div>
+            <div style="font-size:0.58rem;color:#334155;text-transform:uppercase">score</div>
+          </div>
+        </div>
+      </div>
+      <div class="ac-body">
+        <p class="human-text">{tese or "Tese não disponível — execute o pipeline para gerar."}</p>
+      </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # ── Grade de premissas ────────────────────────────────────────────────────
+    st.markdown('<div class="sec-title">⚙️ Premissas do Modelo</div>', unsafe_allow_html=True)
+
+    prem_display = [
+        ("Motor",           prem_val.get("motor") or summary.get("tipo_empresa", "—")),
+        ("Beta utilizado",  prem_val.get("beta_usado") or prem_val.get("beta_usar")),
+        ("g perpetuidade",  f"{float(prem_val['g_perpetuidade'])*100:.1f}%" if prem_val.get("g_perpetuidade") else "—"),
+        ("Margem EBITDA alvo", f"{float(prem_val['margem_ebitda_alvo'])*100:.1f}%" if prem_val.get("margem_ebitda_alvo") else "—"),
+        ("CAPEX/Receita",   f"{float(prem_val['capex_pct_receita'])*100:.1f}%" if prem_val.get("capex_pct_receita") else "—"),
+        ("NIM alvo",        f"{float(prem_val['nim_alvo'])*100:.1f}%" if prem_val.get("nim_alvo") and float(prem_val.get("nim_alvo",0)) < 1 else "—"),
+        ("Payout",          f"{float(prem_val['pagamento'])*100:.0f}%" if prem_val.get("pagamento") else "—"),
+        ("Classe principal",prem_val.get("classe_principal") or "—"),
+    ]
+    # exibe em grid 2 colunas
+    visible = [(k, v) for k, v in prem_display if v and v != "—"]
+    if visible:
+        col1, col2 = st.columns(2)
+        for i, (k, v) in enumerate(visible):
+            with (col1 if i % 2 == 0 else col2):
+                st.markdown(f"""
+                <div class="ac-row" style="border-bottom:1px solid #1E2D42;padding:6px 0">
+                  <span class="ac-dk">{k}</span>
+                  <span class="ac-dv">{v}</span>
+                </div>""", unsafe_allow_html=True)
+
+    # ── JSON completo colapsado ───────────────────────────────────────────────
     with st.expander("🔍 Dados completos (JSON)", expanded=False):
         st.json(summary)
 
