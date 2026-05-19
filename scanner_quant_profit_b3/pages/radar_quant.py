@@ -20,3 +20,12 @@ import streamlit as st
 
 from src.utils import load_config
 from src.options.flow_engine import FlowResult, compute_flow, compute_flow_from_db, flow_html
+
+from _style import DARK_CSS
+
+st.markdown(DARK_CSS, unsafe_allow_html=True)
+st.title("Radar Quant — Scanner B3")
+st.info(
+    "Página em construção. Execute o pipeline de coleta (COTAHIST) "
+    "e reinicie o app para visualizar os sinais quantitativos."
+)
