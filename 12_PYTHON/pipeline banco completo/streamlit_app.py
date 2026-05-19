@@ -1059,9 +1059,13 @@ def _tab_valuation(ticker: str) -> None:
                   <span class="ac-dv">{v}</span>
                 </div>""", unsafe_allow_html=True)
 
-    # ── JSON completo colapsado ───────────────────────────────────────────────
-    with st.expander("🔍 Dados completos (JSON)", expanded=False):
-        st.json(summary)
+    # ── link para aba de auditoria ────────────────────────────────────────────
+    st.markdown(
+        '<p style="font-size:0.7rem;color:#334155;margin-top:18px">'
+        '💡 Dados brutos e artefatos de auditoria disponíveis na aba <strong style="color:#475569">Status de Qualidade</strong>.'
+        '</p>',
+        unsafe_allow_html=True,
+    )
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -1100,14 +1104,18 @@ def _tab_status_qualidade(ticker: str) -> None:
     else:
         st.success("Nenhum alerta critico registrado nos ultimos outputs.")
 
-    with st.expander("Artefatos de auditoria", expanded=False):
+    with st.expander("🔍 Artefatos de auditoria (debug)", expanded=False):
+        st.markdown('<p style="font-size:0.72rem;color:#475569;margin-bottom:8px">Paths e run_id para rastreabilidade</p>', unsafe_allow_html=True)
         st.json({
-            "run_summary": summary.get("run_id"),
+            "run_id": summary.get("run_id"),
             "excel": summary.get("output_excel"),
             "post_excel_quality": excel_quality.get("markdown_path"),
             "premissas": (summary.get("premissas_audit") or {}).get("markdown_path"),
             "qualitativo": qualitative.get("ticker"),
         })
+    with st.expander("📄 Run Summary completo (JSON bruto)", expanded=False):
+        st.markdown('<p style="font-size:0.72rem;color:#475569;margin-bottom:8px">Todos os campos do último processamento</p>', unsafe_allow_html=True)
+        st.json(summary)
 
 
 def main(skip_page_config: bool = False) -> None:
