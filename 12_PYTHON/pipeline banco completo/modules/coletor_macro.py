@@ -381,6 +381,10 @@ class ColetorMacro:
 
     # ── Focus/Expectativas (BCB) ──────────────────────────────────────────────
 
+    def _focus_cache_path(self, indicador: str) -> Path:
+        nome = f"focus_{indicador.lower().replace('-', '_').replace(' ', '_')}.json"
+        return self.cache_dir / nome
+
     def expectativas_focus(self, indicador: str = "Selic",
                             n_periodos: int = 10) -> dict:
         """
@@ -390,6 +394,17 @@ class ColetorMacro:
         Returns:
             dict {ano: mediana}
         """
+        cache_p = self._focus_cache_path(indicador)
+
+        if self.usar_cache and self._cache_valido(cache_p, ttl_horas=12):
+            try:
+                with open(cache_p, "r", encoding="utf-8") as f:
+                    resultado = {int(k): v for k, v in json.load(f).items()}
+                logger.debug(f"Cache Focus HIT: {indicador}")
+                return resultado
+            except Exception:
+                pass
+
         url = (
             "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/"
             "odata/ExpectativasMercadoAnuais"
@@ -428,12 +443,24 @@ class ColetorMacro:
                 except Exception:
                     continue
 
+            if resultado and self.usar_cache:
+                with open(cache_p, "w", encoding="utf-8") as f:
+                    json.dump(resultado, f)
+
             logger.info(f"Expectativas Focus ({indicador}): "
                         f"{list(resultado.items())[:5]}")
             return resultado
 
         except Exception as e:
             logger.warning(f"Não foi possível obter Focus {indicador}: {e}")
+            if self.usar_cache and cache_p.exists():
+                try:
+                    with open(cache_p, "r", encoding="utf-8") as f:
+                        resultado = {int(k): v for k, v in json.load(f).items()}
+                    logger.warning(f"Usando cache Focus expirado para {indicador}")
+                    return resultado
+                except Exception:
+                    pass
             return {}
 
     def selic_projetada(self, anos: list[int]) -> dict[int, float]:
