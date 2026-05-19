@@ -2,23 +2,39 @@
 Módulo 02 — Coletor de Dados de Mercado
 Busca preços, cotações, volumes e dados para cálculo de beta.
 
-Fonte principal: yfinance (Yahoo Finance)
-Fonte alternativa: B3 (scraping público)
+Fonte principal: COTAHIST local (SQLite — scanner_quant.db)
+Fonte alternativa: yfinance (Yahoo Finance)
+Terceira opção: B3 (scraping público via Fundamentus)
 """
 
 import json
 import logging
 import re
+import sqlite3
 from datetime import datetime, timedelta
 from html import unescape
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Tuple
 from urllib.request import Request, urlopen
 
 import pandas as pd
 import yfinance as yf
 
 logger = logging.getLogger("pipeline.mercado")
+
+# Caminho padrão para o banco COTAHIST do scanner_quant.
+# Resolvido em relação ao diretório deste arquivo:
+# modules/ → pipeline banco completo/ → 12_PYTHON/ → OBSIDIAN/ → scanner_quant_profit_b3/
+_DEFAULT_COTAHIST_DB = (
+    Path(__file__).parent.parent.parent.parent
+    / "scanner_quant_profit_b3"
+    / "data"
+    / "database"
+    / "scanner_quant.db"
+)
+
+# Máximo de dias úteis de atraso tolerados antes de considerar dado COTAHIST como stale.
+_COTAHIST_MAX_STALE_BDAYS = 5
 
 
 class ColetorMercado:
@@ -29,11 +45,164 @@ class ColetorMercado:
     JANELA_BETA   = 252   # dias úteis (1 ano)
     MIN_PONTOS    = 60    # mínimo de pontos para calcular beta
 
-    def __init__(self, cache_dir: Path, usar_cache: bool = True):
+    def __init__(self, cache_dir: Path, usar_cache: bool = True,
+                 cotahist_db: Optional[Path] = None):
         self.cache_dir  = Path(cache_dir)
         self.usar_cache = usar_cache
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self._cache: dict = {}
+        # Resolve COTAHIST DB path — falls back to default if not supplied.
+        self.cotahist_db = Path(cotahist_db) if cotahist_db else _DEFAULT_COTAHIST_DB
+
+    # ── COTAHIST (SQLite local) ───────────────────────────────────────────────
+
+    @staticmethod
+    def _strip_sa(ticker: str) -> str:
+        """Remove .SA suffix so COTAHIST tickers match (e.g. WEGE3.SA → WEGE3)."""
+        t = ticker.upper().strip()
+        if t.endswith(".SA"):
+            t = t[:-3]
+        return t
+
+    @staticmethod
+    def _bdays_since(trade_date_str: str) -> int:
+        """Return the number of business days between trade_date_str and today."""
+        try:
+            last = datetime.strptime(trade_date_str, "%Y-%m-%d").date()
+        except (ValueError, TypeError):
+            return 9999
+        today = datetime.today().date()
+        if last >= today:
+            return 0
+        # Count weekdays only (no holiday calendar — conservative approximation)
+        bdays = 0
+        current = last
+        while current < today:
+            current += timedelta(days=1)
+            if current.weekday() < 5:  # Mon–Fri
+                bdays += 1
+        return bdays
+
+    def _get_price_from_cotahist(
+        self, ticker_b3: str
+    ) -> Optional[Tuple[float, str]]:
+        """
+        Query COTAHIST SQLite for the latest close price of *ticker_b3*.
+
+        Args:
+            ticker_b3: B3 ticker with or without .SA suffix.
+
+        Returns:
+            (close_price, trade_date_str) if data exists and is not stale,
+            None otherwise.
+        """
+        if not self.cotahist_db.exists():
+            logger.debug("[cotahist_local] DB não encontrado: %s", self.cotahist_db)
+            return None
+
+        ticker_plain = self._strip_sa(ticker_b3)
+        # Índices (^BVSP) não existem no COTAHIST — skip.
+        if ticker_plain.startswith("^"):
+            return None
+
+        try:
+            with sqlite3.connect(str(self.cotahist_db)) as con:
+                cur = con.execute(
+                    """
+                    SELECT close, trade_date
+                    FROM   cotahist_daily
+                    WHERE  ticker = ?
+                      AND  market_type = '010'   -- mercado à vista
+                    ORDER  BY trade_date DESC
+                    LIMIT  1
+                    """,
+                    (ticker_plain,),
+                )
+                row = cur.fetchone()
+        except Exception as exc:
+            logger.debug("[cotahist_local] Erro ao consultar DB: %s", exc)
+            return None
+
+        if not row:
+            logger.debug("[cotahist_local] Ticker não encontrado: %s", ticker_plain)
+            return None
+
+        close_price, trade_date = row
+        stale_bdays = self._bdays_since(trade_date)
+        if stale_bdays > _COTAHIST_MAX_STALE_BDAYS:
+            logger.debug(
+                "[cotahist_local] Dado antigo (%d dias úteis) para %s — usando yfinance",
+                stale_bdays, ticker_plain,
+            )
+            return None
+
+        logger.info(
+            "[cotahist_local] Preço %s: %.2f em %s (%d bd atrás)",
+            ticker_plain, close_price, trade_date, stale_bdays,
+        )
+        return (float(close_price), trade_date)
+
+    def _get_history_from_cotahist(
+        self, ticker_b3: str, start_date: str
+    ) -> Optional[pd.DataFrame]:
+        """
+        Return a price history DataFrame from COTAHIST for use in beta calculation.
+
+        Args:
+            ticker_b3:  B3 ticker (with or without .SA).
+            start_date: ISO date string "YYYY-MM-DD" — inclusive lower bound.
+
+        Returns:
+            DataFrame indexed by date with columns matching yfinance output
+            (Open, High, Low, Close, Volume) or None if unavailable/stale.
+        """
+        if not self.cotahist_db.exists():
+            return None
+
+        ticker_plain = self._strip_sa(ticker_b3)
+        if ticker_plain.startswith("^"):
+            return None
+
+        try:
+            with sqlite3.connect(str(self.cotahist_db)) as con:
+                df = pd.read_sql_query(
+                    """
+                    SELECT trade_date, open, high, low, close, volume, trades
+                    FROM   cotahist_daily
+                    WHERE  ticker     = ?
+                      AND  market_type = '010'
+                      AND  trade_date >= ?
+                    ORDER  BY trade_date ASC
+                    """,
+                    con,
+                    params=(ticker_plain, start_date),
+                )
+        except Exception as exc:
+            logger.debug("[cotahist_local] Erro ao buscar histórico: %s", exc)
+            return None
+
+        if df.empty:
+            return None
+
+        # Check freshness — last row must not be stale
+        last_date = df["trade_date"].iloc[-1]
+        if self._bdays_since(last_date) > _COTAHIST_MAX_STALE_BDAYS:
+            logger.debug(
+                "[cotahist_local] Histórico de %s desatualizado (%s) — usando yfinance",
+                ticker_plain, last_date,
+            )
+            return None
+
+        df["trade_date"] = pd.to_datetime(df["trade_date"])
+        df = df.set_index("trade_date")
+        df.index.name = "Date"
+        df.columns = [c.capitalize() for c in df.columns]   # open→Open, close→Close …
+        df = df.rename(columns={"Trades": "Trades"})         # keep Trades as-is
+        logger.info(
+            "[cotahist_local] Histórico %s: %d dias (desde %s)",
+            ticker_plain, len(df), start_date,
+        )
+        return df
 
     def _ticker_yahoo(self, ticker_b3: str) -> str:
         """Converte ticker B3 para formato Yahoo Finance."""
@@ -150,8 +319,10 @@ class ColetorMercado:
         """
         Baixa série histórica de preços ajustados.
 
+        Tenta COTAHIST local primeiro; cai para yfinance se indisponível.
+
         Returns:
-            DataFrame com colunas: Open, High, Low, Close, Volume, Adj Close
+            DataFrame com colunas: Open, High, Low, Close, Volume (+ Adj Close via yfinance)
         """
         ticker_yf = self._ticker_yahoo(ticker_b3)
         fim       = fim or datetime.today().strftime("%Y-%m-%d")
@@ -161,7 +332,18 @@ class ColetorMercado:
         if cached is not None:
             return cached
 
-        logger.info(f"Baixando preços: {ticker_yf} ({inicio} → {fim})")
+        # ── Tentativa 1: COTAHIST local ───────────────────────────────────────
+        df_cotahist = self._get_history_from_cotahist(ticker_b3, inicio)
+        if df_cotahist is not None and not df_cotahist.empty:
+            self._salvar_cache_precos(chave, df_cotahist)
+            logger.info(
+                "[cotahist_local] %d dias de preços carregados para %s",
+                len(df_cotahist), ticker_b3,
+            )
+            return df_cotahist
+
+        # ── Tentativa 2: yfinance ─────────────────────────────────────────────
+        logger.info(f"[yfinance] Baixando preços: {ticker_yf} ({inicio} → {fim})")
         try:
             df = yf.download(ticker_yf, start=inicio, end=fim,
                              progress=False, auto_adjust=True)
@@ -174,7 +356,7 @@ class ColetorMercado:
                 df.columns = df.columns.get_level_values(0)
 
             self._salvar_cache_precos(chave, df)
-            logger.info(f"  {len(df)} dias de preços carregados")
+            logger.info(f"  [yfinance] {len(df)} dias de preços carregados")
             return df
 
         except Exception as e:
@@ -182,14 +364,31 @@ class ColetorMercado:
             return pd.DataFrame()
 
     def preco_atual(self, ticker_b3: str) -> dict:
-        """Retorna cotação atual, market cap e dados básicos."""
+        """
+        Retorna cotação atual, market cap e dados básicos.
+
+        Ordem de preferência:
+          1. COTAHIST local (SQLite)
+          2. yfinance
+          3. Fundamentus (fallback para market cap / shares)
+        """
         ticker_yf = self._ticker_yahoo(ticker_b3)
         cache_key = f"quote_{ticker_yf}"
         cached = self._ler_cache_json(cache_key, ttl_minutos=20)
         if cached and cached.get("preco", 0):
             return cached
 
-        logger.info(f"Buscando cotação atual: {ticker_yf}")
+        # ── Tentativa 1: COTAHIST local ───────────────────────────────────────
+        preco: Optional[float] = None
+        fonte_preco = "[yfinance]"
+        cotahist_result = self._get_price_from_cotahist(ticker_b3)
+        if cotahist_result is not None:
+            preco, _trade_date = cotahist_result
+            fonte_preco = "[cotahist_local]"
+            logger.info("%s Preço %s: %.2f", fonte_preco, ticker_b3, preco)
+
+        # ── Tentativa 2: yfinance (sempre busca market_cap/shares) ────────────
+        logger.info(f"[yfinance] Buscando dados de mercado: {ticker_yf}")
         try:
             t    = yf.Ticker(ticker_yf)
             info = t.info or {}
@@ -205,14 +404,16 @@ class ColetorMercado:
                         return value
                 return default
 
-            preco = (info.get("currentPrice") or
-                     info.get("regularMarketPrice") or
-                     info.get("previousClose") or
-                     fast_get("last_price", "lastPrice", "regular_market_price", "previous_close"))
+            # Use COTAHIST price if already found; otherwise take yfinance price
             if not preco:
-                hist = t.history(period="5d")
-                if not hist.empty and "Close" in hist.columns:
-                    preco = float(hist["Close"].dropna().iloc[-1])
+                preco = (info.get("currentPrice") or
+                         info.get("regularMarketPrice") or
+                         info.get("previousClose") or
+                         fast_get("last_price", "lastPrice", "regular_market_price", "previous_close"))
+                if not preco:
+                    hist = t.history(period="5d")
+                    if not hist.empty and "Close" in hist.columns:
+                        preco = float(hist["Close"].dropna().iloc[-1])
 
             market_cap = info.get("marketCap") or fast_get("market_cap", "marketCap")
             shares = info.get("sharesOutstanding") or fast_get("shares", "shares_outstanding")
@@ -224,6 +425,7 @@ class ColetorMercado:
                     preco = preco or fund.get("preco")
                     market_cap = market_cap or (fund.get("market_cap", 0) * 1e6)
                     shares = shares or (fund.get("acoes_total", 0) * 1e3)
+
             payload = {
                 "ticker":           ticker_b3,
                 "preco":            preco or 0,
@@ -238,12 +440,14 @@ class ColetorMercado:
                 "nome":             info.get("longName", ticker_b3),
                 "setor":            info.get("sector", "Financeiro"),
                 "data_consulta":    datetime.now().strftime("%Y-%m-%d %H:%M"),
+                "fonte_preco":      fonte_preco,
             }
             self._salvar_cache_json(cache_key, payload)
             return payload
         except Exception as e:
             logger.error(f"Erro ao buscar cotação {ticker_yf}: {e}")
-            return {"ticker": ticker_b3, "preco": 0, "market_cap": 0}
+            return {"ticker": ticker_b3, "preco": preco or 0, "market_cap": 0,
+                    "fonte_preco": fonte_preco}
 
     # ── Beta ──────────────────────────────────────────────────────────────────
 
