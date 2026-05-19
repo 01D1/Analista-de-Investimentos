@@ -206,8 +206,36 @@ def _available_tickers() -> list[str]:
     return sorted(tickers)
 
 
+def _normalize_scorecard_to_10(scorecard: dict) -> dict:
+    """Converte scorecard de escala 0-5 para 0-10 para compatibilidade com thresholds do dashboard."""
+    if scorecard.get("scale") != "0-5":
+        return scorecard
+    raw = scorecard.get("overall_score")
+    if raw is not None:
+        scorecard["overall_score"] = round(float(raw) * 2, 2)
+    for dim_data in (scorecard.get("dimensions") or {}).values():
+        if isinstance(dim_data, dict) and dim_data.get("score") is not None:
+            dim_data["score"] = round(float(dim_data["score"]) * 2, 2)
+    scorecard["scale"] = "0-10"
+    return scorecard
+
+
+def _fmt_pct(value) -> str:
+    """Formata decimal (0.079) ou percentual já formatado para exibição '7.9%'."""
+    if value is None:
+        return "—"
+    try:
+        v = float(str(value).replace("%", "").replace(",", "."))
+        if abs(v) < 2:
+            v = v * 100
+        return f"{v:+.1f}%" if v != 0 else "0.0%"
+    except (ValueError, TypeError):
+        return str(value)
+
+
 def _load_ticker_data(ticker: str) -> dict:
     scorecard = _load_json(QUAL_ROOT / "summaries" / ticker / "qualitative_scorecard.json", {})
+    scorecard = _normalize_scorecard_to_10(scorecard)
     events    = _load_json(QUAL_ROOT / "events"    / ticker / "events.json", [])
     alert     = scorecard.get("thesis_alert") or {}
     return {"scorecard": scorecard, "events": events, "alert": alert}
@@ -303,16 +331,21 @@ def generate_human_readable_text(data: dict) -> dict:
     if preco and upside is not None:
         try:
             up_f = float(str(upside).replace("%", "").replace(",", "."))
+            if abs(up_f) < 2:
+                up_f = up_f * 100
+            upside_display = _fmt_pct(upside)
             if up_f >= 20:
-                upside_txt = f"upside atrativo de {upside} em relação ao preço atual"
+                upside_txt = f"upside atrativo de {upside_display} em relação ao preço atual"
             elif up_f >= 5:
-                upside_txt = f"upside moderado de {upside}"
+                upside_txt = f"upside moderado de {upside_display}"
             else:
-                upside_txt = f"pouco espaço de valorização ({upside} de upside)"
+                upside_txt = f"pouco espaço de valorização ({upside_display} de upside)"
         except (ValueError, TypeError):
-            upside_txt = f"preço-alvo de R$ {preco}"
+            preco_fmt = f"R$ {preco:.2f}" if isinstance(preco, (int, float)) else f"R$ {preco}"
+            upside_txt = f"preço-alvo de {preco_fmt}"
     elif preco:
-        upside_txt = f"preço justo estimado em R$ {preco}"
+        preco_fmt = f"R$ {preco:.2f}" if isinstance(preco, (int, float)) else f"R$ {preco}"
+        upside_txt = f"preço justo estimado em {preco_fmt}"
     else:
         upside_txt = "valuation ainda não calculado para este período"
 
@@ -344,12 +377,13 @@ def generate_human_readable_text(data: dict) -> dict:
     else:
         tese_txt = "Tese de investimento dentro do esperado."
 
+    tir_display = _fmt_pct(tir) if tir is not None else None
     return {
         "leitura_ativo": f"{ticker.upper()} apresenta {score_desc}, com {upside_txt}.",
         "leitura_fluxo": cat_txt,
         "interpretacao": f"{tese_txt} {risk_txt}",
         "justificativa": (
-            f"TIR estimada de {tir}. " if tir else ""
+            f"TIR estimada de {tir_display}. " if tir_display else ""
         ) + (
             "Estrutura com margem de segurança adequada para posição direcional."
             if score_desc.startswith("análise qualitativa sólida") else
@@ -370,12 +404,17 @@ def _top_pick_card(ticker: str, data: dict, rank: int) -> str:
     sc_display = f"{float(score):.1f}" if score is not None else "—"
     sc_w       = min(int(float(score) * 10) if score else 0, 100)
 
-    preco  = val_ref.get("preco_justo_on", "—")
-    upside = val_ref.get("upside_on", "—")
-    tir    = val_ref.get("tir_on", "—")
+    preco_raw  = val_ref.get("preco_justo_on")
+    upside_raw = val_ref.get("upside_on")
+    tir_raw    = val_ref.get("tir_on")
+    preco      = f"R$ {preco_raw:.2f}" if isinstance(preco_raw, (int, float)) else (preco_raw or "—")
+    upside     = _fmt_pct(upside_raw)
+    tir        = _fmt_pct(tir_raw)
 
     try:
-        up_f   = float(str(upside).replace("%", "").replace(",", "."))
+        up_f   = float(str(upside_raw).replace("%", "").replace(",", "."))
+        if abs(up_f) < 2:
+            up_f = up_f * 100
         up_cls = "tp-val-g" if up_f >= 15 else ("tp-val-a" if up_f >= 5 else "tp-val-r")
     except (ValueError, TypeError):
         up_cls = "tp-val"
@@ -408,7 +447,7 @@ def _top_pick_card(ticker: str, data: dict, rank: int) -> str:
 
   <div class="tp-row">
     <span class="tp-key">Preço Justo</span>
-    <span class="tp-val">R$ {preco}</span>
+    <span class="tp-val">{preco}</span>
   </div>
   <div class="tp-row">
     <span class="tp-key">Upside</span>
@@ -452,14 +491,19 @@ def _analysis_card(ticker: str, data: dict) -> str:
         "ac-buy"
     )
 
-    preco  = val_ref.get("preco_justo_on", "—")
-    upside = val_ref.get("upside_on", "—")
-    tir    = val_ref.get("tir_on", "—")
+    preco_raw  = val_ref.get("preco_justo_on")
+    upside_raw = val_ref.get("upside_on")
+    tir_raw    = val_ref.get("tir_on")
+    preco      = f"R$ {preco_raw:.2f}" if isinstance(preco_raw, (int, float)) else (preco_raw or "—")
+    upside     = _fmt_pct(upside_raw)
+    tir        = _fmt_pct(tir_raw)
     docs   = scorecard.get("documents_count", 0)
     events = scorecard.get("events_count", 0)
 
     try:
-        up_f   = float(str(upside).replace("%", "").replace(",", "."))
+        up_f   = float(str(upside_raw).replace("%", "").replace(",", ".")) if upside_raw is not None else 0.0
+        if abs(up_f) < 2:
+            up_f = up_f * 100
         up_cls = "ac-dv-g" if up_f >= 15 else ("" if up_f >= 5 else "ac-dv-r")
     except (ValueError, TypeError):
         up_cls = ""
@@ -498,7 +542,7 @@ def _analysis_card(ticker: str, data: dict) -> str:
     <div class="ac-grid">
       <div>
         <div class="ac-col-head">💰 Valuation</div>
-        <div class="ac-row"><span class="ac-dk">Preço justo</span><span class="ac-dv">R$ {preco}</span></div>
+        <div class="ac-row"><span class="ac-dk">Preço justo</span><span class="ac-dv">{preco}</span></div>
         <div class="ac-row"><span class="ac-dk">Upside</span><span class="ac-dv {up_cls}">{upside}</span></div>
         <div class="ac-row"><span class="ac-dk">TIR</span><span class="ac-dv">{tir}</span></div>
       </div>
@@ -737,10 +781,11 @@ def _tab_qualitativa(ticker: str) -> None:
     sc_color = _score_color(score)
     sc_disp  = f"{float(score):.1f}" if score else "—"
 
-    val_ref = alert.get("valuation_reference") or {}
-    preco   = val_ref.get("preco_justo_on", "—")
-    upside  = val_ref.get("upside_on", "—")
-    tir     = val_ref.get("tir_on", "—")
+    val_ref    = alert.get("valuation_reference") or {}
+    preco_raw  = val_ref.get("preco_justo_on")
+    preco      = f"R$ {preco_raw:.2f}" if isinstance(preco_raw, (int, float)) else (preco_raw or "—")
+    upside     = _fmt_pct(val_ref.get("upside_on"))
+    tir        = _fmt_pct(val_ref.get("tir_on"))
 
     # Header da empresa
     badge_html, _ = _signal_badge(scorecard, None)
@@ -766,7 +811,7 @@ def _tab_qualitativa(ticker: str) -> None:
       <div class="kpi-card kc-purple">
         <div class="kpi-label">Upside</div>
         <div class="kpi-value">{upside}</div>
-        <div class="kpi-sub">P. justo R$ {preco}</div>
+        <div class="kpi-sub">P. justo {preco}</div>
       </div>
     </div>
     """, unsafe_allow_html=True)

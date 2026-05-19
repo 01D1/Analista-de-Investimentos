@@ -299,7 +299,7 @@ empresas:
     nome: Bradesco
     setor: bancos
     codigo_cvm: "906"
-    ri_url: https://banco.bradesco/ri
+    ri_url: https://ri.bradesco.com.br
     ticker_on: BBDC3
     ticker_pn: BBDC4
     acoes_on_mil: 5294000
@@ -339,7 +339,7 @@ empresas:
     nome: "Itaú Unibanco"
     setor: bancos
     codigo_cvm: "19348"
-    ri_url: https://itau.com.br/ri
+    ri_url: https://ri.itau.com.br
     ticker_on: ITUB3
     ticker_pn: ITUB4
     acoes_on_mil: 5510000
@@ -360,7 +360,7 @@ empresas:
     nome: Santander Brasil
     setor: bancos
     codigo_cvm: "20532"
-    ri_url: https://www.santander.com.br/ri
+    ri_url: https://ri.santander.com.br
     ticker_on: SANB11
     acoes_on_mil: 3750000
     acoes_pn_mil: 0
@@ -380,7 +380,7 @@ empresas:
     nome: BTG Pactual
     setor: bancos
     codigo_cvm: "22616"
-    ri_url: https://btgpactual.com
+    ri_url: https://ri.btgpactual.com
     ticker_on: BPAC11
     acoes_on_mil: 3890000
     acoes_pn_mil: 0
@@ -443,7 +443,7 @@ empresas:
   B3SA3:
     nome: B3
     setor: financeiro
-    ri_url: https://b3.com.br
+    ri_url: https://ri.b3.com.br
     ticker_on: B3SA3
     tipo_acao: ON_ONLY
     ativo: false
@@ -452,7 +452,7 @@ empresas:
   BBSE3:
     nome: BB Seguridade
     setor: seguros
-    ri_url: https://bbseguridade.com.br
+    ri_url: https://ri.bbseguridade.com.br
     ticker_on: BBSE3
     tipo_acao: ON_ONLY
     ativo: false
@@ -472,7 +472,7 @@ empresas:
   CPLE6:
     nome: Copel
     setor: energia
-    ri_url: https://copel.com
+    ri_url: https://ri.copel.com
     ticker_pn: CPLE6
     tipo_acao: ON_PN
     ativo: false
@@ -481,7 +481,7 @@ empresas:
   CPFE3:
     nome: CPFL Energia
     setor: energia
-    ri_url: https://cpfl.com.br
+    ri_url: https://ri.cpfl.com.br
     ticker_on: CPFE3
     tipo_acao: ON_ONLY
     ativo: false
@@ -491,7 +491,7 @@ empresas:
     nome: ENGIE Brasil
     setor: energia
     codigo_cvm: "17329"
-    ri_url: https://engie.com.br/investidores
+    ri_url: https://ri.engie.com.br
     ticker_on: EGIE3
     tipo_acao: ON_ONLY
 
@@ -499,7 +499,7 @@ empresas:
     nome: Taesa
     setor: energia
     codigo_cvm: "20257"
-    ri_url: https://taesa.com.br
+    ri_url: https://ri.taesa.com.br
     ticker_on: TAEE11
     tipo_acao: UNITS
     aliases: [TAEE3, TAEE4]
@@ -520,7 +520,7 @@ empresas:
     nome: AES Brasil
     setor: energia
     codigo_cvm: "26620"
-    ri_url: https://aurenenergia.com.br
+    ri_url: https://ri.aurenenergia.com.br
     ticker_on: AESB3
     tipo_acao: ON_ONLY
     aliases: [AURE3]
@@ -606,7 +606,7 @@ empresas:
     nome: Suzano
     setor: papel_celulose
     codigo_cvm: "13986"
-    ri_url: https://suzano.com.br
+    ri_url: https://ri.suzano.com.br
     ticker_on: SUZB3
     tipo_acao: ON_ONLY
     premissas:
@@ -781,7 +781,7 @@ empresas:
     nome: Assaí Atacadista
     setor: consumo_varejo
     codigo_cvm: "25372"
-    ri_url: https://assai.com.br
+    ri_url: https://ri.assai.com.br
     ticker_on: ASAI3
     tipo_acao: ON_ONLY
     premissas:
@@ -843,7 +843,7 @@ empresas:
     nome: "Natura Cosméticos"
     setor: consumo_varejo
     codigo_cvm: "19550"
-    ri_url: https://natura.com.br
+    ri_url: https://ri.naturaeco.com
     ticker_on: NATU3
     tipo_acao: ON_ONLY
     aliases: [NTCO3]
@@ -926,7 +926,7 @@ empresas:
     nome: Sanepar
     setor: saneamento
     codigo_cvm: "18627"
-    ri_url: https://sanepar.com.br
+    ri_url: https://ri.sanepar.com.br
     ticker_on: SAPR11
     tipo_acao: UNITS
     aliases: [SAPR3, SAPR4]
@@ -935,7 +935,7 @@ empresas:
     nome: Sabesp
     setor: saneamento
     codigo_cvm: "14443"
-    ri_url: https://sabesp.com.br
+    ri_url: https://ri.sabesp.com.br
     ticker_on: SBSP3
     tipo_acao: ON_ONLY
 
@@ -968,7 +968,7 @@ empresas:
     nome: Fleury
     setor: saude
     codigo_cvm: "21881"
-    ri_url: https://fleury.com.br
+    ri_url: https://ri.fleury.com.br
     ticker_on: FLRY3
     tipo_acao: ON_ONLY
 
@@ -976,7 +976,7 @@ empresas:
     nome: Raia Drogasil
     setor: saude
     codigo_cvm: "5258"
-    ri_url: https://rd.com.br
+    ri_url: https://ri.raiadrogasil.com.br
     ticker_on: RADL3
     tipo_acao: ON_ONLY
 
@@ -1025,7 +1025,7 @@ empresas:
     nome: Petrobras
     setor: petroleo
     codigo_cvm: "9512"
-    ri_url: https://petrobras.com.br/ri
+    ri_url: https://ri.petrobras.com.br
     ticker_on: PETR3
     ticker_pn: PETR4
     acoes_on_mil: 7442455
@@ -1101,7 +1101,7 @@ empresas:
   EMBR3:
     nome: Embraer
     setor: industrial
-    ri_url: https://embraer.com.br
+    ri_url: https://ri.embraer.com.br
     ticker_on: EMBR3
     tipo_acao: ON_ONLY
     ativo: false
@@ -1110,7 +1110,7 @@ empresas:
   GGBR4:
     nome: Gerdau
     setor: industrial
-    ri_url: https://gerdau.com
+    ri_url: https://ri.gerdau.com
     ticker_pn: GGBR4
     tipo_acao: ON_PN
     ativo: false
@@ -1119,7 +1119,7 @@ empresas:
   MDIA3:
     nome: M. Dias Branco
     setor: consumo_varejo
-    ri_url: https://mdiasbranco.com.br
+    ri_url: https://ri.mdiasbranco.com.br
     ticker_on: MDIA3
     tipo_acao: ON_ONLY
     ativo: false
@@ -1146,7 +1146,7 @@ empresas:
   VALE3:
     nome: Vale
     setor: mineracao
-    ri_url: https://vale.com/ri
+    ri_url: https://ri.vale.com
     ticker_on: VALE3
     tipo_acao: ON_ONLY
     ativo: false
