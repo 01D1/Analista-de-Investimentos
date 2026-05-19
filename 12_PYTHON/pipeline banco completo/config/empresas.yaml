@@ -460,14 +460,14 @@ empresas:
 
   # ═══ ENERGIA ═════════════════════════════════════════════════════════════
 
-  ELET3:
-    nome: Eletrobras
+  AXIA3:
+    nome: Axia Energia (ex-Eletrobras)
     setor: energia
     codigo_cvm: "2437"
-    ticker_on: ELET3
-    ticker_pn: ELET6
+    ticker_on: AXIA3
+    ticker_pn: AXIA6
     tipo_acao: ON_PN
-    aliases: [ELET6]
+    aliases: [AXIA6, ELET3, ELET6]
 
   CPLE6:
     nome: Copel
