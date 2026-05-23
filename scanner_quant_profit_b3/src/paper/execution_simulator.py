@@ -48,5 +48,5 @@ def simulate_execution_from_ohlcv(row, order, cost_bps: float = 10, slippage_bps
         gross = abs(float(result["simulated_execution_price"]) * quantity)
         result["execution_cost"] = round(gross * float(cost_bps) / 10_000, 6)
         result["slippage_cost"] = round(float(result["slippage_cost"]) * quantity, 6)
+    result["cost_attribution_source"] = getattr(order, "cost_bucket", None) or getattr(order, "signal_source", "UNKNOWN")
     return result
-

@@ -35,3 +35,12 @@ Status possíveis:
 
 A aprovação é apenas observação analítica. Não é recomendação.
 
+## Próxima Calibração
+
+Quando `LIMIT_SIGNAL_SOURCE` for a melhor hipótese em estudo, mas permanecer bloqueada por custo/slippage, rode:
+
+```powershell
+python -m src.scanners.limit_signal_source_calibration --start 2026-01-02 --end 2026-04-30 --save-db --csv
+```
+
+Essa etapa testa variação paramétrica com controle de custo e controle de slippage antes de qualquer observação recorrente.

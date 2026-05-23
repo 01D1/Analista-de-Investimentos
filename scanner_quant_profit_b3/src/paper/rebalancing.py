@@ -12,9 +12,13 @@ def calculate_target_weights_by_risk(risk_snapshots_df: pd.DataFrame, max_weight
         return pd.DataFrame(columns=columns)
     work = risk_snapshots_df.copy()
     work["ticker"] = work["ticker"].astype(str).str.upper()
-    vol = pd.to_numeric(work.get("ensemble_vol"), errors="coerce").fillna(pd.to_numeric(work.get("volatility"), errors="coerce")).fillna(1)
-    var = pd.to_numeric(work.get("parametric_var_95", work.get("var_95")), errors="coerce").fillna(0)
-    blocked = work.get("risk_status", "").astype(str).str.contains("BLOCKED", case=False, na=False)
+    default_vol = pd.Series(1.0, index=work.index)
+    vol_source = work["ensemble_vol"] if "ensemble_vol" in work.columns else work["volatility"] if "volatility" in work.columns else default_vol
+    var_source = work["parametric_var_95"] if "parametric_var_95" in work.columns else work["var_95"] if "var_95" in work.columns else pd.Series(0.0, index=work.index)
+    vol = pd.to_numeric(vol_source, errors="coerce").fillna(default_vol)
+    var = pd.to_numeric(var_source, errors="coerce").fillna(0)
+    risk_status = work["risk_status"] if "risk_status" in work.columns else pd.Series("", index=work.index)
+    blocked = risk_status.astype(str).str.contains("BLOCKED", case=False, na=False)
     work["risk_score"] = (vol.clip(lower=0.0001) * (1 + var.rank(pct=True).fillna(0))).replace(0, 0.0001)
     work["raw_weight"] = 1 / work["risk_score"]
     work.loc[blocked, "raw_weight"] = 0
@@ -34,7 +38,7 @@ def calculate_target_weights_by_risk(risk_snapshots_df: pd.DataFrame, max_weight
 def calculate_rebalance_orders(current_positions, target_weights: pd.DataFrame, portfolio_value: float, prices_df: pd.DataFrame) -> pd.DataFrame:
     rows = []
     if target_weights is None or target_weights.empty or portfolio_value <= 0:
-        return pd.DataFrame(columns=["ticker", "side", "quantity", "current_weight", "target_weight", "reason"])
+        return pd.DataFrame(columns=["ticker", "side", "quantity", "current_weight", "target_weight", "reason", "normalized_order_reason", "cost_bucket"])
     prices = prices_df.sort_values("trade_date").groupby("ticker").tail(1).set_index("ticker") if prices_df is not None and not prices_df.empty else pd.DataFrame()
     for _, target in target_weights.iterrows():
         ticker = str(target["ticker"]).upper()
@@ -50,11 +54,21 @@ def calculate_rebalance_orders(current_positions, target_weights: pd.DataFrame, 
         if quantity <= 0:
             continue
         side = "BUY" if delta_value > 0 else ("CLOSE" if target_weight == 0 else "REDUCE")
-        rows.append({"ticker": ticker, "side": side, "quantity": quantity, "current_weight": current_weight, "target_weight": target_weight, "reason": target.get("reason", "Rebalanceamento simulado por risco")})
+        rows.append(
+            {
+                "ticker": ticker,
+                "side": side,
+                "quantity": quantity,
+                "current_weight": current_weight,
+                "target_weight": target_weight,
+                "reason": target.get("reason", "Rebalanceamento simulado por risco"),
+                "normalized_order_reason": "REBALANCE_RISK",
+                "cost_bucket": "rebalance",
+            }
+        )
     return pd.DataFrame(rows)
 
 
 def rebalance_portfolio_by_risk(portfolio, risk_snapshots_df: pd.DataFrame, prices_df: pd.DataFrame) -> pd.DataFrame:
     weights = calculate_target_weights_by_risk(risk_snapshots_df)
     return calculate_rebalance_orders(portfolio.positions, weights, portfolio.equity, prices_df)
-

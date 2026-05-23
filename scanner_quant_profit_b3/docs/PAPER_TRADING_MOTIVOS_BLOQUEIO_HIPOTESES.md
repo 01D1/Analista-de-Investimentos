@@ -30,3 +30,12 @@ python -m src.scanners.generate_hypothesis_deep_dive_report --run-id 1
 
 O relatório é apenas simulação, investigação e explicação.
 
+## Bloqueio por Custo/Slippage
+
+Se `LIMIT_SIGNAL_SOURCE` for bloqueada por custo ou slippage, a próxima investigação é a calibração paramétrica:
+
+```powershell
+python -m src.scanners.limit_signal_source_calibration --start 2026-01-02 --end 2026-04-30 --save-db --csv
+```
+
+Variações que aumentem cost drag, aumentem slippage, destruam retorno ou reduzam demais a amostra permanecem bloqueadas por governança.

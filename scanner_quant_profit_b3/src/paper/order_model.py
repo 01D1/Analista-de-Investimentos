@@ -33,6 +33,13 @@ class PaperOrder:
     rejection_reason: str | None = None
     execution_cost: float = 0.0
     slippage_cost: float = 0.0
+    normalized_order_reason: str | None = None
+    reason_confidence: float | None = None
+    cost_bucket: str | None = None
+    lifecycle_id: str | None = None
+    parent_signal_id: str | int | None = None
+    parent_position_id: str | int | None = None
+    is_simulation_end_close: bool = False
     created_at: str = field(default_factory=lambda: datetime.utcnow().isoformat(timespec="seconds"))
     metadata_json: str = "{}"
 
@@ -77,4 +84,3 @@ class PaperPortfolio:
         data = asdict(self)
         data["positions"] = {k: v.to_dict() for k, v in self.positions.items()}
         return data
-

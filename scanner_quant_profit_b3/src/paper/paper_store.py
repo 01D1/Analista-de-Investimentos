@@ -44,6 +44,13 @@ ORDER_COLUMNS = [
     "order_status",
     "signal_source",
     "rejection_reason",
+    "normalized_order_reason",
+    "reason_confidence",
+    "cost_bucket",
+    "lifecycle_id",
+    "parent_signal_id",
+    "parent_position_id",
+    "is_simulation_end_close",
     "metadata_json",
 ]
 

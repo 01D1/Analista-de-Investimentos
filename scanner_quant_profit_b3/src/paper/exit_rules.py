@@ -75,12 +75,16 @@ def _num(value, default=0.0):
 
 
 def _result(triggered=False, reason="NO_EXIT", rule_type=None, price=None, metadata=None):
+    meta = dict(metadata or {})
+    if triggered:
+        meta.setdefault("cost_bucket", "exit")
+        meta.setdefault("cost_attribution_source", "exit_rule")
     return {
         "should_exit": bool(triggered),
         "exit_reason": reason,
         "exit_rule_triggered": rule_type,
         "exit_price_hint": price,
-        "metadata_json": json.dumps(metadata or {}, ensure_ascii=False),
+        "metadata_json": json.dumps(meta, ensure_ascii=False),
     }
 
 
@@ -142,4 +146,3 @@ def evaluate_exit_rules(position, market_row, risk_row=None, regime_row=None, si
             if any(token in regime_text.upper() for token in ["BAIXA_TENDENCIAL", "RISCO_ELEVADO", "LIQUIDEZ_FRACA"]):
                 return _result(True, "Saída simulada por regime.", rule_type, current, params)
     return _result(False, "Sem regra de saída simulada acionada.", None, None, metadata)
-
