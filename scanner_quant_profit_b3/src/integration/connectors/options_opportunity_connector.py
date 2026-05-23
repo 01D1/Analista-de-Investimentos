@@ -36,7 +36,7 @@ from __future__ import annotations
 import json
 import sqlite3
 from dataclasses import asdict, dataclass, field
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Literal
 
@@ -206,7 +206,7 @@ def _db() -> Path:
 
 
 def _now() -> str:
-    return datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def _has_b01(reasons: str) -> bool:

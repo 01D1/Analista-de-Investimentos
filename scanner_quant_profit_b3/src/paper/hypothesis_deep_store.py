@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -78,7 +78,7 @@ def save_hypothesis_deep_oos_run(
         grouped = results.groupby("hypothesis_id")["positive_improvement_pct"].mean().sort_values(ascending=False)
         best_hypothesis_id = str(grouped.index[0]) if not grouped.empty else ""
     run_row = {
-        "created_at": datetime.utcnow().isoformat(timespec="seconds"),
+        "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "hypotheses_count": int(results["hypothesis_id"].nunique()) if not results.empty and "hypothesis_id" in results.columns else 0,
         "start_date": start_date,
         "end_date": end_date,

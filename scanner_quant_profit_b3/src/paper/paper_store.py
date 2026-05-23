@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -140,7 +140,7 @@ def save_paper_simulation_run(
     pnl_attribution_df: pd.DataFrame | None = None,
 ) -> int:
     init_database(db_path, verbose=False)
-    now = datetime.utcnow().isoformat(timespec="seconds")
+    now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     row = {col: run_summary.get(col) for col in RUN_COLUMNS}
     row["started_at"] = row.get("started_at") or now
     row["finished_at"] = row.get("finished_at") or now

@@ -30,7 +30,7 @@ def generate_position_alerts(
     Retorna lista de dicts prontos para inserção no banco.
     """
     alerts = []
-    now = __import__("datetime").datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     # 1. DTE baixo
     if snapshot.dte_current is not None:

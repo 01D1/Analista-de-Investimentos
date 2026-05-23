@@ -26,7 +26,7 @@ Provides stale data checks:
 
 Use sqlite3. Connect via src.dashboard.data._db_path().
 
-Time thresholds (use datetime.utcnow() comparison):
+Time thresholds (use datetime.now(timezone.utc) comparison):
   - chain: 24 hours
   - price: 1 hour
   - bid/ask: 5 minutes (compare captured_at timestamp)

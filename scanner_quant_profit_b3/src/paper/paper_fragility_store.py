@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -18,7 +18,7 @@ DRAWDOWN_COLUMNS = ["run_id", "drawdown_start", "drawdown_trough", "drawdown_rec
 
 
 def _now() -> str:
-    return datetime.utcnow().isoformat(timespec="seconds")
+    return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
 def _prepare(df: pd.DataFrame | None, columns: list[str]) -> pd.DataFrame:

@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -56,7 +56,7 @@ def save_cost_frontier_run(db_path: str | Path, source_cost_reduction_run_id: in
     efficient_count = int(results.get("is_efficient", pd.Series(dtype=bool)).astype(bool).sum()) if not results.empty else 0
     best = results.sort_values(["tradeoff_score", "efficiency_score"], ascending=False).iloc[0].to_dict() if not results.empty and "tradeoff_score" in results.columns else {}
     run_row = {
-        "created_at": datetime.utcnow().isoformat(timespec="seconds"),
+        "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "source_cost_reduction_run_id": int(source_cost_reduction_run_id),
         "variants_count": int(len(results)),
         "efficient_count": efficient_count,

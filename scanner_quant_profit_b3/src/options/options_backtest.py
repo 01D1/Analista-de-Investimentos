@@ -20,7 +20,7 @@ from __future__ import annotations
 import json
 import math
 import sqlite3
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Optional
 
@@ -62,7 +62,7 @@ def _db() -> Path:
 
 
 def _now() -> str:
-    return datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def _mid_price(bid: float, ask: float) -> float:
@@ -414,7 +414,7 @@ def run_options_backtest(run_id: Optional[str] = None) -> dict[str, Any]:
         Dict com status, contagens e métricas consolidadas
     """
     if run_id is None:
-        run_id = f"BT_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}"
+        run_id = f"BT_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}"
 
     # Verificar/criar schema
     schema = ensure_backtest_schema()

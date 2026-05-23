@@ -4,7 +4,7 @@ from __future__ import annotations
 import argparse
 import json
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -58,7 +58,7 @@ def _save_dedup_run(con: sqlite3.Connection, summary: dict) -> None:
         ) VALUES (?, ?, ?, ?, ?, ?, ?)
         """,
         (
-            datetime.utcnow().isoformat(timespec="seconds"),
+            datetime.now(timezone.utc).isoformat(timespec="seconds"),
             int(summary.get("signals_before") or 0),
             int(summary.get("signals_after") or 0),
             int(summary.get("removed_count") or 0),
@@ -99,7 +99,7 @@ def run(
     saved_setups = 0
     if save_db and not dry_run:
         init_database(db, verbose=False)
-        created_at = datetime.utcnow().isoformat(timespec="seconds")
+        created_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
         with sqlite3.connect(db) as con:
             _delete_existing(con, "technical_feature_snapshots", start, end, tickers)
             _delete_existing(con, "technical_setup_signals", start, end, tickers)

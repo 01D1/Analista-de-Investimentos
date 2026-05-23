@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -62,7 +62,7 @@ def save_cost_reduction_run(db_path: str | Path, base_paper_run_id: int, results
     rejected_count = int(len(results) - improved_count)
     best = results.sort_values("improvement_score", ascending=False).iloc[0].to_dict() if not results.empty and "improvement_score" in results.columns else {}
     run_row = {
-        "created_at": datetime.utcnow().isoformat(timespec="seconds"),
+        "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "base_paper_run_id": int(base_paper_run_id),
         "variants_count": int(len(results)),
         "improved_count": improved_count,

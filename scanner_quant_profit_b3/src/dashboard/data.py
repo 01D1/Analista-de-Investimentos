@@ -93,19 +93,47 @@ def get_watchlist_summary() -> list[dict]:
     out["generated_at"] = out.get("created_at", out.get("trade_date", ""))
 
     # ── Enrich with pipeline bridge valuation (S04) ─────────────────────────
+    # valuation_bridge.get_valuation returns a dict with keys:
+    #   preco_alvo, upside_pct, fonte, ticker, data_valuation
+    # Falls back to scanner_quant_db if outputs_dir unavailable.
     tickers_in_scope = out["ticker"].tolist()
     bridge_cache: dict[str, dict] = {}
+    # Resolve outputs_dir once, with graceful fallback
+    _outputs_dir: str | None = None
+    try:
+        _outputs_dir = str(project_path("12_PYTHON/pipeline banco completo/outputs"))
+    except Exception:
+        pass  # outputs_dir unavailable — all tickers will use scanner_quant_db fallback
+
     for tk in tickers_in_scope:
-        vd = _bridge_valuation(str(tk))
-        if vd is not None and vd.is_complete:
+        if _outputs_dir is None:
+            bridge_cache[tk] = {
+                "valuation_available": False,
+                "valuation_source": "scanner_quant_db",
+                "valuation_method": "",
+                "valuation_date": "",
+            }
+            continue
+        try:
+            vd = _bridge_valuation(str(tk), _outputs_dir)
+        except Exception:
+            # Bridge failure — fallback to scanner_quant_db
+            bridge_cache[tk] = {
+                "valuation_available": False,
+                "valuation_source": "scanner_quant_db",
+                "valuation_method": "",
+                "valuation_date": "",
+            }
+            continue
+        if vd and isinstance(vd, dict) and vd.get("preco_alvo"):
             bridge_cache[tk] = {
                 "valuation_available": True,
                 "valuation_source": "pipeline_bridge",
-                "valuation_method": vd.method or "",
-                "valuation_date": vd.valuation_date,
+                "valuation_method": "DCF/planilha",
+                "valuation_date": vd.get("data_valuation") or "",
             }
             # Override fair_value from bridge if VALID
-            out.loc[out["ticker"] == tk, "fair_value_brl"] = vd.fair_value
+            out.loc[out["ticker"] == tk, "fair_value_brl"] = vd["preco_alvo"]
         else:
             bridge_cache[tk] = {
                 "valuation_available": False,
@@ -206,24 +234,52 @@ def get_asset_detail(ticker: str) -> dict | None:
             "ri_url": ri_url,
         }
 
-    # ── Valuation from bridge (preferred for 59 VALID tickers) ──────────────
-    bridge_vd = _bridge_valuation(ticker_upper)
+    # ── Valuation from bridge (dict with preco_alvo/upside_pct) ─────────────
+    # valuation_bridge.get_valuation returns dict — NOT an object with is_complete.
+    # Falls back to scanner_quant_db snapshot if bridge is unavailable.
+    _bv_outputs_dir: str | None = None
+    try:
+        _bv_outputs_dir = str(project_path("12_PYTHON/pipeline banco completo/outputs"))
+    except Exception:
+        pass
 
-    if bridge_vd is not None and bridge_vd.is_complete:
+    bridge_vd: dict = {}
+    if _bv_outputs_dir is not None:
+        try:
+            bridge_vd = _bridge_valuation(ticker_upper, _bv_outputs_dir) or {}
+        except Exception:
+            bridge_vd = {}
+
+    if bridge_vd and isinstance(bridge_vd, dict) and bridge_vd.get("preco_alvo"):
         bridge_available = True
         bridge_source = "pipeline_bridge"
-        bridge_fair_value = bridge_vd.fair_value
-        bridge_upside = bridge_vd.upside_pct
-        bridge_method = bridge_vd.method
-        bridge_date = bridge_vd.valuation_date
-        bridge_source_file = bridge_vd.source_file
-        bridge_source_path = bridge_vd.source_path
+        bridge_fair_value = float(bridge_vd["preco_alvo"])
+        bridge_method = "DCF/planilha"
+        bridge_date = bridge_vd.get("data_valuation") or ""
+        bridge_source_file = bridge_vd.get("fonte") or ""
+        bridge_source_path = _bv_outputs_dir or ""
         bridge_confidence = 0.7
-        bridge_price = bridge_vd.current_price
+        bridge_price = market_price
 
-        upside_decimal = bridge_upside
-        upside_pct = (bridge_upside * 100.0) if bridge_upside is not None else None
-        upside_label = bridge_vd.upside_label()
+        # Recompute upside from bridge fair_value + cotahist market_price.
+        # Never trust the bridge's upside_pct field — some Excel files return 0.0
+        # as a placeholder (BBAS3, ITUB4, BBDC4) while others return real values (PETR4).
+        # We recalculate here to ensure consistency.
+        bridge_upside_raw = bridge_vd.get("upside_pct")
+        if bridge_upside_raw is not None and bridge_upside_raw != 0.0 and market_price and market_price > 0:
+            # Bridge upside is real and market price is available — use as-is (already %)
+            upside_decimal = bridge_upside_raw / 100.0
+            upside_pct = float(bridge_upside_raw)
+        elif bridge_fair_value > 0 and market_price and market_price > 0:
+            # Recompute from fair_value + cotahist market_price
+            upside_decimal = (bridge_fair_value - market_price) / market_price
+            upside_pct = round(upside_decimal * 100.0, 1)
+        else:
+            # Cannot compute — show EMPTY in UI, don't fake 0.0
+            upside_decimal = None
+            upside_pct = None
+
+        upside_label = f"{upside_pct:+.1f}%" if upside_pct is not None else "—"
 
         # Divergence check vs scanner_quant.db fair_value
         divergence: dict | None = None
@@ -241,11 +297,14 @@ def get_asset_detail(ticker: str) -> dict | None:
                     ),
                 }
     else:
+        # Bridge unavailable or returns no preco_alvo.
+        # Show fair_value only when it came from the snapshot (not 0.0 fake).
+        # Upside is EMPTY when bridge is unavailable and scanner_upside is not set.
         bridge_available = False
         bridge_source = "scanner_quant_db" if has_snapshot else "none"
         bridge_fair_value = scanner_fair_value if has_snapshot else 0.0
         bridge_upside = scanner_upside if has_snapshot else None
-        bridge_method = row.get("valuation_method", "") if has_snapshot else ""
+        bridge_method = row.get("valuation_method") or None
         bridge_date = row.get("created_at", "") or row.get("trade_date", "") if has_snapshot else ""
         bridge_source_file = ""
         bridge_source_path = ""
@@ -257,7 +316,7 @@ def get_asset_detail(ticker: str) -> dict | None:
         if upside_pct is not None:
             upside_label = f"{upside_pct:+.1f}%"
         else:
-            upside_label = "N/A"
+            upside_label = "—"  # EMPTY: no bridge and no scanner upside
         divergence = None
 
     # Use bridge fair_value as authoritative for 59 VALID tickers

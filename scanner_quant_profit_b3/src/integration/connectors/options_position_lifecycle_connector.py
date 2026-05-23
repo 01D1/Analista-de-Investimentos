@@ -21,7 +21,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
 
@@ -170,7 +170,7 @@ def create_options_position(
         except (ValueError, TypeError, AttributeError):
             dte_initial = None
 
-        now = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+        now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
         # Custo total = net_debit ou abs(max_loss)
         cost_total = row["net_debit"] or abs(row["max_loss"]) if row["max_loss"] else 0.0
@@ -393,7 +393,7 @@ def _calculate_dte(expiry_date: str) -> Optional[int]:
         return None
     try:
         exp = datetime.strptime(expiry_date[:10], "%Y-%m-%d").date()
-        today = datetime.utcnow().date()
+        today = datetime.now(timezone.utc).date()
         return max(0, (exp - today).days)
     except ValueError:
         return None
@@ -494,7 +494,7 @@ def update_options_position_snapshot(position_id: int) -> Optional[dict[str, Any
     if dte_current is not None and dte_current <= 5:
         thesis_status = "NEAR_EXPIRY"
 
-    now = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     cur.execute("""
         INSERT INTO options_position_snapshots (
@@ -652,7 +652,7 @@ def evaluate_options_exit_signals(position_id: int) -> dict[str, Any]:
         snap, cost_total, snapshot.get("pnl_reais"),
     )
 
-    now = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     # Persistir cada sinal
     for sig_group, signals in [
@@ -716,7 +716,7 @@ def close_options_position(
 
     current_status = row["status"]
     new_status = PositionStatus.CLOSE.value
-    now = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     event_type_map = {
         "STOP_LOSS": LifecycleEventType.CLOSE_STOP_LOSS.value,
@@ -783,7 +783,7 @@ def roll_options_position(
         }
 
     # Fechar posição atual
-    now = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     cur.execute("""
         UPDATE options_positions SET status = ?, updated_at = ?
         WHERE position_id = ?

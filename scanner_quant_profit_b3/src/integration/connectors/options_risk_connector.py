@@ -35,7 +35,7 @@ Data: 2026-05-23
 from __future__ import annotations
 
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Literal
 
@@ -113,7 +113,7 @@ def _empty(columns: list[str] | None = None) -> pd.DataFrame:
 
 
 def _now() -> str:
-    return datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def _safe_float(val, default=0.0) -> float:

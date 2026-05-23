@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -101,7 +101,7 @@ def save_cost_diagnostics_run(
 ) -> int:
     init_database(db_path, verbose=False)
     run_row = {col: cost_summary.get(col) for col in RUN_COLUMNS if col not in {"id", "created_at", "paper_run_id", "metadata_json"}}
-    run_row["created_at"] = datetime.utcnow().isoformat(timespec="seconds")
+    run_row["created_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
     run_row["paper_run_id"] = int(paper_run_id)
     run_row["metadata_json"] = json.dumps(metadata or {}, ensure_ascii=False, default=str)
     with sqlite3.connect(db_path) as con:

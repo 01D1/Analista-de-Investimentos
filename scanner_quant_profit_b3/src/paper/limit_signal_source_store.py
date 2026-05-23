@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -55,7 +55,7 @@ def save_limit_signal_source_variant_run(db_path: str | Path, ranked_df: pd.Data
     best = ranked.iloc[0].to_dict() if not ranked.empty else {}
     statuses = ranked.get("governance_status", pd.Series(dtype=str)).astype(str)
     run_row = {
-        "created_at": datetime.utcnow().isoformat(timespec="seconds"),
+        "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "variants_count": int(ranked["variant_id"].nunique()) if not ranked.empty else 0,
         "start_date": start_date,
         "end_date": end_date,

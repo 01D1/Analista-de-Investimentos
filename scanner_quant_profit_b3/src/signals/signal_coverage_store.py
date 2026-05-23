@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -56,7 +56,7 @@ def save_signal_coverage_run(
             ) VALUES (?, ?, ?, ?, ?, ?, ?)
             """,
             (
-                datetime.utcnow().isoformat(timespec="seconds"),
+                datetime.now(timezone.utc).isoformat(timespec="seconds"),
                 start_date,
                 end_date,
                 ",".join(sources_checked or coverage.get("signal_source", pd.Series(dtype=str)).astype(str).tolist()),

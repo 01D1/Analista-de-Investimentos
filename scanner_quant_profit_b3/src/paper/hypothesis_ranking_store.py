@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -51,7 +51,7 @@ def save_hypothesis_ranking_run(db_path: str | Path, ranked_df: pd.DataFrame, va
     validation = validation_df.copy() if validation_df is not None else pd.DataFrame()
     best = ranked.iloc[0].to_dict() if not ranked.empty else {}
     run_row = {
-        "created_at": datetime.utcnow().isoformat(timespec="seconds"),
+        "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "hypotheses_count": int(ranked["hypothesis_id"].nunique()) if not ranked.empty else 0,
         "sources_count": int(validation["signal_source"].nunique()) if not validation.empty and "signal_source" in validation.columns else int(ranked.get("useful_sources_count", pd.Series(dtype=int)).max() or 0),
         "scenarios_count": int(validation["scenario_name"].nunique()) if not validation.empty and "scenario_name" in validation.columns else 0,

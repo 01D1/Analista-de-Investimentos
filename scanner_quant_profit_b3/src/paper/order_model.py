@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import json
 from dataclasses import asdict, dataclass, field
-from datetime import datetime
+from datetime import datetime, timezone
 
 
 ORDER_STATUSES = {
@@ -40,7 +40,7 @@ class PaperOrder:
     parent_signal_id: str | int | None = None
     parent_position_id: str | int | None = None
     is_simulation_end_close: bool = False
-    created_at: str = field(default_factory=lambda: datetime.utcnow().isoformat(timespec="seconds"))
+    created_at: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat(timespec="seconds"))
     metadata_json: str = "{}"
 
     def to_dict(self) -> dict:

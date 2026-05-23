@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -44,7 +44,7 @@ def _empty() -> pd.DataFrame:
 
 def _prepare(df: pd.DataFrame) -> pd.DataFrame:
     out = df.copy()
-    out["created_at"] = datetime.utcnow().isoformat(timespec="seconds")
+    out["created_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
     if "changed_fields" in out.columns:
         out["changed_fields_json"] = out["changed_fields"].map(lambda v: json.dumps(v if isinstance(v, list) else [], ensure_ascii=False))
     for col in [

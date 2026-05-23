@@ -8,7 +8,7 @@ from __future__ import annotations
 import argparse
 import json
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import numpy as np
@@ -130,7 +130,7 @@ def _build_for_ticker(
     var_limit_pct: float,
     confidence: float,
 ) -> dict[str, pd.DataFrame]:
-    created_at = datetime.utcnow().isoformat(timespec="seconds")
+    created_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     hist = history.sort_values("trade_date").copy()
     vol_df = calculate_volatility_features(hist).copy()
     vol_df["created_at"] = created_at

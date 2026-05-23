@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable
 
@@ -95,7 +95,7 @@ def _json_value(value) -> str | None:
 
 def _prepare_for_db(df: pd.DataFrame) -> pd.DataFrame:
     out = df.copy()
-    out["created_at"] = datetime.utcnow().isoformat(timespec="seconds")
+    out["created_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
     rename = {
         "reasons_for": "reasons_for_json",
         "reasons_against": "reasons_against_json",
