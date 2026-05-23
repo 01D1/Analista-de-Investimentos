@@ -1,0 +1,224 @@
+/* ============================================================
+   RADAR MACRO — Canonical Design Tokens
+   ============================================================
+   Single source of truth for all CSS variables.
+   Consumed by:
+     • src/ui/styles.py  → PREMIUM_CSS
+     • _style.py        → DARK_CSS (re-exports from styles.py)
+     • frontend/styles/colors_and_type.css (via @import)
+     • frontend/styles/dashboard.css (via colors_and_type.css)
+   ============================================================
+   TO ADD A NEW TOKEN: add it here, then update all consumers.
+   DO NOT define tokens in component files — only here.
+   ============================================================ */
+
+:root {
+
+  /* ===== COLOR — BASE / SURFACE ============================== */
+  --bg-0:           #07111F;
+  --bg-1:           #080D17;
+  --bg-2:           #0D1421;
+  --bg-3:           #111827;
+  --bg-elevated:    #0F1E35;
+  --bg-tint-cyan:   #082531;
+  --bg-elevated-cyan: #0A2A38;
+
+  /* ===== COLOR — BORDERS ========================== */
+  --border-1:       #142536;
+  --border-2:       #1E3A52;
+  --border-focus:   #0891B2;
+
+  /* ===== COLOR — TEXT ======================================= */
+  --fg-0:           #F8FAFC;
+  --fg-1:           #F1F5F9;
+  --fg-2:           #E2E8F0;
+  --fg-3:           #CBD5E1;
+  --fg-4:           #94A3B8;
+  --fg-5:           #64748B;
+  --fg-6:           #475569;
+
+  /* ===== COLOR — BRAND (CYAN PRIMARY) ===== */
+  --brand-100:      #CFFAFE;
+  --brand-200:      #A5F3FC;
+  --brand-300:      #67E8F9;
+  --brand-400:      #22D3EE;
+  --brand-500:      #06B6D4;
+  --brand-600:      #0891B2;
+  --brand-700:      #0E7490;
+  --brand-glow:     rgba(34, 211, 238, 0.22);
+  --brand-glow-soft: rgba(34, 211, 238, 0.12);
+
+  /* Secondary blue (DCF, links, support) */
+  --blue-300:       #93C5FD;
+  --blue-400:       #60A5FA;
+  --blue-500:       #3B82F6;
+  --blue-600:       #2563EB;
+  --blue-tint:      rgba(59, 130, 246, 0.15);
+  --blue-border:    rgba(59, 130, 246, 0.35);
+
+  /* Legacy cyan aliases (maintained for backward compat) */
+  --brand-cyan:     #22D3EE;
+  --brand-cyan-300: #67E8F9;
+  --brand-cyan-100: #A5F3FC;
+  --cyan-400:       #22D3EE;
+  --cyan-300:       #67E8F9;
+
+  /* ===== COLOR — SEMANTIC (MARKET) ========================== */
+  --pos-500:        #22C55E;
+  --pos-600:        #16A34A;
+  --pos-400:        #34D399;
+  --pos-tint:       rgba(34, 197, 94, 0.15);
+  --pos-tint-soft:  rgba(34, 197, 94, 0.08);
+  --pos-border:     rgba(34, 197, 94, 0.35);
+
+  --neg-500:        #EF4444;
+  --neg-600:        #DC2626;
+  --neg-400:        #FB7185;
+  --neg-tint:       rgba(239, 68, 68, 0.15);
+  --neg-tint-soft:  rgba(239, 68, 68, 0.08);
+  --neg-border:     rgba(239, 68, 68, 0.35);
+
+  --warn-500:       #F59E0B;
+  --warn-600:       #B45309;
+  --warn-tint:      rgba(245, 158, 11, 0.15);
+  --warn-tint-soft: rgba(245, 158, 11, 0.08);
+  --warn-border:    rgba(245, 158, 11, 0.35);
+
+  --violet-500:     #A78BFA;
+  --violet-600:     #7C3AED;
+  --violet-tint:    rgba(167, 139, 250, 0.15);
+  --violet-tint-soft: rgba(167, 139, 250, 0.08);
+  --violet-border:  rgba(167, 139, 250, 0.35);
+
+  --neutral-tint:   rgba(100, 116, 139, 0.15);
+  --neutral-border: rgba(100, 116, 139, 0.35);
+
+  /* ===== COLOR — CHARTS ===================================== */
+  --chart-grid:     #142536;
+  --chart-axis:     #475569;
+  --chart-fill:     rgba(34, 211, 238, 0.14);
+  --chart-fill-blue:rgba(59, 130, 246, 0.12);
+  --chart-line:     #22D3EE;
+  --chart-line-2:   #3B82F6;
+  --chart-line-3:   #A78BFA;
+  --chart-line-4:   #F59E0B;
+  --chart-line-5:   #34D399;
+
+  /* ===== TYPOGRAPHY ========================================= */
+  --font-display:   'Sora', system-ui, -apple-system, sans-serif;
+  --font-body:      'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono:      'JetBrains Mono', 'IBM Plex Mono', monospace;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extra: 800;
+  --fw-black: 900;
+
+  /* Type scale */
+  --fs-eyebrow:  0.65rem;
+  --fs-label:    0.72rem;
+  --fs-caption:  0.78rem;
+  --fs-body:     0.88rem;
+  --fs-ui:       0.95rem;
+  --fs-h4:       1.05rem;
+  --fs-h3:       1.3rem;
+  --fs-h2:       1.5rem;
+  --fs-h1:       2rem;
+  --fs-display:  2.4rem;
+
+  /* Letter-spacing */
+  --ls-tight:      -1px;
+  --ls-snug:       -0.5px;
+  --ls-uppercase:  0.6px;
+  --ls-uppercase-l: 0.8px;
+
+  /* Line heights */
+  --lh-tight: 1.1;
+  --lh-snug:  1.35;
+  --lh-body:  1.55;
+  --lh-prose: 1.65;
+
+  /* ===== SPACING ============================================ */
+  --space-1: 4px;  --space-2: 6px;  --space-3: 8px;
+  --space-4: 10px; --space-5: 12px; --space-6: 14px;
+  --space-7: 16px; --space-8: 18px; --space-9: 20px;
+  --space-10: 22px; --space-12: 28px; --space-14: 32px;
+
+  /* ===== RADIUS ============================================= */
+  --r-pill: 99px;
+  --r-sm: 6px;
+  --r-md: 8px;
+  --r-lg: 10px;
+  --r-xl: 12px;
+  --r-2xl: 14px;
+  --r-3xl: 16px;
+
+  /* ===== ELEVATION / SHADOWS ================================= */
+  --shadow-1:      0 1px 0 rgba(255,255,255,0.02) inset;
+  --shadow-2:      0 4px 20px rgba(34, 211, 238, 0.14);
+  --shadow-3:      0 4px 28px rgba(34, 211, 238, 0.18);
+  --shadow-glow-c: 0 0 14px rgba(34, 211, 238, 0.30);
+  --shadow-glow-b: 0 0 12px rgba(59, 130, 246, 0.22);
+
+  /* ===== MOTION ============================================= */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --t-fast:  0.15s;
+  --t-base:  0.2s;
+  --t-slow:  0.4s;
+}
+
+/* ============================================================
+   BASE RESET (shared across all consumers)
+   ============================================================ */
+html, body {
+  background: var(--bg-0);
+  color: var(--fg-1);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-0); }
+::-webkit-scrollbar-thumb { background: var(--border-1); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--brand-500); }
+
+/* ============================================================
+   KEYFRAMES (shared across all consumers)
+   ============================================================ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fillBar { from { width: 0%; } }
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 1px var(--brand-600), 0 0 8px rgba(34,211,238,0.18); }
+  50%      { box-shadow: 0 0 0 1px var(--brand-600), 0 0 18px rgba(34,211,238,0.42); }
+}
+@keyframes breathe {
+  0%, 100% { opacity: 0.7; }
+  50%      { opacity: 1; }
+}
+@keyframes flowDot {
+  0%   { transform: translateX(0); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateX(28px); opacity: 0; }
+}
+@keyframes blinkCaret { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+@keyframes tickerEnter {
+  0%   { opacity: 0; transform: translateY(-4px); background: rgba(34,211,238,0.10); }
+  100% { opacity: 1; transform: translateY(0); background: transparent; }
+}
+@keyframes highPriorityFlash {
+  0%   { background: rgba(239,68,68,0.18); }
+  100% { background: transparent; }
+}
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.45; }
+}

@@ -29,6 +29,11 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+from src.ui.styles import PREMIUM_CSS
+from src.ui.components import (
+    section_title, kpi_card, status_chip, alert_block,
+    metric_card, metric_table_row, empty_state,
+)
 from src.utils import load_config, project_path
 from src.strategies.call_continuity_strategy import load_quant_config
 from src.journal.trade_journal import TradeJournal, JournalTrade
@@ -47,7 +52,7 @@ _BG2    = "#111827"
 _GRID   = "#1E2D42"
 _GREEN  = "#22C55E"
 _RED    = "#EF4444"
-_BLUE   = "#3B82F6"
+_CYAN   = "#22D3EE"
 _AMBER  = "#F59E0B"
 _TEXT   = "#64748B"
 _WHITE  = "#E2E8F0"
@@ -63,7 +68,7 @@ section.main > div { padding-top: 0.5rem; }
 }
 .perf-header::before {
     content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, #7C3AED 0%, #3B82F6 50%, #22C55E 100%);
+    background: linear-gradient(90deg, #7C3AED 0%, #22D3EE 50%, #22C55E 100%);
 }
 .perf-title { font-size: 1.3rem; font-weight: 900; color: #F1F5F9; margin: 0; }
 .perf-sub   { font-size: 0.72rem; color: #334155; margin-top: 4px; }
@@ -155,8 +160,8 @@ def _equity_chart(equity: pd.Series) -> go.Figure:
     # Equity
     fig.add_trace(go.Scatter(
         y=equity.values, mode="lines", name="P&L Acumulado",
-        line=dict(color=_BLUE, width=2.2),
-        fill="tozeroy", fillcolor="rgba(59,130,246,0.07)",
+        line=dict(color=_CYAN, width=2.2),
+        fill="tozeroy", fillcolor="rgba(34,211,238,0.07)",
     ), row=1, col=1)
     fig.add_hline(y=0, line_color=_GRID, line_dash="dash", line_width=1, row=1, col=1)
 
@@ -353,6 +358,8 @@ def _risk_section(journal: TradeJournal, capital: float):
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
+    # Layer canonical design tokens beneath performance-specific overrides
+    st.markdown(PREMIUM_CSS, unsafe_allow_html=True)
     st.markdown(_CSS, unsafe_allow_html=True)
 
     cfg  = load_config()

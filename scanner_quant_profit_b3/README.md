@@ -82,11 +82,34 @@ python -m src.scanners.populate_asset_intelligence_history --start 2026-01-02 --
 python -m src.scanners.signal_coverage_check --start 2026-01-02 --end 2026-04-30 --sources quant technical integrated --save-db --csv
 python -m src.scanners.hypothesis_ranking --start 2026-01-02 --end 2026-04-30 --sources quant technical integrated --save-db --csv
 python -m src.scanners.hypothesis_deep_dive --ranking-run-id 1 --top-n 3 --save-db --csv
+python -m src.scanners.limit_signal_source_calibration --start 2026-01-02 --end 2026-04-30 --save-db --csv
+python -m src.scanners.cost_slippage_diagnostics --paper-run-id 2 --save-db --csv
+python -m src.scanners.fine_cost_diagnostics --paper-run-id 2 --save-db --csv
+python -m src.scanners.cost_reduction_simulation --paper-run-id 2 --save-db --csv
+python -m src.scanners.cost_frontier_analysis --cost-reduction-run-id 3 --save-db --csv
+```
+
+### Relatório semanal Radar Macro
+
+Gera o research output institucional consolidando dados, sinais, valuation, eventos, regimes, opções, risco, paper trading, governança e hipóteses. O relatório é não recomendativo e não altera modelos, score, ranking ou parâmetros.
+
+```bash
+python -m src.scanners.generate_radar_macro_weekly --start 2026-01-02 --end 2026-04-30 --save-db --md --pdf
 ```
 
 Se `technical` ou `integrated` estiverem com cobertura insuficiente, a validação OOS registra bloqueio por amostra e não conclui robustez multi-fonte.
 
 O deep dive aprofunda as melhores hipóteses do ranking, separando condição de fragilidade por fonte de sinal, custo, slippage, regime e ativo. O resultado é explicação de bloqueio ou observação analítica, sempre como não recomendação.
+
+A calibração `LIMIT_SIGNAL_SOURCE` testa variações paramétricas com controle de custo e controle de slippage antes de qualquer observação recorrente.
+
+O diagnóstico de custo/slippage mede cost drag, turnover, liquidez e break-even para explicar se o gargalo vem de giro, fonte de sinal, ativo, regime ou premissas de execução.
+
+O diagnóstico fino de custos separa custo atribuído entre entrada, saída, rebalanceamento, eventos de saída, fechamento de simulação e metadado ausente/UNKNOWN. Ele não reescreve histórico antigo; apenas diagnostica e enriquece novas simulações.
+
+A simulação de redução de custos testa variantes específicas de rebalanceamento e regras de saída contra o baseline, com governança própria. Variante simulada não é recomendação e não é aplicada automaticamente.
+
+A fronteira custo-retorno-drawdown identifica variantes não dominadas e trade-offs entre redução de custo, retorno, drawdown e turnover. Estar na fronteira não libera aplicação automática.
 
 Simulação avançada:
 

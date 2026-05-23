@@ -21,7 +21,8 @@ for _k in list(sys.modules):
 import streamlit as st
 import plotly.graph_objects as go
 
-from _style import DARK_CSS
+from src.ui.styles import PREMIUM_CSS  # canonical design tokens
+from src.ui.components import status_chip, alert_block, empty_state, kpi_card, section_title
 from src.dashboard.data import get_macro_panel
 
 # ---------------------------------------------------------------------------
@@ -54,7 +55,7 @@ def _build_chart(name: str, series_data: list[dict]) -> go.Figure:
             y=values,
             mode="lines",
             name=name,
-            line=dict(color="#93C5FD", width=1.5),
+            line=dict(color="#22D3EE", width=1.5),
         )
     )
     fig.update_layout(
@@ -76,54 +77,84 @@ def _build_chart(name: str, series_data: list[dict]) -> go.Figure:
 # Page
 # ---------------------------------------------------------------------------
 
+def _chart_panel(name: str, series_data: list[dict]) -> None:
+    """Render a chart inside a .panel wrapper with series title."""
+    st.markdown('<div class="panel">', unsafe_allow_html=True)
+    if series_data:
+        st.plotly_chart(_build_chart(name, series_data), use_container_width=True)
+    else:
+        series_title = _SERIES_TITLES.get(name, name)
+        st.markdown(
+            alert_block("warn",
+                f"Dados indisponíveis — {series_title}",
+                "Execute o pipeline de ingestão BCB para obter esta série."),
+            unsafe_allow_html=True,
+        )
+    st.markdown("</div>", unsafe_allow_html=True)
+
+
+def _available_series() -> list[str]:
+    """Return list of series keys that have data."""
+    macro = get_macro_panel()
+    return [k for k in _SERIES_ORDER if macro.get(k)]
+
+
 def main() -> None:
-    st.markdown(DARK_CSS, unsafe_allow_html=True)
+    st.markdown(PREMIUM_CSS, unsafe_allow_html=True)
     st.title("Painel Macroeconômico")
 
     macro = get_macro_panel()
+    available = [k for k in _SERIES_ORDER if macro.get(k)]
+    total = len(_SERIES_ORDER)
 
-    if not any(macro.values()):
-        st.warning("Dados macroeconômicos não disponíveis. Verifique a ingestão BCB.")
+    # ── Macro data source status header (S06) ───────────────────────────────
+    # Determine source health from data availability
+    if not available:
+        src_status = "EMPTY"
+        src_label = "SEM DADOS MACRO"
+        src_color = "neg"
+    elif len(available) < total:
+        src_status = "DEGRADED"
+        src_label = f"PARCIAL — {len(available)}/{total} séries"
+        src_color = "warn"
+    else:
+        src_status = "APPROVED_FOR_STUDY"
+        src_label = "DADOS COMPLETOS — BCB"
+        src_color = "pos"
+
+    st.markdown(
+        f'<div style="margin-bottom:16px; display:flex; align-items:center; gap:10px;">'
+        f'{status_chip(src_status, label=src_label)}'
+        f'</div>',
+        unsafe_allow_html=True,
+    )
+
+    # ── Alert: macro data unavailable ─────────────────────────────────────
+    if not available:
+        st.markdown(
+            alert_block("error",
+                "Dados macroeconômicos não disponíveis",
+                "Verifique o pipeline de ingestão BCB. Selic, IPCA, PTAX, CDS e PIB não foram encontrados."),
+            unsafe_allow_html=True,
+        )
         st.stop()
 
     # ── Selic — full width (focal point) ─────────────────────────────────
-    selic_data = macro.get("selic", [])
-    if selic_data:
-        st.plotly_chart(_build_chart("selic", selic_data), use_container_width=True)
-    else:
-        st.caption(f"{_SERIES_TITLES['selic']}: dados não disponíveis")
+    _chart_panel("selic", macro.get("selic", []))
 
     # ── IPCA + PTAX (row 2) ───────────────────────────────────────────────
     col_ipca, col_ptax = st.columns(2)
     with col_ipca:
-        data = macro.get("ipca_12m", [])
-        if data:
-            st.plotly_chart(_build_chart("ipca_12m", data), use_container_width=True)
-        else:
-            st.caption(f"{_SERIES_TITLES['ipca_12m']}: dados não disponíveis")
-
+        _chart_panel("ipca_12m", macro.get("ipca_12m", []))
     with col_ptax:
-        data = macro.get("ptax", [])
-        if data:
-            st.plotly_chart(_build_chart("ptax", data), use_container_width=True)
-        else:
-            st.caption(f"{_SERIES_TITLES['ptax']}: dados não disponíveis")
+        _chart_panel("ptax", macro.get("ptax", []))
 
     # ── CDS + PIB (row 3) ─────────────────────────────────────────────────
     col_cds, col_pib = st.columns(2)
     with col_cds:
-        data = macro.get("cds_brasil", [])
-        if data:
-            st.plotly_chart(_build_chart("cds_brasil", data), use_container_width=True)
-        else:
-            st.caption(f"{_SERIES_TITLES['cds_brasil']}: dados não disponíveis")
-
+        _chart_panel("cds_brasil", macro.get("cds_brasil", []))
     with col_pib:
-        data = macro.get("pib_nominal", [])
-        if data:
-            st.plotly_chart(_build_chart("pib_nominal", data), use_container_width=True)
-        else:
-            st.caption(f"{_SERIES_TITLES['pib_nominal']}: dados não disponíveis")
+        _chart_panel("pib_nominal", macro.get("pib_nominal", []))
 
 
 main()

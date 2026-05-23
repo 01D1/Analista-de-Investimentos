@@ -26,8 +26,9 @@ from src.ui.components import (
     watchlist_card,
     section_title,
     empty_state,
+    kpi_card,
 )
-from src.dashboard.data import get_watchlist_summary
+from src.dashboard.data import get_watchlist_summary, get_asset_detail
 
 
 # ── Page ──────────────────────────────────────────────────────────────────────
@@ -50,8 +51,7 @@ def main() -> None:
     if not rows:
         empty_state(
             "Nenhuma tese gerada ainda.\n"
-            "Execute: python -m src.main daemon para iniciar o pipeline.",
-            icon="",
+            "Execute: python -m src.main daemon para iniciar o pipeline."
         )
         st.stop()
 
@@ -60,29 +60,26 @@ def main() -> None:
     buy_n   = sum(1 for r in rows if str(r.get("positioning", "")).upper() == "COMPRAR")
     hold_n  = sum(1 for r in rows if str(r.get("positioning", "")).upper() == "MANTER")
     sell_n  = sum(1 for r in rows if str(r.get("positioning", "")).upper() == "VENDER")
+    val_n   = sum(1 for r in rows if r.get("valuation_available", False))
 
-    st.markdown(
-        """
-<div class="summary-header">
-  <div class="summary-kpi">
-    <div class="summary-kpi-num blue">{total}</div>
-    <div class="summary-kpi-label">Total Ativos</div>
-  </div>
-  <div class="summary-kpi">
-    <div class="summary-kpi-num green">{buy}</div>
-    <div class="summary-kpi-label">COMPRAR</div>
-  </div>
-  <div class="summary-kpi">
-    <div class="summary-kpi-num amber">{hold}</div>
-    <div class="summary-kpi-label">MANTER</div>
-  </div>
-  <div class="summary-kpi">
-    <div class="summary-kpi-num red">{sell}</div>
-    <div class="summary-kpi-label">VENDER</div>
-  </div>
-</div>""".format(total=total, buy=buy_n, hold=hold_n, sell=sell_n),
-        unsafe_allow_html=True,
-    )
+    # ── Summary KPI header (S05) ─────────────────────────────────────────────
+    total   = len(rows)
+    buy_n   = sum(1 for r in rows if str(r.get("positioning", "")).upper() == "COMPRAR")
+    hold_n  = sum(1 for r in rows if str(r.get("positioning", "")).upper() == "MANTER")
+    sell_n  = sum(1 for r in rows if str(r.get("positioning", "")).upper() == "VENDER")
+    val_n   = sum(1 for r in rows if r.get("valuation_available", False))
+
+    cols = st.columns(5)
+    kpi_data = [
+        ("Total Ativos",        str(total),        "cyan"),
+        ("COMPRAR",            str(buy_n),         "pos"),
+        ("MANTER",             str(hold_n),        "warn"),
+        ("VENDER",             str(sell_n),        "neg"),
+        ("c/ VALUATION",       str(val_n),         "pos"),
+    ]
+    for col, (label, value, color) in zip(cols, kpi_data):
+        with col:
+            kpi_card(label, value, color=color)
 
     # ── Filter & sort controls ────────────────────────────────────────────────
     col_search, col_pos, col_sort = st.columns([3, 2, 2])
@@ -136,7 +133,7 @@ def main() -> None:
     section_title("{0} ativos encontrados".format(len(filtered)), icon="")
 
     if not filtered:
-        empty_state("Nenhum ativo corresponde ao filtro.", icon="")
+        empty_state("Nenhum ativo corresponde ao filtro.")
     else:
         # Build cards in groups of 3 per row
         cards_per_row = 3

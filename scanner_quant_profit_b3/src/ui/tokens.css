@@ -1,0 +1,21 @@
+/*
+   ============================================================
+   RADAR MACRO — Design Tokens (Legacy)
+   ============================================================
+
+   ⚠ DEPRECATED — DO NOT EDIT
+   Canonical source: src/ui/design_tokens.css
+   This file is kept for backward compatibility only.
+   All new token definitions MUST go in design_tokens.css.
+
+   Consumers:
+     • src/ui/styles.py → loads design_tokens.css (canonical)
+     • Any direct imports of this file (legacy fallback)
+
+   ============================================================
+   Tokens below are synchronized with design_tokens.css.
+   DO NOT add new tokens here. Add them to design_tokens.css.
+   ============================================================
+*/
+
+@import url("design_tokens.css");

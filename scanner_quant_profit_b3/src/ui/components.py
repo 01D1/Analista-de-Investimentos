@@ -1,629 +1,862 @@
-"""
-Premium reusable UI components for Plataforma Quant B3.
+import streamlit as st
 
-All functions either return an HTML string or call st.markdown directly.
-No function modifies data — strictly visual layer.
-"""
-from __future__ import annotations
+def live_pill(text="LIVE"):
+    st.markdown(f'<span class="live-pill"><span class="dot"></span>{text}</span>', unsafe_allow_html=True)
 
-import json
-import html as _html
-from typing import Any
+def _escape_html(text: str) -> str:
+    return str(text).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
-try:
-    import streamlit as st
-except ImportError:
-    st = None  # type: ignore[assignment]
+def section_title(title, subtitle=None, icon=None):
+    """Render a section header with optional subtitle and/or emoji icon.
 
-try:
-    import plotly.graph_objects as go
-except ImportError:
-    go = None  # type: ignore[assignment]
-
-
-# ── Positioning maps ──────────────────────────────────────────────────────────
-
-_POSITIONING_BADGE = {
-    "COMPRAR": ("BUY",  "badge-buy"),
-    "MANTER":  ("HOLD", "badge-hold"),
-    "VENDER":  ("SELL", "badge-sell"),
-}
-
-_POSITIONING_CLASS = {
-    "COMPRAR": "buy",
-    "MANTER":  "hold",
-    "VENDER":  "sell",
-}
-
-_IMPACT_BADGE = {
-    "HIGH":   "badge-high",
-    "MEDIUM": "badge-medium",
-    "LOW":    "badge-low",
-    "ALTA":   "badge-high",
-    "MEDIA":  "badge-medium",
-    "BAIXA":  "badge-low",
-}
-
-_SIGNAL_CLASS = {
-    "DCF_DIVERGENCE":     "dcf",
-    "MOMENTUM_CROSSOVER": "momentum",
-    "IPE_EVENT":          "ipe",
-}
-
-
-# ═════════════════════════════════════════════════════════════════════════════
-# HELPERS
-# ═════════════════════════════════════════════════════════════════════════════
-
-def _esc(text: Any) -> str:
-    """HTML-escape a value safely."""
-    return _html.escape(str(text) if text is not None else "—")
-
-
-def _clamp(value: float, lo: float = 0.0, hi: float = 100.0) -> float:
-    return max(lo, min(hi, float(value)))
-
-
-# ═════════════════════════════════════════════════════════════════════════════
-# BADGE
-# ═════════════════════════════════════════════════════════════════════════════
-
-def badge(text: str, style: str = "neutral") -> str:
-    """Return an inline HTML badge span."""
-    css_class = "badge badge-{0}".format(style)
-    return '<span class="{0}">{1}</span>'.format(css_class, _esc(text))
-
-
-def positioning_badge(positioning: str) -> str:
-    """BUY/HOLD/SELL badge with appropriate color class."""
-    label, css = _POSITIONING_BADGE.get(
-        positioning.upper(), (positioning, "badge-neutral")
-    )
-    return '<span class="badge {0}">{1}</span>'.format(css, label)
-
-
-def impact_badge(level: str) -> str:
-    """HIGH/MEDIUM/LOW impact badge."""
-    css = _IMPACT_BADGE.get(level.upper(), "badge-neutral")
-    return '<span class="badge {0}">{1}</span>'.format(css, _esc(level))
-
-
-# ═════════════════════════════════════════════════════════════════════════════
-# SECTION TITLE
-# ═════════════════════════════════════════════════════════════════════════════
-
-def section_title(text: str, icon: str = "") -> None:
-    """Render a section divider with title using st.markdown."""
-    icon_html = (
-        '<span class="section-title-icon">{0}</span>'.format(_esc(icon))
-        if icon else ""
-    )
-    st.markdown(
-        '<div class="section-title">{0}{1}</div>'.format(icon_html, _esc(text)),
-        unsafe_allow_html=True,
-    )
-
-
-# ═════════════════════════════════════════════════════════════════════════════
-# EMPTY STATE
-# ═════════════════════════════════════════════════════════════════════════════
-
-def empty_state(message: str, icon: str = "") -> None:
-    """Render a centered empty state placeholder."""
-    st.markdown(
-        """
-<div class="empty-state">
-  <div class="empty-state-icon">{icon}</div>
-  <div class="empty-state-text">{msg}</div>
-</div>""".format(icon=_esc(icon), msg=_esc(message)),
-        unsafe_allow_html=True,
-    )
-
-
-# ═════════════════════════════════════════════════════════════════════════════
-# KPI CARD / STRIP
-# ═════════════════════════════════════════════════════════════════════════════
-
-def kpi_card(
-    label: str,
-    value: str,
-    sub: str = "",
-    color: str = "blue",
-    delta: float | None = None,
-) -> str:
-    """Return HTML for a single KPI card."""
-    delta_html = ""
-    if delta is not None:
-        if delta >= 0:
-            delta_html = '<div class="kpi-delta-pos">&#9650; {0:+.1f}%</div>'.format(delta)
-        else:
-            delta_html = '<div class="kpi-delta-neg">&#9660; {0:.1f}%</div>'.format(delta)
-
-    sub_html = (
-        '<div class="kpi-sub">{0}</div>'.format(_esc(sub)) if sub else ""
-    )
-
-    return """
-<div class="kpi-card {color}">
-  <div class="kpi-label">{label}</div>
-  <div class="kpi-value">{value}</div>
-  {sub}
-  {delta}
-</div>""".format(
-        color=_esc(color),
-        label=_esc(label),
-        value=_esc(value),
-        sub=sub_html,
-        delta=delta_html,
-    )
-
-
-def kpi_strip(cards: list[dict]) -> None:
-    """Render a horizontal row of KPI cards.
-
-    Each card dict: {label, value, sub?, color?, delta?}
+    Args:
+        title: Section heading text.
+        subtitle: Optional secondary text (rendered in mono font).
+        icon: Optional emoji or character rendered before title (e.g. "📊").
     """
-    inner = "".join(
-        kpi_card(
-            label=c.get("label", ""),
-            value=c.get("value", "—"),
-            sub=c.get("sub", ""),
-            color=c.get("color", "blue"),
-            delta=c.get("delta"),
-        )
-        for c in cards
-    )
-    st.markdown(
-        '<div class="kpi-strip">{0}</div>'.format(inner),
-        unsafe_allow_html=True,
-    )
-
-
-# ═════════════════════════════════════════════════════════════════════════════
-# HERO SECTION
-# ═════════════════════════════════════════════════════════════════════════════
-
-def hero_section(
-    ticker: str,
-    nome: str = "",
-    setor: str = "",
-    positioning: str = "",
-    score: float = 0.0,
-    market_cap: str | None = None,
-    upside: float | None = None,
-) -> None:
-    """Render a hero banner for the asset detail page."""
-    pos_badge = positioning_badge(positioning) if positioning else ""
-    setor_badge = (
-        '<span class="badge badge-neutral" style="margin-left:8px">{0}</span>'.format(_esc(setor))
-        if setor else ""
-    )
-
-    upside_html = ""
-    if upside is not None:
-        color = "#22C55E" if upside >= 0 else "#EF4444"
-        sign = "+" if upside >= 0 else ""
-        upside_html = """
-    <div class="hero-metric">
-      Upside DCF
-      <span style="color:{color}">{sign}{upside:.1f}%</span>
-    </div>""".format(color=color, sign=sign, upside=upside)
-
-    mktcap_html = ""
-    if market_cap:
-        mktcap_html = """
-    <div class="hero-metric">
-      Market Cap
-      <span>{0}</span>
-    </div>""".format(_esc(market_cap))
-
-    score_pct = _clamp(score)
-    st.markdown(
-        """
-<div class="hero-section">
-  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px">
-    <div>
-      <div class="hero-ticker">{ticker}</div>
-      <div class="hero-company">{nome}{setor_badge}</div>
-      <div style="margin-top:10px">{pos_badge}</div>
+    sub_html = ""
+    if subtitle:
+        sub_html = f'<span style="font-family:\'JetBrains Mono\',monospace; font-size:0.7rem; color:var(--fg-5);">{subtitle}</span>'
+    # Escape all user-supplied strings to prevent XSS
+    icon_html = f"{_escape_html(icon)} " if icon else ""
+    st.markdown(f"""
+    <div class="section-title">
+        <span>{icon_html}{_escape_html(title)}</span>
+        {sub_html}
     </div>
-    <div style="text-align:right;font-size:3rem;font-weight:900;color:#1E2D42;
-                line-height:1;user-select:none;letter-spacing:-2px">{score_display}</div>
-  </div>
-  <div class="hero-meta">
-    {upside_html}
-    {mktcap_html}
-  </div>
-</div>""".format(
-            ticker=_esc(ticker),
-            nome=_esc(nome) if nome else _esc(ticker),
-            setor_badge=setor_badge,
-            pos_badge=pos_badge,
-            score_display="{0:.0f}".format(score_pct),
-            upside_html=upside_html,
-            mktcap_html=mktcap_html,
-        ),
-        unsafe_allow_html=True,
-    )
+    """, unsafe_allow_html=True)
 
+def kpi_card(label, value, delta=None, color="cyan", sub=None):
+    delta_html = ""
+    if delta:
+        if delta > 0:
+            delta_html = f'<div class="kpi-delta-pos">▲ +{delta}</div>'
+        else:
+            delta_html = f'<div class="kpi-delta-neg">▼ {abs(delta)}</div>'
+    
+    sub_html = f'<div class="kpi-sub">{sub}</div>' if sub else ''
+    
+    st.markdown(f"""
+    <div class="kpi-card {color}">
+        <div class="kpi-label">{label}</div>
+        <div class="kpi-value">{value}</div>
+        {delta_html}
+        {sub_html}
+    </div>
+    """, unsafe_allow_html=True)
 
-# ═════════════════════════════════════════════════════════════════════════════
-# SCORE GAUGE (Plotly)
-# ═════════════════════════════════════════════════════════════════════════════
+def stage_card(label, sub, conf, time, status="done"):
+    is_running = status == "running"
+    cls = "stage-running" if is_running else ""
+    status_dot = f'<span style="width: 6px; height: 6px; border-radius: 50%; background: {"#22D3EE" if is_running else "#22C55E"}; display: inline-block; margin-right: 6px; {"box-shadow: 0 0 8px #22D3EE; animation: breathe 1.4s infinite;" if is_running else ""}"></span>'
+    
+    st.markdown(f"""
+    <div class="card-base {cls}" style="padding: 10px 12px; min-width: 100px;">
+        <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 6px;">
+            {status_dot}
+            <span style="font-size: 0.7rem; font-weight: 800; color: {"var(--brand-300)" if is_running else "var(--fg-2)"};">{label}</span>
+        </div>
+        <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--fg-5); margin-bottom: 8px; line-height: 1.3;">{sub}</div>
+        <div style="display: flex; justify-content: space-between; alignItems: baseline;">
+            <span style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 900; color: var(--brand-300);">{conf}</span>
+            <span style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--fg-6);">{time}</span>
+        </div>
+        <div style="margin-top: 6px; background: var(--bg-0); border-radius: 99px; height: 2px; overflow: hidden;">
+            <div style="height: 100%; width: {conf}%; background: var(--brand-500); border-radius: 99px;"></div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+    
 
-def score_gauge(score: float, label: str = "Score Geral") -> "go.Figure":
-    """Return a Plotly Indicator gauge figure."""
-    val = _clamp(score)
+def hero_section(title=None, subtitle="", ticker=None, nome=None, setor="",
+                positioning=None, score=None, upside=None):
+    """Render a hero section.
 
-    if val >= 70:
-        bar_color = "#22C55E"
-    elif val >= 40:
-        bar_color = "#F59E0B"
+    Supports two modes:
+    - Simple: hero_section(title="...", subtitle="...")  [existing]
+    - Rich:   hero_section(ticker="PETR4", nome="Petrobras", ...)
+    """
+    if ticker is not None:
+        # Rich mode — display ticker + positioning + score
+        title_text = ticker if nome is None else nome
+        pos_color = "var(--pos-500)" if str(positioning or "").upper() == "COMPRAR" else (
+            "var(--neg-500)" if str(positioning or "").upper() == "VENDER" else "var(--fg-4)"
+        )
+        pos_str = positioning or ""
+        score_str = f"{score:.0f}" if score is not None else "—"
+        upside_str = f"{upside:+.1f}%" if upside is not None else ""
+        st.markdown(f"""
+        <div class="hero-section" style="margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+                <div>
+                    <div style="font-family:var(--font-display);font-size:1.6rem;font-weight:900;
+                         color:var(--fg-1);margin-bottom:2px;">{title_text}</div>
+                    <div style="color:var(--fg-4);font-size:.8rem;">{setor}</div>
+                </div>
+                <div style="text-align:right;">
+                    <div style="font-family:var(--font-display);font-weight:900;
+                         font-size:1.6rem;color:{pos_color};">{pos_str}</div>
+                    <div style="font-family:var(--font-mono);font-size:.72rem;color:var(--fg-5);">
+                        Score {score_str}{' · ' + upside_str if upside_str else ''}
+                    </div>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
     else:
-        bar_color = "#EF4444"
-
-    fig = go.Figure(
-        go.Indicator(
-            mode="gauge+number",
-            value=val,
-            title={"text": label, "font": {"size": 13, "color": "#94A3B8"}},
-            number={"font": {"size": 36, "color": "#F1F5F9"}},
-            gauge={
-                "axis": {
-                    "range": [0, 100],
-                    "tickwidth": 1,
-                    "tickcolor": "#1E2D42",
-                    "tickfont": {"size": 9, "color": "#475569"},
-                },
-                "bar": {"color": bar_color, "thickness": 0.22},
-                "bgcolor": "#111827",
-                "borderwidth": 0,
-                "steps": [
-                    {"range": [0, 40],  "color": "rgba(239,68,68,0.08)"},
-                    {"range": [40, 70], "color": "rgba(245,158,11,0.08)"},
-                    {"range": [70, 100],"color": "rgba(34,197,94,0.08)"},
-                ],
-                "threshold": {
-                    "line": {"color": "#3B82F6", "width": 2},
-                    "thickness": 0.8,
-                    "value": val,
-                },
-            },
-        )
-    )
-    fig.update_layout(
-        template="plotly_dark",
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(0,0,0,0)",
-        font={"color": "#94A3B8"},
-        margin={"l": 20, "r": 20, "t": 30, "b": 10},
-        height=220,
-    )
-    return fig
+        title = title or ""
+        st.markdown(f"""
+        <div class="hero-section">
+            <div style="font-family:var(--font-display);font-size:1.8rem;font-weight:900;
+                 color:var(--fg-1);margin-bottom:6px;">{title}</div>
+            <div style="color:var(--fg-4);font-size:.82rem;">{subtitle}</div>
+        </div>
+        """, unsafe_allow_html=True)
 
 
-# ═════════════════════════════════════════════════════════════════════════════
-# SCORE BREAKDOWN BARS
-# ═════════════════════════════════════════════════════════════════════════════
-
-_BAR_COLORS = ["blue", "green", "amber", "purple", "red", "blue"]
-
-
-def score_breakdown_bars(dimensions: dict[str, float]) -> None:
-    """Render animated horizontal score bars via HTML."""
-    rows_html = []
-    for idx, (dim_name, raw_val) in enumerate(dimensions.items()):
-        val = _clamp(raw_val)
-        color_class = "score-bar-{0}".format(
-            _BAR_COLORS[idx % len(_BAR_COLORS)]
-        )
-        rows_html.append(
-            """
-<div class="score-bar-row">
-  <div class="score-bar-label">
-    <span>{name}</span>
-    <span>{val:.0f}</span>
-  </div>
-  <div class="score-bar-track">
-    <div class="score-bar-fill {color}" style="width:{val:.1f}%"></div>
-  </div>
-</div>""".format(
-                name=_esc(dim_name),
-                val=val,
-                color=color_class,
+def kpi_strip(items):
+    cols = st.columns(len(items))
+    for col, item in zip(cols, items):
+        with col:
+            kpi_card(
+                item.get("label", ""),
+                item.get("value", ""),
+                item.get("delta"),
+                item.get("color", "cyan"),
+                item.get("sub"),
             )
-        )
-    st.markdown("".join(rows_html), unsafe_allow_html=True)
 
 
-# ═════════════════════════════════════════════════════════════════════════════
-# THESIS CARD
-# ═════════════════════════════════════════════════════════════════════════════
+def score_gauge(score, label=None):
+    score_str = f"{score:.0f}"
+    label_html = f'<div style="font-size:.62rem;text-transform:uppercase;letter-spacing:.8px;'
+    label_html += f'color:var(--fg-5);margin-bottom:4px;">{label or "SCORE"}</div>'
+    st.markdown(f"""
+    <div class="panel-shell" style="text-align:center;">
+        {label_html}
+        <div style="font-family:var(--font-display);font-weight:900;font-size:2.2rem;
+             color:var(--brand-300);">{score_str}</div>
+    </div>
+    """, unsafe_allow_html=True)
 
-def thesis_card(
-    bull_case: str,
-    bear_case: str,
-    drivers: list[dict],
-    risks: list[dict],
-) -> None:
-    """Render bull/bear case text in a styled thesis card."""
-    st.markdown(
-        """
-<div class="thesis-card">
-  <div class="thesis-section-title bull">Cenario Otimista (Bull Case)</div>
-  <div class="thesis-text">{bull}</div>
-  <hr class="thesis-divider">
-  <div class="thesis-section-title bear">Cenario Pessimista (Bear Case)</div>
-  <div class="thesis-text">{bear}</div>
-</div>""".format(
-            bull=_esc(bull_case or "—"),
-            bear=_esc(bear_case or "—"),
-        ),
-        unsafe_allow_html=True,
+
+def opportunity_card(title=None, ticker="", score="", thesis="",
+                    description=None, signal_type=None, conviction_score=None):
+    """Render an opportunity card.
+
+    Supports legacy signature:
+        opportunity_card(title, ticker, score, thesis)
+    And new signature (used by inteligencia_oportunidades.py):
+        opportunity_card(ticker="PETR4", description="...", signal_type="BUY",
+                        conviction_score=72)
+    """
+    # Normalize — accept legacy positional + new kwargs
+    card_title = str(title) if title else str(ticker or "—")
+    card_score = conviction_score if conviction_score is not None else (
+        int(score) if score and str(score).isdigit() else (int(score) if score else 0)
     )
+    card_desc  = description if description is not None else str(thesis or "")
+    score_str  = f"{card_score}"
+    st.markdown(f"""
+    <div class="panel-shell" style="margin-bottom:12px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div>
+                <div style="font-weight:800;color:var(--fg-1);">{card_title}</div>
+                <div style="font-size:.72rem;color:var(--fg-5);">{signal_type or ""}</div>
+            </div>
+            <div class="badge badge-cyan">{score_str}</div>
+        </div>
+        <div style="margin-top:10px;color:var(--fg-3);font-size:.78rem;">
+            {card_desc}
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
 
-def driver_list(drivers: list[dict]) -> None:
-    """Render a list of investment drivers."""
-    if not drivers:
-        st.caption("Nenhum driver disponivel.")
-        return
-    items = []
-    for d in drivers:
-        imp = impact_badge(d.get("impact", "MEDIUM"))
-        items.append(
-            """
-<div class="driver-item">
-  <div class="driver-title">{title} {badge}</div>
-  <div class="driver-desc">{desc}</div>
-</div>""".format(
-                title=_esc(d.get("title", "—")),
-                badge=imp,
-                desc=_esc(d.get("description", "")),
-            )
-        )
-    st.markdown("".join(items), unsafe_allow_html=True)
+
+    
+def score_breakdown_bars(items):
+    """Render score breakdown bars from a dict of {label: value} or list of dicts.
+
+    Supports dict input: score_breakdown_bars({"Valuation": 72.3, "Tecnico": 68.0})
+    Also supports list input: score_breakdown_bars([{"label": "Valuation", "value": 72.3, "color": "..."}])
+    """
+    if isinstance(items, dict):
+        items = [{"label": k, "value": v} for k, v in items.items()]
+
+    for item in items:
+        label = item.get("label", "")
+        value = item.get("value", 0)
+        color = item.get("color", "var(--brand-500)")
+
+        st.markdown(f"""
+        <div style="margin-bottom:10px;">
+            <div style="
+                display:flex;
+                justify-content:space-between;
+                margin-bottom:4px;
+                font-size:.72rem;
+            ">
+                <span style="color:var(--fg-3);">{label}</span>
+                <span style="color:var(--fg-1);font-weight:700;">{value}</span>
+            </div>
+
+            <div style="
+                height:6px;
+                background:var(--bg-0);
+                border-radius:999px;
+                overflow:hidden;
+            ">
+                <div style="
+                    width:{value}%;
+                    height:100%;
+                    background:{color};
+                    border-radius:999px;
+                "></div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+
+def empty_state(text="Sem dados", icon=""):
+    st.markdown(f"""
+    <div class="panel-shell" style="
+        text-align:center;
+        color:var(--fg-5);
+        padding:40px 20px;
+    ">
+        <div style="
+            font-size:1.8rem;
+            margin-bottom:10px;
+        ">
+            {_escape_html(icon)}
+        </div>
+
+        <div>
+            {_escape_html(text)}
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+
+def thesis_card(title=None, thesis="", score=None, status="Ativa",
+                 bull_case=None, bear_case=None, drivers=None, risks=None):
+    """Render a thesis card.
+
+    Supports two modes:
+    - Simple: thesis_card(title="...", thesis="...", score=72)  [existing]
+    - Rich:   thesis_card(bull_case=..., bear_case=..., drivers=[...], risks=[...])
+    """
+    if bull_case is not None or bear_case is not None:
+        # Rich mode
+        bull = bull_case or "—"
+        bear = bear_case or "—"
+        drv_list = drivers or []
+        rsk_list = risks or []
+
+        drivers_html = ""
+        for d in drv_list:
+            impact = str(d.get("impact", "MEDIUM")).upper()
+            imp_color = ("var(--pos-500)" if impact == "HIGH" else
+                         "var(--warn-500)" if impact == "MEDIUM" else "var(--fg-5)")
+            drivers_html += f"""
+            <div style="display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--border-1);">
+                <span style="font-size:.72rem;color:var(--fg-4);flex:1;line-height:1.4;">{d.get('title', '—')}</span>
+                <span style="font-size:.65rem;font-weight:700;color:{imp_color};white-space:nowrap;">{d.get('description', '')[:60]}</span>
+            </div>"""
+
+        risks_html = ""
+        for r in rsk_list:
+            sev = str(r.get("severity", "MEDIUM")).upper()
+            sev_color = ("var(--neg-500)" if sev == "HIGH" else
+                         "var(--warn-500)" if sev == "MEDIUM" else "var(--fg-5)")
+            risks_html += f"""
+            <div style="display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--border-1);">
+                <span style="font-size:.72rem;color:var(--fg-4);flex:1;line-height:1.4;">{r.get('title', '—')}</span>
+                <span style="font-size:.65rem;font-weight:700;color:{sev_color};white-space:nowrap;">{r.get('description', '')[:60]}</span>
+            </div>"""
+
+        st.markdown(f"""
+        <div style="
+            background:var(--bg-3);border:1px solid var(--border-1);
+            border-radius:var(--r-xl);padding:16px 20px;margin-bottom:14px;
+        ">
+            <div style="margin-bottom:16px;">
+                <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.8px;
+                     color:var(--pos-500);font-weight:700;margin-bottom:4px;">BULL CASE</div>
+                <div style="font-size:.8rem;color:var(--fg-3);line-height:1.5;">{bull}</div>
+            </div>
+            <div style="margin-bottom:16px;">
+                <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.8px;
+                     color:var(--neg-500);font-weight:700;margin-bottom:4px;">BEAR CASE</div>
+                <div style="font-size:.8rem;color:var(--fg-4);line-height:1.5;">{bear}</div>
+            </div>
+            {('<div style="margin-bottom:12px;"><div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.8px;'
+              'color:var(--fg-5);margin-bottom:4px;">DRIVERS</div>' + drivers_html + '</div>') if drivers_html else ''}
+            {('<div style="margin-bottom:12px;"><div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.8px;'
+              'color:var(--fg-5);margin-bottom:4px;">RISKS</div>' + risks_html + '</div>') if risks_html else ''}
+        </div>
+        """, unsafe_allow_html=True)
+    else:
+        title = title or ""
+        score_html = f'<span style="background:var(--brand-glow-soft);border:1px solid var(--brand-400);'
+        score_html += f'border-radius:var(--r-sm);padding:2px 8px;'
+        score_html += f'font-size:.65rem;font-weight:800;color:var(--brand-300);">{score}</span>' if score is not None else ""
+        st.markdown(f"""
+        <div class="panel-shell" style="margin-bottom:12px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;">
+                <div>
+                    <div style="font-weight:900;color:var(--fg-1);font-family:var(--font-display);">
+                        {title}
+                    </div>
+                    <div style="font-size:.72rem;color:var(--fg-5);margin-top:3px;">
+                        {status}
+                    </div>
+                </div>
+                {score_html}
+            </div>
+            <div style="margin-top:10px;color:var(--fg-3);font-size:.78rem;line-height:1.45;">
+                {thesis}
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+    
+def driver_list(title, items):
+    st.markdown(f"""
+    <div class="panel-shell" style="margin-bottom:12px;">
+        <div style="
+            font-weight:900;
+            color:var(--fg-1);
+            font-family:var(--font-display);
+            margin-bottom:10px;
+        ">
+            {title}
+        </div>
+    """, unsafe_allow_html=True)
+
+    for item in items:
+        if isinstance(item, dict):
+            label = item.get("label", item.get("title", ""))
+            value = item.get("value", item.get("text", ""))
+        else:
+            label = str(item)
+            value = ""
+
+        st.markdown(f"""
+        <div style="
+            display:flex;
+            justify-content:space-between;
+            gap:10px;
+            padding:7px 0;
+            border-bottom:1px solid var(--border-1);
+        ">
+            <span style="color:var(--fg-3);font-size:.78rem;">{label}</span>
+            <span style="color:var(--fg-5);font-size:.72rem;text-align:right;">{value}</span>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("</div>", unsafe_allow_html=True)
+
+
+def watchlist_card(asset_row: dict) -> str:
+    """Render a watchlist card from a get_watchlist_summary() row dict.
+
+    Args:
+        asset_row: dict with keys: ticker, positioning, confidence, fair_value_brl,
+                   upside_pct, price, pe_ratio, ev_ebitda, generated_at,
+                   valuation_available (S04), valuation_source (S04)
+    Returns:
+        HTML string to pass to st.markdown(..., unsafe_allow_html=True)
+    """
+    ticker = str(asset_row.get("ticker", ""))
+    positioning = str(asset_row.get("positioning", "")).upper()
+    confidence = str(asset_row.get("confidence", ""))
+    fv = asset_row.get("fair_value_brl")
+    upside = asset_row.get("upside_pct")
+    price = asset_row.get("price")
+    generated = str(asset_row.get("generated_at", "—"))
+    # S04: Valuation enrichment
+    val_available = asset_row.get("valuation_available", False)
+    val_source = str(asset_row.get("valuation_source", "none"))
+
+    # Color by positioning
+    if positioning == "COMPRAR":
+        pos_color = "var(--pos-500)"
+        pos_bg = "var(--pos-tint)"
+    elif positioning == "VENDER":
+        pos_color = "var(--neg-500)"
+        pos_bg = "var(--neg-tint)"
+    else:
+        pos_color = "var(--fg-4)"
+        pos_bg = "var(--neutral-tint)"
+
+    # Upside coloring
+    if upside is not None and upside != "":
+        try:
+            u = float(upside)
+            if u > 20:
+                upside_color = "var(--pos-500)"
+                upside_arrow = "▲"
+            elif u > 0:
+                upside_color = "var(--warn-500)"
+                upside_arrow = "▲"
+            else:
+                upside_color = "var(--neg-500)"
+                upside_arrow = "▼"
+            upside_str = f"{upside_arrow} {abs(u):.1f}%"
+        except (TypeError, ValueError):
+            upside_str = "—"
+            upside_color = "var(--fg-5)"
+    else:
+        upside_str = "—"
+        upside_color = "var(--fg-5)"
+
+    fv_str = f"R$ {fv:.2f}" if fv and str(fv) not in ("", "nan", "None") else "—"
+    price_str = f"R$ {price:.2f}" if price and str(price) not in ("", "nan", "None") else "—"
+
+    # S04: Valuation badge
+    if val_available:
+        val_badge = f"""
+        <div style="display:inline-block; background:var(--pos-tint); border:1px solid var(--pos-500);
+                    border-radius:4px; padding:1px 5px; font-family:var(--font-mono);
+                    font-size:.55rem; font-weight:800; color:var(--pos-500);
+                    margin-left:6px; vertical-align:middle;">VAL</div>"""
+    elif val_source == "scanner_quant_db":
+        val_badge = f"""
+        <div style="display:inline-block; background:rgba(234,179,8,0.08); border:1px solid var(--warn-500);
+                    border-radius:4px; padding:1px 5px; font-family:var(--font-mono);
+                    font-size:.55rem; font-weight:800; color:var(--warn-500);
+                    margin-left:6px; vertical-align:middle;">SQ</div>"""
+    else:
+        val_badge = ""
+
+    return f"""
+    <div style="
+        background: var(--bg-3);
+        border: 1px solid var(--border-1);
+        border-radius: var(--r-lg);
+        padding: 16px 18px;
+        margin-bottom: 10px;
+        transition: border-color var(--t-fast);
+    ">
+        <!-- Header row -->
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">
+            <div>
+                <div style="font-family:var(--font-display); font-weight:900; font-size:1.2rem;
+                     color:var(--fg-1); letter-spacing:-0.3px;">{ticker}{val_badge}</div>
+                <div style="font-family:var(--font-mono); font-size:0.62rem; color:var(--fg-5);
+                     margin-top:2px;">{confidence}</div>
+            </div>
+            <div style="
+                background:{pos_bg};
+                border:1px solid {pos_color};
+                border-radius:var(--r-sm);
+                padding:3px 9px;
+                font-family:var(--font-mono);
+                font-size:0.65rem;
+                font-weight:800;
+                color:{pos_color};
+            ">{positioning}</div>
+        </div>
+
+        <!-- Price / FV row -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:10px;">
+            <div>
+                <div style="font-size:0.58rem; color:var(--fg-6); text-transform:uppercase;
+                     letter-spacing:0.6px; margin-bottom:3px;">Preço Atual</div>
+                <div style="font-family:var(--font-mono); font-size:0.9rem; font-weight:700;
+                     color:var(--fg-1);">{price_str}</div>
+            </div>
+            <div>
+                <div style="font-size:0.58rem; color:var(--fg-6); text-transform:uppercase;
+                     letter-spacing:0.6px; margin-bottom:3px;">Valor Justo</div>
+                <div style="font-family:var(--font-mono); font-size:0.9rem; font-weight:700;
+                     color:var(--fg-1);">{fv_str}</div>
+            </div>
+        </div>
+
+        <!-- Upside bar -->
+        <div style="margin-bottom:10px;">
+            <div style="display:flex; justify-content:space-between; font-size:0.65rem;
+                 color:var(--fg-5); margin-bottom:4px;">
+                <span>Upside</span>
+                <span style="color:{upside_color}; font-weight:700; font-family:var(--font-mono);">
+                    {upside_str}
+                </span>
+            </div>
+            <div style="background:var(--bg-0); border-radius:99px; height:4px; overflow:hidden;">
+                <div style="
+                    width:{min(max(abs(upside if upside is not None else 0) * 2, 2), 100)}%;
+                    height:100%;
+                    background:{upside_color};
+                    border-radius:99px;
+                "></div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="font-size:0.58rem; color:var(--fg-6); font-family:var(--font-mono);">
+            Atualizado: {generated}
+        </div>
+    </div>
+    """
+
+
+def risk_item(label: str, description: str = "", severity: str = "MEDIUM") -> str:
+    """Render a risk item card.
+
+    Args:
+        label: Risk title (e.g. "Governança", "Liquidez")
+        description: Risk description text
+        severity: HIGH / MEDIUM / LOW — controls border color
+    Returns:
+        HTML string
+    """
+    if severity.upper() == "HIGH":
+        border_color = "var(--neg-border)"
+        dot_color = "var(--neg-500)"
+        label_color = "var(--neg-500)"
+    elif severity.upper() == "MEDIUM":
+        border_color = "var(--warn-border)"
+        dot_color = "var(--warn-500)"
+        label_color = "var(--warn-500)"
+    else:
+        border_color = "var(--border-1)"
+        dot_color = "var(--fg-5)"
+        label_color = "var(--fg-4)"
+
+    return f"""
+    <div class="risk-item-base" style="
+        background: var(--bg-2);
+        border: 1px solid {border_color};
+        border-radius: var(--r-md);
+        padding: 10px 14px;
+        margin-bottom: 8px;
+    ">
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+            <span style="
+                width:6px; height:6px; border-radius:50%;
+                background:{dot_color}; flex-shrink:0;
+            "></span>
+            <span style="
+                font-size:0.7rem; font-weight:700; text-transform:uppercase;
+                letter-spacing:0.8px; color:{label_color};
+            ">{label}</span>
+        </div>
+        <div style="font-size:0.76rem; color:var(--fg-4); line-height:1.4;">
+            {description}
+        </div>
+    </div>
+    """
+
+
+def metric_card(label: str, value: str, delta: str | None = None,
+                 color: str = "brand", sub: str | None = None) -> str:
+    """Render a metric card returning HTML string.
+
+    Args:
+        label: Metric label (e.g. "Score PETR4")
+        value: Metric value (e.g. "72.37")
+        delta: Optional delta string (e.g. "+3.2")
+        color: Color key — brand/cyan (cyan), pos (green), neg (red), warn (amber), violet
+        sub: Optional sub-label
+    Returns:
+        HTML string
+    """
+    color_map = {
+        "brand": ("mc-value", "metric-card-brand"),
+        "pos":   ("mc-value", "metric-card-pos"),
+        "neg":   ("mc-value", "metric-card-neg"),
+        "warn":  ("mc-value", "metric-card-warn"),
+        "violet":("mc-value", "metric-card-violet"),
+        "cyan":  ("mc-value", "metric-card-brand"),
+    }
+    val_cls, card_cls = color_map.get(color, color_map["brand"])
+
+    delta_html = ""
+    if delta:
+        is_pos = not str(delta).startswith("-")
+        delta_fg = "var(--pos-500)" if is_pos else "var(--neg-500)"
+        arrow = "▲" if is_pos else "▼"
+        try:
+            dval = abs(float(delta))
+        except (TypeError, ValueError):
+            dval = 0
+        delta_html = f'<div class="mc-delta" style="color:{delta_fg};">{arrow} {dval:.1f}</div>'
+
+    sub_html = f'<div class="mc-sub">{sub}</div>' if sub else ""
+
+    return f"""
+    <div class="metric-card {card_cls}">
+        <div class="mc-label">{label}</div>
+        <div class="{val_cls}">{value}</div>
+        {delta_html}
+        {sub_html}
+    </div>
+    """
+
+
+def score_bar(label: str, value: float, color: str = "var(--brand-400)") -> str:
+    """Render a score/progress bar returning HTML string.
+
+    Args:
+        label: Bar label (e.g. "Score", "Confiança")
+        value: 0–100 score value
+        color: CSS color variable for the fill
+    Returns:
+        HTML string
+    """
+    pct = min(max(float(value), 0), 100)
+    return f"""
+    <div style="margin-bottom:10px;">
+        <div style="display:flex; justify-content:space-between; font-size:0.72rem;
+             margin-bottom:4px;">
+            <span style="color:var(--fg-3);">{label}</span>
+            <span style="color:var(--fg-1); font-weight:700; font-family:var(--font-mono);">
+                {pct:.0f}
+            </span>
+        </div>
+        <div style="background:var(--bg-0); border-radius:99px; height:6px; overflow:hidden;">
+            <div style="width:{pct}%; height:100%; background:{color}; border-radius:99px;"></div>
+        </div>
+    </div>
+    """
 
 
 def risk_list(risks: list[dict]) -> None:
-    """Render a list of risks."""
+    """Render a list of risk items from a list of dicts.
+
+    Args:
+        risks: list of dicts with keys: title, description, severity (HIGH/MEDIUM/LOW)
+    """
     if not risks:
-        st.caption("Nenhum risco disponivel.")
+        st.caption("Sem riscos registrados.")
         return
-    items = []
     for r in risks:
-        sev = impact_badge(r.get("severity", "MEDIUM"))
-        items.append(
-            """
-<div class="risk-item">
-  <div class="risk-title">{title} {badge}</div>
-  <div class="risk-desc">{desc}</div>
-</div>""".format(
-                title=_esc(r.get("title", "—")),
-                badge=sev,
-                desc=_esc(r.get("description", "")),
-            )
-        )
-    st.markdown("".join(items), unsafe_allow_html=True)
+        severity = str(r.get("severity", "MEDIUM")).upper()
+        st.markdown(risk_item(
+            label=r.get("title", "—"),
+            description=r.get("description", "—"),
+            severity=severity if severity in ("HIGH", "MEDIUM", "LOW") else "MEDIUM",
+        ), unsafe_allow_html=True)
 
 
-# ═════════════════════════════════════════════════════════════════════════════
-# RADAR CHART (Plotly)
-# ═════════════════════════════════════════════════════════════════════════════
+def debug_expander(detail: dict) -> None:
+    """Render a collapsible debug panel with full detail dict.
+
+    Args:
+        detail: get_asset_detail() response dict
+    """
+    import json
+    with st.expander("🔧 Debug — full asset detail", expanded=False):
+        st.json({k: v for k, v in detail.items() if v is not None})
+
 
 def radar_chart(dimensions: dict[str, float], ticker: str = "") -> "go.Figure":
-    """Return a Plotly polar/radar chart."""
-    cats = list(dimensions.keys())
-    vals = [_clamp(v) for v in dimensions.values()]
-    # close the polygon
-    cats_closed = cats + [cats[0]]
-    vals_closed  = vals + [vals[0]]
+    """Render a radar/spider chart from dimensions dict.
+
+    Args:
+        dimensions: dict of {dimension_name: 0-100 score}
+        ticker: optional ticker label
+    Returns:
+        plotly Figure (imported locally to avoid hard dep)
+    """
+    try:
+        import plotly.graph_objects as go
+    except ImportError:
+        return None
+
+    labels = list(dimensions.keys())
+    values = list(dimensions.values())
 
     fig = go.Figure()
-    fig.add_trace(
-        go.Scatterpolar(
-            r=vals_closed,
-            theta=cats_closed,
-            fill="toself",
-            fillcolor="rgba(59,130,246,0.12)",
-            line={"color": "#3B82F6", "width": 2},
-            name=ticker or "Score",
-            hovertemplate="%{theta}: %{r:.0f}<extra></extra>",
-        )
-    )
+
+    fig.add_trace(go.Scatterpolar(
+        r=values + [values[0]],  # close the polygon
+        theta=labels + [labels[0]],
+        fill="toself",
+        fillcolor="rgba(34,211,238,0.15)",
+        line=dict(color="#22D3EE", width=1.5),
+        marker=dict(color="#22D3EE", size=5),
+        name=ticker or "Score",
+    ))
+
     fig.update_layout(
-        template="plotly_dark",
+        polar=dict(
+            radialaxis=dict(range=[0, 100], gridcolor="#142536", color="#475569"),
+            angularaxis=dict(color="#475569"),
+        ),
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
-        polar={
-            "bgcolor": "rgba(17,24,39,1)",
-            "radialaxis": {
-                "range": [0, 100],
-                "tickfont": {"size": 8, "color": "#475569"},
-                "gridcolor": "#1E2D42",
-                "linecolor": "#1E2D42",
-            },
-            "angularaxis": {
-                "tickfont": {"size": 10, "color": "#94A3B8"},
-                "gridcolor": "#1E2D42",
-                "linecolor": "#1E2D42",
-            },
-        },
-        font={"color": "#94A3B8"},
-        margin={"l": 30, "r": 30, "t": 30, "b": 30},
-        height=300,
+        margin=dict(l=20, r=20, t=20, b=20),
         showlegend=False,
+        height=280,
     )
     return fig
 
 
-# ═════════════════════════════════════════════════════════════════════════════
-# SPARKLINE CARD (Plotly mini)
-# ═════════════════════════════════════════════════════════════════════════════
+def positioning_badge(positioning: str) -> str:
+    """Return HTML string for a positioning badge (COMPRAR/VENDER/MANTER)."""
+    pos_upper = str(positioning or "").upper()
+    if pos_upper == "COMPRAR":
+        cls = "badge badge-buy"
+    elif pos_upper == "VENDER":
+        cls = "badge badge-sell"
+    else:
+        cls = "badge badge-hold"
+    return f'<span class="{cls}">{positioning}</span>'
 
-def sparkline_card(
-    label: str,
-    values: list[float],
-    current: float,
-    delta: float | None = None,
-) -> "go.Figure":
-    """Return a small Plotly line figure for a sparkline card."""
-    color = "#22C55E" if (delta or 0) >= 0 else "#EF4444"
-    fig = go.Figure()
-    fig.add_trace(
-        go.Scatter(
-            y=values,
-            mode="lines",
-            line={"color": color, "width": 1.5},
-            fill="tozeroy",
-            fillcolor=color.replace(")", ",0.08)").replace("rgb(", "rgba("),
+
+def metric_table_row(label: str, value: str, unit: str = "", color: str = "var(--fg-1)") -> str:
+    """Return HTML string for a metric table row."""
+    return f'<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border-1);"><span style="font-size:.78rem;color:var(--fg-3);">{label}</span><span style="font-size:.78rem;font-weight:700;font-family:var(--font-mono);color:{color};">{value}{(" " + unit) if unit else ""}</span></div>'
+
+
+def status_chip(status: str, label: str | None = None) -> str:
+    """Return HTML string for a status governance chip.
+
+    Supported status values (case-insensitive):
+        DEGRADED             — fonte com problema (amber/warn)
+        REVIEW / INTEGRATED_REQUIRES_REVIEW — precisa atenção (violet)
+        MONITOR_ONLY         — requer validação contínua (amber)
+        MANUAL_REVIEW_READY  — pronto para análise manual (cyan/brand)
+        PAPER_ONLY           — apenas para papel (neutral)
+        BLOCKED              — rejeitado por regra (neg/red)
+        STALE                — dados desatualizados (amber)
+        EMPTY                — sem dados (neutral)
+        APPROVED_FOR_STUDY / TECH_APPROVED — válido para estudo (pos/green)
+        PAPER_READY          — pronto para paper (pos/green)
+
+    Rules enforced (S03 scope):
+        - Does NOT transform MONITOR_ONLY into APPROVED.
+        - Does NOT hide DEGRADED or stale data.
+
+    Args:
+        status: Governance/data status string (uppercase comparison).
+        label: Override display label; defaults to uppercase status.
+    Returns:
+        HTML string for a chip div.
+    """
+    s = str(status or "").strip()
+
+    # Normalize known aliases
+    if s.upper() in ("INTEGRATED_REQUIRES_REVIEW", "REVIEW"):
+        chip_cls, label_s = "chip chip-review", label or s.replace("_", " ")
+    elif s.upper() == "MONITOR_ONLY":
+        chip_cls, label_s = "chip chip-monitor", label or s
+    elif s.upper() == "MANUAL_REVIEW_READY":
+        chip_cls, label_s = "chip chip-manual", label or "MANUAL REVIEW"
+    elif s.upper() == "PAPER_ONLY":
+        chip_cls, label_s = "chip chip-paper", label or s
+    elif s.upper() == "BLOCKED":
+        chip_cls, label_s = "chip chip-blocked", label or s
+    elif s.upper() in ("TECH_APPROVED_FOR_STUDY", "APPROVED_FOR_STUDY", "PAPER_READY"):
+        chip_cls, label_s = "chip chip-approved", label or "APPROVED"
+    elif s.upper() == "STALE":
+        chip_cls, label_s = "chip chip-stale", label or s
+    elif s.upper() == "EMPTY":
+        chip_cls, label_s = "chip chip-empty", label or "SEM DADOS"
+    elif s.upper() == "DEGRADED":
+        chip_cls, label_s = "chip chip-degraded", label or s
+    else:
+        # Unknown status — render as neutral chip so it never silently disappears
+        chip_cls, label_s = "chip chip-empty", label or s
+
+    return f'<div class="{chip_cls}"><span class="dot"></span>{label_s}</div>'
+
+
+def alert_block(kind: str, title: str, body: str = "") -> str:
+    """Return HTML string for an alert block.
+
+    Args:
+        kind: alert-info / alert-warn / alert-error / alert-success
+        title: Alert title (rendered bold)
+        body: Optional body text
+    Returns:
+        HTML string
+    """
+    kind_s = str(kind or "info").lower()
+    if kind_s not in ("info", "warn", "error", "success"):
+        kind_s = "info"
+    body_html = f'<div class="alert-body">{body}</div>' if body else ""
+    return f"""
+    <div class="alert alert-{kind_s}">
+        <div class="alert-title">{title}</div>
+        {body_html}
+    </div>
+    """
+
+
+def data_table(rows: list[dict], columns: list[str] | None = None) -> str:
+    """Render a data table from a list of dicts.
+
+    Args:
+        rows: List of dicts with uniform keys
+        columns: Optional list of column keys to display (defaults to all keys)
+    Returns:
+        HTML string for the table
+    """
+    if not rows:
+        return '<div style="color:var(--fg-5); padding:20px; text-align:center;">Sem dados</div>'
+
+    if columns is None:
+        columns = list(rows[0].keys())
+
+    # Header
+    header_cells = "".join(
+        f'<th style="padding:8px 12px; text-align:left; font-size:0.62rem; '
+        f'text-transform:uppercase; letter-spacing:0.8px; color:var(--fg-5); '
+        f'border-bottom:1px solid var(--border-1);">{c}</th>'
+        for c in columns
+    )
+    header_html = f"<tr>{header_cells}</tr>"
+
+    # Data rows
+    row_cells_list = []
+    for row in rows:
+        cells = "".join(
+            f'<td style="padding:8px 12px; font-size:0.78rem; color:var(--fg-2); '
+            f'border-bottom:1px solid var(--border-1);">{row.get(c, "—")}</td>'
+            for c in columns
         )
-    )
-    fig.update_layout(
-        template="plotly_dark",
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(17,24,39,1)",
-        margin={"l": 0, "r": 0, "t": 0, "b": 0},
-        height=60,
-        showlegend=False,
-        xaxis={"visible": False},
-        yaxis={"visible": False},
-    )
-    return fig
+        row_cells_list.append(f"<tr>{cells}</tr>")
+
+    return f"""
+    <div style="overflow-x:auto; border:1px solid var(--border-1); border-radius:var(--r-lg);">
+        <table style="width:100%; border-collapse:collapse;">
+            <thead style="background:var(--bg-2);">{header_html}</thead>
+            <tbody>{"".join(row_cells_list)}</tbody>
+        </table>
+    </div>
+    """
 
 
-# ═════════════════════════════════════════════════════════════════════════════
-# WATCHLIST ROW / CARD
-# ═════════════════════════════════════════════════════════════════════════════
+def filter_bar(filters: list[dict]) -> str:
+    """Render a filter bar with filter pills.
 
-def watchlist_card(row: dict) -> str:
-    """Return HTML for one watchlist asset card."""
-    ticker = _esc(row.get("ticker", "—"))
-    positioning = str(row.get("positioning", "MANTER")).upper()
-    pos_class = _POSITIONING_CLASS.get(positioning, "hold")
-    pos_bdg = positioning_badge(positioning)
+    Args:
+        filters: list of dicts with keys: label, options (list of str), selected
+    Returns:
+        HTML string
+    """
+    items_html = ""
+    for f in filters:
+        label = f.get("label", "")
+        options = f.get("options", [])
+        pill_style = (
+            "background:var(--brand-glow-soft); border:1px solid var(--brand-400); "
+            "color:var(--brand-300); font-weight:700;"
+        )
+        items_html += f'<span style="display:inline-block; padding:3px 10px; border-radius:var(--r-pill); '
+        items_html += f'font-size:0.65rem; {pill_style}">{label}: '
+        items_html += f'<strong>{", ".join(str(o) for o in options)}</strong></span>'
 
-    fair_val = row.get("fair_value_brl")
-    fair_str = "R$ {0:.2f}".format(fair_val) if fair_val else "—"
-
-    upside = row.get("upside_pct")
-    if upside is not None:
-        try:
-            upside_f = float(upside)
-            upside_color = "#22C55E" if upside_f >= 0 else "#EF4444"
-            upside_str = '{0:+.1f}%'.format(upside_f)
-        except (TypeError, ValueError):
-            upside_color = "#94A3B8"
-            upside_str = "—"
-    else:
-        upside_color = "#94A3B8"
-        upside_str = "—"
-
-    price = row.get("price")
-    price_str = "R$ {0:.2f}".format(price) if price else "—"
-
-    confidence = _esc(row.get("confidence", "—"))
-    generated_at = _esc(str(row.get("generated_at", ""))[:10] or "—")
-
-    return """
-<div class="watchlist-row {pos_class}">
-  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
-    <div class="watchlist-ticker">{ticker}</div>
-    {pos_bdg}
-  </div>
-  <div class="watchlist-details">
-    <div class="watchlist-detail-item">Valor Justo<span>{fair}</span></div>
-    <div class="watchlist-detail-item">Upside<span style="color:{up_color}">{upside}</span></div>
-    <div class="watchlist-detail-item">Preco<span>{price}</span></div>
-    <div class="watchlist-detail-item">Confianca<span>{conf}</span></div>
-  </div>
-  <div style="margin-top:8px;font-size:0.62rem;color:#475569">Atualizado: {gen}</div>
-</div>""".format(
-        pos_class=pos_class,
-        ticker=ticker,
-        pos_bdg=pos_bdg,
-        fair=fair_str,
-        up_color=upside_color,
-        upside=upside_str,
-        price=price_str,
-        conf=confidence,
-        gen=generated_at,
-    )
-
-
-# ═════════════════════════════════════════════════════════════════════════════
-# OPPORTUNITY CARD
-# ═════════════════════════════════════════════════════════════════════════════
-
-def opportunity_card(
-    ticker: str,
-    description: str,
-    signal_type: str,
-    conviction_score: int,
-) -> str:
-    """Return HTML for one opportunity card."""
-    sig_upper = signal_type.upper()
-    if "DCF" in sig_upper:
-        sig_class = "dcf"
-        sig_label = "DCF Divergence"
-    elif "MOMENTUM" in sig_upper:
-        sig_class = "momentum"
-        sig_label = "Momentum"
-    elif "IPE" in sig_upper or "EVENT" in sig_upper:
-        sig_class = "ipe"
-        sig_label = "IPE Event"
-    else:
-        sig_class = "default"
-        sig_label = signal_type[:22]
-
-    score_val = _clamp(float(conviction_score or 0))
-
-    return """
-<div class="opportunity-card {sig_class}">
-  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px">
-    <div class="opp-ticker {sig_class}">{ticker}</div>
-    <span class="badge badge-blue">{sig_label}</span>
-  </div>
-  <div class="opp-description">{desc}</div>
-  <div class="opp-score-label">
-    <span>Conviction Score</span>
-    <span class="opp-score-num">{score:.0f}</span>
-  </div>
-  <div class="opp-score-track">
-    <div class="opp-score-fill" style="width:{score:.1f}%"></div>
-  </div>
-</div>""".format(
-        sig_class=sig_class,
-        ticker=_esc(ticker),
-        sig_label=_esc(sig_label),
-        desc=_esc(description),
-        score=score_val,
-    )
-
-
-# ═════════════════════════════════════════════════════════════════════════════
-# METRIC TABLE ROW
-# ═════════════════════════════════════════════════════════════════════════════
-
-def metric_table_row(label: str, value: str, color: str | None = None) -> str:
-    """Return HTML for a metric table row."""
-    val_style = "color:{0};".format(color) if color else ""
-    return """
-<div class="metric-card">
-  <span class="metric-card-label">{label}</span>
-  <span class="metric-card-value" style="{style}">{value}</span>
-</div>""".format(label=_esc(label), value=_esc(value), style=val_style)
-
-
-# ═════════════════════════════════════════════════════════════════════════════
-# DEBUG EXPANDER
-# ═════════════════════════════════════════════════════════════════════════════
-
-def debug_expander(data: dict) -> None:
-    """Render JSON data in a collapsed expander with basic syntax highlighting."""
-    with st.expander("Debug — dados brutos (JSON)", expanded=False):
-        try:
-            pretty = json.dumps(data, indent=2, ensure_ascii=False, default=str)
-        except Exception:
-            pretty = str(data)
-        st.code(pretty, language="json")
+    return f"""
+    <div style="
+        display:flex; flex-wrap:wrap; gap:8px;
+        background:var(--bg-2); border:1px solid var(--border-1);
+        border-radius:var(--r-lg); padding:10px 14px; margin-bottom:16px;
+    ">
+        {items_html}
+    </div>
+    """

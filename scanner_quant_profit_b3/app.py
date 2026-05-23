@@ -20,27 +20,11 @@ import streamlit as st
 from src.bootstrap import ensure_project_root
 ensure_project_root()
 
-from _style import DARK_CSS
-
-# Remove qualquer ocorrência anterior da raiz para recolocar no topo
-root_str = str(ROOT)
-if root_str in sys.path:
-    sys.path.remove(root_str)
-
-# Garante que scanner_quant_profit_b3 venha antes de 12_PYTHON/src
-sys.path.insert(0, root_str)
-
-import streamlit as st
-from _style import DARK_CSS
-
-try:
-    from src.ui.styles import PREMIUM_CSS as _PREMIUM_CSS
-except Exception:
-    _PREMIUM_CSS = DARK_CSS
+from src.ui.styles import PREMIUM_CSS as _PREMIUM_CSS
 
 st.set_page_config(
-    page_title="Plataforma Quant · B3",
-    page_icon="🎯",
+    page_title="Radar Macro · Research OS",
+    page_icon="🩵",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
@@ -49,28 +33,76 @@ st.set_page_config(
 st.markdown(_PREMIUM_CSS, unsafe_allow_html=True)
 
 # ── Navegação superior ────────────────────────────────────────────────────────
-_PAGES = [
-    st.Page("pages/radar_quant.py",      title="Radar Quant",      icon="🎯"),
-    st.Page("pages/valuation_engine.py", title="Valuation Engine", icon="📊"),
-    st.Page("pages/performance.py",      title="Performance",      icon="📈"),
-    st.Page("pages/calendario.py",       title="Calendário",       icon="📅"),
-    st.Page("pages/agendador.py",        title="Agendador",        icon="⏱"),
-    # Páginas de inteligência (Phase 5 — D-01, D-02)
-    st.Page("pages/inteligencia_watchlist.py",    title="Watchlist",    icon="🔭"),
-    st.Page("pages/inteligencia_ativo.py",        title="Ativo",        icon="🧠"),
-    st.Page("pages/inteligencia_macro.py",        title="Macro",        icon="🌐"),
-    st.Page("pages/inteligencia_oportunidades.py", title="Oportunidades", icon="🏆"),
-]
 
+_PAGES = [
+    st.Page("pages/radar_ai.py", title="Radar AI", icon="🧠"),
+
+    st.Page(
+        "pages/inteligencia_ativo.py",
+        title="Construtor de Tese",
+        icon="🧩",
+    ),
+
+    st.Page(
+        "pages/inteligencia_oportunidades.py",
+        title="Matriz de Sinais",
+        icon="🏆",
+    ),
+
+    st.Page(
+        "pages/radar_quant.py",
+        title="Núcleo Quantitativo",
+        icon="🎯",
+    ),
+
+    st.Page(
+        "pages/valuation_engine.py",
+        title="Valuation Engine",
+        icon="📊",
+    ),
+
+    st.Page(
+        "pages/inteligencia_macro.py",
+        title="Macro Motor",
+        icon="🌐",
+    ),
+
+    st.Page(
+        "pages/performance.py",
+        title="Mesa de Convicção",
+        icon="📈",
+    ),
+
+    st.Page(
+        "pages/agendador.py",
+        title="Agent Runtime",
+        icon="⚙️",
+    ),
+
+    st.Page(
+        "pages/calendario.py",
+        title="Event Scheduler",
+        icon="📅",
+    ),
+
+    st.Page(
+        "pages/opcoes_monitoramento.py",
+        title="Opções Monitor",
+        icon="📡",
+    ),
+]
 # st.navigation DEVE ser chamado antes de st.page_link
 pages = st.navigation(_PAGES, position="hidden")
 
-c_logo, *c_navs = st.columns([1.4] + [1] * len(_PAGES))
+c_logo, *c_navs = st.columns([1.6] + [1] * len(_PAGES))
 with c_logo:
     st.markdown(
-        '<div style="padding:6px 0 6px 4px;font-size:0.88rem;font-weight:900;'
-        'color:#F1F5F9;letter-spacing:-0.5px">'
-        'Plataforma <em style="color:#3B82F6">Quant</em> B3</div>',
+        '<div style="padding:4px 0 8px 4px; display: flex; flex-direction: column; line-height: 1.1;">'
+        '<b style="font-family:\'Sora\',sans-serif; font-weight:900; font-size:0.95rem; '
+        'letter-spacing:-0.5px; color:#F1F5F9;">RADAR <span style="color:#22D3EE">MACRO</span></b>'
+        '<span style="font-family:\'JetBrains Mono\',monospace; font-size:0.55rem; '
+        'letter-spacing:2px; color:#475569; text-transform:uppercase;">Research OS</span>'
+        '</div>',
         unsafe_allow_html=True,
     )
 
