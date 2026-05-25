@@ -9,7 +9,8 @@ Organizado em:
 - valuation_results.py  — S05: canonical results store
 - valuation_inputs.py   — S05: canonical inputs store
 - valuation_coverage.py — S05: canonical coverage store
-- valuation_store.py    — S05: unified interface
+- valuation_store.py    — S05: unified interface (save seguro: M016-S02)
+- models/bank_model.py  — M016-S02: Bank Valuation Model
 
 Veja README.md para documentação completa.
 """
@@ -83,6 +84,19 @@ from src.valuation.valuation_store import (
     load_latest_valuation_data,
 )
 
+# Bank Valuation Model (M016-S02)
+from src.valuation.models.bank_model import (
+    BankValuationInputs,
+    BankValuationResult,
+    BankInputQuality,
+    BankValuationStatus,
+    BankValuationMethod,
+    BANK_TICKERS,
+    PRESERVED_FAIR_VALUES,
+    calculate_bank_valuation,
+    diagnose_bank_tickers,
+)
+
 __all__ = [
     # SectorNormalizer (M016-S01)
     "SectorNormalizationResult",
@@ -126,4 +140,14 @@ __all__ = [
     # Unified store
     "save_valuation_result",
     "load_latest_valuation_data",
+    # Bank Valuation Model (M016-S02)
+    "BankValuationInputs",
+    "BankValuationResult",
+    "BankInputQuality",
+    "BankValuationStatus",
+    "BankValuationMethod",
+    "BANK_TICKERS",
+    "PRESERVED_FAIR_VALUES",
+    "calculate_bank_valuation",
+    "diagnose_bank_tickers",
 ]

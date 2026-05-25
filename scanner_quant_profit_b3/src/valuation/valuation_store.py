@@ -5,8 +5,12 @@ Interface unificada para stores canônicos de valuation.
 Combina valuation_results.py, valuation_inputs.py e valuation_coverage.py
 em um ponto de acesso único, preservando coexistência com valuation_connector.py.
 
-Responsável APENAS por leitura. save_valuation_result() existe como stub
-seguro para extensões futuras — não é chamado automaticamente.
+save_valuation_result() — implementação segura (M016-S02):
+  - write=False por default (não escreve sem confirmação explícita)
+  - force_recalc=False por default (preserva fair_value existente)
+  - Registra method_used, input_quality, valuation_date
+  - Nunca sobrescreve BBAS3=64.84 ou ITUB4=73.69 sem force_recalc=True
+  - Escreve na tabela bank_valuation_results (criada na primeira chamada)
 
 D077–D082 intocados. D086 (coexistência) respeitado.
 Proibido: calcular DCF/COSIF/DDM, criar fair_value, criar dados mockados,
@@ -179,37 +183,168 @@ def load_valuation_fair_values(tickers: list[str] | None = None, db_path: str | 
     return _load_fair_values(tickers, db_path)
 
 
-# ── Stub seguro (S05-API-04) ────────────────────────────────────────────────────
+# ── Implementação segura de save (M016-S02) ────────────────────────────────────
 
-def save_valuation_result(ticker: str, result: ValuationResult, db_path: str | None = None) -> bool:
+# Fair values que NÃO podem ser sobrescritos sem force_recalc=True (M016-S02)
+_PRESERVED_FAIR_VALUES: dict[str, float] = {
+    "BBAS3": 64.84,
+    "ITUB4": 73.69,
+}
+
+
+def _ensure_bank_valuation_table(db_path: str) -> None:
+    """Cria a tabela bank_valuation_results se não existir."""
+    import sqlite3
+    conn = sqlite3.connect(db_path)
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS bank_valuation_results (
+            id               INTEGER PRIMARY KEY AUTOINCREMENT,
+            created_at       TEXT    DEFAULT (datetime('now')),
+            ticker           TEXT    NOT NULL,
+            fair_value       REAL,
+            upside_pct       REAL,
+            valuation_method TEXT,
+            method_used      TEXT,
+            confidence       REAL    DEFAULT 0.0,
+            input_quality    TEXT,
+            valuation_date   TEXT,
+            blocked          INTEGER DEFAULT 1,
+            block_reason     TEXT,
+            status           TEXT,
+            notes            TEXT,
+            force_recalc     INTEGER DEFAULT 0
+        )
+    """)
+    conn.commit()
+    conn.close()
+
+
+def save_valuation_result(
+    ticker: str,
+    result: ValuationResult,
+    db_path: str | None = None,
+    *,
+    write: bool = False,
+    force_recalc: bool = False,
+    method_used: str | None = None,
+    input_quality: str | None = None,
+    valuation_date: str | None = None,
+) -> bool:
     """
-    Stub SEGURO para gravação futura de resultados de valuation.
+    Gravação segura de resultado de valuation (M016-S02).
 
-    ATENÇÃO: Esta função existe apenas como interface.
-    Não é chamada automaticamente por nenhum componente.
-    Qualquer implementação real deve:
-    - Validar D077–D082 (governança de valuation)
-    - Passar por revisão antes de ativar
-    - Ser integrada ao pipeline de forma controlada
+    CONTRATO DE SEGURANÇA (D077–D082):
+    - write=False por default — não escreve sem parâmetro explícito
+    - force_recalc=False por default — preserva fair_value existente
+    - BBAS3 (64.84) e ITUB4 (73.69) nunca são sobrescritos sem force_recalc=True
+    - Registra method_used, input_quality e valuation_date em todos os writes
+    - Escreve em bank_valuation_results (tabela separada, não altera asset_intelligence_snapshots)
 
-    Current status: NOT IMPLEMENTED (stub only).
+    Não é chamada automaticamente por nenhum pipeline — somente via chamada explícita.
 
     Parameters
     ----------
     ticker: str
-        Código do ativo.
+        Código do ativo B3.
     result: ValuationResult
-        Resultado a salvar.
+        Resultado a salvar (não pode ter fair_value=None se write=True).
     db_path: str | None
-        Caminho do banco.
+        Caminho do banco. Usa scanner_quant.db se None.
+    write: bool
+        Se True, efetua a gravação. Default: False (apenas valida).
+    force_recalc: bool
+        Se True, permite sobrescrever fair_value existente (incluindo BBAS3/ITUB4).
+        Default: False (seguro).
+    method_used: str | None
+        Método que produziu o resultado (registrado no log de auditoria).
+    input_quality: str | None
+        Qualidade dos inputs de dados.
+    valuation_date: str | None
+        Data de referência do valuation (ISO format). Default: hoje.
 
     Returns
     -------
     bool
-        Sempre False (stub).
+        True se o resultado foi gravado com sucesso.
+        False se write=False, bloqueado por preserved value, ou erro.
     """
-    # Stub — não executar. Implementar com D077–D082 compliance quando pronto.
-    return False
+    import logging
+    from datetime import date
+
+    log = logging.getLogger(__name__)
+    ticker_upper = str(ticker).strip().upper()
+
+    # ── Validação: resultado deve ter fair_value se write=True ──────────────────
+    if write and result.fair_value is None:
+        log.warning(
+            "save_valuation_result: ticker=%s — resultado sem fair_value, write ignorado",
+            ticker_upper
+        )
+        return False
+
+    # ── Proteção BBAS3/ITUB4: não sobrescrever sem force_recalc ────────────────
+    if ticker_upper in _PRESERVED_FAIR_VALUES and not force_recalc:
+        preserved_fv = _PRESERVED_FAIR_VALUES[ticker_upper]
+        log.info(
+            "save_valuation_result: ticker=%s — preserved fair_value=%.2f protegido "
+            "(force_recalc=False). Use force_recalc=True para sobrescrever.",
+            ticker_upper, preserved_fv
+        )
+        return False
+
+    # ── write=False → apenas validação, sem escrita ─────────────────────────────
+    if not write:
+        log.debug(
+            "save_valuation_result: ticker=%s — write=False, resultado validado mas não gravado",
+            ticker_upper
+        )
+        return False
+
+    # ── Escrita no banco ─────────────────────────────────────────────────────────
+    db = db_path or _db_path()
+    effective_date = valuation_date or date.today().isoformat()
+
+    try:
+        _ensure_bank_valuation_table(db)
+
+        import sqlite3
+        conn = sqlite3.connect(db)
+        conn.execute(
+            """
+            INSERT INTO bank_valuation_results
+                (ticker, fair_value, upside_pct, valuation_method, method_used,
+                 confidence, input_quality, valuation_date, blocked, block_reason,
+                 status, notes, force_recalc)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                ticker_upper,
+                result.fair_value,
+                result.upside_pct,
+                result.valuation_method,
+                method_used or result.valuation_method,
+                result.valuation_confidence,
+                input_quality or "UNKNOWN",
+                effective_date,
+                0,  # blocked=False (se chegou aqui é porque fair_value não é None)
+                None,
+                result.valuation_governance_status,
+                None,
+                1 if force_recalc else 0,
+            ),
+        )
+        conn.commit()
+        conn.close()
+
+        log.info(
+            "save_valuation_result: ticker=%s — gravado fair_value=%.2f, method=%s, date=%s",
+            ticker_upper, result.fair_value, method_used or result.valuation_method, effective_date
+        )
+        return True
+
+    except Exception as e:
+        log.error("save_valuation_result: ticker=%s — erro ao gravar: %s", ticker_upper, e)
+        return False
 
 
 # ── Compatibilidade com valuation_connector.py (M012/M013) ────────────────────
