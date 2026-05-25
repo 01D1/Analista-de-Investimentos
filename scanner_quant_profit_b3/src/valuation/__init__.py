@@ -97,6 +97,22 @@ from src.valuation.models.bank_model import (
     diagnose_bank_tickers,
 )
 
+# Commodity Valuation Model (M016-S03)
+from src.valuation.models.commodity_model import (
+    CommodityValuationInputs,
+    CommodityValuationResult,
+    CommodityInputQuality,
+    CommodityValuationStatus,
+    CommodityValuationMethod,
+    COMMODITY_TICKERS,
+    OIL_GAS_TICKERS,
+    MINING_TICKERS,
+    COMMODITY_PRESERVED_FAIR_VALUES,
+    calculate_commodity_valuation,
+    diagnose_commodity_tickers,
+    save_commodity_valuation_result,
+)
+
 __all__ = [
     # SectorNormalizer (M016-S01)
     "SectorNormalizationResult",
@@ -150,4 +166,17 @@ __all__ = [
     "PRESERVED_FAIR_VALUES",
     "calculate_bank_valuation",
     "diagnose_bank_tickers",
+    # Commodity Valuation Model (M016-S03)
+    "CommodityValuationInputs",
+    "CommodityValuationResult",
+    "CommodityInputQuality",
+    "CommodityValuationStatus",
+    "CommodityValuationMethod",
+    "COMMODITY_TICKERS",
+    "OIL_GAS_TICKERS",
+    "MINING_TICKERS",
+    "COMMODITY_PRESERVED_FAIR_VALUES",
+    "calculate_commodity_valuation",
+    "diagnose_commodity_tickers",
+    "save_commodity_valuation_result",
 ]
