@@ -114,7 +114,11 @@ _FALLBACK_SECTOR = "FALLBACK_MULTIPLES"
 #  Regras de cobertura (D087)
 # ──────────────────────────────────────────────
 
-_BLOCK_STATUSES = {"needs_data", "needs_sector"}
+_BLOCK_STATUSES = {
+    "needs_data",     # Setor ok, financials ausentes (D087)
+    "needs_sector",   # Setor não identificado (D087)
+    "legacy_ticker",  # Ticker extinto por corporate action — usar successor_ticker (S03.5)
+}
 
 
 def _is_blocked_status(coverage_status: Optional[str]) -> bool:
@@ -184,6 +188,8 @@ def get_valuation_method(
             block_reason = "NEEDS_CVM_DATA — ri_docs=0 ou financials incompletos"
         elif status_label == "NEEDS_SECTOR":
             block_reason = "NEEDS_SECTOR — setor ausente ou source!=TRACEABLE"
+        elif status_label == "LEGACY_TICKER":
+            block_reason = "LEGACY_TICKER — ticker extinto por corporate action; usar successor_ticker"
         else:
             block_reason = f"COVERAGE_BLOCKED — {coverage_status}"
 

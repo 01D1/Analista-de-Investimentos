@@ -1,7 +1,12 @@
+# src/utils — utilidades compartilhadas
+#
+# Migrado de src/utils.py (S03.5 criou src/utils/ como pacote; o módulo antigo
+# ficou sombreado pelo pacote). project_path e load_config vivem aqui agora.
+
 from pathlib import Path
 import yaml
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 
 
 def load_config():
@@ -25,3 +30,6 @@ def project_path(path_str: str) -> Path:
     if p.parts and p.parts[0] == "12_PYTHON":
         return ROOT.parent / p
     return ROOT / p
+
+
+__all__ = ["load_config", "project_path"]

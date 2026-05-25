@@ -1,0 +1,77 @@
+# =============================================================================
+# ticker_aliases.yaml — Mapa canônico de corporate actions / ticker aliases
+# =============================================================================
+#
+# Objetivo:
+#   Registrar tickers legados que foram substituídos por corporate actions
+#   (fusões, cisões, renomeações, delistings) e mapear para o successor ativo.
+#
+# Como usar no código:
+#   from src.utils.ticker_aliases import is_legacy_ticker, resolve_ticker
+#   is_legacy_ticker("PETZ3")  → True
+#   resolve_ticker("PETZ3")    → "AUAU3"
+#   resolve_ticker("VALE3")    → "VALE3"  (não alterado)
+#
+# Regras:
+#   - LEGACY_TICKER: não tentar nova ingestão, não rotear valuation
+#   - coverage_status = "legacy_ticker" → bloqueado pelo router (D087)
+#   - Histórico (cotahist, ri_documents) mantido para auditoria
+#   - use_for_current_coverage = ticker para coletas futuras
+#
+# Campos:
+#   legacy_ticker:          ticker extinto na B3
+#   current_ticker:         ticker ativo successor (None se delisted sem successor)
+#   event_type:             merger | rename | spinoff | delisting | acquisition
+#   effective_date:         data de início de negociação do successor (ou delisting)
+#   merger_concluded_date:  data de conclusão jurídica do evento (anterior ao effective_date)
+#   credit_date:            data de crédito das novas ações (quando aplicável)
+#   company_name:           nome da nova empresa (se merger/rename) ou nome histórico
+#   use_for_history:        ticker a usar para série histórica pré-evento
+#   use_for_current:        ticker a usar para coleta, RI/CVM e valuation atual
+#   identity_confidence:    HIGH | MEDIUM | LOW
+#   data_series_break:      true se série histórica não pode ser concatenada
+#   source:                 fonte do registro (B3, CVM, InforMoney, etc.)
+#   notes:                  contexto adicional
+# =============================================================================
+
+ticker_aliases:
+
+  # ── PETZ3 → AUAU3 (Fusão Petz + Cobasi) ─────────────────────────────────────
+  - legacy_ticker: PETZ3
+    current_ticker: AUAU3
+    event_type: merger
+    effective_date: "2026-01-05"         # início de negociação AUAU3 na B3
+    merger_concluded_date: "2026-01-02"  # fusão concluída juridicamente
+    credit_date: "2026-01-07"            # crédito das novas ações (relação 1:1 PETZ3→AUAU3)
+    company_name: "União Pet Participações S.A. / Grupo Petz-Cobasi"
+    use_for_history: PETZ3               # usar PETZ3 apenas para análise histórica pré-fusão
+    use_for_current: AUAU3               # usar AUAU3 para preços, RI/CVM e valuation
+    identity_confidence: HIGH
+    data_series_break: true              # nova entidade jurídica; Cobasi (capital fechado) não listada antes
+    yfinance_ticker: "AUAU3.SA"          # ticker para yfinance
+    source: "InforMoney, Exame Invest, SBT News, MixVale — jan/2026"
+    notes: >
+      Fusão entre Petz (PETZ3) e Cobasi (capital fechado) formou União Pet Participações.
+      PETZ3 último dia de negociação: 2026-01-02.
+      AUAU3 estreou na B3: 2026-01-05.
+      Acionistas da Petz receberam: R$ 0,7109/ação em dinheiro + 1 ação AUAU3 por PETZ3.
+      Faturamento esperado da nova entidade: ~R$ 7 bi/ano.
+      Maior rede pet do Brasil e uma das maiores da América Latina.
+
+# =============================================================================
+# Para adicionar novo corporate action:
+#
+# - legacy_ticker: XXXX3
+#   current_ticker: YYYY3          # ou null se delisting sem successor
+#   event_type: merger             # merger | rename | spinoff | delisting | acquisition
+#   effective_date: "YYYY-MM-DD"   # data de início de negociação no mercado
+#   merger_concluded_date: null    # opcional
+#   credit_date: null              # opcional
+#   company_name: "Nome S.A."
+#   use_for_history: XXXX3
+#   use_for_current: YYYY3         # ou null
+#   identity_confidence: HIGH
+#   data_series_break: true
+#   source: "Fonte do dado"
+#   notes: "Contexto"
+# =============================================================================

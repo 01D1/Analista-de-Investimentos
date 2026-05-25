@@ -19,11 +19,13 @@ from src.integration.connectors._sqlite import empty, filter_tickers, read_table
 # ── Coverage status ──────────────────────────────────────────────────────────────
 
 class CoverageStatus:
-    READY = "ready"          # Valuation disponível e pronto
-    PARTIAL = "partial"       # Setor conhecido, financials parciais
-    NEEDS_DATA = "needs_data"  # Setor ok, financials ausentes
-    NEEDS_SECTOR = "needs_sector"  # Setor não identificado
-    EMPTY = "empty"           # Nenhum dado disponível
+    READY = "ready"               # Valuation disponível e pronto
+    PARTIAL = "partial"           # Setor conhecido, financials parciais
+    NEEDS_DATA = "needs_data"     # Setor ok, financials ausentes
+    NEEDS_SECTOR = "needs_sector" # Setor não identificado
+    EMPTY = "empty"               # Nenhum dado disponível
+    LEGACY_TICKER = "legacy_ticker"  # Ticker extinto por corporate action (fusão/renomeação/delisting)
+                                     # → router BLOQUEADO; usar successor_ticker para cobertura ativa
 
 
 # ── Colunas canônicas ──────────────────────────────────────────────────────────
