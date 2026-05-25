@@ -1,11 +1,12 @@
 """
-src/valuation/router.py — Universal Sector Router (S04)
+src/valuation/router.py — Universal Sector Router (S04 + M016-S01)
 
 Camada de roteamento metodológico: dado um ticker + setor + status de cobertura,
 retorna a decisão de routing (método sugerido, confiança, bloqueio) sem calcular
 fair_value, sem executar DCF/COSIF/DDM, sem alterar banco.
 
 Baseado em: M014-ARCHITECTURE.md (S03), D083–D088
+Atualizado: M016-S01 — integração com SectorNormalizer (D097, D099)
 
 Contrato público:
     get_valuation_method(ticker, sector, coverage_status=None, provenance=None)
@@ -15,6 +16,11 @@ Regras de bloqueio (D087):
     - NEEDS_CVM_DATA → blocked=True, confidence=0
     - NEEDS_SECTOR   → blocked=True, confidence=0
     - provenance.source != TRACEABLE → blocked=True
+
+Normalização de setor (M016-S01):
+    - sector GICS (ex: "financials", "energy") → normalizado via SectorNormalizer
+    - sector canônico (ex: "BANK", "COMMODITY") → passthrough sem alteração
+    - sector=None → FALLBACK_MULTIPLES
 
 Proibido:
     - Calcular fair_value
@@ -129,6 +135,31 @@ def _is_blocked_status(coverage_status: Optional[str]) -> bool:
 
 
 # ──────────────────────────────────────────────
+#  Normalização de setor (M016-S01)
+# ──────────────────────────────────────────────
+
+def _normalize_sector_for_router(ticker: str, sector_raw: str) -> str:
+    """Converte sector GICS/type → chave canônica do router.
+
+    Usado internamente por get_valuation_method() antes do lookup em
+    _SECTOR_METHOD_MAP. Retorna FALLBACK_MULTIPLES se não mapeável.
+
+    Não lança exceção. Nunca altera banco. Apenas normaliza string.
+    """
+    try:
+        from src.valuation.sector_normalizer import normalize_sector
+        result = normalize_sector(
+            ticker=ticker,
+            sector=sector_raw.lower() if sector_raw else None,
+        )
+        return result.canonical_sector
+    except Exception:
+        # Fallback defensivo: se SectorNormalizer falhar por qualquer razão,
+        # retorna o FALLBACK_SECTOR original (comportamento pré-M016).
+        return _FALLBACK_SECTOR
+
+
+# ──────────────────────────────────────────────
 #  get_valuation_method — ponto de entrada público
 # ──────────────────────────────────────────────
 
@@ -175,7 +206,23 @@ def get_valuation_method(
     False
     """
     ticker = str(ticker).strip().upper()
-    sector = str(sector).strip().upper() if sector else _FALLBACK_SECTOR
+
+    # ── M016-S01: normalização de setor (D097/D099) ──────────────────────────
+    # Se sector já é chave canônica (ex: "BANK", "COMMODITY") → passthrough.
+    # Se sector é GICS/type (ex: "financials", "energy") → normaliza via SectorNormalizer.
+    # Preserva comportamento antigo: testes que passam "BANK" diretamente continuam funcionando.
+    sector_raw = str(sector).strip().upper() if sector else ""
+    sector_original = sector_raw  # preservado para notas (diagnóstico)
+
+    if not sector_raw:
+        # Sem setor → tenta lookup no tickers.yaml pelo ticker
+        sector = _normalize_sector_for_router(ticker, sector_raw)
+    elif sector_raw in _SECTOR_METHOD_MAP or sector_raw == _FALLBACK_SECTOR:
+        # Já canônico → passthrough (mantém compatibilidade com testes existentes)
+        sector = sector_raw
+    else:
+        # GICS/type → normalizar; mantém sector_original para notas
+        sector = _normalize_sector_for_router(ticker, sector_raw)
 
     # provenance padrão
     if provenance is None:
@@ -233,8 +280,10 @@ def get_valuation_method(
         primary_method = ValuationMethod.RELATIVOS
         alternatives = []
         confidence = 0.5
+        # Usa sector_original nas notas para diagnóstico (mantém valor pré-normalização)
+        _notes_sector = sector_original if sector_original and sector_original != sector else sector
         notes = (
-            f"Setor '{sector}' não reconhecido na tabela de routing. "
+            f"Setor '{_notes_sector}' não reconhecido na tabela de routing. "
             "Usando método RELATIVOS como fallback. Verificar mapeamento setorial."
         )
     else:

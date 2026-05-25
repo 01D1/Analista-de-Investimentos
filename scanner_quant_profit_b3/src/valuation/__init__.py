@@ -3,6 +3,8 @@ src/valuation/ — Universal Sector Valuation Package
 
 Este pacote é a base para o valuation universal de tickers B3.
 Organizado em:
+- sector_normalizer.py  — M016-S01: sector normalization (GICS/type → canonical key)
+- tickers_config.py     — M016-S01: tickers.yaml config loader
 - router.py             — S04: sector router universal
 - valuation_results.py  — S05: canonical results store
 - valuation_inputs.py   — S05: canonical inputs store
@@ -13,6 +15,26 @@ Veja README.md para documentação completa.
 """
 
 from __future__ import annotations
+
+# SectorNormalizer (M016-S01)
+from src.valuation.sector_normalizer import (
+    SectorNormalizationResult,
+    SectorNormalizer,
+    NormalizationSource,
+    CANONICAL_KEYS,
+    FALLBACK_CANONICAL,
+    TYPE_TO_CANONICAL,
+    GICS_SECTOR_TO_CANONICAL,
+    normalize_sector,
+    get_normalizer,
+)
+
+# Tickers config loader (M016-S01)
+from src.valuation.tickers_config import (
+    load_tickers_config,
+    get_ticker_config,
+    get_ticker_type,
+)
 
 # Router (S04)
 from src.valuation.router import (
@@ -62,6 +84,20 @@ from src.valuation.valuation_store import (
 )
 
 __all__ = [
+    # SectorNormalizer (M016-S01)
+    "SectorNormalizationResult",
+    "SectorNormalizer",
+    "NormalizationSource",
+    "CANONICAL_KEYS",
+    "FALLBACK_CANONICAL",
+    "TYPE_TO_CANONICAL",
+    "GICS_SECTOR_TO_CANONICAL",
+    "normalize_sector",
+    "get_normalizer",
+    # Tickers config (M016-S01)
+    "load_tickers_config",
+    "get_ticker_config",
+    "get_ticker_type",
     # Router
     "ValuationMethod",
     "RoutingStatus",
