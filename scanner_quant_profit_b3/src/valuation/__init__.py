@@ -113,6 +113,53 @@ from src.valuation.models.commodity_model import (
     save_commodity_valuation_result,
 )
 
+# Utility Valuation Model (M016-S04)
+from src.valuation.models.utility_model import (
+    UtilityValuationInputs,
+    UtilityValuationResult,
+    UtilityInputQuality,
+    UtilityValuationStatus,
+    UtilityValuationMethod,
+    UTILITY_TICKERS,
+    UTILITY_PRESERVED_FAIR_VALUES,
+    DEFAULT_UTILITY_EV_EBITDA_MULTIPLE,
+    calculate_utility_valuation,
+    diagnose_utility_tickers,
+    save_utility_valuation_result,
+)
+
+# Retail Valuation Model (M016-S04)
+from src.valuation.models.retail_model import (
+    RetailValuationInputs,
+    RetailValuationResult,
+    RetailInputQuality,
+    RetailValuationStatus,
+    RetailValuationMethod,
+    RETAIL_TICKERS,
+    RETAIL_PRESERVED_FAIR_VALUES,
+    DEFAULT_RETAIL_EV_EBITDA_MULTIPLE,
+    calculate_retail_valuation,
+    diagnose_retail_tickers,
+    save_retail_valuation_result,
+)
+
+# Industry Valuation Model (M016-S04)
+from src.valuation.models.industry_model import (
+    IndustryValuationInputs,
+    IndustryValuationResult,
+    IndustryInputQuality,
+    IndustryValuationStatus,
+    IndustryValuationMethod,
+    INDUSTRY_TICKERS,
+    TECH_FALLBACK_TICKERS,
+    ALL_INDUSTRY_TICKERS,
+    INDUSTRY_PRESERVED_FAIR_VALUES,
+    DEFAULT_INDUSTRY_EV_EBITDA_MULTIPLE,
+    calculate_industry_valuation,
+    diagnose_industry_tickers,
+    save_industry_valuation_result,
+)
+
 __all__ = [
     # SectorNormalizer (M016-S01)
     "SectorNormalizationResult",
@@ -179,4 +226,42 @@ __all__ = [
     "calculate_commodity_valuation",
     "diagnose_commodity_tickers",
     "save_commodity_valuation_result",
+    # Utility Valuation Model (M016-S04)
+    "UtilityValuationInputs",
+    "UtilityValuationResult",
+    "UtilityInputQuality",
+    "UtilityValuationStatus",
+    "UtilityValuationMethod",
+    "UTILITY_TICKERS",
+    "UTILITY_PRESERVED_FAIR_VALUES",
+    "DEFAULT_UTILITY_EV_EBITDA_MULTIPLE",
+    "calculate_utility_valuation",
+    "diagnose_utility_tickers",
+    "save_utility_valuation_result",
+    # Retail Valuation Model (M016-S04)
+    "RetailValuationInputs",
+    "RetailValuationResult",
+    "RetailInputQuality",
+    "RetailValuationStatus",
+    "RetailValuationMethod",
+    "RETAIL_TICKERS",
+    "RETAIL_PRESERVED_FAIR_VALUES",
+    "DEFAULT_RETAIL_EV_EBITDA_MULTIPLE",
+    "calculate_retail_valuation",
+    "diagnose_retail_tickers",
+    "save_retail_valuation_result",
+    # Industry Valuation Model (M016-S04)
+    "IndustryValuationInputs",
+    "IndustryValuationResult",
+    "IndustryInputQuality",
+    "IndustryValuationStatus",
+    "IndustryValuationMethod",
+    "INDUSTRY_TICKERS",
+    "TECH_FALLBACK_TICKERS",
+    "ALL_INDUSTRY_TICKERS",
+    "INDUSTRY_PRESERVED_FAIR_VALUES",
+    "DEFAULT_INDUSTRY_EV_EBITDA_MULTIPLE",
+    "calculate_industry_valuation",
+    "diagnose_industry_tickers",
+    "save_industry_valuation_result",
 ]
