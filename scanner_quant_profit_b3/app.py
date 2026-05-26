@@ -63,7 +63,7 @@ _PAGES = [
 
     st.Page(
         "pages/valuation_coverage.py",
-        title="Cobertura M017",
+        title="Cobertura de Valuation",
         icon="🗺",
     ),
 
