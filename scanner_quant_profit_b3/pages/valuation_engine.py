@@ -1,7 +1,7 @@
 """Valuation Hub — Central de Valuation Fundamentalista
 
 Abas:
-  1. Visão Geral       — KPIs + preços justos preservados + prontas + pendências
+  1. Visão Geral       — hero + preços justos (wl-card) + prontas (tbl) + pendências (chip)
   2. Base Fundamentalista — cobertura de valuation_financial_inputs (ingestion.db)
   3. Simulação dos Modelos — dry-run M017-S05 (write=False, nenhum valor salvo)
   4. Qualidade Fundamental — scores de qualidade do asset_intelligence_snapshots
@@ -89,32 +89,32 @@ _PRESERVE_EXISTING: dict[str, dict] = {
 }
 
 _READY_TO_CALCULATE: list[dict] = [
-    {"ticker": "EGIE3",  "sector": "Energia",    "model": "Utilidade",  "method": "DCF/FCFF",  "notes": ""},
-    {"ticker": "SBSP3",  "sector": "Saneamento", "model": "Utilidade",  "method": "EV/EBITDA", "notes": "FCF negativo esperado"},
-    {"ticker": "TAEE11", "sector": "Energia",    "model": "Utilidade",  "method": "DCF/FCFF",  "notes": ""},
-    {"ticker": "AZZA3",  "sector": "Varejo",     "model": "Varejo",     "method": "DCF/FCFF",  "notes": ""},
-    {"ticker": "LREN3",  "sector": "Varejo",     "model": "Varejo",     "method": "DCF/FCFF",  "notes": ""},
-    {"ticker": "MGLU3",  "sector": "Varejo",     "model": "Varejo",     "method": "EV/EBITDA", "notes": "FCF em revisão"},
-    {"ticker": "VIVA3",  "sector": "Varejo",     "model": "Varejo",     "method": "DCF/FCFF",  "notes": ""},
-    {"ticker": "PRIO3",  "sector": "Petróleo",   "model": "Commodity",  "method": "DCF/FCFF",  "notes": ""},
-    {"ticker": "RECV3",  "sector": "Petróleo",   "model": "Commodity",  "method": "EV/EBITDA", "notes": "FCF negativo esperado"},
-    {"ticker": "FLRY3",  "sector": "Saúde",      "model": "Industrial", "method": "DCF/FCFF",  "notes": ""},
-    {"ticker": "HYPE3",  "sector": "Farmácia",   "model": "Industrial", "method": "DCF/FCFF",  "notes": ""},
-    {"ticker": "KLBN11", "sector": "Papel/Celulose", "model": "Industrial", "method": "DCF/FCFF", "notes": ""},
-    {"ticker": "RADL3",  "sector": "Farmácia",   "model": "Industrial", "method": "DCF/FCFF",  "notes": ""},
-    {"ticker": "RAIL3",  "sector": "Logística",  "model": "Industrial", "method": "EV/EBITDA", "notes": ""},
-    {"ticker": "RENT3",  "sector": "Aluguel",    "model": "Industrial", "method": "EV/EBITDA", "notes": ""},
-    {"ticker": "SUZB3",  "sector": "Papel/Celulose", "model": "Industrial", "method": "DCF/FCFF", "notes": ""},
-    {"ticker": "VAMO3",  "sector": "Locação",    "model": "Industrial", "method": "EV/EBITDA", "notes": "FCF negativo esperado"},
+    {"ticker": "EGIE3",  "sector": "Energia",         "model": "Utilidade",  "method": "DCF/FCFF",  "notes": ""},
+    {"ticker": "SBSP3",  "sector": "Saneamento",      "model": "Utilidade",  "method": "EV/EBITDA", "notes": "FCF negativo esperado"},
+    {"ticker": "TAEE11", "sector": "Energia",         "model": "Utilidade",  "method": "DCF/FCFF",  "notes": ""},
+    {"ticker": "AZZA3",  "sector": "Varejo",          "model": "Varejo",     "method": "DCF/FCFF",  "notes": ""},
+    {"ticker": "LREN3",  "sector": "Varejo",          "model": "Varejo",     "method": "DCF/FCFF",  "notes": ""},
+    {"ticker": "MGLU3",  "sector": "Varejo",          "model": "Varejo",     "method": "EV/EBITDA", "notes": "FCF em revisão"},
+    {"ticker": "VIVA3",  "sector": "Varejo",          "model": "Varejo",     "method": "DCF/FCFF",  "notes": ""},
+    {"ticker": "PRIO3",  "sector": "Petróleo",        "model": "Commodity",  "method": "DCF/FCFF",  "notes": ""},
+    {"ticker": "RECV3",  "sector": "Petróleo",        "model": "Commodity",  "method": "EV/EBITDA", "notes": "FCF negativo esperado"},
+    {"ticker": "FLRY3",  "sector": "Saúde",           "model": "Industrial", "method": "DCF/FCFF",  "notes": ""},
+    {"ticker": "HYPE3",  "sector": "Farmácia",        "model": "Industrial", "method": "DCF/FCFF",  "notes": ""},
+    {"ticker": "KLBN11", "sector": "Papel/Celulose",  "model": "Industrial", "method": "DCF/FCFF",  "notes": ""},
+    {"ticker": "RADL3",  "sector": "Farmácia",        "model": "Industrial", "method": "DCF/FCFF",  "notes": ""},
+    {"ticker": "RAIL3",  "sector": "Logística",       "model": "Industrial", "method": "EV/EBITDA", "notes": ""},
+    {"ticker": "RENT3",  "sector": "Aluguel",         "model": "Industrial", "method": "EV/EBITDA", "notes": ""},
+    {"ticker": "SUZB3",  "sector": "Papel/Celulose",  "model": "Industrial", "method": "DCF/FCFF",  "notes": ""},
+    {"ticker": "VAMO3",  "sector": "Locação",         "model": "Industrial", "method": "EV/EBITDA", "notes": "FCF negativo esperado"},
 ]
 
 _PENDENCIAS: list[dict] = [
-    {"ticker": "PCAR3",  "status": "Dados parciais",                   "nota": "Dados parciais — situação especial (empresa em recuperação judicial)"},
-    {"ticker": "PETZ3",  "status": "Ticker legado",                    "nota": "Ticker legado — empresa encerrada (fusão consumada)"},
-    {"ticker": "AUAU3",  "status": "Aguardando docs CVM",              "nota": "CNPJ sem mapeamento — aguardando dados CVM/RI"},
-    {"ticker": "VALE3",  "status": "Dados insuficientes",              "nota": "Aguardando ingestion CVM — ri_docs=0"},
-    {"ticker": "NTCO3",  "status": "Aguardando docs CVM",              "nota": "Docs RI/CVM insuficientes para extração"},
-    {"ticker": "VIVT3",  "status": "Modelo alternativo",               "nota": "Modelo alternativo disponível (EV/EBITDA) — aguardando inputs CVM"},
+    {"ticker": "PCAR3",  "status": "Dados parciais",      "nota": "Dados parciais — situação especial (empresa em recuperação judicial)"},
+    {"ticker": "PETZ3",  "status": "Ticker legado",       "nota": "Ticker legado — empresa encerrada (fusão consumada)"},
+    {"ticker": "AUAU3",  "status": "Aguardando docs CVM", "nota": "CNPJ sem mapeamento — aguardando dados CVM/RI"},
+    {"ticker": "VALE3",  "status": "Dados insuficientes", "nota": "Aguardando ingestion CVM — ri_docs=0"},
+    {"ticker": "NTCO3",  "status": "Aguardando docs CVM", "nota": "Docs RI/CVM insuficientes para extração"},
+    {"ticker": "VIVT3",  "status": "Modelo alternativo",  "nota": "Modelo alternativo disponível (EV/EBITDA) — aguardando inputs CVM"},
 ]
 
 _STATUS_PT: dict[str, str] = {
@@ -125,6 +125,49 @@ _STATUS_PT: dict[str, str] = {
     "NEEDS_DATA":         "Dados insuficientes",
     "NEEDS_RI_DOCS":      "Aguardando docs CVM",
     "LEGACY_TICKER":      "Ticker legado",
+}
+
+# ── M018-S04 Preliminary Results ───────────────────────────────────────────────
+
+_COMPANY_NAMES_M018: dict[str, str] = {
+    "EGIE3":  "Engie Brasil",
+    "LREN3":  "Lojas Renner",
+    "VIVA3":  "Vivara",
+    "RADL3":  "Raia Drogasil",
+    "RAIL3":  "Rumo",
+    "RENT3":  "Localiza",
+    "SUZB3":  "Suzano",
+    "PRIO3":  "PRIO",
+    "RECV3":  "PetroRecôncavo",
+    "SBSP3":  "Sabesp",
+    "TAEE11": "Taesa",
+    "AZZA3":  "Azzas 2154",
+    "MGLU3":  "Magazine Luiza",
+    "PCAR3":  "Pão de Açúcar",
+    "FLRY3":  "Fleury",
+    "HYPE3":  "Hypera",
+    "KLBN11": "Klabin",
+    "VAMO3":  "Vamos",
+}
+
+_CONF_PT: dict[str, str] = {
+    "HIGH":         "Alta",
+    "MEDIUM":       "Média",
+    "LOW":          "Baixa",
+    "INSUFFICIENT": "Insuficiente",
+}
+
+# Fallback prices from last snapshot (2026-05-22)
+_PRICES_FALLBACK: dict[str, dict] = {
+    "ABCB4":  {"price": 24.38,  "name": "ABC Brasil"},
+    "BBAS3":  {"price": 20.94,  "name": "Banco do Brasil"},
+    "BBDC4":  {"price": 17.62,  "name": "Bradesco"},
+    "BPAC11": {"price": 53.93,  "name": "BTG Pactual"},
+    "BRSR6":  {"price": 14.65,  "name": "Banrisul"},
+    "ITUB4":  {"price": 39.43,  "name": "Itaú Unibanco"},
+    "SANB11": {"price": 27.10,  "name": "Santander Brasil"},
+    "PETR4":  {"price": 44.48,  "name": "Petrobras"},
+    "WEGE3":  {"price": 42.73,  "name": "WEG"},
 }
 
 
@@ -154,6 +197,230 @@ def _upside_color(pct) -> str:
         return "var(--neg-500)"
     except (TypeError, ValueError):
         return "var(--fg-5)"
+
+
+def _badge_html(text: str, variant: str = "cyan") -> str:
+    """Returns inline HTML for a badge span."""
+    return f'<span class="badge badge-{variant}">{text}</span>'
+
+
+def _chip_html(text: str, variant: str = "manual") -> str:
+    """Returns inline HTML for a chip span with dot indicator."""
+    return f'<span class="chip chip-{variant}"><span class="dot"></span>{text}</span>'
+
+
+def _method_badge(method: str) -> str:
+    """Returns a badge styled for the valuation method."""
+    variant = "cyan" if ("DCF" in method or "P/BV" in method) else "violet"
+    return _badge_html(method, variant)
+
+
+def _flag_chip(flag: str) -> str:
+    """Returns a degraded chip for quality alerts, or empty string."""
+    if not flag or flag == "—":
+        return ""
+    return _chip_html(flag, "degraded")
+
+
+# ── M018-S04 helpers ────────────────────────────────────────────────────────────
+
+import re as _re
+import json as _json
+
+
+def _fmt_method_prelim(raw: str) -> str:
+    """Format internal EV_EBITDA_Nx method code to display string."""
+    return raw.replace("EV_EBITDA_", "EV/EBITDA ").replace("_", "/")
+
+
+def _translate_flag_prelim(flag: str) -> str | None:
+    """Translate an M018 internal flag to user-friendly Portuguese label.
+    Returns None to silently skip internal-only flags."""
+    f = flag.upper()
+    if "DISTRESSED" in f:
+        return "Distressed"
+    if "FCF_NEGATIVE_EXPECTED" in f:
+        return "FCF Negativo"
+    if "FCF_ANOMALY" in f:
+        return "Anomalia FCF"
+    if "UNIT_SHARES" in f:
+        return "Validar ações"
+    if "ELEVATED_LEVERAGE" in f:
+        m = _re.search(r"nd_ebitda=(\d+\.?\d*)x", flag)
+        ratio = m.group(1) if m else ""
+        return f"Alavancagem elevada{f' ({ratio}×)' if ratio else ''}"
+    if "VERY_HIGH_LEVERAGE" in f:
+        return "Alavancagem muito elevada"
+    if "UPSIDE_OVER_2X" in f:
+        return "Upside > 2×"
+    # Skip confirmed_negative, shares_discrepancy, pn_only, etc.
+    return None
+
+
+def _load_preliminary_results() -> list[dict]:
+    """Load M018_CONTROLLED preliminary results from valuation_results (read-only).
+
+    Rules:
+      - SELECT only — zero writes
+      - source = 'M018_CONTROLLED', status = 'preliminary'
+      - Never touches asset_intelligence_snapshots
+    """
+    if _INGESTION_DB_PATH is None:
+        return []
+    try:
+        conn = sqlite3.connect(str(_INGESTION_DB_PATH))
+        rows = conn.execute("""
+            SELECT ticker, preliminary_fair_value, market_price, upside_pct,
+                   method_used, confidence, flags, sanity_check_passed, block_reason
+            FROM valuation_results
+            WHERE source = 'M018_CONTROLLED'
+              AND status  = 'preliminary'
+            ORDER BY ticker
+        """).fetchall()
+        conn.close()
+        result: list[dict] = []
+        for r in rows:
+            flags_raw = r[6]
+            try:
+                flags_list: list[str] = _json.loads(flags_raw) if flags_raw else []
+            except Exception:
+                flags_list = []
+            upside = r[3]
+            if upside is not None and float(upside) > 200:
+                flags_list = flags_list + ["UPSIDE_OVER_2X"]
+            result.append({
+                "ticker":                 r[0],
+                "preliminary_fair_value": r[1],
+                "market_price":           r[2],
+                "upside_pct":             r[3],
+                "method_used":            r[4],
+                "confidence":             r[5],
+                "flags":                  flags_list,
+                "sanity_check_passed":    r[7],
+                "block_reason":           r[8],
+            })
+        return result
+    except Exception:
+        return []
+
+
+def _render_prelim_table(rows: list[dict]) -> None:
+    """Render a table of preliminary fair values."""
+    if not rows:
+        st.caption("Nenhum valor disponível.")
+        return
+
+    rows_html = ""
+    for r in rows:
+        ticker    = r["ticker"]
+        company   = _COMPANY_NAMES_M018.get(ticker, "—")
+        fv        = r.get("preliminary_fair_value")
+        price     = r.get("market_price")
+        upside    = r.get("upside_pct")
+        method    = _fmt_method_prelim(r.get("method_used") or "—")
+        conf      = _CONF_PT.get(r.get("confidence") or "", r.get("confidence") or "—")
+        sanity    = r.get("sanity_check_passed")
+        flags     = r.get("flags") or []
+
+        fv_str    = _fmt_brl(fv)    if fv    is not None else "—"
+        price_str = _fmt_brl(price) if price is not None else "—"
+
+        if upside is not None:
+            try:
+                upside_f   = float(upside)
+                upside_str = f"{upside_f:+.1f}%"
+                upside_col = (
+                    "var(--pos-500)"  if upside_f > 20
+                    else "var(--warn-500)" if upside_f > 0
+                    else "var(--neg-500)"
+                )
+            except (TypeError, ValueError):
+                upside_str = "—"
+                upside_col = "var(--fg-5)"
+        else:
+            upside_str = "—"
+            upside_col = "var(--fg-5)"
+
+        conf_variant = "buy" if conf == "Alta" else "hold" if conf == "Média" else "sell"
+        conf_html    = f'<span class="badge badge-{conf_variant}">{conf}</span>'
+
+        method_variant = "cyan" if "EV/EBITDA" in method else "violet"
+        method_html    = f'<span class="badge badge-{method_variant}">{method}</span>'
+
+        sanity_html = (
+            _chip_html("Passou na checagem", "approved")
+            if sanity == 1
+            else _chip_html("Requer validação", "degraded")
+        )
+
+        translated = [tf for f in flags for tf in [_translate_flag_prelim(f)] if tf]
+        flags_html = (
+            " ".join(
+                f'<span class="chip chip-degraded"><span class="dot"></span>{tf}</span>'
+                for tf in translated
+            )
+            if translated
+            else '<span style="color:var(--fg-6);">—</span>'
+        )
+
+        rows_html += f"""
+        <tr>
+          <td style="font-family:var(--font-display);font-weight:900;color:var(--fg-1);">{ticker}</td>
+          <td style="font-size:.72rem;color:var(--fg-3);">{company}</td>
+          <td style="font-family:var(--font-mono);color:var(--fg-4);">{price_str}</td>
+          <td style="font-family:var(--font-mono);font-weight:700;color:var(--fg-2);">{fv_str}</td>
+          <td style="font-family:var(--font-mono);font-weight:900;color:{upside_col};">{upside_str}</td>
+          <td>{method_html}</td>
+          <td>{conf_html}</td>
+          <td>{sanity_html}</td>
+          <td style="max-width:220px;">{flags_html}</td>
+          <td><span class="badge badge-sell">Não aprovado</span></td>
+        </tr>
+        """
+
+    st.markdown(f"""
+    <div class="tbl-wrap">
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th>Empresa</th><th>Nome</th><th>Mercado</th>
+          <th>Valor Preliminar</th><th>Upside / Downside</th>
+          <th>Método</th><th>Confiança</th><th>Checagem</th>
+          <th>Alertas</th><th>Status</th>
+        </tr>
+      </thead>
+      <tbody>{rows_html}</tbody>
+    </table>
+    </div>
+    """, unsafe_allow_html=True)
+
+
+def _load_market_prices() -> dict[str, dict]:
+    """Load latest market prices from asset_intelligence_snapshots, with fallback."""
+    result: dict[str, dict] = dict(_PRICES_FALLBACK)
+    if not _SCANNER_DB.exists():
+        return result
+    try:
+        conn = sqlite3.connect(str(_SCANNER_DB))
+        rows = conn.execute("""
+            SELECT ticker, current_price, company_name, created_at
+            FROM asset_intelligence_snapshots
+            ORDER BY created_at DESC
+        """).fetchall()
+        conn.close()
+        seen: set[str] = set()
+        for ticker, price, name, created_at in rows:
+            if ticker not in seen and price is not None:
+                seen.add(ticker)
+                fallback_name = _PRICES_FALLBACK.get(str(ticker), {}).get("name", "")
+                result[str(ticker)] = {
+                    "price": float(price),
+                    "name": str(name or fallback_name or "").strip().title(),
+                    "date": str(created_at or "")[:10],
+                }
+        return result
+    except Exception:
+        return result
 
 
 def _load_dry_run_matrix() -> list[dict]:
@@ -233,79 +500,175 @@ def _load_fundamental_quality_rows() -> list[dict]:
 # ── Tab 1: Visão Geral ──────────────────────────────────────────────────────────
 
 def render_visao_geral() -> None:
+    market = _load_market_prices()
+
+    # ── Hero section ─────────────────────────────────────────────────────────────
+    st.markdown("""
+    <div class="hero-section">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;
+                  flex-wrap:wrap;gap:12px;">
+        <div>
+          <div style="font-family:var(--font-display);font-size:1.4rem;font-weight:900;
+               color:var(--fg-1);letter-spacing:-0.5px;margin-bottom:6px;">
+            Valuation Hub — Universo Completo
+          </div>
+          <div style="font-size:.72rem;color:var(--fg-5);font-family:var(--font-mono);">
+            32 empresas · 9 preços justos preservados · 18 valores preliminares
+            · 7 passaram na checagem · 47.621 registros financeiros
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+          <span class="badge badge-cyan">Base Financeira</span>
+          <span class="badge badge-violet">18 Preliminares</span>
+          <span class="badge badge-buy">7 Passou na checagem</span>
+        </div>
+      </div>
+    </div>
+    """, unsafe_allow_html=True)
+
     kpi_strip([
-        {"label": "Empresas monitoradas",    "value": "32",     "color": "cyan"},
-        {"label": "Prontas para cálculo",    "value": "17",     "color": "green"},
-        {"label": "Preço justo preservado",  "value": "9",      "color": "cyan"},
-        {"label": "Dados parciais",          "value": "1",      "color": "amber"},
-        {"label": "Registros financeiros",   "value": "47.621", "color": "violet"},
-        {"label": "Aguardando dados",        "value": "4",      "color": "red"},
+        {"label": "Empresas monitoradas",   "value": "32",  "color": "cyan"},
+        {"label": "Valor preliminar",       "value": "18",  "color": "violet"},
+        {"label": "Passou na checagem",     "value": "7",   "color": "green"},
+        {"label": "Requer validação",       "value": "11",  "color": "amber"},
+        {"label": "Preço justo preservado", "value": "9",   "color": "cyan"},
+        {"label": "Aprovado",               "value": "0",   "color": "red"},
     ])
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    col_a, col_b, col_c = st.columns([1, 1.2, 0.8])
+    col_a, col_b, col_c = st.columns([1, 1.3, 0.8])
 
-    # ── Section A: Preços Justos Preservados ──────────────────────────────────
+    # ── Column A: Preços Justos Preservados ──────────────────────────────────────
     with col_a:
         section_title("Preços Justos Preservados", icon="🔒")
-        st.caption("9 ativos — auditados M015/M016. Não recalcular sem force_recalc.")
+        st.caption("9 ativos auditados M015/M016 · Não recalcular sem force_recalc")
+
         for ticker, meta in _PRESERVE_EXISTING.items():
-            fv_str = _fmt_brl(meta["fv"])
+            fv = meta["fv"]
+            sector = meta["sector"]
+            method = meta["method"]
+            market_info = market.get(ticker, {})
+            price = market_info.get("price")
+            name = market_info.get("name", "")
+            date = market_info.get("date", "")
+
+            fv_str = _fmt_brl(fv)
+
+            if price:
+                upside = (fv / price - 1) * 100
+                upside_str = f"{upside:+.1f}%"
+                price_str = _fmt_brl(price)
+                card_class = "buy" if upside > 5 else "sell" if upside < -5 else "hold"
+                upside_color = (
+                    "var(--pos-500)" if upside > 5
+                    else "var(--neg-500)" if upside < -5
+                    else "var(--warn-500)"
+                )
+            else:
+                upside_str = "—"
+                price_str = "—"
+                card_class = "hold"
+                upside_color = "var(--fg-5)"
+
+            name_html = (
+                f'<div style="font-size:.6rem;color:var(--fg-5);'
+                f'font-family:var(--font-mono);margin:1px 0 2px 0;">{name}</div>'
+                if name else ""
+            )
+            date_html = f" · {date}" if date else ""
+
             st.markdown(f"""
-            <div style="background:var(--bg-3);border:1px solid var(--border-1);
-                 border-radius:10px;padding:10px 14px;margin-bottom:6px;
-                 display:flex;justify-content:space-between;align-items:center;">
+            <div class="wl-card {card_class}" style="margin-bottom:10px;">
+              <div class="top">
                 <div>
-                    <div style="font-family:var(--font-display);font-size:.95rem;
-                         font-weight:900;color:var(--fg-1);">{ticker}</div>
-                    <div style="font-size:.58rem;color:var(--fg-5);font-family:var(--font-mono);">
-                        {meta['sector']} · {meta['method']}
-                    </div>
+                  <div class="tk">{ticker}</div>
+                  {name_html}
+                  <div style="font-size:.58rem;color:var(--fg-6);font-family:var(--font-mono);">
+                    {sector}</div>
                 </div>
-                <div style="font-family:var(--font-mono);font-size:.95rem;
-                     font-weight:700;color:var(--pos-500);">{fv_str}</div>
+                <div style="display:flex;flex-direction:column;align-items:flex-end;gap:5px;">
+                  <span class="badge badge-cyan">Preservado</span>
+                  {_method_badge(method)}
+                </div>
+              </div>
+              <div class="grid">
+                <div class="item">Mercado<span class="v">{price_str}</span></div>
+                <div class="item">Preço justo<span class="v" style="color:var(--fg-1);">{fv_str}</span></div>
+                <div class="item">Upside / Downside
+                  <span class="v" style="color:{upside_color};font-weight:900;">{upside_str}</span>
+                </div>
+                <div class="item">Fonte<span class="v">M015/M016</span></div>
+              </div>
+              <div class="meta">Auditado{date_html}</div>
             </div>
             """, unsafe_allow_html=True)
 
-    # ── Section B: Prontas para cálculo ────────────────────────────────────────
+    # ── Column B: Prontas para Cálculo ────────────────────────────────────────────
     with col_b:
-        section_title("Prontas para Cálculo", icon="")
+        section_title("Prontas para Cálculo", icon="✅")
         st.caption("17 ativos — inputs completos em ingestion.db")
-        df_ready = pd.DataFrame([
-            {
-                "Ticker":  r["ticker"],
-                "Setor":   r["sector"],
-                "Modelo":  r["model"],
-                "Método":  r["method"],
-                "Notas":   r["notes"] if r["notes"] else "—",
-            }
-            for r in _READY_TO_CALCULATE
-        ])
-        st.dataframe(df_ready, use_container_width=True, hide_index=True)
 
-    # ── Section C: Pendências ───────────────────────────────────────────────────
+        rows_html = ""
+        for r in _READY_TO_CALCULATE:
+            ticker = r["ticker"]
+            notes = r["notes"]
+            flag_html = (
+                _chip_html(notes, "degraded") if notes
+                else '<span style="color:var(--fg-6);">—</span>'
+            )
+            rows_html += f"""
+            <tr>
+              <td style="font-family:var(--font-display);font-weight:900;
+                         color:var(--fg-1);">{ticker}</td>
+              <td>{r['sector']}</td>
+              <td>{r['model']}</td>
+              <td>{_method_badge(r['method'])}</td>
+              <td>{flag_html}</td>
+            </tr>
+            """
+
+        st.markdown(f"""
+        <div class="tbl-wrap">
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Empresa</th><th>Setor</th><th>Modelo</th>
+              <th>Método</th><th>Alertas</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows_html}
+          </tbody>
+        </table>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # ── Column C: Pendências ─────────────────────────────────────────────────────
     with col_c:
-        section_title("Pendências", icon="")
+        section_title("Pendências", icon="⚠️")
         st.caption("6 ativos com bloqueio ou situação especial")
+
+        _STATUS_CHIP_MAP: dict[str, tuple[str, str]] = {
+            "Dados parciais":       ("degraded", "Parcial"),
+            "Ticker legado":        ("paper",    "Legado"),
+            "Aguardando docs CVM":  ("blocked",  "Sem CVM"),
+            "Dados insuficientes":  ("blocked",  "Sem dados"),
+            "Modelo alternativo":   ("manual",   "Alternativo"),
+        }
+
         for p in _PENDENCIAS:
-            status_color = {
-                "Dados parciais":       "var(--warn-500)",
-                "Ticker legado":        "var(--fg-5)",
-                "Aguardando docs CVM":  "var(--neg-500)",
-                "Dados insuficientes":  "var(--neg-500)",
-                "Modelo alternativo":   "var(--brand-400)",
-            }.get(p["status"], "var(--fg-4)")
+            status = p["status"]
+            chip_variant, chip_text = _STATUS_CHIP_MAP.get(status, ("paper", status))
             st.markdown(f"""
-            <div style="background:var(--bg-3);border:1px solid var(--border-1);
-                 border-radius:10px;padding:10px 14px;margin-bottom:6px;">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-                    <div style="font-family:var(--font-display);font-size:.9rem;
-                         font-weight:900;color:var(--fg-1);">{p['ticker']}</div>
-                    <div style="font-size:.6rem;font-weight:700;color:{status_color};
-                         font-family:var(--font-mono);">{p['status']}</div>
-                </div>
-                <div style="font-size:.62rem;color:var(--fg-5);line-height:1.4;">{p['nota']}</div>
+            <div class="panel" style="margin-bottom:8px;">
+              <div style="display:flex;justify-content:space-between;
+                          align-items:center;margin-bottom:6px;">
+                <div style="font-family:var(--font-display);font-size:.95rem;
+                     font-weight:900;color:var(--fg-1);">{p['ticker']}</div>
+                {_chip_html(chip_text, chip_variant)}
+              </div>
+              <div style="font-size:.62rem;color:var(--fg-5);line-height:1.4;">{p['nota']}</div>
             </div>
             """, unsafe_allow_html=True)
 
@@ -332,14 +695,14 @@ def render_base_fundamentalista() -> None:
         {"label": "Registros financeiros", "value": f"{kpis['total']:,}".replace(",", "."), "color": "cyan"},
         {"label": "Empresas com dados",    "value": str(kpis["tickers"]),                  "color": "cyan"},
         {"label": "Métricas distintas",    "value": str(kpis["metrics"]),                  "color": "violet"},
-        {"label": "CVM/DFP",              "value": f"{cvm_cnt:,}".replace(",", "."),        "color": "green"},
+        {"label": "CVM / DFP",             "value": f"{cvm_cnt:,}".replace(",", "."),       "color": "green"},
         {"label": "B3 Market Data",        "value": str(b3_cnt),                            "color": "amber"},
     ])
 
     st.markdown(
         f'<div style="font-size:.65rem;color:var(--fg-5);font-family:var(--font-mono);'
         f'margin:10px 0 16px 0;padding:6px 10px;background:var(--bg-2);border-radius:8px;">'
-        f'Fonte: ingestion.db · M017-S03 CVM_CSV + M017-S04 B3_MARKET_DATA · '
+        f'Fonte: ingestion.db · CVM_CSV + B3_MARKET_DATA · '
         f'Referência: 2025-12-31 (DFP anual)</div>',
         unsafe_allow_html=True,
     )
@@ -351,7 +714,6 @@ def render_base_fundamentalista() -> None:
         + [p["ticker"] for p in _PENDENCIAS]
     )
 
-    # Deduplicate preserving order
     seen: set[str] = set()
     ordered_universe: list[str] = []
     for t in all_universe:
@@ -365,29 +727,52 @@ def render_base_fundamentalista() -> None:
     for r in _READY_TO_CALCULATE:
         model_map[r["ticker"]] = r["model"]
 
-    rows_cov = []
+    rows_html = ""
+    ready_tickers_set = {r["ticker"] for r in _READY_TO_CALCULATE}
     for ticker in ordered_universe:
         cov = coverage.get(ticker, {"n_metrics": 0, "last_period": None})
         n = cov["n_metrics"]
         period = cov.get("last_period") or "—"
         model = model_map.get(ticker, "—")
-        src_list = []
+        src_parts = []
         if n > 0:
-            src_list.append("CVM/DFP")
-            if ticker in [r["ticker"] for r in _READY_TO_CALCULATE]:
-                src_list.append("B3 Market")
-        rows_cov.append({
-            "Empresa": ticker,
-            "Modelo":  model,
-            "Métricas": f"{n} / 22",
-            "Período":  period,
-            "Fonte":    " + ".join(src_list) if src_list else "Sem dados",
-            "Status":   "Completo" if n >= 22 else ("Parcial" if n > 0 else "Sem dados"),
-        })
+            src_parts.append("CVM/DFP")
+        if ticker in ready_tickers_set and n > 0:
+            src_parts.append("B3 Market")
+
+        if n >= 22:
+            status_html = _chip_html("Completo", "approved")
+        elif n > 0:
+            status_html = _chip_html("Parcial", "degraded")
+        else:
+            status_html = _chip_html("Sem dados", "blocked")
+
+        rows_html += f"""
+        <tr>
+          <td style="font-family:var(--font-display);font-weight:900;
+                     color:var(--fg-1);">{ticker}</td>
+          <td>{model}</td>
+          <td style="text-align:right;">{n} / 22</td>
+          <td>{period}</td>
+          <td>{" + ".join(src_parts) if src_parts else "—"}</td>
+          <td>{status_html}</td>
+        </tr>
+        """
 
     section_title("Cobertura por Empresa", icon="")
-    df_cov = pd.DataFrame(rows_cov)
-    st.dataframe(df_cov, use_container_width=True, hide_index=True)
+    st.markdown(f"""
+    <div class="tbl-wrap">
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th>Empresa</th><th>Modelo</th><th style="text-align:right;">Métricas</th>
+          <th>Período</th><th>Fonte</th><th>Status</th>
+        </tr>
+      </thead>
+      <tbody>{rows_html}</tbody>
+    </table>
+    </div>
+    """, unsafe_allow_html=True)
 
     # Key metrics for READY tickers
     section_title("Métricas-chave — Prontas para Cálculo", icon="")
@@ -447,9 +832,9 @@ def render_simulacao_modelos() -> None:
     st.markdown(alert_block(
         "info",
         "Simulação com write=False — nenhum valor foi salvo",
-        "Todos os fair values abaixo foram calculados em M017-S05 com write=False. "
+        "Todos os fair values abaixo foram calculados em dry-run com write=False. "
         "asset_intelligence_snapshots não foi alterada. "
-        "M018 persiste com write=True após validação cruzada (range 0.1× – 5.0× preço).",
+        "Próxima etapa persiste com write=True após validação cruzada (range 0,1× – 5,0× preço).",
     ), unsafe_allow_html=True)
 
     if not dry_run:
@@ -473,14 +858,15 @@ def render_simulacao_modelos() -> None:
          "color": "amber"},
     ])
 
-    # Build display table
-    rows_display = []
+    section_title(f"Resultados da Simulação — {len(dry_run)} empresas", icon="")
+
+    rows_html = ""
     for row in dry_run:
-        ticker = row.get("ticker", "—")
-        fv_raw = row.get("fair_value", "")
+        ticker    = row.get("ticker", "—")
+        fv_raw    = row.get("fair_value", "")
         upside_raw = row.get("upside_pct", "")
-        method = row.get("method_used", "—").replace("_", "/")
-        flags  = row.get("quality_flags", "")
+        method    = row.get("method_used", "—").replace("_", "/")
+        flags     = row.get("quality_flags", "")
 
         try:
             fv_str = _fmt_brl(float(fv_raw))
@@ -490,47 +876,146 @@ def render_simulacao_modelos() -> None:
         try:
             upside_f = float(upside_raw)
             upside_str = f"{upside_f:+.1f}%"
+            if upside_f > 20:
+                upside_color = "var(--pos-500)"
+            elif upside_f > 0:
+                upside_color = "var(--warn-500)"
+            else:
+                upside_color = "var(--neg-500)"
         except (TypeError, ValueError):
             upside_str = "—"
+            upside_color = "var(--fg-5)"
 
-        rows_display.append({
-            "Empresa":          ticker,
-            "Valor Justo (sim.)": fv_str,
-            "Upside":           upside_str,
-            "Método":           method,
-            "Alertas":          flags if flags else "—",
-        })
+        flag_html = (
+            _chip_html(flags, "degraded") if flags
+            else '<span style="color:var(--fg-6);">—</span>'
+        )
 
-    section_title("Resultados da Simulação — 18 empresas", icon="")
-    df_dr = pd.DataFrame(rows_display)
-    st.dataframe(df_dr, use_container_width=True, hide_index=True)
+        rows_html += f"""
+        <tr>
+          <td style="font-family:var(--font-display);font-weight:900;
+                     color:var(--fg-1);">{ticker}</td>
+          <td style="font-family:var(--font-mono);font-weight:700;
+                     color:var(--fg-2);">{fv_str}</td>
+          <td style="font-family:var(--font-mono);font-weight:900;
+                     color:{upside_color};">{upside_str}</td>
+          <td>{_method_badge(method)}</td>
+          <td>{flag_html}</td>
+        </tr>
+        """
+
+    st.markdown(f"""
+    <div class="tbl-wrap">
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th>Empresa</th><th>Valor Justo (sim.)</th><th>Upside</th>
+          <th>Método</th><th>Alertas</th>
+        </tr>
+      </thead>
+      <tbody>{rows_html}</tbody>
+    </table>
+    </div>
+    """, unsafe_allow_html=True)
 
     # PCAR3 special note
     pcar_row = next((r for r in dry_run if r.get("ticker") == "PCAR3"), None)
     if pcar_row:
+        pcar_fv = _fmt_brl(pcar_row.get("fair_value", "—"))
         st.markdown(f"""
         <div style="background:var(--bg-3);border:1px solid var(--warn-500);
              border-radius:12px;padding:14px 18px;margin-top:14px;">
             <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.8px;
-                 color:var(--warn-500);font-weight:700;margin-bottom:6px;">PCAR3 — Situação Especial</div>
+                 color:var(--warn-500);font-weight:700;margin-bottom:6px;">
+                 PCAR3 — Situação Especial</div>
             <div style="font-size:.78rem;color:var(--fg-3);line-height:1.5;">
                 Empresa em dificuldade operacional — DCF bloqueado (FCF indefinido).
-                Método EV/EBITDA único aplicável. Valor simulado: {_fmt_brl(pcar_row.get('fair_value', '—'))}.
-                Upside calculado sobre preço de mercado na data da simulação — tratar com cautela
-                dado o estado financeiro da empresa.
+                Método EV/EBITDA único aplicável. Valor simulado: <strong>{pcar_fv}</strong>.
+                Upside calculado sobre preço de mercado na data da simulação —
+                tratar com cautela dado o estado financeiro da empresa.
             </div>
         </div>
         """, unsafe_allow_html=True)
 
     st.markdown(
         '<div style="font-size:.6rem;color:var(--fg-6);font-family:var(--font-mono);'
-        'margin-top:14px;">Valores validados em M017-S05. '
-        'M018 persiste com write=True após validação cruzada.</div>',
+        'margin-top:14px;">Valores validados em dry-run. '
+        'Próxima etapa persiste com write=True após validação cruzada.</div>',
         unsafe_allow_html=True,
     )
 
 
-# ── Tab 4: Qualidade Fundamental ────────────────────────────────────────────────
+# ── Tab 4: Preços Justos Preliminares (M018-S04) ────────────────────────────────
+
+def render_preliminares() -> None:
+    """Tab — Preços Justos Preliminares resultantes do M018-S04.
+
+    Regras de exibição:
+      - Leitura somente (SELECT) de valuation_results
+      - Nenhum dado é calculado, gravado ou alterado
+      - asset_intelligence_snapshots não é acessada
+      - Todos os termos internos são traduzidos para labels de produto
+    """
+    prelim_data = _load_preliminary_results()
+
+    # ── Disclaimer visível ────────────────────────────────────────────────────
+    st.markdown(alert_block(
+        "warn",
+        "Valores Preliminares — Não Aprovados",
+        "Os valores preliminares são resultados do motor quantitativo e ainda não "
+        "representam recomendação final. Nenhum valor foi promovido para aprovado. "
+        "Nenhum dado foi alterado.",
+    ), unsafe_allow_html=True)
+
+    if not prelim_data:
+        empty_state(
+            "Nenhum valor preliminar encontrado em valuation_results.\n"
+            "Execute M018-S04 para gerar os valores preliminares.",
+            icon="",
+        )
+        return
+
+    passed  = [r for r in prelim_data if r.get("sanity_check_passed") == 1]
+    pending = [r for r in prelim_data if r.get("sanity_check_passed") != 1]
+
+    kpi_strip([
+        {"label": "Valor preliminar",  "value": str(len(prelim_data)), "color": "violet"},
+        {"label": "Passou na checagem","value": str(len(passed)),      "color": "green"},
+        {"label": "Requer validação",  "value": str(len(pending)),     "color": "amber"},
+        {"label": "Aprovado",          "value": "0",                   "color": "red"},
+    ])
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # ── Seção 1: Passou na checagem ───────────────────────────────────────────
+    section_title(f"Passou na Checagem — {len(passed)} valores", icon="✅")
+    st.caption(
+        "Valores preliminares que passaram na checagem automática · "
+        "Label do produto: Preliminar — passou na checagem · "
+        "Ainda não aprovado para uso"
+    )
+    _render_prelim_table(passed)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # ── Seção 2: Requer validação ─────────────────────────────────────────────
+    section_title(f"Requer Validação — {len(pending)} valores", icon="⚠️")
+    st.caption(
+        "Valores preliminares que requerem revisão adicional antes do uso · "
+        "Label do produto: Preliminar — requer validação"
+    )
+    _render_prelim_table(pending)
+
+    st.markdown(
+        '<div style="font-size:.6rem;color:var(--fg-6);font-family:monospace;margin-top:14px;">'
+        'Fonte: valuation_results · source=M018_CONTROLLED · status=preliminary · '
+        'approved_fair_value=NULL (nenhum aprovado) · '
+        'asset_intelligence_snapshots não modificada</div>',
+        unsafe_allow_html=True,
+    )
+
+
+# ── Tab 5: Qualidade Fundamental ────────────────────────────────────────────────
 
 def render_qualidade_fundamental() -> None:
     fq_rows = _load_fundamental_quality_rows()
@@ -580,7 +1065,7 @@ def render_qualidade_fundamental() -> None:
     avg_fq = sum(r.get("fundamental_quality_score") or 0 for r in fq_rows) / total if total else 0
 
     kpi_strip([
-        {"label": "Empresas com FQ",     "value": str(total),    "color": "cyan"},
+        {"label": "Empresas com FQ",     "value": str(total),      "color": "cyan"},
         {"label": "Score médio FQ",      "value": f"{avg_fq:.0f}", "color": "violet"},
     ])
 
@@ -597,7 +1082,6 @@ def render_qualidade_fundamental() -> None:
         created = str(row.get("created_at", ""))[:10] if row.get("created_at") else "—"
 
         fq_val = fq if fq is not None else 0.0
-        fq_color = "var(--pos-500)" if fq_val >= 70 else "var(--warn-500)" if fq_val >= 40 else "var(--neg-500)"
 
         with st.expander(f"{ticker}  —  FQ {_fmt_float(fq, 0)}  ·  {created}", expanded=False):
             for label, score in [
@@ -638,32 +1122,30 @@ def render_contexto_macro() -> None:
         ), unsafe_allow_html=True)
         return
 
-    # KPI strip for macro
     selic_val = selic[0].get("value") if selic else None
     ptax_val  = ptax[0].get("value")  if ptax  else None
     ipca_val  = ipca[0].get("value")  if ipca  else None
 
     strip_items = []
     if selic_val is not None:
-        strip_items.append({"label": "Selic",    "value": f"{selic_val:.2f}%", "color": "amber"})
+        strip_items.append({"label": "Selic",    "value": f"{selic_val:.2f}%",  "color": "amber"})
     if ptax_val is not None:
         strip_items.append({"label": "PTAX",     "value": f"R$ {ptax_val:.4f}", "color": "violet"})
     if ipca_val is not None:
-        strip_items.append({"label": "IPCA 12m", "value": f"{ipca_val:.2f}%", "color": "red"})
+        strip_items.append({"label": "IPCA 12m", "value": f"{ipca_val:.2f}%",   "color": "red"})
 
     if strip_items:
         kpi_strip(strip_items)
 
-    # Regime de mercado
     if regime:
         r = regime[0]
         section_title("Regime de Mercado", icon="")
         df_regime = pd.DataFrame([{
-            "Data":        (r.get("date") or "")[:10],
-            "Regime":      r.get("primary") or "—",
-            "Tendência":   r.get("trend") or "—",
+            "Data":         (r.get("date") or "")[:10],
+            "Regime":       r.get("primary") or "—",
+            "Tendência":    r.get("trend") or "—",
             "Volatilidade": r.get("volatility") or "—",
-            "Liquidez":    r.get("liquidity") or "—",
+            "Liquidez":     r.get("liquidity") or "—",
         }])
         st.dataframe(df_regime, use_container_width=True, hide_index=True)
     else:
@@ -673,7 +1155,6 @@ def render_contexto_macro() -> None:
             "market_regime_daily está vazio ou o pipeline de regime ainda não executou.",
         ), unsafe_allow_html=True)
 
-    # Série histórica Selic
     if selic:
         section_title("Série Selic (últimos 30 registros)", icon="")
         df_selic = pd.DataFrame([
@@ -682,7 +1163,6 @@ def render_contexto_macro() -> None:
         ])
         st.dataframe(df_selic, use_container_width=True, hide_index=True)
 
-    # PTAX
     if ptax:
         col1, col2 = st.columns(2)
         with col1:
@@ -727,6 +1207,7 @@ def main() -> None:
         "Visão Geral",
         "Base Fundamentalista",
         "Simulação dos Modelos",
+        "Preços Justos Preliminares",
         "Qualidade Fundamental",
         "Contexto Macro",
     ])
@@ -741,9 +1222,12 @@ def main() -> None:
         render_simulacao_modelos()
 
     with tabs[3]:
-        render_qualidade_fundamental()
+        render_preliminares()
 
     with tabs[4]:
+        render_qualidade_fundamental()
+
+    with tabs[5]:
         render_contexto_macro()
 
 
