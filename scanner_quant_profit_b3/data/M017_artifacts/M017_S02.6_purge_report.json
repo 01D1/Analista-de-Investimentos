@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-05-26T02:20:45.976614+00:00",
+  "mode": "LIVE",
+  "tickers": [
+    "EQTL3",
+    "VAMO3"
+  ],
+  "snapshot_before": {
+    "total_rows_before": 1123202,
+    "EQTL3": {
+      "stmt_rows": 0,
+      "cvm_code_old": "N/A",
+      "year_min": null,
+      "year_max": null,
+      "period_types": "N/A",
+      "checkpoint_rows": 0
+    },
+    "VAMO3": {
+      "stmt_rows": 0,
+      "cvm_code_old": "N/A",
+      "year_min": null,
+      "year_max": null,
+      "period_types": "N/A",
+      "checkpoint_rows": 0
+    }
+  },
+  "deleted": {
+    "stmt_EQTL3": 0,
+    "cp_EQTL3": 0,
+    "stmt_VAMO3": 0,
+    "cp_VAMO3": 0
+  },
+  "reingest_result": {
+    "EQTL3": {
+      "cvm_code": "020010",
+      "rows_inserted": 0
+    },
+    "VAMO3": {
+      "cvm_code": "024716",
+      "rows_inserted": 0
+    }
+  },
+  "validation": {
+    "total_rows_before": 1123202,
+    "total_rows_after": 1123202,
+    "net_change": 0,
+    "EQTL3": {
+      "stmt_rows": 0,
+      "cvm_code_new": "N/A",
+      "year_min": null,
+      "year_max": null,
+      "distinct_years": 0,
+      "period_types": "N/A",
+      "checkpoint_rows": 0,
+      "sample_account_1": "N/A"
+    },
+    "VAMO3": {
+      "stmt_rows": 0,
+      "cvm_code_new": "N/A",
+      "year_min": null,
+      "year_max": null,
+      "distinct_years": 0,
+      "period_types": "N/A",
+      "checkpoint_rows": 0,
+      "sample_account_1": "N/A"
+    }
+  }
+}

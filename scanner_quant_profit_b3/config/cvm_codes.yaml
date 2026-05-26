@@ -1,0 +1,134 @@
+# Mapeamento ticker → código CVM (CD_CVM)
+# Fonte: dados.cvm.gov.br/dados/CIA_ABERTA/CAD/DADOS/cad_cia_aberta.csv
+# Para descobrir código de nova empresa:
+#   python3 -c "from src.utils.cvm_lookup import find_cvm_code; find_cvm_code('NOME')"
+
+cvm_codes:
+  # ── Bancos / Financeiros ──────────────────────────────────────────────────
+  BBAS3:  "001023"   # Banco do Brasil S.A.
+  ITUB4:  "019348"   # Itaú Unibanco Holding S.A.
+  BBDC4:  "000906"   # Banco Bradesco S.A.
+  BBDC3:  "000906"   # Banco Bradesco S.A. (ON)
+  SANB11: "020532"   # Banco Santander (Brasil) S.A.
+  BPAC11: "022616"   # Banco BTG Pactual S.A.
+  BRSR6:  "001210"   # Banrisul
+  ABCB4:  "020958"   # Banco ABC Brasil S.A.
+  BMGB4:  "024600"   # Banco BMG S/A
+  BPAN4:  "021199"   # Banco Pan S.A.
+  PINE4:  "020567"   # Banco Pine S.A.
+  INTR4:  "080217"   # Inter & Co, Inc.
+
+  # ── Holdings Financeiras ──────────────────────────────────────────────────
+  ITSA4:  "007617"   # Itaúsa S.A.
+  BBSE3:  "023159"   # BB Seguridade Participações S.A.
+  BRAP4:  "018724"   # Bradespar S/A
+  IRBR3:  "024180"   # IRB - Brasil Resseguros S.A.
+  PSSA3:  "016659"   # Porto Seguro S.A.
+  CXSE3:  "023795"   # Caixa Seguridade Participações S.A.
+  B3SA3:  "021610"   # B3 S.A. - Brasil, Bolsa, Balcão
+
+  # ── Petróleo & Gás ────────────────────────────────────────────────────────
+  PETR4:  "009512"   # Petróleo Brasileiro S.A. - Petrobras
+  PETR3:  "009512"   # Petróleo Brasileiro S.A. - Petrobras (ON)
+  PRIO3:  "022187"   # PetroRio S.A.
+  BRAV3:  "025291"   # Brava Energia S.A.
+  RECV3:  "025780"   # Petrorecôncavo S.A.
+  VBBR3:  "024295"   # Vibra Energia S/A
+  RAIZ4:  "023230"   # Raizen Energia S.A.
+  ENEV3:  "021237"   # Eneva S.A.
+  CSAN3:  "019836"   # Cosan S.A.
+
+  # ── Mineração / Siderurgia ────────────────────────────────────────────────
+  VALE3:  "004170"   # Vale S.A.
+  CMIN3:  "025585"   # CSN Mineração S.A.
+  GGBR4:  "003980"   # Gerdau S.A.
+  GOAU4:  "008656"   # Metalúrgica Gerdau S.A.
+  CSNA3:  "004030"   # Companhia Siderúrgica Nacional
+  USIM5:  "014320"   # Usinas Siderúrgicas de Minas Gerais - Usiminas
+  BRKM5:  "004820"   # Braskem S.A.
+
+  # ── Utilities / Energia Elétrica ──────────────────────────────────────────
+  AXIA3:  "002437"   # Axia Energia S.A. (ex-Eletrobras) - ON
+  AXIA6:  "002437"   # Axia Energia S.A. (ex-Eletrobras) - PNB
+  CMIG4:  "002453"   # CIA Energética de Minas Gerais - CEMIG
+  CPFE3:  "018660"   # CPFL Energia S.A.
+  CPLE6:  "014311"   # Companhia Paranaense de Energia - Copel
+  EGIE3:  "017329"   # Engie Brasil Energia S.A.
+  ENGI11: "015253"   # Energisa S.A.
+  EQTL3:  "020010"   # Equatorial S.A. (nome CVM) — CD_CVM corrigido em M017-S02.5
+                     # ATENÇÃO: 027553 era mapeamento ERRADO (Engelhart CTP Brasil S.A.)
+  AURE3:  "026620"   # Auren Energia S.A.
+  ISAE4:  "018376"   # ISA Energia Brasil S.A.
+  TAEE11: "020257"   # Transmissora Aliança de Energia Elétrica - TAESA
+  SBSP3:  "014443"   # Cia Saneamento Básico do Estado de São Paulo - Sabesp
+
+  # ── Telecom ───────────────────────────────────────────────────────────────
+  VIVT3:  "017671"   # Telefônica Brasil S.A.
+  TIMS3:  "024929"   # TIM S.A.
+
+  # ── Industrial / Conglomerados ────────────────────────────────────────────
+  WEGE3:  "005410"   # WEG S.A.
+  EMBR3:  "020087"   # Embraer S.A.
+  POMO4:  "008451"   # Marcopolo S.A.
+  STBP3:  "017892"   # Santos Brasil Participações S.A.
+  CCRO3:  "018821"   # CCR S.A. (agora Motiva Infraestrutura de Mobilidade S.A.)
+  RAIL3:  "017450"   # Rumo S.A.
+  UGPA3:  "018465"   # Ultrapar Participações S.A.
+
+  # ── Papel & Celulose ──────────────────────────────────────────────────────
+  SUZB3:  "013986"   # Suzano S.A.
+  KLBN11: "012653"   # Klabin S.A.
+
+  # ── Alimentos & Bebidas ───────────────────────────────────────────────────
+  ABEV3:  "023264"   # Ambev S.A.
+  JBSS3:  "020575"   # JBS S.A.
+  BRFS3:  "016292"   # BRF S.A.
+  MRFG3:  "020788"   # Marfrig Global Foods S.A.
+  BEEF3:  "020931"   # Minerva S/A
+  SMTO3:  "020516"   # São Martinho S.A.
+  SLCE3:  "020745"   # SLC Agrícola S.A.
+
+  # ── Varejo ────────────────────────────────────────────────────────────────
+  LREN3:  "008133"   # Lojas Renner S.A.
+  MGLU3:  "022470"   # Magazine Luiza S.A.
+  AZZA3:  "022349"   # Azzas 2154 S.A.
+  NTCO3:  "019550"   # Natura Cosméticos S.A.
+  CRFB3:  "024171"   # Atacadão S.A. (Carrefour Brasil)
+  PCAR3:  "014826"   # Companhia Brasileira de Distribuição (GPA)
+  PETZ3:  "025089"   # Petz S.A. [LEGADO — extinto; ver AUAU3] (Pet Center Comércio e Participações S.A.)
+  AUAU3:  null        # União Pet Participações / Grupo Petz-Cobasi — CVM code pending (lookup após confirmação B3)
+  VIVA3:  "024805"   # Vivara Participações S.A.
+  AMOB3:  "027707"   # Automob Participações S.A.
+
+  # ── Saúde ─────────────────────────────────────────────────────────────────
+  RDOR3:  "024821"   # Rede D'Or São Luiz S.A.
+  HAPV3:  "024392"   # Hapvida Participações e Investimentos S.A.
+  FLRY3:  "021881"   # Fleury S.A.
+  HYPE3:  "021431"   # Hypera S/A
+  RADL3:  "005258"   # Raia Drogasil S.A.
+
+  # ── Real Estate / Shopping ────────────────────────────────────────────────
+  MULT3:  "020982"   # Multiplan Empreendimentos Imobiliários S.A.
+  CYRE3:  "014460"   # Cyrela Brazil Realty S.A.
+  MRVE3:  "020915"   # MRV Engenharia e Participações S/A
+  IGTI11: "020494"   # Iguatemi S.A.
+  ALOS3:  "022357"   # Allos S.A.
+
+  # ── Locação / Serviços ────────────────────────────────────────────────────
+  RENT3:  "019739"   # Localiza Rent a Car S.A.
+  VAMO3:  "024716"   # Vamos Locação de Caminhões, Máquinas e Equipamentos S.A. — corrigido M017-S02.5
+                     # ATENÇÃO: 026476 era mapeamento ERRADO (Ammo Varejo S.A.)
+
+  # ── Tecnologia ────────────────────────────────────────────────────────────
+  TOTS3:  "019992"   # TOTVS S.A.
+  LWSA3:  "024910"   # LWSA S/A
+
+  # ── Educação ─────────────────────────────────────────────────────────────
+  COGN3:  "017973"   # Cogna Educação S.A.
+  YDUQ3:  "021016"   # Yduqs Participações S.A.
+
+  # ── Aviação ───────────────────────────────────────────────────────────────
+  AZUL4:  "024112"   # Azul S.A.
+
+  # ── Outros ───────────────────────────────────────────────────────────────
+  CVCB3:  "023310"   # CVC Brasil Operadora e Agência de Viagens S.A.
