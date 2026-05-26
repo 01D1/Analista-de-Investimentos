@@ -45,6 +45,9 @@ ARQUIVO_BANCO       = "banco.db"
 ARQUIVO_FONTES      = "fontes.txt"
 ARQUIVO_LOG         = "news_hunter.log"
 MANTER_DIAS         = 30
+IDADE_MAXIMA_PUBLICACAO_DIAS = int(
+    os.getenv("NEWS_HUNTER_IDADE_MAXIMA_PUBLICACAO_DIAS", "30")
+)
 
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -58,7 +61,7 @@ USER_AGENT = (
 
 # Ative e preencha token + chat_id para habilitar envios
 TELEGRAM_ATIVO   = os.getenv("TELEGRAM_ATIVO", "true").lower() in ("true", "1", "yes")
-TELEGRAM_TOKEN   = os.getenv("TELEGRAM_TOKEN",   "")
+TELEGRAM_TOKEN   = os.getenv("TELEGRAM_TOKEN") or os.getenv("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
 
 # Enviar boletim automaticamente após gerar

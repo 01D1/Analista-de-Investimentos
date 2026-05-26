@@ -147,7 +147,12 @@ def main():
 
         print("🔍 [1/3] Iniciando coleta de notícias...")
         resultado = crawler.ciclo_completo()
-        print(f"✅ Coleta: {resultado['novas']} novas em {resultado['fontes']} fontes.\n")
+        print(
+            f"✅ Coleta: {resultado['novas']} novas em {resultado['fontes']} fontes "
+            f"(sucesso={resultado.get('fontes_sucesso', 0)}, "
+            f"erro={resultado.get('fontes_erro', 0)}, "
+            f"sem atualização={resultado.get('fontes_sem_atualizacao', 0)}).\n"
+        )
 
         print("📋 [2/3] Gerando boletim...")
         caminho_md, caminho_txt = gb.gerar_boletim()
@@ -170,7 +175,12 @@ def main():
         import crawler
         print("🔍 Iniciando coleta de notícias...")
         resultado = crawler.ciclo_completo()
-        print(f"✅ Coleta concluída: {resultado['novas']} novas notícias em {resultado['fontes']} fontes.\n")
+        print(
+            f"✅ Coleta concluída: {resultado['novas']} novas notícias em {resultado['fontes']} fontes "
+            f"(sucesso={resultado.get('fontes_sucesso', 0)}, "
+            f"erro={resultado.get('fontes_erro', 0)}, "
+            f"sem atualização={resultado.get('fontes_sem_atualizacao', 0)}).\n"
+        )
 
     elif args.gerar_boletim:
         import gerar_boletim as gb
@@ -181,7 +191,12 @@ def main():
         import gerar_boletim as gb
         print("🔍 Iniciando coleta...")
         resultado = crawler.ciclo_completo()
-        print(f"✅ Coleta: {resultado['novas']} novas em {resultado['fontes']} fontes.\n")
+        print(
+            f"✅ Coleta: {resultado['novas']} novas em {resultado['fontes']} fontes "
+            f"(sucesso={resultado.get('fontes_sucesso', 0)}, "
+            f"erro={resultado.get('fontes_erro', 0)}, "
+            f"sem atualização={resultado.get('fontes_sem_atualizacao', 0)}).\n"
+        )
         print("📋 Gerando boletim...")
         gb.gerar_boletim()
 

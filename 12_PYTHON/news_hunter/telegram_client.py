@@ -15,11 +15,26 @@ Uso:
 """
 
 import logging
+import importlib.util
+from pathlib import Path
 import time
 
 import requests
 
-import config
+import config as _ambient_config
+
+
+def _load_local_config():
+    local_path = Path(__file__).with_name("config.py")
+    if Path(getattr(_ambient_config, "__file__", "")).resolve() == local_path.resolve():
+        return _ambient_config
+    spec = importlib.util.spec_from_file_location("news_hunter_local_config", local_path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+config = _load_local_config()
 
 logger = logging.getLogger("news_hunter.telegram")
 
