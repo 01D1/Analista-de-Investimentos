@@ -143,6 +143,20 @@ from src.valuation.models.retail_model import (
     save_retail_valuation_result,
 )
 
+# Financial Inputs Bridge (M017-S05)
+from src.valuation.financial_inputs_bridge import (
+    load_financial_inputs_from_store,
+    build_commodity_inputs_from_store,
+    build_utility_inputs_from_store,
+    build_retail_inputs_from_store,
+    build_industry_inputs_from_store,
+    run_dry_run_all,
+    TICKER_SECTOR_MAP,
+    TICKER_SUBSECTOR_MAP,
+    WACC_DEFAULTS,
+    M017_DRY_RUN_TICKERS,
+)
+
 # Industry Valuation Model (M016-S04)
 from src.valuation.models.industry_model import (
     IndustryValuationInputs,
@@ -250,6 +264,17 @@ __all__ = [
     "calculate_retail_valuation",
     "diagnose_retail_tickers",
     "save_retail_valuation_result",
+    # Financial Inputs Bridge (M017-S05)
+    "load_financial_inputs_from_store",
+    "build_commodity_inputs_from_store",
+    "build_utility_inputs_from_store",
+    "build_retail_inputs_from_store",
+    "build_industry_inputs_from_store",
+    "run_dry_run_all",
+    "TICKER_SECTOR_MAP",
+    "TICKER_SUBSECTOR_MAP",
+    "WACC_DEFAULTS",
+    "M017_DRY_RUN_TICKERS",
     # Industry Valuation Model (M016-S04)
     "IndustryValuationInputs",
     "IndustryValuationResult",
