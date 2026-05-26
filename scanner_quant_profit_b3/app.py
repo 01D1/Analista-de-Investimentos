@@ -62,6 +62,12 @@ _PAGES = [
     ),
 
     st.Page(
+        "pages/valuation_coverage.py",
+        title="Cobertura M017",
+        icon="🗺",
+    ),
+
+    st.Page(
         "pages/inteligencia_macro.py",
         title="Macro Motor",
         icon="🌐",

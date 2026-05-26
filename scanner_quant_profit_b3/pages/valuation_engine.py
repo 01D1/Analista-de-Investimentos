@@ -204,9 +204,117 @@ def _load_fundamental_quality_rows() -> list[dict]:
         return []
 
 
+# ── M017: resolve ingestion.db + dry-run matrix ──────────────────────────────
+
+_INGESTION_DB_ENV = "FINANCIAL_INPUTS_DB_PATH"
+
+# 9 PRESERVE_EXISTING fair values — auditados M015/M016, não recalcular sem force_recalc
+_PRESERVE_EXISTING: dict[str, float] = {
+    "ABCB4": 210.50, "BBAS3": 64.84, "BBDC4": 34.63,
+    "BPAC11": 8.46, "BRSR6": 4.66, "ITUB4": 73.69,
+    "SANB11": 86.79, "PETR4": 81.12, "WEGE3": 40.16,
+}
+
+# M017 universe — 32 tickers com model_status definido
+_M017_UNIVERSE: list[dict] = [
+    # PRESERVE_EXISTING — fair_value auditável
+    {"ticker": "ABCB4",  "model_status": "PRESERVE_EXISTING",    "model": "BANK",      "method_suggested": "P/BV",     "block_reason": ""},
+    {"ticker": "BBAS3",  "model_status": "PRESERVE_EXISTING",    "model": "BANK",      "method_suggested": "P/BV",     "block_reason": ""},
+    {"ticker": "BBDC4",  "model_status": "PRESERVE_EXISTING",    "model": "BANK",      "method_suggested": "P/BV",     "block_reason": ""},
+    {"ticker": "BPAC11", "model_status": "PRESERVE_EXISTING",    "model": "BANK",      "method_suggested": "P/BV",     "block_reason": ""},
+    {"ticker": "BRSR6",  "model_status": "PRESERVE_EXISTING",    "model": "BANK",      "method_suggested": "P/BV",     "block_reason": ""},
+    {"ticker": "ITUB4",  "model_status": "PRESERVE_EXISTING",    "model": "BANK",      "method_suggested": "P/BV",     "block_reason": ""},
+    {"ticker": "SANB11", "model_status": "PRESERVE_EXISTING",    "model": "BANK",      "method_suggested": "P/BV",     "block_reason": ""},
+    {"ticker": "PETR4",  "model_status": "PRESERVE_EXISTING",    "model": "COMMODITY", "method_suggested": "DCF/FCFF", "block_reason": ""},
+    {"ticker": "WEGE3",  "model_status": "PRESERVE_EXISTING",    "model": "INDUSTRY",  "method_suggested": "DCF/FCFF", "block_reason": ""},
+    # READY_TO_CALCULATE — inputs completos
+    {"ticker": "EGIE3",  "model_status": "READY_TO_CALCULATE",   "model": "UTILITY",   "method_suggested": "DCF/FCFF", "block_reason": ""},
+    {"ticker": "SBSP3",  "model_status": "READY_TO_CALCULATE",   "model": "UTILITY",   "method_suggested": "EV/EBITDA","block_reason": "FCF_NEGATIVE_EXPECTED"},
+    {"ticker": "TAEE11", "model_status": "READY_TO_CALCULATE",   "model": "UTILITY",   "method_suggested": "DCF/FCFF", "block_reason": ""},
+    {"ticker": "AZZA3",  "model_status": "READY_TO_CALCULATE",   "model": "RETAIL",    "method_suggested": "DCF/FCFF", "block_reason": ""},
+    {"ticker": "LREN3",  "model_status": "READY_TO_CALCULATE",   "model": "RETAIL",    "method_suggested": "DCF/FCFF", "block_reason": ""},
+    {"ticker": "MGLU3",  "model_status": "READY_TO_CALCULATE",   "model": "RETAIL",    "method_suggested": "EV/EBITDA","block_reason": "FCF_REVIEW"},
+    {"ticker": "VIVA3",  "model_status": "READY_TO_CALCULATE",   "model": "RETAIL",    "method_suggested": "DCF/FCFF", "block_reason": ""},
+    {"ticker": "PRIO3",  "model_status": "READY_TO_CALCULATE",   "model": "COMMODITY", "method_suggested": "DCF/FCFF", "block_reason": ""},
+    {"ticker": "RECV3",  "model_status": "READY_TO_CALCULATE",   "model": "COMMODITY", "method_suggested": "EV/EBITDA","block_reason": "FCF_NEGATIVE_EXPECTED"},
+    {"ticker": "FLRY3",  "model_status": "READY_TO_CALCULATE",   "model": "INDUSTRY",  "method_suggested": "DCF/FCFF", "block_reason": ""},
+    {"ticker": "HYPE3",  "model_status": "READY_TO_CALCULATE",   "model": "INDUSTRY",  "method_suggested": "DCF/FCFF", "block_reason": ""},
+    {"ticker": "KLBN11", "model_status": "READY_TO_CALCULATE",   "model": "INDUSTRY",  "method_suggested": "DCF/FCFF", "block_reason": ""},
+    {"ticker": "RADL3",  "model_status": "READY_TO_CALCULATE",   "model": "INDUSTRY",  "method_suggested": "DCF/FCFF", "block_reason": ""},
+    {"ticker": "RAIL3",  "model_status": "READY_TO_CALCULATE",   "model": "INDUSTRY",  "method_suggested": "EV/EBITDA","block_reason": ""},
+    {"ticker": "RENT3",  "model_status": "READY_TO_CALCULATE",   "model": "INDUSTRY",  "method_suggested": "EV/EBITDA","block_reason": ""},
+    {"ticker": "SUZB3",  "model_status": "READY_TO_CALCULATE",   "model": "INDUSTRY",  "method_suggested": "DCF/FCFF", "block_reason": ""},
+    {"ticker": "VAMO3",  "model_status": "READY_TO_CALCULATE",   "model": "INDUSTRY",  "method_suggested": "EV/EBITDA","block_reason": "FCF_NEGATIVE_EXPECTED"},
+    # PARTIAL_INPUTS
+    {"ticker": "PCAR3",  "model_status": "PARTIAL_INPUTS",        "model": "RETAIL",    "method_suggested": "EV/EBITDA","block_reason": "DISTRESSED — DCF bloqueado"},
+    # TECH_FALLBACK
+    {"ticker": "VIVT3",  "model_status": "TECH_FALLBACK",         "model": "INDUSTRY",  "method_suggested": "EV/EBITDA","block_reason": "CVM inputs pendentes"},
+    # NEEDS_DATA / NEEDS_RI_DOCS
+    {"ticker": "VALE3",  "model_status": "NEEDS_DATA",            "model": "COMMODITY", "method_suggested": "DCF/FCFF", "block_reason": "ri_docs=0 — aguarda CVM ingestion"},
+    {"ticker": "AUAU3",  "model_status": "NEEDS_RI_DOCS",         "model": "—",         "method_suggested": "—",        "block_reason": "CNPJ nulo — sem CVM data"},
+    {"ticker": "NTCO3",  "model_status": "NEEDS_RI_DOCS",         "model": "RETAIL",    "method_suggested": "DCF/FCFF", "block_reason": "ri_docs insuficientes"},
+    # LEGACY_TICKER
+    {"ticker": "PETZ3",  "model_status": "LEGACY_TICKER",         "model": "RETAIL",    "method_suggested": "—",        "block_reason": "PETZ3 encerrado — permanentemente bloqueado"},
+]
+
+
+def _resolve_ingestion_db() -> Path | None:
+    """Resolve ingestion.db: env var → sibling 12_PYTHON → CWD fallback."""
+    import os
+    env = os.environ.get(_INGESTION_DB_ENV)
+    if env:
+        p = Path(env)
+        if p.exists():
+            return p
+    # SCANNER_ROOT.parent == "Analista de Investimentos/"
+    candidate = SCANNER_ROOT.parent / "12_PYTHON" / "data" / "ingestion.db"
+    if candidate.exists():
+        return candidate
+    cwd_fallback = SCANNER_ROOT / "data" / "ingestion.db"
+    if cwd_fallback.exists():
+        return cwd_fallback
+    return None
+
+
+def _load_dry_run_matrix() -> list[dict]:
+    """Load M017-S05 dry-run matrix CSV (write=False results)."""
+    matrix_path = SCANNER_ROOT.parent / "12_PYTHON" / "docs" / "M017_S05_DRY_RUN_MATRIX.csv"
+    if not matrix_path.exists():
+        return []
+    try:
+        import csv
+        rows = []
+        with open(matrix_path, newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                rows.append(row)
+        return rows
+    except Exception:
+        return []
+
+
+def _load_inputs_kpis() -> dict:
+    """KPIs de valuation_financial_inputs (ingestion.db)."""
+    db = _resolve_ingestion_db()
+    if db is None:
+        return {}
+    try:
+        conn = sqlite3.connect(str(db))
+        total   = conn.execute("SELECT COUNT(*) FROM valuation_financial_inputs").fetchone()[0]
+        tickers = conn.execute("SELECT COUNT(DISTINCT ticker) FROM valuation_financial_inputs").fetchone()[0]
+        metrics = conn.execute("SELECT COUNT(DISTINCT metric_name) FROM valuation_financial_inputs").fetchone()[0]
+        src_rows = conn.execute(
+            "SELECT source_type, COUNT(*) FROM valuation_financial_inputs GROUP BY source_type"
+        ).fetchall()
+        conn.close()
+        return {"total": total, "tickers": tickers, "metrics": metrics,
+                "sources": {r[0]: r[1] for r in src_rows}}
+    except Exception:
+        return {}
+
+
 # ── Tab definitions ───────────────────────────────────────────────────────────
 
-_TABS = ["Portfolio Valuation", "Fundamental Quality", "Macro Context", "Ticker Detail"]
+_TABS = ["Portfolio Valuation", "Fundamental Quality", "Macro Context", "Ticker Detail", "M017 Inputs"]
 
 
 # ── Tab: Portfolio Valuation ─────────────────────────────────────────────────
@@ -756,6 +864,180 @@ def render_ticker_detail_tab() -> None:
     """, unsafe_allow_html=True)
 
 
+# ── Tab: M017 Inputs ─────────────────────────────────────────────────────────
+
+_STATUS_COLOR = {
+    "PRESERVE_EXISTING":    "var(--pos-500)",
+    "READY_TO_CALCULATE":   "var(--brand-500)",
+    "PARTIAL_INPUTS":       "var(--warn-500)",
+    "TECH_FALLBACK":        "var(--warn-500)",
+    "NEEDS_DATA":           "var(--neg-500)",
+    "NEEDS_RI_DOCS":        "var(--neg-500)",
+    "LEGACY_TICKER":        "var(--fg-5)",
+}
+
+def render_m017_inputs_tab() -> None:
+    """M017: valuation_financial_inputs + dry-run matrix + universe status."""
+    kpis = _load_inputs_kpis()
+    dry_run = _load_dry_run_matrix()
+
+    # ── KPI strip ──────────────────────────────────────────────────────────
+    ready_count   = sum(1 for r in _M017_UNIVERSE if r["model_status"] == "READY_TO_CALCULATE")
+    preserve_cnt  = sum(1 for r in _M017_UNIVERSE if r["model_status"] == "PRESERVE_EXISTING")
+    partial_cnt   = sum(1 for r in _M017_UNIVERSE if r["model_status"] == "PARTIAL_INPUTS")
+
+    kpi_strip([
+        {"label": "valuation_financial_inputs", "value": f"{kpis.get('total', '—'):,}" if kpis else "—",  "color": "cyan"},
+        {"label": "Tickers CVM/DFP/ITR",        "value": str(kpis.get("tickers", "—")) if kpis else "—", "color": "cyan"},
+        {"label": "PRESERVE_EXISTING",          "value": str(preserve_cnt),                               "color": "green"},
+        {"label": "READY_TO_CALCULATE",         "value": str(ready_count),                                "color": "cyan"},
+        {"label": "PARTIAL_INPUTS",             "value": str(partial_cnt),                                "color": "amber"},
+        {"label": "Dry-run OK (write=False)",   "value": str(len(dry_run)),                               "color": "green"},
+    ])
+
+    # ── Fonte de dados ────────────────────────────────────────────────────
+    if kpis:
+        sources = kpis.get("sources", {})
+        cvm_cnt = sources.get("CVM_CSV", 0)
+        b3_cnt  = sources.get("B3_MARKET_DATA", 0)
+        st.markdown(
+            f'<div style="font-size:.68rem; color:var(--fg-5); font-family:var(--font-mono); '
+            f'margin-bottom:14px; padding: 6px 10px; background:var(--bg-2); border-radius:8px;">'
+            f'Fonte: ingestion.db · CVM_CSV={cvm_cnt:,} · B3_MARKET_DATA={b3_cnt} · '
+            f'{kpis.get("metrics","?")} métricas · M017-S03/S04 (2026-05-26)</div>',
+            unsafe_allow_html=True,
+        )
+    else:
+        st.markdown(
+            '<div style="font-size:.68rem; color:var(--neg-500); font-family:var(--font-mono); '
+            'margin-bottom:14px; padding:6px 10px; background:var(--bg-2); border-radius:8px;">'
+            'ingestion.db não encontrada — defina FINANCIAL_INPUTS_DB_PATH ou verifique 12_PYTHON/data/</div>',
+            unsafe_allow_html=True,
+        )
+
+    # ── 9 Fair Values Preservados ─────────────────────────────────────────
+    section_title("9 Fair Values Preservados — M015/M016", icon="🔒")
+    cols = st.columns(3)
+    for idx, (ticker, fv) in enumerate(_PRESERVE_EXISTING.items()):
+        with cols[idx % 3]:
+            st.markdown(f"""
+            <div style="background:var(--bg-3); border:1px solid var(--border-1);
+                 border-radius:12px; padding:12px 14px; margin-bottom:10px; text-align:center;">
+                <div style="font-family:var(--font-display); font-size:1.05rem; font-weight:900;
+                     color:var(--fg-1);">{ticker}</div>
+                <div style="font-family:var(--font-mono); font-size:1.2rem; font-weight:700;
+                     color:var(--pos-500); margin:4px 0;">R$ {fv:.2f}</div>
+                <div style="font-size:.58rem; color:var(--fg-6); text-transform:uppercase;
+                     letter-spacing:.4px;">PRESERVE_EXISTING</div>
+            </div>
+            """, unsafe_allow_html=True)
+
+    # ── M017 Universe (32 tickers) ────────────────────────────────────────
+    section_title("Universo M017 — 32 Tickers", icon="🗺")
+
+    for row in _M017_UNIVERSE:
+        status  = row["model_status"]
+        color   = _STATUS_COLOR.get(status, "var(--fg-4)")
+        method  = row["method_suggested"]
+        model   = row["model"]
+        block   = row["block_reason"]
+        ticker  = row["ticker"]
+
+        st.markdown(f"""
+        <div style="background:var(--bg-3); border:1px solid var(--border-1);
+             border-radius:10px; padding:10px 14px; margin-bottom:6px;
+             display:flex; justify-content:space-between; align-items:center; gap:10px;">
+            <div style="font-family:var(--font-display); font-size:1rem; font-weight:900;
+                 color:var(--fg-1); min-width:70px;">{ticker}</div>
+            <div style="font-size:.6rem; font-family:var(--font-mono); font-weight:700;
+                 color:{color}; min-width:170px;">{status}</div>
+            <div style="font-size:.62rem; color:var(--fg-4); min-width:80px;">{model}</div>
+            <div style="font-size:.62rem; color:var(--fg-4); min-width:90px;">{method}</div>
+            <div style="font-size:.6rem; color:var(--fg-5); flex:1; text-align:right;">
+                {block if block else "—"}
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # ── Dry-run Matrix — 18 tickers (write=False) ─────────────────────────
+    if dry_run:
+        section_title("Dry-Run M017-S05 — 18 Tickers (write=False)", icon="🧪")
+
+        st.markdown(
+            '<div style="font-size:.65rem; color:var(--fg-5); font-family:var(--font-mono); '
+            'margin-bottom:10px;">Todos os fair_values abaixo foram calculados com write=False. '
+            'Nenhum valor foi gravado. M018 persiste com write=True após validação.</div>',
+            unsafe_allow_html=True,
+        )
+
+        for row in dry_run:
+            ticker   = row.get("ticker", "—")
+            fv       = row.get("fair_value", "—")
+            method   = row.get("method_used", "—")
+            upside   = row.get("upside_pct", "")
+            flags    = row.get("quality_flags", "")
+            status   = row.get("status", "")
+
+            try:
+                upside_f = float(upside)
+                upside_str  = f"{upside_f:+.1f}%"
+                upside_color = "var(--pos-500)" if upside_f > 0 else "var(--neg-500)"
+            except (ValueError, TypeError):
+                upside_str = "—"
+                upside_color = "var(--fg-5)"
+
+            flag_html = ""
+            if flags:
+                for flag in flags.split(","):
+                    flag = flag.strip()
+                    if flag:
+                        fc = "var(--warn-500)" if flag != "DISTRESSED" else "var(--neg-500)"
+                        flag_html += (
+                            f'<span style="background:var(--bg-0); border:1px solid {fc}; '
+                            f'border-radius:4px; padding:1px 6px; font-size:.58rem; '
+                            f'color:{fc}; margin-right:4px;">{flag}</span>'
+                        )
+
+            st.markdown(f"""
+            <div style="background:var(--bg-3); border:1px solid var(--border-1);
+                 border-radius:10px; padding:12px 16px; margin-bottom:8px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                    <div style="font-family:var(--font-display); font-size:1rem; font-weight:900; color:var(--fg-1);">
+                        {ticker}
+                    </div>
+                    <div style="font-family:var(--font-mono); font-size:1.05rem; font-weight:700; color:{upside_color};">
+                        {upside_str}
+                    </div>
+                </div>
+                <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; margin-bottom:6px;">
+                    <div>
+                        <div style="font-size:.55rem; color:var(--fg-6); text-transform:uppercase; margin-bottom:2px;">Fair Value (dry-run)</div>
+                        <div style="font-family:var(--font-mono); font-size:.9rem; font-weight:700; color:var(--fg-1);">R$ {fv}</div>
+                    </div>
+                    <div>
+                        <div style="font-size:.55rem; color:var(--fg-6); text-transform:uppercase; margin-bottom:2px;">Método</div>
+                        <div style="font-family:var(--font-mono); font-size:.85rem; color:var(--fg-3);">{method}</div>
+                    </div>
+                    <div>
+                        <div style="font-size:.55rem; color:var(--fg-6); text-transform:uppercase; margin-bottom:2px;">Status</div>
+                        <div style="font-family:var(--font-mono); font-size:.78rem; color:var(--brand-500);">{status}</div>
+                    </div>
+                </div>
+                {f'<div style="margin-top:4px;">{flag_html}</div>' if flag_html else ''}
+                <div style="margin-top:6px; font-size:.55rem; color:var(--fg-6); font-family:var(--font-mono);">
+                    write=False · M017-S05 · asset_intelligence_snapshots não alterada
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+    else:
+        empty_state(
+            "Dry-run matrix não encontrada.\n"
+            "Esperado em: 12_PYTHON/docs/M017_S05_DRY_RUN_MATRIX.csv",
+            icon="",
+        )
+
+
 # ── Main ─────────────────────────────────────────────────────────────────────
 
 def main() -> None:
@@ -783,6 +1065,9 @@ def main() -> None:
 
     with tabs[3]:
         render_ticker_detail_tab()
+
+    with tabs[4]:
+        render_m017_inputs_tab()
 
 
 main()
