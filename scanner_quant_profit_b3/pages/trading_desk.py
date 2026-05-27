@@ -872,51 +872,333 @@ else:
     </div>
     """, unsafe_allow_html=True)
 
-# ── Diagnóstico de opções ──────────────────────────────────────────────────────
-st.markdown('<div class="td-section-label">Diagnóstico — Opções & Derivativos</div>', unsafe_allow_html=True)
+# ── Seção: Opções Selecionadas para RTD (Diversificada) ────────────────────────
+st.markdown('<div class="td-section-label">Opções Selecionadas para RTD — Diversificada</div>',
+             unsafe_allow_html=True)
 
-# Verificar opções no RTD
-df_opts = df_norm[df_norm["strike"].fillna(0) > 0] if len(df_norm) > 0 else pd.DataFrame()
-qtd_futuros = len(df_norm[df_norm["ticker"].str.contains("FUT|WDOFUT|DOLFUT|DDIFUT|DI1FUT|WINFUT", na=False)]) if len(df_norm) > 0 else 0
+SHORTLIST_PATH = SCANNER_ROOT / "data" / "realtime" / "options_rtd_watchlist.csv"
+DIAGNOSTIC_PATH = SCANNER_ROOT / "data" / "realtime" / "options_rtd_diagnostic.csv"
+SYMBOLS_PATH    = SCANNER_ROOT / "data" / "realtime" / "options_rtd_symbols.csv"
 
-col_d1, col_d2, col_d3 = st.columns(3)
-with col_d1:
-    st.markdown("""
-    <div class="td-kpi">
-        <div class="td-kpi-label">Opções no RTD</div>
-        <div class="td-kpi-val" style="color:#F59E0B;">0</div>
-        <div class="td-kpi-sub">Nenhuma série configurada ainda</div>
-    </div>
-    """, unsafe_allow_html=True)
-with col_d2:
+has_shortlist  = SHORTLIST_PATH.exists()
+has_diagnostic = DIAGNOSTIC_PATH.exists()
+
+if has_shortlist:
+    df_short = pd.read_csv(SHORTLIST_PATH)
+    total_shortlist = len(df_short)
+
+    # RTD check
+    rtd_tickers_set = set(df_norm["ticker"].tolist()) if len(df_norm) > 0 else set()
+    df_short["in_rtd"]   = df_short["ticker"].isin(rtd_tickers_set)
+    df_short["has_preco"] = df_short["ultimo_preco"].notna() & (df_short["ultimo_preco"] > 0)
+    in_rtd_count   = int(df_short["in_rtd"].sum())
+    preco_count    = int(df_short["has_preco"].sum())
+    opp_count      = int((df_short["categoria"] == "OPORTUNIDADE").sum()) if "categoria" in df_short.columns else 0
+    mon_count      = int((df_short["categoria"] == "MONITORAMENTO").sum()) if "categoria" in df_short.columns else 0
+    ativos_unicos  = df_short["ativo_objeto"].nunique()
+
+    # Load diagnostic
+    df_diag = pd.read_csv(DIAGNOSTIC_PATH) if has_diagnostic else pd.DataFrame()
+
+    # KPIs de diversification
+    col_o1, col_o2, col_o3, col_o4, col_o5, col_o6 = st.columns(6)
+    with col_o1:
+        st.markdown(f"""
+        <div class="td-kpi">
+            <div class="td-kpi-label">Shortlist</div>
+            <div class="td-kpi-val" style="color:#22D3EE;">{total_shortlist}</div>
+            <div class="td-kpi-sub">opções selecionadas</div>
+        </div>
+        """, unsafe_allow_html=True)
+    with col_o2:
+        st.markdown(f"""
+        <div class="td-kpi">
+            <div class="td-kpi-label">Ativos</div>
+            <div class="td-kpi-val" style="color:#F1F5F9;">{ativos_unicos}</div>
+            <div class="td-kpi-sub">ativos objeto únicos</div>
+        </div>
+        """, unsafe_allow_html=True)
+    with col_o3:
+        st.markdown(f"""
+        <div class="td-kpi">
+            <div class="td-kpi-label">No RTD</div>
+            <div class="td-kpi-val" style="color:{'#22C55E' if in_rtd_count > 0 else '#F59E0B'};">{in_rtd_count}</div>
+            <div class="td-kpi-sub">já configuradas no Profit</div>
+        </div>
+        """, unsafe_allow_html=True)
+    with col_o4:
+        st.markdown(f"""
+        <div class="td-kpi">
+            <div class="td-kpi-label">Oportunidade</div>
+            <div class="td-kpi-val" style="color:#22C55E;">{opp_count}</div>
+            <div class="td-kpi-sub">ADV ≥ R$500K</div>
+        </div>
+        """, unsafe_allow_html=True)
+    with col_o5:
+        st.markdown(f"""
+        <div class="td-kpi">
+            <div class="td-kpi-label">Monitoramento</div>
+            <div class="td-kpi-val" style="color:#EAB308;">{mon_count}</div>
+            <div class="td-kpi-sub">ADV ≥ R$100K</div>
+        </div>
+        """, unsafe_allow_html=True)
+    with col_o6:
+        st.markdown(f"""
+        <div class="td-kpi">
+            <div class="td-kpi-label">CALL / PUT</div>
+            <div class="td-kpi-val" style="color:#F1F5F9;">{(df_short['tipo']=='CALL').sum()}/{len(df_short)-(df_short['tipo']=='CALL').sum()}</div>
+            <div class="td-kpi-sub">na shortlist</div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # Diagnóstico: ativos sem opções vs na shortlist
+    if has_diagnostic and not df_diag.empty:
+        sem = df_diag[df_diag["status"].str.startswith("SEM", na=False)]
+        if len(sem) > 0:
+            ativos_sem = sem["ativo"].tolist()
+            st.markdown(f"""
+            <div class="td-warn-box" style="border-left-color:#EF4444;margin-bottom:8px;">
+                ⚠️ <strong>Ativos sem opções elegíveis no COTAHIST:</strong>
+                <code>{', '.join(ativos_sem)}</code><br>
+                <span style="color:#94A3B8;font-size:0.65rem;">
+                Estes ativos têm opções no COTAHIST mas não passam nos filtros de liquidez
+                (ADV ≥ R$100K, ≥ 20 negócios, moneyness ≤ 20%).
+                Adicione manualmente no Profit RTD se quiser monitorá-los.
+                </span>
+            </div>
+            """, unsafe_allow_html=True)
+
+        nao_preenchidos = df_diag[
+            df_diag["status"].str.startswith("OK", na=False) &
+            df_diag["na_shortlist"].fillna(0).lt(df_diag["limite"])
+        ]
+        if len(nao_preenchidos) > 0:
+            st.markdown(f"""
+            <div class="td-info-box" style="border-left-color:#EAB308;margin-bottom:8px;">
+                <strong style="color:#EAB308;">⚠️ Ativos com opções mas limite não preenchido:</strong>
+                {', '.join(nao_preenchidos['ativo'].tolist())}<br>
+                <span style="color:#94A3B8;font-size:0.65rem;">
+                Limite não atingido — poucas opções com liquidez mínima no período.
+                </span>
+            </div>
+            """, unsafe_allow_html=True)
+
+    # Mensagem RTD
+    if in_rtd_count == 0:
+        st.markdown(f"""
+        <div class="td-warn-box" style="border-left-color:#F59E0B;margin-bottom:12px;">
+            ⚠️ <strong>Shortlist diversificada pronta, RTD ainda não configurado.</strong><br>
+            {total_shortlist} opções selecionadas em {ativos_unicos} ativos objeto —
+            PETR/VALE limitados a 20 cada para garantir diversidade.<br>
+            <strong>Ação necessária:</strong> adicione os tickers na aba de opções do RTD do Profit.
+        </div>
+        """, unsafe_allow_html=True)
+
+    # Resumo por ativo objeto
     st.markdown(f"""
-    <div class="td-kpi">
-        <div class="td-kpi-label">Futuros no RTD</div>
-        <div class="td-kpi-val" style="color:#60A5FA;">{qtd_futuros}</div>
-        <div class="td-kpi-sub">WDOFUT, DOLFUT, WINFUT, DI1</div>
-    </div>
-    """, unsafe_allow_html=True)
-with col_d3:
-    st.markdown("""
-    <div class="td-kpi">
-        <div class="td-kpi-label">Cotahist B3</div>
-        <div class="td-kpi-val" style="color:#EF4444;">0 linhas</div>
-        <div class="td-kpi-sub">Sem histórico de opções ingerido</div>
+    <div class="td-info-box" style="margin-top:4px;">
+        <strong style="color:#22D3EE;">📊 Distribuição por ativo objeto</strong><br>
+        {'&nbsp;&nbsp;'.join([
+            f"<strong>{a}:</strong> {t}" for a, t in
+            df_short.groupby('ativo_objeto')['ticker'].count().sort_values(ascending=False).items()
+        ])}
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        Vencimentos: {', '.join(sorted(df_short['vencimento'].unique())[:2])}
     </div>
     """, unsafe_allow_html=True)
 
-st.markdown("""
-<div class="td-info-box">
-    <strong style="color:#60A5FA;">ℹ️ Por que não há opções?</strong><br>
-    O RTD atual contém 88 ações e contratos futuros. Opções requerem:<br>
-    1. <strong>Cotahist B3</strong> ingerida (cotahist_daily está vazia) → para descobrir o universo<br>
-    2. <strong>Shortlist RTD</strong> configurada no Profit com os tickers de opção (ex: PETRX35, PETRX40...)<br>
-    3. Nenhum dado de Black Scholes, Delta, Gama, Theta está disponível ainda<br><br>
-    <strong style="color:#22C55E;">Próximo passo:</strong>
-    Execute o coletor B3 COTAHIST para popular a tabela de histórico de opções,
-    depois gere a shortlist via <code>src/scanners/options_rtd_watchlist_builder.py</code>.
-</div>
-""", unsafe_allow_html=True)
+    # Tabela de opções
+    st.markdown(
+        '<div class="td-section-label" style="margin-top:14px;">Tabela — Opções Selecionadas (Diversificada)</div>',
+        unsafe_allow_html=True
+    )
+
+    # Filtros
+    col_of1, col_of2, col_of3, col_of4 = st.columns([2, 2, 2, 3])
+    with col_of1:
+        filtro_ativo = st.selectbox(
+            "Ativo", ["Todas"] + sorted(df_short["ativo_objeto"].unique().tolist()),
+            key="filtro_ativo_opt",
+        )
+    with col_of2:
+        filtro_tipo_opt = st.selectbox(
+            "Tipo", ["Todas", "CALL", "PUT"], key="filtro_tipo_opt",
+        )
+    with col_of3:
+        filtro_cat = st.selectbox(
+            "Categoria", ["Todas", "OPORTUNIDADE", "MONITORAMENTO"], key="filtro_cat_opt",
+        )
+    with col_of4:
+        filtro_ordem_opt = st.selectbox(
+            "Ordenar",
+            ["Prioridade", "ADV (maior)", "Strike", "Moneyness", "Ticker"],
+            key="filtro_ordem_opt",
+        )
+
+    df_opt_view = df_short.copy()
+    if filtro_ativo != "Todas":
+        df_opt_view = df_opt_view[df_opt_view["ativo_objeto"] == filtro_ativo]
+    if filtro_tipo_opt != "Todas":
+        df_opt_view = df_opt_view[df_opt_view["tipo"] == filtro_tipo_opt]
+    if filtro_cat != "Todas":
+        df_opt_view = df_opt_view[df_opt_view["categoria"] == filtro_cat]
+    if filtro_ordem_opt == "Prioridade":
+        df_opt_view = df_opt_view.sort_values("prioridade", ascending=False)
+    elif filtro_ordem_opt == "ADV (maior)":
+        df_opt_view = df_opt_view.sort_values("adv_volume", ascending=False)
+    elif filtro_ordem_opt == "Strike":
+        df_opt_view = df_opt_view.sort_values("strike", ascending=True)
+    elif filtro_ordem_opt == "Moneyness":
+        df_opt_view = df_opt_view.sort_values("moneyness", ascending=True)
+    elif filtro_ordem_opt == "Ticker":
+        df_opt_view = df_opt_view.sort_values("ticker")
+
+    # Status color
+    status_colors = {
+        "Não configurada no RTD": "#475569",
+        "Com preço ao vivo":       "#22C55E",
+    }
+    cat_colors  = {"OPORTUNIDADE": "#22C55E", "MONITORAMENTO": "#EAB308"}
+    tipo_colors = {"CALL": "#22C55E", "PUT": "#EF4444"}
+
+    rows_opt = ""
+    for _, r in df_opt_view.iterrows():
+        ticker     = r["ticker"]
+        ativo      = r["ativo_objeto"]
+        tipo       = r["tipo"]
+        strike     = r["strike"]
+        venc       = r["vencimento"]
+        prec       = r["ultimo_preco"]
+        spot       = r["spot"]
+        mney       = r["moneyness"]
+        adv        = r["adv_volume"]
+        neg_med    = r["negocios_media"]
+        prio       = r["prioridade"]
+        cat        = r.get("categoria", "—")
+        rtd_status = "Com preço ao vivo" if r["in_rtd"] else "Não configurada no RTD"
+        stat_cor   = status_colors.get(rtd_status, "#475569")
+        cat_cor    = cat_colors.get(cat, "#94A3B8")
+        tipo_cor   = tipo_colors.get(tipo, "#94A3B8")
+
+        prec_str = f"R$ {prec:.2f}" if pd.notna(prec) and prec > 0 else "—"
+        spot_str = f"R$ {spot:.2f}" if pd.notna(spot) and spot > 0 else "—"
+        mney_str = f"{mney*100:.1f}%" if pd.notna(mney) else "—"
+        adv_str  = f"R$ {adv/1e6:.1f}M" if pd.notna(adv) and adv > 0 else "—"
+        neg_str  = f"{neg_med:.0f}" if pd.notna(neg_med) and neg_med > 0 else "—"
+        prio_str = f"{prio:.3f}" if pd.notna(prio) else "—"
+
+        # Estratégia sugerida (baseada em moneyness)
+        if pd.notna(mney):
+            if abs(mney) <= 0.02:
+                estrat = "🏧 ATM — neutro"
+            elif mney > 0:
+                estrat = "📈 ITM CALL"
+            else:
+                estrat = "📉 ITM PUT"
+        else:
+            estrat = "—"
+
+        rows_opt += f"""
+        <tr>
+            <td><div class="td-ticker">{ticker}</div></td>
+            <td style="color:#94A3B8;">{ativo}</td>
+            <td><span style="color:{tipo_cor};font-weight:800;font-size:0.7rem;">{tipo}</span></td>
+            <td style="color:#F1F5F9;">{strike:.2f}</td>
+            <td style="color:#64748B;font-size:0.65rem;">{str(venc)[:10]}</td>
+            <td>{spot_str}</td>
+            <td>{mney_str}</td>
+            <td>{prec_str}</td>
+            <td>{adv_str}</td>
+            <td>{neg_str}</td>
+            <td>{prio_str}</td>
+            <td><span style="color:{cat_cor};font-size:0.62rem;font-weight:700;">{cat}</span></td>
+            <td>{estrat}</td>
+            <td><span style="color:{stat_cor};font-size:0.65rem;font-weight:600;">{rtd_status}</span></td>
+        </tr>
+        """
+
+    st.markdown(f"""
+    <div class="td-table-wrap">
+        <table class="td-table">
+            <thead>
+                <tr>
+                    <th>Ticker</th>
+                    <th>Ativo</th>
+                    <th>Tipo</th>
+                    <th>Strike</th>
+                    <th>Venc.</th>
+                    <th>Spot</th>
+                    <th>Moneyness</th>
+                    <th>Últ. Preço</th>
+                    <th>ADV</th>
+                    <th>Neg. Médios</th>
+                    <th>Prioridade</th>
+                    <th>Categoria</th>
+                    <th>Estratégia</th>
+                    <th>Status RTD</th>
+                </tr>
+            </thead>
+            <tbody>
+                {rows_opt}
+            </tbody>
+        </table>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Instruções de configuração
+    with st.expander("📋 Como adicionar as opções no Profit RTD"):
+        st.markdown(f"""
+        **Passo a passo para configurar no RTD do Profit:**
+
+        1. **Abra `RTD PROFIT.xlsx`** no Profit (Menu → RTD → Editar)
+        2. **Crie ou vá para a aba de opções**
+        3. **Copie os tickers** do arquivo `options_rtd_symbols.csv`
+        4. **Cole na coluna Asset** do RTD
+        5. **Salve** em `data/realtime/RTD PROFIT.xlsx`
+        6. **O app atualiza automaticamente** — a cada 30 segundos
+
+        **Distribuição da shortlist ({total_shortlist} opções em {ativos_unicos} ativos):**
+        """)
+
+        for ativo in sorted(df_short["ativo_objeto"].unique()):
+            sub = df_short[df_short["ativo_objeto"] == ativo]
+            opts_list = sub["ticker"].tolist()
+            st.markdown(f"- **{ativo}**: {len(sub)} opções → `{', '.join(opts_list)}`")
+
+        if has_diagnostic and not df_diag.empty:
+            sem = df_diag[df_diag["status"].str.startswith("SEM", na=False)]
+            if len(sem) > 0:
+                st.markdown(f"\n**Ativos sem opções elegíveis (sem ADVs líquidos no período):**")
+                st.markdown(f"`{', '.join(sem['ativo'].tolist())}`")
+
+        st.markdown(f"""
+        **Limites por ativo objeto:**
+        | Ativo | Limite | Status |
+        |---|---|---|
+        | PETR, VALE | máx 20 | 🟢 bem representados |
+        | ITUB, BBDC, BBAS | máx 12 |Diversificados |
+        | WEGE, B3SA, ABEV, SUZB, RENT, BPAC | máx 8 | Parcialmente |
+        | GGBR, RADL, PRIO, RDOR, HAPV, ENEV, CPLE, CMIG, EGIE, TAEE, CSNA, USIM, ALSO | máx 6 | Oportunidade |
+        | META, SBFG | máx 4 | Monitoramento |
+
+        **Arquivos:**
+        - `data/realtime/options_rtd_watchlist.csv` — shortlist completa
+        - `data/realtime/options_rtd_symbols.csv` — tickers para Profit
+        - `data/realtime/options_rtd_diagnostic.csv` — diagnóstico por ativo
+        """)
+        if SYMBOLS_PATH.exists():
+            with open(SYMBOLS_PATH) as f:
+                csv_preview = f.read()[:800]
+            st.code(csv_preview, language="csv")
+
+else:
+    st.markdown("""
+    <div class="td-info-box" style="border-left-color:#94A3B8;">
+        <strong>📭 Nenhuma shortlist disponível.</strong><br>
+        Execute o builder para gerar a shortlist diversificada:<br>
+        <code>python -m src.scanners.options_rtd_watchlist_builder</code>
+    </div>
+    """, unsafe_allow_html=True)
 
 # ── Legenda das regras ─────────────────────────────────────────────────────────
 with st.expander("📋 Regras de sinal — como a Próxima Ação é calculada"):
