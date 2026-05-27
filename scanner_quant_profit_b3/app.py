@@ -1,20 +1,21 @@
 """
-Plataforma Quant B3 — App unificado (5 páginas)
+Radar Macro · Research OS — App principal (navegação lateral agrupada)
 
-Navegação horizontal no topo — funciona em desktop, mobile e Cloudflare.
+Grupos de navegação:
+  🎯 Decisão   — sinais, scanner, opções, matriz, convicção
+  🔭 Research  — macro, IA, tese, watchlist, calendário
+  📊 Fundamentos — valuation hub e cobertura
+  ⚙️  Técnico   — diagnóstico, pipeline, agentes
 """
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 
-# força a raiz do scanner no topo
 if str(ROOT) in sys.path:
     sys.path.remove(str(ROOT))
-
 sys.path.insert(0, str(ROOT))
 
-# agora importa normalmente
 import streamlit as st
 
 from src.bootstrap import ensure_project_root
@@ -26,99 +27,95 @@ st.set_page_config(
     page_title="Radar Macro · Research OS",
     page_icon="🩵",
     layout="wide",
-    initial_sidebar_state="collapsed",
+    initial_sidebar_state="expanded",
 )
 
-# ── CSS global (premium includes all dark base styles) ───────────────────────
-st.markdown(_PREMIUM_CSS, unsafe_allow_html=True)
+# ── CSS global ────────────────────────────────────────────────────────────────
+_SIDEBAR_CSS = """
+<style>
+/* Sidebar customization */
+[data-testid="stSidebar"] {
+    background: #0A1220 !important;
+    border-right: 1px solid #1E2D42 !important;
+    min-width: 220px !important;
+    max-width: 240px !important;
+}
+[data-testid="stSidebar"] [data-testid="stMarkdown"] p {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 0.6rem !important;
+    letter-spacing: 1.2px !important;
+    text-transform: uppercase !important;
+    color: #475569 !important;
+    padding: 12px 8px 4px 8px !important;
+    margin: 0 !important;
+}
+/* Nav links in sidebar */
+[data-testid="stSidebarNavLink"] {
+    border-radius: 6px !important;
+    font-size: 0.78rem !important;
+    padding: 6px 10px !important;
+}
+[data-testid="stSidebarNavLink"]:hover {
+    background: rgba(34,211,238,0.08) !important;
+}
+[data-testid="stSidebarNavLink"][aria-current="page"] {
+    background: rgba(34,211,238,0.14) !important;
+    color: #22D3EE !important;
+    border-left: 2px solid #22D3EE !important;
+}
+/* Logo area */
+.sidebar-logo {
+    padding: 16px 12px 12px 12px;
+    border-bottom: 1px solid #1E2D42;
+    margin-bottom: 8px;
+}
+/* Hide the default collapse control since sidebar is nav */
+[data-testid="collapsedControl"] { display: none; }
+</style>
+"""
 
-# ── Navegação superior ────────────────────────────────────────────────────────
+st.markdown(_PREMIUM_CSS + _SIDEBAR_CSS, unsafe_allow_html=True)
 
-_PAGES = [
-    st.Page("pages/radar_ai.py", title="Radar AI", icon="🧠"),
+# ── Navegação lateral agrupada ────────────────────────────────────────────────
+_PAGES = {
+    "🎯 Decisão": [
+        st.Page("pages/radar_oportunidades.py",      title="Radar de Oportunidades", icon="📡"),
+        st.Page("pages/radar_quant.py",              title="Scanner Quantitativo",   icon="🔬"),
+        st.Page("pages/opcoes_monitoramento.py",     title="Opções & Derivativos",   icon="⚡"),
+        st.Page("pages/inteligencia_oportunidades.py", title="Matriz de Sinais",     icon="🏆"),
+        st.Page("pages/performance.py",              title="Conviction Desk",        icon="📈"),
+    ],
+    "🔭 Research": [
+        st.Page("pages/inteligencia_macro.py",       title="Macro → B3",             icon="🌐"),
+        st.Page("pages/radar_ai.py",                 title="Radar AI",               icon="🧠"),
+        st.Page("pages/inteligencia_ativo.py",       title="Construtor de Tese",     icon="🧩"),
+        st.Page("pages/inteligencia_watchlist.py",   title="Empresas Monitoradas",   icon="👁"),
+        st.Page("pages/calendario.py",               title="Calendário Econômico",   icon="📅"),
+    ],
+    "📊 Fundamentos": [
+        st.Page("pages/valuation_engine.py",         title="Valuation Hub",          icon="💎"),
+        st.Page("pages/valuation_coverage.py",       title="Cobertura de Valuation", icon="🗺"),
+    ],
+    "⚙️ Técnico": [
+        st.Page("pages/diagnostico_tecnico.py",      title="Diagnóstico Técnico",    icon="🔧"),
+        st.Page("pages/agendador.py",                title="Pipeline & Agentes",     icon="🤖"),
+    ],
+}
 
-    st.Page(
-        "pages/inteligencia_ativo.py",
-        title="Construtor de Tese",
-        icon="🧩",
-    ),
+nav = st.navigation(_PAGES, position="sidebar")
 
-    st.Page(
-        "pages/inteligencia_oportunidades.py",
-        title="Matriz de Sinais",
-        icon="🏆",
-    ),
-
-    st.Page(
-        "pages/radar_quant.py",
-        title="Núcleo Quantitativo",
-        icon="🎯",
-    ),
-
-    st.Page(
-        "pages/valuation_engine.py",
-        title="Valuation Engine",
-        icon="📊",
-    ),
-
-    st.Page(
-        "pages/valuation_coverage.py",
-        title="Cobertura de Valuation",
-        icon="🗺",
-    ),
-
-    st.Page(
-        "pages/inteligencia_macro.py",
-        title="Macro Motor",
-        icon="🌐",
-    ),
-
-    st.Page(
-        "pages/performance.py",
-        title="Mesa de Convicção",
-        icon="📈",
-    ),
-
-    st.Page(
-        "pages/agendador.py",
-        title="Agent Runtime",
-        icon="⚙️",
-    ),
-
-    st.Page(
-        "pages/calendario.py",
-        title="Event Scheduler",
-        icon="📅",
-    ),
-
-    st.Page(
-        "pages/opcoes_monitoramento.py",
-        title="Opções Monitor",
-        icon="📡",
-    ),
-]
-# st.navigation DEVE ser chamado antes de st.page_link
-pages = st.navigation(_PAGES, position="hidden")
-
-c_logo, *c_navs = st.columns([1.6] + [1] * len(_PAGES))
-with c_logo:
+# ── Logo no sidebar (via st.sidebar) ────────────────────────────────────────
+with st.sidebar:
     st.markdown(
-        '<div style="padding:4px 0 8px 4px; display: flex; flex-direction: column; line-height: 1.1;">'
-        '<b style="font-family:\'Sora\',sans-serif; font-weight:900; font-size:0.95rem; '
-        'letter-spacing:-0.5px; color:#F1F5F9;">RADAR <span style="color:#22D3EE">MACRO</span></b>'
-        '<span style="font-family:\'JetBrains Mono\',monospace; font-size:0.55rem; '
-        'letter-spacing:2px; color:#475569; text-transform:uppercase;">Research OS</span>'
+        '<div class="sidebar-logo">'
+        '<b style="font-family:\'Sora\',sans-serif;font-weight:900;font-size:1rem;'
+        'letter-spacing:-0.5px;color:#F1F5F9;">RADAR '
+        '<span style="color:#22D3EE">MACRO</span></b>'
+        '<div style="font-family:\'JetBrains Mono\',monospace;font-size:0.55rem;'
+        'letter-spacing:2px;color:#475569;text-transform:uppercase;margin-top:2px;">'
+        'Research OS</div>'
         '</div>',
         unsafe_allow_html=True,
     )
 
-for col, page in zip(c_navs, _PAGES):
-    with col:
-        st.page_link(page, use_container_width=True)
-
-st.markdown(
-    '<hr style="border:0;border-top:1px solid #1E2D42;margin:0 0 4px 0">',
-    unsafe_allow_html=True,
-)
-
-pages.run()
+nav.run()

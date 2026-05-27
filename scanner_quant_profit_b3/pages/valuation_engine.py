@@ -40,6 +40,9 @@ for _k in list(sys.modules):
 import streamlit as st
 import pandas as pd
 
+# ── Cache helpers ─────────────────────────────────────────────────────────────
+_CACHE_TTL = 300  # 5 minutes
+
 from src.ui.styles import PREMIUM_CSS
 from src.ui.components import (
     section_title,
@@ -257,6 +260,7 @@ def _translate_flag_prelim(flag: str) -> str | None:
     return None
 
 
+@st.cache_data(ttl=_CACHE_TTL, show_spinner=False)
 def _load_preliminary_results() -> list[dict]:
     """Load M018_CONTROLLED preliminary results from valuation_results (read-only).
 
@@ -378,7 +382,18 @@ def _render_prelim_table(rows: list[dict]) -> None:
         </tr>
         """
 
-    st.markdown(f"""
+    tbl1_html = f"""
+    <style>
+    .tbl-wrap {{overflow-x:auto;border-radius:8px;}}
+    .tbl {{width:100%;border-collapse:collapse;font-size:.72rem;}}
+    .tbl th {{background:var(--bg-3);padding:8px 12px;text-align:left;
+              font-weight:700;color:var(--fg-2);border-bottom:2px solid var(--border-2);
+              white-space:nowrap;}}
+    .tbl td {{padding:8px 12px;border-bottom:1px solid var(--border-1);
+              vertical-align:middle;}}
+    .tbl tr:last-child td {{border-bottom:none;}}
+    .tbl tr:hover td {{background:rgba(255,255,255,.03);}}
+    </style>
     <div class="tbl-wrap">
     <table class="tbl">
       <thead>
@@ -392,9 +407,11 @@ def _render_prelim_table(rows: list[dict]) -> None:
       <tbody>{rows_html}</tbody>
     </table>
     </div>
-    """, unsafe_allow_html=True)
+    """
+    st.html(tbl1_html)
 
 
+@st.cache_data(ttl=_CACHE_TTL, show_spinner=False)
 def _load_market_prices() -> dict[str, dict]:
     """Load latest market prices from asset_intelligence_snapshots, with fallback."""
     result: dict[str, dict] = dict(_PRICES_FALLBACK)
@@ -402,16 +419,19 @@ def _load_market_prices() -> dict[str, dict]:
         return result
     try:
         conn = sqlite3.connect(str(_SCANNER_DB))
+        # Use MAX(created_at) per ticker to avoid Python-side dedup loop
         rows = conn.execute("""
             SELECT ticker, current_price, company_name, created_at
             FROM asset_intelligence_snapshots
-            ORDER BY created_at DESC
+            WHERE (ticker, created_at) IN (
+                SELECT ticker, MAX(created_at)
+                FROM asset_intelligence_snapshots
+                GROUP BY ticker
+            )
         """).fetchall()
         conn.close()
-        seen: set[str] = set()
         for ticker, price, name, created_at in rows:
-            if ticker not in seen and price is not None:
-                seen.add(ticker)
+            if price is not None:
                 fallback_name = _PRICES_FALLBACK.get(str(ticker), {}).get("name", "")
                 result[str(ticker)] = {
                     "price": float(price),
@@ -423,6 +443,7 @@ def _load_market_prices() -> dict[str, dict]:
         return result
 
 
+@st.cache_data(ttl=_CACHE_TTL, show_spinner=False)
 def _load_dry_run_matrix() -> list[dict]:
     if not _DRY_RUN_MATRIX_PATH.exists():
         return []
@@ -436,6 +457,7 @@ def _load_dry_run_matrix() -> list[dict]:
         return []
 
 
+@st.cache_data(ttl=_CACHE_TTL, show_spinner=False)
 def _load_inputs_kpis() -> dict:
     if _INGESTION_DB_PATH is None:
         return {}
@@ -465,6 +487,60 @@ def _load_inputs_kpis() -> dict:
         return {}
 
 
+@st.cache_data(ttl=_CACHE_TTL, show_spinner=False)
+def _load_key_metrics() -> list[dict]:
+    """Load key metrics for READY_TO_CALCULATE tickers — cached to avoid N×M queries."""
+    if _INGESTION_DB_PATH is None:
+        return []
+    try:
+        key_metrics = ["revenue", "ebitda", "net_debt", "shares_outstanding"]
+        ready_tickers = [r["ticker"] for r in _READY_TO_CALCULATE]
+        ticker_ph = ",".join("?" * len(ready_tickers))
+        metric_ph = ",".join("?" * len(key_metrics))
+
+        conn = sqlite3.connect(str(_INGESTION_DB_PATH))
+        raw = conn.execute(f"""
+            SELECT ticker, metric_name, metric_value
+            FROM valuation_financial_inputs
+            WHERE ticker IN ({ticker_ph})
+              AND metric_name IN ({metric_ph})
+              AND period_type = 'DFP'
+              AND (ticker, metric_name, period_end) IN (
+                  SELECT ticker, metric_name, MAX(period_end)
+                  FROM valuation_financial_inputs
+                  WHERE ticker IN ({ticker_ph})
+                    AND metric_name IN ({metric_ph})
+                    AND period_type = 'DFP'
+                  GROUP BY ticker, metric_name
+              )
+        """, ready_tickers + key_metrics + ready_tickers + key_metrics).fetchall()
+        conn.close()
+
+        pivot: dict[str, dict] = {t: {"Empresa": t} for t in ready_tickers}
+        for ticker, metric, val in raw:
+            if val is not None:
+                v = float(val)
+                if metric == "shares_outstanding":
+                    pivot[ticker][metric] = f"{v/1e6:.1f}M"
+                elif abs(v) >= 1e9:
+                    pivot[ticker][metric] = f"R$ {v/1e9:.2f}B"
+                elif abs(v) >= 1e6:
+                    pivot[ticker][metric] = f"R$ {v/1e6:.1f}M"
+                else:
+                    pivot[ticker][metric] = f"R$ {v:,.0f}"
+
+        result = []
+        for ticker in ready_tickers:
+            row = pivot.get(ticker, {"Empresa": ticker})
+            for m in key_metrics:
+                row.setdefault(m, "—")
+            result.append(row)
+        return result
+    except Exception:
+        return []
+
+
+@st.cache_data(ttl=_CACHE_TTL, show_spinner=False)
 def _load_fundamental_quality_rows() -> list[dict]:
     if not _SCANNER_DB.exists():
         return []
@@ -513,13 +589,13 @@ def render_visao_geral() -> None:
             Valuation Hub — Universo Completo
           </div>
           <div style="font-size:.72rem;color:var(--fg-5);font-family:var(--font-mono);">
-            32 empresas · 9 preços justos preservados · 18 valores preliminares
-            · 7 passaram na checagem · 47.621 registros financeiros
+            32 empresas · 9 preços justos auditados · 18 valores em validação
+            · 7 passaram na checagem automática
           </div>
         </div>
         <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
           <span class="badge badge-cyan">Base Financeira</span>
-          <span class="badge badge-violet">18 Preliminares</span>
+          <span class="badge badge-violet">18 Em validação</span>
           <span class="badge badge-buy">7 Passou na checagem</span>
         </div>
       </div>
@@ -598,7 +674,7 @@ def render_visao_geral() -> None:
                 <div class="item">Upside / Downside
                   <span class="v" style="color:{upside_color};font-weight:900;">{upside_str}</span>
                 </div>
-                <div class="item">Fonte<span class="v">M015/M016</span></div>
+                <div class="item">Status<span class="v">Auditado</span></div>
               </div>
               <div class="meta">Auditado{date_html}</div>
             </div>
@@ -607,7 +683,7 @@ def render_visao_geral() -> None:
     # ── Column B: Prontas para Cálculo ────────────────────────────────────────────
     with col_b:
         section_title("Prontas para Cálculo", icon="✅")
-        st.caption("17 ativos — inputs completos em ingestion.db")
+        st.caption("17 ativos com inputs fundamentalistas completos")
 
         rows_html = ""
         for r in _READY_TO_CALCULATE:
@@ -628,7 +704,18 @@ def render_visao_geral() -> None:
             </tr>
             """
 
-        st.markdown(f"""
+        tbl2_html = f"""
+        <style>
+        .tbl-wrap {{overflow-x:auto;border-radius:8px;}}
+        .tbl {{width:100%;border-collapse:collapse;font-size:.72rem;}}
+        .tbl th {{background:var(--bg-3);padding:8px 12px;text-align:left;
+                  font-weight:700;color:var(--fg-2);border-bottom:2px solid var(--border-2);
+                  white-space:nowrap;}}
+        .tbl td {{padding:8px 12px;border-bottom:1px solid var(--border-1);
+                  vertical-align:middle;}}
+        .tbl tr:last-child td {{border-bottom:none;}}
+        .tbl tr:hover td {{background:rgba(255,255,255,.03);}}
+        </style>
         <div class="tbl-wrap">
         <table class="tbl">
           <thead>
@@ -642,7 +729,8 @@ def render_visao_geral() -> None:
           </tbody>
         </table>
         </div>
-        """, unsafe_allow_html=True)
+        """
+        st.html(tbl2_html)
 
     # ── Column C: Pendências ─────────────────────────────────────────────────────
     with col_c:
@@ -702,8 +790,8 @@ def render_base_fundamentalista() -> None:
     st.markdown(
         f'<div style="font-size:.65rem;color:var(--fg-5);font-family:var(--font-mono);'
         f'margin:10px 0 16px 0;padding:6px 10px;background:var(--bg-2);border-radius:8px;">'
-        f'Fonte: ingestion.db · CVM_CSV + B3_MARKET_DATA · '
-        f'Referência: 2025-12-31 (DFP anual)</div>',
+        f'Fontes: CVM / DFP · B3 Market Data · '
+        f'Referência: demonstrações financeiras 2025</div>',
         unsafe_allow_html=True,
     )
 
@@ -760,7 +848,18 @@ def render_base_fundamentalista() -> None:
         """
 
     section_title("Cobertura por Empresa", icon="")
-    st.markdown(f"""
+    tbl3_html = f"""
+    <style>
+    .tbl-wrap {{overflow-x:auto;border-radius:8px;}}
+    .tbl {{width:100%;border-collapse:collapse;font-size:.72rem;}}
+    .tbl th {{background:var(--bg-3);padding:8px 12px;text-align:left;
+              font-weight:700;color:var(--fg-2);border-bottom:2px solid var(--border-2);
+              white-space:nowrap;}}
+    .tbl td {{padding:8px 12px;border-bottom:1px solid var(--border-1);
+              vertical-align:middle;}}
+    .tbl tr:last-child td {{border-bottom:none;}}
+    .tbl tr:hover td {{background:rgba(255,255,255,.03);}}
+    </style>
     <div class="tbl-wrap">
     <table class="tbl">
       <thead>
@@ -772,7 +871,8 @@ def render_base_fundamentalista() -> None:
       <tbody>{rows_html}</tbody>
     </table>
     </div>
-    """, unsafe_allow_html=True)
+    """
+    st.html(tbl3_html)
 
     # Key metrics for READY tickers
     section_title("Métricas-chave — Prontas para Cálculo", icon="")
@@ -782,45 +882,16 @@ def render_base_fundamentalista() -> None:
         empty_state("ingestion.db não disponível.", icon="")
         return
 
-    try:
-        conn = sqlite3.connect(str(_INGESTION_DB_PATH))
-        key_metrics = ["revenue", "ebitda", "net_debt", "shares_outstanding"]
-        ready_tickers = [r["ticker"] for r in _READY_TO_CALCULATE]
-
-        rows_key = []
-        for ticker in ready_tickers:
-            row_data: dict[str, str] = {"Empresa": ticker}
-            for metric in key_metrics:
-                val = conn.execute("""
-                    SELECT metric_value FROM valuation_financial_inputs
-                    WHERE ticker=? AND metric_name=?
-                    AND period_type='DFP'
-                    ORDER BY period_end DESC LIMIT 1
-                """, (ticker, metric)).fetchone()
-                if val and val[0] is not None:
-                    v = float(val[0])
-                    if metric == "shares_outstanding":
-                        row_data[metric] = f"{v/1e6:.1f}M"
-                    elif abs(v) >= 1e9:
-                        row_data[metric] = f"R$ {v/1e9:.2f}B"
-                    elif abs(v) >= 1e6:
-                        row_data[metric] = f"R$ {v/1e6:.1f}M"
-                    else:
-                        row_data[metric] = f"R$ {v:,.0f}"
-                else:
-                    row_data[metric] = "—"
-            rows_key.append(row_data)
-        conn.close()
-
-        df_key = pd.DataFrame(rows_key).rename(columns={
+    key_metrics_data = _load_key_metrics()
+    if key_metrics_data:
+        df_key = pd.DataFrame(key_metrics_data).rename(columns={
             "revenue": "Receita",
             "ebitda": "EBITDA",
             "net_debt": "Dívida Líquida",
             "shares_outstanding": "Ações",
         })
         st.dataframe(df_key, use_container_width=True, hide_index=True)
-
-    except Exception:
+    else:
         empty_state("Não foi possível carregar métricas-chave.", icon="")
 
 
@@ -831,10 +902,10 @@ def render_simulacao_modelos() -> None:
 
     st.markdown(alert_block(
         "info",
-        "Simulação com write=False — nenhum valor foi salvo",
-        "Todos os fair values abaixo foram calculados em dry-run com write=False. "
-        "asset_intelligence_snapshots não foi alterada. "
-        "Próxima etapa persiste com write=True após validação cruzada (range 0,1× – 5,0× preço).",
+        "Simulação validada — nenhum valor salvo",
+        "Todos os fair values abaixo foram calculados em modo de simulação. "
+        "Nenhum dado foi alterado no banco. "
+        "Os resultados passam por validação cruzada antes de serem promovidos.",
     ), unsafe_allow_html=True)
 
     if not dry_run:
@@ -904,7 +975,18 @@ def render_simulacao_modelos() -> None:
         </tr>
         """
 
-    st.markdown(f"""
+        tbl4_html = f"""
+    <style>
+    .tbl-wrap {{overflow-x:auto;border-radius:8px;}}
+    .tbl {{width:100%;border-collapse:collapse;font-size:.72rem;}}
+    .tbl th {{background:var(--bg-3);padding:8px 12px;text-align:left;
+              font-weight:700;color:var(--fg-2);border-bottom:2px solid var(--border-2);
+              white-space:nowrap;}}
+    .tbl td {{padding:8px 12px;border-bottom:1px solid var(--border-1);
+              vertical-align:middle;}}
+    .tbl tr:last-child td {{border-bottom:none;}}
+    .tbl tr:hover td {{background:rgba(255,255,255,.03);}}
+    </style>
     <div class="tbl-wrap">
     <table class="tbl">
       <thead>
@@ -916,7 +998,8 @@ def render_simulacao_modelos() -> None:
       <tbody>{rows_html}</tbody>
     </table>
     </div>
-    """, unsafe_allow_html=True)
+    """
+    st.html(tbl4_html)
 
     # PCAR3 special note
     pcar_row = next((r for r in dry_run if r.get("ticker") == "PCAR3"), None)
@@ -961,10 +1044,10 @@ def render_preliminares() -> None:
     # ── Disclaimer visível ────────────────────────────────────────────────────
     st.markdown(alert_block(
         "warn",
-        "Valores Preliminares — Não Aprovados",
-        "Os valores preliminares são resultados do motor quantitativo e ainda não "
-        "representam recomendação final. Nenhum valor foi promovido para aprovado. "
-        "Nenhum dado foi alterado.",
+        "Valores Preliminares — Em Validação",
+        "Estes valores são resultados do motor de valuation em processo de validação. "
+        "Nenhum deles representa recomendação de investimento ou preço justo aprovado. "
+        "Não utilizar como base de decisão sem validação fundamentalista completa.",
     ), unsafe_allow_html=True)
 
     if not prelim_data:
@@ -1008,9 +1091,8 @@ def render_preliminares() -> None:
 
     st.markdown(
         '<div style="font-size:.6rem;color:var(--fg-6);font-family:monospace;margin-top:14px;">'
-        'Fonte: valuation_results · source=M018_CONTROLLED · status=preliminary · '
-        'approved_fair_value=NULL (nenhum aprovado) · '
-        'asset_intelligence_snapshots não modificada</div>',
+        'Nenhum valor preliminar foi promovido para aprovado. '
+        'Os valores estão em processo de validação fundamentalista.</div>',
         unsafe_allow_html=True,
     )
 
@@ -1206,29 +1288,30 @@ def main() -> None:
     tabs = st.tabs([
         "Visão Geral",
         "Base Fundamentalista",
-        "Simulação dos Modelos",
-        "Preços Justos Preliminares",
         "Qualidade Fundamental",
         "Contexto Macro",
+        "Simulação dos Modelos",
+        "Valores Preliminares ⚠️",
     ])
 
     with tabs[0]:
-        render_visao_geral()
+        with st.spinner("Carregando valuation..."):
+            render_visao_geral()
 
     with tabs[1]:
         render_base_fundamentalista()
 
     with tabs[2]:
-        render_simulacao_modelos()
-
-    with tabs[3]:
-        render_preliminares()
-
-    with tabs[4]:
         render_qualidade_fundamental()
 
-    with tabs[5]:
+    with tabs[3]:
         render_contexto_macro()
+
+    with tabs[4]:
+        render_simulacao_modelos()
+
+    with tabs[5]:
+        render_preliminares()
 
 
 main()

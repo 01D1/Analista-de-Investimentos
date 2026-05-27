@@ -28,6 +28,8 @@ if str(_ROOT) not in sys.path:
 import pandas as pd
 import streamlit as st
 
+_CACHE_TTL = 300  # 5 minutes
+
 from src.ui.components import section_title, kpi_strip, empty_state, alert_block
 
 # ── DB Paths ───────────────────────────────────────────────────────────────────
@@ -165,6 +167,7 @@ def _status_chip(status_key: str) -> str:
     return _chip_html(label, variant)
 
 
+@st.cache_data(ttl=_CACHE_TTL, show_spinner=False)
 def _load_market_prices() -> dict[str, dict]:
     """Load latest market prices from asset_intelligence_snapshots, with fallback."""
     result: dict[str, dict] = dict(_PRICES_FALLBACK)
@@ -175,13 +178,15 @@ def _load_market_prices() -> dict[str, dict]:
         rows = conn.execute("""
             SELECT ticker, current_price, company_name, created_at
             FROM asset_intelligence_snapshots
-            ORDER BY created_at DESC
+            WHERE (ticker, created_at) IN (
+                SELECT ticker, MAX(created_at)
+                FROM asset_intelligence_snapshots
+                GROUP BY ticker
+            )
         """).fetchall()
         conn.close()
-        seen: set[str] = set()
         for ticker, price, name, created_at in rows:
-            if ticker not in seen and price is not None:
-                seen.add(ticker)
+            if price is not None:
                 fallback_name = _PRICES_FALLBACK.get(str(ticker), {}).get("name", "")
                 result[str(ticker)] = {
                     "price": float(price),
@@ -193,6 +198,7 @@ def _load_market_prices() -> dict[str, dict]:
         return result
 
 
+@st.cache_data(ttl=_CACHE_TTL, show_spinner=False)
 def _load_ingestion_kpis() -> dict:
     if _INGESTION_DB is None:
         return {}
@@ -222,6 +228,7 @@ def _load_ingestion_kpis() -> dict:
         return {}
 
 
+@st.cache_data(ttl=_CACHE_TTL, show_spinner=False)
 def _load_dry_run_matrix() -> list[dict]:
     if not _DRY_RUN_MATRIX.exists():
         return []
@@ -235,6 +242,7 @@ def _load_dry_run_matrix() -> list[dict]:
         return []
 
 
+@st.cache_data(ttl=_CACHE_TTL, show_spinner=False)
 def _load_preliminary_sanity_map() -> dict[str, int | None]:
     """Load {ticker: sanity_check_passed} for M018_CONTROLLED tickers (read-only).
 
@@ -257,6 +265,7 @@ def _load_preliminary_sanity_map() -> dict[str, int | None]:
         return {}
 
 
+@st.cache_data(ttl=_CACHE_TTL, show_spinner=False)
 def _load_preliminary_fv_map() -> dict[str, dict]:
     """Load {ticker: {preliminary_fair_value, market_price, upside_pct, ...}} (read-only).
 
@@ -471,7 +480,18 @@ def main() -> None:
                 </tr>
                 """
 
-            st.markdown(f"""
+            html_table = f"""
+            <style>
+            .tbl-wrap {{overflow-x:auto;border-radius:8px;}}
+            .tbl {{width:100%;border-collapse:collapse;font-size:.72rem;}}
+            .tbl th {{background:var(--bg-3);padding:8px 12px;text-align:left;
+                      font-weight:700;color:var(--fg-2);border-bottom:2px solid var(--border-2);
+                      white-space:nowrap;}}
+            .tbl td {{padding:8px 12px;border-bottom:1px solid var(--border-1);
+                      vertical-align:middle;}}
+            .tbl tr:last-child td {{border-bottom:none;}}
+            .tbl tr:hover td {{background:rgba(255,255,255,.03);}}
+            </style>
             <div class="tbl-wrap">
             <table class="tbl">
               <thead>
@@ -484,7 +504,8 @@ def main() -> None:
               <tbody>{rows_html}</tbody>
             </table>
             </div>
-            """, unsafe_allow_html=True)
+            """
+            st.html(html_table)
 
         st.markdown(
             '<div style="font-size:.58rem;color:var(--fg-6);font-family:monospace;margin-top:10px;">'
@@ -496,7 +517,12 @@ def main() -> None:
     # ── Tab 2: Simulação dos Modelos ──────────────────────────────────────────
     with tab2:
         if not dry_run:
-            st.warning("Matriz de simulação não encontrada: 12_PYTHON/docs/M017_S05_DRY_RUN_MATRIX.csv")
+            st.markdown(alert_block(
+                "warn",
+                "Simulação não disponível",
+                "Matriz de simulação não encontrada. "
+                "Execute o dry-run para gerar os resultados de simulação.",
+            ), unsafe_allow_html=True)
         else:
             st.markdown(alert_block(
                 "info",
@@ -556,7 +582,18 @@ def main() -> None:
                 </tr>
                 """
 
-            st.markdown(f"""
+            html_table2 = f"""
+            <style>
+            .tbl-wrap {{overflow-x:auto;border-radius:8px;}}
+            .tbl {{width:100%;border-collapse:collapse;font-size:.72rem;}}
+            .tbl th {{background:var(--bg-3);padding:8px 12px;text-align:left;
+                      font-weight:700;color:var(--fg-2);border-bottom:2px solid var(--border-2);
+                      white-space:nowrap;}}
+            .tbl td {{padding:8px 12px;border-bottom:1px solid var(--border-1);
+                      vertical-align:middle;}}
+            .tbl tr:last-child td {{border-bottom:none;}}
+            .tbl tr:hover td {{background:rgba(255,255,255,.03);}}
+            </style>
             <div class="tbl-wrap">
             <table class="tbl">
               <thead>
@@ -568,7 +605,8 @@ def main() -> None:
               <tbody>{rows_html}</tbody>
             </table>
             </div>
-            """, unsafe_allow_html=True)
+            """
+            st.html(html_table2)
 
             st.markdown(
                 '<div style="font-size:.58rem;color:var(--fg-6);margin-top:10px;">'
@@ -632,7 +670,18 @@ def main() -> None:
                 </tr>
                 """
 
-            st.markdown(f"""
+            html_table3 = f"""
+            <style>
+            .tbl-wrap {{overflow-x:auto;border-radius:8px;}}
+            .tbl {{width:100%;border-collapse:collapse;font-size:.72rem;}}
+            .tbl th {{background:var(--bg-3);padding:8px 12px;text-align:left;
+                      font-weight:700;color:var(--fg-2);border-bottom:2px solid var(--border-2);
+                      white-space:nowrap;}}
+            .tbl td {{padding:8px 12px;border-bottom:1px solid var(--border-1);
+                      vertical-align:middle;}}
+            .tbl tr:last-child td {{border-bottom:none;}}
+            .tbl tr:hover td {{background:rgba(255,255,255,.03);}}
+            </style>
             <div class="tbl-wrap">
             <table class="tbl">
               <thead>
@@ -645,7 +694,8 @@ def main() -> None:
               <tbody>{rows_html}</tbody>
             </table>
             </div>
-            """, unsafe_allow_html=True)
+            """
+            st.html(html_table3)
 
             st.markdown("""
             <div style="font-size:.62rem;color:var(--fg-6);margin-top:8px;">

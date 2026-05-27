@@ -32,6 +32,7 @@ from src.integration.valuation_bridge import list_valid_valuations, get_valuatio
 # Helpers
 # ---------------------------------------------------------------------------
 
+@st.cache_data(ttl=300, show_spinner=False)
 def _load_all() -> dict:
     """Load all available data from scanner_quant.db."""
     import sqlite3
@@ -164,8 +165,8 @@ def main() -> None:
     st.markdown(PREMIUM_CSS, unsafe_allow_html=True)
     st.markdown("""
     <div class="page-header">
-      <div class="page-header-title">Radar Quant — Diagnostic</div>
-      <div class="page-header-sub">S01.5 Data Flow Integration Fix · real data · honest state</div>
+      <div class="page-header-title">Scanner Quantitativo</div>
+      <div class="page-header-sub">Scores por ativo — convicção integrada, técnico, quant e regime de mercado</div>
     </div>""", unsafe_allow_html=True)
 
     data = _load_all()
@@ -198,7 +199,7 @@ def main() -> None:
             _kpi_card(item["label"], item["value"], color=item["color"])
 
     # ── Asset Intelligence Snapshot table ───────────────────────────────────
-    section_title("Asset Intelligence Snapshots", icon="")
+    section_title("Inteligência por Ativo", icon="")
     if ais:
         for row in ais:
             _render_ticker_row(row["ticker"], row)
@@ -209,7 +210,7 @@ def main() -> None:
             unsafe_allow_html=True)
 
     # ── Source Health ───────────────────────────────────────────────────────
-    section_title("Source Health Checks", icon="")
+    section_title("Saúde das Fontes de Dados", icon="")
     if sh:
         for h in sh:
             status_upper = str(h["status"] or "").lower()
@@ -236,7 +237,7 @@ def main() -> None:
             unsafe_allow_html=True)
 
     # ── Market Regime ────────────────────────────────────────────────────────
-    section_title("Market Regime", icon="")
+    section_title("Regime de Mercado", icon="")
     if reg:
         r = reg[0]
         gov_status = r.get("regime_governance_status", "")
@@ -257,7 +258,7 @@ def main() -> None:
             unsafe_allow_html=True)
 
     # ── Risk Snapshots ───────────────────────────────────────────────────────
-    section_title(f"Risk Snapshots ({len(rs)} ativos)", icon="")
+    section_title(f"Snapshots de Risco ({len(rs)} ativos)", icon="")
     if rs:
         for r in rs:
             var95 = r.get("var_95")
@@ -288,7 +289,7 @@ def main() -> None:
             unsafe_allow_html=True)
 
     # ── Valuation Coverage (S04) ────────────────────────────────────────────
-    section_title("Valuation Coverage", icon="")
+    section_title("Cobertura de Valuation", icon="")
     valid_tickers = list_valid_valuations()
     total_valid = len(valid_tickers)
 
@@ -316,10 +317,10 @@ def main() -> None:
 
     # ── Valuation stats (kpi_card) ─────────────────────────────────────────
     valuation_kpi_items = [
-        {"label": "VALUATIONS VÁLIDOS (PIPELINE)", "value": str(total_valid), "color": "pos"},
-        {"label": "BRIDGE + SQ DB",                  "value": str(len(bridge_in_sq)), "color": "cyan"},
-        {"label": "SQ DB ONLY (SEM VALUATION)",       "value": str(len(sq_only)),     "color": "warn"},
-        {"label": "DIVERGÊNCIAS (>0.5%)",             "value": str(len(diverged)),    "color": "neg"},
+        {"label": "VALUATIONS VÁLIDOS",   "value": str(total_valid),        "color": "pos"},
+        {"label": "PIPELINE + DB",        "value": str(len(bridge_in_sq)),  "color": "cyan"},
+        {"label": "SEM VALUATION",        "value": str(len(sq_only)),       "color": "warn"},
+        {"label": "DIVERGÊNCIAS (>0.5%)", "value": str(len(diverged)),      "color": "neg"},
     ]
     vcols = st.columns(4)
     for col, item in zip(vcols, valuation_kpi_items):
@@ -359,7 +360,7 @@ def main() -> None:
             st.markdown(chips, unsafe_allow_html=True)
 
     # ── Data availability summary ───────────────────────────────────────────
-    section_title("Data Availability", icon="")
+    section_title("Disponibilidade de Dados", icon="")
     avail_items = [
         ("asset_intelligence_snapshots", len(ais) > 0, f"{len(ais)} tickers monitorados"),
         ("source_health_checks", len(sh) > 0, f"{len(sh)} fontes verificadas"),
