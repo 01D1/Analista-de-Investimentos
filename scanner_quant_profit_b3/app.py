@@ -79,6 +79,7 @@ st.markdown(_PREMIUM_CSS + _SIDEBAR_CSS, unsafe_allow_html=True)
 # ── Navegação lateral agrupada ────────────────────────────────────────────────
 _PAGES = {
     "🎯 Decisão": [
+        st.Page("pages/trading_desk.py",             title="Trading Desk",           icon="🎯", default=True),
         st.Page("pages/radar_oportunidades.py",      title="Radar de Oportunidades", icon="📡"),
         st.Page("pages/radar_quant.py",              title="Scanner Quantitativo",   icon="🔬"),
         st.Page("pages/opcoes_monitoramento.py",     title="Opções & Derivativos",   icon="⚡"),

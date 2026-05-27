@@ -25,11 +25,12 @@ from datetime import datetime
 from pathlib import Path
 
 import pandas as pd
+import streamlit as st
 
 from src.data_quality.ri_sites import get_valid_ri_url_for_ticker
 from src.integration.asset_intelligence_engine import build_asset_intelligence_snapshot
 from src.integration.asset_intelligence_store import load_latest_asset_intelligence_snapshot
-from src.integration.valuation_bridge import get_valuation as _bridge_valuation
+from src.integration.valuation_bridge import get_valuation as _bridge_valuation, list_available_tickers as _bridge_available_tickers
 from src.utils import load_config, project_path
 
 
@@ -79,6 +80,7 @@ def _positioning(status: str) -> str:
     return "MANTER"
 
 
+@st.cache_data(ttl=300, show_spinner=False)
 def get_watchlist_summary() -> list[dict]:
     df = _latest_snapshot()
     if df.empty:
@@ -96,34 +98,37 @@ def get_watchlist_summary() -> list[dict]:
     # valuation_bridge.get_valuation returns a dict with keys:
     #   preco_alvo, upside_pct, fonte, ticker, data_valuation
     # Falls back to scanner_quant_db if outputs_dir unavailable.
+    #
+    # PERFORMANCE: usa list_available_tickers() (1 glob) antes de abrir arquivos.
+    # get_valuation() tem cache em memória — relê o Excel apenas uma vez por sessão.
     tickers_in_scope = out["ticker"].tolist()
     bridge_cache: dict[str, dict] = {}
-    # Resolve outputs_dir once, with graceful fallback
+
     _outputs_dir: str | None = None
+    _available_in_bridge: set[str] = set()
     try:
         _outputs_dir = str(project_path("12_PYTHON/pipeline banco completo/outputs"))
+        # Um único glob — O(1ms) — para saber quais tickers têm Excel
+        _available_in_bridge = _bridge_available_tickers(_outputs_dir)
     except Exception:
-        pass  # outputs_dir unavailable — all tickers will use scanner_quant_db fallback
+        pass  # outputs_dir unavailable — all tickers use scanner_quant_db fallback
+
+    _no_bridge_entry = {
+        "valuation_available": False,
+        "valuation_source": "scanner_quant_db",
+        "valuation_method": "",
+        "valuation_date": "",
+    }
 
     for tk in tickers_in_scope:
-        if _outputs_dir is None:
-            bridge_cache[tk] = {
-                "valuation_available": False,
-                "valuation_source": "scanner_quant_db",
-                "valuation_method": "",
-                "valuation_date": "",
-            }
+        # Pular imediatamente tickers sem arquivo Excel — sem I/O
+        if _outputs_dir is None or str(tk).upper() not in _available_in_bridge:
+            bridge_cache[tk] = _no_bridge_entry
             continue
         try:
             vd = _bridge_valuation(str(tk), _outputs_dir)
         except Exception:
-            # Bridge failure — fallback to scanner_quant_db
-            bridge_cache[tk] = {
-                "valuation_available": False,
-                "valuation_source": "scanner_quant_db",
-                "valuation_method": "",
-                "valuation_date": "",
-            }
+            bridge_cache[tk] = _no_bridge_entry
             continue
         if vd and isinstance(vd, dict) and vd.get("preco_alvo"):
             bridge_cache[tk] = {
@@ -132,15 +137,9 @@ def get_watchlist_summary() -> list[dict]:
                 "valuation_method": "DCF/planilha",
                 "valuation_date": vd.get("data_valuation") or "",
             }
-            # Override fair_value from bridge if VALID
             out.loc[out["ticker"] == tk, "fair_value_brl"] = vd["preco_alvo"]
         else:
-            bridge_cache[tk] = {
-                "valuation_available": False,
-                "valuation_source": "scanner_quant_db",
-                "valuation_method": "",
-                "valuation_date": "",
-            }
+            bridge_cache[tk] = _no_bridge_entry
 
     out["valuation_available"] = out["ticker"].map(
         lambda t: bridge_cache.get(str(t), {}).get("valuation_available", False)
@@ -157,6 +156,7 @@ def get_watchlist_summary() -> list[dict]:
     return out[cols].sort_values("ticker").to_dict(orient="records")
 
 
+@st.cache_data(ttl=300, show_spinner=False)
 def get_asset_detail(ticker: str) -> dict | None:
     """
     Return comprehensive asset detail enriched with valuation bridge data.
@@ -245,8 +245,11 @@ def get_asset_detail(ticker: str) -> dict | None:
 
     bridge_vd: dict = {}
     if _bv_outputs_dir is not None:
+        # Verificar disponibilidade via cache antes de abrir qualquer arquivo
         try:
-            bridge_vd = _bridge_valuation(ticker_upper, _bv_outputs_dir) or {}
+            _avail = _bridge_available_tickers(_bv_outputs_dir)
+            if ticker_upper in _avail:
+                bridge_vd = _bridge_valuation(ticker_upper, _bv_outputs_dir) or {}
         except Exception:
             bridge_vd = {}
 
@@ -388,6 +391,7 @@ def _macro_series_to_dict(name: str, rows: list[dict]) -> list[dict]:
     return out
 
 
+@st.cache_data(ttl=300, show_spinner=False)
 def get_macro_panel() -> dict[str, list[dict]]:
     """
     Return available macro context from macro_series + market_regime_daily tables.
@@ -493,6 +497,7 @@ def get_macro_panel() -> dict[str, list[dict]]:
         }
 
 
+@st.cache_data(ttl=300, show_spinner=False)
 def get_opportunities() -> list[dict]:
     """
     Return top opportunities with real integrated scores from the engine.
@@ -551,10 +556,12 @@ def get_opportunities() -> list[dict]:
     ]
 
 
-def get_risk_snapshots(tickers: list[str] | None = None) -> list[dict]:
+@st.cache_data(ttl=120, show_spinner=False)
+def get_risk_snapshots(tickers: tuple[str, ...] | None = None) -> list[dict]:
     """
     Return real risk snapshots from risk_snapshots table.
     Falls back to empty list if table is empty or unavailable.
+    Note: tickers must be a tuple (hashable) for cache compatibility.
     """
     db = _db_path()
     try:
@@ -599,6 +606,7 @@ def get_risk_snapshots(tickers: list[str] | None = None) -> list[dict]:
     return []
 
 
+@st.cache_data(ttl=120, show_spinner=False)
 def get_option_structure_candidates(tickers: list[str] | None = None) -> list[dict]:
     """
     Return real option structure candidates from option_structure_candidates table.

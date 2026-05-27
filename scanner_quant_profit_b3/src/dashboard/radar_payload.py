@@ -122,17 +122,34 @@ def _tipo_ativo(signal_type: str) -> str:
 
 def _proxima_acao(direction: str, tier: str) -> tuple[str, str]:
     d, t = direction.upper(), tier.upper()
+    # ── Alta / Compra ──────────────────────────────────────────────────────
     if d == "BUY" and t in ("S", "A"):
-        return "Montar tese", "approved"
+        return "Operar compra agora", "approved"
     if d == "BUY" and t in ("B",):
-        return "Estudar entrada", "monitor"
+        return "Monitorar compra", "monitor"
+    if d == "BUY":
+        return "Aguardar confirmação", "monitor"
+    # ── Watch / Neutro ─────────────────────────────────────────────────────
     if d == "WATCH":
-        return "Aguardar gatilho", "monitor"
+        return "Aguardar confirmação", "monitor"
     if d == "HOLD":
-        return "Monitorar", "paper"
-    if d in ("SELL", "AVOID"):
-        return "Descartar", "blocked"
-    return "Monitorar", "paper"
+        return "Manter — sem nova ação", "paper"
+    # ── Venda / Baixa ──────────────────────────────────────────────────────
+    if d == "SELL":
+        return "Monitorar venda / reduzir exposição", "sell_signal"
+    if d == "MONITORAR_VENDA":
+        return "Monitorar saída gradual", "sell_signal"
+    # ── Proteção / Opções (sem shortlist RTD — lógica conceitual) ─────────
+    if d in ("PROTEÇÃO", "PROTECAO", "PUT_OPPORTUNITY"):
+        return "Avaliar proteção / put", "protect"
+    if d == "BEAR_SPREAD_OPPORTUNITY":
+        return "Avaliar trava de baixa", "protect"
+    if d == "VOLATILITY_WATCH":
+        return "Monitorar volatilidade — sem posicionamento direcional", "paper"
+    # ── Evitar ────────────────────────────────────────────────────────────
+    if d in ("AVOID", "EVITAR"):
+        return "Evitar — estrutura frágil", "blocked"
+    return "Sem dados suficientes", "paper"
 
 
 # ---------------------------------------------------------------------------
@@ -526,29 +543,57 @@ def _derive_gatilho_pt(
     score_final: float,
     adv21: float | None = None,
     var_pct: float | None = None,
+    score_volatilidade: float | None = None,
 ) -> str:
     """
     Deriva gatilho técnico discriminante em PT-BR a partir dos sub-scores.
 
     Taxonomia (em ordem de prioridade):
-      rompimento        — momentum e tendência alinhados acima de 70 (entrada imediata)
-      pullback          — momentum forte, tendência fraca (esperar recuo)
-      tendência         — tendência estrutural sem momentum (aguardar confirmação)
-      tendência c/ mom  — ambos presentes, zona de entrada
-      assimetria        — sinal parcial com EV favorável
-      apenas monitoramento — sinal fraco, sem trigger claro
-      sem gatilho       — HOLD/AVOID ou dados insuficientes
+      Alta:    rompimento / pullback / tendência / assimetria / monitoramento
+      Baixa:   pressão vendedora / tendência de baixa / fraqueza / monitorar venda
+      Opções:  put opportunity / trava de baixa / proteção / vol alta
+      Neutro:  sem gatilho / manter posição
     """
+    d = direction.upper()
     mom  = score_momentum  if score_momentum  is not None else score_final * 0.80
     tend = score_tendencia if score_tendencia is not None else score_final * 0.80
+    # score_vol invertido: alto = calmo, baixo = vol alta
+    vol  = score_volatilidade if score_volatilidade is not None else 50.0
 
-    if direction == "SELL":
-        return "saída — estrutura técnica frágil, reduzir exposição"
+    # ── Venda / Baixa ──────────────────────────────────────────────────────
+    if d == "SELL":
+        if mom < 35 and tend < 35:
+            return "pressão vendedora — momentum e tendência deteriorados, avaliar saída"
+        if tend < 40:
+            return "tendência de baixa confirmada — estrutura técnica vendida"
+        if adv21 is not None and adv21 < _SELL_ADV_FLOOR:
+            return "sinal de baixa — liquidez insuficiente para saída, monitorar"
+        return "sinal de baixa — avaliar redução gradual de exposição"
 
-    if direction in ("AVOID", "HOLD") and score_final < 52:
+    if d == "MONITORAR_VENDA":
+        if tend < 42:
+            return "fraqueza técnica em desenvolvimento — monitorar saída"
+        return "deterioração moderada — acompanhar tendência de curto prazo"
+
+    # ── Proteção / Opções (lógica conceitual — sem ticker de opção) ─────────
+    if d in ("PROTEÇÃO", "PROTECAO"):
+        return "ativo em resistência ou macro adverso — avaliar proteção via opções"
+
+    if d == "PUT_OPPORTUNITY":
+        return "queda com volatilidade favorável — avaliar compra de put ou trava de baixa"
+
+    if d == "BEAR_SPREAD_OPPORTUNITY":
+        return "tendência de baixa com vol controlada — avaliar trava de baixa"
+
+    if d == "VOLATILITY_WATCH":
+        return "volatilidade elevada sem direção clara — evitar posicionamento direcional"
+
+    # ── Evitar ────────────────────────────────────────────────────────────
+    if d in ("AVOID", "EVITAR") and score_final < 52:
         return "sem gatilho acionável — estrutura técnica insuficiente"
 
-    if direction == "BUY":
+    # ── Alta / Compra ──────────────────────────────────────────────────────
+    if d == "BUY":
         if mom >= 72 and tend >= 68:
             return "rompimento — momentum e tendência alinhados, entrada com confirmação"
         if mom >= 68 and tend < 55:
@@ -561,7 +606,7 @@ def _derive_gatilho_pt(
             return "assimetria positiva — risco/retorno favorável, aguardar confirmação"
         return "sinal parcial — aguardar alinhamento de momentum e tendência"
 
-    if direction == "WATCH":
+    if d == "WATCH":
         if tend >= 62:
             return "tendência em formação — monitorar rompimento para confirmar entrada"
         if mom >= 60:
@@ -585,6 +630,16 @@ _BUY_VAR_CEILING   = 5.5     # VaR 95% máximo %
 _WATCH_SCORE_FLOOR = 50.0
 _AVOID_SCORE_CEIL  = 38.0
 
+# Thresholds para sinal de baixa
+_SELL_SCORE_CEIL         = 38.0    # score abaixo deste → candidato bearish
+_SELL_MOM_CEIL           = 40.0    # momentum bearish
+_SELL_TEND_CEIL          = 40.0    # tendência bearish
+_SELL_ADV_FLOOR          = 10_000_000.0   # R$10M mínimo para SELL confirmado
+_MONITORAR_VENDA_SCORE_CEIL = 45.0  # sinal bearish moderado
+# score_volatilidade é INVERTIDO: baixo = vol alta, alto = vol baixa
+_VOL_HIGH_SCORE_CEIL     = 38.0    # score_vol < 38 → vol elevada (score invertido)
+_PROTEÇÃO_HEADWIND_FLOOR = 68.0    # macro headwind ≥ 68 → recomendar proteção
+
 
 def _calibrated_direction(
     raw_direction: str,
@@ -594,14 +649,26 @@ def _calibrated_direction(
     adv21: float | None,
     var_pct: float | None,
     data_quality: float,
+    score_volatilidade: float | None = None,
+    macro_headwind: float = 50.0,
 ) -> tuple[str, str, list[str]]:
     """
     Aplica thresholds conservadores multi-fator para direção e tier finais.
 
     BUY: score ≥ 63 + momentum ≥ 56 + tendência ≥ 54 + ADV ≥ R$25M + VaR ≤ 5.5%
     WATCH: score ≥ 50 + (momentum ≥ 50 OU tendência ≥ 52)
-    AVOID: score < 38 OU VaR > 8% OU ADV < R$2M
-    Penalidades reduzem tier sem mudar direção.
+    SELL (raw): preservado com tier ajustado por liquidez
+    SELL (score combo): detectado quando score + mom + tend todos bearish + ADV ≥ R$10M
+    MONITORAR_VENDA: fraqueza moderada (2+ fatores bearish)
+    PROTEÇÃO: macro headwind ≥ 68 + score moderado
+    VOLATILITY_WATCH: vol alta (score_vol < 38) + sinal inconclusivo
+    AVOID: fraqueza estrutural extrema
+
+    Regras de bloqueio de sinal de venda (Task 6):
+      - liquidez < R$5M → não classifica como venda
+      - dados insuficientes (dq < 50) → não classifica como venda
+      - risco muito alto (VaR > 8%) → não classifica como venda
+      - sinais contraditórios (|mom - tend| > 30) → não classifica como venda
 
     Retorna (direction, tier, penalidades_aplicadas).
     """
@@ -609,6 +676,7 @@ def _calibrated_direction(
 
     mom  = score_momentum  if score_momentum  is not None else score_final * 0.80
     tend = score_tendencia if score_tendencia is not None else score_final * 0.80
+    vol  = score_volatilidade if score_volatilidade is not None else 50.0
 
     # Coletar penalidades
     if adv21 is None:
@@ -627,7 +695,42 @@ def _calibrated_direction(
     if score_tendencia is None:
         penalties.append("tendência indisponível (realtime ausente)")
 
-    # AVOID: fraqueza estrutural
+    # ── Regras de bloqueio de sinal de venda ─────────────────────────────
+    # Sem liquidez, dados ruins, risco alto ou sinais contraditórios → não vende
+    bearish_blocked = (
+        data_quality < 50
+        or (adv21 is not None and adv21 < 5_000_000)
+        or (var_pct is not None and var_pct > 8.0)
+        or (score_momentum is not None and score_tendencia is not None
+            and abs(score_momentum - score_tendencia) > 30)  # sinal contraditório
+    )
+
+    # ── SELL raw: preservar com tier ajustado (antes do AVOID check) ──────
+    # Um ativo em PRESSÃO VENDEDORA é SELL, não AVOID
+    if raw_direction == "SELL":
+        if adv21 is not None and adv21 >= _SELL_ADV_FLOOR and data_quality >= 55:
+            return "SELL", "C", penalties   # confirmado com liquidez
+        return "SELL", "D", penalties       # sem confirmação de liquidez
+
+    # ── Bearish score combo: detectar sinal de venda não sinalizado ───────
+    # Avaliado ANTES do AVOID para distinguir "vender" de "evitar comprar"
+    if not bearish_blocked and score_momentum is not None and score_tendencia is not None:
+        # Sinal negativo forte: score + momentum + tendência todos bearish + ADV ≥ R$10M
+        if (score_final < _SELL_SCORE_CEIL and mom < _SELL_MOM_CEIL and tend < _SELL_TEND_CEIL
+                and adv21 is not None and adv21 >= _SELL_ADV_FLOOR):
+            penalties.append("sinal bearish por combinação de scores")
+            return "SELL", "C", penalties
+        # Fraqueza moderada: 2+ fatores bearish (score pode estar acima de AVOID)
+        bearish_count = sum([
+            score_final < _MONITORAR_VENDA_SCORE_CEIL,
+            mom < _SELL_MOM_CEIL,
+            tend < _SELL_TEND_CEIL,
+        ])
+        if bearish_count >= 2 and score_final < _MONITORAR_VENDA_SCORE_CEIL:
+            penalties.append("fraqueza técnica detectada em múltiplos fatores")
+            return "MONITORAR_VENDA", "D", penalties
+
+    # ── AVOID: fraqueza estrutural extrema sem sinal de venda confirmado ──
     avoid = (
         score_final < _AVOID_SCORE_CEIL
         or (var_pct is not None and var_pct > 8.0)
@@ -636,10 +739,22 @@ def _calibrated_direction(
     if avoid:
         return "AVOID", "D", penalties
 
-    if raw_direction == "SELL":
-        return "SELL", "D", penalties
+    # ── Proteção: macro headwind elevado sem sinal de compra ──────────────
+    if macro_headwind >= _PROTEÇÃO_HEADWIND_FLOOR and score_final < _BUY_SCORE_FLOOR:
+        if not bearish_blocked:
+            penalties.append(f"macro adverso (headwind {macro_headwind:.0f})")
+            return "PROTEÇÃO", "C", penalties
 
-    # Critério BUY: todos os fatores concordam
+    # ── Volatility Watch: vol alta, sinal inconclusivo ────────────────────
+    # score_vol invertido: baixo = vol alta
+    if (vol < _VOL_HIGH_SCORE_CEIL
+            and _AVOID_SCORE_CEIL <= score_final < _BUY_SCORE_FLOOR
+            and raw_direction not in ("BUY",)):
+        if not bearish_blocked:
+            penalties.append(f"volatilidade elevada (score_vol {vol:.0f}) sem direção clara")
+            return "VOLATILITY_WATCH", "C", penalties
+
+    # ── BUY / WATCH (lado comprado) ───────────────────────────────────────
     buy_ok = (
         score_final >= _BUY_SCORE_FLOOR
         and mom >= _BUY_MOM_FLOOR
@@ -669,6 +784,122 @@ def _calibrated_direction(
         return "HOLD", "C", penalties
 
     return "HOLD", "C", penalties
+
+
+# ---------------------------------------------------------------------------
+# Viés, estratégia e direção operacional (camada de decisão operacional)
+# ---------------------------------------------------------------------------
+
+def _compute_vies(
+    direction: str,
+    score_volatilidade: float | None,
+    macro_headwind: float = 50.0,
+) -> str:
+    """
+    Retorna o viés operacional:
+      Alta | Baixa | Neutro | Proteção | Volatilidade
+    """
+    d = direction.upper()
+    # score_vol invertido: baixo = vol alta
+    vol_alta = (score_volatilidade is not None and score_volatilidade < _VOL_HIGH_SCORE_CEIL)
+
+    if d == "BUY":
+        return "Alta"
+    if d in ("SELL", "MONITORAR_VENDA"):
+        return "Baixa"
+    if d in ("PROTEÇÃO", "PROTECAO", "PUT_OPPORTUNITY", "BEAR_SPREAD_OPPORTUNITY"):
+        return "Proteção"
+    if d == "VOLATILITY_WATCH" or vol_alta:
+        return "Volatilidade"
+    if macro_headwind >= _PROTEÇÃO_HEADWIND_FLOOR:
+        return "Proteção"
+    if d in ("WATCH", "HOLD", "AVOID", "EVITAR"):
+        return "Neutro"
+    return "Neutro"
+
+
+def _compute_estrategia(
+    direction: str,
+    vies: str,
+    score_volatilidade: float | None,
+    adv21: float | None,
+) -> str:
+    """
+    Retorna a estratégia possível em linguagem simples:
+      ação comprada | put | trava de baixa | hedge | evitar | monitorar | monitorar venda
+    Opções são sugeridas apenas conceitualmente — sem ticker de opção.
+    """
+    d = direction.upper()
+    # score_vol invertido: baixo = vol alta → options mais caras mas setup válido
+    vol_alta = (score_volatilidade is not None and score_volatilidade < _VOL_HIGH_SCORE_CEIL)
+    liquida = adv21 is not None and adv21 >= _SELL_ADV_FLOOR
+
+    if d == "BUY":
+        return "ação comprada"
+    if d == "WATCH":
+        return "monitorar"
+    if d == "HOLD":
+        return "manter"
+    if d == "SELL":
+        if not liquida:
+            return "evitar"
+        if vol_alta:
+            return "put"
+        return "trava de baixa"
+    if d == "MONITORAR_VENDA":
+        return "monitorar venda"
+    if d == "PUT_OPPORTUNITY":
+        return "put"
+    if d == "BEAR_SPREAD_OPPORTUNITY":
+        return "trava de baixa"
+    if d in ("PROTEÇÃO", "PROTECAO"):
+        return "hedge"
+    if d == "VOLATILITY_WATCH":
+        return "monitorar"
+    if d in ("AVOID", "EVITAR"):
+        return "evitar"
+    return "monitorar"
+
+
+def _compute_direcao_operacional(
+    direction: str,
+    tier: str,
+    score_volatilidade: float | None,
+    macro_headwind: float = 50.0,
+) -> str:
+    """
+    Mapeia a direção técnica para a direção operacional em PT-BR completa.
+    Inclui opções conceituais quando sinal de queda + vol favorável.
+    """
+    d = direction.upper()
+    t = tier.upper()
+    vol_alta = (score_volatilidade is not None and score_volatilidade < _VOL_HIGH_SCORE_CEIL)
+
+    if d == "BUY" and t in ("S", "A"):
+        return "COMPRA"
+    if d == "BUY":
+        return "MONITORAR_COMPRA"
+    if d == "WATCH":
+        return "AGUARDAR"
+    if d == "HOLD":
+        return "MANTER"
+    if d == "SELL":
+        if vol_alta:
+            return "PUT_OPPORTUNITY"
+        return "VENDA"
+    if d == "MONITORAR_VENDA":
+        return "MONITORAR_VENDA"
+    if d in ("PROTEÇÃO", "PROTECAO"):
+        return "PROTEÇÃO"
+    if d == "PUT_OPPORTUNITY":
+        return "PUT_OPPORTUNITY"
+    if d == "BEAR_SPREAD_OPPORTUNITY":
+        return "BEAR_SPREAD_OPPORTUNITY"
+    if d == "VOLATILITY_WATCH":
+        return "VOLATILITY_WATCH"
+    if d in ("AVOID", "EVITAR"):
+        return "EVITAR"
+    return "AGUARDAR"
 
 
 def _build_context_fields(
@@ -712,9 +943,27 @@ def _build_context_fields(
         motivos.append("cobertura de monitoramento automático")
     por_que = "; ".join(motivos[:4])
 
-    # ── O que falta para BUY ──────────────────────────────────────────────
+    # ── O que falta / contexto de próxima ação ───────────────────────────
     falta: list[str] = []
-    if direction != "BUY":
+    d_upper = direction.upper()
+    if d_upper == "BUY":
+        falta = ["—"]
+    elif d_upper in ("SELL", "MONITORAR_VENDA"):
+        # Contexto bearish: o que confirma a saída
+        if mom is not None and mom < _SELL_MOM_CEIL:
+            falta.append(f"momentum bearish confirmado ({mom:.0f})")
+        if tend is not None and tend < _SELL_TEND_CEIL:
+            falta.append(f"tendência vendida ({tend:.0f})")
+        if adv21 is not None and adv21 < _SELL_ADV_FLOOR:
+            falta.append(f"aguardar ADV ≥ R${_SELL_ADV_FLOOR/1e6:.0f}M para saída (atual R${adv21/1e6:.0f}M)")
+        if not falta:
+            falta = ["confirmar volume e risco antes da saída"]
+    elif d_upper in ("PROTEÇÃO", "PROTECAO", "PUT_OPPORTUNITY"):
+        falta = ["shortlist de opções (RTD ainda sem dados de opções)"]
+    elif d_upper == "VOLATILITY_WATCH":
+        falta = ["aguardar definição de direção antes de posicionar"]
+    else:
+        # Contexto comprador: o que falta para BUY
         if score_final < _BUY_SCORE_FLOOR:
             falta.append(f"score ≥ {_BUY_SCORE_FLOOR:.0f} (atual {score_final:.0f})")
         if mom is not None and mom < _BUY_MOM_FLOOR:
@@ -731,8 +980,6 @@ def _build_context_fields(
             falta.append(f"ADV ≥ R${_BUY_ADV_FLOOR/1e6:.0f}M (atual R${adv21/1e6:.0f}M)")
         if var_pct is not None and var_pct > _BUY_VAR_CEILING:
             falta.append(f"VaR ≤ {_BUY_VAR_CEILING}% (atual {var_pct:.1f}%)")
-    else:
-        falta = ["—"]
     o_que_falta = "; ".join(falta[:3]) if falta else "—"
 
     # ── Risco principal ───────────────────────────────────────────────────
@@ -971,6 +1218,8 @@ def _build_opportunity(
     # ── Direção calibrada conservadora (multi-fator) ─────────────────────
     # Aplica critérios de concordância: score + momentum + tendência + liquidez + risco.
     # raw_direction é o sinal bruto; _calibrated_direction decide se ele se sustenta.
+    # Agora também detecta sinais bearish por combinação de scores.
+    macro_hw = float(getattr(regime, "macro_headwind", 50.0)) if regime else 50.0
     final_direction, final_tier, penalties = _calibrated_direction(
         raw_direction=raw_direction,
         score_final=score_final,
@@ -979,6 +1228,8 @@ def _build_opportunity(
         adv21=adv21,
         var_pct=var_pct,
         data_quality=dq,
+        score_volatilidade=score_vol,
+        macro_headwind=macro_hw,
     )
     if penalties:
         warnings.extend(penalties[:2])
@@ -987,9 +1238,7 @@ def _build_opportunity(
     regime_snapshot = regime
     explanation_dict = explain_opportunity(meta, ev_result, regime_snapshot)
 
-    # Gatilho discriminante em PT-BR (substitui os 4 strings genéricos do MVP).
-    # Diferencia: rompimento, pullback, tendência, reversão, assimetria,
-    #             apenas monitoramento, sem gatilho acionável.
+    # Gatilho discriminante em PT-BR — agora inclui lado baixista.
     gatilho = _derive_gatilho_pt(
         direction=final_direction,
         score_momentum=score_momentum,
@@ -997,6 +1246,14 @@ def _build_opportunity(
         score_final=score_final,
         adv21=adv21,
         var_pct=var_pct,
+        score_volatilidade=score_vol,
+    )
+
+    # Viés, estratégia e direção operacional PT-BR completa
+    vies = _compute_vies(final_direction, score_vol, macro_hw)
+    estrategia = _compute_estrategia(final_direction, vies, score_vol, adv21)
+    direcao_operacional = _compute_direcao_operacional(
+        final_direction, final_tier, score_vol, macro_hw
     )
 
     primary_driver = explanation_dict.get("primary_driver", "")
@@ -1088,6 +1345,10 @@ def _build_opportunity(
         # Direção bruta (antes da calibração)
         "raw_direction":    raw_direction,
         "raw_tier":         raw_tier,
+        # Direção operacional PT-BR completa + viés + estratégia
+        "direcao_operacional": direcao_operacional,
+        "vies":             vies,
+        "estrategia":       estrategia,
         # Próxima ação
         "proxima_acao":     proxima_acao,
         "acao_variant":     acao_variant,

@@ -78,11 +78,25 @@ def _score_color(score: float) -> str:
 
 def _tier_badge(tier: str, direction: str) -> str:
     tier = tier.upper()
+    # Verde = alta/compra | Vermelho = baixa/venda | Azul = proteção | Cinza = neutro | Âmbar = atenção
     dir_colors = {
-        "BUY":   ("var(--pos-tint)", "var(--pos-500)", "var(--pos-border)"),
-        "WATCH": ("var(--warn-tint)", "var(--warn-500)", "var(--warn-border)"),
-        "HOLD":  ("rgba(100,116,139,0.1)", "var(--fg-5)", "rgba(100,116,139,0.2)"),
-        "SELL":  ("var(--neg-tint)", "var(--neg-500)", "var(--neg-border)"),
+        # Alta (verde)
+        "BUY":                    ("var(--pos-tint)", "var(--pos-500)", "var(--pos-border)"),
+        # Neutro/espera (âmbar)
+        "WATCH":                  ("var(--warn-tint)", "var(--warn-500)", "var(--warn-border)"),
+        "HOLD":                   ("rgba(100,116,139,0.1)", "var(--fg-5)", "rgba(100,116,139,0.2)"),
+        # Baixa/venda (vermelho)
+        "SELL":                   ("var(--neg-tint)", "var(--neg-500)", "var(--neg-border)"),
+        "MONITORAR_VENDA":        ("rgba(249,115,22,0.1)", "#F97316", "rgba(249,115,22,0.3)"),
+        "AVOID":                  ("var(--neg-tint)", "var(--neg-500)", "var(--neg-border)"),
+        "EVITAR":                 ("var(--neg-tint)", "var(--neg-500)", "var(--neg-border)"),
+        # Proteção/hedge (azul)
+        "PROTEÇÃO":               ("rgba(59,130,246,0.1)", "#3B82F6", "rgba(59,130,246,0.3)"),
+        "PROTECAO":               ("rgba(59,130,246,0.1)", "#3B82F6", "rgba(59,130,246,0.3)"),
+        "PUT_OPPORTUNITY":        ("rgba(139,92,246,0.1)", "#8B5CF6", "rgba(139,92,246,0.3)"),
+        "BEAR_SPREAD_OPPORTUNITY":("rgba(139,92,246,0.1)", "#8B5CF6", "rgba(139,92,246,0.3)"),
+        # Volatilidade (âmbar escuro)
+        "VOLATILITY_WATCH":       ("rgba(217,119,6,0.1)", "#D97706", "rgba(217,119,6,0.3)"),
     }
     bg, fg, border = dir_colors.get(direction.upper(), dir_colors["HOLD"])
     return (
@@ -93,12 +107,52 @@ def _tier_badge(tier: str, direction: str) -> str:
     )
 
 
+def _vies_badge(vies: str) -> str:
+    """Badge de viés operacional: Alta | Baixa | Neutro | Proteção | Volatilidade."""
+    _vies_colors = {
+        "Alta":        ("var(--pos-tint)", "var(--pos-500)"),
+        "Baixa":       ("var(--neg-tint)", "var(--neg-500)"),
+        "Neutro":      ("rgba(100,116,139,0.1)", "var(--fg-5)"),
+        "Proteção":    ("rgba(59,130,246,0.1)", "#3B82F6"),
+        "Volatilidade":("var(--warn-tint)", "var(--warn-500)"),
+    }
+    bg, fg = _vies_colors.get(vies, _vies_colors["Neutro"])
+    return (
+        f'<span style="padding:2px 8px;border-radius:4px;background:{bg};'
+        f'color:{fg};font-size:.6rem;font-weight:700;">Viés: {vies}</span>'
+    )
+
+
+def _estrategia_badge(estrategia: str) -> str:
+    """Badge de estratégia possível."""
+    _est_colors = {
+        "ação comprada":   ("var(--pos-tint)", "var(--pos-500)"),
+        "put":             ("rgba(139,92,246,0.1)", "#8B5CF6"),
+        "trava de baixa":  ("rgba(139,92,246,0.1)", "#8B5CF6"),
+        "hedge":           ("rgba(59,130,246,0.1)", "#3B82F6"),
+        "evitar":          ("var(--neg-tint)", "var(--neg-500)"),
+        "monitorar":       ("rgba(100,116,139,0.1)", "var(--fg-5)"),
+        "monitorar venda": ("rgba(249,115,22,0.1)", "#F97316"),
+        "manter":          ("rgba(100,116,139,0.1)", "var(--fg-5)"),
+    }
+    bg, fg = _est_colors.get(estrategia, ("rgba(100,116,139,0.1)", "var(--fg-5)"))
+    return (
+        f'<span style="padding:2px 8px;border-radius:4px;background:{bg};'
+        f'color:{fg};font-size:.6rem;font-weight:700;">{estrategia}</span>'
+    )
+
+
 def _action_chip(label: str, variant: str) -> str:
     colors = {
-        "approved": ("var(--pos-tint)", "var(--pos-500)"),
-        "monitor":  ("var(--warn-tint)", "var(--warn-500)"),
-        "paper":    ("rgba(100,116,139,0.1)", "var(--fg-4)"),
-        "blocked":  ("var(--neg-tint)", "var(--neg-500)"),
+        # Alta
+        "approved":    ("var(--pos-tint)", "var(--pos-500)"),
+        "monitor":     ("var(--warn-tint)", "var(--warn-500)"),
+        "paper":       ("rgba(100,116,139,0.1)", "var(--fg-4)"),
+        # Baixa/venda (vermelho e laranja)
+        "blocked":     ("var(--neg-tint)", "var(--neg-500)"),
+        "sell_signal": ("rgba(249,115,22,0.1)", "#F97316"),
+        # Proteção/opções (azul/violeta)
+        "protect":     ("rgba(59,130,246,0.1)", "#3B82F6"),
     }
     bg, fg = colors.get(variant, colors["paper"])
     return (
@@ -223,6 +277,8 @@ def _render_opportunity_card(opp: dict) -> None:
 
     proxima_acao = str(opp.get("proxima_acao") or "Monitorar")
     acao_variant = str(opp.get("acao_variant") or "paper")
+    vies         = str(opp.get("vies") or "Neutro")
+    estrategia   = str(opp.get("estrategia") or "monitorar")
     scores   = opp.get("scores", {})
     bullish  = opp.get("top_bullish", [])
     bearish  = opp.get("top_bearish", [])
@@ -237,6 +293,8 @@ def _render_opportunity_card(opp: dict) -> None:
     score_color = _score_color(score)
     tier_html   = _tier_badge(tier, direction)
     acao_html   = _action_chip(proxima_acao, acao_variant)
+    vies_html   = _vies_badge(vies)
+    est_html    = _estrategia_badge(estrategia)
 
     # Linha de sub-scores disponíveis
     sub_scores_pills = []
@@ -302,11 +360,18 @@ def _render_opportunity_card(opp: dict) -> None:
 
     # Cor do gatilho por direção
     _gatilho_borders = {
-        "BUY":   "var(--pos-border)",
-        "WATCH": "var(--warn-border)",
-        "HOLD":  "rgba(100,116,139,0.3)",
-        "SELL":  "var(--neg-border)",
-        "AVOID": "var(--neg-border)",
+        "BUY":                    "var(--pos-border)",
+        "WATCH":                  "var(--warn-border)",
+        "HOLD":                   "rgba(100,116,139,0.3)",
+        "SELL":                   "var(--neg-border)",
+        "MONITORAR_VENDA":        "rgba(249,115,22,0.5)",
+        "AVOID":                  "var(--neg-border)",
+        "EVITAR":                 "var(--neg-border)",
+        "PROTEÇÃO":               "rgba(59,130,246,0.5)",
+        "PROTECAO":               "rgba(59,130,246,0.5)",
+        "PUT_OPPORTUNITY":        "rgba(139,92,246,0.5)",
+        "BEAR_SPREAD_OPPORTUNITY":"rgba(139,92,246,0.5)",
+        "VOLATILITY_WATCH":       "rgba(217,119,6,0.5)",
     }
     gatilho_border = _gatilho_borders.get(direction.upper(), "rgba(100,116,139,0.3)")
 
@@ -383,8 +448,13 @@ def _render_opportunity_card(opp: dict) -> None:
         </div>
       </div>
 
+      <!-- Viés operacional + Estratégia possível -->
+      <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
+        {vies_html} {est_html}
+      </div>
+
       <!-- Linha de gatilho (signal_explainer) -->
-      <div style="margin-top:10px;padding:8px 12px;background:var(--bg-2);
+      <div style="margin-top:8px;padding:8px 12px;background:var(--bg-2);
                   border-radius:6px;border-left:3px solid {gatilho_border};">
         <span style="font-size:.6rem;font-weight:700;color:var(--fg-5);
                      text-transform:uppercase;letter-spacing:.6px;">Gatilho · </span>
@@ -472,7 +542,7 @@ def main() -> None:
         '<div class="page-header">'
         '<div class="page-header-title">Radar de Oportunidades</div>'
         '<div class="page-header-sub">'
-        'Sinais de entrada ranqueados — expected value, liquidez, sinal técnico e regime macro'
+        'Compra · Venda · Proteção · Opções — sinais ranqueados por expected value, liquidez, técnico e macro'
         '</div></div>',
         unsafe_allow_html=True,
     )
@@ -495,20 +565,27 @@ def main() -> None:
     total = len(opportunities)
     buys  = sum(1 for o in opportunities if o.get("direction") == "BUY")
     watch = sum(1 for o in opportunities if o.get("direction") == "WATCH")
+    vendas = sum(1 for o in opportunities
+                 if o.get("direction") in ("SELL", "MONITORAR_VENDA"))
+    protecao = sum(1 for o in opportunities
+                   if o.get("direction") in ("PROTEÇÃO", "PROTECAO", "PUT_OPPORTUNITY",
+                                             "BEAR_SPREAD_OPPORTUNITY", "VOLATILITY_WATCH"))
     high_ev = sum(1 for o in opportunities if (o.get("ev_score") or 0) >= 55)
     with_adv = sum(1 for o in opportunities if o.get("liquidez_raw") is not None)
 
-    c1, c2, c3, c4, c5 = st.columns(5)
+    c1, c2, c3, c4, c5, c6 = st.columns(6)
     with c1:
         kpi_card("SINAIS", str(total), color="cyan")
     with c2:
-        kpi_card("BUY", str(buys), color="green")
+        kpi_card("COMPRA", str(buys), color="green")
     with c3:
         kpi_card("WATCH", str(watch), color="amber")
     with c4:
-        kpi_card("EV ALTO (≥55)", str(high_ev), color="violet")
+        kpi_card("VENDA/FRAQUEZA", str(vendas), color="red")
     with c5:
-        kpi_card("COM ADV", str(with_adv), color="cyan")
+        kpi_card("PROTEÇÃO", str(protecao), color="violet")
+    with c6:
+        kpi_card("EV ALTO (≥55)", str(high_ev), color="cyan")
 
     if not opportunities:
         st.markdown("<br>", unsafe_allow_html=True)
@@ -522,12 +599,19 @@ def main() -> None:
 
     # ── Filtros ───────────────────────────────────────────────────────────────
     st.markdown("<br>", unsafe_allow_html=True)
-    cf1, cf2, cf3, cf4 = st.columns([1, 1, 1, 1])
+    cf1, cf2, cf3, cf4 = st.columns([1, 1.4, 1, 1])
     with cf1:
         min_score = st.slider("Meta score mínimo", 0, 100, 0, 5, key="ro_meta_score")
     with cf2:
-        dirs_all = ["BUY", "WATCH", "HOLD", "SELL"]
-        sel_dirs = st.multiselect("Direção", dirs_all, default=["BUY", "WATCH"], key="ro_dirs")
+        dirs_all = [
+            "BUY", "WATCH", "HOLD",
+            "SELL", "MONITORAR_VENDA",
+            "PROTEÇÃO", "PUT_OPPORTUNITY", "BEAR_SPREAD_OPPORTUNITY", "VOLATILITY_WATCH",
+            "AVOID",
+        ]
+        # Default: todas menos AVOID (estrutura frágil)
+        dirs_default = [d for d in dirs_all if d != "AVOID"]
+        sel_dirs = st.multiselect("Direção / Viés", dirs_all, default=dirs_default, key="ro_dirs")
     with cf3:
         tiers_all = ["S", "A", "B", "C", "D"]
         sel_tiers = st.multiselect("Tier", tiers_all, default=tiers_all, key="ro_tiers")
@@ -593,13 +677,15 @@ def main() -> None:
                 "Tipo":        o.get("tipo", "—"),
                 "Score":       o.get("score"),
                 "Direção":     o.get("direction", "—"),
+                "Viés":        o.get("vies", "Neutro"),
+                "Estratégia":  o.get("estrategia", "monitorar"),
                 "Tier":        o.get("tier", "—"),
                 "EV Score":    o.get("ev_score"),
                 "Assimetria":  o.get("assimetria", "—"),
                 "Risco":       o.get("risco", "—"),
                 "Liquidez":    o.get("liquidez", "—"),
                 "Regime":      o.get("regime", "—"),
-                "Gatilho":     str(o.get("gatilho") or "—")[:50],
+                "Gatilho":     str(o.get("gatilho") or "—")[:60],
                 "Próx. Ação":  o.get("proxima_acao", "—"),
             })
 
