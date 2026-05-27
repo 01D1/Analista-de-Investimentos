@@ -12,9 +12,10 @@ if root_str in sys.path:
 sys.path.insert(0, root_str)
 
 _PIPELINE_ROOT = str(SCANNER_ROOT.parent / "12_PYTHON")
-if _PIPELINE_ROOT in sys.path:
-    sys.path.remove(_PIPELINE_ROOT)
-sys.path.insert(0, _PIPELINE_ROOT)
+# Remove 12_PYTHON to avoid shadowing scanner_quant src/ namespace
+for _p in list(sys.path):
+    if _p.startswith(_PIPELINE_ROOT):
+        sys.path.remove(_p)
 for _k in list(sys.modules):
     if _k in ("src", "src.utils") or _k.startswith("src.utils."):
         del sys.modules[_k]
@@ -26,7 +27,7 @@ from src.ui.components import (
     opportunity_card, section_title, empty_state,
     status_chip, alert_block, kpi_card,
 )
-from src.dashboard.data import get_opportunities
+from src.dashboard.radar_payload import get_radar_payload as _get_radar_payload
 
 try:
     from src.quant.market_regime_engine import detect_regime
@@ -54,9 +55,9 @@ _DIR_CHIP = {
 
 
 def _meta_badge(opp: dict) -> str:
-    tier = opp.get("conviction_tier", "C")
-    direction = opp.get("signal_direction", "WATCH")
-    meta = float(opp.get("institutional_meta_score") or opp.get("conviction_score") or 0)
+    tier = str(opp.get("tier", "C")).upper()
+    direction = str(opp.get("direction", "WATCH")).upper()
+    meta = float(opp.get("score") or 0)
     tier_cls, tier_label = _TIER_CHIP.get(tier, ("chip chip-review", f"Tier {tier}"))
     dir_cls = _DIR_CHIP.get(direction, "chip chip-paper")
     tier_chip = status_chip(tier.upper(), label=tier_label) if tier.upper() in ("S", "A", "B", "C", "D") else f'<div class="{tier_cls}">{tier_label}</div>'
@@ -132,9 +133,17 @@ def main() -> None:
     else:
         snapshot = None
 
-    opps = get_opportunities()
+    try:
+        payload = _get_radar_payload()
+        opps = payload.get("opportunities", []) or []
+    except Exception:
+        opps = []
+
     if not opps:
-        empty_state("Nenhum sinal encontrado para hoje.")
+        empty_state(
+            "Nenhum sinal disponível no momento.\n\n"
+            "O pipeline quantitativo precisa executar para gerar sinais de oportunidades."
+        )
         st.stop()
 
     # Filtros
@@ -145,13 +154,13 @@ def main() -> None:
         tiers_all = ["S", "A", "B", "C", "D"]
         sel_tiers = st.multiselect("Tier", tiers_all, default=tiers_all)
     with col_f3:
-        dirs_all = ["BUY", "WATCH", "HOLD", "SELL"]
-        sel_dirs = st.multiselect("Direção", dirs_all, default=["BUY", "WATCH"])
+        dirs_all = ["BUY", "WATCH", "HOLD", "SELL", "FRAQUEZA", "PROTEÇÃO"]
+        sel_dirs = st.multiselect("Direção", dirs_all, default=dirs_all)
 
     def _passes(o: dict) -> bool:
-        meta = float(o.get("institutional_meta_score") or o.get("conviction_score") or 0)
-        tier = o.get("conviction_tier", "C")
-        direction = o.get("signal_direction", "WATCH")
+        meta = float(o.get("score") or 0)
+        tier = str(o.get("tier") or "D").upper()
+        direction = str(o.get("direction") or "HOLD").upper()
         if meta < min_score:
             return False
         if sel_tiers and tier not in sel_tiers:
@@ -162,15 +171,12 @@ def main() -> None:
 
     filtered = [o for o in opps if _passes(o)]
     # Ordenar por meta-score decrescente
-    filtered.sort(
-        key=lambda o: float(o.get("institutional_meta_score") or o.get("conviction_score") or 0),
-        reverse=True,
-    )
+    filtered.sort(key=lambda o: float(o.get("score") or 0), reverse=True)
 
     section_title(f"{len(filtered)} oportunidade(s) — score >= {min_score}", icon="")
 
     if not filtered:
-        empty_state(f"Nenhuma oportunidade com score >= {min_score}.")
+        empty_state(f"Nenhuma oportunidade com os filtros selecionados.")
         st.stop()
 
     # Cards 2x2
@@ -180,31 +186,30 @@ def main() -> None:
         for col, opp in zip(cols, chunk):
             with col:
                 meta_b = _meta_badge(opp)
+                # Mapeia campos radar_payload para o schema do opportunity_card
                 card_html = opportunity_card(
                     ticker=opp.get("ticker", "—"),
-                    description=opp.get("description", ""),
-                    signal_type=opp.get("signal_type", ""),
-                    conviction_score=int(
-                        float(opp.get("institutional_meta_score") or opp.get("conviction_score") or 0)
-                    ),
+                    description=str(opp.get("gatilho") or opp.get("description") or "—")[:120],
+                    conviction_score=int(float(opp.get("score") or 0)),
                 )
                 # Injeta badges de tier/direction antes do card
                 st.markdown(meta_b, unsafe_allow_html=True)
                 st.markdown(card_html, unsafe_allow_html=True)
 
-                # Detalhes expansíveis
-                explanation = opp.get("explanation")
-                if explanation and isinstance(explanation, dict):
-                    with st.expander("Ver explicação institucional"):
-                        st.markdown(explain_html(explanation), unsafe_allow_html=True)
-                elif opp.get("top_bullish_factors") or opp.get("top_bearish_factors"):
+                # Fatores bullish/bearish do radar_payload
+                bulls = opp.get("bullish", [])
+                bears = opp.get("bearish", [])
+                if bulls or bears:
                     with st.expander("Ver fatores"):
-                        bulls = opp.get("top_bullish_factors", [])
-                        bears = opp.get("top_bearish_factors", [])
                         if bulls:
-                            st.caption("Favoráveis: " + " · ".join(bulls[:3]))
+                            st.caption("✅ Favoráveis: " + " · ".join(bulls[:3]))
                         if bears:
-                            st.caption("Riscos: " + " · ".join(bears[:3]))
+                            st.caption("⚠️ Riscos: " + " · ".join(bears[:3]))
+
+                # EV summary se disponível
+                ev_summary = opp.get("ev_summary")
+                if ev_summary:
+                    st.caption(f"EV: {ev_summary[:100]}")
 
 
 main()

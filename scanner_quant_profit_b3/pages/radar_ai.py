@@ -55,9 +55,9 @@ from src.ui.components import (
     positioning_badge,
     watchlist_card,
 )
+from src.dashboard.radar_payload import get_radar_payload as _get_radar_payload
 from src.dashboard.data import (
     get_watchlist_summary,
-    get_opportunities,
     get_asset_detail,
     get_risk_snapshots,
 )
@@ -173,7 +173,12 @@ def render_overview_tab(rows: list[dict]) -> None:
 
 def render_opportunities_tab() -> None:
     """Top opcoes ordenadas por conviction score real."""
-    opportunities = get_opportunities()
+    try:
+        payload = _get_radar_payload()
+        opportunities = payload.get("opportunities", []) or []
+    except Exception:
+        opportunities = []
+
     if not opportunities:
         empty_state(
             "Nenhuma oportunidade com score positivo.\n"
@@ -182,20 +187,51 @@ def render_opportunities_tab() -> None:
         )
         return
 
-    section_title("Top Oportunidades por Score", icon="")
+    # Ordena por score decrescente
+    opportunities.sort(key=lambda o: float(o.get("score") or 0), reverse=True)
+
+    section_title(f"Top Oportunidades ({len(opportunities)})", icon="")
 
     for opp in opportunities:
-        tier_label = _conviction_tier(opp.get("signal_type", ""))[1]
-        score = int(opp.get("conviction_score") or 0)
-        direction = str(opp.get("signal_direction", "HOLD")).upper()
+        ticker = str(opp.get("ticker", "—"))
+        score = int(float(opp.get("score") or 0))
+        direction = str(opp.get("direction", "HOLD")).upper()
+        tier = str(opp.get("tier", "C")).upper()
+        gatilho = str(opp.get("gatilho") or "—")[:120]
+        bullish = opp.get("bullish", [])
+        bearish = opp.get("bearish", [])
 
-        # Upside from valuation if available
-        upside = opp.get("upside_pct")
+        # Chips
+        tier_cls = {
+            "S": "chip chip-approved",
+            "A": "chip chip-approved",
+            "B": "chip chip-monitor",
+            "C": "chip chip-review",
+            "D": "chip chip-blocked",
+        }.get(tier, "chip chip-review")
+        dir_cls = {
+            "BUY": "chip chip-approved",
+            "WATCH": "chip chip-monitor",
+            "HOLD": "chip chip-paper",
+            "SELL": "chip chip-blocked",
+        }.get(direction, "chip chip-paper")
 
-        # Build opportunity card content
-        score_color = "var(--pos-500)" if direction == "BUY" else (
-            "var(--neg-500)" if direction == "SELL" else "var(--warn-500)"
+        score_color = (
+            "var(--pos-500)" if direction == "BUY" else
+            "var(--neg-500)" if direction == "SELL" else
+            "var(--warn-500)"
         )
+
+        ev_summary = str(opp.get("ev_summary") or "")
+        bullets = ""
+        if bullish:
+            bullets += '<div style="font-size:.72rem;color:var(--pos-500);margin-top:8px;">'
+            bullets += "✅ " + " · ".join(str(b)[:60] for b in bullish[:2])
+            bullets += "</div>"
+        if bearish:
+            bullets += '<div style="font-size:.72rem;color:var(--neg-500);margin-top:4px;">'
+            bullets += "⚠️ " + " · ".join(str(b)[:60] for b in bearish[:2])
+            bullets += "</div>"
 
         st.markdown(f"""
         <div style="
@@ -210,48 +246,28 @@ def render_opportunities_tab() -> None:
                 <div>
                     <div style="font-family:var(--font-display); font-size:1.3rem; font-weight:900;
                          color:var(--fg-1); letter-spacing:-0.3px;">
-                        {opp.get('ticker', '—')}
+                        {ticker}
                     </div>
-                    <div style="font-size:.65rem; color:var(--fg-5); margin-top:3px; font-family:var(--font-mono);">
-                        {tier_label} · {opp.get('signal_type', '—')}
+                    <div style="display:flex;gap:6px;margin-top:4px;">
+                        <div class="{tier_cls}" style="font-size:.6rem;font-weight:700;padding:2px 7px;
+                             border-radius:4px;">Tier {tier}</div>
+                        <div class="{dir_cls}" style="font-size:.6rem;font-weight:700;padding:2px 7px;
+                             border-radius:4px;">{direction}</div>
                     </div>
                 </div>
                 <div style="text-align:right;">
                     <div style="font-family:var(--font-display); font-weight:900; font-size:1.6rem;
                          color:{score_color};">{score}</div>
                     <div style="font-family:var(--font-mono); font-size:.62rem; color:var(--fg-5);">
-                        {direction}
+                        Score
                     </div>
                 </div>
             </div>
-            <div style="font-size:.78rem; color:var(--fg-3); line-height:1.5; margin-bottom:10px;">
-                {opp.get('description', 'Sem sinal concreto ainda. Pipeline pendente.')}
+            <div style="font-size:.78rem; color:var(--fg-3); line-height:1.5; margin-bottom:6px;">
+                {gatilho}
             </div>
-            <!-- Sub-scores -->
-            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px;">
-                <div style="background:var(--bg-0); border-radius:8px; padding:8px; text-align:center;">
-                    <div style="font-size:.58rem; color:var(--fg-6); text-transform:uppercase;
-                         letter-spacing:.5px; margin-bottom:4px;">Tecnico</div>
-                    <div style="font-family:var(--font-mono); font-size:.9rem; font-weight:700; color:var(--fg-2);">
-                        {_fmt_float(opp.get('technical_score_final'), 0)}
-                    </div>
-                </div>
-                <div style="background:var(--bg-0); border-radius:8px; padding:8px; text-align:center;">
-                    <div style="font-size:.58rem; color:var(--fg-6); text-transform:uppercase;
-                         letter-spacing:.5px; margin-bottom:4px;">Quant</div>
-                    <div style="font-family:var(--font-mono); font-size:.9rem; font-weight:700; color:var(--fg-2);">
-                        {_fmt_float(opp.get('quant_score'), 0)}
-                    </div>
-                </div>
-                <div style="background:var(--bg-0); border-radius:8px; padding:8px; text-align:center;">
-                    <div style="font-size:.58rem; color:var(--fg-6); text-transform:uppercase;
-                         letter-spacing:.5px; margin-bottom:4px;">Upside</div>
-                    <div style="font-family:var(--font-mono); font-size:.9rem; font-weight:700;
-                         color:{_upside_color(upside)};">
-                        {_fmt_float(upside, 0)}%
-                    </div>
-                </div>
-            </div>
+            {bulls}
+            {f'<div style="font-size:.7rem;color:var(--fg-5);margin-top:6px;font-family:var(--font-mono);">{ev_summary[:100]}</div>' if ev_summary else ''}
         </div>
         """, unsafe_allow_html=True)
 
@@ -490,7 +506,7 @@ def render_risk_tab(tickers: list[str]) -> None:
         empty_state("Selecione ao menos um ativo.", icon="")
         return
 
-    snapshots = get_risk_snapshots(tickers=selected)
+    snapshots = get_risk_snapshots(tickers=tuple(sorted(selected)))
     if not snapshots:
         empty_state(
             f"Nenhum snapshot de risco para {', '.join(selected)}.\n"
@@ -646,8 +662,9 @@ def main() -> None:
     </div>
     """, unsafe_allow_html=True)
 
-    # ── Load data ─────────────────────────────────────────────────────────────
-    rows = get_watchlist_summary()
+    # ── Load data (cached 5min) ────────────────────────────────────────────────
+    with st.spinner("Carregando inteligência..."):
+        rows = get_watchlist_summary()
     tickers = sorted(set(r["ticker"] for r in rows)) if rows else []
 
     # ── Tab navigation ────────────────────────────────────────────────────────

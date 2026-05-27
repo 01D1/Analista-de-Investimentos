@@ -155,14 +155,14 @@ def opportunity_card(title=None, ticker="", score="", thesis="",
     card_score = conviction_score if conviction_score is not None else (
         int(score) if score and str(score).isdigit() else (int(score) if score else 0)
     )
-    card_desc  = description if description is not None else str(thesis or "")
-    score_str  = f"{card_score}"
+    card_desc = _escape_html(description) if description is not None else str(thesis or "")
+    score_str = f"{card_score}"
     st.markdown(f"""
     <div class="panel-shell" style="margin-bottom:12px;">
         <div style="display:flex;justify-content:space-between;align-items:center;">
             <div>
                 <div style="font-weight:800;color:var(--fg-1);">{card_title}</div>
-                <div style="font-size:.72rem;color:var(--fg-5);">{signal_type or ""}</div>
+                <div style="font-size:.72rem;color:var(--fg-5);">{_escape_html(signal_type) if signal_type else ""}</div>
             </div>
             <div class="badge badge-cyan">{score_str}</div>
         </div>
@@ -390,26 +390,27 @@ def watchlist_card(asset_row: dict) -> str:
         pos_color = "var(--fg-4)"
         pos_bg = "var(--neutral-tint)"
 
-    # Upside coloring
-    if upside is not None and upside != "":
-        try:
-            u = float(upside)
-            if u > 20:
-                upside_color = "var(--pos-500)"
-                upside_arrow = "▲"
-            elif u > 0:
-                upside_color = "var(--warn-500)"
-                upside_arrow = "▲"
-            else:
-                upside_color = "var(--neg-500)"
-                upside_arrow = "▼"
-            upside_str = f"{upside_arrow} {abs(u):.1f}%"
-        except (TypeError, ValueError):
-            upside_str = "—"
-            upside_color = "var(--fg-5)"
+    # Determine upside display, color, and bar width
+    try:
+        u_val = abs(float(upside)) if upside not in ("", "None", None) else None
+    except (TypeError, ValueError):
+        u_val = None
+
+    if u_val is not None:
+        if u_val > 20:
+            upside_color = "var(--pos-500)"
+            upside_arrow = "▲"
+        elif u_val > 0:
+            upside_color = "var(--warn-500)"
+            upside_arrow = "▲"
+        else:
+            upside_color = "var(--neg-500)"
+            upside_arrow = "▼"
+        upside_str = f"{upside_arrow} {u_val:.1f}%"
     else:
         upside_str = "—"
         upside_color = "var(--fg-5)"
+    bar_w = min(max(abs(u_val or 0) * 2, 2), 100)
 
     fv_str = f"R$ {fv:.2f}" if fv and str(fv) not in ("", "nan", "None") else "—"
     price_str = f"R$ {price:.2f}" if price and str(price) not in ("", "nan", "None") else "—"
@@ -485,12 +486,7 @@ def watchlist_card(asset_row: dict) -> str:
                 </span>
             </div>
             <div style="background:var(--bg-0); border-radius:99px; height:4px; overflow:hidden;">
-                <div style="
-                    width:{min(max(abs(upside if upside is not None else 0) * 2, 2), 100)}%;
-                    height:100%;
-                    background:{upside_color};
-                    border-radius:99px;
-                "></div>
+                <div style="width:{bar_w}%;height:100%;background:{upside_color};border-radius:99px;"></div>
             </div>
         </div>
 
@@ -758,9 +754,12 @@ def status_chip(status: str, label: str | None = None) -> str:
         chip_cls, label_s = "chip chip-empty", label or "SEM DADOS"
     elif s.upper() == "DEGRADED":
         chip_cls, label_s = "chip chip-degraded", label or s
+    elif s.upper().startswith("TIER "):
+        # e.g. "TIER C" from radar_payload tier field
+        chip_cls, label_s = "chip chip-review", label or s.replace("TIER ", "Tier ")
     else:
         # Unknown status — render as neutral chip so it never silently disappears
-        chip_cls, label_s = "chip chip-empty", label or s
+        chip_cls, label_s = "chip chip-paper", label or s
 
     return f'<div class="{chip_cls}"><span class="dot"></span>{label_s}</div>'
 

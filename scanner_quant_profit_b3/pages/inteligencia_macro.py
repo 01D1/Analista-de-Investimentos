@@ -101,7 +101,13 @@ def _available_series() -> list[str]:
 
 def main() -> None:
     st.markdown(PREMIUM_CSS, unsafe_allow_html=True)
-    st.title("Painel Macroeconômico")
+
+    st.markdown("""
+    <div class="page-header">
+      <div class="page-header-title">Macro Motor</div>
+      <div class="page-header-sub">Painel macroeconômico — Selic, PTAX, IPCA, CDS Brasil e regime de mercado</div>
+    </div>
+    """, unsafe_allow_html=True)
 
     macro = get_macro_panel()
     available = [k for k in _SERIES_ORDER if macro.get(k)]
