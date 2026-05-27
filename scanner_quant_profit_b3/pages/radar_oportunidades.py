@@ -227,6 +227,13 @@ def _render_opportunity_card(opp: dict) -> None:
     bullish  = opp.get("top_bullish", [])
     bearish  = opp.get("top_bearish", [])
 
+    # Campos de contexto (calibração)
+    por_que    = str(opp.get("por_que_entrou") or "")
+    o_que_falta = str(opp.get("o_que_falta") or "")
+    risco_princ = str(opp.get("risco_principal") or "")
+    raw_dir    = str(opp.get("raw_direction") or direction)
+    dir_changed = raw_dir != direction  # sinal foi rebaixado pela calibração
+
     score_color = _score_color(score)
     tier_html   = _tier_badge(tier, direction)
     acao_html   = _action_chip(proxima_acao, acao_variant)
@@ -293,6 +300,52 @@ def _render_opportunity_card(opp: dict) -> None:
             f'<strong style="color:var(--fg-2);">{regime_ctx}</strong></span>'
         )
 
+    # Cor do gatilho por direção
+    _gatilho_borders = {
+        "BUY":   "var(--pos-border)",
+        "WATCH": "var(--warn-border)",
+        "HOLD":  "rgba(100,116,139,0.3)",
+        "SELL":  "var(--neg-border)",
+        "AVOID": "var(--neg-border)",
+    }
+    gatilho_border = _gatilho_borders.get(direction.upper(), "rgba(100,116,139,0.3)")
+
+    # Badge "rebaixado" se calibração alterou a direção
+    rebaixado_html = ""
+    if dir_changed:
+        rebaixado_html = (
+            f'<span style="font-size:.58rem;background:var(--warn-tint);color:var(--warn-500);'
+            f'border:1px solid var(--warn-border);border-radius:4px;padding:1px 6px;'
+            f'margin-left:8px;">↓ rebaixado de {raw_dir}</span>'
+        )
+
+    # Seção de contexto de decisão
+    ctx_rows = []
+    if por_que:
+        ctx_rows.append(
+            f'<div style="display:flex;gap:6px;align-items:baseline;">'
+            f'<span style="font-size:.58rem;color:var(--fg-6);min-width:100px;">Por que entrou</span>'
+            f'<span style="font-size:.62rem;color:var(--fg-3);">{por_que}</span></div>'
+        )
+    if o_que_falta and o_que_falta != "—":
+        ctx_rows.append(
+            f'<div style="display:flex;gap:6px;align-items:baseline;">'
+            f'<span style="font-size:.58rem;color:var(--fg-6);min-width:100px;">O que falta</span>'
+            f'<span style="font-size:.62rem;color:var(--warn-500);">{o_que_falta}</span></div>'
+        )
+    if risco_princ:
+        risco_color = "var(--neg-500)" if any(k in risco_princ.lower() for k in ("elevado", "crítica", "baixa", "incompleto")) else "var(--fg-4)"
+        ctx_rows.append(
+            f'<div style="display:flex;gap:6px;align-items:baseline;">'
+            f'<span style="font-size:.58rem;color:var(--fg-6);min-width:100px;">Risco principal</span>'
+            f'<span style="font-size:.62rem;color:{risco_color};">{risco_princ}</span></div>'
+        )
+    ctx_html = (
+        f'<div style="margin-top:8px;padding:8px 12px;background:var(--bg-1);'
+        f'border-radius:6px;display:flex;flex-direction:column;gap:4px;">'
+        + "".join(ctx_rows) + "</div>"
+    ) if ctx_rows else ""
+
     # Explicação (realtime > driver)
     exp_text = realtime_exp or (f"{driver}." if driver else "")
     exp_text = exp_text[:120]
@@ -332,12 +385,15 @@ def _render_opportunity_card(opp: dict) -> None:
 
       <!-- Linha de gatilho (signal_explainer) -->
       <div style="margin-top:10px;padding:8px 12px;background:var(--bg-2);
-                  border-radius:6px;border-left:3px solid var(--pos-border);">
+                  border-radius:6px;border-left:3px solid {gatilho_border};">
         <span style="font-size:.6rem;font-weight:700;color:var(--fg-5);
                      text-transform:uppercase;letter-spacing:.6px;">Gatilho · </span>
         <span style="font-size:.72rem;color:var(--fg-1);">{gatilho}</span>
+        {rebaixado_html}
         {f'<div style="font-size:.62rem;color:var(--fg-5);margin-top:4px;">{driver}</div>' if driver else ""}
       </div>
+
+      {ctx_html}
 
       <!-- Pills de EV, Kelly, Upside, Regime -->
       <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
@@ -439,7 +495,7 @@ def main() -> None:
     total = len(opportunities)
     buys  = sum(1 for o in opportunities if o.get("direction") == "BUY")
     watch = sum(1 for o in opportunities if o.get("direction") == "WATCH")
-    high_ev = sum(1 for o in opportunities if (o.get("ev_score") or 0) >= 60)
+    high_ev = sum(1 for o in opportunities if (o.get("ev_score") or 0) >= 55)
     with_adv = sum(1 for o in opportunities if o.get("liquidez_raw") is not None)
 
     c1, c2, c3, c4, c5 = st.columns(5)
@@ -450,7 +506,7 @@ def main() -> None:
     with c3:
         kpi_card("WATCH", str(watch), color="amber")
     with c4:
-        kpi_card("EV ALTO (≥60)", str(high_ev), color="violet")
+        kpi_card("EV ALTO (≥55)", str(high_ev), color="violet")
     with c5:
         kpi_card("COM ADV", str(with_adv), color="cyan")
 

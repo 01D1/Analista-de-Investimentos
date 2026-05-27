@@ -125,12 +125,12 @@ def _proxima_acao(direction: str, tier: str) -> tuple[str, str]:
     if d == "BUY" and t in ("S", "A"):
         return "Montar tese", "approved"
     if d == "BUY" and t in ("B",):
-        return "Estudar", "monitor"
+        return "Estudar entrada", "monitor"
     if d == "WATCH":
         return "Aguardar gatilho", "monitor"
     if d == "HOLD":
         return "Monitorar", "paper"
-    if d == "SELL":
+    if d in ("SELL", "AVOID"):
         return "Descartar", "blocked"
     return "Monitorar", "paper"
 
@@ -427,53 +427,335 @@ def _build_ev(
     upside_pct: float | None,
     var_pct: float | None,
     data_quality: float = 80.0,
+    score_momentum: float | None = None,
+    score_tendencia: float | None = None,
+    score_volatilidade: float | None = None,
 ) -> EVResult | None:
     """
-    Constrói EVResult usando dados disponíveis sem inventar dados.
-    Retorna None se inputs insuficientes.
+    Constrói EVResult calibrado — sem teto trivial de EV=100.
 
-    Nota sobre horizonte temporal:
-      upside (DCF) e drawdown devem usar o mesmo horizonte para payoff_ratio coerente.
-      Usamos estimativas vol-based (21 dias úteis) para consistência interna.
-      O upside DCF é exibido separadamente no UI como contexto de longo prazo.
+    Calibrações vs MVP (v1):
+      1. p_win range conservador (0.40–0.65) — evita ilusão de certeza
+      2. upside_mult varia por qualidade do sinal — payoff discrimina entre tickers
+         (corrige payoff constante ~5.57 para todos via 2*sqrt(21)/1.645)
+      3. EV score em escala logarítmica — não satura em 100 para payoffs comuns
+      4. Downside penalizado por regime de vol — vol alta reduz assimetria aparente
+
+    NÃO usa DCF upside — horizontes diferentes criariam payoff ilusório.
+    DCF upside exibido separadamente no cartão como contexto de longo prazo.
     """
     try:
-        # Probability win: estimada de score_final (sem backtest específico)
-        # score=50 → p=0.50, score=80 → p=0.65, score=100 → p=0.75
-        p_win = 0.25 + (score_final / 100.0) * 0.50
-        p_win = max(0.25, min(0.80, p_win))
+        # p_win conservador: score=50→p=0.48, score=80→p=0.58, score=100→p=0.65
+        p_win = 0.40 + (score_final / 100.0) * 0.25
+        p_win = max(0.40, min(0.65, p_win))
 
         if ensemble_vol is None or ensemble_vol <= 0:
-            # Sem vol → sem EV coerente
             return None
 
         sigma_21d = ensemble_vol * math.sqrt(_EV_WINDOW_DAYS / _TRADING_DAYS_YEAR)
 
-        # Upside: 2-sigma em 21 dias úteis (horizonte de trading médio)
-        # NÃO usa DCF upside para EV — horizontes diferentes criariam payoff ilusório.
-        # DCF upside é exibido como contexto separado no cartão.
-        max_up = round(sigma_21d * 2.0 * 100, 1)
-        max_up = max(max_up, 1.0)   # mínimo 1%
-
-        # Drawdown: VaR% se disponível (mesmo horizonte), senão 1.5-sigma 21d
-        if var_pct is not None and 0.1 < var_pct < 50.0:
-            max_down = var_pct
+        # Upside: multiplier baseado em qualidade do sinal (quebra a simetria constante)
+        # mom=50,tend=50 → signal_qual=0.50 → up_mult=1.80
+        # mom=75,tend=70 → signal_qual=0.72 → up_mult=2.07
+        # sem sub-scores  → up_mult=1.55 (conservador)
+        if score_momentum is not None and score_tendencia is not None:
+            signal_qual = (score_momentum + score_tendencia) / 200.0   # 0–1
+            up_mult = 1.2 + signal_qual * 1.2   # 1.2 (fraco) a 2.4 (forte)
         else:
-            max_down = round(sigma_21d * 1.5 * 100, 1)
-            max_down = max(max_down, 0.5)   # mínimo 0.5%
+            up_mult = 1.55
+        max_up = round(sigma_21d * up_mult * 100, 1)
+        max_up = max(max_up, 1.0)
 
-        if max_down <= 0:
-            return None
+        # Downside: var_pct base + penalidade por vol alta (score_vol baixo → risco maior)
+        if var_pct is not None and 0.1 < var_pct < 50.0:
+            if score_volatilidade is not None:
+                # score_vol=100 (calmo) → risk_mult=1.0; score_vol=30 (agitado) → risk_mult=1.42
+                risk_mult = 1.0 + (1.0 - score_volatilidade / 100.0) * 0.6
+            else:
+                risk_mult = 1.2   # conservador sem dados de vol
+            max_down = round(var_pct * risk_mult, 2)
+        else:
+            sigma_daily = ensemble_vol * math.sqrt(1.0 / _TRADING_DAYS_YEAR)
+            max_down = round(sigma_daily * 1.645 * 100 * 1.25, 2)  # +25% vs MVP
+        max_down = max(max_down, 0.5)
 
-        return compute_ev(
+        ev = compute_ev(
             ticker,
             probability_win=p_win,
             max_upside_pct=max_up,
             max_drawdown_pct=max_down,
             conviction_score=score_final,
         )
+
+        # Rescaling logarítmico do EV score — substitui 30 + 35*ev_units que satura
+        # trivialmente.
+        # Escala calibrada (log):
+        #   ev_units ≤ 0  → score = max(0, 30 + ev_units*15)
+        #   ev_units = 0.5 → score ≈ 47
+        #   ev_units = 1   → score ≈ 57   (antes: 65)
+        #   ev_units = 2   → score ≈ 69   (antes: 100 clipped)
+        #   ev_units = 3.4 → score ≈ 79   (antes: 100 clipped)
+        #   ev_units = 6   → score ≈ 92
+        raw_payoff = ev.payoff_ratio
+        ev_units = max(0.0, p_win * raw_payoff - (1.0 - p_win))
+        if ev_units > 0:
+            calibrated = 40.0 + 25.0 * math.log1p(ev_units * 2.0)
+        else:
+            raw_ev = p_win * raw_payoff - (1.0 - p_win)
+            calibrated = max(0.0, 30.0 + raw_ev * 15.0)
+
+        # Penalidades por qualidade de dados e convicção do score
+        conviction_mult = 0.65 + (score_final / 100.0) * 0.35   # 0.65–1.0
+        dq_mult = 0.75 + (data_quality / 100.0) * 0.25          # 0.75–1.0
+        calibrated = float(np.clip(calibrated * conviction_mult * dq_mult, 0.0, 100.0))
+
+        ev.expected_value_score = round(calibrated, 1)
+        return ev
     except Exception:
         return None
+
+
+# ---------------------------------------------------------------------------
+# Calibração: gatilho PT-BR, direção conservadora, contexto de decisão
+# ---------------------------------------------------------------------------
+
+def _derive_gatilho_pt(
+    direction: str,
+    score_momentum: float | None,
+    score_tendencia: float | None,
+    score_final: float,
+    adv21: float | None = None,
+    var_pct: float | None = None,
+) -> str:
+    """
+    Deriva gatilho técnico discriminante em PT-BR a partir dos sub-scores.
+
+    Taxonomia (em ordem de prioridade):
+      rompimento        — momentum e tendência alinhados acima de 70 (entrada imediata)
+      pullback          — momentum forte, tendência fraca (esperar recuo)
+      tendência         — tendência estrutural sem momentum (aguardar confirmação)
+      tendência c/ mom  — ambos presentes, zona de entrada
+      assimetria        — sinal parcial com EV favorável
+      apenas monitoramento — sinal fraco, sem trigger claro
+      sem gatilho       — HOLD/AVOID ou dados insuficientes
+    """
+    mom  = score_momentum  if score_momentum  is not None else score_final * 0.80
+    tend = score_tendencia if score_tendencia is not None else score_final * 0.80
+
+    if direction == "SELL":
+        return "saída — estrutura técnica frágil, reduzir exposição"
+
+    if direction in ("AVOID", "HOLD") and score_final < 52:
+        return "sem gatilho acionável — estrutura técnica insuficiente"
+
+    if direction == "BUY":
+        if mom >= 72 and tend >= 68:
+            return "rompimento — momentum e tendência alinhados, entrada com confirmação"
+        if mom >= 68 and tend < 55:
+            return "impulso de curto prazo — pullback em tendência indefinida, gestão rigorosa"
+        if tend >= 70 and mom < 55:
+            return "tendência estrutural — aguardar momentum para confirmar entrada"
+        if tend >= 62 and mom >= 58:
+            return "tendência com momentum — zona de entrada, confirmar volume"
+        if score_final >= 63:
+            return "assimetria positiva — risco/retorno favorável, aguardar confirmação"
+        return "sinal parcial — aguardar alinhamento de momentum e tendência"
+
+    if direction == "WATCH":
+        if tend >= 62:
+            return "tendência em formação — monitorar rompimento para confirmar entrada"
+        if mom >= 60:
+            return "momentum isolado — sem estrutura de tendência, apenas monitoramento"
+        if score_final >= 52:
+            return "apenas monitoramento — aguardar catalisador técnico"
+        return "sem gatilho acionável — sinal insuficiente para posicionamento"
+
+    # HOLD / default
+    if score_final >= 50:
+        return "manter posição — sem gatilho de entrada ou saída identificado"
+    return "sem gatilho acionável — estrutura técnica neutra ou insuficiente"
+
+
+# Thresholds conservadores para BUY
+_BUY_SCORE_FLOOR   = 63.0    # score_final mínimo
+_BUY_MOM_FLOOR     = 56.0    # score_momentum mínimo
+_BUY_TEND_FLOOR    = 54.0    # score_tendencia mínimo
+_BUY_ADV_FLOOR     = 25_000_000.0   # ADV mínimo R$25M
+_BUY_VAR_CEILING   = 5.5     # VaR 95% máximo %
+_WATCH_SCORE_FLOOR = 50.0
+_AVOID_SCORE_CEIL  = 38.0
+
+
+def _calibrated_direction(
+    raw_direction: str,
+    score_final: float,
+    score_momentum: float | None,
+    score_tendencia: float | None,
+    adv21: float | None,
+    var_pct: float | None,
+    data_quality: float,
+) -> tuple[str, str, list[str]]:
+    """
+    Aplica thresholds conservadores multi-fator para direção e tier finais.
+
+    BUY: score ≥ 63 + momentum ≥ 56 + tendência ≥ 54 + ADV ≥ R$25M + VaR ≤ 5.5%
+    WATCH: score ≥ 50 + (momentum ≥ 50 OU tendência ≥ 52)
+    AVOID: score < 38 OU VaR > 8% OU ADV < R$2M
+    Penalidades reduzem tier sem mudar direção.
+
+    Retorna (direction, tier, penalidades_aplicadas).
+    """
+    penalties: list[str] = []
+
+    mom  = score_momentum  if score_momentum  is not None else score_final * 0.80
+    tend = score_tendencia if score_tendencia is not None else score_final * 0.80
+
+    # Coletar penalidades
+    if adv21 is None:
+        penalties.append("liquidez não confirmada (sem ADV)")
+    elif adv21 < 10_000_000:
+        penalties.append(f"liquidez crítica (R${adv21/1e6:.0f}M)")
+    elif adv21 < _BUY_ADV_FLOOR:
+        penalties.append(f"liquidez abaixo do mínimo (R${adv21/1e6:.0f}M < R$25M)")
+
+    if var_pct is not None and var_pct > _BUY_VAR_CEILING:
+        penalties.append(f"risco elevado (VaR {var_pct:.1f}% > {_BUY_VAR_CEILING}%)")
+    if data_quality < 55:
+        penalties.append(f"qualidade de dados baixa ({data_quality:.0f}%)")
+    if score_momentum is None:
+        penalties.append("momentum indisponível (realtime ausente)")
+    if score_tendencia is None:
+        penalties.append("tendência indisponível (realtime ausente)")
+
+    # AVOID: fraqueza estrutural
+    avoid = (
+        score_final < _AVOID_SCORE_CEIL
+        or (var_pct is not None and var_pct > 8.0)
+        or (adv21 is not None and adv21 < 2_000_000)
+    )
+    if avoid:
+        return "AVOID", "D", penalties
+
+    if raw_direction == "SELL":
+        return "SELL", "D", penalties
+
+    # Critério BUY: todos os fatores concordam
+    buy_ok = (
+        score_final >= _BUY_SCORE_FLOOR
+        and mom >= _BUY_MOM_FLOOR
+        and tend >= _BUY_TEND_FLOOR
+        and (adv21 is None or adv21 >= _BUY_ADV_FLOOR)
+        and (var_pct is None or var_pct <= _BUY_VAR_CEILING)
+        and data_quality >= 55
+    )
+
+    watch_ok = (
+        score_final >= _WATCH_SCORE_FLOOR
+        and (mom >= 50 or tend >= 52)
+    )
+
+    if raw_direction == "BUY":
+        if buy_ok:
+            hard_penalties = [p for p in penalties if "crítica" in p or "baixa" in p or "elevado" in p]
+            return "BUY", ("A" if not hard_penalties else "B"), penalties
+        elif watch_ok:
+            return "WATCH", ("B" if len(penalties) <= 1 else "C"), penalties
+        else:
+            return "WATCH", "C", penalties
+
+    if raw_direction == "WATCH":
+        if watch_ok:
+            return "WATCH", ("B" if len(penalties) <= 1 else "C"), penalties
+        return "HOLD", "C", penalties
+
+    return "HOLD", "C", penalties
+
+
+def _build_context_fields(
+    direction: str,
+    tier: str,
+    score_final: float,
+    score_momentum: float | None,
+    score_tendencia: float | None,
+    adv21: float | None,
+    var_pct: float | None,
+    ev_result: EVResult | None,
+    data_quality: float,
+    penalties: list[str],
+) -> dict:
+    """
+    Gera os campos de contexto de decisão exibidos no cartão:
+      - por_que_entrou : razão para estar no ranking
+      - o_que_falta    : o que falta para virar BUY
+      - risco_principal: principal risco identificado
+    """
+    mom  = score_momentum
+    tend = score_tendencia
+
+    # ── Por que entrou ────────────────────────────────────────────────────
+    motivos: list[str] = []
+    if score_final >= 65:
+        motivos.append(f"score técnico forte ({score_final:.0f})")
+    elif score_final >= 55:
+        motivos.append(f"score técnico moderado ({score_final:.0f})")
+    else:
+        motivos.append(f"score técnico ({score_final:.0f})")
+    if mom is not None and mom >= 60:
+        motivos.append(f"momentum {mom:.0f}")
+    if tend is not None and tend >= 60:
+        motivos.append(f"tendência {tend:.0f}")
+    if adv21 is not None and adv21 >= _MIN_ADV_LIQUID:
+        motivos.append(f"liquidez R${adv21/1e6:.0f}M")
+    if ev_result and ev_result.expected_value_score >= 52:
+        motivos.append(f"EV score {ev_result.expected_value_score:.0f}")
+    if len(motivos) == 1:
+        motivos.append("cobertura de monitoramento automático")
+    por_que = "; ".join(motivos[:4])
+
+    # ── O que falta para BUY ──────────────────────────────────────────────
+    falta: list[str] = []
+    if direction != "BUY":
+        if score_final < _BUY_SCORE_FLOOR:
+            falta.append(f"score ≥ {_BUY_SCORE_FLOOR:.0f} (atual {score_final:.0f})")
+        if mom is not None and mom < _BUY_MOM_FLOOR:
+            falta.append(f"momentum ≥ {_BUY_MOM_FLOOR:.0f} (atual {mom:.0f})")
+        elif mom is None:
+            falta.append("dados de momentum (realtime)")
+        if tend is not None and tend < _BUY_TEND_FLOOR:
+            falta.append(f"tendência ≥ {_BUY_TEND_FLOOR:.0f} (atual {tend:.0f})")
+        elif tend is None:
+            falta.append("dados de tendência (realtime)")
+        if adv21 is None:
+            falta.append("ADV 21d confirmado")
+        elif adv21 < _BUY_ADV_FLOOR:
+            falta.append(f"ADV ≥ R${_BUY_ADV_FLOOR/1e6:.0f}M (atual R${adv21/1e6:.0f}M)")
+        if var_pct is not None and var_pct > _BUY_VAR_CEILING:
+            falta.append(f"VaR ≤ {_BUY_VAR_CEILING}% (atual {var_pct:.1f}%)")
+    else:
+        falta = ["—"]
+    o_que_falta = "; ".join(falta[:3]) if falta else "—"
+
+    # ── Risco principal ───────────────────────────────────────────────────
+    riscos: list[str] = []
+    if var_pct is not None and var_pct > 4.0:
+        riscos.append(f"VaR elevado ({var_pct:.1f}%)")
+    if adv21 is not None and adv21 < _MIN_ADV_LIQUID:
+        riscos.append(f"liquidez baixa (R${adv21/1e6:.0f}M)")
+    if data_quality < 65:
+        riscos.append(f"dados incompletos ({data_quality:.0f}%)")
+    riscos.extend([p for p in penalties if p not in riscos][:2])
+    if not riscos:
+        if var_pct is not None:
+            riscos.append(f"VaR {var_pct:.1f}% (dentro do limite)")
+        else:
+            riscos.append("sem VaR calculado — avaliar manualmente")
+    risco_principal = riscos[0]
+
+    return {
+        "por_que_entrou":  por_que,
+        "o_que_falta":     o_que_falta,
+        "risco_principal": risco_principal,
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -596,24 +878,23 @@ def _build_opportunity(
     if score_final is None:
         return {}  # Sem dados mínimos — ignorar ticker
 
-    # ── Direção e tier ────────────────────────────────────────────────────
-    direction = _SIGNAL_TYPE_DIRECTION.get(signal_type, None)
-    tier = _SIGNAL_TYPE_TIER.get(signal_type, None)
+    # ── Direção raw do sinal (antes da calibração conservadora) ──────────
+    raw_direction = _SIGNAL_TYPE_DIRECTION.get(signal_type, None)
+    raw_tier = _SIGNAL_TYPE_TIER.get(signal_type, None)
 
-    if direction is None:
-        # Tentar via integrated_status
+    if raw_direction is None:
         for key, val in _STATUS_DIRECTION.items():
             if key in signal_type.upper():
-                direction = val
+                raw_direction = val
                 break
-        direction = direction or "HOLD"
+        raw_direction = raw_direction or "HOLD"
 
-    if tier is None:
+    if raw_tier is None:
         for key, val in _STATUS_TIER.items():
             if key in signal_type.upper():
-                tier = val
+                raw_tier = val
                 break
-        tier = tier or "D"
+        raw_tier = raw_tier or "D"
 
     # ── Dados de risco e vol ──────────────────────────────────────────────
     ensemble_vol: float | None = None
@@ -658,7 +939,10 @@ def _build_opportunity(
 
     if ensemble_vol is not None or upside_pct is not None:
         ev_result = _build_ev(
-            ticker, score_final, ensemble_vol, upside_pct, var_pct, dq
+            ticker, score_final, ensemble_vol, upside_pct, var_pct, dq,
+            score_momentum=score_momentum,
+            score_tendencia=score_tendencia,
+            score_volatilidade=score_vol,
         )
         if ev_result:
             ev_available = True
@@ -684,30 +968,36 @@ def _build_opportunity(
     meta_tier = meta.conviction_tier
     meta_direction = meta.signal_direction
 
-    # Se realtime tem sinal mais forte, sobrescreve tier/direction do meta
-    # (meta score é contexto adicional, não override de sinal já calculado)
-    final_direction = direction
-    final_tier = tier
+    # ── Direção calibrada conservadora (multi-fator) ─────────────────────
+    # Aplica critérios de concordância: score + momentum + tendência + liquidez + risco.
+    # raw_direction é o sinal bruto; _calibrated_direction decide se ele se sustenta.
+    final_direction, final_tier, penalties = _calibrated_direction(
+        raw_direction=raw_direction,
+        score_final=score_final,
+        score_momentum=score_momentum,
+        score_tendencia=score_tendencia,
+        adv21=adv21,
+        var_pct=var_pct,
+        data_quality=dq,
+    )
+    if penalties:
+        warnings.extend(penalties[:2])
 
     # ── Signal Explainer ──────────────────────────────────────────────────
-    regime_snapshot = regime  # pode ser None
+    regime_snapshot = regime
     explanation_dict = explain_opportunity(meta, ev_result, regime_snapshot)
 
-    # Gatilho: prioriza direção do realtime sobre meta_score quando é fonte primária.
-    # meta.signal_direction pode divergir do realtime por 1-2 pontos de score_final,
-    # resultando em "monitorar" mesmo quando o sinal real é BUY. Usamos a direção
-    # do realtime como verdade do sinal, e o meta score como filtro de convicção.
-    _sig_labels_pt = {
-        "BUY":   "entrada — risco/retorno favorável",
-        "WATCH": "monitorar — aguardar trigger de confirmação",
-        "HOLD":  "manter posição — sem novo posicionamento",
-        "SELL":  "saída ou proteção — estrutura frágil",
-    }
-    if data_source == "realtime_signals":
-        # Direção real do sinal de mercado como base do gatilho
-        gatilho = _sig_labels_pt.get(final_direction, explanation_dict.get("action_hint", "monitorar"))
-    else:
-        gatilho = explanation_dict.get("action_hint", "monitorar")
+    # Gatilho discriminante em PT-BR (substitui os 4 strings genéricos do MVP).
+    # Diferencia: rompimento, pullback, tendência, reversão, assimetria,
+    #             apenas monitoramento, sem gatilho acionável.
+    gatilho = _derive_gatilho_pt(
+        direction=final_direction,
+        score_momentum=score_momentum,
+        score_tendencia=score_tendencia,
+        score_final=score_final,
+        adv21=adv21,
+        var_pct=var_pct,
+    )
 
     primary_driver = explanation_dict.get("primary_driver", "")
     ev_summary = explanation_dict.get("ev_summary", "")
@@ -734,6 +1024,20 @@ def _build_opportunity(
     regime_label = "indisponível"
     if regime:
         regime_label = getattr(regime, "regime_label", "indisponível").replace("_", " ")
+
+    # ── Contexto de decisão (por_que_entrou / o_que_falta / risco_principal)
+    ctx = _build_context_fields(
+        direction=final_direction,
+        tier=final_tier,
+        score_final=score_final,
+        score_momentum=score_momentum,
+        score_tendencia=score_tendencia,
+        adv21=adv21,
+        var_pct=var_pct,
+        ev_result=ev_result,
+        data_quality=dq,
+        penalties=penalties,
+    )
 
     # ── Próxima ação ──────────────────────────────────────────────────────
     proxima_acao, acao_variant = _proxima_acao(final_direction, final_tier)
@@ -781,9 +1085,17 @@ def _build_opportunity(
         # Signal
         "signal_type":      signal_type,
         "realtime_explanation": realtime_explanation,
+        # Direção bruta (antes da calibração)
+        "raw_direction":    raw_direction,
+        "raw_tier":         raw_tier,
         # Próxima ação
         "proxima_acao":     proxima_acao,
         "acao_variant":     acao_variant,
+        # Contexto de decisão (calibração)
+        "por_que_entrou":   ctx["por_que_entrou"],
+        "o_que_falta":      ctx["o_que_falta"],
+        "risco_principal":  ctx["risco_principal"],
+        "penalties":        penalties,
         # Upside
         "upside_pct":       upside_pct,
         # Data quality
