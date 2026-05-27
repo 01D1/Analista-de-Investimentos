@@ -422,90 +422,46 @@ def main() -> None:
                 unsafe_allow_html=True,
             )
         else:
-            rows_html = ""
+            table_rows = []
             for ticker, model_status, model, method, block, flags in filtered:
-                # Preserved fair value (PRESERVE_EXISTING only)
                 fv_str = _fmt_brl(_PRESERVE_FV[ticker]) if ticker in _PRESERVE_FV else "—"
 
-                # Preliminary fair value from DB (M018_CONTROLLED only)
                 prelim = prelim_map.get(ticker)
                 if prelim and prelim.get("preliminary_fair_value") is not None:
                     pfv = prelim["preliminary_fair_value"]
                     pup = prelim.get("upside_pct")
                     pfv_str = _fmt_brl(pfv)
                     try:
-                        pup_f = float(pup)
-                        pup_str = f"{pup_f:+.1f}%"
-                        pup_col = (
-                            "var(--pos-500)" if pup_f > 20
-                            else "var(--neg-500)" if pup_f < 0
-                            else "var(--warn-500)"
-                        )
+                        pup_str = f"{float(pup):+.1f}%"
                     except (TypeError, ValueError):
                         pup_str = "—"
-                        pup_col = "var(--fg-5)"
-                    pfv_html = f'<span style="font-family:var(--font-mono);">{pfv_str}</span>'
-                    pup_html = f'<span style="color:{pup_col};font-weight:900;">{pup_str}</span>'
                 else:
-                    pfv_html = '<span style="color:var(--fg-6);">—</span>'
-                    pup_html = '<span style="color:var(--fg-6);">—</span>'
+                    pfv_str = "—"
+                    pup_str = "—"
 
-                # Status chip — for READY_TO_CALCULATE, show sanity label
                 if model_status == "READY_TO_CALCULATE":
                     if ticker in _passed_set:
-                        status_html = _chip_html("Passou na checagem", "approved")
+                        status_str = "✅ Passou na checagem"
                     elif ticker in sanity_map:
-                        status_html = _chip_html("Requer validação", "degraded")
+                        status_str = "⚠️ Requer validação"
                     else:
-                        status_html = _status_chip(model_status)
+                        status_str = _status_chip(model_status)
                 else:
-                    status_html = _status_chip(model_status)
+                    status_str = _status_chip(model_status)
 
-                flag_html = (
-                    f'<span class="chip chip-degraded"><span class="dot"></span>{flags}</span>'
-                    if flags else '<span style="color:var(--fg-6);">—</span>'
-                )
+                table_rows.append({
+                    "Ticker":               ticker,
+                    "Modelo":              model,
+                    "Método":              method,
+                    "Preço Justo Pres.":   fv_str,
+                    "Valor Prelim.":       pfv_str,
+                    "Up/Downside Prelim.": pup_str,
+                    "Status":              status_str,
+                    "Alertas":             flags if flags else "—",
+                })
 
-                rows_html += f"""
-                <tr>
-                  <td style="font-family:var(--font-display);font-weight:900;
-                             color:var(--fg-1);">{ticker}</td>
-                  <td>{model}</td>
-                  <td>{_method_badge(method)}</td>
-                  <td style="font-family:var(--font-mono);color:var(--fg-3);">{fv_str}</td>
-                  <td>{pfv_html}</td>
-                  <td>{pup_html}</td>
-                  <td>{status_html}</td>
-                  <td>{flag_html}</td>
-                </tr>
-                """
-
-            html_table = f"""
-            <style>
-            .tbl-wrap {{overflow-x:auto;border-radius:8px;}}
-            .tbl {{width:100%;border-collapse:collapse;font-size:.72rem;}}
-            .tbl th {{background:var(--bg-3);padding:8px 12px;text-align:left;
-                      font-weight:700;color:var(--fg-2);border-bottom:2px solid var(--border-2);
-                      white-space:nowrap;}}
-            .tbl td {{padding:8px 12px;border-bottom:1px solid var(--border-1);
-                      vertical-align:middle;}}
-            .tbl tr:last-child td {{border-bottom:none;}}
-            .tbl tr:hover td {{background:rgba(255,255,255,.03);}}
-            </style>
-            <div class="tbl-wrap">
-            <table class="tbl">
-              <thead>
-                <tr>
-                  <th>Empresa</th><th>Modelo</th><th>Método</th>
-                  <th>Preço Justo Preservado</th><th>Valor Preliminar</th><th>Upside Preliminar</th>
-                  <th>Status</th><th>Alertas</th>
-                </tr>
-              </thead>
-              <tbody>{rows_html}</tbody>
-            </table>
-            </div>
-            """
-            st.html(html_table)
+            df_universe = pd.DataFrame(table_rows)
+            st.dataframe(df_universe, use_container_width=True, hide_index=True, height=400)
 
         st.markdown(
             '<div style="font-size:.58rem;color:var(--fg-6);font-family:monospace;margin-top:10px;">'
@@ -532,7 +488,7 @@ def main() -> None:
                 "Próxima etapa persiste com write=True após validação cruzada (range 0,1× – 5,0× preço).",
             ), unsafe_allow_html=True)
 
-            rows_html = ""
+            table_rows = []
             for row in dry_run:
                 ticker   = row.get("ticker", "—")
                 fv_raw   = row.get("fair_value", "")
@@ -547,66 +503,26 @@ def main() -> None:
                     fv_str = "—"
 
                 try:
-                    up_f = float(upside)
-                    up_str = f"{up_f:+.1f}%"
-                    up_color = (
-                        "var(--pos-500)" if up_f > 20
-                        else "var(--neg-500)" if up_f < 0
-                        else "var(--warn-500)"
-                    )
+                    up_str = f"{float(upside):+.1f}%"
                 except (TypeError, ValueError):
                     up_str = "—"
-                    up_color = "var(--fg-5)"
 
                 try:
                     conf_str = f"{float(conf_raw):.0%}"
                 except (TypeError, ValueError):
                     conf_str = "—"
 
-                flag_html = (
-                    f'<span class="chip chip-degraded"><span class="dot"></span>{flags}</span>'
-                    if flags else '<span style="color:var(--fg-6);">—</span>'
-                )
+                table_rows.append({
+                    "Ticker":        ticker,
+                    "Valor Just.":  fv_str,
+                    "Up/Downside":  up_str,
+                    "Método":       method,
+                    "Confiança":    conf_str,
+                    "Alertas":      flags if flags else "—",
+                })
 
-                rows_html += f"""
-                <tr>
-                  <td style="font-family:var(--font-display);font-weight:900;
-                             color:var(--fg-1);">{ticker}</td>
-                  <td style="font-family:var(--font-mono);font-weight:700;
-                             color:var(--fg-2);">{fv_str}</td>
-                  <td style="font-family:var(--font-mono);font-weight:900;
-                             color:{up_color};">{up_str}</td>
-                  <td>{_method_badge(method)}</td>
-                  <td style="font-family:var(--font-mono);color:var(--fg-4);">{conf_str}</td>
-                  <td>{flag_html}</td>
-                </tr>
-                """
-
-            html_table2 = f"""
-            <style>
-            .tbl-wrap {{overflow-x:auto;border-radius:8px;}}
-            .tbl {{width:100%;border-collapse:collapse;font-size:.72rem;}}
-            .tbl th {{background:var(--bg-3);padding:8px 12px;text-align:left;
-                      font-weight:700;color:var(--fg-2);border-bottom:2px solid var(--border-2);
-                      white-space:nowrap;}}
-            .tbl td {{padding:8px 12px;border-bottom:1px solid var(--border-1);
-                      vertical-align:middle;}}
-            .tbl tr:last-child td {{border-bottom:none;}}
-            .tbl tr:hover td {{background:rgba(255,255,255,.03);}}
-            </style>
-            <div class="tbl-wrap">
-            <table class="tbl">
-              <thead>
-                <tr>
-                  <th>Empresa</th><th>Valor Justo (sim.)</th><th>Upside</th>
-                  <th>Método</th><th>Confiança</th><th>Alertas</th>
-                </tr>
-              </thead>
-              <tbody>{rows_html}</tbody>
-            </table>
-            </div>
-            """
-            st.html(html_table2)
+            df_sim = pd.DataFrame(table_rows)
+            st.dataframe(df_sim, use_container_width=True, hide_index=True, height=400)
 
             st.markdown(
                 '<div style="font-size:.58rem;color:var(--fg-6);margin-top:10px;">'
@@ -644,7 +560,7 @@ def main() -> None:
             st.markdown("<br>", unsafe_allow_html=True)
             section_title("Cobertura por Empresa (métricas extraídas)", icon="")
 
-            rows_html = ""
+            table_rows = []
             for ticker, _, model, _, _, _ in _UNIVERSE:
                 cov = coverage.get(ticker, {"n_metrics": 0, "last_period": None})
                 n   = cov["n_metrics"]
@@ -652,59 +568,32 @@ def main() -> None:
                 pct = f"{n / 22 * 100:.0f}%" if n else "0%"
 
                 if n >= 22:
-                    status_html = '<span class="chip chip-approved"><span class="dot"></span>Completo</span>'
+                    status_str = "✅ Completo"
                 elif n > 0:
-                    status_html = '<span class="chip chip-degraded"><span class="dot"></span>Parcial</span>'
+                    status_str = "⚠️ Parcial"
                 else:
-                    status_html = '<span class="chip chip-blocked"><span class="dot"></span>Sem dados</span>'
+                    status_str = "❌ Sem dados"
 
-                rows_html += f"""
-                <tr>
-                  <td style="font-family:var(--font-display);font-weight:900;
-                             color:var(--fg-1);">{ticker}</td>
-                  <td>{model}</td>
-                  <td style="text-align:right;font-family:var(--font-mono);">{n}</td>
-                  <td style="font-family:var(--font-mono);color:var(--fg-4);">{pct}</td>
-                  <td style="font-family:var(--font-mono);color:var(--fg-5);">{period}</td>
-                  <td>{status_html}</td>
-                </tr>
-                """
+                table_rows.append({
+                    "Ticker":    ticker,
+                    "Modelo":    model,
+                    "Métricas":  n,
+                    "Cobertura": pct,
+                    "Período":   period,
+                    "Status":    status_str,
+                })
 
-            html_table3 = f"""
-            <style>
-            .tbl-wrap {{overflow-x:auto;border-radius:8px;}}
-            .tbl {{width:100%;border-collapse:collapse;font-size:.72rem;}}
-            .tbl th {{background:var(--bg-3);padding:8px 12px;text-align:left;
-                      font-weight:700;color:var(--fg-2);border-bottom:2px solid var(--border-2);
-                      white-space:nowrap;}}
-            .tbl td {{padding:8px 12px;border-bottom:1px solid var(--border-1);
-                      vertical-align:middle;}}
-            .tbl tr:last-child td {{border-bottom:none;}}
-            .tbl tr:hover td {{background:rgba(255,255,255,.03);}}
-            </style>
-            <div class="tbl-wrap">
-            <table class="tbl">
-              <thead>
-                <tr>
-                  <th>Empresa</th><th>Modelo</th>
-                  <th style="text-align:right;">Métricas</th>
-                  <th>Cobertura</th><th>Período</th><th>Status</th>
-                </tr>
-              </thead>
-              <tbody>{rows_html}</tbody>
-            </table>
-            </div>
-            """
-            st.html(html_table3)
+            df_cvm = pd.DataFrame(table_rows)
+            st.dataframe(df_cvm, use_container_width=True, hide_index=True, height=400)
 
-            st.markdown("""
-            <div style="font-size:.62rem;color:var(--fg-6);margin-top:8px;">
-            22 métricas: revenue · ebit · ebitda · net_income · operating_cash_flow · capex ·
-            free_cash_flow · total_assets · cash_and_equivalents · short_term_debt · long_term_debt ·
-            gross_debt · net_debt · equity_book_value · shares_outstanding + 7 derivadas.
-            Fonte: CVM_CSV + B3_MARKET_DATA.
-            </div>
-            """, unsafe_allow_html=True)
+            st.markdown(
+                '<div style="font-size:.62rem;color:var(--fg-6);margin-top:8px;">'
+                '22 métricas: revenue · ebit · ebitda · net_income · operating_cash_flow · capex · '
+                'free_cash_flow · total_assets · cash_and_equivalents · short_term_debt · long_term_debt · '
+                'gross_debt · net_debt · equity_book_value · shares_outstanding + 7 derivadas. '
+                'Fonte: CVM_CSV + B3_MARKET_DATA.</div>',
+                unsafe_allow_html=True,
+            )
 
     # ── Tab 4: Preços Justos ──────────────────────────────────────────────────
     with tab4:

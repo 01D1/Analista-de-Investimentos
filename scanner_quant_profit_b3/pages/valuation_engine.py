@@ -309,12 +309,12 @@ def _load_preliminary_results() -> list[dict]:
 
 
 def _render_prelim_table(rows: list[dict]) -> None:
-    """Render a table of preliminary fair values."""
+    """Render a table of preliminary fair values using st.dataframe."""
     if not rows:
         st.caption("Nenhum valor disponível.")
         return
 
-    rows_html = ""
+    table_rows = []
     for r in rows:
         ticker    = r["ticker"]
         company   = _COMPANY_NAMES_M018.get(ticker, "—")
@@ -325,90 +325,38 @@ def _render_prelim_table(rows: list[dict]) -> None:
         conf      = _CONF_PT.get(r.get("confidence") or "", r.get("confidence") or "—")
         sanity    = r.get("sanity_check_passed")
         flags     = r.get("flags") or []
+        translated = [tf for f in flags for tf in [_translate_flag_prelim(f)] if tf]
 
         fv_str    = _fmt_brl(fv)    if fv    is not None else "—"
         price_str = _fmt_brl(price) if price is not None else "—"
 
         if upside is not None:
             try:
-                upside_f   = float(upside)
-                upside_str = f"{upside_f:+.1f}%"
-                upside_col = (
-                    "var(--pos-500)"  if upside_f > 20
-                    else "var(--warn-500)" if upside_f > 0
-                    else "var(--neg-500)"
-                )
+                upside_str = f"{float(upside):+.1f}%"
             except (TypeError, ValueError):
                 upside_str = "—"
-                upside_col = "var(--fg-5)"
         else:
             upside_str = "—"
-            upside_col = "var(--fg-5)"
 
-        conf_variant = "buy" if conf == "Alta" else "hold" if conf == "Média" else "sell"
-        conf_html    = f'<span class="badge badge-{conf_variant}">{conf}</span>'
+        conf_emoji = "✅ Alta" if conf == "Alta" else "🔄 Média" if conf == "Média" else "⚠️ Baixa"
+        sanity_str = "✅ Passou" if sanity == 1 else "⚠️ Requer validação"
+        status_str = "❌ Não aprovado"
 
-        method_variant = "cyan" if "EV/EBITDA" in method else "violet"
-        method_html    = f'<span class="badge badge-{method_variant}">{method}</span>'
+        table_rows.append({
+            "Ticker":          ticker,
+            "Empresa":         company,
+            "Preço Mercado":   price_str,
+            "Valor Prelim.":  fv_str,
+            "Up/Downside":    upside_str,
+            "Método":          method,
+            "Confiança":       conf_emoji,
+            "Checagem":        sanity_str,
+            "Alertas":         " · ".join(translated) if translated else "—",
+            "Status":          status_str,
+        })
 
-        sanity_html = (
-            _chip_html("Passou na checagem", "approved")
-            if sanity == 1
-            else _chip_html("Requer validação", "degraded")
-        )
-
-        translated = [tf for f in flags for tf in [_translate_flag_prelim(f)] if tf]
-        flags_html = (
-            " ".join(
-                f'<span class="chip chip-degraded"><span class="dot"></span>{tf}</span>'
-                for tf in translated
-            )
-            if translated
-            else '<span style="color:var(--fg-6);">—</span>'
-        )
-
-        rows_html += f"""
-        <tr>
-          <td style="font-family:var(--font-display);font-weight:900;color:var(--fg-1);">{ticker}</td>
-          <td style="font-size:.72rem;color:var(--fg-3);">{company}</td>
-          <td style="font-family:var(--font-mono);color:var(--fg-4);">{price_str}</td>
-          <td style="font-family:var(--font-mono);font-weight:700;color:var(--fg-2);">{fv_str}</td>
-          <td style="font-family:var(--font-mono);font-weight:900;color:{upside_col};">{upside_str}</td>
-          <td>{method_html}</td>
-          <td>{conf_html}</td>
-          <td>{sanity_html}</td>
-          <td style="max-width:220px;">{flags_html}</td>
-          <td><span class="badge badge-sell">Não aprovado</span></td>
-        </tr>
-        """
-
-    tbl1_html = f"""
-    <style>
-    .tbl-wrap {{overflow-x:auto;border-radius:8px;}}
-    .tbl {{width:100%;border-collapse:collapse;font-size:.72rem;}}
-    .tbl th {{background:var(--bg-3);padding:8px 12px;text-align:left;
-              font-weight:700;color:var(--fg-2);border-bottom:2px solid var(--border-2);
-              white-space:nowrap;}}
-    .tbl td {{padding:8px 12px;border-bottom:1px solid var(--border-1);
-              vertical-align:middle;}}
-    .tbl tr:last-child td {{border-bottom:none;}}
-    .tbl tr:hover td {{background:rgba(255,255,255,.03);}}
-    </style>
-    <div class="tbl-wrap">
-    <table class="tbl">
-      <thead>
-        <tr>
-          <th>Empresa</th><th>Nome</th><th>Mercado</th>
-          <th>Valor Preliminar</th><th>Upside / Downside</th>
-          <th>Método</th><th>Confiança</th><th>Checagem</th>
-          <th>Alertas</th><th>Status</th>
-        </tr>
-      </thead>
-      <tbody>{rows_html}</tbody>
-    </table>
-    </div>
-    """
-    st.html(tbl1_html)
+    df = pd.DataFrame(table_rows)
+    st.dataframe(df, use_container_width=True, hide_index=True, height=400)
 
 
 @st.cache_data(ttl=_CACHE_TTL, show_spinner=False)
@@ -685,52 +633,22 @@ def render_visao_geral() -> None:
         section_title("Prontas para Cálculo", icon="✅")
         st.caption("17 ativos com inputs fundamentalistas completos")
 
-        rows_html = ""
+        table_rows = []
         for r in _READY_TO_CALCULATE:
             ticker = r["ticker"]
             notes = r["notes"]
-            flag_html = (
-                _chip_html(notes, "degraded") if notes
-                else '<span style="color:var(--fg-6);">—</span>'
-            )
-            rows_html += f"""
-            <tr>
-              <td style="font-family:var(--font-display);font-weight:900;
-                         color:var(--fg-1);">{ticker}</td>
-              <td>{r['sector']}</td>
-              <td>{r['model']}</td>
-              <td>{_method_badge(r['method'])}</td>
-              <td>{flag_html}</td>
-            </tr>
-            """
+            status_str = f"⚠️ {notes}" if notes else "✅ OK"
 
-        tbl2_html = f"""
-        <style>
-        .tbl-wrap {{overflow-x:auto;border-radius:8px;}}
-        .tbl {{width:100%;border-collapse:collapse;font-size:.72rem;}}
-        .tbl th {{background:var(--bg-3);padding:8px 12px;text-align:left;
-                  font-weight:700;color:var(--fg-2);border-bottom:2px solid var(--border-2);
-                  white-space:nowrap;}}
-        .tbl td {{padding:8px 12px;border-bottom:1px solid var(--border-1);
-                  vertical-align:middle;}}
-        .tbl tr:last-child td {{border-bottom:none;}}
-        .tbl tr:hover td {{background:rgba(255,255,255,.03);}}
-        </style>
-        <div class="tbl-wrap">
-        <table class="tbl">
-          <thead>
-            <tr>
-              <th>Empresa</th><th>Setor</th><th>Modelo</th>
-              <th>Método</th><th>Alertas</th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows_html}
-          </tbody>
-        </table>
-        </div>
-        """
-        st.html(tbl2_html)
+            table_rows.append({
+                "Ticker":  ticker,
+                "Setor":   r["sector"],
+                "Modelo":  r["model"],
+                "Método":  r["method"],
+                "Status":  status_str,
+            })
+
+        df_b = pd.DataFrame(table_rows)
+        st.dataframe(df_b, use_container_width=True, hide_index=True, height=300)
 
     # ── Column C: Pendências ─────────────────────────────────────────────────────
     with col_c:
@@ -815,8 +733,8 @@ def render_base_fundamentalista() -> None:
     for r in _READY_TO_CALCULATE:
         model_map[r["ticker"]] = r["model"]
 
-    rows_html = ""
     ready_tickers_set = {r["ticker"] for r in _READY_TO_CALCULATE}
+    table_rows = []
     for ticker in ordered_universe:
         cov = coverage.get(ticker, {"n_metrics": 0, "last_period": None})
         n = cov["n_metrics"]
@@ -829,50 +747,24 @@ def render_base_fundamentalista() -> None:
             src_parts.append("B3 Market")
 
         if n >= 22:
-            status_html = _chip_html("Completo", "approved")
+            status_str = "✅ Completo"
         elif n > 0:
-            status_html = _chip_html("Parcial", "degraded")
+            status_str = "⚠️ Parcial"
         else:
-            status_html = _chip_html("Sem dados", "blocked")
+            status_str = "❌ Sem dados"
 
-        rows_html += f"""
-        <tr>
-          <td style="font-family:var(--font-display);font-weight:900;
-                     color:var(--fg-1);">{ticker}</td>
-          <td>{model}</td>
-          <td style="text-align:right;">{n} / 22</td>
-          <td>{period}</td>
-          <td>{" + ".join(src_parts) if src_parts else "—"}</td>
-          <td>{status_html}</td>
-        </tr>
-        """
+        table_rows.append({
+            "Ticker":  ticker,
+            "Modelo":  model,
+            "Métricas": f"{n} / 22",
+            "Período":  period,
+            "Fonte":    " + ".join(src_parts) if src_parts else "—",
+            "Status":   status_str,
+        })
 
     section_title("Cobertura por Empresa", icon="")
-    tbl3_html = f"""
-    <style>
-    .tbl-wrap {{overflow-x:auto;border-radius:8px;}}
-    .tbl {{width:100%;border-collapse:collapse;font-size:.72rem;}}
-    .tbl th {{background:var(--bg-3);padding:8px 12px;text-align:left;
-              font-weight:700;color:var(--fg-2);border-bottom:2px solid var(--border-2);
-              white-space:nowrap;}}
-    .tbl td {{padding:8px 12px;border-bottom:1px solid var(--border-1);
-              vertical-align:middle;}}
-    .tbl tr:last-child td {{border-bottom:none;}}
-    .tbl tr:hover td {{background:rgba(255,255,255,.03);}}
-    </style>
-    <div class="tbl-wrap">
-    <table class="tbl">
-      <thead>
-        <tr>
-          <th>Empresa</th><th>Modelo</th><th style="text-align:right;">Métricas</th>
-          <th>Período</th><th>Fonte</th><th>Status</th>
-        </tr>
-      </thead>
-      <tbody>{rows_html}</tbody>
-    </table>
-    </div>
-    """
-    st.html(tbl3_html)
+    df_cov = pd.DataFrame(table_rows)
+    st.dataframe(df_cov, use_container_width=True, hide_index=True, height=400)
 
     # Key metrics for READY tickers
     section_title("Métricas-chave — Prontas para Cálculo", icon="")
@@ -931,13 +823,13 @@ def render_simulacao_modelos() -> None:
 
     section_title(f"Resultados da Simulação — {len(dry_run)} empresas", icon="")
 
-    rows_html = ""
+    table_rows = []
     for row in dry_run:
-        ticker    = row.get("ticker", "—")
-        fv_raw    = row.get("fair_value", "")
+        ticker     = row.get("ticker", "—")
+        fv_raw     = row.get("fair_value", "")
         upside_raw = row.get("upside_pct", "")
-        method    = row.get("method_used", "—").replace("_", "/")
-        flags     = row.get("quality_flags", "")
+        method     = row.get("method_used", "—").replace("_", "/")
+        flags      = row.get("quality_flags", "")
 
         try:
             fv_str = _fmt_brl(float(fv_raw))
@@ -945,61 +837,20 @@ def render_simulacao_modelos() -> None:
             fv_str = "—"
 
         try:
-            upside_f = float(upside_raw)
-            upside_str = f"{upside_f:+.1f}%"
-            if upside_f > 20:
-                upside_color = "var(--pos-500)"
-            elif upside_f > 0:
-                upside_color = "var(--warn-500)"
-            else:
-                upside_color = "var(--neg-500)"
+            upside_str = f"{float(upside_raw):+.1f}%"
         except (TypeError, ValueError):
             upside_str = "—"
-            upside_color = "var(--fg-5)"
 
-        flag_html = (
-            _chip_html(flags, "degraded") if flags
-            else '<span style="color:var(--fg-6);">—</span>'
-        )
+        table_rows.append({
+            "Ticker":       ticker,
+            "Valor Just.": fv_str,
+            "Up/Downside": upside_str,
+            "Método":       method,
+            "Alertas":      flags if flags else "—",
+        })
 
-        rows_html += f"""
-        <tr>
-          <td style="font-family:var(--font-display);font-weight:900;
-                     color:var(--fg-1);">{ticker}</td>
-          <td style="font-family:var(--font-mono);font-weight:700;
-                     color:var(--fg-2);">{fv_str}</td>
-          <td style="font-family:var(--font-mono);font-weight:900;
-                     color:{upside_color};">{upside_str}</td>
-          <td>{_method_badge(method)}</td>
-          <td>{flag_html}</td>
-        </tr>
-        """
-
-        tbl4_html = f"""
-    <style>
-    .tbl-wrap {{overflow-x:auto;border-radius:8px;}}
-    .tbl {{width:100%;border-collapse:collapse;font-size:.72rem;}}
-    .tbl th {{background:var(--bg-3);padding:8px 12px;text-align:left;
-              font-weight:700;color:var(--fg-2);border-bottom:2px solid var(--border-2);
-              white-space:nowrap;}}
-    .tbl td {{padding:8px 12px;border-bottom:1px solid var(--border-1);
-              vertical-align:middle;}}
-    .tbl tr:last-child td {{border-bottom:none;}}
-    .tbl tr:hover td {{background:rgba(255,255,255,.03);}}
-    </style>
-    <div class="tbl-wrap">
-    <table class="tbl">
-      <thead>
-        <tr>
-          <th>Empresa</th><th>Valor Justo (sim.)</th><th>Upside</th>
-          <th>Método</th><th>Alertas</th>
-        </tr>
-      </thead>
-      <tbody>{rows_html}</tbody>
-    </table>
-    </div>
-    """
-    st.html(tbl4_html)
+    df_sim = pd.DataFrame(table_rows)
+    st.dataframe(df_sim, use_container_width=True, hide_index=True, height=400)
 
     # PCAR3 special note
     pcar_row = next((r for r in dry_run if r.get("ticker") == "PCAR3"), None)
