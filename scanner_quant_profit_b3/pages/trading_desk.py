@@ -57,6 +57,8 @@ from src.ui.styles import PREMIUM_CSS
 RTD_PATH = SCANNER_ROOT / "data" / "realtime" / "RTD PROFIT.xlsx"
 SHORTLIST_PATH = SCANNER_ROOT / "data" / "realtime" / "options_rtd_watchlist.csv"
 SYMBOLS_PATH = SCANNER_ROOT / "data" / "realtime" / "options_rtd_symbols.csv"
+HIST_OPP_PATH = SCANNER_ROOT / "data" / "realtime" / "options_historical_opportunities.csv"
+WATCHLIST_NEXT_PATH = SCANNER_ROOT / "data" / "realtime" / "options_next_session_watchlist.csv"
 
 # ── Config ─────────────────────────────────────────────────────────────────────
 REFRESH_OPTIONS = [5, 10, 30, 60, 0]  # 0 = manual
@@ -349,6 +351,148 @@ def _shortlist() -> pd.DataFrame:
     return pd.DataFrame()
 
 
+@st.cache_data(ttl=300, show_spinner=False)
+def _hist_opportunities() -> pd.DataFrame:
+    """Lê options_historical_opportunities.csv (gerado pelo COTAHIST scanner)."""
+    if HIST_OPP_PATH.exists():
+        try:
+            return pd.read_csv(HIST_OPP_PATH, dtype=str)
+        except Exception:
+            return pd.DataFrame()
+    return pd.DataFrame()
+
+
+@st.cache_data(ttl=300, show_spinner=False)
+def _next_session_watchlist() -> pd.DataFrame:
+    """Lê options_next_session_watchlist.csv (candidatas/monitorar no próximo pregão)."""
+    if WATCHLIST_NEXT_PATH.exists():
+        try:
+            return pd.read_csv(WATCHLIST_NEXT_PATH, dtype=str)
+        except Exception:
+            return pd.DataFrame()
+    return pd.DataFrame()
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Helpers — Radar Histórico
+# ─────────────────────────────────────────────────────────────────────────────
+
+_CENARIO_LABEL: dict[str, str] = {
+    "RECUPERACAO_APOS_QUEDA": "↗ Recuperação",
+    "CONTINUACAO_ALTA":       "↑ Alta",
+    "CONTINUACAO_BAIXA":      "↓ Baixa",
+    "PROTECAO_CARTEIRA":      "🛡 Proteção",
+    "RENDA_COM_ATIVO":        "💰 Renda",
+    "VOLATILIDADE_EM_ALTA":   "⚡ Volatilidade",
+    "LATERALIDADE":           "↔ Lateral",
+    "SEM_ASSIMETRIA":         "— Sem edge",
+}
+
+_CENARIO_BADGE: dict[str, str] = {
+    "RECUPERACAO_APOS_QUEDA": "badge-green",
+    "CONTINUACAO_ALTA":       "badge-green",
+    "CONTINUACAO_BAIXA":      "badge-red",
+    "PROTECAO_CARTEIRA":      "badge-blue",
+    "RENDA_COM_ATIVO":        "badge-yellow",
+    "VOLATILIDADE_EM_ALTA":   "badge-orange",
+    "LATERALIDADE":           "badge-gray",
+    "SEM_ASSIMETRIA":         "badge-gray",
+}
+
+_STATUS_LABEL: dict[str, str] = {
+    "CANDIDATA_PROXIMO_PREGAO":   "✅ Candidata",
+    "MONITORAR_NO_RTD":           "👁 Monitorar",
+    "AGUARDAR_LIQUIDEZ":          "⏳ Aguardar",
+    "ESTUDAR":                    "📚 Estudar",
+    "DESCARTAR_ILIQUIDA":         "🚫 Ilíquida",
+    "DESCARTAR_SEM_ASSIMETRIA":   "🚫 Sem edge",
+}
+
+_STATUS_BADGE: dict[str, str] = {
+    "CANDIDATA_PROXIMO_PREGAO":   "badge-green",
+    "MONITORAR_NO_RTD":           "badge-cyan",
+    "AGUARDAR_LIQUIDEZ":          "badge-yellow",
+    "ESTUDAR":                    "badge-blue",
+    "DESCARTAR_ILIQUIDA":         "badge-red",
+    "DESCARTAR_SEM_ASSIMETRIA":   "badge-red",
+}
+
+_HORIZONTE_BADGE: dict[str, str] = {
+    "CURTO":       "badge-orange",
+    "MEDIO":       "badge-yellow",
+    "LONGO":       "badge-blue",
+    "EXTRA_LONGO": "badge-cyan",
+    "EXPIRADO":    "badge-red",
+}
+
+
+def _hist_proxima_acao(status: str, in_rtd: bool, rtd_confirmed: bool) -> tuple[str, str]:
+    """Retorna (texto da próxima ação, classe CSS badge)."""
+    if status == "CANDIDATA_PROXIMO_PREGAO":
+        if rtd_confirmed:
+            return "Enviar para motor de estratégias ao vivo", "badge-green"
+        if in_rtd:
+            return "RTD detectado — confirmar bid/ask", "badge-cyan"
+        return "Adicionar ao RTD no próximo pregão", "badge-blue"
+    if status == "MONITORAR_NO_RTD":
+        if in_rtd:
+            return "Monitorar liquidez no RTD", "badge-yellow"
+        return "Adicionar ao RTD — monitorar liquidez", "badge-yellow"
+    if status == "AGUARDAR_LIQUIDEZ":
+        return "Aguardar confirmação técnica", "badge-orange"
+    if status == "ESTUDAR":
+        return "Aguardar confirmação técnica", "badge-gray"
+    if status == "DESCARTAR_ILIQUIDA":
+        return "Descartar por iliquidez", "badge-red"
+    if status == "DESCARTAR_SEM_ASSIMETRIA":
+        return "Descartar por falta de assimetria", "badge-red"
+    return "—", "badge-gray"
+
+
+def _safe_float(val, default: float = 0.0) -> float:
+    try:
+        if val is None or str(val).strip() in ("", "nan", "NaN", "None"):
+            return default
+        return float(val)
+    except Exception:
+        return default
+
+
+def _safe_int(val, default: int = 0) -> int:
+    try:
+        return int(float(val))
+    except Exception:
+        return default
+
+
+def _fmt_score_badge(score: float) -> str:
+    if score >= 70:
+        cls = "badge-green"
+    elif score >= 50:
+        cls = "badge-yellow"
+    elif score >= 30:
+        cls = "badge-orange"
+    else:
+        cls = "badge-red"
+    return f'<span class="badge {cls}">{score:.0f}</span>'
+
+
+def _fmt_tipo_badge(tipo: str) -> str:
+    if tipo.upper() == "CALL":
+        return '<span class="badge badge-green">CALL</span>'
+    if tipo.upper() == "PUT":
+        return '<span class="badge badge-red">PUT</span>'
+    return f'<span class="badge badge-gray">{tipo}</span>'
+
+
+def _fmt_rtd_status(in_rtd: bool, rtd_confirmed: bool) -> str:
+    if rtd_confirmed:
+        return '<span class="badge badge-green">✓ RTD confirmado</span>'
+    if in_rtd:
+        return '<span class="badge badge-cyan">No RTD</span>'
+    return '<span class="badge badge-gray">Histórico</span>'
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # App
 # ─────────────────────────────────────────────────────────────────────────────
@@ -425,14 +569,27 @@ for t, p in acoes.items():
     if s["dir"] == "COMPRA" and s["prox"] == "Operar agora":
         candidatos.append((t, p, s))
 
-# ── Tabs (6) ──────────────────────────────────────────────────────────────────
-tab_overview, tab_acao, tab_opcao, tab_futuro, tab_estrategias, tab_diag = st.tabs(
+# ── Leitura dados históricos ─────────────────────────────────────────────────
+hist_opp_df = _hist_opportunities()
+next_sess_df = _next_session_watchlist()
+
+# ── Tabs (7) ──────────────────────────────────────────────────────────────────
+(
+    tab_overview,
+    tab_acao,
+    tab_opcao,
+    tab_futuro,
+    tab_estrategias,
+    tab_hist_radar,
+    tab_diag,
+) = st.tabs(
     [
         "🔭 Visão Geral",
         "📊 Ações ao Vivo",
         "💹 Opções ao Vivo",
         "📈 Futuros ao Vivo",
         "🧠 Estratégias",
+        "📡 Radar Histórico",
         "🔍 Diagnóstico RTD",
     ]
 )
@@ -1382,6 +1539,571 @@ with tab_estrategias:
             <span style="color:#64748B;font-weight:700;">DESCARTAR</span>: risco não recomendado ou score &lt; 30<br>
             Spread máx. 3% · Bid+Ask obrigatório · Apenas estruturas com risco máximo calculado<br>
             <em>Não é recomendação de investimento. Use como apoio à decisão.</em>
+        </div>
+        <div style="margin-top:8px;padding:8px 14px;background:#070F1A;
+             border:1px solid #1E3A1E;border-radius:6px;font-size:0.58rem;color:#475569;">
+            <strong style="color:#22C55E;">&#10003; Auditoria de Sanidade:</strong>
+            Compra no ASK &middot; Venda no BID &middot; Vencimentos verificados &middot; Risco máximo calculado &middot; Venda descoberta bloqueada
+        </div>
+        """,
+            unsafe_allow_html=True,
+        )
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# TAB: RADAR HISTÓRICO DE OPÇÕES
+# ═══════════════════════════════════════════════════════════════════════════
+with tab_hist_radar:
+    st.markdown(
+        '<div class="td-section">Radar Histórico de Opções — COTAHIST B3</div>',
+        unsafe_allow_html=True,
+    )
+
+    # Disclaimer obrigatório
+    st.markdown(
+        """
+    <div class="td-warn" style="margin-bottom:12px;">
+        ⚠️ <strong>Radar histórico não é sinal de entrada imediata.</strong>
+        O COTAHIST descobre oportunidades passadas com liquidez histórica.
+        O RTD confirma execução no pregão. Aguarde confirmação de bid/ask antes de operar.
+    </div>
+    """,
+        unsafe_allow_html=True,
+    )
+
+    # ── Estado vazio ────────────────────────────────────────────────────────
+    if hist_opp_df.empty:
+        st.markdown(
+            """
+        <div class="td-info">
+            <strong style="color:#22D3EE;">Nenhuma oportunidade histórica carregada.</strong><br>
+            Os arquivos de dados não foram encontrados:<br>
+            &nbsp;&nbsp;• <code>data/realtime/options_historical_opportunities.csv</code><br>
+            &nbsp;&nbsp;• <code>data/realtime/options_next_session_watchlist.csv</code><br><br>
+            Execute o scanner para gerar os dados:<br>
+            <code style="color:#22C55E;">python -m src.options.historical_opportunity_scanner</code><br><br>
+            Opções disponíveis:<br>
+            <code>python -m src.options.historical_opportunity_scanner --ativos PETR4 VALE3</code><br>
+            <code>python -m src.options.historical_opportunity_scanner --verbose</code>
+        </div>
+        """,
+            unsafe_allow_html=True,
+        )
+    else:
+        # ── Preparar dados ──────────────────────────────────────────────────
+        df = hist_opp_df.copy()
+
+        # Converter colunas numéricas
+        for col_num in ["score", "liquidez_score", "vol_media_21d", "negocios_media_5d",
+                         "dte", "strike", "ultimo_preco", "moneyness",
+                         "retorno_5d", "retorno_21d", "vol_hist_21d"]:
+            if col_num in df.columns:
+                df[col_num] = df[col_num].apply(_safe_float)
+
+        # RTD crossref — set de tickers no RTD
+        rtd_set_all = set(all_inst.keys())
+
+        def _check_rtd(ticker: str) -> tuple[bool, bool]:
+            in_rtd = ticker in rtd_set_all
+            if not in_rtd:
+                return False, False
+            p = all_inst.get(ticker)
+            rtd_confirmed = (
+                p is not None
+                and p.bid is not None
+                and p.ask is not None
+                and p.preco is not None
+            )
+            return in_rtd, rtd_confirmed
+
+        if "ticker_opcao" in df.columns:
+            df["_in_rtd"] = df["ticker_opcao"].apply(lambda t: _check_rtd(str(t))[0])
+            df["_rtd_confirmed"] = df["ticker_opcao"].apply(lambda t: _check_rtd(str(t))[1])
+        else:
+            df["_in_rtd"] = False
+            df["_rtd_confirmed"] = False
+
+        # ── KPIs ────────────────────────────────────────────────────────────
+        total_opp = len(df)
+        n_candidata = (df.get("status", pd.Series(dtype=str)) == "CANDIDATA_PROXIMO_PREGAO").sum()
+        n_monitor = (df.get("status", pd.Series(dtype=str)) == "MONITORAR_NO_RTD").sum()
+        n_aguardar = (df.get("status", pd.Series(dtype=str)) == "AGUARDAR_LIQUIDEZ").sum()
+        n_desc_iliq = (df.get("status", pd.Series(dtype=str)) == "DESCARTAR_ILIQUIDA").sum()
+        n_desc_assim = (df.get("status", pd.Series(dtype=str)) == "DESCARTAR_SEM_ASSIMETRIA").sum()
+        n_ativos = df["ativo_objeto"].nunique() if "ativo_objeto" in df.columns else 0
+        n_no_rtd = df["_in_rtd"].sum()
+        n_rtd_confirmed = df["_rtd_confirmed"].sum()
+
+        n_curto = (df.get("categoria_vencimento", pd.Series(dtype=str)) == "CURTO").sum()
+        n_medio = (df.get("categoria_vencimento", pd.Series(dtype=str)) == "MEDIO").sum()
+        n_longo = (df.get("categoria_vencimento", pd.Series(dtype=str)) == "LONGO").sum()
+        n_extra = (df.get("categoria_vencimento", pd.Series(dtype=str)) == "EXTRA_LONGO").sum()
+
+        col_k1, col_k2, col_k3, col_k4, col_k5 = st.columns(5)
+        for col_kpi, lbl, val, cor, sub in [
+            (col_k1, "Total Oportunidades", total_opp, "#F1F5F9", "histórico COTAHIST"),
+            (col_k2, "Candidatas Pregão", n_candidata, "#22C55E", "próxima sessão"),
+            (col_k3, "Monitorar RTD", n_monitor, "#22D3EE", "confirmar execução"),
+            (col_k4, "Ativos Únicos", n_ativos, "#94A3B8", "monitorados"),
+            (col_k5, "No RTD", n_no_rtd, "#EAB308", f"{n_rtd_confirmed} confirmados"),
+        ]:
+            with col_kpi:
+                st.markdown(
+                    f"""
+                <div class="td-kpi">
+                    <div class="td-kpi-label">{lbl}</div>
+                    <div class="td-kpi-val" style="color:{cor};">{val}</div>
+                    <div class="td-kpi-sub">{sub}</div>
+                </div>""",
+                    unsafe_allow_html=True,
+                )
+
+        col_k6, col_k7, col_k8, col_k9, col_k10 = st.columns(5)
+        for col_kpi, lbl, val, cor, sub in [
+            (col_k6,  "Aguardando Liq.",   n_aguardar,  "#F97316", "liquidez insuf."),
+            (col_k7,  "Descard. Ilíquida", n_desc_iliq, "#EF4444", "sem volume"),
+            (col_k8,  "Descard. Sem Edge", n_desc_assim,"#EF4444", "sem assimetria"),
+            (col_k9,  "Curto/Médio",       f"{n_curto}/{n_medio}", "#F1F5F9", "0-90 dias"),
+            (col_k10, "Longo/Extra",       f"{n_longo}/{n_extra}", "#94A3B8", "90-180+ dias"),
+        ]:
+            with col_kpi:
+                st.markdown(
+                    f"""
+                <div class="td-kpi">
+                    <div class="td-kpi-label">{lbl}</div>
+                    <div class="td-kpi-val" style="color:{cor};">{val}</div>
+                    <div class="td-kpi-sub">{sub}</div>
+                </div>""",
+                    unsafe_allow_html=True,
+                )
+
+        st.markdown('<div style="margin-top:14px;"></div>', unsafe_allow_html=True)
+
+        # ── Filtros ─────────────────────────────────────────────────────────
+        st.markdown('<div class="td-section">Filtros</div>', unsafe_allow_html=True)
+
+        col_f1, col_f2, col_f3, col_f4 = st.columns(4)
+        with col_f1:
+            ativos_list = ["Todos"] + sorted(df["ativo_objeto"].dropna().unique().tolist()) if "ativo_objeto" in df.columns else ["Todos"]
+            flt_ativo = st.selectbox("Ativo Objeto", ativos_list, key="hr_ativo")
+        with col_f2:
+            cenarios_list = ["Todos"] + sorted(df["cenario"].dropna().unique().tolist()) if "cenario" in df.columns else ["Todos"]
+            flt_cenario = st.selectbox("Cenário", cenarios_list, key="hr_cenario")
+        with col_f3:
+            status_list = ["Todos"] + sorted(df["status"].dropna().unique().tolist()) if "status" in df.columns else ["Todos"]
+            flt_status = st.selectbox("Status", status_list, key="hr_status")
+        with col_f4:
+            tipo_list = ["Todos", "CALL", "PUT"]
+            flt_tipo = st.selectbox("Tipo CALL/PUT", tipo_list, key="hr_tipo")
+
+        col_f5, col_f6, col_f7, col_f8 = st.columns(4)
+        with col_f5:
+            horiz_list = ["Todos", "CURTO", "MEDIO", "LONGO", "EXTRA_LONGO"]
+            flt_horizonte = st.selectbox("Horizonte", horiz_list, key="hr_horizonte")
+        with col_f6:
+            vencs_list = ["Todos"] + sorted(df["vencimento"].dropna().unique().tolist()) if "vencimento" in df.columns else ["Todos"]
+            flt_venc = st.selectbox("Vencimento", vencs_list, key="hr_venc")
+        with col_f7:
+            structs_raw = set()
+            if "estruturas_sugeridas" in df.columns:
+                for v in df["estruturas_sugeridas"].dropna():
+                    for s in str(v).split(","):
+                        s = s.strip()
+                        if s:
+                            structs_raw.add(s)
+            struct_list = ["Todos"] + sorted(structs_raw)
+            flt_struct = st.selectbox("Estrutura", struct_list, key="hr_struct")
+        with col_f8:
+            flt_score_min = st.slider("Score mínimo", 0, 100, 0, step=5, key="hr_score")
+
+        # ── Aplicar filtros ─────────────────────────────────────────────────
+        df_filt = df.copy()
+        if flt_ativo != "Todos" and "ativo_objeto" in df_filt.columns:
+            df_filt = df_filt[df_filt["ativo_objeto"] == flt_ativo]
+        if flt_cenario != "Todos" and "cenario" in df_filt.columns:
+            df_filt = df_filt[df_filt["cenario"] == flt_cenario]
+        if flt_status != "Todos" and "status" in df_filt.columns:
+            df_filt = df_filt[df_filt["status"] == flt_status]
+        if flt_tipo != "Todos" and "tipo" in df_filt.columns:
+            df_filt = df_filt[df_filt["tipo"].str.upper() == flt_tipo]
+        if flt_horizonte != "Todos" and "categoria_vencimento" in df_filt.columns:
+            df_filt = df_filt[df_filt["categoria_vencimento"] == flt_horizonte]
+        if flt_venc != "Todos" and "vencimento" in df_filt.columns:
+            df_filt = df_filt[df_filt["vencimento"] == flt_venc]
+        if flt_struct != "Todos" and "estruturas_sugeridas" in df_filt.columns:
+            df_filt = df_filt[df_filt["estruturas_sugeridas"].str.contains(flt_struct, na=False)]
+        if flt_score_min > 0 and "score" in df_filt.columns:
+            df_filt = df_filt[df_filt["score"] >= flt_score_min]
+
+        df_filt = df_filt.sort_values("score", ascending=False).reset_index(drop=True)
+
+        # ── Tabela principal ─────────────────────────────────────────────────
+        st.markdown(
+            f'<div class="td-section">Oportunidades ({len(df_filt)} de {total_opp})</div>',
+            unsafe_allow_html=True,
+        )
+
+        if df_filt.empty:
+            st.markdown(
+                '<div class="td-info">Nenhuma oportunidade para os filtros selecionados.</div>',
+                unsafe_allow_html=True,
+            )
+        else:
+            table_rows = ""
+            for _, row in df_filt.head(200).iterrows():
+                ativo = str(row.get("ativo_objeto", "—"))
+                ticker = str(row.get("ticker_opcao", "—"))
+                tipo = str(row.get("tipo", "—"))
+                strike = _safe_float(row.get("strike"))
+                venc = str(row.get("vencimento", "—"))[:10]
+                dte = _safe_int(row.get("dte"))
+                mney_val = _safe_float(row.get("moneyness"))
+                mney_cat = str(row.get("moneyness_cat", "—"))
+                cenario = str(row.get("cenario", "—"))
+                horizonte = str(row.get("categoria_vencimento", "—"))
+                estruturas = str(row.get("estruturas_sugeridas", "—"))[:30]
+                score_v = _safe_float(row.get("score"))
+                liq = _safe_float(row.get("liquidez_score"))
+                vol21 = _safe_float(row.get("vol_media_21d"))
+                neg21 = _safe_float(row.get("negocios_media_5d"))
+                status_v = str(row.get("status", "—"))
+                motivo = str(row.get("motivo", "—"))[:50]
+                risco = str(row.get("risco_principal", "—"))[:40]
+                in_rtd = bool(row.get("_in_rtd", False))
+                rtd_conf = bool(row.get("_rtd_confirmed", False))
+
+                prox_txt, prox_cls = _hist_proxima_acao(status_v, in_rtd, rtd_conf)
+                cenario_lbl = _CENARIO_LABEL.get(cenario, cenario[:12])
+                cenario_cls = _CENARIO_BADGE.get(cenario, "badge-gray")
+                status_lbl = _STATUS_LABEL.get(status_v, status_v[:10])
+                status_cls = _STATUS_BADGE.get(status_v, "badge-gray")
+                horiz_cls = _HORIZONTE_BADGE.get(horizonte, "badge-gray")
+                mney_pct = f"{mney_val*100:.1f}%"
+                vol21_fmt = f"R${vol21/1e3:.0f}K" if vol21 >= 1000 else f"R${vol21:.0f}"
+                dte_cor = "#22C55E" if dte <= 30 else "#EAB308" if dte <= 90 else "#94A3B8"
+
+                table_rows += f"""
+                <tr>
+                    <td>
+                        <div class="td-ticker" style="font-size:0.72rem;">{ativo}</div>
+                    </td>
+                    <td>
+                        <div style="font-weight:700;font-size:0.68rem;color:#F1F5F9;">{ticker}</div>
+                    </td>
+                    <td>{_fmt_tipo_badge(tipo)}</td>
+                    <td style="color:#F1F5F9;">{strike:.2f}</td>
+                    <td style="color:#64748B;font-size:0.60rem;">{venc}</td>
+                    <td><span style="color:{dte_cor};font-weight:700;">{dte}d</span></td>
+                    <td style="color:#94A3B8;font-size:0.62rem;">{mney_pct} <span style="color:#475569;">({mney_cat})</span></td>
+                    <td><span class="badge {cenario_cls}" style="font-size:0.55rem;">{cenario_lbl}</span></td>
+                    <td><span class="badge {horiz_cls}" style="font-size:0.55rem;">{horizonte}</span></td>
+                    <td style="font-size:0.60rem;color:#7DD3FC;max-width:100px;overflow:hidden;text-overflow:ellipsis;">{estruturas}</td>
+                    <td>{_fmt_score_badge(score_v)}</td>
+                    <td style="color:#94A3B8;">{liq:.0f}</td>
+                    <td style="color:#64748B;font-size:0.62rem;">{vol21_fmt}</td>
+                    <td style="color:#64748B;">{neg21:.1f}</td>
+                    <td><span class="badge {status_cls}" style="font-size:0.55rem;">{status_lbl}</span></td>
+                    <td style="font-size:0.58rem;color:#64748B;max-width:120px;overflow:hidden;text-overflow:ellipsis;" title="{motivo}">{motivo}</td>
+                    <td style="font-size:0.58rem;color:#F59E0B;max-width:120px;overflow:hidden;text-overflow:ellipsis;" title="{risco}">{risco[:35]}…</td>
+                    <td>{_fmt_rtd_status(in_rtd, rtd_conf)}</td>
+                    <td><span class="badge {prox_cls}" style="font-size:0.55rem;white-space:normal;">{prox_txt}</span></td>
+                </tr>
+                """
+
+            st.markdown(
+                f"""
+            <div class="td-table-wrap">
+                <table class="td-table">
+                    <thead>
+                        <tr>
+                            <th>Ativo</th><th>Opção</th><th>Tipo</th>
+                            <th>Strike</th><th>Venc.</th><th>DTE</th>
+                            <th>Moneyness</th><th>Cenário</th><th>Horizonte</th>
+                            <th>Estrutura</th><th>Score</th>
+                            <th>Liq.</th><th>Vol.21d</th><th>Neg.5d</th>
+                            <th>Status</th><th>Motivo</th><th>Risco</th>
+                            <th>RTD</th><th>Próxima Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>{table_rows}</tbody>
+                </table>
+            </div>
+            """,
+                unsafe_allow_html=True,
+            )
+
+            if len(df_filt) > 200:
+                st.markdown(
+                    f'<div style="font-size:0.60rem;color:#475569;margin-top:4px;">'
+                    f"Exibindo 200 de {len(df_filt)} oportunidades. Refine os filtros para ver mais.</div>",
+                    unsafe_allow_html=True,
+                )
+
+        # ── Bloco: Top ideias para próximo pregão ────────────────────────────
+        st.markdown(
+            '<div class="td-section">Top Ideias para Próximo Pregão</div>',
+            unsafe_allow_html=True,
+        )
+
+        df_top = df[
+            df.get("status", pd.Series(dtype=str)).isin([
+                "CANDIDATA_PROXIMO_PREGAO", "MONITORAR_NO_RTD"
+            ])
+        ].sort_values("score", ascending=False).head(10)
+
+        if df_top.empty:
+            st.markdown(
+                '<div class="td-info">Nenhuma candidata para o próximo pregão. '
+                "Execute: <code>python -m src.options.historical_opportunity_scanner</code></div>",
+                unsafe_allow_html=True,
+            )
+        else:
+            top_rows = ""
+            for i, (_, row) in enumerate(df_top.iterrows(), 1):
+                ativo = str(row.get("ativo_objeto", "—"))
+                ticker = str(row.get("ticker_opcao", "—"))
+                tipo = str(row.get("tipo", "—"))
+                strike = _safe_float(row.get("strike"))
+                venc = str(row.get("vencimento", "—"))[:10]
+                dte = _safe_int(row.get("dte"))
+                cenario = str(row.get("cenario", "—"))
+                horizonte = str(row.get("categoria_vencimento", "—"))
+                estruturas = str(row.get("estruturas_sugeridas", "—"))
+                motivo = str(row.get("motivo", "—"))
+                risco = str(row.get("risco_principal", "—"))
+                score_v = _safe_float(row.get("score"))
+                status_v = str(row.get("status", "—"))
+                in_rtd = bool(row.get("_in_rtd", False))
+                rtd_conf = bool(row.get("_rtd_confirmed", False))
+                prox_txt, prox_cls = _hist_proxima_acao(status_v, in_rtd, rtd_conf)
+                cenario_lbl = _CENARIO_LABEL.get(cenario, cenario[:12])
+                cenario_cls = _CENARIO_BADGE.get(cenario, "badge-gray")
+                horiz_cls = _HORIZONTE_BADGE.get(horizonte, "badge-gray")
+                rank_cor = "#22C55E" if i <= 3 else "#EAB308" if i <= 7 else "#94A3B8"
+
+                top_rows += f"""
+                <tr>
+                    <td style="color:{rank_cor};font-weight:800;">#{i}</td>
+                    <td><div class="td-ticker" style="font-size:0.72rem;">{ativo}</div></td>
+                    <td><span style="font-weight:700;color:#F1F5F9;font-size:0.68rem;">{ticker}</span></td>
+                    <td>{_fmt_tipo_badge(tipo)}</td>
+                    <td style="color:#F1F5F9;">{strike:.2f}</td>
+                    <td style="color:#64748B;font-size:0.60rem;">{venc} <span style="color:#EAB308;">({dte}d)</span></td>
+                    <td><span class="badge {cenario_cls}" style="font-size:0.55rem;">{cenario_lbl}</span></td>
+                    <td><span class="badge {horiz_cls}" style="font-size:0.55rem;">{horizonte}</span></td>
+                    <td style="font-size:0.60rem;color:#7DD3FC;">{estruturas[:35]}</td>
+                    <td>{_fmt_score_badge(score_v)}</td>
+                    <td style="font-size:0.58rem;color:#64748B;max-width:150px;">{motivo[:60]}</td>
+                    <td style="font-size:0.58rem;color:#F59E0B;max-width:120px;">{risco[:50]}</td>
+                    <td><span class="badge {prox_cls}" style="font-size:0.55rem;">{prox_txt}</span></td>
+                </tr>
+                """
+
+            st.markdown(
+                f"""
+            <div class="td-table-wrap">
+                <table class="td-table">
+                    <thead>
+                        <tr>
+                            <th>#</th><th>Ativo</th><th>Opção</th><th>Tipo</th>
+                            <th>Strike</th><th>Venc./DTE</th>
+                            <th>Cenário</th><th>Horizonte</th><th>Estrutura</th>
+                            <th>Score</th><th>Motivo</th><th>Risco</th>
+                            <th>Próxima Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>{top_rows}</tbody>
+                </table>
+            </div>
+            """,
+                unsafe_allow_html=True,
+            )
+
+        # ── Bloco: Longo Prazo / Recuperação ────────────────────────────────
+        st.markdown(
+            '<div class="td-section">Longo Prazo & Recuperação (90–180+ dias)</div>',
+            unsafe_allow_html=True,
+        )
+        st.markdown(
+            """
+        <div class="td-info" style="margin-bottom:8px;">
+            📅 Oportunidades de longo prazo para <strong>planejamento de posição</strong> — não entrada imediata.
+            Aguardar janela operacional e confirmação via RTD.
+        </div>
+        """,
+            unsafe_allow_html=True,
+        )
+
+        cenarios_longo = {
+            "RECUPERACAO_APOS_QUEDA", "CONTINUACAO_ALTA",
+            "PROTECAO_CARTEIRA",
+        }
+        df_longo = df[
+            df.get("categoria_vencimento", pd.Series(dtype=str)).isin(["LONGO", "EXTRA_LONGO"])
+            & df.get("cenario", pd.Series(dtype=str)).isin(cenarios_longo)
+            & (df.get("status", pd.Series(dtype=str)) != "DESCARTAR_ILIQUIDA")
+            & (df.get("status", pd.Series(dtype=str)) != "DESCARTAR_SEM_ASSIMETRIA")
+        ].sort_values("score", ascending=False).head(20)
+
+        if df_longo.empty:
+            st.markdown(
+                '<div class="td-info">Nenhuma oportunidade de longo prazo com assimetria identificada.</div>',
+                unsafe_allow_html=True,
+            )
+        else:
+            longo_rows = ""
+            for _, row in df_longo.iterrows():
+                ativo = str(row.get("ativo_objeto", "—"))
+                ticker = str(row.get("ticker_opcao", "—"))
+                tipo = str(row.get("tipo", "—"))
+                strike = _safe_float(row.get("strike"))
+                venc = str(row.get("vencimento", "—"))[:10]
+                dte = _safe_int(row.get("dte"))
+                cenario = str(row.get("cenario", "—"))
+                estruturas = str(row.get("estruturas_sugeridas", "—"))[:40]
+                score_v = _safe_float(row.get("score"))
+                status_v = str(row.get("status", "—"))
+                risco = str(row.get("risco_principal", "—"))[:50]
+                cenario_lbl = _CENARIO_LABEL.get(cenario, cenario[:12])
+                cenario_cls = _CENARIO_BADGE.get(cenario, "badge-gray")
+                horizonte = str(row.get("categoria_vencimento", "—"))
+                horiz_cls = _HORIZONTE_BADGE.get(horizonte, "badge-gray")
+                in_rtd = bool(row.get("_in_rtd", False))
+                rtd_conf = bool(row.get("_rtd_confirmed", False))
+
+                longo_rows += f"""
+                <tr>
+                    <td><div class="td-ticker" style="font-size:0.72rem;">{ativo}</div></td>
+                    <td style="font-weight:700;color:#F1F5F9;font-size:0.68rem;">{ticker}</td>
+                    <td>{_fmt_tipo_badge(tipo)}</td>
+                    <td style="color:#F1F5F9;">{strike:.2f}</td>
+                    <td style="color:#64748B;font-size:0.60rem;">{venc}</td>
+                    <td style="color:#EAB308;font-weight:700;">{dte}d</td>
+                    <td><span class="badge {cenario_cls}" style="font-size:0.55rem;">{cenario_lbl}</span></td>
+                    <td><span class="badge {horiz_cls}" style="font-size:0.55rem;">{horizonte}</span></td>
+                    <td style="font-size:0.60rem;color:#7DD3FC;">{estruturas}</td>
+                    <td>{_fmt_score_badge(score_v)}</td>
+                    <td style="font-size:0.58rem;color:#F59E0B;">{risco}</td>
+                    <td>{_fmt_rtd_status(in_rtd, rtd_conf)}</td>
+                    <td style="font-size:0.58rem;color:#64748B;">Planejar posição</td>
+                </tr>
+                """
+
+            st.markdown(
+                f"""
+            <div class="td-table-wrap">
+                <table class="td-table">
+                    <thead>
+                        <tr>
+                            <th>Ativo</th><th>Opção</th><th>Tipo</th>
+                            <th>Strike</th><th>Venc.</th><th>DTE</th>
+                            <th>Cenário</th><th>Horizonte</th><th>Estrutura</th>
+                            <th>Score</th><th>Risco</th><th>RTD</th><th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>{longo_rows}</tbody>
+                </table>
+            </div>
+            """,
+                unsafe_allow_html=True,
+            )
+
+        # ── Bloco: Resumo por Cenário ────────────────────────────────────────
+        st.markdown(
+            '<div class="td-section">Resumo por Cenário</div>', unsafe_allow_html=True
+        )
+
+        todos_cenarios = [
+            "RECUPERACAO_APOS_QUEDA", "CONTINUACAO_ALTA", "CONTINUACAO_BAIXA",
+            "PROTECAO_CARTEIRA", "RENDA_COM_ATIVO", "VOLATILIDADE_EM_ALTA",
+            "LATERALIDADE", "SEM_ASSIMETRIA",
+        ]
+
+        cenario_rows = ""
+        for cen in todos_cenarios:
+            df_cen = df[df.get("cenario", pd.Series(dtype=str)) == cen]
+            if df_cen.empty:
+                continue
+            n_total_cen = len(df_cen)
+            n_cand_cen = (df_cen.get("status", pd.Series(dtype=str)) == "CANDIDATA_PROXIMO_PREGAO").sum()
+            n_mon_cen = (df_cen.get("status", pd.Series(dtype=str)) == "MONITORAR_NO_RTD").sum()
+            n_desc_cen = (
+                df_cen.get("status", pd.Series(dtype=str)).isin([
+                    "DESCARTAR_ILIQUIDA", "DESCARTAR_SEM_ASSIMETRIA"
+                ])
+            ).sum()
+            ativos_cen = ", ".join(sorted(df_cen["ativo_objeto"].dropna().unique())[:5])
+            score_med = df_cen.get("score", pd.Series(dtype=float)).mean()
+            cen_lbl = _CENARIO_LABEL.get(cen, cen[:14])
+            cen_cls = _CENARIO_BADGE.get(cen, "badge-gray")
+            cand_cor = "#22C55E" if n_cand_cen > 0 else "#475569"
+            desc_cor = "#EF4444" if n_desc_cen > 0 else "#475569"
+
+            cenario_rows += f"""
+            <tr>
+                <td><span class="badge {cen_cls}" style="font-size:0.60rem;">{cen_lbl}</span></td>
+                <td style="font-weight:700;color:#F1F5F9;">{n_total_cen}</td>
+                <td style="color:{cand_cor};font-weight:700;">{n_cand_cen}</td>
+                <td style="color:#22D3EE;">{n_mon_cen}</td>
+                <td style="color:{desc_cor};">{n_desc_cen}</td>
+                <td style="color:#94A3B8;">{score_med:.0f}</td>
+                <td style="font-size:0.60rem;color:#64748B;">{ativos_cen}</td>
+            </tr>
+            """
+
+        if cenario_rows:
+            st.markdown(
+                f"""
+            <div class="td-table-wrap">
+                <table class="td-table">
+                    <thead>
+                        <tr>
+                            <th>Cenário</th><th>Total</th>
+                            <th>Candidatas</th><th>Monitorar</th><th>Descartadas</th>
+                            <th>Score Médio</th><th>Ativos</th>
+                        </tr>
+                    </thead>
+                    <tbody>{cenario_rows}</tbody>
+                </table>
+            </div>
+            """,
+                unsafe_allow_html=True,
+            )
+
+        # ── Crossref com aba Estratégias ─────────────────────────────────────
+        rtd_confirmed_hist = df[df["_rtd_confirmed"]]["ticker_opcao"].tolist() if not df.empty else []
+        if rtd_confirmed_hist:
+            st.markdown(
+                '<div class="td-section">Ponte RTD → Motor de Estratégias</div>',
+                unsafe_allow_html=True,
+            )
+            st.markdown(
+                f"""
+            <div class="td-success">
+                ✅ <strong>{len(rtd_confirmed_hist)} opção(ões) históricas encontradas no RTD com bid/ask confirmado:</strong>
+                {', '.join(rtd_confirmed_hist[:15])}
+                {'…' if len(rtd_confirmed_hist) > 15 else ''}<br>
+                <span style="font-size:0.62rem;">
+                    Acesse a aba <strong>🧠 Estratégias</strong> para ver estruturas operacionais geradas ao vivo.
+                    O motor de estratégias consome bid/ask do RTD — nenhuma ação manual é necessária.
+                </span>
+            </div>
+            """,
+                unsafe_allow_html=True,
+            )
+
+        # ── Footer da aba ────────────────────────────────────────────────────
+        ultima_data = str(df.get("ultima_data_cotahist", pd.Series(dtype=str)).dropna().iloc[0]) if "ultima_data_cotahist" in df.columns and not df["ultima_data_cotahist"].dropna().empty else "—"
+        data_analise = str(df.get("data_analise", pd.Series(dtype=str)).dropna().iloc[0]) if "data_analise" in df.columns and not df["data_analise"].dropna().empty else "—"
+        st.markdown(
+            f"""
+        <div class="td-info" style="margin-top:14px;">
+            📊 <strong>Fonte dos dados:</strong> COTAHIST B3 · Última data no banco: <strong>{ultima_data}</strong> ·
+            Análise gerada em: <strong>{data_analise}</strong> ·
+            {total_opp} oportunidades · {n_ativos} ativos · {HIST_OPP_PATH.name}<br>
+            <span style="font-size:0.60rem;color:#475569;">
+                Para atualizar: <code>python -m src.options.historical_opportunity_scanner</code>
+            </span>
         </div>
         """,
             unsafe_allow_html=True,
