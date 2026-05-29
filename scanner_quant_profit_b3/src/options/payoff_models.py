@@ -678,3 +678,92 @@ def protective_put(stock_price: float, put_leg: Leg,
         risk_category="BAIXO",
         suitability="PROTECAO",
     )
+
+
+# ---------------------------------------------------------------------------
+# Validação matemática de payoff
+# ---------------------------------------------------------------------------
+
+def validate_strategy_payoff(payoff: StrategyPayoff) -> dict:
+    """
+    Valida matematicamente o payoff de uma estratégia.
+
+    Regras verificadas:
+      1. net_cost não pode ser NaN ou infinito
+      2. max_profit deve ser > 0 ou infinito
+      3. max_loss deve ser > 0 (positivo = perda) ou infinito
+      4. Para débito: max_loss deve ≈ net_cost (±1%)
+      5. Para spreads de débito: max_profit + max_loss > 0 (width positiva)
+      6. risk_reward deve ser ≥ 0
+      7. Breakevens devem existir
+      8. Pernas de opção no mesmo spread devem ter o mesmo vencimento
+      9. Venda descoberta sem hedge deve ter requires_margin=True
+
+    Retorna dict com:
+      ok     (bool)       — True se nenhum erro crítico
+      erros  (list[str])  — erros que invalidam a estrutura
+      alertas(list[str])  — avisos não bloqueantes
+    """
+    erros: list[str] = []
+    alertas: list[str] = []
+
+    # 1. net_cost não pode ser NaN ou inf
+    if math.isnan(payoff.net_cost) or math.isinf(payoff.net_cost):
+        erros.append(f"net_cost é NaN ou infinito: {payoff.net_cost}")
+
+    # 2. max_profit deve ser > 0 ou inf
+    if not math.isinf(payoff.max_profit) and payoff.max_profit <= 0:
+        erros.append(f"max_profit inválido: {payoff.max_profit}")
+
+    # 3. max_loss deve ser > 0 (positivo = perda) ou inf
+    if not math.isinf(payoff.max_loss) and payoff.max_loss <= 0:
+        erros.append(f"max_loss inválido: {payoff.max_loss}")
+
+    # 4. Para estruturas de débito: max_loss deve ≈ net_cost
+    if payoff.net_cost > 0 and not math.isnan(payoff.net_cost):  # débito
+        if not math.isinf(payoff.max_loss):
+            if not math.isclose(payoff.max_loss, payoff.net_cost, rel_tol=0.01):
+                if payoff.strategy_type in ("SPREAD_ALTA", "SPREAD_BAIXA", "DIRECIONAL", "BUTTERFLY"):
+                    erros.append(
+                        f"Débito ({payoff.net_cost:.2f}) ≠ max_loss ({payoff.max_loss:.2f}) "
+                        f"— divergência > 1% em estrutura de risco definido"
+                    )
+
+    # 5. Para spreads de débito: max_profit + max_loss deve ser > 0 (width)
+    if payoff.strategy_type in ("SPREAD_ALTA", "SPREAD_BAIXA") and payoff.net_cost > 0:
+        if not math.isinf(payoff.max_profit) and not math.isinf(payoff.max_loss):
+            total = payoff.max_profit + payoff.max_loss
+            if total <= 0:
+                erros.append(
+                    f"max_profit + max_loss = {total:.2f} (esperado > 0 — verifica strikes)"
+                )
+
+    # 6. risk_reward deve ser ≥ 0
+    rr = payoff.risk_reward
+    if not math.isinf(rr) and rr < 0:
+        erros.append(f"risk_reward negativo: {rr:.4f}")
+
+    # 7. Breakevens devem existir
+    if not payoff.breakevens:
+        alertas.append("Sem breakevens calculados")
+
+    # 8. Vencimentos das pernas de opção devem ser iguais em spreads
+    option_legs = [l for l in payoff.legs if l.option_type in ("CALL", "PUT")]
+    if len(option_legs) >= 2:
+        expiries = {l.expiry for l in option_legs}
+        if len(expiries) > 1:
+            erros.append(f"Pernas com vencimentos diferentes: {expiries}")
+
+    # 9. Venda descoberta sem perna comprada do mesmo tipo deve ter requires_margin=True
+    sell_legs = [l for l in option_legs if l.direction == "SELL"]
+    buy_legs  = [l for l in option_legs if l.direction == "BUY"]
+    if sell_legs and not buy_legs and not payoff.requires_margin:
+        alertas.append(
+            "Venda sem hedge detectada — requires_margin deveria ser True"
+        )
+
+    return {
+        "ok":      len(erros) == 0,
+        "erros":   erros,
+        "alertas": alertas,
+    }

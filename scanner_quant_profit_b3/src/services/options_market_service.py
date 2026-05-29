@@ -60,10 +60,15 @@ def _parse_br(value) -> Optional[float]:
     s = str(value).strip()
     if s in ("-", "", "nan", "None", "NaN"):
         return None
-    s = s.replace("R$", "").replace("%", "").strip()
-    s = s.replace(".", "").replace(",", ".")
+    s_clean = s.replace("R$", "").replace("%", "").strip()
+    # Try standard US float first ("24.5", "124356.2", "0.62")
     try:
-        return float(s)
+        return float(s_clean)
+    except ValueError:
+        pass
+    # Fall back to Brazilian format: "1.234,56" → 1234.56
+    try:
+        return float(s_clean.replace(".", "").replace(",", "."))
     except Exception:
         return None
 
@@ -806,6 +811,8 @@ def get_option_history_payload(
 
 def get_options_radar_payload(
     underlying: str | None = None,
+    limit_candidates: int = 200,
+    limit_monitor: int = 100,
 ) -> dict[str, Any]:
     """
     Retorna radar de oportunidades de opções.
@@ -977,15 +984,30 @@ def get_options_radar_payload(
                 "status": str(row.get("status", "")),
             }
 
+    # Sort candidates by score desc, then limit
+    candidates_next.sort(key=lambda x: x.get("score") or 0, reverse=True)
+    monitor_rtd.sort(key=lambda x: x.get("score") or 0, reverse=True)
+
+    # Limit by_underlying lists for payload size
+    by_underlying_limited: dict[str, dict] = {}
+    for u_key, u_data in by_underlying.items():
+        by_underlying_limited[u_key] = {
+            "total":      u_data["total"],
+            "calls":      u_data["calls"],
+            "puts":       u_data["puts"],
+            "calls_list": u_data["calls_list"][:10],
+            "puts_list":  u_data["puts_list"][:10],
+        }
+
     return {
         "status": "ok",
         "total": len(all_options),
         "underlying_filter": underlying,
         "by_status": by_status,
-        "by_underlying": by_underlying,
-        "candidates_next_session": candidates_next,
-        "monitor_rtd": monitor_rtd,
-        "aguardar_liquidez": aguardare,
+        "by_underlying": by_underlying_limited,
+        "candidates_next_session": candidates_next[:limit_candidates],
+        "monitor_rtd": monitor_rtd[:limit_monitor],
+        "aguardar_liquidez": aguardare[:50],
         "total_candidates": len(candidates_next),
         "total_monitor_rtd": len(monitor_rtd),
         "rtd_diagnostic": diag_info,
@@ -998,11 +1020,14 @@ def get_options_radar_payload(
             "symbols_exists": SYMBOLS_PATH.exists(),
             "total_raw_records": len(all_options),
             "unique_underlyings": list(by_underlying.keys()),
+            "limit_candidates": limit_candidates,
+            "limit_monitor": limit_monitor,
             "data_type": "mixed_snapshot",
             "limitations": [
                 "Dados são snapshots pontuais, não séries temporais",
                 "Bid/ask só disponível para opções no RTD",
                 "Spot price pode ser None para registros watchlist/symbols",
+                "Listas limitadas para performance — total_candidates/total_monitor_rtd refletem contagem real",
             ],
         },
     }

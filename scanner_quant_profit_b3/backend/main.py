@@ -32,6 +32,9 @@ from src.services import (
     get_macro_b3_payload,
     get_economic_calendar_payload,
     get_valuation_payload,
+    get_valuation_detail,
+    get_valuation_coverage,
+    get_valuation_coverage_full,
     get_watchlist_payload,
     get_quant_signals_payload,
     get_signal_matrix_payload,
@@ -187,7 +190,8 @@ def api_valuation_summary(
 ) -> dict[str, Any]:
     """
     Resumo de valuation: resultados, preliminary, summary, diagnostic.
-    
+    M030: agora lê de valuation_results (schema M018) com fallback bridge.
+
     Query params:
       ticker: filtro por ticker específico (opcional)
       limit: limite de resultados (default 20, max 100)
@@ -195,6 +199,46 @@ def api_valuation_summary(
     logger.info(f"[api] /api/valuation/summary ticker={ticker} limit={limit}")
     limit = min(limit, 100)
     return get_valuation_payload(ticker=ticker, limit=limit)
+
+
+@app.get("/api/valuation/coverage")
+def api_valuation_coverage() -> dict[str, Any]:
+    """
+    Cobertura de valuation: tickers com/sem valuation, por status.
+    M030: novo endpoint.
+    """
+    logger.info("[api] /api/valuation/coverage")
+    return get_valuation_coverage()
+
+
+@app.get("/api/valuation/coverage/full")
+def api_valuation_coverage_full() -> dict[str, Any]:
+    """
+    Cobertura plena de valuation com enriquecimento de cotahist.
+    M031: market_price do cotahist, upside_pct calculado, universo expandido do CSV.
+
+    Returns:
+        universe_total, with_valuation, without_valuation,
+        imported_from_outputs, pending_calculation (CSV tickers sem valuation),
+        blocked, insufficient_data, by_sector, by_instrument_type,
+        missing_by_reason, tickers_without_valuation.
+    """
+    logger.info("[api] /api/valuation/coverage/full")
+    return get_valuation_coverage_full()
+
+
+@app.get("/api/valuation/{ticker}")
+def api_valuation_detail(ticker: str) -> dict[str, Any]:
+    """
+    Detalhe de valuation para um ticker específico.
+    M030: novo endpoint.
+
+    Returns:
+        fair_value, upside, method, range, sanity checks,
+        blocked_reasons, source, status, recommended.
+    """
+    logger.info(f"[api] /api/valuation/{ticker}")
+    return get_valuation_detail(ticker)
 
 
 # ── Radar (oportunidades) — proxy para frontend existente ─────────────────────
@@ -536,6 +580,8 @@ def api_option_history(
 @app.get("/api/options/radar")
 def api_options_radar(
     underlying: str | None = None,
+    limit_candidates: int = 200,
+    limit_monitor: int = 100,
 ) -> dict[str, Any]:
     """
     Radar de oportunidades de opções: candidatas próximo pregão, monitorar RTD,
@@ -544,9 +590,17 @@ def api_options_radar(
 
     Query params:
       underlying: filtro por ativo objeto, ex: PETR4 (opcional)
+      limit_candidates: max candidatas próximo pregão (default 200)
+      limit_monitor: max monitorar RTD (default 100)
     """
-    logger.info(f"[api] /api/options/radar underlying={underlying}")
-    return get_options_radar_payload(underlying=underlying)
+    logger.info(f"[api] /api/options/radar underlying={underlying} limit_cand={limit_candidates}")
+    limit_candidates = min(limit_candidates, 500)
+    limit_monitor = min(limit_monitor, 300)
+    return get_options_radar_payload(
+        underlying=underlying,
+        limit_candidates=limit_candidates,
+        limit_monitor=limit_monitor,
+    )
 
 
 # ── M029: Futures ─────────────────────────────────────────────────────────────────

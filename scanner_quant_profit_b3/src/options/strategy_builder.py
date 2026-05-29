@@ -197,6 +197,24 @@ class StrategyOpportunity:
 # ---------------------------------------------------------------------------
 
 def _to_leg(opt: OptionRecord, direction: str, qty: int = 1) -> Leg:
+    """
+    Converte OptionRecord em Leg aplicando preço conservador:
+      - direction == "BUY"  → usa opt.ask (compra no ASK)
+      - direction == "SELL" → usa opt.bid (vende no BID)
+
+    Se bid/ask não disponíveis (dados históricos, bid=ask=0), usa mid-price
+    como fallback. Isso garante que estratégias construídas a partir de dados
+    RTD ao vivo usem spreads reais e não mid-price otimista.
+    """
+    # Preço conservador: ASK para compra, BID para venda
+    if direction == "BUY" and opt.ask > 0:
+        exec_price = opt.ask
+    elif direction == "SELL" and opt.bid > 0:
+        exec_price = opt.bid
+    else:
+        # Fallback para dados históricos (sem bid/ask real)
+        exec_price = opt.price
+
     return Leg(
         ticker=opt.ticker,
         option_type=opt.option_type,
@@ -204,7 +222,7 @@ def _to_leg(opt: OptionRecord, direction: str, qty: int = 1) -> Leg:
         strike=opt.strike,
         expiry=opt.expiry,
         dte=opt.dte,
-        price=opt.price,
+        price=round(exec_price, 4),
         quantity=qty,
         volume=opt.volume,
         trades=opt.trades,

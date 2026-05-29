@@ -37,38 +37,40 @@ class OptionRecord:
     dte: int
 
     # Preços de mercado
-    price: float            # último preço negociado (close)
-    volume: float
-    trades: int
-    liq_score: float
+    price: float            # mid-price (referência, NÃO usar como preço operacional)
+    bid: float = 0.0        # melhor oferta de compra — usar para pernas VENDIDAS
+    ask: float = 0.0        # melhor oferta de venda — usar para pernas COMPRADAS
+    volume: float = 0.0
+    trades: int = 0
+    liq_score: float = 0.0
 
     # Moneyness
-    moneyness: str          # ITM | ATM | OTM
-    moneyness_pct: float
+    moneyness: str = ""          # ITM | ATM | OTM
+    moneyness_pct: float = 0.0
 
     # Volatilidade
-    iv_implied: float       # IV real (Newton-Raphson); NaN se não convergir
-    iv_hv: float            # HV usada como fallback
-    iv_vs_hv: float         # spread IV - HV (prêmio de vol)
+    iv_implied: float = float("nan")   # IV real (Newton-Raphson); NaN se não convergir
+    iv_hv: float = float("nan")       # HV usada como fallback
+    iv_vs_hv: float = float("nan")    # spread IV - HV (prêmio de vol)
 
     # Greeks — todos calculados com iv_implied (ou hv se iv=NaN)
-    delta: float
-    gamma: float
-    theta: float            # por dia calendário
-    vega: float             # por 1pp de vol
-    rho: float              # por 1pp de taxa
-    vanna: float            # dDelta/dσ
-    charm: float            # dDelta/dT por dia
-    vomma: float            # dVega/dσ
-    speed: float            # dGamma/dS
+    delta: float = 0.0
+    gamma: float = 0.0
+    theta: float = 0.0            # por dia calendário
+    vega: float = 0.0             # por 1pp de vol
+    rho: float = 0.0              # por 1pp de taxa
+    vanna: float = 0.0            # dDelta/dσ
+    charm: float = 0.0            # dDelta/dT por dia
+    vomma: float = 0.0           # dVega/dσ
+    speed: float = 0.0            # dGamma/dS
 
     # Decomposição de preço
-    intrinsic_value: float
-    time_value: float
+    intrinsic_value: float = 0.0
+    time_value: float = 0.0
 
     # Referência
-    stock_price: float
-    trade_date: str
+    stock_price: float = 0.0
+    trade_date: str = ""
 
 
 # ---------------------------------------------------------------------------
@@ -283,6 +285,9 @@ def build_chain(
                 expiry=expiry,
                 dte=dte,
                 price=round(price, 4),
+                # Dados históricos (cotahist) não têm bid/ask — deixa em 0.0
+                bid=0.0,
+                ask=0.0,
                 volume=round(volume, 2),
                 trades=trades,
                 liq_score=round(liq, 1),

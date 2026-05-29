@@ -42,6 +42,19 @@ def _db_path():
     return project_path(cfg.get("database_path", "data/database/scanner_quant.db"))
 
 
+# ──────────────────────────────────────────────────────────────────────────
+# BCB/SGS series constants
+# ──────────────────────────────────────────────────────────────────────────
+BCB_SERIES: dict[str, dict] = {
+    # serie BCB      nome interno      label UI                      periodicidade
+    "selic_meta":    {"code": "432",   "label": "Taxa Selic - Meta Copom (% aa)", "periodicity": "daily"},
+    "ptax":          {"code": "21620", "label": "PTAX venda (BRL/USD)",           "periodicity": "daily"},
+    "ipca_12m":      {"code": "13522", "label": "IPCA acumulado 12 meses (%)",     "periodicity": "monthly"},
+    "ipca_mensal":   {"code": "433",   "label": "IPCA mensal (%)",                  "periodicity": "monthly"},
+}
+"""Autoridade: exclusivamente BCB/SGS (api.bcb.gov.br/dados/serie/bcdata.sgs)."""
+
+
 def _get_market_price(db_path: str | Path, ticker: str) -> float | None:
     """Resolve market_price from cotahist_daily (canonical source).
 
@@ -200,13 +213,19 @@ def get_asset_detail(ticker: str) -> dict | None:
         positioning = _positioning(row.get("integrated_status", ""))
         explanation = row.get("explanation") or "Dados integrados ainda insuficientes para uma tese detalhada."
         market_price = _get_market_price(db, ticker_upper)
-        scanner_fair_value = float(
-            pd.to_numeric(pd.Series([row.get("fair_value")]), errors="coerce").fillna(0).iloc[0]
-        )
         scanner_upside = row.get("upside_pct")
-        integrated_score = float(
-            pd.to_numeric(pd.Series([row.get("integrated_score")]), errors="coerce").fillna(0).iloc[0]
-        )
+        try:
+            scanner_fair_value = float(
+                pd.to_numeric(row.get("fair_value"), errors="coerce") or 0
+            )
+        except (TypeError, ValueError):
+            scanner_fair_value = 0.0
+        try:
+            integrated_score = float(
+                pd.to_numeric(row.get("integrated_score"), errors="coerce") or 0
+            )
+        except (TypeError, ValueError):
+            integrated_score = 0.0
         ri_url = get_valid_ri_url_for_ticker(ticker_upper)
         base_thesis = {
             "positioning": positioning,
@@ -391,50 +410,104 @@ def _macro_series_to_dict(name: str, rows: list[dict]) -> list[dict]:
     return out
 
 
+def _series_stale(latest_date_str: str | None, periodicity: str = "daily") -> bool:
+    """Return True if the series date is older than expected for its frequency."""
+    if not latest_date_str:
+        return True
+    try:
+        from datetime import date
+        dt = date.fromisoformat(str(latest_date_str)[:10])
+        age_days = (date.today() - dt).days
+        max_age = 7 if periodicity == "daily" else 45
+        return age_days > max_age
+    except Exception:
+        return True
+
+
+@st.cache_data(ttl=300, show_spinner=False)
+def get_macro_indicators_live() -> dict[str, dict]:
+    """
+    Fetch live macro indicators from BCB/SGS API with transparent fallback.
+    Each indicator returns: value, period, fonte, updated_at, status, fetch_error.
+
+    Series used (BCB/SGS — confirmed working):
+        Selic Meta:    432  (Taxa de juros - Meta Selic definida pelo Copom)
+        PTAX:         21620 (PTAX venda)
+        IPCA 12m:     13522 (IPCA acumulado 12 meses)
+        IPCA mensal:   433  (IPCA mensal)
+
+    Status values:
+        atualizado — recent data (< 7d daily, < 45d monthly)
+        stale      — data exists but is older than expected
+        indisponivel — fetch failed or no data in DB
+
+    Never returns hardcoded values. Never uses stale macro_series data.
+    """
+    from src.context.connectors.bcb_sgs_connector import fetch_bcb_series
+
+    indicators = {}
+
+    for name, cfg in BCB_SERIES.items():
+        code        = cfg["code"]
+        periodicity = cfg["periodicity"]
+
+        try:
+            result = fetch_bcb_series(code)
+            rows         = result.get("rows", [])
+            latest_value = result.get("latest_value")
+            latest_date  = result.get("latest_date")
+            fetch_error  = result.get("fetch_error")
+
+            is_stale = _series_stale(latest_date, periodicity)
+
+            if latest_value is not None:
+                status = "stale" if is_stale else "atualizado"
+            else:
+                status = "indisponivel"
+
+            indicators[name] = {
+                "value":       latest_value,
+                "period":      latest_date,
+                "fonte":       "BCB/SGS API (api.bcb.gov.br)",
+                "updated_at":  result.get("fetched_at"),
+                "status":      status,
+                "fetch_error": fetch_error,
+                "periodicity": periodicity,
+                "series_label": f"SGS {code} · {cfg['label']}",
+                "rows":        rows,
+            }
+        except Exception as exc:
+            indicators[name] = {
+                "value":       None,
+                "period":      None,
+                "fonte":       "BCB/SGS API (api.bcb.gov.br)",
+                "updated_at":  None,
+                "status":      "indisponivel",
+                "fetch_error": str(exc),
+                "periodicity": periodicity,
+                "series_label": f"SGS {code} · {cfg['label']}",
+                "rows":        [],
+            }
+        # Be polite to BCB servers
+        import time; time.sleep(0.3)
+
+    return indicators
+
+
 @st.cache_data(ttl=300, show_spinner=False)
 def get_macro_panel() -> dict[str, list[dict]]:
     """
-    Return available macro context from macro_series + market_regime_daily tables.
-    Falls back to regime-only context if macro_series is empty.
-    BCB/SGS API (Selic, PTAX, IPCA) fetched via bcb_sgs_connector and stored in macro_series.
+    Return available macro context from BCB/SGS live fetch + market_regime_daily.
+    BCB/SGS API (Selic Meta:432, PTAX:21620, IPCA 12m:13522, IPCA mensal:433)
+    fetched directly via bcb_sgs_connector.
 
     Returns dict with keys:
-        regime, selic, ipca_12m, ptax, cds_brasil, pib_nominal, source_status
+        regime, selic, ipca_12m, ipca_mensal, ptax, cds_brasil, pib_nominal,
+        source_status, indicators (full live indicator dict from get_macro_indicators_live)
     """
     db = _db_path()
     try:
         conn = sqlite3.connect(str(db))
-
-        # --- BCB macro series from macro_series table ---
-        selic_rows = conn.execute("""
-            SELECT series_date, value, unit
-            FROM macro_series
-            WHERE series_code = '4389'
-            ORDER BY series_date DESC
-            LIMIT 30
-        """).fetchall()
-        ptax_rows = conn.execute("""
-            SELECT series_date, value, unit
-            FROM macro_series
-            WHERE series_code = '21620'
-            ORDER BY series_date DESC
-            LIMIT 30
-        """).fetchall()
-        ipca_rows = conn.execute("""
-            SELECT series_date, value, unit
-            FROM macro_series
-            WHERE series_code = '13522'
-            ORDER BY series_date DESC
-            LIMIT 30
-        """).fetchall()
-
-        selic = [{"date": str(r[0]), "value": float(r[1]), "unit": str(r[2] or "")} for r in selic_rows]
-        ptax  = [{"date": str(r[0]), "value": float(r[1]), "unit": str(r[2] or "")} for r in ptax_rows]
-        ipca  = [{"date": str(r[0]), "value": float(r[1]), "unit": str(r[2] or "")} for r in ipca_rows]
-
-        # CDS/PIB: not yet fetched — mark as empty but present
-        cds_brasil: list[dict] = []
-        pib_nominal: list[dict] = []
 
         # --- Market regime ---
         regime_rows = conn.execute("""
@@ -444,12 +517,12 @@ def get_macro_panel() -> dict[str, list[dict]]:
             ORDER BY trade_date DESC
             LIMIT 1
         """).fetchall()
-
         conn.close()
 
         if regime_rows:
             reg = dict(zip(
-                ["trade_date", "primary_regime", "trend_regime", "volatility_regime", "liquidity_regime"],
+                ["trade_date", "primary_regime", "trend_regime",
+                 "volatility_regime", "liquidity_regime"],
                 regime_rows[0],
             ))
             regime = [{
@@ -458,34 +531,52 @@ def get_macro_panel() -> dict[str, list[dict]]:
                 "trend":      str(reg.get("trend_regime") or ""),
                 "volatility": str(reg.get("volatility_regime") or ""),
                 "liquidity":  str(reg.get("liquidity_regime") or ""),
-                "governance":  "",
+                "governance": "",
             }]
         else:
             regime = []
 
+        # --- Live BCB indicators ---
+        indicators = get_macro_indicators_live()
+
+        selic     = [{"date": r["date"], "value": r["value"], "unit": "pct"}
+                     for r in indicators.get("selic_meta", {}).get("rows", [])]
+        ptax      = [{"date": r["date"], "value": r["value"], "unit": "BRL"}
+                     for r in indicators.get("ptax", {}).get("rows", [])]
+        ipca      = [{"date": r["date"], "value": r["value"], "unit": "pct"}
+                     for r in indicators.get("ipca_12m", {}).get("rows", [])]
+        ipca_mensal = [{"date": r["date"], "value": r["value"], "unit": "pct"}
+                       for r in indicators.get("ipca_mensal", {}).get("rows", [])]
+
+        # CDS/PIB: not yet available via live API
+        cds_brasil: list[dict] = []
+        pib_nominal: list[dict] = []
+
         # Determine source_status
-        has_macro   = bool(selic or ptax or ipca)
-        has_regime  = bool(regime)
-        if has_macro and has_regime:
-            status = "macro_series + market_regime_daily"
-        elif has_macro:
-            status = "macro_series"
-        elif has_regime:
-            status = "market_regime_daily"
+        updated_count = sum(
+            1 for ind in ("selic", "ptax", "ipca_12m")
+            if indicators.get(ind, {}).get("status") == "atualizado"
+        )
+        if updated_count == 3:
+            status = "BCB/SGS_LIVE_COMPLETO"
+        elif updated_count > 0:
+            status = f"BCB/SGS_LIVE_PARCIAL_{updated_count}/3"
         else:
-            status = "SEM_DADOS_MACRO"
+            status = "BCB/SGS_INDISPONIVEL"
 
         return {
             "regime":      regime,
             "selic":       selic,
             "ipca_12m":    ipca,
+            "ipca_mensal": ipca_mensal,
             "ptax":        ptax,
             "cds_brasil":  cds_brasil,
             "pib_nominal": pib_nominal,
             "source_status": status,
+            "indicators":  indicators,
         }
 
-    except Exception:
+    except Exception as exc:
         try:
             conn.close()
         except Exception:
@@ -493,7 +584,8 @@ def get_macro_panel() -> dict[str, list[dict]]:
         return {
             "regime": [], "selic": [], "ipca_12m": [],
             "ptax": [], "cds_brasil": [], "pib_nominal": [],
-            "source_status": "ERRO_CONEXAO",
+            "source_status": f"ERRO_CONEXAO: {exc}",
+            "indicators": {},
         }
 
 

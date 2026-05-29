@@ -33,7 +33,12 @@ from .trading_desk_service import get_trading_desk_payload
 from .options_strategy_service import get_options_strategy_payload
 from .macro_service import get_macro_b3_payload
 from .economic_calendar_service import get_economic_calendar_payload
-from .valuation_service import get_valuation_payload
+from .valuation_service import (
+    get_valuation_payload,
+    get_valuation_detail,
+    get_valuation_coverage,
+    get_valuation_coverage_full,
+)
 from .watchlist_service import get_watchlist_payload
 from .quant_signals_service import get_quant_signals_payload
 from .signal_matrix_service import get_signal_matrix_payload
@@ -65,6 +70,9 @@ __all__ = [
     "get_macro_b3_payload",
     "get_economic_calendar_payload",
     "get_valuation_payload",
+    "get_valuation_detail",
+    "get_valuation_coverage",
+    "get_valuation_coverage_full",
     # M023 — new services
     "get_watchlist_payload",
     "get_quant_signals_payload",

@@ -192,9 +192,32 @@ def _calc_difference_pct(recalculated: Optional[float], preserved: Optional[floa
     return None
 
 
-def _row_to_dict(row: sqlite3.Row) -> Dict[str, Any]:
-    """Converte sqlite3.Row para dict com flags decodificadas."""
-    d = dict(row)
+def _row_to_dict(row: sqlite3.Row | tuple[Any, ...]) -> Dict[str, Any]:
+    """Converte sqlite3.Row ou tuple para dict com flags decodificadas.
+
+    Handles both sqlite3.Row (when row_factory is set) and plain tuples
+    (when get_connection returns row_factory=None).
+    """
+    if hasattr(row, "keys"):
+        # sqlite3.Row or dict-like — safe conversion
+        d = dict(row)
+    else:
+        # Plain tuple — need column names from connection context
+        # Called from write_preliminary/write_comparison which use get_connection()
+        # with NO row_factory. We reconstruct from the SELECT query.
+        # Since this is called right after a SELECT * ... WHERE ..., we use
+        # the column order from the valuation_results schema.
+        _COLUMNS = [
+            "id", "ticker", "valuation_date", "status",
+            "preserved_fair_value", "recalculated_fair_value",
+            "preliminary_fair_value", "validated_fair_value", "approved_fair_value",
+            "market_price", "upside_pct", "upside_preserved", "upside_recalculated",
+            "difference_pct", "method_used", "confidence", "input_quality",
+            "source", "preservation_status", "sanity_check_passed",
+            "block_reason", "flags", "recommendation", "calculation_notes",
+            "created_at", "updated_at", "promoted_at",
+        ]
+        d = dict(zip(_COLUMNS, row))
     d["flags"] = _decode_flags(d.get("flags"))
     return d
 
