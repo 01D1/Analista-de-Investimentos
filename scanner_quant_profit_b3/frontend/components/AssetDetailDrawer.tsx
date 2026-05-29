@@ -329,7 +329,7 @@ function timeAgo(iso: string | null): string {
   }
 }
 
-function fmt(val: number | null | undefined, unit = ""): string {
+function fmtLocal(val: number | null | undefined, unit = ""): string {
   if (val == null) return "—";
   return `${val.toFixed(1)}${unit}`;
 }
@@ -628,14 +628,14 @@ export default function AssetDetailDrawer() {
               <BlockSection label="Técnico" status={data.signal_matrix?.assets?.[0]?.blocos?.tecnico_indicadores?.status}>
                 {(data.signal_matrix?.assets?.[0]?.blocos?.tecnico_indicadores) && (
                   <div className="add-block-grid">
-                    <MetaRow label="Score técnico" value={fmt(data.signal_matrix.assets[0].blocos.tecnico_indicadores.score)} />
+                    <MetaRow label="Score técnico" value={fmtLocal(data.signal_matrix.assets[0].blocos.tecnico_indicadores.score)} />
                     <MetaRow label="Status" value={unavailable(data.signal_matrix.assets[0].blocos.tecnico_indicadores.technical_status)} />
-                    <MetaRow label="Momentum" value={fmt(data.signal_matrix.assets[0].blocos.tecnico_indicadores.momentum_score)} />
-                    <MetaRow label="Tendência" value={fmt(data.signal_matrix.assets[0].blocos.tecnico_indicadores.trend_score)} />
-                    <MetaRow label="Volatilidade" value={fmt(data.signal_matrix.assets[0].blocos.tecnico_indicadores.volatilidade)} />
-                    <MetaRow label="Volume" value={fmt(data.signal_matrix.assets[0].blocos.tecnico_indicadores.volume_score)} />
-                    <MetaRow label="Breakout" value={fmt(data.signal_matrix.assets[0].blocos.tecnico_indicadores.breakout_score)} />
-                    <MetaRow label="Sup/Res" value={fmt(data.signal_matrix.assets[0].blocos.tecnico_indicadores.support_resistance_score)} />
+                    <MetaRow label="Momentum" value={fmtLocal(data.signal_matrix.assets[0].blocos.tecnico_indicadores.momentum_score)} />
+                    <MetaRow label="Tendência" value={fmtLocal(data.signal_matrix.assets[0].blocos.tecnico_indicadores.trend_score)} />
+                    <MetaRow label="Volatilidade" value={fmtLocal(data.signal_matrix.assets[0].blocos.tecnico_indicadores.volatilidade)} />
+                    <MetaRow label="Volume" value={fmtLocal(data.signal_matrix.assets[0].blocos.tecnico_indicadores.volume_score)} />
+                    <MetaRow label="Breakout" value={fmtLocal(data.signal_matrix.assets[0].blocos.tecnico_indicadores.breakout_score)} />
+                    <MetaRow label="Sup/Res" value={fmtLocal(data.signal_matrix.assets[0].blocos.tecnico_indicadores.support_resistance_score)} />
                     <MetaRow label="Volume 21d" value={
                       data.quant_signals?.ranking?.[0]?.volume_21d != null
                         ? `${(typeof data.quant_signals.ranking[0].volume_21d === "number" ? (data.quant_signals.ranking[0].volume_21d! / 1e6).toFixed(1) : "—")}M`
@@ -658,7 +658,7 @@ export default function AssetDetailDrawer() {
               <BlockSection label="Momentum" status={data.signal_matrix?.assets?.[0]?.blocos?.momentum?.status}>
                 {data.signal_matrix?.assets?.[0]?.blocos?.momentum && (
                   <div className="add-block-grid">
-                    <MetaRow label="Score" value={fmt(data.signal_matrix.assets[0].blocos.momentum.score)} />
+                    <MetaRow label="Score" value={fmtLocal(data.signal_matrix.assets[0].blocos.momentum.score)} />
                     <MetaRow label="Regime" value={unavailable(data.signal_matrix.assets[0].blocos.momentum.regime)} />
                     <MetaRow label="Tendência" value={unavailable(data.signal_matrix.assets[0].blocos.momentum.tendencia)} />
                     <MetaRow label="Evidência" value={unavailable(data.signal_matrix.assets[0].blocos.momentum.evidencia)} />
@@ -671,14 +671,14 @@ export default function AssetDetailDrawer() {
               <BlockSection label="Liquidez" status={data.signal_matrix?.assets?.[0]?.blocos?.liquidez?.status}>
                 {data.signal_matrix?.assets?.[0]?.blocos?.liquidez && (
                   <div className="add-block-grid">
-                    <MetaRow label="Score" value={fmt(data.signal_matrix.assets[0].blocos.liquidez.score)} />
+                    <MetaRow label="Score" value={fmtLocal(data.signal_matrix.assets[0].blocos.liquidez.score)} />
                     <MetaRow label="Evidência" value={unavailable(data.signal_matrix.assets[0].blocos.liquidez.evidencia)} />
                     <MetaRow label="ADV 21d" value={
                       data.watchlist?.items?.[0]?.adv_21d != null
                         ? `R$ ${(typeof data.watchlist.items[0].adv_21d === "number" ? (data.watchlist.items[0].adv_21d! / 1e6).toFixed(1) : "—")}M`
                         : "—"
                     } />
-                    <MetaRow label="Liq. score" value={fmt(data.watchlist?.items?.[0]?.liquidity)} />
+                    <MetaRow label="Liq. score" value={fmtLocal(data.watchlist?.items?.[0]?.liquidity)} />
                   </div>
                 )}
               </BlockSection>
@@ -689,10 +689,10 @@ export default function AssetDetailDrawer() {
                   <div className="add-block-grid">
                     <MetaRow label="Regime" value={unavailable(data.macro.regime?.regime)} />
                     <MetaRow label="Descrição" value={unavailable(data.macro.regime?.description)} />
-                    <MetaRow label="Selic" value={fmt(data.macro.current_values?.selic_meta, "%")} />
-                    <MetaRow label="IPCA 12m" value={fmt(data.macro.current_values?.ipca_12m, "%")} />
-                    <MetaRow label="PTAX" value={fmt(data.macro.current_values?.ptax)} />
-                    <MetaRow label="PTAX tendência" value={fmt(data.macro.current_values?.ptax_trend_pct, "%")} />
+                    <MetaRow label="Selic" value={fmtLocal(data.macro.current_values?.selic_meta, "%")} />
+                    <MetaRow label="IPCA 12m" value={fmtLocal(data.macro.current_values?.ipca_12m, "%")} />
+                    <MetaRow label="PTAX" value={fmtLocal(data.macro.current_values?.ptax)} />
+                    <MetaRow label="PTAX tendência" value={fmtLocal(data.macro.current_values?.ptax_trend_pct, "%")} />
                     {(data.macro.sector_impact ?? []).length > 0 && (
                       <div className="add-meta-row">
                         <span className="add-meta-key">Impacto setorial</span>
@@ -708,9 +708,9 @@ export default function AssetDetailDrawer() {
                 {data.signal_matrix?.assets?.[0]?.blocos?.opcoes && (
                   <div className="add-block-grid">
                     <MetaRow label="Estrutura" value={unavailable(data.signal_matrix.assets[0].blocos.opcoes.estrutura)} />
-                    <MetaRow label="IV Rank" value={fmt(data.signal_matrix.assets[0].blocos.opcoes.iv_rank)} />
+                    <MetaRow label="IV Rank" value={fmtLocal(data.signal_matrix.assets[0].blocos.opcoes.iv_rank)} />
                     <MetaRow label="Payoff" value={unavailable(data.signal_matrix.assets[0].blocos.opcoes.payoff)} />
-                    <MetaRow label="Liq. opções" value={fmt(data.signal_matrix.assets[0].blocos.opcoes.liquidez)} />
+                    <MetaRow label="Liq. opções" value={fmtLocal(data.signal_matrix.assets[0].blocos.opcoes.liquidez)} />
                     <MetaRow label="Evidência" value={unavailable(data.signal_matrix.assets[0].blocos.opcoes.evidencia)} />
                     <MetaRow label="Fonte" value={unavailable(data.signal_matrix.assets[0].blocos.opcoes.fonte)} />
                     <MetaRow label="Tem opções" value={data.watchlist?.items?.[0]?.has_options ? "Sim" : "Não"} />
@@ -722,9 +722,9 @@ export default function AssetDetailDrawer() {
               <BlockSection label="Valuation" status={data.signal_matrix?.assets?.[0]?.blocos?.valuation?.status}>
                 {data.signal_matrix?.assets?.[0]?.blocos?.valuation && (
                   <div className="add-block-grid">
-                    <MetaRow label="Fair Value" value={fmt(data.signal_matrix.assets[0].blocos.valuation.fair_value)} />
-                    <MetaRow label="Preço atual" value={fmt(data.signal_matrix.assets[0].blocos.valuation.preco)} />
-                    <MetaRow label="Upside" value={fmt(data.signal_matrix.assets[0].blocos.valuation.upside_pct, "%")} />
+                    <MetaRow label="Fair Value" value={fmtLocal(data.signal_matrix.assets[0].blocos.valuation.fair_value)} />
+                    <MetaRow label="Preço atual" value={fmtLocal(data.signal_matrix.assets[0].blocos.valuation.preco)} />
+                    <MetaRow label="Upside" value={fmtLocal(data.signal_matrix.assets[0].blocos.valuation.upside_pct, "%")} />
                     <MetaRow label="Método" value={unavailable(data.signal_matrix.assets[0].blocos.valuation.metodo)} />
                     <MetaRow label="Status sanidade" value={unavailable(data.signal_matrix.assets[0].blocos.valuation.risk_status)} />
                     <MetaRow label="Tem valuation" value={data.watchlist?.items?.[0]?.has_valuation ? "Sim" : "Não"} />
@@ -736,7 +736,7 @@ export default function AssetDetailDrawer() {
               <BlockSection label="Convicção" status={data.conviction?.status}>
                 {(data.conviction?.positions ?? []).length > 0 && (
                   <div className="add-block-grid">
-                    <MetaRow label="Score" value={fmt(data.conviction!.positions![0].score)} />
+                    <MetaRow label="Score" value={fmtLocal(data.conviction!.positions![0].score)} />
                     <MetaRow label="Nível" value={unavailable(data.conviction!.positions![0].conviction_level)} />
                     <MetaRow label="Mudança" value={
                       data.conviction!.positions![0].change != null
@@ -760,7 +760,7 @@ export default function AssetDetailDrawer() {
                 {(data.thesis?.theses ?? []).length > 0 && (
                   <div className="add-block-grid">
                     <MetaRow label="Sentimento" value={unavailable(data.thesis!.theses![0].sentiment)} />
-                    <MetaRow label="Score" value={fmt(data.thesis!.theses![0].conviction_score)} />
+                    <MetaRow label="Score" value={fmtLocal(data.thesis!.theses![0].conviction_score)} />
                     <MetaRow label="Hipótese" value={unavailable(data.thesis!.theses![0].hipotese_principal)} />
                     {(data.thesis!.theses![0].tese_bullish ?? []).length > 0 && (
                       <div className="add-meta-row">
@@ -786,9 +786,9 @@ export default function AssetDetailDrawer() {
                           </span>
                         </div>
                     )}
-                    <MetaRow label="Price target" value={fmt(data.thesis!.theses![0].price_target)} />
-                    <MetaRow label="Fair value" value={fmt(data.thesis!.theses![0].fair_value)} />
-                    <MetaRow label="Upside" value={fmt(data.thesis!.theses![0].upside_pct, "%")} />
+                    <MetaRow label="Price target" value={fmtLocal(data.thesis!.theses![0].price_target)} />
+                    <MetaRow label="Fair value" value={fmtLocal(data.thesis!.theses![0].fair_value)} />
+                    <MetaRow label="Upside" value={fmtLocal(data.thesis!.theses![0].upside_pct, "%")} />
                     {(data.thesis!.theses![0].indicadores_usados ?? []).length > 0 && (
                       <div className="add-meta-row">
                         <span className="add-meta-key">Indicadores</span>
@@ -842,26 +842,26 @@ export default function AssetDetailDrawer() {
                 {historyData && historyData.status === "ok" && historyData.ohlcv && (
                   <div className="add-block-grid">
                     <MetaRow label="Data" value={unavailable(historyData.ohlcv.date)} />
-                    <MetaRow label="Abertura" value={fmt(historyData.ohlcv.open)} />
-                    <MetaRow label="Máxima" value={fmt(historyData.ohlcv.high)} />
-                    <MetaRow label="Mínima" value={fmt(historyData.ohlcv.low)} />
-                    <MetaRow label="Fechamento" value={fmt(historyData.ohlcv.close)} />
-                    <MetaRow label="VWAP" value={fmt(historyData.ohlcv.vwap)} />
+                    <MetaRow label="Abertura" value={fmtLocal(historyData.ohlcv.open)} />
+                    <MetaRow label="Máxima" value={fmtLocal(historyData.ohlcv.high)} />
+                    <MetaRow label="Mínima" value={fmtLocal(historyData.ohlcv.low)} />
+                    <MetaRow label="Fechamento" value={fmtLocal(historyData.ohlcv.close)} />
+                    <MetaRow label="VWAP" value={fmtLocal(historyData.ohlcv.vwap)} />
                     <MetaRow label="Volume" value={
                       historyData.ohlcv.volume != null
                         ? `${(historyData.ohlcv.volume / 1e6).toFixed(1)}M`
                         : "—"
                     } />
-                    <MetaRow label="RSI" value={fmt(historyData.indicators?.rsi)} />
-                    <MetaRow label="ADX" value={fmt(historyData.indicators?.adx)} />
-                    <MetaRow label="MACD" value={fmt(historyData.indicators?.macd)} />
-                    <MetaRow label="Bollinger b%" value={fmt(historyData.indicators?.bollinger_b)} />
-                    <MetaRow label="HiLo" value={fmt(historyData.indicators?.hilo)} />
-                    <MetaRow label="Ret. semana" value={fmt(historyData.summary?.return_semana, "%")} />
-                    <MetaRow label="Ret. mês" value={fmt(historyData.summary?.return_mes, "%")} />
-                    <MetaRow label="Ret. 3m" value={fmt(historyData.summary?.return_3m, "%")} />
-                    <MetaRow label="Ret. YTD" value={fmt(historyData.summary?.return_ytd, "%")} />
-                    <MetaRow label="Volatilidade" value={fmt(historyData.indicators?.volatilidade_hist, "%")} />
+                    <MetaRow label="RSI" value={fmtLocal(historyData.indicators?.rsi)} />
+                    <MetaRow label="ADX" value={fmtLocal(historyData.indicators?.adx)} />
+                    <MetaRow label="MACD" value={fmtLocal(historyData.indicators?.macd)} />
+                    <MetaRow label="Bollinger b%" value={fmtLocal(historyData.indicators?.bollinger_b)} />
+                    <MetaRow label="HiLo" value={fmtLocal(historyData.indicators?.hilo)} />
+                    <MetaRow label="Ret. semana" value={fmtLocal(historyData.summary?.return_semana, "%")} />
+                    <MetaRow label="Ret. mês" value={fmtLocal(historyData.summary?.return_mes, "%")} />
+                    <MetaRow label="Ret. 3m" value={fmtLocal(historyData.summary?.return_3m, "%")} />
+                    <MetaRow label="Ret. YTD" value={fmtLocal(historyData.summary?.return_ytd, "%")} />
+                    <MetaRow label="Volatilidade" value={fmtLocal(historyData.indicators?.volatilidade_hist, "%")} />
                     <MetaRow label="Fonte" value={unavailable(historyData.source)} />
                   </div>
                 )}
@@ -938,7 +938,7 @@ export default function AssetDetailDrawer() {
                             <MetaRow
                               key={idx}
                               label={unavailable(opt.ticker)}
-                              value={`S:${fmt(opt.strike)} DTE:${opt.dte ?? "—"} R$:${fmt(opt.last_price)} ${opt.bid ? `Bid:${fmt(opt.bid)} Ask:${fmt(opt.ask)}` : ""}`}
+                              value={`S:${fmtLocal(opt.strike)} DTE:${opt.dte ?? "—"} R$:${fmtLocal(opt.last_price)} ${opt.bid ? `Bid:${fmtLocal(opt.bid)} Ask:${fmtLocal(opt.ask)}` : ""}`}
                             />
                           ))}
                         </div>
@@ -954,7 +954,7 @@ export default function AssetDetailDrawer() {
                             <MetaRow
                               key={idx}
                               label={unavailable(opt.ticker)}
-                              value={`S:${fmt(opt.strike)} DTE:${opt.dte ?? "—"} R$:${fmt(opt.last_price)} ${opt.bid ? `Bid:${fmt(opt.bid)} Ask:${fmt(opt.ask)}` : ""}`}
+                              value={`S:${fmtLocal(opt.strike)} DTE:${opt.dte ?? "—"} R$:${fmtLocal(opt.last_price)} ${opt.bid ? `Bid:${fmtLocal(opt.bid)} Ask:${fmtLocal(opt.ask)}` : ""}`}
                             />
                           ))}
                         </div>

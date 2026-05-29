@@ -183,7 +183,22 @@ export interface ValuationItem {
   ticker: string;
   integrated_score: number;
   integrated_status: string;
-  upside_pct: number;
+  // M030: These fields come from valuation_results (schema M018)
+  status?: string;           // lifecycle status: preliminary/recalculated/approved
+  status_label?: string;
+  fair_value?: number | null;
+  current_price?: number | null;
+  upside_pct?: number | null;
+  upside_preserved?: number | null;
+  upside_recalculated?: number | null;
+  method?: string;
+  confidence?: string;
+  input_quality?: string;
+  source_stage?: string;      // M018_CONTROLLED | M018_COMPARISON | M016_LEGACY
+  preservation_status?: string | null;
+  sanity_check_passed?: boolean | null;
+  sanity_status?: string;
+  recommended?: boolean;
   valuation_available: boolean;
   created_at: string;
 }
@@ -198,9 +213,11 @@ export interface ValuationSummaryResponse {
   diagnostic: {
     total: number;
     approved: number;
-    preliminary: number;
-    pending: number;
-    last_update: string | null;
+    preliminary?: number;
+    pending?: number;
+    validated?: number;
+    blocked?: number;
+    last_update?: string | null;
   };
 }
 
@@ -208,6 +225,91 @@ export async function getValuationSummary(ticker?: string, limit = 20) {
   const params: Record<string, string> = { limit: String(limit) };
   if (ticker) params["ticker"] = ticker;
   return fetchJson<ValuationSummaryResponse>("/api/valuation/summary", params);
+}
+
+// ── M030: Valuation Detail ────────────────────────────────────────────────────
+
+export interface ValuationSanityCheck {
+  check: string;
+  result: string;
+  passed: boolean | null;
+}
+
+export interface ValuationRange {
+  low: number | null;
+  high: number | null;
+}
+
+export interface ValuationDetail {
+  status: string;
+  ticker: string;
+  fair_value: number | null;
+  current_price: number | null;
+  upside_pct: number | null;
+  upside_preserved: number | null;
+  upside_recalculated: number | null;
+  difference_pct: number | null;
+  method: string;
+  confidence: string;
+  input_quality: string;
+  source_stage: string;
+  preservation_status: string | null;
+  sanity_check_passed: boolean | null;
+  block_reason: string | null;
+  flags: unknown[];
+  recommendation: string | null;
+  calculation_notes: string | null;
+  lifecycle_status: string;
+  status_label: string;
+  recommended: boolean;
+  sanity_status: string;
+  valuation_range: ValuationRange | null;
+  bear_case: number | null;
+  base_case: number | null;
+  bull_case: number | null;
+  assumptions: string | null;
+  sanity_checks: ValuationSanityCheck[];
+  blocked_reasons: string[];
+  source: string | null;
+  valuation_date: string | null;
+  updated_at: string | null;
+  errors?: string[];
+}
+
+export async function getValuationDetail(ticker: string) {
+  return fetchJson<ValuationDetail>(`/api/valuation/${encodeURIComponent(ticker)}`);
+}
+
+// ── M030: Valuation Coverage ──────────────────────────────────────────────────
+
+export interface ValuationCoverageItem {
+  ticker: string;
+  status: string;
+  status_label: string;
+  fair_value: number | null;
+  current_price: number | null;
+  upside_pct: number | null;
+  method: string;
+  sanity_status: string;
+  recommended: boolean;
+  source: string;
+}
+
+export interface ValuationCoverage {
+  status: string;
+  timestamp: string;
+  with_valuation: ValuationCoverageItem[];
+  without_valuation: ValuationCoverageItem[];
+  total: number;
+  with_count: number;
+  without_count: number;
+  by_status: Record<string, number>;
+  by_source: Record<string, number>;
+  errors?: string[];
+}
+
+export async function getValuationCoverage() {
+  return fetchJson<ValuationCoverage>("/api/valuation/coverage");
 }
 
 // ── Options ────────────────────────────────────────────────────────────────────
@@ -281,14 +383,29 @@ export async function getWatchlist() {
 export interface QuantSignal {
   ticker: string;
   score_final: number;
-  momentum: number | null;   // 0-100
-  tendencia: number | null;  // 0-100
-  liquidez: number | null;    // 0-100
+  // API returns momentum_score / trend_score (actual values)
+  momentum_score: number | null;
+  trend_score: number | null;
+  // Legacy aliases kept for backward compat (always null from API)
+  momentum: number | null;
+  tendencia: number | null;
+  liquidez: number | null;
   volatilidade: number | null;
   direction: string;
+  direction_tech?: string;
   gatilho: string;
   risco: string;
   proxima_acao: string | null;
+  governance_blocked?: boolean;
+  volume_score?: number | null;
+  breakout_score?: number | null;
+  support_resistance_score?: number | null;
+  technical_score?: number | null;
+  technical_status?: string | null;
+  score_tecnico?: number | null;
+  volume_21d?: number | null;
+  negocios_21d?: number | null;
+  sector?: string | null;
   timestamp: string;
 }
 
